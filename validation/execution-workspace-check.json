@@ -1,0 +1,265 @@
+{
+  "scope": "FICTIONAL_LOCAL_UI_PROJECTION_ONLY",
+  "startedAt": "2026-09-11T17:25:09.319Z",
+  "prototypeSha256": "59a4d8948c86292bb3562218d534ae37154fb8d6317bcfd97883dfc98e7e5cbe",
+  "checks": [
+    {
+      "name": "desktop conversation left and display majority",
+      "pass": true,
+      "actual": {
+        "left": {
+          "x": 85,
+          "y": 182.125,
+          "width": 328,
+          "height": 818.25,
+          "top": 182.125,
+          "right": 413,
+          "bottom": 1000.375,
+          "left": 85
+        },
+        "right": {
+          "x": 413,
+          "y": 182.125,
+          "width": 1006,
+          "height": 818.25,
+          "top": 182.125,
+          "right": 1419,
+          "bottom": 1000.375,
+          "left": 413
+        }
+      }
+    },
+    {
+      "name": "actual fishbone branches and node controls",
+      "pass": true,
+      "actual": "4 branch cards and 4 business stages"
+    },
+    {
+      "name": "fishbone branch cards not clipped",
+      "pass": true,
+      "actual": false
+    },
+    {
+      "name": "path only excludes restricted payload",
+      "pass": true,
+      "actual": {
+        "id": "rd",
+        "name": "技术协作",
+        "status": "处理记录已关联",
+        "owner": "技术岗位",
+        "summary": null,
+        "artifact": null,
+        "file": null,
+        "restricted": true,
+        "background": "后台使用已授权"
+      }
+    },
+    {
+      "name": "background use independently allowed",
+      "pass": true,
+      "actual": {
+        "backgroundUse": true,
+        "canReadRd": false
+      }
+    },
+    {
+      "name": "restricted node has no source file or summary controls",
+      "pass": true,
+      "actual": "no content actions"
+    },
+    {
+      "name": "request does not grant read access",
+      "pass": true,
+      "actual": false
+    },
+    {
+      "name": "forged preview request rejected without hidden content",
+      "pass": true,
+      "actual": "unavailable view"
+    },
+    {
+      "name": "chat artifact opens document on right",
+      "pass": true,
+      "actual": "采购A · 采购方案"
+    },
+    {
+      "name": "historical version explicit",
+      "pass": true,
+      "actual": "v1 warning"
+    },
+    {
+      "name": "document returns to exact node",
+      "pass": true,
+      "actual": "draft path"
+    },
+    {
+      "name": "folder filters only eligible files",
+      "pass": true,
+      "actual": "eligible contribution"
+    },
+    {
+      "name": "node history scoped and linked to artifact",
+      "pass": true,
+      "actual": "budget history"
+    },
+    {
+      "name": "explicit object grant permits content",
+      "pass": true,
+      "actual": "fixture-specific read grant"
+    },
+    {
+      "name": "revoking backend use does not revoke human read",
+      "pass": true,
+      "actual": {
+        "backgroundUse": false,
+        "canReadRd": true
+      }
+    },
+    {
+      "name": "switch subject clears prior preview",
+      "pass": true,
+      "actual": "no prior content in rendered DOM"
+    },
+    {
+      "name": "restored backend use does not grant human read",
+      "pass": true,
+      "actual": {
+        "backgroundUse": true,
+        "canReadRd": false
+      }
+    },
+    {
+      "name": "separately released summary without raw content",
+      "pass": true,
+      "actual": "released summary only"
+    },
+    {
+      "name": "content revocation clears preview and cache projection",
+      "pass": true,
+      "actual": "content revoked, fresh projection"
+    },
+    {
+      "name": "human revocation leaves separate backend grant intact",
+      "pass": true,
+      "actual": true
+    },
+    {
+      "name": "no discover grant omits node and private edge",
+      "pass": true,
+      "actual": "node omitted"
+    },
+    {
+      "name": "new instance draft and context isolated",
+      "pass": true,
+      "actual": "B has no A draft"
+    },
+    {
+      "name": "original task draft preserved",
+      "pass": true,
+      "actual": "A draft restored"
+    },
+    {
+      "name": "same task other subject draft isolated",
+      "pass": true,
+      "actual": "separate subject key"
+    },
+    {
+      "name": "same subject grant does not cover another task",
+      "pass": true,
+      "actual": {
+        "task": "采购B",
+        "canReadRd": false,
+        "backgroundUse": false
+      }
+    },
+    {
+      "name": "fictional restricted-content request gets scoped response",
+      "pass": true,
+      "actual": "deterministic demo feedback only"
+    },
+    {
+      "name": "chat input rendered as text",
+      "pass": true,
+      "actual": "escaped user content"
+    },
+    {
+      "name": "workspace 1024 no page overflow",
+      "pass": true,
+      "actual": {
+        "widthActual": 1024,
+        "width": 1024
+      }
+    },
+    {
+      "name": "workspace 390 no page overflow",
+      "pass": true,
+      "actual": {
+        "widthActual": 390,
+        "width": 390
+      }
+    },
+    {
+      "name": "mobile canvas locates current node",
+      "pass": true,
+      "actual": "selected business node visible"
+    },
+    {
+      "name": "mobile pane switch retains draft",
+      "pass": true,
+      "actual": "mobile draft"
+    },
+    {
+      "name": "reset restores initial workspace and clears drafts",
+      "pass": true,
+      "actual": "initial fixture restored"
+    }
+  ],
+  "screenshots": [
+    {
+      "path": "validation/execution-workspace/workspace-1440.png",
+      "scope": "current viewport of fictional prototype"
+    },
+    {
+      "path": "validation/execution-workspace/restricted-node.png",
+      "scope": "current viewport of fictional prototype"
+    },
+    {
+      "path": "validation/execution-workspace/document-preview.png",
+      "scope": "current viewport of fictional prototype"
+    },
+    {
+      "path": "validation/execution-workspace/file-folder.png",
+      "scope": "current viewport of fictional prototype"
+    },
+    {
+      "path": "validation/execution-workspace/history-summary.png",
+      "scope": "current viewport of fictional prototype"
+    },
+    {
+      "path": "validation/execution-workspace/released-summary.png",
+      "scope": "current viewport of fictional prototype"
+    },
+    {
+      "path": "validation/execution-workspace/workspace-1024.png",
+      "scope": "current viewport of fictional prototype"
+    },
+    {
+      "path": "validation/execution-workspace/workspace-390.png",
+      "scope": "current viewport of fictional prototype"
+    },
+    {
+      "path": "validation/execution-workspace/mobile-chat.png",
+      "scope": "current viewport of fictional prototype"
+    }
+  ],
+  "pageErrors": [],
+  "productTestsRun": false,
+  "browserVersion": "152.0.7977.83",
+  "finishedAt": "2026-09-11T17:25:14.880Z",
+  "status": "PASS",
+  "limitations": [
+    "Fictional frontend projections only, not server-side authorization.",
+    "No real model, stream, storage or asynchronous request-race test.",
+    "Role labels select fixtures; production grants must be server-resolved."
+  ]
+}

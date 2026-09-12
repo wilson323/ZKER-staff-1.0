@@ -1,0 +1,91 @@
+{
+  "checkedAt": "2026-09-11T17:23:39.310204+00:00",
+  "status": "PASS",
+  "scope": "SKILL_STRUCTURE_TOOL_REGRESSION_AND_HOOK_PROTOCOL_ONLY",
+  "runs": [
+    {
+      "command": [
+        "python3",
+        "/Users/mac/.codex/skills/.system/skill-creator/scripts/quick_validate.py",
+        ".agents/skills/oa-development-system"
+      ],
+      "exitCode": 0,
+      "stdout": "Skill is valid!\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "make",
+        "entry"
+      ],
+      "exitCode": 0,
+      "stdout": "python3 validation/development_workflow.py entry\n{\n  \"projectId\": \"oa-digital-employee-collaboration\",\n  \"actualRoot\": \"/Users/mac/Documents/OA数字员工协作平台\",\n  \"git\": \"NOT_INITIALIZED\",\n  \"currentTask\": \"validation/development-task-dev-system-20260911.json\",\n  \"taskStatus\": \"RUNNING\",\n  \"currentNode\": \"D3\",\n  \"product\": \"NOT_CONFIGURED\",\n  \"readNext\": [\n    \"AGENTS.md\",\n    \".agents/skills/oa-development-system/SKILL.md\",\n    \"docs/开发体系.md\",\n    \"validation/development-task-dev-system-20260911.json\"\n  ],\n  \"next\": \"以本次用户目标接续。复杂新任务用 new 建立记录；完成前 make verify。\"\n}\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "make",
+        "eval"
+      ],
+      "exitCode": 0,
+      "stdout": "python3 -m unittest discover -s validation -p 'test_development_workflow.py' -v\n",
+      "stderr": "test_behavior_evals_do_not_claim_unrun_success (test_development_workflow.IntegrationFilesTests.test_behavior_evals_do_not_claim_unrun_success) ... ok\ntest_claude_commands_reference_shared_script (test_development_workflow.IntegrationFilesTests.test_claude_commands_reference_shared_script) ... ok\ntest_skill_frontmatter_complete (test_development_workflow.IntegrationFilesTests.test_skill_frontmatter_complete) ... ok\ntest_skill_links_resolve_within_project (test_development_workflow.IntegrationFilesTests.test_skill_links_resolve_within_project) ... ok\ntest_absolute_path_rejected (test_development_workflow.WorkflowTests.test_absolute_path_rejected) ... ok\ntest_added_file_invalidates_report (test_development_workflow.WorkflowTests.test_added_file_invalidates_report) ... ok\ntest_artifact_escape_rejected (test_development_workflow.WorkflowTests.test_artifact_escape_rejected) ... ok\ntest_changed_file_invalidates_report (test_development_workflow.WorkflowTests.test_changed_file_invalidates_report) ... ok\ntest_command_failure_and_timeout_preserved (test_development_workflow.WorkflowTests.test_command_failure_and_timeout_preserved) ... ok\ntest_completed_projection_must_match (test_development_workflow.WorkflowTests.test_completed_projection_must_match) ... ok\ntest_current_report_is_fresh (test_development_workflow.WorkflowTests.test_current_report_is_fresh) ... ok\ntest_cycle_rejected (test_development_workflow.WorkflowTests.test_cycle_rejected) ... ok\ntest_different_project_manifest_rejected (test_development_workflow.WorkflowTests.test_different_project_manifest_rejected) ... ok\ntest_empty_acceptance_rejected (test_development_workflow.WorkflowTests.test_empty_acceptance_rejected) ... ok\ntest_empty_intent_rejected (test_development_workflow.WorkflowTests.test_empty_intent_rejected) ... ok\ntest_empty_product_profile_cannot_pass (test_development_workflow.WorkflowTests.test_empty_product_profile_cannot_pass) ... ok\ntest_executable_missing_not_success (test_development_workflow.WorkflowTests.test_executable_missing_not_success) ... ok\ntest_failed_or_wrong_scope_report_rejected (test_development_workflow.WorkflowTests.test_failed_or_wrong_scope_report_rejected) ... ok\ntest_false_final_success_rejected (test_development_workflow.WorkflowTests.test_false_final_success_rejected) ... ok\ntest_hook_rejects_different_project_cwd (test_development_workflow.WorkflowTests.test_hook_rejects_different_project_cwd) ... ok\ntest_missing_dependency_rejected (test_development_workflow.WorkflowTests.test_missing_dependency_rejected) ... ok\ntest_missing_evidence_rejected (test_development_workflow.WorkflowTests.test_missing_evidence_rejected) ... ok\ntest_missing_intent_rejected (test_development_workflow.WorkflowTests.test_missing_intent_rejected) ... ok\ntest_new_task_does_not_overwrite_unfinished_task (test_development_workflow.WorkflowTests.test_new_task_does_not_overwrite_unfinished_task) ... ok\ntest_new_task_rejects_path_injection (test_development_workflow.WorkflowTests.test_new_task_rejects_path_injection) ... ok\ntest_node_outside_final_path_rejected (test_development_workflow.WorkflowTests.test_node_outside_final_path_rejected) ... ok\ntest_premature_node_verification_rejected (test_development_workflow.WorkflowTests.test_premature_node_verification_rejected) ... ok\ntest_product_zero_exit_without_evidence_rejected (test_development_workflow.WorkflowTests.test_product_zero_exit_without_evidence_rejected) ... ok\ntest_receipt_write_does_not_self_invalidate (test_development_workflow.WorkflowTests.test_receipt_write_does_not_self_invalidate) ... ok\ntest_removed_file_invalidates_report (test_development_workflow.WorkflowTests.test_removed_file_invalidates_report) ... ok\ntest_start_hook_returns_shared_entry (test_development_workflow.WorkflowTests.test_start_hook_returns_shared_entry) ... ok\ntest_stop_hook_allows_current_receipt (test_development_workflow.WorkflowTests.test_stop_hook_allows_current_receipt) ... ok\ntest_stop_hook_blocks_missing_receipt (test_development_workflow.WorkflowTests.test_stop_hook_blocks_missing_receipt) ... ok\ntest_stop_hook_has_bounded_failure_path (test_development_workflow.WorkflowTests.test_stop_hook_has_bounded_failure_path) ... ok\ntest_successful_new_task_uses_canonical_template (test_development_workflow.WorkflowTests.test_successful_new_task_uses_canonical_template) ... ok\ntest_symlink_escape_rejected (test_development_workflow.WorkflowTests.test_symlink_escape_rejected) ... ok\ntest_symlink_output_is_not_overwritten (test_development_workflow.WorkflowTests.test_symlink_output_is_not_overwritten) ... ok\ntest_unknown_requirement_rejected (test_development_workflow.WorkflowTests.test_unknown_requirement_rejected) ... ok\ntest_valid_dependency_safe_task (test_development_workflow.WorkflowTests.test_valid_dependency_safe_task) ... ok\ntest_wrong_cwd_fails_real_cli (test_development_workflow.WorkflowTests.test_wrong_cwd_fails_real_cli) ... ok\n\n----------------------------------------------------------------------\nRan 40 tests in 0.148s\n\nOK\n"
+    }
+  ],
+  "hooks": [
+    {
+      "event": "SessionStart",
+      "command": "python3 \"$CLAUDE_PROJECT_DIR/validation/development_workflow.py\" hook-start",
+      "exitCode": 0,
+      "output": {
+        "hookSpecificOutput": {
+          "hookEventName": "SessionStart",
+          "additionalContext": "{\"projectId\": \"oa-digital-employee-collaboration\", \"actualRoot\": \"/Users/mac/Documents/OA数字员工协作平台\", \"git\": \"NOT_INITIALIZED\", \"currentTask\": \"validation/development-task-dev-system-20260911.json\", \"taskStatus\": \"RUNNING\", \"currentNode\": \"D3\", \"product\": \"NOT_CONFIGURED\", \"readNext\": [\"AGENTS.md\", \".agents/skills/oa-development-system/SKILL.md\", \"docs/开发体系.md\", \"validation/development-task-dev-system-20260911.json\"], \"next\": \"以本次用户目标接续。复杂新任务用 new 建立记录；完成前 make verify。\"}"
+        }
+      },
+      "stderr": "",
+      "scope": "real configured command with protocol fixture; not a live Claude session"
+    },
+    {
+      "event": "Stop",
+      "command": "python3 \"$CLAUDE_PROJECT_DIR/validation/development_workflow.py\" hook-stop",
+      "exitCode": 0,
+      "output": {
+        "decision": "block",
+        "reason": "本项目缺少当前文件版本的通过证据。运行 make verify；无法修复时如实报告阻塞。"
+      },
+      "stderr": "",
+      "scope": "real configured command with protocol fixture; not a live Claude session"
+    }
+  ],
+  "discoveryLinks": [
+    {
+      "path": "/Users/mac/.codex/skills/oa-development-system",
+      "target": "/Users/mac/Documents/OA数字员工协作平台/.agents/skills/oa-development-system",
+      "readable": true
+    },
+    {
+      "path": "/Users/mac/Documents/OA数字员工协作平台/.claude/skills/oa-development-system",
+      "target": "/Users/mac/Documents/OA数字员工协作平台/.agents/skills/oa-development-system",
+      "readable": true
+    }
+  ],
+  "application": [
+    "按新Skill读取项目标识与现有需求",
+    "使用同一任务记录跟踪intent/spec/plan与节点",
+    "运行隔离目录负例并修复macOS路径别名问题",
+    "运行全局检查并保留原型/证据失败",
+    "实际运行配置中的hook命令检验入口和过期证据反馈"
+  ],
+  "agentBehaviorCasesRun": 0,
+  "limits": [
+    "没有执行20项真实模型行为回放",
+    "没有验证新会话自动加载、远程CI、产品或生产",
+    "全局make verify仍受原型校验失败阻塞"
+  ],
+  "subsequentUpdate": {
+    "result": "project make verify PASS after newer browser evidence",
+    "scope": "LOCAL_DEVELOPMENT_SYSTEM_ONLY",
+    "note": "原型及其浏览器更新来自本团队之外；原始验证时的失败记录保留。"
+  }
+}

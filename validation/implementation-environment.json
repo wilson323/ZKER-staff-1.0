@@ -1,0 +1,56 @@
+{
+  "observedAt": "2026-09-11T19:10:24.352515+00:00",
+  "scope": "READ_ONLY_TOOL_VERSION_PROBE_NO_SERVICE_OR_DB_ACCESS",
+  "tools": [
+    {
+      "tool": "python3",
+      "path": "/usr/local/bin/python3",
+      "status": "AVAILABLE",
+      "versionOutput": "Python 3.14.7",
+      "exitCode": 0
+    },
+    {
+      "tool": "node",
+      "path": "/Users/mac/.hermes/node/bin/node",
+      "status": "AVAILABLE",
+      "versionOutput": "v22.22.3",
+      "exitCode": 0
+    },
+    {
+      "tool": "npm",
+      "path": "/Users/mac/.hermes/node/bin/npm",
+      "status": "AVAILABLE",
+      "versionOutput": "10.9.8",
+      "exitCode": 0
+    },
+    {
+      "tool": "java",
+      "path": "/Users/mac/tools/jdk-17/Contents/Home/bin/java",
+      "status": "AVAILABLE",
+      "versionOutput": "openjdk version \"17\" 2021-09-14\nOpenJDK Runtime Environment (build 17+35-2724)\nOpenJDK 64-Bit Server VM (build 17+35-2724, mixed mode, sharing)",
+      "exitCode": 0
+    },
+    {
+      "tool": "mvn",
+      "path": "/Users/mac/tools/maven/bin/mvn",
+      "status": "AVAILABLE",
+      "versionOutput": "Apache Maven 3.9.11 (3e54c93a704957b63ee3494413a2b544fd3d825b)\nMaven home: /Users/mac/tools/maven\nJava version: 17, vendor: Oracle Corporation, runtime: /Users/mac/tools/jdk-17/Contents/Home\nDefault locale: zh_CN_#Hans, platform encoding: UTF-8\nOS name: \"mac os x\", version: \"26.5.1\", arch: \"aarch64\", family: \"mac\"",
+      "exitCode": 0
+    },
+    {
+      "tool": "mysql",
+      "path": null,
+      "status": "NOT_FOUND",
+      "versionOutput": null
+    },
+    {
+      "tool": "docker",
+      "path": "/usr/local/bin/docker",
+      "status": "AVAILABLE",
+      "versionOutput": "Docker version 29.7.2, build a7dcaa6",
+      "exitCode": 0
+    }
+  ],
+  "productStartCommand": null,
+  "productReady": false
+}

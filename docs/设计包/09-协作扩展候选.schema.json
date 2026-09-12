@@ -1,0 +1,1126 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:zker:design:collaboration-extension:v2.1",
+  "title": "ZKER collaboration extension design candidate",
+  "$comment": "Design candidate only. Structural validation is not authorization, cross-record integrity, runtime loading, or implementation evidence.",
+  "x-design-status": "PROPOSED_NOT_IMPLEMENTED",
+  "oneOf": [
+    {
+      "$ref": "#/$defs/CollaborationLink"
+    },
+    {
+      "$ref": "#/$defs/Contribution"
+    },
+    {
+      "$ref": "#/$defs/ExecutionContextBinding"
+    },
+    {
+      "$ref": "#/$defs/ContextApplication"
+    },
+    {
+      "$ref": "#/$defs/ContextManifestV2"
+    }
+  ],
+  "$defs": {
+    "VersionedRef": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "ref": {
+          "type": "string",
+          "pattern": "^[A-Za-z0-9][A-Za-z0-9._:-]{0,127}$"
+        },
+        "version": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 4000
+        },
+        "digest": {
+          "type": "string",
+          "pattern": "^sha256:[0-9a-f]{64}$"
+        },
+        "required": {
+          "type": "boolean"
+        },
+        "purpose": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 4000
+        }
+      },
+      "required": [
+        "ref",
+        "version",
+        "digest",
+        "required",
+        "purpose"
+      ]
+    },
+    "CollaborationLink": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "collaborationLinkId": {
+          "type": "string",
+          "pattern": "^[A-Za-z0-9][A-Za-z0-9._:-]{0,127}$"
+        },
+        "tenantId": {
+          "type": "string",
+          "pattern": "^[A-Za-z0-9][A-Za-z0-9._:-]{0,127}$"
+        },
+        "parentWorkItemId": {
+          "type": "string",
+          "pattern": "^[A-Za-z0-9][A-Za-z0-9._:-]{0,127}$"
+        },
+        "childWorkItemId": {
+          "type": "string",
+          "pattern": "^[A-Za-z0-9][A-Za-z0-9._:-]{0,127}$"
+        },
+        "collaborationRequestRef": {
+          "type": "string",
+          "pattern": "^[A-Za-z0-9][A-Za-z0-9._:-]{0,127}$"
+        },
+        "objective": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 4000
+        },
+        "expectedOutputSchemaRef": {
+          "type": "string",
+          "pattern": "^[A-Za-z0-9][A-Za-z0-9._:-]{0,127}$"
+        },
+        "baselineWorkItemRevision": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "requiredForParent": {
+          "type": "boolean"
+        },
+        "delegationRef": {
+          "type": "string",
+          "pattern": "^[A-Za-z0-9][A-Za-z0-9._:-]{0,127}$"
+        },
+        "dueAt": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "status": {
+          "enum": [
+            "accepted",
+            "active",
+            "delivered",
+            "closed",
+            "cancelled"
+          ]
+        },
+        "revision": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "createdByMembershipId": {
+          "type": "string",
+          "pattern": "^[A-Za-z0-9][A-Za-z0-9._:-]{0,127}$"
+        },
+        "createdAt": {
+          "type": "string",
+          "format": "date-time"
+        }
+      },
+      "required": [
+        "collaborationLinkId",
+        "tenantId",
+        "parentWorkItemId",
+        "childWorkItemId",
+        "collaborationRequestRef",
+        "objective",
+        "expectedOutputSchemaRef",
+        "baselineWorkItemRevision",
+        "requiredForParent",
+        "status",
+        "revision",
+        "createdByMembershipId",
+        "createdAt"
+      ]
+    },
+    "Contribution": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "contributionId": {
+          "type": "string",
+          "pattern": "^[A-Za-z0-9][A-Za-z0-9._:-]{0,127}$"
+        },
+        "tenantId": {
+          "type": "string",
+          "pattern": "^[A-Za-z0-9][A-Za-z0-9._:-]{0,127}$"
+        },
+        "collaborationLinkId": {
+          "type": "string",
+          "pattern": "^[A-Za-z0-9][A-Za-z0-9._:-]{0,127}$"
+        },
+        "childWorkItemId": {
+          "type": "string",
+          "pattern": "^[A-Za-z0-9][A-Za-z0-9._:-]{0,127}$"
+        },
+        "contributionVersion": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "basedOnContextBindingId": {
+          "type": "string",
+          "pattern": "^[A-Za-z0-9][A-Za-z0-9._:-]{0,127}$"
+        },
+        "basedOnParentRevision": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "artifactRefs": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "$ref": "#/$defs/VersionedRef"
+          }
+        },
+        "structuredResultRef": {
+          "type": "string",
+          "pattern": "^[A-Za-z0-9][A-Za-z0-9._:-]{0,127}$"
+        },
+        "resultDigest": {
+          "type": "string",
+          "pattern": "^sha256:[0-9a-f]{64}$"
+        },
+        "completionCheckResultId": {
+          "type": "string",
+          "pattern": "^[A-Za-z0-9][A-Za-z0-9._:-]{0,127}$"
+        },
+        "status": {
+          "enum": [
+            "draft",
+            "submitted",
+            "accepted",
+            "returned",
+            "needs_recheck",
+            "superseded",
+            "withdrawn"
+          ]
+        },
+        "submittedByMembershipId": {
+          "type": "string",
+          "pattern": "^[A-Za-z0-9][A-Za-z0-9._:-]{0,127}$"
+        },
+        "submittedAt": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "decisionByMembershipId": {
+          "type": "string",
+          "pattern": "^[A-Za-z0-9][A-Za-z0-9._:-]{0,127}$"
+        },
+        "decisionAt": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "reason": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 4000
+        },
+        "revision": {
+          "type": "integer",
+          "minimum": 1
+        }
+      },
+      "required": [
+        "contributionId",
+        "tenantId",
+        "collaborationLinkId",
+        "childWorkItemId",
+        "contributionVersion",
+        "basedOnContextBindingId",
+        "basedOnParentRevision",
+        "artifactRefs",
+        "structuredResultRef",
+        "resultDigest",
+        "status",
+        "revision"
+      ],
+      "allOf": [
+        {
+          "if": {
+            "properties": {
+              "status": {
+                "enum": [
+                  "submitted",
+                  "accepted",
+                  "returned",
+                  "needs_recheck",
+                  "superseded"
+                ]
+              }
+            },
+            "required": [
+              "status"
+            ]
+          },
+          "then": {
+            "required": [
+              "completionCheckResultId",
+              "submittedByMembershipId",
+              "submittedAt"
+            ]
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "status": {
+                "enum": [
+                  "accepted",
+                  "returned",
+                  "superseded",
+                  "withdrawn"
+                ]
+              }
+            },
+            "required": [
+              "status"
+            ]
+          },
+          "then": {
+            "required": [
+              "decisionByMembershipId",
+              "decisionAt",
+              "reason"
+            ]
+          }
+        }
+      ]
+    },
+    "ExecutionContextBinding": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "contextBindingId": {
+          "type": "string",
+          "pattern": "^[A-Za-z0-9][A-Za-z0-9._:-]{0,127}$"
+        },
+        "tenantId": {
+          "type": "string",
+          "pattern": "^[A-Za-z0-9][A-Za-z0-9._:-]{0,127}$"
+        },
+        "workItemId": {
+          "type": "string",
+          "pattern": "^[A-Za-z0-9][A-Za-z0-9._:-]{0,127}$"
+        },
+        "workItemRevision": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "assignmentId": {
+          "type": "string",
+          "pattern": "^[A-Za-z0-9][A-Za-z0-9._:-]{0,127}$"
+        },
+        "attemptId": {
+          "type": "string",
+          "pattern": "^[A-Za-z0-9][A-Za-z0-9._:-]{0,127}$"
+        },
+        "executionSnapshotId": {
+          "type": "string",
+          "pattern": "^[A-Za-z0-9][A-Za-z0-9._:-]{0,127}$"
+        },
+        "contextManifestId": {
+          "type": "string",
+          "pattern": "^[A-Za-z0-9][A-Za-z0-9._:-]{0,127}$"
+        },
+        "contextManifestDigest": {
+          "type": "string",
+          "pattern": "^sha256:[0-9a-f]{64}$"
+        },
+        "baseThreadSequence": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "sourceRefs": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/VersionedRef"
+          }
+        },
+        "sourceRefsDigest": {
+          "type": "string",
+          "pattern": "^sha256:[0-9a-f]{64}$"
+        },
+        "inputDigest": {
+          "type": "string",
+          "pattern": "^sha256:[0-9a-f]{64}$"
+        },
+        "requiredFactKeys": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 4000
+          },
+          "uniqueItems": true
+        },
+        "policyRevision": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 4000
+        },
+        "authzEpoch": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "expiresAt": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "pluginProfileDigest": {
+          "type": "string",
+          "pattern": "^sha256:[0-9a-f]{64}$"
+        },
+        "bindingDigest": {
+          "type": "string",
+          "pattern": "^sha256:[0-9a-f]{64}$"
+        },
+        "createdAt": {
+          "type": "string",
+          "format": "date-time"
+        }
+      },
+      "required": [
+        "contextBindingId",
+        "tenantId",
+        "workItemId",
+        "workItemRevision",
+        "assignmentId",
+        "attemptId",
+        "executionSnapshotId",
+        "contextManifestId",
+        "contextManifestDigest",
+        "baseThreadSequence",
+        "sourceRefs",
+        "sourceRefsDigest",
+        "inputDigest",
+        "requiredFactKeys",
+        "policyRevision",
+        "authzEpoch",
+        "expiresAt",
+        "bindingDigest",
+        "createdAt"
+      ]
+    },
+    "ContextApplication": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "applicationId": {
+          "type": "string",
+          "pattern": "^[A-Za-z0-9][A-Za-z0-9._:-]{0,127}$"
+        },
+        "tenantId": {
+          "type": "string",
+          "pattern": "^[A-Za-z0-9][A-Za-z0-9._:-]{0,127}$"
+        },
+        "contextBindingId": {
+          "type": "string",
+          "pattern": "^[A-Za-z0-9][A-Za-z0-9._:-]{0,127}$"
+        },
+        "attemptId": {
+          "type": "string",
+          "pattern": "^[A-Za-z0-9][A-Za-z0-9._:-]{0,127}$"
+        },
+        "consumerSubjectId": {
+          "type": "string",
+          "pattern": "^[A-Za-z0-9][A-Za-z0-9._:-]{0,127}$"
+        },
+        "state": {
+          "enum": [
+            "prepared",
+            "delivered",
+            "loaded",
+            "update_required",
+            "blocked",
+            "revoked"
+          ]
+        },
+        "deliveredAt": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "loadedAt": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "appliedSequence": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "observedSequence": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "evidenceRefs": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "pattern": "^[A-Za-z0-9][A-Za-z0-9._:-]{0,127}$"
+          }
+        },
+        "blockedReasonCode": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 4000
+        },
+        "revision": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "updatedAt": {
+          "type": "string",
+          "format": "date-time"
+        }
+      },
+      "required": [
+        "applicationId",
+        "tenantId",
+        "contextBindingId",
+        "attemptId",
+        "consumerSubjectId",
+        "state",
+        "appliedSequence",
+        "observedSequence",
+        "evidenceRefs",
+        "revision",
+        "updatedAt"
+      ],
+      "allOf": [
+        {
+          "if": {
+            "properties": {
+              "state": {
+                "enum": [
+                  "delivered",
+                  "loaded"
+                ]
+              }
+            },
+            "required": [
+              "state"
+            ]
+          },
+          "then": {
+            "required": [
+              "deliveredAt"
+            ]
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "state": {
+                "const": "loaded"
+              }
+            },
+            "required": [
+              "state"
+            ]
+          },
+          "then": {
+            "required": [
+              "loadedAt"
+            ],
+            "properties": {
+              "evidenceRefs": {
+                "minItems": 1
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "state": {
+                "enum": [
+                  "blocked",
+                  "revoked"
+                ]
+              }
+            },
+            "required": [
+              "state"
+            ]
+          },
+          "then": {
+            "required": [
+              "blockedReasonCode"
+            ]
+          }
+        }
+      ]
+    },
+    "ContextManifestV2": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "schemaVersion": {
+          "const": "staffdeck.context-manifest/v2"
+        },
+        "contextManifestId": {
+          "type": "string",
+          "pattern": "^[A-Za-z0-9][A-Za-z0-9._:-]{0,127}$"
+        },
+        "tenantId": {
+          "type": "string",
+          "pattern": "^[A-Za-z0-9][A-Za-z0-9._:-]{0,127}$"
+        },
+        "sourceWorkItemId": {
+          "type": "string",
+          "pattern": "^[A-Za-z0-9][A-Za-z0-9._:-]{0,127}$"
+        },
+        "targetScope": {
+          "enum": [
+            "NODE_HANDOFF",
+            "WORK_ITEM"
+          ]
+        },
+        "targetNodeId": {
+          "type": "string",
+          "pattern": "^[A-Za-z0-9][A-Za-z0-9._:-]{0,127}$"
+        },
+        "targetWorkItemId": {
+          "type": "string",
+          "pattern": "^[A-Za-z0-9][A-Za-z0-9._:-]{0,127}$"
+        },
+        "targetSubjectType": {
+          "enum": [
+            "HUMAN",
+            "AGENT",
+            "ROLE",
+            "UNRESOLVED"
+          ]
+        },
+        "targetSubjectId": {
+          "type": "string",
+          "pattern": "^[A-Za-z0-9][A-Za-z0-9._:-]{0,127}$"
+        },
+        "purpose": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 4000
+        },
+        "sourceRefsDigest": {
+          "type": "string",
+          "pattern": "^sha256:[0-9a-f]{64}$"
+        },
+        "fieldProjectionDigest": {
+          "type": "string",
+          "pattern": "^sha256:[0-9a-f]{64}$"
+        },
+        "authzEpoch": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "policyRevision": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 4000
+        },
+        "expiresAt": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "createdAt": {
+          "type": "string",
+          "format": "date-time"
+        }
+      },
+      "required": [
+        "schemaVersion",
+        "contextManifestId",
+        "tenantId",
+        "sourceWorkItemId",
+        "targetScope",
+        "targetSubjectType",
+        "purpose",
+        "sourceRefsDigest",
+        "fieldProjectionDigest",
+        "authzEpoch",
+        "policyRevision",
+        "expiresAt",
+        "createdAt"
+      ],
+      "allOf": [
+        {
+          "if": {
+            "properties": {
+              "targetScope": {
+                "const": "NODE_HANDOFF"
+              }
+            },
+            "required": [
+              "targetScope"
+            ]
+          },
+          "then": {
+            "required": [
+              "targetNodeId"
+            ],
+            "not": {
+              "required": [
+                "targetWorkItemId"
+              ]
+            }
+          },
+          "else": {
+            "required": [
+              "targetWorkItemId"
+            ],
+            "not": {
+              "required": [
+                "targetNodeId"
+              ]
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "targetSubjectType": {
+                "enum": [
+                  "AGENT",
+                  "HUMAN"
+                ]
+              }
+            },
+            "required": [
+              "targetSubjectType"
+            ]
+          },
+          "then": {
+            "required": [
+              "targetSubjectId"
+            ]
+          }
+        }
+      ]
+    }
+  },
+  "examples": [
+    {
+      "collaborationLinkId": "link-1",
+      "tenantId": "tenant-demo",
+      "parentWorkItemId": "parent-1",
+      "childWorkItemId": "child-1",
+      "collaborationRequestRef": "request-1",
+      "objective": "编制设备预算",
+      "expectedOutputSchemaRef": "budget-v1",
+      "baselineWorkItemRevision": 7,
+      "requiredForParent": true,
+      "status": "active",
+      "revision": 1,
+      "createdByMembershipId": "member-main",
+      "createdAt": "2026-09-11T12:00:00Z"
+    },
+    {
+      "contributionId": "contribution-1",
+      "tenantId": "tenant-demo",
+      "collaborationLinkId": "link-1",
+      "childWorkItemId": "child-1",
+      "contributionVersion": 1,
+      "basedOnContextBindingId": "binding-1",
+      "basedOnParentRevision": 7,
+      "artifactRefs": [
+        {
+          "ref": "artifact-input",
+          "version": "2",
+          "digest": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+          "required": true,
+          "purpose": "equipment-configuration"
+        }
+      ],
+      "structuredResultRef": "result-1",
+      "resultDigest": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+      "completionCheckResultId": "check-1",
+      "status": "submitted",
+      "submittedByMembershipId": "member-collab",
+      "submittedAt": "2026-09-11T12:00:00Z",
+      "revision": 1
+    },
+    {
+      "contextBindingId": "binding-1",
+      "tenantId": "tenant-demo",
+      "workItemId": "child-1",
+      "workItemRevision": 2,
+      "assignmentId": "assignment-1",
+      "attemptId": "attempt-1",
+      "executionSnapshotId": "snapshot-1",
+      "contextManifestId": "manifest-1",
+      "contextManifestDigest": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+      "baseThreadSequence": 12,
+      "sourceRefs": [
+        {
+          "ref": "artifact-input",
+          "version": "2",
+          "digest": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+          "required": true,
+          "purpose": "equipment-configuration"
+        }
+      ],
+      "sourceRefsDigest": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+      "inputDigest": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+      "requiredFactKeys": [
+        "equipment.count",
+        "budget.currency"
+      ],
+      "policyRevision": "policy-12",
+      "authzEpoch": 5,
+      "expiresAt": "2026-09-11T12:15:00Z",
+      "pluginProfileDigest": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+      "bindingDigest": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+      "createdAt": "2026-09-11T12:00:00Z"
+    },
+    {
+      "applicationId": "app-1",
+      "tenantId": "tenant-demo",
+      "contextBindingId": "binding-1",
+      "attemptId": "attempt-1",
+      "consumerSubjectId": "agent-budget",
+      "state": "loaded",
+      "deliveredAt": "2026-09-11T12:00:00Z",
+      "loadedAt": "2026-09-11T12:00:00Z",
+      "appliedSequence": 12,
+      "observedSequence": 12,
+      "evidenceRefs": [
+        "evidence-controlled-runtime"
+      ],
+      "revision": 1,
+      "updatedAt": "2026-09-11T12:00:00Z"
+    },
+    {
+      "schemaVersion": "staffdeck.context-manifest/v2",
+      "contextManifestId": "manifest-1",
+      "tenantId": "tenant-demo",
+      "sourceWorkItemId": "parent-1",
+      "targetScope": "WORK_ITEM",
+      "targetWorkItemId": "child-1",
+      "targetSubjectType": "AGENT",
+      "targetSubjectId": "agent-budget",
+      "purpose": "budget",
+      "sourceRefsDigest": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+      "fieldProjectionDigest": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+      "authzEpoch": 5,
+      "policyRevision": "policy-12",
+      "expiresAt": "2026-09-11T12:15:00Z",
+      "createdAt": "2026-09-11T12:00:00Z"
+    }
+  ],
+  "x-invalid-examples": [
+    {
+      "label": "child work required",
+      "value": {
+        "collaborationLinkId": "link-1",
+        "tenantId": "tenant-demo",
+        "parentWorkItemId": "parent-1",
+        "collaborationRequestRef": "request-1",
+        "objective": "编制设备预算",
+        "expectedOutputSchemaRef": "budget-v1",
+        "baselineWorkItemRevision": 7,
+        "requiredForParent": true,
+        "status": "active",
+        "revision": 1,
+        "createdByMembershipId": "member-main",
+        "createdAt": "2026-09-11T12:00:00Z"
+      }
+    },
+    {
+      "label": "request state is not persisted link",
+      "value": {
+        "collaborationLinkId": "link-1",
+        "tenantId": "tenant-demo",
+        "parentWorkItemId": "parent-1",
+        "childWorkItemId": "child-1",
+        "collaborationRequestRef": "request-1",
+        "objective": "编制设备预算",
+        "expectedOutputSchemaRef": "budget-v1",
+        "baselineWorkItemRevision": 7,
+        "requiredForParent": true,
+        "status": "requested",
+        "revision": 1,
+        "createdByMembershipId": "member-main",
+        "createdAt": "2026-09-11T12:00:00Z"
+      }
+    },
+    {
+      "label": "no shadow assignee",
+      "value": {
+        "collaborationLinkId": "link-1",
+        "tenantId": "tenant-demo",
+        "parentWorkItemId": "parent-1",
+        "childWorkItemId": "child-1",
+        "collaborationRequestRef": "request-1",
+        "objective": "编制设备预算",
+        "expectedOutputSchemaRef": "budget-v1",
+        "baselineWorkItemRevision": 7,
+        "requiredForParent": true,
+        "status": "active",
+        "revision": 1,
+        "createdByMembershipId": "member-main",
+        "createdAt": "2026-09-11T12:00:00Z",
+        "assignee": "member-other"
+      }
+    },
+    {
+      "label": "submitted requires check",
+      "value": {
+        "contributionId": "contribution-1",
+        "tenantId": "tenant-demo",
+        "collaborationLinkId": "link-1",
+        "childWorkItemId": "child-1",
+        "contributionVersion": 1,
+        "basedOnContextBindingId": "binding-1",
+        "basedOnParentRevision": 7,
+        "artifactRefs": [
+          {
+            "ref": "artifact-input",
+            "version": "2",
+            "digest": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+            "required": true,
+            "purpose": "equipment-configuration"
+          }
+        ],
+        "structuredResultRef": "result-1",
+        "resultDigest": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "status": "submitted",
+        "submittedByMembershipId": "member-collab",
+        "submittedAt": "2026-09-11T12:00:00Z",
+        "revision": 1
+      }
+    },
+    {
+      "label": "accepted requires human decision",
+      "value": {
+        "contributionId": "contribution-1",
+        "tenantId": "tenant-demo",
+        "collaborationLinkId": "link-1",
+        "childWorkItemId": "child-1",
+        "contributionVersion": 1,
+        "basedOnContextBindingId": "binding-1",
+        "basedOnParentRevision": 7,
+        "artifactRefs": [
+          {
+            "ref": "artifact-input",
+            "version": "2",
+            "digest": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+            "required": true,
+            "purpose": "equipment-configuration"
+          }
+        ],
+        "structuredResultRef": "result-1",
+        "resultDigest": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "completionCheckResultId": "check-1",
+        "status": "accepted",
+        "submittedByMembershipId": "member-collab",
+        "submittedAt": "2026-09-11T12:00:00Z",
+        "revision": 1
+      }
+    },
+    {
+      "label": "artifact version required",
+      "value": {
+        "contributionId": "contribution-1",
+        "tenantId": "tenant-demo",
+        "collaborationLinkId": "link-1",
+        "childWorkItemId": "child-1",
+        "contributionVersion": 1,
+        "basedOnContextBindingId": "binding-1",
+        "basedOnParentRevision": 7,
+        "artifactRefs": [
+          {
+            "ref": "artifact-input",
+            "digest": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+            "required": true,
+            "purpose": "equipment-configuration"
+          }
+        ],
+        "structuredResultRef": "result-1",
+        "resultDigest": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "completionCheckResultId": "check-1",
+        "status": "submitted",
+        "submittedByMembershipId": "member-collab",
+        "submittedAt": "2026-09-11T12:00:00Z",
+        "revision": 1
+      }
+    },
+    {
+      "label": "no unknown snapshot fields",
+      "value": {
+        "contextBindingId": "binding-1",
+        "tenantId": "tenant-demo",
+        "workItemId": "child-1",
+        "workItemRevision": 2,
+        "assignmentId": "assignment-1",
+        "attemptId": "attempt-1",
+        "executionSnapshotId": "snapshot-1",
+        "contextManifestId": "manifest-1",
+        "contextManifestDigest": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "baseThreadSequence": 12,
+        "sourceRefs": [
+          {
+            "ref": "artifact-input",
+            "version": "2",
+            "digest": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+            "required": true,
+            "purpose": "equipment-configuration"
+          }
+        ],
+        "sourceRefsDigest": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "inputDigest": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "requiredFactKeys": [
+          "equipment.count",
+          "budget.currency"
+        ],
+        "policyRevision": "policy-12",
+        "authzEpoch": 5,
+        "expiresAt": "2026-09-11T12:15:00Z",
+        "pluginProfileDigest": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "bindingDigest": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "createdAt": "2026-09-11T12:00:00Z",
+        "agentSecret": "not-a-real-secret"
+      }
+    },
+    {
+      "label": "version positive",
+      "value": {
+        "contextBindingId": "binding-1",
+        "tenantId": "tenant-demo",
+        "workItemId": "child-1",
+        "workItemRevision": 0,
+        "assignmentId": "assignment-1",
+        "attemptId": "attempt-1",
+        "executionSnapshotId": "snapshot-1",
+        "contextManifestId": "manifest-1",
+        "contextManifestDigest": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "baseThreadSequence": 12,
+        "sourceRefs": [
+          {
+            "ref": "artifact-input",
+            "version": "2",
+            "digest": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+            "required": true,
+            "purpose": "equipment-configuration"
+          }
+        ],
+        "sourceRefsDigest": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "inputDigest": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "requiredFactKeys": [
+          "equipment.count",
+          "budget.currency"
+        ],
+        "policyRevision": "policy-12",
+        "authzEpoch": 5,
+        "expiresAt": "2026-09-11T12:15:00Z",
+        "pluginProfileDigest": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "bindingDigest": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "createdAt": "2026-09-11T12:00:00Z"
+      }
+    },
+    {
+      "label": "loaded requires evidence",
+      "value": {
+        "applicationId": "app-1",
+        "tenantId": "tenant-demo",
+        "contextBindingId": "binding-1",
+        "attemptId": "attempt-1",
+        "consumerSubjectId": "agent-budget",
+        "state": "loaded",
+        "deliveredAt": "2026-09-11T12:00:00Z",
+        "loadedAt": "2026-09-11T12:00:00Z",
+        "appliedSequence": 12,
+        "observedSequence": 12,
+        "evidenceRefs": [],
+        "revision": 1,
+        "updatedAt": "2026-09-11T12:00:00Z"
+      }
+    },
+    {
+      "label": "loaded requires timestamp",
+      "value": {
+        "applicationId": "app-1",
+        "tenantId": "tenant-demo",
+        "contextBindingId": "binding-1",
+        "attemptId": "attempt-1",
+        "consumerSubjectId": "agent-budget",
+        "state": "loaded",
+        "deliveredAt": "2026-09-11T12:00:00Z",
+        "appliedSequence": 12,
+        "observedSequence": 12,
+        "evidenceRefs": [
+          "evidence-controlled-runtime"
+        ],
+        "revision": 1,
+        "updatedAt": "2026-09-11T12:00:00Z"
+      }
+    },
+    {
+      "label": "work target required",
+      "value": {
+        "schemaVersion": "staffdeck.context-manifest/v2",
+        "contextManifestId": "manifest-1",
+        "tenantId": "tenant-demo",
+        "sourceWorkItemId": "parent-1",
+        "targetScope": "WORK_ITEM",
+        "targetSubjectType": "AGENT",
+        "targetSubjectId": "agent-budget",
+        "purpose": "budget",
+        "sourceRefsDigest": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "fieldProjectionDigest": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "authzEpoch": 5,
+        "policyRevision": "policy-12",
+        "expiresAt": "2026-09-11T12:15:00Z",
+        "createdAt": "2026-09-11T12:00:00Z"
+      }
+    },
+    {
+      "label": "target scope exclusive",
+      "value": {
+        "schemaVersion": "staffdeck.context-manifest/v2",
+        "contextManifestId": "manifest-1",
+        "tenantId": "tenant-demo",
+        "sourceWorkItemId": "parent-1",
+        "targetScope": "WORK_ITEM",
+        "targetWorkItemId": "child-1",
+        "targetSubjectType": "AGENT",
+        "targetSubjectId": "agent-budget",
+        "purpose": "budget",
+        "sourceRefsDigest": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "fieldProjectionDigest": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "authzEpoch": 5,
+        "policyRevision": "policy-12",
+        "expiresAt": "2026-09-11T12:15:00Z",
+        "createdAt": "2026-09-11T12:00:00Z",
+        "targetNodeId": "node-other"
+      }
+    },
+    {
+      "label": "agent target must be resolved",
+      "value": {
+        "schemaVersion": "staffdeck.context-manifest/v2",
+        "contextManifestId": "manifest-1",
+        "tenantId": "tenant-demo",
+        "sourceWorkItemId": "parent-1",
+        "targetScope": "WORK_ITEM",
+        "targetWorkItemId": "child-1",
+        "targetSubjectType": "AGENT",
+        "purpose": "budget",
+        "sourceRefsDigest": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "fieldProjectionDigest": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "authzEpoch": 5,
+        "policyRevision": "policy-12",
+        "expiresAt": "2026-09-11T12:15:00Z",
+        "createdAt": "2026-09-11T12:00:00Z"
+      }
+    }
+  ]
+}

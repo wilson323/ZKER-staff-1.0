@@ -1,0 +1,44 @@
+{
+  "schema_version": 1,
+  "project_root": "/private/var/folders/8l/6tnv8ssd2vs0h8463rnv66b00000gn/T/ai-sdlc-forward-sud9bya_/documents-project",
+  "scope": "DOCUMENTS",
+  "status": "PASS",
+  "started_at": "2026-09-11T17:40:17.521045+00:00",
+  "finished_at": "2026-09-11T17:40:17.546055+00:00",
+  "inputs": [
+    {
+      "path": "README.md",
+      "sha256": "8aa7e07efe223beadcd3a22d4092d20a0fcf1f9644c2090e9f251f2ffc7346c6"
+    },
+    {
+      "path": "docs/design-v2.md",
+      "sha256": "febee917c17c148ae36108e8fc40bfcfa52cbd58cc69f9eb363dc7b184c6f49f"
+    }
+  ],
+  "artifacts": [
+    {
+      "path": "README.md",
+      "sha256": "8aa7e07efe223beadcd3a22d4092d20a0fcf1f9644c2090e9f251f2ffc7346c6"
+    }
+  ],
+  "checks": [
+    {
+      "id": "parent-validation",
+      "argv": [
+        "python3",
+        "-c",
+        "from pathlib import Path; import re; r=Path.cwd(); links=re.findall(r'\\]\\(([^)]+)\\)',(r/'README.md').read_text()); assert links == ['docs/design-v2.md']; assert all((r/x).is_file() and (r/x).read_text().strip() for x in links); print('PASS: current design link resolves within project')"
+      ],
+      "exit_code": 0,
+      "assertions": 2,
+      "simulated": true,
+      "log": {
+        "path": "parent-validation.log",
+        "sha256": "1543122bbe7c7d9aed164bef0c302c85a7d23c94dc9620f9fe1f6d67678c5f57"
+      }
+    }
+  ],
+  "limitations": [
+    "Isolated fixture only; not production or cross-model reliability evidence."
+  ]
+}

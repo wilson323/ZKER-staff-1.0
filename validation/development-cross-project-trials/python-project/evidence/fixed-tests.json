@@ -1,0 +1,26 @@
+{
+  "command": [
+    "python3",
+    "-m",
+    "unittest",
+    "discover",
+    "-s",
+    "tests",
+    "-v"
+  ],
+  "cwd": "/private/var/folders/8l/6tnv8ssd2vs0h8463rnv66b00000gn/T/ai-sdlc-forward-sud9bya_/python-project",
+  "startedAt": "2026-09-11T17:36:22.831889+00:00",
+  "finishedAt": "2026-09-11T17:36:22.889246+00:00",
+  "exitCode": 0,
+  "inputHashes": {
+    "labels.py": "a4507011f8a36a81d0f4a9906d882ae6c7b93a904c455a61e635b9df36805be2",
+    "tests/test_labels.py": "458150891e53cfd1da792061a5875dff9ceaab2542f9402198c6082459fda297"
+  },
+  "outputHashes": {
+    "labels.py": "a4507011f8a36a81d0f4a9906d882ae6c7b93a904c455a61e635b9df36805be2",
+    "tests/test_labels.py": "458150891e53cfd1da792061a5875dff9ceaab2542f9402198c6082459fda297"
+  },
+  "inputsUnchangedDuringRun": true,
+  "stdout": "evidence/fixed-tests.stdout.log",
+  "stderr": "evidence/fixed-tests.stderr.log"
+}

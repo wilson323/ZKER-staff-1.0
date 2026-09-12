@@ -1,0 +1,788 @@
+{
+  "source": "docs/设计包/30-产品设计追踪数据.json",
+  "pages": [
+    {
+      "id": "P01",
+      "label": "我的工作台",
+      "sourceRoute": "/workbench、/my-work",
+      "fields": "本人待办、职责、期限、上下游、AI进度、异常",
+      "actions": "领取、打开、筛选、保存视图",
+      "authority": "HumanTask/WorkItem 的本人聚合",
+      "failureRecovery": "加载骨架；无任务给已授权入口；错误可重试；越权不显示全租户计数",
+      "commandIds": [
+        "C01",
+        "C02",
+        "C03",
+        "C15"
+      ],
+      "operationIds": [
+        "C01_listInbox",
+        "C01_getWork",
+        "C01_readVersionResource",
+        "C02_startProcess",
+        "C03_claim",
+        "C03_release",
+        "C03_transfer",
+        "C03_delegate",
+        "C15_read",
+        "C15_remind",
+        "C15_withdraw",
+        "C15_appendWorkMessage",
+        "C15_saveMessageDraft"
+      ],
+      "loadingStates": [
+        "LOADING",
+        "READY",
+        "EMPTY_AUTHORIZED",
+        "ERROR",
+        "FORBIDDEN_OR_NOT_FOUND",
+        "STALE",
+        "OFFLINE"
+      ],
+      "routeStatus": "PENDING_SELECTED_BASE_MAPPING",
+      "prototypeStatus": "FICTIONAL_REFERENCE_ONLY"
+    },
+    {
+      "id": "P02",
+      "label": "节点工作区",
+      "sourceRoute": "/work-item/:id",
+      "fields": "目标、本人职责、输入、协作贡献、检查、交付、流程位置",
+      "actions": "配置、开始、请人协助、提交、返工",
+      "authority": "WorkItem + WorkThread + 当前 Assignment",
+      "failureRecovery": "缺输入定位资料；旧版本保留草稿；无权/不存在统一处理",
+      "commandIds": [
+        "C01",
+        "C04",
+        "C05",
+        "C06",
+        "C07",
+        "C11",
+        "C15"
+      ],
+      "operationIds": [
+        "C01_listInbox",
+        "C01_getWork",
+        "C01_readVersionResource",
+        "C04_saveDraft",
+        "C04_saveTaskBinding",
+        "C05_previewContext",
+        "C05_eligibleResources",
+        "C06_startAttempt",
+        "C07_pause",
+        "C07_resume",
+        "C07_cancel",
+        "C11_checkCompletion",
+        "C11_submitDelivery",
+        "C15_read",
+        "C15_remind",
+        "C15_withdraw",
+        "C15_appendWorkMessage",
+        "C15_saveMessageDraft"
+      ],
+      "loadingStates": [
+        "LOADING",
+        "READY",
+        "EMPTY_AUTHORIZED",
+        "ERROR",
+        "FORBIDDEN_OR_NOT_FOUND",
+        "STALE",
+        "OFFLINE"
+      ],
+      "routeStatus": "PENDING_SELECTED_BASE_MAPPING",
+      "prototypeStatus": "FICTIONAL_REFERENCE_ONLY"
+    },
+    {
+      "id": "P03",
+      "label": "参与者与协作分工",
+      "sourceRoute": "P02 内协作标签/抽屉（增量）",
+      "fields": "分工、承担人、期限、可见Agent摘要、贡献状态",
+      "actions": "请求、接受、拒绝、转派、查看贡献",
+      "authority": "HumanTask/请求事实/CollaborationLink",
+      "failureRecovery": "没有候选显示原因；不能编辑他人Agent；退出者动作立即失效",
+      "commandIds": [
+        "C08",
+        "C09",
+        "C03"
+      ],
+      "operationIds": [
+        "C08_request",
+        "C08_accept",
+        "C08_decline",
+        "C09_submit",
+        "C09_decide",
+        "C03_claim",
+        "C03_release",
+        "C03_transfer",
+        "C03_delegate"
+      ],
+      "loadingStates": [
+        "LOADING",
+        "READY",
+        "EMPTY_AUTHORIZED",
+        "ERROR",
+        "FORBIDDEN_OR_NOT_FOUND",
+        "STALE",
+        "OFFLINE"
+      ],
+      "routeStatus": "PENDING_SELECTED_BASE_MAPPING",
+      "prototypeStatus": "FICTIONAL_REFERENCE_ONLY"
+    },
+    {
+      "id": "P04",
+      "label": "本次执行配置",
+      "sourceRoute": "P02 内配置抽屉（增量）",
+      "fields": "人工/协助/自动、Agent、技能参数、知识、连接身份、空间、方案、预算继承",
+      "actions": "预览差异、保存本次、保存个人偏好、开始",
+      "authority": "CandidateSnapshot/有效配置/ExecutionSnapshot",
+      "failureRecovery": "必需/替换/追加/失效有文字解释；冲突先回读",
+      "commandIds": [
+        "C04",
+        "C05",
+        "C27"
+      ],
+      "operationIds": [
+        "C04_saveDraft",
+        "C04_saveTaskBinding",
+        "C05_previewContext",
+        "C05_eligibleResources",
+        "C27_proposeConfig",
+        "C27_applyProposal",
+        "C27_undo"
+      ],
+      "loadingStates": [
+        "LOADING",
+        "READY",
+        "EMPTY_AUTHORIZED",
+        "ERROR",
+        "FORBIDDEN_OR_NOT_FOUND",
+        "STALE",
+        "OFFLINE"
+      ],
+      "routeStatus": "PENDING_SELECTED_BASE_MAPPING",
+      "prototypeStatus": "FICTIONAL_REFERENCE_ONLY"
+    },
+    {
+      "id": "P05",
+      "label": "数字员工目录与详情",
+      "sourceRoute": "/agents、/agents/:id",
+      "fields": "我创建/共享/推荐、职责、能力、版本、工作、记忆、设置",
+      "actions": "创建、编辑、试验、发布提案、共享、归档",
+      "authority": "AgentProfile/DefinitionVersion/Grant",
+      "failureRecovery": "使用与编辑按钮分别授权；草稿可回到；停用展示依赖",
+      "commandIds": [
+        "C17",
+        "C13"
+      ],
+      "operationIds": [
+        "C17_draft",
+        "C17_test",
+        "C17_publish",
+        "C17_disable",
+        "C17_import",
+        "C17_export",
+        "C17_diff",
+        "C17_promote",
+        "C13_listMarket",
+        "C13_adoptMarket"
+      ],
+      "loadingStates": [
+        "LOADING",
+        "READY",
+        "EMPTY_AUTHORIZED",
+        "ERROR",
+        "FORBIDDEN_OR_NOT_FOUND",
+        "STALE",
+        "OFFLINE"
+      ],
+      "routeStatus": "PENDING_SELECTED_BASE_MAPPING",
+      "prototypeStatus": "FICTIONAL_REFERENCE_ONLY"
+    },
+    {
+      "id": "P06",
+      "label": "技能目录与创作",
+      "sourceRoute": "/skills；详情/编辑为增量",
+      "fields": "用途、输入输出、示例、依赖、参数、版本、维护者、测试",
+      "actions": "选择、导入、编辑、隔离测试、提交发布",
+      "authority": "SkillCard/CapabilityManifest",
+      "failureRecovery": "导入失败定位字段；未经发布不正式执行；技能冲突明确提示",
+      "commandIds": [
+        "C17",
+        "C13"
+      ],
+      "operationIds": [
+        "C17_draft",
+        "C17_test",
+        "C17_publish",
+        "C17_disable",
+        "C17_import",
+        "C17_export",
+        "C17_diff",
+        "C17_promote",
+        "C13_listMarket",
+        "C13_adoptMarket"
+      ],
+      "loadingStates": [
+        "LOADING",
+        "READY",
+        "EMPTY_AUTHORIZED",
+        "ERROR",
+        "FORBIDDEN_OR_NOT_FOUND",
+        "STALE",
+        "OFFLINE"
+      ],
+      "routeStatus": "PENDING_SELECTED_BASE_MAPPING",
+      "prototypeStatus": "FICTIONAL_REFERENCE_ONLY"
+    },
+    {
+      "id": "P07",
+      "label": "工具和连接身份",
+      "sourceRoute": "/tools；连接向导为增量",
+      "fields": "应用动作、身份、授权范围、有效期、健康、调用记录",
+      "actions": "接入、授权、Grant配置、只读检查、撤销",
+      "authority": "Capability/Grant/ConnectionIdentity",
+      "failureRecovery": "已接入≠节点可用；零工具/过期/离线分别恢复；无密钥明文",
+      "commandIds": [
+        "C18",
+        "C24"
+      ],
+      "operationIds": [
+        "C18_discover",
+        "C18_health",
+        "C18_authorize",
+        "C18_revoke",
+        "C24_identity",
+        "C24_grant",
+        "C24_revoke",
+        "C24_transfer",
+        "C24_privacy"
+      ],
+      "loadingStates": [
+        "LOADING",
+        "READY",
+        "EMPTY_AUTHORIZED",
+        "ERROR",
+        "FORBIDDEN_OR_NOT_FOUND",
+        "STALE",
+        "OFFLINE"
+      ],
+      "routeStatus": "PENDING_SELECTED_BASE_MAPPING",
+      "prototypeStatus": "FICTIONAL_REFERENCE_ONLY"
+    },
+    {
+      "id": "P08",
+      "label": "知识库与来源",
+      "sourceRoute": "/knowledge、现有详情；加工页增量",
+      "fields": "文件/URL/系统来源、加工状态、版本、引用、读权",
+      "actions": "导入、加工、测试检索、发布、更新、授权提案",
+      "authority": "KnowledgeSource/Version/Citation",
+      "failureRecovery": "上传成功不冒充可检索；空来源/过期/不可读分别展示",
+      "commandIds": [
+        "C19",
+        "C29"
+      ],
+      "operationIds": [
+        "C19_ingest",
+        "C19_process",
+        "C19_search",
+        "C19_publish",
+        "C19_reviseMemory",
+        "C29_suggest",
+        "C29_confirm",
+        "C29_readRelated"
+      ],
+      "loadingStates": [
+        "LOADING",
+        "READY",
+        "EMPTY_AUTHORIZED",
+        "ERROR",
+        "FORBIDDEN_OR_NOT_FOUND",
+        "STALE",
+        "OFFLINE"
+      ],
+      "routeStatus": "PENDING_SELECTED_BASE_MAPPING",
+      "prototypeStatus": "FICTIONAL_REFERENCE_ONLY"
+    },
+    {
+      "id": "P09",
+      "label": "记忆与经验",
+      "sourceRoute": "Agent详情内记忆标签（条件增量）",
+      "fields": "个人/Agent/项目/团队范围、来源、有效期、此次使用",
+      "actions": "纠正、忽略、提案发布、版本比较、归档",
+      "authority": "Memory/EvolutionProposal/ContextManifest",
+      "failureRecovery": "私人内容不进入共享列表；未验收经验不自动发布",
+      "commandIds": [
+        "C19",
+        "C31"
+      ],
+      "operationIds": [
+        "C19_ingest",
+        "C19_process",
+        "C19_search",
+        "C19_publish",
+        "C19_reviseMemory",
+        "C31_propose",
+        "C31_evaluate",
+        "C31_trial",
+        "C31_publish",
+        "C31_rollback"
+      ],
+      "loadingStates": [
+        "LOADING",
+        "READY",
+        "EMPTY_AUTHORIZED",
+        "ERROR",
+        "FORBIDDEN_OR_NOT_FOUND",
+        "STALE",
+        "OFFLINE"
+      ],
+      "routeStatus": "PENDING_SELECTED_BASE_MAPPING",
+      "prototypeStatus": "FICTIONAL_REFERENCE_ONLY"
+    },
+    {
+      "id": "P10",
+      "label": "文件与产物",
+      "sourceRoute": "P02 产物标签/工作空间（增量）",
+      "fields": "业务空间、文件版本、预览、引用片段、Diff、产物位置",
+      "actions": "上传、引用、下载、比较、合并候选",
+      "authority": "Artifact/对象存储版本/WorkThreadEntry",
+      "failureRecovery": "不可解析文件提示来源；同名版本不同；窄屏改列表",
+      "commandIds": [
+        "C20",
+        "C01"
+      ],
+      "operationIds": [
+        "C20_prepareUpload",
+        "C20_uploadComplete",
+        "C20_parse",
+        "C20_merge",
+        "C20_readContent",
+        "C01_listInbox",
+        "C01_getWork",
+        "C01_readVersionResource"
+      ],
+      "loadingStates": [
+        "LOADING",
+        "READY",
+        "EMPTY_AUTHORIZED",
+        "ERROR",
+        "FORBIDDEN_OR_NOT_FOUND",
+        "STALE",
+        "OFFLINE"
+      ],
+      "routeStatus": "PENDING_SELECTED_BASE_MAPPING",
+      "prototypeStatus": "FICTIONAL_REFERENCE_ONLY"
+    },
+    {
+      "id": "P11",
+      "label": "对话与执行",
+      "sourceRoute": "/conversations、/conversations/:id",
+      "fields": "任务关联、授权历史、输入、流式反馈、工具卡、候选成果",
+      "actions": "发送、补充、转任务、引用、支持的停止/恢复",
+      "authority": "ConversationSession/WorkThread/Run",
+      "failureRecovery": "断线补取不重跑；不支持恢复时提供真实替代入口",
+      "commandIds": [
+        "C01",
+        "C06",
+        "C07",
+        "C20",
+        "C15"
+      ],
+      "operationIds": [
+        "C01_listInbox",
+        "C01_getWork",
+        "C01_readVersionResource",
+        "C06_startAttempt",
+        "C07_pause",
+        "C07_resume",
+        "C07_cancel",
+        "C20_prepareUpload",
+        "C20_uploadComplete",
+        "C20_parse",
+        "C20_merge",
+        "C20_readContent",
+        "C15_read",
+        "C15_remind",
+        "C15_withdraw",
+        "C15_appendWorkMessage",
+        "C15_saveMessageDraft"
+      ],
+      "loadingStates": [
+        "LOADING",
+        "READY",
+        "EMPTY_AUTHORIZED",
+        "ERROR",
+        "FORBIDDEN_OR_NOT_FOUND",
+        "STALE",
+        "OFFLINE"
+      ],
+      "routeStatus": "PENDING_SELECTED_BASE_MAPPING",
+      "prototypeStatus": "FICTIONAL_REFERENCE_ONLY"
+    },
+    {
+      "id": "P12",
+      "label": "数字员工团队",
+      "sourceRoute": "Agent/任务内团队入口（条件增量）",
+      "fields": "协调者、成员、分工、依赖、预算、运行、汇总",
+      "actions": "选团队、查看分工、替换、接管",
+      "authority": "Team/Grant/Assignment/Attempt",
+      "failureRecovery": "未认证能力隐藏或明确条件态；成员失败不标整体成功",
+      "commandIds": [
+        "C21"
+      ],
+      "operationIds": [
+        "C21_configure",
+        "C21_execute",
+        "C21_replace",
+        "C21_control"
+      ],
+      "loadingStates": [
+        "LOADING",
+        "READY",
+        "EMPTY_AUTHORIZED",
+        "ERROR",
+        "FORBIDDEN_OR_NOT_FOUND",
+        "STALE",
+        "OFFLINE"
+      ],
+      "routeStatus": "PENDING_SELECTED_BASE_MAPPING",
+      "prototypeStatus": "FICTIONAL_REFERENCE_ONLY"
+    },
+    {
+      "id": "P13",
+      "label": "节点执行方案",
+      "sourceRoute": "技能/任务内方案入口（条件增量）",
+      "fields": "输入、阶段、分支、依赖、停止条件、版本、输出",
+      "actions": "选择、AI草拟、表单/画布编辑、试验、发布",
+      "authority": "Skill/方案版本/Runtime执行轨迹",
+      "failureRecovery": "无出口/无限递归在开始前阻止；画布有列表替代",
+      "commandIds": [
+        "C17",
+        "C06"
+      ],
+      "operationIds": [
+        "C17_draft",
+        "C17_test",
+        "C17_publish",
+        "C17_disable",
+        "C17_import",
+        "C17_export",
+        "C17_diff",
+        "C17_promote",
+        "C06_startAttempt"
+      ],
+      "loadingStates": [
+        "LOADING",
+        "READY",
+        "EMPTY_AUTHORIZED",
+        "ERROR",
+        "FORBIDDEN_OR_NOT_FOUND",
+        "STALE",
+        "OFFLINE"
+      ],
+      "routeStatus": "PENDING_SELECTED_BASE_MAPPING",
+      "prototypeStatus": "FICTIONAL_REFERENCE_ONLY"
+    },
+    {
+      "id": "P14",
+      "label": "自动化",
+      "sourceRoute": "任务/Agent 内自动化入口（增量）",
+      "fields": "触发类型、时区、下一次、并发、去重、截止、最近原因",
+      "actions": "创建、测试、暂停、恢复、查看运行",
+      "authority": "Schedule/ScheduledTask/Run",
+      "failureRecovery": "过期/无权停止；错过触发可解释；不混入正式测试统计",
+      "commandIds": [
+        "C22",
+        "C30"
+      ],
+      "operationIds": [
+        "C22_create",
+        "C22_preview",
+        "C22_test",
+        "C22_pause",
+        "C22_resume",
+        "C22_trigger",
+        "C30_listOpportunities",
+        "C30_accept",
+        "C30_dismiss",
+        "C30_snooze"
+      ],
+      "loadingStates": [
+        "LOADING",
+        "READY",
+        "EMPTY_AUTHORIZED",
+        "ERROR",
+        "FORBIDDEN_OR_NOT_FOUND",
+        "STALE",
+        "OFFLINE"
+      ],
+      "routeStatus": "PENDING_SELECTED_BASE_MAPPING",
+      "prototypeStatus": "FICTIONAL_REFERENCE_ONLY"
+    },
+    {
+      "id": "P15",
+      "label": "渠道与专家",
+      "sourceRoute": "工具/对话内渠道入口（条件增量）",
+      "fields": "身份绑定、会话、路由、专家用途、投递状态",
+      "actions": "绑定、发起原任务咨询、暂停、重授权",
+      "authority": "Channel/Membership/Delegation/Delivery",
+      "failureRecovery": "歧义澄清；专家意见与正式审批不同；重投不重复发送",
+      "commandIds": [
+        "C18",
+        "C23"
+      ],
+      "operationIds": [
+        "C18_discover",
+        "C18_health",
+        "C18_authorize",
+        "C18_revoke",
+        "C23_receiveEvent"
+      ],
+      "loadingStates": [
+        "LOADING",
+        "READY",
+        "EMPTY_AUTHORIZED",
+        "ERROR",
+        "FORBIDDEN_OR_NOT_FOUND",
+        "STALE",
+        "OFFLINE"
+      ],
+      "routeStatus": "PENDING_SELECTED_BASE_MAPPING",
+      "prototypeStatus": "FICTIONAL_REFERENCE_ONLY"
+    },
+    {
+      "id": "P16",
+      "label": "审核、交付与接手",
+      "sourceRoute": "/approvals；P02 交付/接手增量",
+      "fields": "交付版本、检查项、变化、依据、未决项、下游输入",
+      "actions": "接受/退回、批准/拒绝、提交、接手",
+      "authority": "Approval/CompletionCheck/ResultCommit/Handoff",
+      "failureRecovery": "自批拒绝；审批过期重核；下游不可读不显示可开始",
+      "commandIds": [
+        "C09",
+        "C10",
+        "C11",
+        "C12"
+      ],
+      "operationIds": [
+        "C09_submit",
+        "C09_decide",
+        "C10_requestReview",
+        "C10_decideReview",
+        "C11_checkCompletion",
+        "C11_submitDelivery",
+        "C12_receiveHandoff"
+      ],
+      "loadingStates": [
+        "LOADING",
+        "READY",
+        "EMPTY_AUTHORIZED",
+        "ERROR",
+        "FORBIDDEN_OR_NOT_FOUND",
+        "STALE",
+        "OFFLINE"
+      ],
+      "routeStatus": "PENDING_SELECTED_BASE_MAPPING",
+      "prototypeStatus": "FICTIONAL_REFERENCE_ONLY"
+    },
+    {
+      "id": "P17",
+      "label": "SOP Studio",
+      "sourceRoute": "/sops、现有Studio",
+      "fields": "职责、输入输出、AI能力、可选策略、审核、异常、版本Diff",
+      "actions": "编辑、预检、员工预览、评审、发布",
+      "authority": "SOPVersion/NodeContract",
+      "failureRecovery": "候选空/资料缺/断路定位节点；已发布只读",
+      "commandIds": [
+        "C26",
+        "C02"
+      ],
+      "operationIds": [
+        "C26_draft",
+        "C26_check",
+        "C26_preview",
+        "C26_review",
+        "C26_publish",
+        "C02_startProcess"
+      ],
+      "loadingStates": [
+        "LOADING",
+        "READY",
+        "EMPTY_AUTHORIZED",
+        "ERROR",
+        "FORBIDDEN_OR_NOT_FOUND",
+        "STALE",
+        "OFFLINE"
+      ],
+      "routeStatus": "PENDING_SELECTED_BASE_MAPPING",
+      "prototypeStatus": "FICTIONAL_REFERENCE_ONLY"
+    },
+    {
+      "id": "P18",
+      "label": "组织、人员与权限",
+      "sourceRoute": "/organization、/people、/access",
+      "fields": "组织岗位、成员状态、任职、角色授权、来源、影响、交接",
+      "actions": "按各管理角色允许的命令维护",
+      "authority": "Membership/Employment/RoleBinding/Grant",
+      "failureRecovery": "七类夹具分别投影；没有通用管理员；私人内容最小可见",
+      "commandIds": [
+        "C24"
+      ],
+      "operationIds": [
+        "C24_identity",
+        "C24_grant",
+        "C24_revoke",
+        "C24_transfer",
+        "C24_privacy"
+      ],
+      "loadingStates": [
+        "LOADING",
+        "READY",
+        "EMPTY_AUTHORIZED",
+        "ERROR",
+        "FORBIDDEN_OR_NOT_FOUND",
+        "STALE",
+        "OFFLINE"
+      ],
+      "routeStatus": "PENDING_SELECTED_BASE_MAPPING",
+      "prototypeStatus": "FICTIONAL_REFERENCE_ONLY"
+    },
+    {
+      "id": "P19",
+      "label": "运行、用量与审计",
+      "sourceRoute": "/audit；诊断/用量按既有入口增量",
+      "fields": "健康、容量、成本、失败、回执、对账、版本、证据",
+      "actions": "诊断、已授权恢复、策略调整、脱敏导出",
+      "authority": "Run/Invocation/Usage/Audit",
+      "failureRecovery": "员工看本人可恢复原因；运维看技术关联；无数据不造指标",
+      "commandIds": [
+        "C25",
+        "C14"
+      ],
+      "operationIds": [
+        "C25_readInsights",
+        "C14_queryOperation",
+        "C14_reconcile"
+      ],
+      "loadingStates": [
+        "LOADING",
+        "READY",
+        "EMPTY_AUTHORIZED",
+        "ERROR",
+        "FORBIDDEN_OR_NOT_FOUND",
+        "STALE",
+        "OFFLINE"
+      ],
+      "routeStatus": "PENDING_SELECTED_BASE_MAPPING",
+      "prototypeStatus": "FICTIONAL_REFERENCE_ONLY"
+    },
+    {
+      "id": "P20",
+      "label": "上下文与变化",
+      "sourceRoute": "P02 上下文抽屉（增量）",
+      "fields": "共同基线、必需事实、来源版本、裁剪、装载状态、变化影响",
+      "actions": "预览、补资料、查看变化、重新核对",
+      "authority": "ContextManifest/ContextBinding/ContextApplication",
+      "failureRecovery": "未装载/失效/过期/冲突分开；已读通知不标AI已应用",
+      "commandIds": [
+        "C05",
+        "C16",
+        "C29"
+      ],
+      "operationIds": [
+        "C05_previewContext",
+        "C05_eligibleResources",
+        "C16_propose",
+        "C16_confirm",
+        "C29_suggest",
+        "C29_confirm",
+        "C29_readRelated"
+      ],
+      "loadingStates": [
+        "LOADING",
+        "READY",
+        "EMPTY_AUTHORIZED",
+        "ERROR",
+        "FORBIDDEN_OR_NOT_FOUND",
+        "STALE",
+        "OFFLINE"
+      ],
+      "routeStatus": "PENDING_SELECTED_BASE_MAPPING",
+      "prototypeStatus": "FICTIONAL_REFERENCE_ONLY"
+    },
+    {
+      "id": "P21",
+      "label": "通知与个人设置",
+      "sourceRoute": "/notifications；账号设置增量",
+      "fields": "需要我处理、关联任务、语言、时区、通知、会话、自助权限",
+      "actions": "定位、稍后、已读、配置个人偏好",
+      "authority": "Notification/Preference/Session",
+      "failureRecovery": "已读不改变任务；保留权限内深链接，无重复通知",
+      "commandIds": [
+        "C15",
+        "C27",
+        "C30"
+      ],
+      "operationIds": [
+        "C15_read",
+        "C15_remind",
+        "C15_withdraw",
+        "C15_appendWorkMessage",
+        "C15_saveMessageDraft",
+        "C27_proposeConfig",
+        "C27_applyProposal",
+        "C27_undo",
+        "C30_listOpportunities",
+        "C30_accept",
+        "C30_dismiss",
+        "C30_snooze"
+      ],
+      "loadingStates": [
+        "LOADING",
+        "READY",
+        "EMPTY_AUTHORIZED",
+        "ERROR",
+        "FORBIDDEN_OR_NOT_FOUND",
+        "STALE",
+        "OFFLINE"
+      ],
+      "routeStatus": "PENDING_SELECTED_BASE_MAPPING",
+      "prototypeStatus": "FICTIONAL_REFERENCE_ONLY"
+    },
+    {
+      "id": "P22",
+      "label": "员工资源市场",
+      "sourceRoute": "工作区/配置/资源目录快捷入口（增量）",
+      "fields": "数字员工/技能/工具、用途、版本、依赖、授权动作、我的复制",
+      "actions": "详情、复制并使用、复制编辑、来源Diff、回节点选择",
+      "authority": "Publication/LocalCopy/Lineage及类型资源授权投影",
+      "failureRecovery": "无权资源与计数隐藏；可看不可复制分开；复制成功与实际可用分开；不复制凭据/私人上下文",
+      "commandIds": [
+        "C13",
+        "C17"
+      ],
+      "operationIds": [
+        "C13_listMarket",
+        "C13_adoptMarket",
+        "C17_draft",
+        "C17_test",
+        "C17_publish",
+        "C17_disable",
+        "C17_import",
+        "C17_export",
+        "C17_diff",
+        "C17_promote"
+      ],
+      "loadingStates": [
+        "LOADING",
+        "READY",
+        "EMPTY_AUTHORIZED",
+        "ERROR",
+        "FORBIDDEN_OR_NOT_FOUND",
+        "STALE",
+        "OFFLINE"
+      ],
+      "routeStatus": "PENDING_SELECTED_BASE_MAPPING",
+      "prototypeStatus": "FICTIONAL_REFERENCE_ONLY"
+    }
+  ]
+}

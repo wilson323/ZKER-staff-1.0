@@ -1,0 +1,50 @@
+{
+  "synthetic": true,
+  "notExecutableSql": true,
+  "credentialsIncluded": false,
+  "tenants": [
+    "demo_tenant_a",
+    "demo_tenant_b"
+  ],
+  "members": [
+    {
+      "id": "demo_executor",
+      "tenantId": "demo_tenant_a",
+      "role": "EXECUTOR"
+    },
+    {
+      "id": "demo_reviewer",
+      "tenantId": "demo_tenant_a",
+      "role": "REVIEWER"
+    },
+    {
+      "id": "demo_outsider",
+      "tenantId": "demo_tenant_b",
+      "role": "EXECUTOR"
+    }
+  ],
+  "workInstances": [
+    {
+      "id": "demo_work_a1",
+      "tenantId": "demo_tenant_a",
+      "templateId": "demo_template",
+      "processInstanceId": "demo_instance_a1",
+      "assignee": "demo_executor",
+      "epoch": 1
+    },
+    {
+      "id": "demo_work_a2",
+      "tenantId": "demo_tenant_a",
+      "templateId": "demo_template",
+      "processInstanceId": "demo_instance_a2",
+      "assignee": "demo_executor",
+      "epoch": 1
+    }
+  ],
+  "sentinels": {
+    "privateSource": "PRIVATE_CONTEXT_CANARY_7F31",
+    "otherInstance": "OTHER_INSTANCE_CANARY_82A1",
+    "otherTenant": "OTHER_TENANT_CANARY_C940"
+  },
+  "expectedIsolation": "这些canary不得出现在未授权主体HTTP、SSE、DOM、日志导出或缓存中；不得当真实数据"
+}

@@ -1,0 +1,65 @@
+[
+  {
+    "repo": "earendil-works/pi",
+    "exitCode": 0,
+    "path": "validation/article-review/runtime-sources/pi-refs.txt",
+    "sha256": "5d41283f00668450fd434b556dd3536eec3f13607e59b84824f25cc103899e1b",
+    "retrievedAt": "2026-09-12T00:03:09.298287+00:00"
+  },
+  {
+    "repo": "agentscope-ai/agentscope",
+    "exitCode": 0,
+    "path": "validation/article-review/runtime-sources/agentscope-refs.txt",
+    "sha256": "4bbc3cc362e8cd6c38ff4ec0898dadd982136b81eabfd66bbf10ad6b9a59ce1a",
+    "retrievedAt": "2026-09-12T00:03:09.177017+00:00"
+  },
+  {
+    "repo": "langchain-ai/deepagents",
+    "exitCode": 0,
+    "path": "validation/article-review/runtime-sources/deepagents-refs.txt",
+    "sha256": "4e06a0b23051b91137b6431f50cd5b78eb0f7630a7e47532e1cdaeaf358e5346",
+    "retrievedAt": "2026-09-12T00:03:09.381098+00:00"
+  },
+  {
+    "repo": "RandyChen1985/nanzi-ai-agent-platform",
+    "exitCode": 0,
+    "path": "validation/article-review/runtime-sources/nanzi-ai-agent-platform-refs.txt",
+    "sha256": "0fece33920f78ad96eb06a805854b155e2c155dc3091c75b3d6698a408b5da70",
+    "retrievedAt": "2026-09-12T00:03:09.310840+00:00"
+  },
+  {
+    "repo": "omnigent-ai/omnigent",
+    "exitCode": 0,
+    "path": "validation/article-review/runtime-sources/omnigent-refs.txt",
+    "sha256": "362de728dff353ca7be5467d90e1b1363c866e049f524c4c72b10c19f12aa705",
+    "retrievedAt": "2026-09-12T00:03:10.317953+00:00"
+  },
+  {
+    "repo": "QoderAI/better-harness",
+    "exitCode": 0,
+    "path": "validation/article-review/runtime-sources/better-harness-refs.txt",
+    "sha256": "dda4d33d6dfe44e4ff5a6c22e869e9bd74722f54c1fe97e3e6dc5160d5c93b55",
+    "retrievedAt": "2026-09-12T00:03:10.153701+00:00"
+  },
+  {
+    "repo": "PrimeIntellect-ai/prime-agent",
+    "exitCode": 0,
+    "path": "validation/article-review/runtime-sources/prime-agent-refs.txt",
+    "sha256": "cc17c3633efec845ec7f84ca61bd4dfb01ef6f7f8cda838c23a576bc3a8fbd63",
+    "retrievedAt": "2026-09-12T00:03:10.230865+00:00"
+  },
+  {
+    "repo": "MirroS-Lab/HarnessEval-W",
+    "exitCode": 0,
+    "path": "validation/article-review/runtime-sources/HarnessEval-W-refs.txt",
+    "sha256": "5b0144c708edfa008f4f07cb25e6d02b4b01c9c21006b08bcd03ebc29335da7c",
+    "retrievedAt": "2026-09-12T00:03:10.257838+00:00"
+  },
+  {
+    "repo": "deepseek-ai/deepseek-harness",
+    "exitCode": 0,
+    "path": "validation/article-review/runtime-sources/deepseek-harness-refs.txt",
+    "sha256": "1fcd9314575ed1caab98fef5e861f2c6011a9d3ffc1054e48c2790fdd4b6ec61",
+    "retrievedAt": "2026-09-12T00:03:10.977181+00:00"
+  }
+]

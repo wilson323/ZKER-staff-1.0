@@ -1,0 +1,189 @@
+[
+  {
+    "id": "staffdeck-head.json",
+    "url": "https://api.github.com/repos/OpenBMB/StaffDeck/commits/main",
+    "retrievedAt": "2026-09-11T23:18:09.533393+00:00",
+    "exit": 56,
+    "error": "curl: (56) The requested URL returned error: 403"
+  },
+  {
+    "id": "staffdeck-release.json",
+    "url": "https://api.github.com/repos/OpenBMB/StaffDeck/releases/latest",
+    "retrievedAt": "2026-09-11T23:18:09.533666+00:00",
+    "exit": 56,
+    "error": "curl: (56) The requested URL returned error: 403"
+  },
+  {
+    "id": "codex-head.json",
+    "url": "https://api.github.com/repos/openai/codex/commits/main",
+    "retrievedAt": "2026-09-11T23:18:09.532704+00:00",
+    "exit": 56,
+    "error": "curl: (56) The requested URL returned error: 403"
+  },
+  {
+    "id": "codex-release.json",
+    "url": "https://api.github.com/repos/openai/codex/releases/latest",
+    "retrievedAt": "2026-09-11T23:18:09.953735+00:00",
+    "exit": 56,
+    "error": "curl: (56) The requested URL returned error: 403"
+  },
+  {
+    "id": "qoder-changelog.html",
+    "url": "https://docs.qoder.cn/product-overview/qoderwake-cn-update-log",
+    "retrievedAt": "2026-09-11T23:18:09.937805+00:00",
+    "exit": 0,
+    "file": "validation/agent-runtime/sources/qoder-changelog.html",
+    "bytes": 1083046,
+    "sha256": "57c75e1659d426e02632688dc34616b1a725dee93c533ca7ed6e0c23f90c9d88"
+  },
+  {
+    "id": "qoder-wakerflow.html",
+    "url": "https://docs.qoder.cn/qoderwake/wakerflow",
+    "retrievedAt": "2026-09-11T23:18:10.000703+00:00",
+    "exit": 0,
+    "file": "validation/agent-runtime/sources/qoder-wakerflow.html",
+    "bytes": 772712,
+    "sha256": "68010c5c63cb33419706705d213f3e100506f846ee7edac139a5f8126ebab60d"
+  },
+  {
+    "id": "qoder-automated.html",
+    "url": "https://docs.qoder.cn/qoderwake/automated-tasks",
+    "retrievedAt": "2026-09-11T23:18:10.381575+00:00",
+    "exit": 0,
+    "file": "validation/agent-runtime/sources/qoder-automated.html",
+    "bytes": 797318,
+    "sha256": "fc275b9ba40876f877804b441129139ea0f1f322c93ac7aee3fad6661b422dad"
+  },
+  {
+    "id": "qoder-cli.html",
+    "url": "https://docs.qoder.cn/qoderwake/cli-reference",
+    "retrievedAt": "2026-09-11T23:18:10.506646+00:00",
+    "exit": 0,
+    "file": "validation/agent-runtime/sources/qoder-cli.html",
+    "bytes": 1403049,
+    "sha256": "af4ced00230c25f9939d5faf8459edbd1912ef017d92c5b478cbdca83ffe9cc1"
+  },
+  {
+    "id": "codex-appserver.html",
+    "url": "https://developers.openai.com/codex/app-server",
+    "retrievedAt": "2026-09-11T23:18:53.890859+00:00",
+    "exit": 0,
+    "file": "validation/agent-runtime/sources/codex-appserver.html",
+    "bytes": 905529,
+    "sha256": "31f6925517b9e9b4c87b2a19664cb7ba58fc6c096ec31f95d08c39cc21892195"
+  },
+  {
+    "id": "openai-harness.html",
+    "url": "https://openai.com/index/harness-engineering/",
+    "retrievedAt": "2026-09-11T23:18:52.859347+00:00",
+    "exit": 56,
+    "error": "curl: (56) The requested URL returned error: 403"
+  },
+  {
+    "id": "staffdeck-latest-release.html",
+    "url": "https://github.com/OpenBMB/StaffDeck/releases/latest",
+    "retrievedAt": "2026-09-11T23:18:53.866043+00:00",
+    "exit": 0,
+    "file": "validation/agent-runtime/sources/staffdeck-latest-release.html",
+    "bytes": 201937,
+    "sha256": "a200b6c2288986b12c041069c08d7ced4d64aaae1216f5ad57b004377b846aa1"
+  },
+  {
+    "id": "codex-latest-release.html",
+    "url": "https://github.com/openai/codex/releases/latest",
+    "retrievedAt": "2026-09-11T23:18:54.532576+00:00",
+    "exit": 0,
+    "file": "validation/agent-runtime/sources/codex-latest-release.html",
+    "bytes": 384346,
+    "sha256": "d9480e33563d345cc6f0eaf723d9bf555afaca5c698c9003e3c6be109cca6e41"
+  },
+  {
+    "id": "staffdeck.tar.gz",
+    "url": "https://codeload.github.com/OpenBMB/StaffDeck/tar.gz/7adc7c84f61bd6cca13ff0380a811cbb3ae3c544",
+    "retrievedAt": "2026-09-11T23:19:52.770900+00:00",
+    "exit": 0,
+    "file": "validation/agent-runtime/sources/staffdeck.tar.gz",
+    "bytes": 6942680,
+    "sha256": "15b96d12f44a487a0f6556fcd68e11b3490bc4ddc3a1ea35bf3fd5edc6914924"
+  },
+  {
+    "id": "codex-README.md",
+    "url": "https://raw.githubusercontent.com/openai/codex/e8271aa8b482f917b2e62dca0e51e29b8d5ec156/codex-rs/app-server/README.md",
+    "retrievedAt": "2026-09-11T23:19:51.389626+00:00",
+    "exit": 35,
+    "error": "curl: (35) LibreSSL SSL_connect: SSL_ERROR_SYSCALL in connection to raw.githubusercontent.com:443"
+  },
+  {
+    "id": "codex-LICENSE",
+    "url": "https://raw.githubusercontent.com/openai/codex/e8271aa8b482f917b2e62dca0e51e29b8d5ec156/LICENSE",
+    "retrievedAt": "2026-09-11T23:19:51.390641+00:00",
+    "exit": 35,
+    "error": "curl: (35) LibreSSL SSL_connect: SSL_ERROR_SYSCALL in connection to raw.githubusercontent.com:443"
+  },
+  {
+    "id": "codex-sdk-README.md",
+    "url": "https://raw.githubusercontent.com/openai/codex/e8271aa8b482f917b2e62dca0e51e29b8d5ec156/sdk/typescript/README.md",
+    "retrievedAt": "2026-09-11T23:19:51.576626+00:00",
+    "exit": 35,
+    "error": "curl: (35) LibreSSL SSL_connect: SSL_ERROR_SYSCALL in connection to raw.githubusercontent.com:443"
+  },
+  {
+    "id": "codex-security.md",
+    "url": "https://raw.githubusercontent.com/openai/codex/e8271aa8b482f917b2e62dca0e51e29b8d5ec156/docs/security.md",
+    "retrievedAt": "2026-09-11T23:19:51.577550+00:00",
+    "exit": 35,
+    "error": "curl: (35) LibreSSL SSL_connect: SSL_ERROR_SYSCALL in connection to raw.githubusercontent.com:443"
+  },
+  {
+    "id": "codex-v2.rs",
+    "url": "https://raw.githubusercontent.com/openai/codex/e8271aa8b482f917b2e62dca0e51e29b8d5ec156/codex-rs/app-server-protocol/src/protocol/v2.rs",
+    "retrievedAt": "2026-09-11T23:19:51.762735+00:00",
+    "exit": 35,
+    "error": "curl: (35) LibreSSL SSL_connect: SSL_ERROR_SYSCALL in connection to raw.githubusercontent.com:443"
+  },
+  {
+    "id": "codex.tar.gz",
+    "url": "https://codeload.github.com/openai/codex/tar.gz/6b9826e3aa83b1a5947db50f4332cb9c65f1b340",
+    "retrievedAt": "2026-09-11T23:20:38.275386+00:00",
+    "exit": 0,
+    "file": "validation/agent-runtime/sources/codex.tar.gz",
+    "bytes": 13872873,
+    "sha256": "848c7ffac62e21b14edc2048d2e5b7c82b31c556afa4b0d305da0f7d5aa794f4"
+  },
+  {
+    "id": "openai-latency.html",
+    "url": "https://developers.openai.com/api/docs/guides/latency-optimization",
+    "retrievedAt": "2026-09-11T23:22:33.677409+00:00",
+    "exit": 0,
+    "file": "validation/agent-runtime/sources/openai-latency.html",
+    "bytes": 456569,
+    "sha256": "908bca34662efeb955941825ba0077c77a4070d1ce17d83d4331a8e4a5a40d8a"
+  },
+  {
+    "id": "anthropic-multiagent.html",
+    "url": "https://www.anthropic.com/engineering/multi-agent-research-system",
+    "retrievedAt": "2026-09-11T23:22:33.446233+00:00",
+    "exit": 0,
+    "file": "validation/agent-runtime/sources/anthropic-multiagent.html",
+    "bytes": 205683,
+    "sha256": "f9c100a871797c9c5550dd91260d48f13429ead23d89d8cafd6b091451aa71fe"
+  },
+  {
+    "id": "harness-convergence.html",
+    "url": "https://arxiv.org/abs/2608.23953",
+    "retrievedAt": "2026-09-11T23:22:33.452089+00:00",
+    "exit": 0,
+    "file": "validation/agent-runtime/sources/harness-convergence.html",
+    "bytes": 42361,
+    "sha256": "22318059782a55c8742ed41247c19fa2ad8114931689f1d88c1f7fbf9698d2ce"
+  },
+  {
+    "id": "harness-of-harness.html",
+    "url": "https://arxiv.org/abs/2609.01481",
+    "retrievedAt": "2026-09-11T23:22:34.028849+00:00",
+    "exit": 0,
+    "file": "validation/agent-runtime/sources/harness-of-harness.html",
+    "bytes": 43967,
+    "sha256": "ae400509ef317b3388305c799cdcc22738ed84f4c203327b72e3d9a492b8d5e7"
+  }
+]

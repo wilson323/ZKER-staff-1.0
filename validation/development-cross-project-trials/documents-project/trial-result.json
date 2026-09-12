@@ -1,0 +1,153 @@
+{
+  "caseId": "documents-home-navigation",
+  "request": "修正文档首页导航，使其链接到当前设计，并验证链接可用。",
+  "cwd": "/private/var/folders/8l/6tnv8ssd2vs0h8463rnv66b00000gn/T/ai-sdlc-forward-sud9bya_/documents-project",
+  "startedAt": "2026-09-11T17:37:01.087899+00:00",
+  "skill": {
+    "path": "/Users/mac/.agents/skills/ai-native-sdlc/SKILL.md",
+    "declaredVersion": "2.0.0",
+    "sha256": "743508a73ab71722c71c91808d67ee8a0d7faa325badbfce97afdc046931a5a9",
+    "resourcesRead": [
+      "references/evidence-evals.md"
+    ],
+    "hashTiming": "The original sha256 was captured at trial instrumentation time, after the initial cat; the exact initial read timestamp and atomic hash were not captured.",
+    "postValidationRead": {
+      "startedAt": "2026-09-11T17:37:42.253348+00:00",
+      "endedAt": "2026-09-11T17:37:42.253516+00:00",
+      "sha256": "743508a73ab71722c71c91808d67ee8a0d7faa325badbfce97afdc046931a5a9",
+      "sameAsInstrumentationHash": true,
+      "purpose": "Read-only snapshot after notification of concurrent global Skill modification; does not retroactively establish the exact initial read version."
+    }
+  },
+  "model": "UNKNOWN",
+  "modelNote": "No exact executing model identifier was exposed for this trial.",
+  "trial": {
+    "type": "independent forward trial",
+    "attempts": 1
+  },
+  "toolScope": "Read/write this temporary project only; read-only specified Skill resources; no network, installation, Git creation, credentials or external services.",
+  "inputHashes": {
+    "AGENTS.md": "d21b3876d70b29619f42ff82c3704418c027783a2e9a85703f28d207e333b618",
+    "README.md": "f92c22cb728e66dccffe11c84d597633cc3415d54fcac9ef98fdb2b31260eec8",
+    "docs/design-v2.md": "febee917c17c148ae36108e8fc40bfcfa52cbd58cc69f9eb363dc7b184c6f49f"
+  },
+  "baseline": {
+    "git": "No .git at the temporary project root; no Git commands used.",
+    "runtime": {
+      "pythonExecutable": "/usr/local/bin/python3",
+      "pythonVersion": "3.14.7 (v3.14.7:823f0323ee6, Aug  5 2026, 07:07:01) [Clang 21.0.0 (clang-2100.1.1.101)]"
+    }
+  },
+  "skillUsage": [
+    {
+      "action": "Read Skill and lock project root, scope and acceptance.",
+      "command": "cat /Users/mac/.agents/skills/ai-native-sdlc/SKILL.md",
+      "exitCode": 0
+    },
+    {
+      "action": "Discover actual project files.",
+      "command": "pwd && rg --files -g '!trial-result.json' -g '!*.log' -g '!*node_modules*' -g '!.git' -g '!package-lock.json' -g '!pnpm-lock.yaml'",
+      "exitCode": 0
+    },
+    {
+      "action": "Read project constraints and actual document contents.",
+      "command": "cat AGENTS.md README.md docs/design-v2.md",
+      "exitCode": 0
+    },
+    {
+      "action": "Choose simple reversible task path; no task graph or build framework added.",
+      "basis": "Project AGENTS.md and Skill simple-task path."
+    },
+    {
+      "action": "Read evidence requirements before validation.",
+      "command": "cat /Users/mac/.agents/skills/ai-native-sdlc/references/evidence-evals.md",
+      "exitCode": 0
+    },
+    {
+      "action": "After receiving concurrent-write notice, re-read the shared Skill as one byte snapshot and capture real UTC read bounds and SHA-256; no shared files modified.",
+      "source": "/Users/mac/.agents/skills/ai-native-sdlc/SKILL.md",
+      "evidence": "trial-skill-read.log"
+    }
+  ],
+  "commands": [
+    {
+      "argv": [
+        "/usr/local/bin/python3",
+        "-c",
+        "from pathlib import Path\nfrom urllib.parse import urlparse, unquote\nimport re\nimport sys\nroot = Path.cwd().resolve()\nreadme = root / 'README.md'\nlinks = re.findall(r'(?<!!)\\[[^\\]]+\\]\\(([^)]+)\\)', readme.read_text())\nif not links:\n    print('FAIL: README.md contains no navigable Markdown links')\n    sys.exit(1)\nfailures = 0\nfor link in links:\n    url = urlparse(link)\n    if url.scheme or url.netloc:\n        print('FAIL: external links are outside the authorized local validation scope:', link)\n        failures += 1\n        continue\n    target = (readme.parent / unquote(url.path)).resolve()\n    if root not in target.parents:\n        print('FAIL: link escapes project root:', link)\n        failures += 1\n    elif not target.is_file():\n        print('FAIL: missing local file:', link)\n        failures += 1\n    elif not target.read_text().strip():\n        print('FAIL: empty target:', link)\n        failures += 1\n    elif 'current approved design description' not in target.read_text():\n        print('FAIL: target does not identify itself as the current approved design:', link)\n        failures += 1\n    else:\n        print('PASS: readable current design:', link)\nprint('Checked', len(links), 'README link(s); failures:', failures)\nsys.exit(1 if failures else 0)\n"
+      ],
+      "cwd": "/private/var/folders/8l/6tnv8ssd2vs0h8463rnv66b00000gn/T/ai-sdlc-forward-sud9bya_/documents-project",
+      "startedAt": "2026-09-11T17:37:01.088057+00:00",
+      "endedAt": "2026-09-11T17:37:01.115077+00:00",
+      "exitCode": 1,
+      "inputHashes": {
+        "AGENTS.md": "d21b3876d70b29619f42ff82c3704418c027783a2e9a85703f28d207e333b618",
+        "README.md": "f92c22cb728e66dccffe11c84d597633cc3415d54fcac9ef98fdb2b31260eec8",
+        "docs/design-v2.md": "febee917c17c148ae36108e8fc40bfcfa52cbd58cc69f9eb363dc7b184c6f49f"
+      },
+      "rawOutput": "trial-before-link-check.log",
+      "coverage": "Every README Markdown link must resolve inside the project to a nonempty readable current-design document."
+    },
+    {
+      "argv": [
+        "/usr/local/bin/python3",
+        "-c",
+        "from pathlib import Path\nfrom urllib.parse import urlparse, unquote\nimport re\nimport sys\nroot = Path.cwd().resolve()\nreadme = root / 'README.md'\nlinks = re.findall(r'(?<!!)\\[[^\\]]+\\]\\(([^)]+)\\)', readme.read_text())\nif not links:\n    print('FAIL: README.md contains no navigable Markdown links')\n    sys.exit(1)\nfailures = 0\nfor link in links:\n    url = urlparse(link)\n    if url.scheme or url.netloc:\n        print('FAIL: external links are outside the authorized local validation scope:', link)\n        failures += 1\n        continue\n    target = (readme.parent / unquote(url.path)).resolve()\n    if root not in target.parents:\n        print('FAIL: link escapes project root:', link)\n        failures += 1\n    elif not target.is_file():\n        print('FAIL: missing local file:', link)\n        failures += 1\n    elif not target.read_text().strip():\n        print('FAIL: empty target:', link)\n        failures += 1\n    elif 'current approved design description' not in target.read_text():\n        print('FAIL: target does not identify itself as the current approved design:', link)\n        failures += 1\n    else:\n        print('PASS: readable current design:', link)\nprint('Checked', len(links), 'README link(s); failures:', failures)\nsys.exit(1 if failures else 0)\n"
+      ],
+      "cwd": "/private/var/folders/8l/6tnv8ssd2vs0h8463rnv66b00000gn/T/ai-sdlc-forward-sud9bya_/documents-project",
+      "startedAt": "2026-09-11T17:37:01.115643+00:00",
+      "endedAt": "2026-09-11T17:37:01.140918+00:00",
+      "exitCode": 0,
+      "inputHashes": {
+        "AGENTS.md": "d21b3876d70b29619f42ff82c3704418c027783a2e9a85703f28d207e333b618",
+        "README.md": "8aa7e07efe223beadcd3a22d4092d20a0fcf1f9644c2090e9f251f2ffc7346c6",
+        "docs/design-v2.md": "febee917c17c148ae36108e8fc40bfcfa52cbd58cc69f9eb363dc7b184c6f49f"
+      },
+      "rawOutput": "trial-after-link-check.log",
+      "coverage": "Every README Markdown link must resolve inside the project to a nonempty readable current-design document."
+    }
+  ],
+  "status": "VERIFIED",
+  "changes": [
+    {
+      "path": "README.md",
+      "action": "Replace the single broken current-design href with docs/design-v2.md."
+    }
+  ],
+  "actualArtifacts": [
+    "README.md",
+    "trial-readme.diff",
+    "trial-before-link-check.log",
+    "trial-after-link-check.log",
+    "trial-result.json",
+    "trial-skill-read.log"
+  ],
+  "rawEvidence": [
+    "trial-before-link-check.log",
+    "trial-after-link-check.log",
+    "trial-readme.diff",
+    "trial-skill-read.log"
+  ],
+  "grader": {
+    "type": "deterministic local-link check plus source-diff and hash review",
+    "independentModelReview": "NOT_RUN"
+  },
+  "limitations": [
+    "Only local Markdown navigation is in scope; no browser, web server, product implementation or production validation.",
+    "One trial does not establish repeated behavioral reliability or comparative improvement.",
+    "Initial read tool calls have actual commands and exit codes, but no separately captured timestamps.",
+    "A separate session may modify the shared Skill. The post-validation snapshot hash equals the instrumentation hash only if recorded as true; initial cat read time/hash were not captured atomically."
+  ],
+  "outputHashes": {
+    "AGENTS.md": "d21b3876d70b29619f42ff82c3704418c027783a2e9a85703f28d207e333b618",
+    "README.md": "8aa7e07efe223beadcd3a22d4092d20a0fcf1f9644c2090e9f251f2ffc7346c6",
+    "docs/design-v2.md": "febee917c17c148ae36108e8fc40bfcfa52cbd58cc69f9eb363dc7b184c6f49f"
+  },
+  "result": "README navigation resolves to the existing current approved design. Baseline missing-file failure reproduced; post-change local-link check passed.",
+  "validation": {
+    "baseline": "FAIL, expected missing docs/design.md, preserved",
+    "after": "PASS, 1 README link checked",
+    "scopeControl": "PASS, only README source changed; AGENTS.md and current design hashes unchanged"
+  },
+  "endedAt": "2026-09-11T17:37:01.141553+00:00"
+}

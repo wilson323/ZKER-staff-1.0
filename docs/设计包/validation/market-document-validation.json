@@ -1,0 +1,166 @@
+{
+  "revision": "v2.2",
+  "passed": true,
+  "checks": [
+    {
+      "name": "153 original requirement contents and priorities preserved",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "priority counts unchanged",
+      "passed": true,
+      "detail": {
+        "P0": 37,
+        "P1": 102,
+        "P2": 14
+      }
+    },
+    {
+      "name": "21 domains and 22 distinct page groups",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "10 market refinements mapped to existing requirements",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "30 original requirements enriched",
+      "passed": true,
+      "detail": 30
+    },
+    {
+      "name": "all page/flow/interface references resolve",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "153 unique story anchors",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "market story refinements present for all mapped requirements",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "complete checklist still 153 rows",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "checklist agrees with requirement data",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "5 ER diagrams",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "all local links and line references valid",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "all Markdown table columns consistent",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "existing prototype 54 layouts / 8 interactions passed",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "market prototype 75 layouts / 19 interactions passed",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "market schema 4 valid / 8 invalid passed",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "prior collaboration schema unchanged",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "entry point advertises matching current coverage",
+      "passed": true,
+      "detail": null
+    }
+  ],
+  "errors": [],
+  "localLinks": 383,
+  "coverage": {
+    "requirements": 153,
+    "domains": 21,
+    "pageGroups": 22,
+    "marketRefinements": 10,
+    "mappedRequirements": 30,
+    "erDiagrams": 5,
+    "flows": 13,
+    "interfaceGroups": 17,
+    "layoutCombinations": 129,
+    "interactions": 27,
+    "marketSchemaExamples": 12
+  },
+  "sourceHeadAtMarketReview": "7fe65123c8dee1bb2a5542327bcdc6b80e1f7454",
+  "sourceHeadAtDelivery": "7fe65123c8dee1bb2a5542327bcdc6b80e1f7454",
+  "sources": [
+    {
+      "id": "M01",
+      "path": "/Users/mac/Documents/ChatGPT/ZKER- staff/StaffDeck-业务闭环权限与完整用户故事规格.md",
+      "line": 716,
+      "sha256": "26c2beec6c889cabba9840a121d122fbb7b924370a2230c087031310ea72e190"
+    },
+    {
+      "id": "M02",
+      "path": "/Users/mac/Documents/ChatGPT/ZKER- staff/contracts/authz/actions.yaml",
+      "line": 5378,
+      "sha256": "e7cccbd31a78d49716661f7a7ac08155de1506768c20ab71114340630d80f721"
+    },
+    {
+      "id": "M03",
+      "path": "/Users/mac/Documents/ChatGPT/ZKER- staff/services/control-plane/control_plane/gallery_resources_list_session.py",
+      "line": 1,
+      "sha256": "e9eec9a9655390c2180cfe73d7241c70bc451ea07576fc691d2997dfb1557321"
+    },
+    {
+      "id": "M04",
+      "path": "/Users/mac/Documents/ChatGPT/ZKER- staff/services/control-plane/control_plane/gallery_agent_copy_session.py",
+      "line": 1,
+      "sha256": "2099fa2a16089465c5b9dd9fbd7d918cc8b957a327c5b3da402b22ecca82ed3a"
+    },
+    {
+      "id": "M05",
+      "path": "/Users/mac/Documents/ChatGPT/ZKER- staff/services/control-plane/control_plane/gallery_agent_adopt_session.py",
+      "line": 1,
+      "sha256": "734e326901fa7933b13f423750798dc2bff156c5b50aa8a71b9148fc28d13ae8"
+    },
+    {
+      "id": "M06",
+      "path": "/Users/mac/Documents/ChatGPT/ZKER- staff/services/control-plane/control_plane/operations_not_implemented.py",
+      "line": 63,
+      "sha256": "3a5701520b25d16f0a511d1780b20402e788fd8559d5192ebfef7c651cfc82b4"
+    },
+    {
+      "id": "M07",
+      "path": "/Users/mac/Documents/ChatGPT/ZKER- staff/docs/ui/prototype-screenshot-acceptance-matrix.md",
+      "line": 56,
+      "sha256": "3714a374f989b1d80885a9b13a541e13672140ca84ebc272a55263c79221a1e6"
+    }
+  ],
+  "limitations": [
+    "Prototype fixtures only; not production authorization or marketplace persistence",
+    "No actual copy, credential authorization, capability invocation, product code or database change",
+    "Existing 153 requirements retain earlier code audit times; this turn refreshes market-specific evidence"
+  ]
+}

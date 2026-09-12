@@ -1,0 +1,2679 @@
+{
+  "status": "PASS",
+  "scope": "RESEARCH_EVIDENCE_AND_DOCUMENT_INTEGRITY_ONLY",
+  "checkedAt": "2026-09-12T00:27:42.555495+00:00",
+  "checks": [
+    {
+      "name": "census counts internally consistent",
+      "pass": true
+    },
+    {
+      "name": "metadata parse errors absent",
+      "pass": true
+    },
+    {
+      "name": "32 distinct selected article IDs",
+      "pass": true
+    },
+    {
+      "name": "reading declarations: 25 full and 7 partial",
+      "pass": true
+    },
+    {
+      "name": "WX-0753 bodyPath",
+      "pass": true
+    },
+    {
+      "name": "WX-0753 metadataPath",
+      "pass": true
+    },
+    {
+      "name": "WX-0753 extractedTextPath",
+      "pass": true
+    },
+    {
+      "name": "WX-0753 report exists",
+      "pass": true
+    },
+    {
+      "name": "WX-0991 bodyPath",
+      "pass": true
+    },
+    {
+      "name": "WX-0991 metadataPath",
+      "pass": true
+    },
+    {
+      "name": "WX-0991 extractedTextPath",
+      "pass": true
+    },
+    {
+      "name": "WX-0991 report exists",
+      "pass": true
+    },
+    {
+      "name": "WX-1091 bodyPath",
+      "pass": true
+    },
+    {
+      "name": "WX-1091 metadataPath",
+      "pass": true
+    },
+    {
+      "name": "WX-1091 extractedTextPath",
+      "pass": true
+    },
+    {
+      "name": "WX-1091 report exists",
+      "pass": true
+    },
+    {
+      "name": "WX-0699 bodyPath",
+      "pass": true
+    },
+    {
+      "name": "WX-0699 metadataPath",
+      "pass": true
+    },
+    {
+      "name": "WX-0699 extractedTextPath",
+      "pass": true
+    },
+    {
+      "name": "WX-0699 report exists",
+      "pass": true
+    },
+    {
+      "name": "WX-1026 bodyPath",
+      "pass": true
+    },
+    {
+      "name": "WX-1026 metadataPath",
+      "pass": true
+    },
+    {
+      "name": "WX-1026 extractedTextPath",
+      "pass": true
+    },
+    {
+      "name": "WX-1026 report exists",
+      "pass": true
+    },
+    {
+      "name": "WX-0741 bodyPath",
+      "pass": true
+    },
+    {
+      "name": "WX-0741 metadataPath",
+      "pass": true
+    },
+    {
+      "name": "WX-0741 extractedTextPath",
+      "pass": true
+    },
+    {
+      "name": "WX-0741 report exists",
+      "pass": true
+    },
+    {
+      "name": "WX-0744 bodyPath",
+      "pass": true
+    },
+    {
+      "name": "WX-0744 metadataPath",
+      "pass": true
+    },
+    {
+      "name": "WX-0744 extractedTextPath",
+      "pass": true
+    },
+    {
+      "name": "WX-0744 report exists",
+      "pass": true
+    },
+    {
+      "name": "WX-0133 bodyPath",
+      "pass": true
+    },
+    {
+      "name": "WX-0133 metadataPath",
+      "pass": true
+    },
+    {
+      "name": "WX-0133 extractedTextPath",
+      "pass": true
+    },
+    {
+      "name": "WX-0133 report exists",
+      "pass": true
+    },
+    {
+      "name": "WX-0911 bodyPath",
+      "pass": true
+    },
+    {
+      "name": "WX-0911 metadataPath",
+      "pass": true
+    },
+    {
+      "name": "WX-0911 extractedTextPath",
+      "pass": true
+    },
+    {
+      "name": "WX-0911 report exists",
+      "pass": true
+    },
+    {
+      "name": "WX-0736 bodyPath",
+      "pass": true
+    },
+    {
+      "name": "WX-0736 metadataPath",
+      "pass": true
+    },
+    {
+      "name": "WX-0736 extractedTextPath",
+      "pass": true
+    },
+    {
+      "name": "WX-0736 report exists",
+      "pass": true
+    },
+    {
+      "name": "WX-0347 bodyPath",
+      "pass": true
+    },
+    {
+      "name": "WX-0347 metadataPath",
+      "pass": true
+    },
+    {
+      "name": "WX-0347 extractedTextPath",
+      "pass": true
+    },
+    {
+      "name": "WX-0347 report exists",
+      "pass": true
+    },
+    {
+      "name": "WX-1255 bodyPath",
+      "pass": true
+    },
+    {
+      "name": "WX-1255 metadataPath",
+      "pass": true
+    },
+    {
+      "name": "WX-1255 extractedTextPath",
+      "pass": true
+    },
+    {
+      "name": "WX-1255 report exists",
+      "pass": true
+    },
+    {
+      "name": "WX-0593 bodyPath",
+      "pass": true
+    },
+    {
+      "name": "WX-0593 metadataPath",
+      "pass": true
+    },
+    {
+      "name": "WX-0593 extractedTextPath",
+      "pass": true
+    },
+    {
+      "name": "WX-0593 report exists",
+      "pass": true
+    },
+    {
+      "name": "WX-0690 bodyPath",
+      "pass": true
+    },
+    {
+      "name": "WX-0690 metadataPath",
+      "pass": true
+    },
+    {
+      "name": "WX-0690 extractedTextPath",
+      "pass": true
+    },
+    {
+      "name": "WX-0690 report exists",
+      "pass": true
+    },
+    {
+      "name": "WX-0899 bodyPath",
+      "pass": true
+    },
+    {
+      "name": "WX-0899 metadataPath",
+      "pass": true
+    },
+    {
+      "name": "WX-0899 extractedTextPath",
+      "pass": true
+    },
+    {
+      "name": "WX-0899 report exists",
+      "pass": true
+    },
+    {
+      "name": "WX-0734 bodyPath",
+      "pass": true
+    },
+    {
+      "name": "WX-0734 metadataPath",
+      "pass": true
+    },
+    {
+      "name": "WX-0734 extractedTextPath",
+      "pass": true
+    },
+    {
+      "name": "WX-0734 report exists",
+      "pass": true
+    },
+    {
+      "name": "WX-0746 bodyPath",
+      "pass": true
+    },
+    {
+      "name": "WX-0746 metadataPath",
+      "pass": true
+    },
+    {
+      "name": "WX-0746 extractedTextPath",
+      "pass": true
+    },
+    {
+      "name": "WX-0746 report exists",
+      "pass": true
+    },
+    {
+      "name": "WX-0754 bodyPath",
+      "pass": true
+    },
+    {
+      "name": "WX-0754 metadataPath",
+      "pass": true
+    },
+    {
+      "name": "WX-0754 extractedTextPath",
+      "pass": true
+    },
+    {
+      "name": "WX-0754 report exists",
+      "pass": true
+    },
+    {
+      "name": "WX-0771 bodyPath",
+      "pass": true
+    },
+    {
+      "name": "WX-0771 metadataPath",
+      "pass": true
+    },
+    {
+      "name": "WX-0771 extractedTextPath",
+      "pass": true
+    },
+    {
+      "name": "WX-0771 report exists",
+      "pass": true
+    },
+    {
+      "name": "WX-0452 bodyPath",
+      "pass": true
+    },
+    {
+      "name": "WX-0452 metadataPath",
+      "pass": true
+    },
+    {
+      "name": "WX-0452 extractedTextPath",
+      "pass": true
+    },
+    {
+      "name": "WX-0452 report exists",
+      "pass": true
+    },
+    {
+      "name": "WX-0887 bodyPath",
+      "pass": true
+    },
+    {
+      "name": "WX-0887 metadataPath",
+      "pass": true
+    },
+    {
+      "name": "WX-0887 extractedTextPath",
+      "pass": true
+    },
+    {
+      "name": "WX-0887 report exists",
+      "pass": true
+    },
+    {
+      "name": "WX-0877 bodyPath",
+      "pass": true
+    },
+    {
+      "name": "WX-0877 metadataPath",
+      "pass": true
+    },
+    {
+      "name": "WX-0877 extractedTextPath",
+      "pass": true
+    },
+    {
+      "name": "WX-0877 report exists",
+      "pass": true
+    },
+    {
+      "name": "WX-1273 bodyPath",
+      "pass": true
+    },
+    {
+      "name": "WX-1273 metadataPath",
+      "pass": true
+    },
+    {
+      "name": "WX-1273 extractedTextPath",
+      "pass": true
+    },
+    {
+      "name": "WX-1273 report exists",
+      "pass": true
+    },
+    {
+      "name": "WX-0138 bodyPath",
+      "pass": true
+    },
+    {
+      "name": "WX-0138 metadataPath",
+      "pass": true
+    },
+    {
+      "name": "WX-0138 extractedTextPath",
+      "pass": true
+    },
+    {
+      "name": "WX-0138 report exists",
+      "pass": true
+    },
+    {
+      "name": "WX-0425 bodyPath",
+      "pass": true
+    },
+    {
+      "name": "WX-0425 metadataPath",
+      "pass": true
+    },
+    {
+      "name": "WX-0425 extractedTextPath",
+      "pass": true
+    },
+    {
+      "name": "WX-0425 report exists",
+      "pass": true
+    },
+    {
+      "name": "WX-1226 bodyPath",
+      "pass": true
+    },
+    {
+      "name": "WX-1226 metadataPath",
+      "pass": true
+    },
+    {
+      "name": "WX-1226 extractedTextPath",
+      "pass": true
+    },
+    {
+      "name": "WX-1226 report exists",
+      "pass": true
+    },
+    {
+      "name": "WX-1258 bodyPath",
+      "pass": true
+    },
+    {
+      "name": "WX-1258 metadataPath",
+      "pass": true
+    },
+    {
+      "name": "WX-1258 extractedTextPath",
+      "pass": true
+    },
+    {
+      "name": "WX-1258 report exists",
+      "pass": true
+    },
+    {
+      "name": "WX-0772 bodyPath",
+      "pass": true
+    },
+    {
+      "name": "WX-0772 metadataPath",
+      "pass": true
+    },
+    {
+      "name": "WX-0772 extractedTextPath",
+      "pass": true
+    },
+    {
+      "name": "WX-0772 report exists",
+      "pass": true
+    },
+    {
+      "name": "WX-0143 bodyPath",
+      "pass": true
+    },
+    {
+      "name": "WX-0143 metadataPath",
+      "pass": true
+    },
+    {
+      "name": "WX-0143 extractedTextPath",
+      "pass": true
+    },
+    {
+      "name": "WX-0143 report exists",
+      "pass": true
+    },
+    {
+      "name": "WX-0766 bodyPath",
+      "pass": true
+    },
+    {
+      "name": "WX-0766 metadataPath",
+      "pass": true
+    },
+    {
+      "name": "WX-0766 extractedTextPath",
+      "pass": true
+    },
+    {
+      "name": "WX-0766 report exists",
+      "pass": true
+    },
+    {
+      "name": "WX-0874 bodyPath",
+      "pass": true
+    },
+    {
+      "name": "WX-0874 metadataPath",
+      "pass": true
+    },
+    {
+      "name": "WX-0874 extractedTextPath",
+      "pass": true
+    },
+    {
+      "name": "WX-0874 report exists",
+      "pass": true
+    },
+    {
+      "name": "WX-0213 bodyPath",
+      "pass": true
+    },
+    {
+      "name": "WX-0213 metadataPath",
+      "pass": true
+    },
+    {
+      "name": "WX-0213 extractedTextPath",
+      "pass": true
+    },
+    {
+      "name": "WX-0213 report exists",
+      "pass": true
+    },
+    {
+      "name": "public source SHA: anthropic-evals",
+      "pass": true
+    },
+    {
+      "name": "public extracted SHA: anthropic-evals",
+      "pass": true
+    },
+    {
+      "name": "public source SHA: anthropic-context",
+      "pass": true
+    },
+    {
+      "name": "public extracted SHA: anthropic-context",
+      "pass": true
+    },
+    {
+      "name": "public source SHA: anthropic-tools",
+      "pass": true
+    },
+    {
+      "name": "public extracted SHA: anthropic-tools",
+      "pass": true
+    },
+    {
+      "name": "public source SHA: anthropic-effective",
+      "pass": true
+    },
+    {
+      "name": "public extracted SHA: anthropic-effective",
+      "pass": true
+    },
+    {
+      "name": "public source SHA: otel-genai",
+      "pass": true
+    },
+    {
+      "name": "public extracted SHA: otel-genai",
+      "pass": true
+    },
+    {
+      "name": "public source SHA: otel-genai-events",
+      "pass": true
+    },
+    {
+      "name": "public extracted SHA: otel-genai-events",
+      "pass": true
+    },
+    {
+      "name": "public source SHA: cumora-readme",
+      "pass": true
+    },
+    {
+      "name": "public extracted SHA: cumora-readme",
+      "pass": true
+    },
+    {
+      "name": "public source SHA: cumora-license",
+      "pass": true
+    },
+    {
+      "name": "public extracted SHA: cumora-license",
+      "pass": true
+    },
+    {
+      "name": "public source SHA: maka-readme",
+      "pass": true
+    },
+    {
+      "name": "public extracted SHA: maka-readme",
+      "pass": true
+    },
+    {
+      "name": "public source SHA: planning-evals",
+      "pass": true
+    },
+    {
+      "name": "public extracted SHA: planning-evals",
+      "pass": true
+    },
+    {
+      "name": "public source SHA: planning-readme",
+      "pass": true
+    },
+    {
+      "name": "public extracted SHA: planning-readme",
+      "pass": true
+    },
+    {
+      "name": "public source SHA: IMA-01",
+      "pass": true
+    },
+    {
+      "name": "public extracted SHA: IMA-01",
+      "pass": true
+    },
+    {
+      "name": "public source SHA: IMA-02",
+      "pass": true
+    },
+    {
+      "name": "public extracted SHA: IMA-02",
+      "pass": true
+    },
+    {
+      "name": "public source SHA: anthropic-managed",
+      "pass": true
+    },
+    {
+      "name": "public extracted SHA: anthropic-managed",
+      "pass": true
+    },
+    {
+      "name": "public source SHA: otel-new-readme",
+      "pass": true
+    },
+    {
+      "name": "public extracted SHA: otel-new-readme",
+      "pass": true
+    },
+    {
+      "name": "public source SHA: otel-new-root",
+      "pass": true
+    },
+    {
+      "name": "public extracted SHA: otel-new-root",
+      "pass": true
+    },
+    {
+      "name": "public source SHA: otel-current-genai",
+      "pass": true
+    },
+    {
+      "name": "public extracted SHA: otel-current-genai",
+      "pass": true
+    },
+    {
+      "name": "public source SHA: otel-current-events",
+      "pass": true
+    },
+    {
+      "name": "public extracted SHA: otel-current-events",
+      "pass": true
+    },
+    {
+      "name": "primary source SHA: qdrant-text-filtering",
+      "pass": true
+    },
+    {
+      "name": "primary source SHA: qdrant-hybrid",
+      "pass": true
+    },
+    {
+      "name": "primary source SHA: qdrant-multitenancy",
+      "pass": true
+    },
+    {
+      "name": "primary source SHA: pgvector-readme-fixed",
+      "pass": true
+    },
+    {
+      "name": "primary source SHA: pgvector-license-fixed",
+      "pass": true
+    },
+    {
+      "name": "primary source SHA: mysql84-ngram",
+      "pass": true
+    },
+    {
+      "name": "primary source SHA: docling-advanced",
+      "pass": true
+    },
+    {
+      "name": "primary source SHA: docling-pipeline-options",
+      "pass": true
+    },
+    {
+      "name": "primary source SHA: anthropic-contextual-retrieval",
+      "pass": true
+    },
+    {
+      "name": "primary source SHA: anthropic-context-engineering",
+      "pass": true
+    },
+    {
+      "name": "primary source SHA: qdrant-license-v1.19.1",
+      "pass": true
+    },
+    {
+      "name": "primary source SHA: docling-license-v2.126.0",
+      "pass": true
+    },
+    {
+      "name": "primary source SHA: postgres-rls",
+      "pass": true
+    },
+    {
+      "name": "primary source SHA: wikicreator-skillhub",
+      "pass": true
+    },
+    {
+      "name": "primary source SHA: semantica-readme-rolling",
+      "pass": true
+    },
+    {
+      "name": "primary source SHA: semantica-license-rolling",
+      "pass": true
+    },
+    {
+      "name": "primary source SHA: semantica-pyproject-rolling",
+      "pass": true
+    },
+    {
+      "name": "primary source SHA: palantir-ontology-overview",
+      "pass": true
+    },
+    {
+      "name": "primary source SHA: palantir-action-permissions",
+      "pass": true
+    },
+    {
+      "name": "primary source SHA: w3c-owl-overview",
+      "pass": true
+    },
+    {
+      "name": "primary source SHA: w3c-prov-o",
+      "pass": true
+    },
+    {
+      "name": "primary source SHA: company-brain-original",
+      "pass": true
+    },
+    {
+      "name": "primary source SHA: semantica-readme-fixed",
+      "pass": true
+    },
+    {
+      "name": "primary source SHA: semantica-license-fixed",
+      "pass": true
+    },
+    {
+      "name": "primary source SHA: semantica-pyproject-fixed",
+      "pass": true
+    },
+    {
+      "name": "primary source SHA: semantica-context-graph-fixed",
+      "pass": true
+    },
+    {
+      "name": "primary source SHA: semantica-release-pypi",
+      "pass": true
+    },
+    {
+      "name": "primary source SHA: ragflow-readme-v0.27.2",
+      "pass": true
+    },
+    {
+      "name": "primary source SHA: ragflow-compose-v0.27.2",
+      "pass": true
+    },
+    {
+      "name": "primary source SHA: openviking-license-rolling",
+      "pass": true
+    },
+    {
+      "name": "primary source SHA: openviking-readme-rolling",
+      "pass": true
+    },
+    {
+      "name": "primary source SHA: semantica-git-refs",
+      "pass": true
+    },
+    {
+      "name": "runtime source SHA: pi-v2-design.md",
+      "pass": true
+    },
+    {
+      "name": "runtime source SHA: pi-v2-readme.md",
+      "pass": true
+    },
+    {
+      "name": "runtime source SHA: pi-v2-package.json",
+      "pass": true
+    },
+    {
+      "name": "runtime source SHA: pi-v2-article-design.md",
+      "pass": true
+    },
+    {
+      "name": "runtime source SHA: agentscope-readme.md",
+      "pass": true
+    },
+    {
+      "name": "runtime source SHA: agentscope-pyproject.toml",
+      "pass": true
+    },
+    {
+      "name": "runtime source SHA: agentscope-license.txt",
+      "pass": true
+    },
+    {
+      "name": "runtime source SHA: deepagents-readme.md",
+      "pass": true
+    },
+    {
+      "name": "runtime source SHA: deepagents-license.txt",
+      "pass": true
+    },
+    {
+      "name": "runtime source SHA: omnigent-readme.md",
+      "pass": true
+    },
+    {
+      "name": "runtime source SHA: omnigent-license.txt",
+      "pass": true
+    },
+    {
+      "name": "runtime source SHA: nanzi-readme.md",
+      "pass": true
+    },
+    {
+      "name": "runtime source SHA: nanzi-license.txt",
+      "pass": true
+    },
+    {
+      "name": "runtime source SHA: better-harness-readme.md",
+      "pass": true
+    },
+    {
+      "name": "runtime source SHA: better-harness-license.txt",
+      "pass": true
+    },
+    {
+      "name": "runtime source SHA: harnesseval-readme.md",
+      "pass": true
+    },
+    {
+      "name": "runtime source SHA: prime-readme.md",
+      "pass": true
+    },
+    {
+      "name": "runtime source SHA: prime-license.txt",
+      "pass": true
+    },
+    {
+      "name": "runtime source SHA: cmu-readme.md",
+      "pass": true
+    },
+    {
+      "name": "runtime source SHA: cmu-paper.html",
+      "pass": true
+    },
+    {
+      "name": "runtime source SHA: prime-paper.html",
+      "pass": true
+    },
+    {
+      "name": "runtime source SHA: agentscope.tar.gz",
+      "pass": true
+    },
+    {
+      "name": "runtime source SHA: deepagents.tar.gz",
+      "pass": true
+    },
+    {
+      "name": "runtime source SHA: nanzi-ai-agent-platform.tar.gz",
+      "pass": true
+    },
+    {
+      "name": "runtime source SHA: dsh-host-readme.txt",
+      "pass": true
+    },
+    {
+      "name": "runtime source SHA: dsh-registry.txt",
+      "pass": true
+    },
+    {
+      "name": "runtime source SHA: dsh-selftool.txt",
+      "pass": true
+    },
+    {
+      "name": "runtime source SHA: better-harness-readme-fixed.md",
+      "pass": true
+    },
+    {
+      "name": "runtime source SHA: omnigent-readme-fixed.md",
+      "pass": true
+    },
+    {
+      "name": "runtime source SHA: prime-agent-readme-fixed.md",
+      "pass": true
+    },
+    {
+      "name": "runtime source SHA: agentloop-article.html",
+      "pass": true
+    },
+    {
+      "name": "runtime source SHA: agentloop-concepts.html",
+      "pass": true
+    },
+    {
+      "name": "runtime source SHA: deepagents-subagents.html",
+      "pass": true
+    },
+    {
+      "name": "runtime failed fetch not credited: deepagents-safety.html",
+      "pass": true
+    },
+    {
+      "name": "runtime source SHA: agentscope-pypi.json",
+      "pass": true
+    },
+    {
+      "name": "runtime source SHA: deepagents-pypi.json",
+      "pass": true
+    },
+    {
+      "name": "runtime source SHA: voyager.html",
+      "pass": true
+    },
+    {
+      "name": "runtime source SHA: alphaevolve.html",
+      "pass": true
+    },
+    {
+      "name": "runtime git-manifest.json:validation/article-review/runtime-sources/pi-refs.txt",
+      "pass": true
+    },
+    {
+      "name": "runtime git-manifest.json:validation/article-review/runtime-sources/agentscope-refs.txt",
+      "pass": true
+    },
+    {
+      "name": "runtime git-manifest.json:validation/article-review/runtime-sources/deepagents-refs.txt",
+      "pass": true
+    },
+    {
+      "name": "runtime git-manifest.json:validation/article-review/runtime-sources/nanzi-ai-agent-platform-refs.txt",
+      "pass": true
+    },
+    {
+      "name": "runtime git-manifest.json:validation/article-review/runtime-sources/omnigent-refs.txt",
+      "pass": true
+    },
+    {
+      "name": "runtime git-manifest.json:validation/article-review/runtime-sources/better-harness-refs.txt",
+      "pass": true
+    },
+    {
+      "name": "runtime git-manifest.json:validation/article-review/runtime-sources/prime-agent-refs.txt",
+      "pass": true
+    },
+    {
+      "name": "runtime git-manifest.json:validation/article-review/runtime-sources/HarnessEval-W-refs.txt",
+      "pass": true
+    },
+    {
+      "name": "runtime git-manifest.json:validation/article-review/runtime-sources/deepseek-harness-refs.txt",
+      "pass": true
+    },
+    {
+      "name": "runtime extracted-manifest.json:validation/article-review/runtime-sources/agentscope--README.md",
+      "pass": true
+    },
+    {
+      "name": "runtime extracted-manifest.json:validation/article-review/runtime-sources/agentscope--pyproject.toml",
+      "pass": true
+    },
+    {
+      "name": "runtime extracted-manifest.json:validation/article-review/runtime-sources/agentscope--src__agentscope___version.py",
+      "pass": true
+    },
+    {
+      "name": "runtime extracted-manifest.json:validation/article-review/runtime-sources/agentscope--src__agentscope__app__deps.py",
+      "pass": true
+    },
+    {
+      "name": "runtime extracted-manifest.json:validation/article-review/runtime-sources/agentscope--src__agentscope__app__storage____init__.py",
+      "pass": true
+    },
+    {
+      "name": "runtime extracted-manifest.json:validation/article-review/runtime-sources/agentscope--src__agentscope__app__storage___sql___storage.py",
+      "pass": true
+    },
+    {
+      "name": "runtime extracted-manifest.json:validation/article-review/runtime-sources/agentscope--src__agentscope__app___router___workspace.py",
+      "pass": true
+    },
+    {
+      "name": "runtime extracted-manifest.json:validation/article-review/runtime-sources/agentscope--src__agentscope__app___service___workspace.py",
+      "pass": true
+    },
+    {
+      "name": "runtime extracted-manifest.json:validation/article-review/runtime-sources/agentscope--src__agentscope__permission___engine.py",
+      "pass": true
+    },
+    {
+      "name": "runtime extracted-manifest.json:validation/article-review/runtime-sources/deepagents--libs__deepagents__pyproject.toml",
+      "pass": true
+    },
+    {
+      "name": "runtime extracted-manifest.json:validation/article-review/runtime-sources/deepagents--libs__deepagents__deepagents__graph.py",
+      "pass": true
+    },
+    {
+      "name": "runtime extracted-manifest.json:validation/article-review/runtime-sources/deepagents--libs__deepagents__deepagents__middleware__permissions.py",
+      "pass": true
+    },
+    {
+      "name": "runtime extracted-manifest.json:validation/article-review/runtime-sources/deepagents--libs__deepagents__deepagents__middleware__subagents.py",
+      "pass": true
+    },
+    {
+      "name": "runtime extracted-manifest.json:validation/article-review/runtime-sources/nanzi-ai-agent-platform--requirements.txt",
+      "pass": true
+    },
+    {
+      "name": "runtime extracted-manifest.json:validation/article-review/runtime-sources/nanzi-ai-agent-platform--app__services__quota_service.py",
+      "pass": true
+    },
+    {
+      "name": "runtime extracted-manifest.json:validation/article-review/runtime-sources/nanzi-ai-agent-platform--app__utils__fs_access.py",
+      "pass": true
+    },
+    {
+      "name": "runtime extracted-manifest.json:validation/article-review/runtime-sources/nanzi-ai-agent-platform--app__services__ai__runtime__agentscope__session_lock.py",
+      "pass": true
+    },
+    {
+      "name": "runtime extracted-manifest.json:validation/article-review/runtime-sources/nanzi-ai-agent-platform--architech__design__AGENTSCOPE_RUNTIME.md",
+      "pass": true
+    },
+    {
+      "name": "runtime extracted-manifest.json:validation/article-review/runtime-sources/nanzi-ai-agent-platform--architech__design__permission_design.md",
+      "pass": true
+    },
+    {
+      "name": "IMA inventory: 125 visible libraries",
+      "pass": true
+    },
+    {
+      "name": "IMA search scope: 14 queries / 10 libraries / 406 rows / 402 IDs",
+      "pass": true
+    },
+    {
+      "name": "IMA query pagination caveat preserved",
+      "pass": true
+    },
+    {
+      "name": "IMA metadata not treated as body",
+      "pass": true
+    },
+    {
+      "name": "HTTP success semantic boundaries preserved",
+      "pass": true
+    },
+    {
+      "name": "IMA official ZIP SHA",
+      "pass": true
+    },
+    {
+      "name": "IMA installed 1.1.9 and local fix preserved",
+      "pass": true
+    },
+    {
+      "name": "IMA read-only authenticated",
+      "pass": true
+    },
+    {
+      "name": "credential filesystem modes",
+      "pass": true
+    },
+    {
+      "name": "original unchanged: docs/设计包/30-产品设计追踪数据.json",
+      "pass": true
+    },
+    {
+      "name": "original unchanged: docs/设计包/31-完整产品交互原型.html",
+      "pass": true
+    },
+    {
+      "name": "173 requirements / 22 pages / 72 original cases preserved",
+      "pass": true
+    },
+    {
+      "name": "original product cases NOT_RUN",
+      "pass": true
+    },
+    {
+      "name": "product remains unconfigured",
+      "pass": true
+    },
+    {
+      "name": "balanced code fences: README.md",
+      "pass": true
+    },
+    {
+      "name": "local link exists: README.md:docs/设计包/34-任务执行工作台与权限分层设计.md",
+      "pass": true
+    },
+    {
+      "name": "local link exists: README.md:docs/设计包/37-技术架构总设计与决策.md",
+      "pass": true
+    },
+    {
+      "name": "local link exists: README.md:docs/设计包/46-开发基线与低代码插件化决策.md",
+      "pass": true
+    },
+    {
+      "name": "local link exists: README.md:docs/设计包/57-Agent运行框架最新源码研究.md",
+      "pass": true
+    },
+    {
+      "name": "local link exists: README.md:docs/设计包/58-Agent技术架构与性能实施设计.md",
+      "pass": true
+    },
+    {
+      "name": "local link exists: README.md:docs/设计包/55-知识库与记忆开源方案深度研究.md",
+      "pass": true
+    },
+    {
+      "name": "local link exists: README.md:docs/设计包/56-知识记忆技术栈与实施决策.md",
+      "pass": true
+    },
+    {
+      "name": "local link exists: README.md:CONTEXT.md",
+      "pass": true
+    },
+    {
+      "name": "local link exists: README.md:history/用户需求原文.md",
+      "pass": true
+    },
+    {
+      "name": "local link exists: README.md:history/会话全文.md",
+      "pass": true
+    },
+    {
+      "name": "local link exists: README.md:history/会话消息.json",
+      "pass": true
+    },
+    {
+      "name": "local link exists: README.md:docs/设计包/26-完整产品设计文档.md",
+      "pass": true
+    },
+    {
+      "name": "local link exists: README.md:docs/设计包/31-完整产品交互原型.html",
+      "pass": true
+    },
+    {
+      "name": "local link exists: README.md:docs/设计包/32-业务流程图原型图与断点闭环审查.md",
+      "pass": true
+    },
+    {
+      "name": "local link exists: README.md:history/本轮产品设计需求补充-2026-09-11.md",
+      "pass": true
+    },
+    {
+      "name": "local link exists: README.md:docs/设计包/33-QoderWake与StaffDeck融合及AI体验研究.md",
+      "pass": true
+    },
+    {
+      "name": "local link exists: README.md:docs/设计包/27-逻辑数据模型与接口契约.md",
+      "pass": true
+    },
+    {
+      "name": "local link exists: README.md:docs/设计包/29-全量需求与角色追踪.md",
+      "pass": true
+    },
+    {
+      "name": "local link exists: README.md:docs/设计包/28-开发分期与验收用例.md",
+      "pass": true
+    },
+    {
+      "name": "local link exists: README.md:validation/product-design-document-check.json",
+      "pass": true
+    },
+    {
+      "name": "local link exists: README.md:validation/product-design-prototype-check.json",
+      "pass": true
+    },
+    {
+      "name": "local link exists: README.md:docs/设计包/36-开源底座源码研究与技术选型.md",
+      "pass": true
+    },
+    {
+      "name": "local link exists: README.md:docs/设计包/37-技术架构总设计与决策.md",
+      "pass": true
+    },
+    {
+      "name": "local link exists: README.md:docs/设计包/45-AI编程文档就绪审查与补齐清单.md",
+      "pass": true
+    },
+    {
+      "name": "local link exists: README.md:docs/设计包/25-从零开发最小工作量开源选型.md",
+      "pass": true
+    },
+    {
+      "name": "local link exists: README.md:项目接续提示词.md",
+      "pass": true
+    },
+    {
+      "name": "local link exists: README.md:validation/项目创建与迁移记录.json",
+      "pass": true
+    },
+    {
+      "name": "local link exists: README.md:docs/设计包/00-开发设计包导读.md",
+      "pass": true
+    },
+    {
+      "name": "local link exists: README.md:docs/设计包/01-产品需求与业务规则.md",
+      "pass": true
+    },
+    {
+      "name": "local link exists: README.md:docs/设计包/02-数据模型与ER设计.md",
+      "pass": true
+    },
+    {
+      "name": "local link exists: README.md:docs/设计包/03-业务流程与状态机.md",
+      "pass": true
+    },
+    {
+      "name": "local link exists: README.md:docs/设计包/04-接口与契约变更设计.md",
+      "pass": true
+    },
+    {
+      "name": "local link exists: README.md:docs/设计包/05-UI与交互设计.md",
+      "pass": true
+    },
+    {
+      "name": "local link exists: README.md:docs/设计包/06-用户故事与153项追踪矩阵.md",
+      "pass": true
+    },
+    {
+      "name": "local link exists: README.md:docs/设计包/07-开发分解与验收方案.md",
+      "pass": true
+    },
+    {
+      "name": "local link exists: README.md:docs/设计包/08-人员数字员工协作交互原型.html",
+      "pass": true
+    },
+    {
+      "name": "local link exists: README.md:docs/设计包/09-协作扩展候选.schema.json",
+      "pass": true
+    },
+    {
+      "name": "local link exists: README.md:docs/设计包/10-需求追踪数据.json",
+      "pass": true
+    },
+    {
+      "name": "local link exists: README.md:docs/设计包/11-存量合同字段字典.md",
+      "pass": true
+    },
+    {
+      "name": "local link exists: README.md:docs/设计包/12-员工市场复制与使用设计.md",
+      "pass": true
+    },
+    {
+      "name": "local link exists: README.md:docs/设计包/13-市场采用候选.schema.json",
+      "pass": true
+    },
+    {
+      "name": "local link exists: README.md:docs/设计包/14-QoderWake界面参考与原型设计.md",
+      "pass": true
+    },
+    {
+      "name": "local link exists: README.md:docs/设计包/15-全角色界面与操作覆盖矩阵.md",
+      "pass": true
+    },
+    {
+      "name": "local link exists: README.md:docs/设计包/16-角色视角与权限演示数据.json",
+      "pass": true
+    },
+    {
+      "name": "local link exists: README.md:docs/设计包/17-角色需求与验收追踪.json",
+      "pass": true
+    },
+    {
+      "name": "local link exists: README.md:docs/设计包/18-OA多流程多实例产品设计.md",
+      "pass": true
+    },
+    {
+      "name": "local link exists: README.md:docs/设计包/19-OA多实例演示数据.json",
+      "pass": true
+    },
+    {
+      "name": "local link exists: README.md:docs/设计包/20-OA统一待办候选.schema.json",
+      "pass": true
+    },
+    {
+      "name": "local link exists: README.md:docs/设计包/21-OA需求细化与验收追踪.json",
+      "pass": true
+    },
+    {
+      "name": "local link exists: README.md:docs/设计包/22-开源工作流与成熟前端复用选型.md",
+      "pass": true
+    },
+    {
+      "name": "local link exists: README.md:docs/设计包/23-OA主旨与BS字段一致性核查.md",
+      "pass": true
+    },
+    {
+      "name": "local link exists: README.md:docs/设计包/24-业务模板字段候选.json",
+      "pass": true
+    },
+    {
+      "name": "local link exists: README.md:docs/设计包/25-从零开发最小工作量开源选型.md",
+      "pass": true
+    },
+    {
+      "name": "local link exists: README.md:docs/设计包/26-完整产品设计文档.md",
+      "pass": true
+    },
+    {
+      "name": "local link exists: README.md:docs/设计包/27-逻辑数据模型与接口契约.md",
+      "pass": true
+    },
+    {
+      "name": "local link exists: README.md:docs/设计包/28-开发分期与验收用例.md",
+      "pass": true
+    },
+    {
+      "name": "local link exists: README.md:docs/设计包/29-全量需求与角色追踪.md",
+      "pass": true
+    },
+    {
+      "name": "local link exists: README.md:docs/设计包/30-产品设计追踪数据.json",
+      "pass": true
+    },
+    {
+      "name": "local link exists: README.md:docs/设计包/31-完整产品交互原型.html",
+      "pass": true
+    },
+    {
+      "name": "local link exists: README.md:docs/设计包/32-业务流程图原型图与断点闭环审查.md",
+      "pass": true
+    },
+    {
+      "name": "local link exists: README.md:docs/设计包/33-QoderWake与StaffDeck融合及AI体验研究.md",
+      "pass": true
+    },
+    {
+      "name": "local link exists: README.md:docs/设计包/34-任务执行工作台与权限分层设计.md",
+      "pass": true
+    },
+    {
+      "name": "local link exists: README.md:docs/设计包/ZKER-staff-v2-evidence.json",
+      "pass": true
+    },
+    {
+      "name": "local link exists: README.md:docs/设计包/ZKER-staff-完整优化清单-v2-人员数字员工与上下文对齐.md",
+      "pass": true
+    },
+    {
+      "name": "local link exists: README.md:docs/设计包/附录-QoderWake竞品分析-初版快照.md",
+      "pass": true
+    },
+    {
+      "name": "local link exists: README.md:.agents/skills/oa-development-system/SKILL.md",
+      "pass": true
+    },
+    {
+      "name": "local link exists: README.md:docs/开发体系.md",
+      "pass": true
+    },
+    {
+      "name": "local link exists: README.md:docs/设计包/35-全产品AI体验复核与改进.md",
+      "pass": true
+    },
+    {
+      "name": "local link exists: README.md:docs/设计包/46-开发基线与低代码插件化决策.md",
+      "pass": true
+    },
+    {
+      "name": "local link exists: README.md:docs/设计包/54-开源二开与完整商用准入.md",
+      "pass": true
+    },
+    {
+      "name": "local link exists: README.md:docs/设计包/47-全产品实施切片与首期开发规格.md",
+      "pass": true
+    },
+    {
+      "name": "local link exists: README.md:docs/设计包/48-接口事件与插件合同.md",
+      "pass": true
+    },
+    {
+      "name": "local link exists: README.md:docs/设计包/49-字段级数据模型与迁移规范.md",
+      "pass": true
+    },
+    {
+      "name": "local link exists: README.md:docs/设计包/50-业务不变量权限与验收夹具.md",
+      "pass": true
+    },
+    {
+      "name": "local link exists: README.md:docs/设计包/51-开发启动测试与故障恢复手册.md",
+      "pass": true
+    },
+    {
+      "name": "local link exists: README.md:docs/设计包/52-UI实现与页面状态规格.md",
+      "pass": true
+    },
+    {
+      "name": "local link exists: README.md:docs/设计包/53-AI运行工具与效果评测规范.md",
+      "pass": true
+    },
+    {
+      "name": "local link exists: README.md:contracts/openapi.json",
+      "pass": true
+    },
+    {
+      "name": "local link exists: README.md:contracts/data-dictionary.md",
+      "pass": true
+    },
+    {
+      "name": "local link exists: README.md:contracts/implementation-map.json",
+      "pass": true
+    },
+    {
+      "name": "local link exists: README.md:validation/implementation-contract-check.json",
+      "pass": true
+    },
+    {
+      "name": "local link exists: README.md:docs/设计包/59-智能体文章证据复核与全栈优化.md",
+      "pass": true
+    },
+    {
+      "name": "local link exists: README.md:docs/设计包/60-最小技术方案与验证决策.md",
+      "pass": true
+    },
+    {
+      "name": "balanced code fences: CONTEXT.md",
+      "pass": true
+    },
+    {
+      "name": "local link exists: CONTEXT.md:docs/设计包/37-技术架构总设计与决策.md",
+      "pass": true
+    },
+    {
+      "name": "local link exists: CONTEXT.md:docs/设计包/46-开发基线与低代码插件化决策.md",
+      "pass": true
+    },
+    {
+      "name": "local link exists: CONTEXT.md:history/本轮产品设计需求补充-2026-09-11.md",
+      "pass": true
+    },
+    {
+      "name": "local link exists: CONTEXT.md:docs/设计包/57-Agent运行框架最新源码研究.md",
+      "pass": true
+    },
+    {
+      "name": "local link exists: CONTEXT.md:docs/设计包/58-Agent技术架构与性能实施设计.md",
+      "pass": true
+    },
+    {
+      "name": "local link exists: CONTEXT.md:docs/设计包/55-知识库与记忆开源方案深度研究.md",
+      "pass": true
+    },
+    {
+      "name": "local link exists: CONTEXT.md:docs/设计包/56-知识记忆技术栈与实施决策.md",
+      "pass": true
+    },
+    {
+      "name": "local link exists: CONTEXT.md:docs/设计包/34-任务执行工作台与权限分层设计.md",
+      "pass": true
+    },
+    {
+      "name": "local link exists: CONTEXT.md:.agents/skills/oa-development-system/SKILL.md",
+      "pass": true
+    },
+    {
+      "name": "local link exists: CONTEXT.md:docs/开发体系.md",
+      "pass": true
+    },
+    {
+      "name": "local link exists: CONTEXT.md:docs/设计包/35-全产品AI体验复核与改进.md",
+      "pass": true
+    },
+    {
+      "name": "local link exists: CONTEXT.md:docs/设计包/59-智能体文章证据复核与全栈优化.md",
+      "pass": true
+    },
+    {
+      "name": "local link exists: CONTEXT.md:docs/设计包/60-最小技术方案与验证决策.md",
+      "pass": true
+    },
+    {
+      "name": "balanced code fences: 53-AI运行工具与效果评测规范.md",
+      "pass": true
+    },
+    {
+      "name": "local link exists: 53-AI运行工具与效果评测规范.md:56-知识记忆技术栈与实施决策.md",
+      "pass": true
+    },
+    {
+      "name": "local link exists: 53-AI运行工具与效果评测规范.md:55-知识库与记忆开源方案深度研究.md",
+      "pass": true
+    },
+    {
+      "name": "local link exists: 53-AI运行工具与效果评测规范.md:57-Agent运行框架最新源码研究.md",
+      "pass": true
+    },
+    {
+      "name": "local link exists: 53-AI运行工具与效果评测规范.md:58-Agent技术架构与性能实施设计.md",
+      "pass": true
+    },
+    {
+      "name": "local link exists: 53-AI运行工具与效果评测规范.md:../../contracts/fixtures/ai-evals.json",
+      "pass": true
+    },
+    {
+      "name": "local link exists: 53-AI运行工具与效果评测规范.md:59-智能体文章证据复核与全栈优化.md",
+      "pass": true
+    },
+    {
+      "name": "local link exists: 53-AI运行工具与效果评测规范.md:60-最小技术方案与验证决策.md",
+      "pass": true
+    },
+    {
+      "name": "balanced code fences: 55-知识库与记忆开源方案深度研究.md",
+      "pass": true
+    },
+    {
+      "name": "reference defined: 55-知识库与记忆开源方案深度研究.md:ra-factory",
+      "pass": true
+    },
+    {
+      "name": "reference defined: 55-知识库与记忆开源方案深度研究.md:ra-qdrant",
+      "pass": true
+    },
+    {
+      "name": "reference defined: 55-知识库与记忆开源方案深度研究.md:ra-retrieve",
+      "pass": true
+    },
+    {
+      "name": "reference defined: 55-知识库与记忆开源方案深度研究.md:ra-memory",
+      "pass": true
+    },
+    {
+      "name": "reference defined: 55-知识库与记忆开源方案深度研究.md:ra-pdf",
+      "pass": true
+    },
+    {
+      "name": "reference defined: 55-知识库与记忆开源方案深度研究.md:ra-word",
+      "pass": true
+    },
+    {
+      "name": "reference defined: 55-知识库与记忆开源方案深度研究.md:ra-qtest",
+      "pass": true
+    },
+    {
+      "name": "reference defined: 55-知识库与记忆开源方案深度研究.md:ra-it",
+      "pass": true
+    },
+    {
+      "name": "reference defined: 55-知识库与记忆开源方案深度研究.md:ra-qcompose",
+      "pass": true
+    },
+    {
+      "name": "reference defined: 55-知识库与记忆开源方案深度研究.md:lc-qpom",
+      "pass": true
+    },
+    {
+      "name": "reference defined: 55-知识库与记忆开源方案深度研究.md:lc-filter",
+      "pass": true
+    },
+    {
+      "name": "reference defined: 55-知识库与记忆开源方案深度研究.md:lc-license",
+      "pass": true
+    },
+    {
+      "name": "reference defined: 55-知识库与记忆开源方案深度研究.md:q-license",
+      "pass": true
+    },
+    {
+      "name": "reference defined: 55-知识库与记忆开源方案深度研究.md:w-license",
+      "pass": true
+    },
+    {
+      "name": "reference defined: 55-知识库与记忆开源方案深度研究.md:m-license",
+      "pass": true
+    },
+    {
+      "name": "reference defined: 55-知识库与记忆开源方案深度研究.md:ra-mcompose",
+      "pass": true
+    },
+    {
+      "name": "reference defined: 55-知识库与记忆开源方案深度研究.md:pg-changes",
+      "pass": true
+    },
+    {
+      "name": "reference defined: 55-知识库与记忆开源方案深度研究.md:pg-license",
+      "pass": true
+    },
+    {
+      "name": "reference defined: 55-知识库与记忆开源方案深度研究.md:tika-license",
+      "pass": true
+    },
+    {
+      "name": "reference defined: 55-知识库与记忆开源方案深度研究.md:lc-tika",
+      "pass": true
+    },
+    {
+      "name": "reference defined: 55-知识库与记忆开源方案深度研究.md:d-license",
+      "pass": true
+    },
+    {
+      "name": "reference defined: 55-知识库与记忆开源方案深度研究.md:r-license",
+      "pass": true
+    },
+    {
+      "name": "reference defined: 55-知识库与记忆开源方案深度研究.md:r-compose",
+      "pass": true
+    },
+    {
+      "name": "reference defined: 55-知识库与记忆开源方案深度研究.md:ov-license",
+      "pass": true
+    },
+    {
+      "name": "reference defined: 55-知识库与记忆开源方案深度研究.md:dify-license",
+      "pass": true
+    },
+    {
+      "name": "reference defined: 55-知识库与记忆开源方案深度研究.md:fg-license",
+      "pass": true
+    },
+    {
+      "name": "reference defined: 55-知识库与记忆开源方案深度研究.md:pi-readme",
+      "pass": true
+    },
+    {
+      "name": "reference defined: 55-知识库与记忆开源方案深度研究.md:pi-license",
+      "pass": true
+    },
+    {
+      "name": "reference defined: 55-知识库与记忆开源方案深度研究.md:w-license",
+      "pass": true
+    },
+    {
+      "name": "reference defined: 55-知识库与记忆开源方案深度研究.md:r-readme",
+      "pass": true
+    },
+    {
+      "name": "reference defined: 55-知识库与记忆开源方案深度研究.md:r-compose",
+      "pass": true
+    },
+    {
+      "name": "reference defined: 55-知识库与记忆开源方案深度研究.md:pi-readme",
+      "pass": true
+    },
+    {
+      "name": "reference defined: 55-知识库与记忆开源方案深度研究.md:ra-pom",
+      "pass": true
+    },
+    {
+      "name": "reference defined: 55-知识库与记忆开源方案深度研究.md:ra-mcompose",
+      "pass": true
+    },
+    {
+      "name": "local link exists: 55-知识库与记忆开源方案深度研究.md:56-知识记忆技术栈与实施决策.md",
+      "pass": true
+    },
+    {
+      "name": "local link exists: 55-知识库与记忆开源方案深度研究.md:../../validation/knowledge-memory/sources/",
+      "pass": true
+    },
+    {
+      "name": "local link exists: 55-知识库与记忆开源方案深度研究.md:../../validation/knowledge-memory/memory-candidates-research.md",
+      "pass": true
+    },
+    {
+      "name": "local link exists: 55-知识库与记忆开源方案深度研究.md:../../validation/knowledge-memory/memory-candidates-research.md",
+      "pass": true
+    },
+    {
+      "name": "local link exists: 55-知识库与记忆开源方案深度研究.md:../../validation/knowledge-memory/memory-candidates-research.md",
+      "pass": true
+    },
+    {
+      "name": "local link exists: 55-知识库与记忆开源方案深度研究.md:59-智能体文章证据复核与全栈优化.md",
+      "pass": true
+    },
+    {
+      "name": "local link exists: 55-知识库与记忆开源方案深度研究.md:60-最小技术方案与验证决策.md",
+      "pass": true
+    },
+    {
+      "name": "balanced code fences: 46-开发基线与低代码插件化决策.md",
+      "pass": true
+    },
+    {
+      "name": "local link exists: 46-开发基线与低代码插件化决策.md:45-AI编程文档就绪审查与补齐清单.md",
+      "pass": true
+    },
+    {
+      "name": "local link exists: 46-开发基线与低代码插件化决策.md:54-开源二开与完整商用准入.md",
+      "pass": true
+    },
+    {
+      "name": "local link exists: 46-开发基线与低代码插件化决策.md:47-全产品实施切片与首期开发规格.md",
+      "pass": true
+    },
+    {
+      "name": "local link exists: 46-开发基线与低代码插件化决策.md:48-接口事件与插件合同.md",
+      "pass": true
+    },
+    {
+      "name": "local link exists: 46-开发基线与低代码插件化决策.md:49-字段级数据模型与迁移规范.md",
+      "pass": true
+    },
+    {
+      "name": "local link exists: 46-开发基线与低代码插件化决策.md:50-业务不变量权限与验收夹具.md",
+      "pass": true
+    },
+    {
+      "name": "local link exists: 46-开发基线与低代码插件化决策.md:51-开发启动测试与故障恢复手册.md",
+      "pass": true
+    },
+    {
+      "name": "local link exists: 46-开发基线与低代码插件化决策.md:52-UI实现与页面状态规格.md",
+      "pass": true
+    },
+    {
+      "name": "local link exists: 46-开发基线与低代码插件化决策.md:53-AI运行工具与效果评测规范.md",
+      "pass": true
+    },
+    {
+      "name": "local link exists: 46-开发基线与低代码插件化决策.md:36-开源底座源码研究与技术选型.md",
+      "pass": true
+    },
+    {
+      "name": "local link exists: 46-开发基线与低代码插件化决策.md:55-知识库与记忆开源方案深度研究.md",
+      "pass": true
+    },
+    {
+      "name": "local link exists: 46-开发基线与低代码插件化决策.md:56-知识记忆技术栈与实施决策.md",
+      "pass": true
+    },
+    {
+      "name": "local link exists: 46-开发基线与低代码插件化决策.md:57-Agent运行框架最新源码研究.md",
+      "pass": true
+    },
+    {
+      "name": "local link exists: 46-开发基线与低代码插件化决策.md:58-Agent技术架构与性能实施设计.md",
+      "pass": true
+    },
+    {
+      "name": "local link exists: 46-开发基线与低代码插件化决策.md:../../contracts/storage-reuse-plan.json",
+      "pass": true
+    },
+    {
+      "name": "local link exists: 46-开发基线与低代码插件化决策.md:../../contracts/plugin-manifest.schema.json",
+      "pass": true
+    },
+    {
+      "name": "local link exists: 46-开发基线与低代码插件化决策.md:59-智能体文章证据复核与全栈优化.md",
+      "pass": true
+    },
+    {
+      "name": "local link exists: 46-开发基线与低代码插件化决策.md:60-最小技术方案与验证决策.md",
+      "pass": true
+    },
+    {
+      "name": "balanced code fences: 58-Agent技术架构与性能实施设计.md",
+      "pass": true
+    },
+    {
+      "name": "local link exists: 58-Agent技术架构与性能实施设计.md:57-Agent运行框架最新源码研究.md",
+      "pass": true
+    },
+    {
+      "name": "local link exists: 58-Agent技术架构与性能实施设计.md:59-智能体文章证据复核与全栈优化.md",
+      "pass": true
+    },
+    {
+      "name": "local link exists: 58-Agent技术架构与性能实施设计.md:60-最小技术方案与验证决策.md",
+      "pass": true
+    },
+    {
+      "name": "balanced code fences: 41-AI运行知识分析与安全设计.md",
+      "pass": true
+    },
+    {
+      "name": "local link exists: 41-AI运行知识分析与安全设计.md:34-任务执行工作台与权限分层设计.md",
+      "pass": true
+    },
+    {
+      "name": "local link exists: 41-AI运行知识分析与安全设计.md:35-全产品AI体验复核与改进.md",
+      "pass": true
+    },
+    {
+      "name": "local link exists: 41-AI运行知识分析与安全设计.md:57-Agent运行框架最新源码研究.md",
+      "pass": true
+    },
+    {
+      "name": "local link exists: 41-AI运行知识分析与安全设计.md:58-Agent技术架构与性能实施设计.md",
+      "pass": true
+    },
+    {
+      "name": "local link exists: 41-AI运行知识分析与安全设计.md:55-知识库与记忆开源方案深度研究.md",
+      "pass": true
+    },
+    {
+      "name": "local link exists: 41-AI运行知识分析与安全设计.md:56-知识记忆技术栈与实施决策.md",
+      "pass": true
+    },
+    {
+      "name": "local link exists: 41-AI运行知识分析与安全设计.md:60-最小技术方案与验证决策.md",
+      "pass": true
+    },
+    {
+      "name": "balanced code fences: 57-Agent运行框架最新源码研究.md",
+      "pass": true
+    },
+    {
+      "name": "reference defined: 57-Agent运行框架最新源码研究.md:sd-license",
+      "pass": true
+    },
+    {
+      "name": "reference defined: 57-Agent运行框架最新源码研究.md:sd-package",
+      "pass": true
+    },
+    {
+      "name": "reference defined: 57-Agent运行框架最新源码研究.md:cx-sdk",
+      "pass": true
+    },
+    {
+      "name": "reference defined: 57-Agent运行框架最新源码研究.md:cx-python",
+      "pass": true
+    },
+    {
+      "name": "reference defined: 57-Agent运行框架最新源码研究.md:cx-thread",
+      "pass": true
+    },
+    {
+      "name": "reference defined: 57-Agent运行框架最新源码研究.md:cx-daemon",
+      "pass": true
+    },
+    {
+      "name": "reference defined: 57-Agent运行框架最新源码研究.md:cx-turn",
+      "pass": true
+    },
+    {
+      "name": "reference defined: 57-Agent运行框架最新源码研究.md:cx-license",
+      "pass": true
+    },
+    {
+      "name": "reference defined: 57-Agent运行框架最新源码研究.md:sd-loop",
+      "pass": true
+    },
+    {
+      "name": "reference defined: 57-Agent运行框架最新源码研究.md:sd-engine",
+      "pass": true
+    },
+    {
+      "name": "reference defined: 57-Agent运行框架最新源码研究.md:sd-lock",
+      "pass": true
+    },
+    {
+      "name": "reference defined: 57-Agent运行框架最新源码研究.md:sd-lease",
+      "pass": true
+    },
+    {
+      "name": "reference defined: 57-Agent运行框架最新源码研究.md:sd-recovery",
+      "pass": true
+    },
+    {
+      "name": "reference defined: 57-Agent运行框架最新源码研究.md:sd-replay",
+      "pass": true
+    },
+    {
+      "name": "reference defined: 57-Agent运行框架最新源码研究.md:sd-sandbox",
+      "pass": true
+    },
+    {
+      "name": "reference defined: 57-Agent运行框架最新源码研究.md:sd-command",
+      "pass": true
+    },
+    {
+      "name": "reference defined: 57-Agent运行框架最新源码研究.md:sd-evolution",
+      "pass": true
+    },
+    {
+      "name": "reference defined: 57-Agent运行框架最新源码研究.md:sd-license",
+      "pass": true
+    },
+    {
+      "name": "reference defined: 57-Agent运行框架最新源码研究.md:sd-readme",
+      "pass": true
+    },
+    {
+      "name": "local link exists: 57-Agent运行框架最新源码研究.md:58-Agent技术架构与性能实施设计.md",
+      "pass": true
+    },
+    {
+      "name": "local link exists: 57-Agent运行框架最新源码研究.md:55-知识库与记忆开源方案深度研究.md",
+      "pass": true
+    },
+    {
+      "name": "local link exists: 57-Agent运行框架最新源码研究.md:56-知识记忆技术栈与实施决策.md",
+      "pass": true
+    },
+    {
+      "name": "local link exists: 57-Agent运行框架最新源码研究.md:../../validation/agent-runtime/dsh-pi-research.md",
+      "pass": true
+    },
+    {
+      "name": "local link exists: 57-Agent运行框架最新源码研究.md:../../validation/agent-runtime/",
+      "pass": true
+    },
+    {
+      "name": "local link exists: 57-Agent运行框架最新源码研究.md:../../validation/agent-runtime/dsh-pi-research.md",
+      "pass": true
+    },
+    {
+      "name": "local link exists: 57-Agent运行框架最新源码研究.md:../../validation/agent-runtime/dsh-pi-research.md",
+      "pass": true
+    },
+    {
+      "name": "local link exists: 57-Agent运行框架最新源码研究.md:59-智能体文章证据复核与全栈优化.md",
+      "pass": true
+    },
+    {
+      "name": "local link exists: 57-Agent运行框架最新源码研究.md:60-最小技术方案与验证决策.md",
+      "pass": true
+    },
+    {
+      "name": "balanced code fences: 56-知识记忆技术栈与实施决策.md",
+      "pass": true
+    },
+    {
+      "name": "local link exists: 56-知识记忆技术栈与实施决策.md:55-知识库与记忆开源方案深度研究.md",
+      "pass": true
+    },
+    {
+      "name": "local link exists: 56-知识记忆技术栈与实施决策.md:57-Agent运行框架最新源码研究.md",
+      "pass": true
+    },
+    {
+      "name": "local link exists: 56-知识记忆技术栈与实施决策.md:58-Agent技术架构与性能实施设计.md",
+      "pass": true
+    },
+    {
+      "name": "local link exists: 56-知识记忆技术栈与实施决策.md:59-智能体文章证据复核与全栈优化.md",
+      "pass": true
+    },
+    {
+      "name": "local link exists: 56-知识记忆技术栈与实施决策.md:60-最小技术方案与验证决策.md",
+      "pass": true
+    },
+    {
+      "name": "balanced code fences: 37-技术架构总设计与决策.md",
+      "pass": true
+    },
+    {
+      "name": "local link exists: 37-技术架构总设计与决策.md:36-开源底座源码研究与技术选型.md",
+      "pass": true
+    },
+    {
+      "name": "local link exists: 37-技术架构总设计与决策.md:38-模块边界与前端工程设计.md",
+      "pass": true
+    },
+    {
+      "name": "local link exists: 37-技术架构总设计与决策.md:39-数据存储与事务一致性设计.md",
+      "pass": true
+    },
+    {
+      "name": "local link exists: 37-技术架构总设计与决策.md:40-接口事件与集成技术设计.md",
+      "pass": true
+    },
+    {
+      "name": "local link exists: 37-技术架构总设计与决策.md:41-AI运行知识分析与安全设计.md",
+      "pass": true
+    },
+    {
+      "name": "local link exists: 37-技术架构总设计与决策.md:42-部署运维与非功能设计.md",
+      "pass": true
+    },
+    {
+      "name": "local link exists: 37-技术架构总设计与决策.md:43-技术实施路线与验证矩阵.md",
+      "pass": true
+    },
+    {
+      "name": "local link exists: 37-技术架构总设计与决策.md:44-技术架构交互图.html",
+      "pass": true
+    },
+    {
+      "name": "local link exists: 37-技术架构总设计与决策.md:26-完整产品设计文档.md",
+      "pass": true
+    },
+    {
+      "name": "local link exists: 37-技术架构总设计与决策.md:27-逻辑数据模型与接口契约.md",
+      "pass": true
+    },
+    {
+      "name": "local link exists: 37-技术架构总设计与决策.md:28-开发分期与验收用例.md",
+      "pass": true
+    },
+    {
+      "name": "local link exists: 37-技术架构总设计与决策.md:30-产品设计追踪数据.json",
+      "pass": true
+    },
+    {
+      "name": "local link exists: 37-技术架构总设计与决策.md:57-Agent运行框架最新源码研究.md",
+      "pass": true
+    },
+    {
+      "name": "local link exists: 37-技术架构总设计与决策.md:58-Agent技术架构与性能实施设计.md",
+      "pass": true
+    },
+    {
+      "name": "local link exists: 37-技术架构总设计与决策.md:59-智能体文章证据复核与全栈优化.md",
+      "pass": true
+    },
+    {
+      "name": "local link exists: 37-技术架构总设计与决策.md:60-最小技术方案与验证决策.md",
+      "pass": true
+    },
+    {
+      "name": "balanced code fences: 54-开源二开与完整商用准入.md",
+      "pass": true
+    },
+    {
+      "name": "local link exists: 54-开源二开与完整商用准入.md:36-开源底座源码研究与技术选型.md",
+      "pass": true
+    },
+    {
+      "name": "local link exists: 54-开源二开与完整商用准入.md:57-Agent运行框架最新源码研究.md",
+      "pass": true
+    },
+    {
+      "name": "local link exists: 54-开源二开与完整商用准入.md:55-知识库与记忆开源方案深度研究.md",
+      "pass": true
+    },
+    {
+      "name": "local link exists: 54-开源二开与完整商用准入.md:../../contracts/commercial-component-register.json",
+      "pass": true
+    },
+    {
+      "name": "local link exists: 54-开源二开与完整商用准入.md:59-智能体文章证据复核与全栈优化.md",
+      "pass": true
+    },
+    {
+      "name": "balanced code fences: 59-智能体文章证据复核与全栈优化.md",
+      "pass": true
+    },
+    {
+      "name": "local link exists: 59-智能体文章证据复核与全栈优化.md:60-最小技术方案与验证决策.md",
+      "pass": true
+    },
+    {
+      "name": "local link exists: 59-智能体文章证据复核与全栈优化.md:../../validation/article-review/article-catalog.md",
+      "pass": true
+    },
+    {
+      "name": "local link exists: 59-智能体文章证据复核与全栈优化.md:../../validation/article-review/local-inventory.json",
+      "pass": true
+    },
+    {
+      "name": "local link exists: 59-智能体文章证据复核与全栈优化.md:../../validation/article-review/ima/article-searches.json",
+      "pass": true
+    },
+    {
+      "name": "local link exists: 59-智能体文章证据复核与全栈优化.md:../../validation/article-review/ima/selected.json",
+      "pass": true
+    },
+    {
+      "name": "local link exists: 59-智能体文章证据复核与全栈优化.md:../../validation/article-review/primary-simplification-review.md",
+      "pass": true
+    },
+    {
+      "name": "local link exists: 59-智能体文章证据复核与全栈优化.md:../../validation/article-review/runtime-article-review.md",
+      "pass": true
+    },
+    {
+      "name": "local link exists: 59-智能体文章证据复核与全栈优化.md:../../validation/article-review/ima-install/installation-check.json",
+      "pass": true
+    },
+    {
+      "name": "local link exists: 59-智能体文章证据复核与全栈优化.md:57-Agent运行框架最新源码研究.md",
+      "pass": true
+    },
+    {
+      "name": "local link exists: 59-智能体文章证据复核与全栈优化.md:33-QoderWake与StaffDeck融合及AI体验研究.md",
+      "pass": true
+    },
+    {
+      "name": "local link exists: 59-智能体文章证据复核与全栈优化.md:../../validation/article-review/primary-simplification-review.md",
+      "pass": true
+    },
+    {
+      "name": "local link exists: 59-智能体文章证据复核与全栈优化.md:../../validation/article-review/runtime-article-review.md",
+      "pass": true
+    },
+    {
+      "name": "balanced code fences: 60-最小技术方案与验证决策.md",
+      "pass": true
+    },
+    {
+      "name": "local link exists: 60-最小技术方案与验证决策.md:59-智能体文章证据复核与全栈优化.md",
+      "pass": true
+    },
+    {
+      "name": "local link exists: 60-最小技术方案与验证决策.md:59-智能体文章证据复核与全栈优化.md",
+      "pass": true
+    },
+    {
+      "name": "local link exists: 60-最小技术方案与验证决策.md:../../validation/article-review/review-check.json",
+      "pass": true
+    },
+    {
+      "name": "local link exists: 60-最小技术方案与验证决策.md:../../validation/development-system-check.json",
+      "pass": true
+    },
+    {
+      "name": "balanced code fences: article-catalog.md",
+      "pass": true
+    },
+    {
+      "name": "local link exists: article-catalog.md:selected-articles.json",
+      "pass": true
+    },
+    {
+      "name": "local link exists: article-catalog.md:selected-texts/WX-0753.txt",
+      "pass": true
+    },
+    {
+      "name": "local link exists: article-catalog.md:runtime-article-review.md",
+      "pass": true
+    },
+    {
+      "name": "local link exists: article-catalog.md:selected-texts/WX-0991.txt",
+      "pass": true
+    },
+    {
+      "name": "local link exists: article-catalog.md:runtime-article-review.md",
+      "pass": true
+    },
+    {
+      "name": "local link exists: article-catalog.md:selected-texts/WX-1091.txt",
+      "pass": true
+    },
+    {
+      "name": "local link exists: article-catalog.md:runtime-article-review.md",
+      "pass": true
+    },
+    {
+      "name": "local link exists: article-catalog.md:selected-texts/WX-0699.txt",
+      "pass": true
+    },
+    {
+      "name": "local link exists: article-catalog.md:runtime-article-review.md",
+      "pass": true
+    },
+    {
+      "name": "local link exists: article-catalog.md:selected-texts/WX-1026.txt",
+      "pass": true
+    },
+    {
+      "name": "local link exists: article-catalog.md:runtime-article-review.md",
+      "pass": true
+    },
+    {
+      "name": "local link exists: article-catalog.md:selected-texts/WX-0741.txt",
+      "pass": true
+    },
+    {
+      "name": "local link exists: article-catalog.md:runtime-article-review.md",
+      "pass": true
+    },
+    {
+      "name": "local link exists: article-catalog.md:selected-texts/WX-0744.txt",
+      "pass": true
+    },
+    {
+      "name": "local link exists: article-catalog.md:runtime-article-review.md",
+      "pass": true
+    },
+    {
+      "name": "local link exists: article-catalog.md:selected-texts/WX-0133.txt",
+      "pass": true
+    },
+    {
+      "name": "local link exists: article-catalog.md:runtime-article-review.md",
+      "pass": true
+    },
+    {
+      "name": "local link exists: article-catalog.md:selected-texts/WX-0911.txt",
+      "pass": true
+    },
+    {
+      "name": "local link exists: article-catalog.md:runtime-article-review.md",
+      "pass": true
+    },
+    {
+      "name": "local link exists: article-catalog.md:selected-texts/WX-0736.txt",
+      "pass": true
+    },
+    {
+      "name": "local link exists: article-catalog.md:runtime-article-review.md",
+      "pass": true
+    },
+    {
+      "name": "local link exists: article-catalog.md:selected-texts/WX-0347.txt",
+      "pass": true
+    },
+    {
+      "name": "local link exists: article-catalog.md:runtime-article-review.md",
+      "pass": true
+    },
+    {
+      "name": "local link exists: article-catalog.md:selected-texts/WX-1255.txt",
+      "pass": true
+    },
+    {
+      "name": "local link exists: article-catalog.md:runtime-article-review.md",
+      "pass": true
+    },
+    {
+      "name": "local link exists: article-catalog.md:selected-texts/WX-0593.txt",
+      "pass": true
+    },
+    {
+      "name": "local link exists: article-catalog.md:primary-simplification-review.md",
+      "pass": true
+    },
+    {
+      "name": "local link exists: article-catalog.md:selected-texts/WX-0690.txt",
+      "pass": true
+    },
+    {
+      "name": "local link exists: article-catalog.md:primary-simplification-review.md",
+      "pass": true
+    },
+    {
+      "name": "local link exists: article-catalog.md:selected-texts/WX-0899.txt",
+      "pass": true
+    },
+    {
+      "name": "local link exists: article-catalog.md:primary-simplification-review.md",
+      "pass": true
+    },
+    {
+      "name": "local link exists: article-catalog.md:selected-texts/WX-0734.txt",
+      "pass": true
+    },
+    {
+      "name": "local link exists: article-catalog.md:primary-simplification-review.md",
+      "pass": true
+    },
+    {
+      "name": "local link exists: article-catalog.md:selected-texts/WX-0746.txt",
+      "pass": true
+    },
+    {
+      "name": "local link exists: article-catalog.md:primary-simplification-review.md",
+      "pass": true
+    },
+    {
+      "name": "local link exists: article-catalog.md:selected-texts/WX-0754.txt",
+      "pass": true
+    },
+    {
+      "name": "local link exists: article-catalog.md:primary-simplification-review.md",
+      "pass": true
+    },
+    {
+      "name": "local link exists: article-catalog.md:selected-texts/WX-0771.txt",
+      "pass": true
+    },
+    {
+      "name": "local link exists: article-catalog.md:primary-simplification-review.md",
+      "pass": true
+    },
+    {
+      "name": "local link exists: article-catalog.md:selected-texts/WX-0452.txt",
+      "pass": true
+    },
+    {
+      "name": "local link exists: article-catalog.md:../../docs/设计包/59-智能体文章证据复核与全栈优化.md",
+      "pass": true
+    },
+    {
+      "name": "local link exists: article-catalog.md:selected-texts/WX-0887.txt",
+      "pass": true
+    },
+    {
+      "name": "local link exists: article-catalog.md:../../docs/设计包/59-智能体文章证据复核与全栈优化.md",
+      "pass": true
+    },
+    {
+      "name": "local link exists: article-catalog.md:selected-texts/WX-0877.txt",
+      "pass": true
+    },
+    {
+      "name": "local link exists: article-catalog.md:../../docs/设计包/59-智能体文章证据复核与全栈优化.md",
+      "pass": true
+    },
+    {
+      "name": "local link exists: article-catalog.md:selected-texts/WX-1273.txt",
+      "pass": true
+    },
+    {
+      "name": "local link exists: article-catalog.md:../../docs/设计包/59-智能体文章证据复核与全栈优化.md",
+      "pass": true
+    },
+    {
+      "name": "local link exists: article-catalog.md:selected-texts/WX-0138.txt",
+      "pass": true
+    },
+    {
+      "name": "local link exists: article-catalog.md:../../docs/设计包/59-智能体文章证据复核与全栈优化.md",
+      "pass": true
+    },
+    {
+      "name": "local link exists: article-catalog.md:selected-texts/WX-0425.txt",
+      "pass": true
+    },
+    {
+      "name": "local link exists: article-catalog.md:../../docs/设计包/59-智能体文章证据复核与全栈优化.md",
+      "pass": true
+    },
+    {
+      "name": "local link exists: article-catalog.md:selected-texts/WX-1226.txt",
+      "pass": true
+    },
+    {
+      "name": "local link exists: article-catalog.md:../../docs/设计包/59-智能体文章证据复核与全栈优化.md",
+      "pass": true
+    },
+    {
+      "name": "local link exists: article-catalog.md:selected-texts/WX-1258.txt",
+      "pass": true
+    },
+    {
+      "name": "local link exists: article-catalog.md:../../docs/设计包/59-智能体文章证据复核与全栈优化.md",
+      "pass": true
+    },
+    {
+      "name": "local link exists: article-catalog.md:selected-texts/WX-0772.txt",
+      "pass": true
+    },
+    {
+      "name": "local link exists: article-catalog.md:../../docs/设计包/59-智能体文章证据复核与全栈优化.md",
+      "pass": true
+    },
+    {
+      "name": "local link exists: article-catalog.md:selected-texts/WX-0143.txt",
+      "pass": true
+    },
+    {
+      "name": "local link exists: article-catalog.md:../../docs/设计包/59-智能体文章证据复核与全栈优化.md",
+      "pass": true
+    },
+    {
+      "name": "local link exists: article-catalog.md:selected-texts/WX-0766.txt",
+      "pass": true
+    },
+    {
+      "name": "local link exists: article-catalog.md:../../docs/设计包/59-智能体文章证据复核与全栈优化.md",
+      "pass": true
+    },
+    {
+      "name": "local link exists: article-catalog.md:selected-texts/WX-0874.txt",
+      "pass": true
+    },
+    {
+      "name": "local link exists: article-catalog.md:../../docs/设计包/59-智能体文章证据复核与全栈优化.md",
+      "pass": true
+    },
+    {
+      "name": "local link exists: article-catalog.md:selected-texts/WX-0213.txt",
+      "pass": true
+    },
+    {
+      "name": "local link exists: article-catalog.md:primary-simplification-review.md",
+      "pass": true
+    },
+    {
+      "name": "balanced code fences: primary-simplification-review.md",
+      "pass": true
+    },
+    {
+      "name": "reference defined: primary-simplification-review.md:hq-original",
+      "pass": true
+    },
+    {
+      "name": "reference defined: primary-simplification-review.md:wiki-hub",
+      "pass": true
+    },
+    {
+      "name": "reference defined: primary-simplification-review.md:ov-readme",
+      "pass": true
+    },
+    {
+      "name": "reference defined: primary-simplification-review.md:ov-license",
+      "pass": true
+    },
+    {
+      "name": "reference defined: primary-simplification-review.md:palantir",
+      "pass": true
+    },
+    {
+      "name": "reference defined: primary-simplification-review.md:owl",
+      "pass": true
+    },
+    {
+      "name": "reference defined: primary-simplification-review.md:prov",
+      "pass": true
+    },
+    {
+      "name": "reference defined: primary-simplification-review.md:sem-code",
+      "pass": true
+    },
+    {
+      "name": "reference defined: primary-simplification-review.md:sem-project",
+      "pass": true
+    },
+    {
+      "name": "reference defined: primary-simplification-review.md:sem-pypi",
+      "pass": true
+    },
+    {
+      "name": "reference defined: primary-simplification-review.md:rag-readme",
+      "pass": true
+    },
+    {
+      "name": "reference defined: primary-simplification-review.md:rag-compose",
+      "pass": true
+    },
+    {
+      "name": "reference defined: primary-simplification-review.md:q-license",
+      "pass": true
+    },
+    {
+      "name": "reference defined: primary-simplification-review.md:d-license",
+      "pass": true
+    },
+    {
+      "name": "reference defined: primary-simplification-review.md:pg-license",
+      "pass": true
+    },
+    {
+      "name": "reference defined: primary-simplification-review.md:sem-license",
+      "pass": true
+    },
+    {
+      "name": "reference defined: primary-simplification-review.md:context",
+      "pass": true
+    },
+    {
+      "name": "reference defined: primary-simplification-review.md:contextual",
+      "pass": true
+    },
+    {
+      "name": "reference defined: primary-simplification-review.md:q-text",
+      "pass": true
+    },
+    {
+      "name": "reference defined: primary-simplification-review.md:q-hybrid",
+      "pass": true
+    },
+    {
+      "name": "reference defined: primary-simplification-review.md:mysql-ngram",
+      "pass": true
+    },
+    {
+      "name": "reference defined: primary-simplification-review.md:pg-readme",
+      "pass": true
+    },
+    {
+      "name": "reference defined: primary-simplification-review.md:pg-rls",
+      "pass": true
+    },
+    {
+      "name": "reference defined: primary-simplification-review.md:palantir-actions",
+      "pass": true
+    },
+    {
+      "name": "reference defined: primary-simplification-review.md:docling",
+      "pass": true
+    },
+    {
+      "name": "reference defined: primary-simplification-review.md:docling-options",
+      "pass": true
+    },
+    {
+      "name": "local link exists: primary-simplification-review.md:selected-articles.json",
+      "pass": true
+    },
+    {
+      "name": "local link exists: primary-simplification-review.md:primary-sources/article-reading-coverage.json",
+      "pass": true
+    },
+    {
+      "name": "local link exists: primary-simplification-review.md:primary-sources/manifest.json",
+      "pass": true
+    },
+    {
+      "name": "balanced code fences: runtime-article-review.md",
+      "pass": true
+    },
+    {
+      "name": "local link exists: runtime-article-review.md:runtime-sources/manifest.json",
+      "pass": true
+    },
+    {
+      "name": "local link exists: runtime-article-review.md:runtime-sources/git-manifest.json",
+      "pass": true
+    },
+    {
+      "name": "local link exists: runtime-article-review.md:runtime-sources/extracted-manifest.json",
+      "pass": true
+    },
+    {
+      "name": "new design discloses unrun boundaries: 59-智能体文章证据复核与全栈优化.md",
+      "pass": true
+    },
+    {
+      "name": "new design discloses unrun boundaries: 60-最小技术方案与验证决策.md",
+      "pass": true
+    },
+    {
+      "name": "review correction represented (text only): 仍有效且当前获准",
+      "pass": true
+    },
+    {
+      "name": "review correction represented (text only): 明确表达的个人偏好",
+      "pass": true
+    },
+    {
+      "name": "review correction represented (text only): 估算/待核",
+      "pass": true
+    },
+    {
+      "name": "review correction represented (text only): 基线不合格",
+      "pass": true
+    },
+    {
+      "name": "review correction represented (text only): 不能默认1.0",
+      "pass": true
+    },
+    {
+      "name": "review correction represented (text only): dry-run",
+      "pass": true
+    },
+    {
+      "name": "review correction represented (text only): 一个挑战者",
+      "pass": true
+    },
+    {
+      "name": "review correction represented (text only): policyRevision",
+      "pass": true
+    },
+    {
+      "name": "existing 30 distinct cases retained: KM-P",
+      "pass": true
+    },
+    {
+      "name": "existing 30 distinct cases retained: AR-P",
+      "pass": true
+    },
+    {
+      "name": "provided credentials absent from generated research text",
+      "pass": true
+    }
+  ],
+  "errors": [],
+  "uniqueEvidenceFiles": 230,
+  "documents": [
+    {
+      "path": "README.md",
+      "sha256": "5528cf68311d578f4fc04e4465568b344cbedacd33b8d18e3416091d5db2fbd7"
+    },
+    {
+      "path": "CONTEXT.md",
+      "sha256": "3877df0010d8a54d189c2ac8bb448b2206537a3e01d2a5455d8cecad977a2502"
+    },
+    {
+      "path": "docs/设计包/53-AI运行工具与效果评测规范.md",
+      "sha256": "f078b0793a8bf5dea7c44f5e696a564e59f7186c7b32976c1e691f195c631218"
+    },
+    {
+      "path": "docs/设计包/55-知识库与记忆开源方案深度研究.md",
+      "sha256": "35f847480855cf4111f50873118844a2a4937ff015263eb81b54087baf1b8ff7"
+    },
+    {
+      "path": "docs/设计包/46-开发基线与低代码插件化决策.md",
+      "sha256": "9e7f4bda1bd8ed3d423efb5c522fa105d3067cbf7635db8f6db366702576f72a"
+    },
+    {
+      "path": "docs/设计包/58-Agent技术架构与性能实施设计.md",
+      "sha256": "2f1ed4de15f6ffb0b729dea07b8b60507b96e0bfe044a6b717e5faf061f1aaaf"
+    },
+    {
+      "path": "docs/设计包/41-AI运行知识分析与安全设计.md",
+      "sha256": "5299f150b56c75e279361f41c8a33736db9afc52e16831d8d54449ed299ed72c"
+    },
+    {
+      "path": "docs/设计包/57-Agent运行框架最新源码研究.md",
+      "sha256": "f3d34d3b88c78fa0327660a6b8b0c2e52fe953daaa261b148d403db95d584d6f"
+    },
+    {
+      "path": "docs/设计包/56-知识记忆技术栈与实施决策.md",
+      "sha256": "9f65576feee8116ebcffa3c283f8b2efc4126489c1cc6f2878027a69a577eff9"
+    },
+    {
+      "path": "docs/设计包/37-技术架构总设计与决策.md",
+      "sha256": "a31248b8ccd43489bbf39ef35fef88c1e3ee3d475550ee1490b7fd5c53f3dd6e"
+    },
+    {
+      "path": "docs/设计包/54-开源二开与完整商用准入.md",
+      "sha256": "3bcf32b0000f4c141a980a7246eade7d86f049cfac8790bd05bf5e4d63fa813c"
+    },
+    {
+      "path": "docs/设计包/59-智能体文章证据复核与全栈优化.md",
+      "sha256": "4c46ec80cd3583f701e2900306f4074c64b3dca1b8fbf3edeb7075e4b9be3c94"
+    },
+    {
+      "path": "docs/设计包/60-最小技术方案与验证决策.md",
+      "sha256": "33185e22038e11b08639afd2c2f8a4598f5d42e71c5ec46e8532a9e84a59d686"
+    },
+    {
+      "path": "validation/article-review/article-catalog.md",
+      "sha256": "10ff4d3818a3475f882a06266509453b93f9b1800456387c12b35d42c8d1c4e0"
+    },
+    {
+      "path": "validation/article-review/primary-simplification-review.md",
+      "sha256": "7965140539435a1cd1e2dc3e5e8d8725676fe5c83bf169992845fcce5bc283c0"
+    },
+    {
+      "path": "validation/article-review/runtime-article-review.md",
+      "sha256": "8bc86bad184a6b0863e42f7bcbbce535a971693819e9c699aeee76f43db15755"
+    }
+  ],
+  "localReading": {
+    "selected": 32,
+    "fullExtractedText": 25,
+    "partialText": 7,
+    "imagesVerified": false
+  },
+  "imaBodiesRead": 0,
+  "imaAuthenticationPassed": true,
+  "productTestsRun": false,
+  "benchmarksRun": false,
+  "productReady": false,
+  "boundary": "SHA and text checks do not prove article claims, runtime behavior, or commercial release clearance"
+}

@@ -1,0 +1,558 @@
+{
+  "revision": "v2.5",
+  "passed": true,
+  "checks": [
+    {
+      "type": "interaction",
+      "name": "same template has three distinct same-day instances",
+      "passed": true
+    },
+    {
+      "type": "interaction",
+      "name": "one person spans multiple process types",
+      "passed": true
+    },
+    {
+      "type": "interaction",
+      "name": "same instance supports separate tasks for one person",
+      "passed": true
+    },
+    {
+      "type": "interaction",
+      "name": "initial counters use tasks and distinct instances",
+      "passed": true
+    },
+    {
+      "type": "interaction",
+      "name": "one active selection never combines another owner",
+      "passed": true
+    },
+    {
+      "type": "interaction",
+      "name": "flow filter keeps separate instance tasks",
+      "passed": true
+    },
+    {
+      "type": "interaction",
+      "name": "due filter is per task",
+      "passed": true
+    },
+    {
+      "type": "interaction",
+      "name": "search exact business number finds the matching process task",
+      "passed": true
+    },
+    {
+      "type": "interaction",
+      "name": "empty filtered results have recovery",
+      "passed": true
+    },
+    {
+      "type": "interaction",
+      "name": "pagination does not imply missing work",
+      "passed": true
+    },
+    {
+      "type": "interaction",
+      "name": "different same-template instance has no copied draft",
+      "passed": true
+    },
+    {
+      "type": "interaction",
+      "name": "different same-template instance has separate assistant",
+      "passed": true
+    },
+    {
+      "type": "interaction",
+      "name": "different same-template instance has no private chat",
+      "passed": true
+    },
+    {
+      "type": "interaction",
+      "name": "second node in same instance has independent config",
+      "passed": true
+    },
+    {
+      "type": "interaction",
+      "name": "returning to task preserves draft and assistant",
+      "passed": true
+    },
+    {
+      "type": "interaction",
+      "name": "unsaved draft buffer stays scoped to task",
+      "passed": true
+    },
+    {
+      "type": "interaction",
+      "name": "market skill applies only to selected WorkItem",
+      "passed": true
+    },
+    {
+      "type": "interaction",
+      "name": "market selection returns to correct case",
+      "passed": true
+    },
+    {
+      "type": "interaction",
+      "name": "legacy role action cannot mutate a selected OA task",
+      "passed": true
+    },
+    {
+      "type": "interaction",
+      "name": "basis update affects dependent tasks in one instance",
+      "passed": true
+    },
+    {
+      "type": "interaction",
+      "name": "stale task blocks forged submission",
+      "passed": true
+    },
+    {
+      "type": "interaction",
+      "name": "submission creates distinct approval task",
+      "passed": true
+    },
+    {
+      "type": "interaction",
+      "name": "submission leaves other instances unchanged",
+      "passed": true
+    },
+    {
+      "type": "interaction",
+      "name": "requester cannot open or approve own review",
+      "passed": true
+    },
+    {
+      "type": "interaction",
+      "name": "independent approval updates only its source node",
+      "passed": true
+    },
+    {
+      "type": "interaction",
+      "name": "duplicate approval cannot run again",
+      "passed": true
+    },
+    {
+      "type": "interaction",
+      "name": "old approval invalidated after source basis change",
+      "passed": true
+    },
+    {
+      "type": "interaction",
+      "name": "resubmission creates a new round approval ID",
+      "passed": true
+    },
+    {
+      "type": "interaction",
+      "name": "return reopens only its source node and changes human-task round",
+      "passed": true
+    },
+    {
+      "type": "interaction",
+      "name": "batch read changes reading only",
+      "passed": true
+    },
+    {
+      "type": "interaction",
+      "name": "CC cannot approve through forged command",
+      "passed": true
+    },
+    {
+      "type": "interaction",
+      "name": "claim assigns only the eligible work item",
+      "passed": true
+    },
+    {
+      "type": "interaction",
+      "name": "second claim rejected",
+      "passed": true
+    },
+    {
+      "type": "interaction",
+      "name": "other assignee task hidden on direct open",
+      "passed": true
+    },
+    {
+      "type": "interaction",
+      "name": "human executor without initiator role cannot create process",
+      "passed": true
+    },
+    {
+      "type": "interaction",
+      "name": "new process is visible under I started",
+      "passed": true
+    },
+    {
+      "type": "interaction",
+      "name": "same submission retry returns original instance",
+      "passed": true
+    },
+    {
+      "type": "interaction",
+      "name": "explicit new intention creates separate instance despite same template/date/body",
+      "passed": true
+    },
+    {
+      "type": "interaction",
+      "name": "idempotency key payload conflict rejected",
+      "passed": true
+    },
+    {
+      "type": "interaction",
+      "name": "business input renders as text instead of markup",
+      "passed": true
+    },
+    {
+      "type": "interaction",
+      "name": "instance numbers remain unique after repeated creation",
+      "passed": true
+    },
+    {
+      "type": "interaction",
+      "name": "first nudge records request",
+      "passed": true
+    },
+    {
+      "type": "interaction",
+      "name": "repeated nudge respects fixture cooldown",
+      "passed": true
+    },
+    {
+      "type": "interaction",
+      "name": "withdraw only selected untouched instance",
+      "passed": true
+    },
+    {
+      "type": "interaction",
+      "name": "revoked task fields disabled",
+      "passed": true
+    },
+    {
+      "type": "interaction",
+      "name": "revoked forged save rejected",
+      "passed": true
+    },
+    {
+      "type": "interaction",
+      "name": "mismatched deep-link case/task denied",
+      "passed": true
+    },
+    {
+      "type": "interaction",
+      "name": "valid deep link opens exact case",
+      "passed": true
+    },
+    {
+      "type": "interaction",
+      "name": "designer search does not reveal hidden business title",
+      "passed": true
+    },
+    {
+      "type": "interaction",
+      "name": "designer OA detail excludes business title and amount",
+      "passed": true
+    },
+    {
+      "type": "interaction",
+      "name": "publisher search does not reveal hidden business title",
+      "passed": true
+    },
+    {
+      "type": "interaction",
+      "name": "publisher OA detail excludes business title and amount",
+      "passed": true
+    },
+    {
+      "type": "interaction",
+      "name": "resource search does not reveal hidden business title",
+      "passed": true
+    },
+    {
+      "type": "interaction",
+      "name": "resource OA detail excludes business title and amount",
+      "passed": true
+    },
+    {
+      "type": "interaction",
+      "name": "knowledge search does not reveal hidden business title",
+      "passed": true
+    },
+    {
+      "type": "interaction",
+      "name": "knowledge OA detail excludes business title and amount",
+      "passed": true
+    },
+    {
+      "type": "interaction",
+      "name": "skill search does not reveal hidden business title",
+      "passed": true
+    },
+    {
+      "type": "interaction",
+      "name": "skill OA detail excludes business title and amount",
+      "passed": true
+    },
+    {
+      "type": "interaction",
+      "name": "tool search does not reveal hidden business title",
+      "passed": true
+    },
+    {
+      "type": "interaction",
+      "name": "tool OA detail excludes business title and amount",
+      "passed": true
+    },
+    {
+      "type": "interaction",
+      "name": "org search does not reveal hidden business title",
+      "passed": true
+    },
+    {
+      "type": "interaction",
+      "name": "org OA detail excludes business title and amount",
+      "passed": true
+    },
+    {
+      "type": "interaction",
+      "name": "hr search does not reveal hidden business title",
+      "passed": true
+    },
+    {
+      "type": "interaction",
+      "name": "hr OA detail excludes business title and amount",
+      "passed": true
+    },
+    {
+      "type": "interaction",
+      "name": "identity search does not reveal hidden business title",
+      "passed": true
+    },
+    {
+      "type": "interaction",
+      "name": "identity OA detail excludes business title and amount",
+      "passed": true
+    },
+    {
+      "type": "interaction",
+      "name": "access search does not reveal hidden business title",
+      "passed": true
+    },
+    {
+      "type": "interaction",
+      "name": "access OA detail excludes business title and amount",
+      "passed": true
+    },
+    {
+      "type": "interaction",
+      "name": "auditor search does not reveal hidden business title",
+      "passed": true
+    },
+    {
+      "type": "interaction",
+      "name": "auditor OA detail excludes business title and amount",
+      "passed": true
+    },
+    {
+      "type": "interaction",
+      "name": "auditor uses pseudonymous case reference",
+      "passed": true
+    },
+    {
+      "type": "interaction",
+      "name": "security search does not reveal hidden business title",
+      "passed": true
+    },
+    {
+      "type": "interaction",
+      "name": "security OA detail excludes business title and amount",
+      "passed": true
+    },
+    {
+      "type": "interaction",
+      "name": "privacy search does not reveal hidden business title",
+      "passed": true
+    },
+    {
+      "type": "interaction",
+      "name": "privacy OA detail excludes business title and amount",
+      "passed": true
+    },
+    {
+      "type": "interaction",
+      "name": "privacy uses pseudonymous case reference",
+      "passed": true
+    },
+    {
+      "type": "interaction",
+      "name": "runtime search does not reveal hidden business title",
+      "passed": true
+    },
+    {
+      "type": "interaction",
+      "name": "runtime OA detail excludes business title and amount",
+      "passed": true
+    },
+    {
+      "type": "interaction",
+      "name": "release search does not reveal hidden business title",
+      "passed": true
+    },
+    {
+      "type": "interaction",
+      "name": "release OA detail excludes business title and amount",
+      "passed": true
+    },
+    {
+      "type": "interaction",
+      "name": "tenant search does not reveal hidden business title",
+      "passed": true
+    },
+    {
+      "type": "interaction",
+      "name": "tenant OA detail excludes business title and amount",
+      "passed": true
+    },
+    {
+      "type": "interaction",
+      "name": "workflow search does not reveal hidden business title",
+      "passed": true
+    },
+    {
+      "type": "interaction",
+      "name": "workflow OA detail excludes business title and amount",
+      "passed": true
+    },
+    {
+      "type": "interaction",
+      "name": "policy search does not reveal hidden business title",
+      "passed": true
+    },
+    {
+      "type": "interaction",
+      "name": "policy OA detail excludes business title and amount",
+      "passed": true
+    },
+    {
+      "type": "interaction",
+      "name": "automation search does not reveal hidden business title",
+      "passed": true
+    },
+    {
+      "type": "interaction",
+      "name": "automation OA detail excludes business title and amount",
+      "passed": true
+    },
+    {
+      "type": "interaction",
+      "name": "api search does not reveal hidden business title",
+      "passed": true
+    },
+    {
+      "type": "interaction",
+      "name": "api OA detail excludes business title and amount",
+      "passed": true
+    },
+    {
+      "type": "interaction",
+      "name": "apiadmin search does not reveal hidden business title",
+      "passed": true
+    },
+    {
+      "type": "interaction",
+      "name": "apiadmin OA detail excludes business title and amount",
+      "passed": true
+    },
+    {
+      "type": "interaction",
+      "name": "assignment search does not reveal hidden business title",
+      "passed": true
+    },
+    {
+      "type": "interaction",
+      "name": "assignment OA detail excludes business title and amount",
+      "passed": true
+    },
+    {
+      "type": "interaction",
+      "name": "auditgeneral search does not reveal hidden business title",
+      "passed": true
+    },
+    {
+      "type": "interaction",
+      "name": "auditgeneral OA detail excludes business title and amount",
+      "passed": true
+    },
+    {
+      "type": "interaction",
+      "name": "auditgeneral uses pseudonymous case reference",
+      "passed": true
+    },
+    {
+      "type": "interaction",
+      "name": "datasubject search does not reveal hidden business title",
+      "passed": true
+    },
+    {
+      "type": "interaction",
+      "name": "datasubject OA detail excludes business title and amount",
+      "passed": true
+    },
+    {
+      "type": "interaction",
+      "name": "evolution search does not reveal hidden business title",
+      "passed": true
+    },
+    {
+      "type": "interaction",
+      "name": "evolution OA detail excludes business title and amount",
+      "passed": true
+    },
+    {
+      "type": "interaction",
+      "name": "knowledgeadmin search does not reveal hidden business title",
+      "passed": true
+    },
+    {
+      "type": "interaction",
+      "name": "knowledgeadmin OA detail excludes business title and amount",
+      "passed": true
+    },
+    {
+      "type": "interaction",
+      "name": "securityadmin search does not reveal hidden business title",
+      "passed": true
+    },
+    {
+      "type": "interaction",
+      "name": "securityadmin OA detail excludes business title and amount",
+      "passed": true
+    },
+    {
+      "type": "interaction",
+      "name": "workforce search does not reveal hidden business title",
+      "passed": true
+    },
+    {
+      "type": "interaction",
+      "name": "workforce OA detail excludes business title and amount",
+      "passed": true
+    },
+    {
+      "type": "interaction",
+      "name": "no browser errors",
+      "passed": true
+    },
+    {
+      "type": "interaction",
+      "name": "no outgoing network effects",
+      "passed": true
+    }
+  ],
+  "layoutChecks": 0,
+  "interactionChecks": 109,
+  "screenshots": [],
+  "htmlSha256": "0a7842b14a63e86dc8e5309a8d228a80a5b6cd83f86adbe3bdb885b26105acd9",
+  "pageErrors": [],
+  "networkRequests": [],
+  "limitations": "Local in-memory OA fixtures; no production concurrency, real auth, workflow engine or persistence verification."
+}

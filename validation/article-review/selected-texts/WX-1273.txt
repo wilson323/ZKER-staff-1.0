@@ -1,0 +1,187 @@
+#  Agent 干活别只看终端：Maka 把每一步都记成可恢复证据
+
+原创  阿飞的工具笔记  阿飞的工具笔记  阿飞的工具笔记
+
+_2026年08月27日 08:38_ __ _ _ _ _ _ 北京  _
+
+在小说阅读器读本章
+
+去阅读
+
+#  Agent 干活别只看终端：Maka 把每一步都记成可恢复证据
+
+你让 AI
+改一个小功能，前半小时看起来很顺：它读文件、跑命令、改代码、继续解释。结果中途断了，或者它说“我已经处理好了”，你回头一看，最关键的那条命令到底跑没跑、审批过什么、哪个输出被省略了，全靠聊天记录里扒拉。
+
+这事很像群里确认需求：当时大家都说“收到”，第二天一问，谁也找不到那句“最终版”。
+
+今天 GitHub Trending 上冒出来的 Apache Maka，切中的就是这个麻烦。它不是再造一个“更会写代码的 AI”，而是把 Agent
+工作时的模型消息、工具调用、工具结果、权限决定和结束状态，记成一条本地可恢复的执行记录。
+
+我的判断很简单：如果你已经在用 Codex、Claude Code、Cursor 这类工具做真项目，Maka 最值得试的不是“多一个 Agent”，而是“让
+Agent 的过程别只活在终端滚屏里”。
+
+##  它解决的不是聪明问题，是留痕问题
+
+Maka 的官方定位是 local-first Agent workspace，本地优先的 Agent
+工作台。人话说，就是会话、设置、运行记录默认留在你的机器上；模型可以接云端 API、本地模型或兼容网关，但任务过程不是只丢给一个黑盒聊天窗口。
+
+它目前有三个入口：
+
+  * Desktop：桌面端，适合日常交互、看工具时间线、分支、搜索和恢复； 
+  * TUI / CLI：终端里用  ` maka  ` 或  ` maka run  ` 跑当前项目任务； 
+  * Eval：跑可复现实验，比较不同 Agent 或配置的表现。 
+
+这和普通聊天式编程助手的差别在于：Maka
+把一次任务拆成“可回看的事件”。读了什么文件、执行了什么命令、工具结果是什么、哪里需要审批、最后为什么停止，都进入 Runtime Event
+Log。Runtime Event Log 可以理解成 Agent 的工作流水账，不是给领导看的那种，而是出问题时真能救命的那种。
+
+所以它适合的第一类人，不是“我要让 AI 自动做完一切”，而是“我开始把 AI 放进真实仓库，但不想每次出问题都像考古”。
+
+##  今天为什么值得看
+
+新鲜度上，Maka 今天出现在 GitHub Trending，页面显示 3238 Star、323 Fork，并且今天新增 538 Star。它的 CLI
+beta 版本在 8 月 18 日发布，README 也明确写着项目仍处于 Apache Incubator
+孵化阶段、早期公开发布、命令和数据格式还可能变化。
+
+这反而让它的使用姿势更清楚：别把它当成“立刻替换现有开发工具”的成熟产品，先当成一个 Agent 工作记录器来试。
+
+我会拿它做两件事：
+
+一是看一个 AI 任务有没有完整证据链。比如“总结这个仓库并指出最重要风险”，最后不仅要有结论，还能回看它读了哪些文件、跑了哪些命令。
+
+二是看失败后能不能恢复上下文。很多 Agent 最烦人的不是失败，而是失败以后还要你复述一遍前情提要，像给失忆同事补会。Maka
+的路线是把历史保存下来，下一次提示词可以省略旧工具输出，但证据本身不丢。
+
+##  30 分钟试法：拿一个小仓库跑“可追溯审查”
+
+基于公开 README，我今天会这样试，不建议一上来丢公司核心仓库。
+
+  1. 准备环境：Node.js 22.19 或更高、npm、Git、  ` ripgrep  ` 。然后拉源码： 
+
+    
+    
+    git clone https://github.com/apache/maka.git cd maka npm ci
+
+  1. 启动桌面开发环境： 
+
+    
+    
+    npm run dev
+
+第一次打开后，到  ` Settings -> Models  ` 添加一个模型连接，可以是云端 API、本地模型或兼容网关。Maka
+不自带共享模型账号，这点挺好，省得你以为免费自助餐开席。
+
+  1. 建一个专门的测试目录，放一个小项目或开源仓库副本。别用主力仓库直接开练，先让工具在低风险材料上“热身”。 
+
+  1. 从 CLI 跑一个非交互任务： 
+
+    
+    
+    npm run build npm run cli:dev -- run "Summarize this repository and identify its most important risk"
+
+如果要试它的图式执行，可以用 README 里的  ` --graph  ` ：
+
+    
+    
+    npm run cli:dev -- run --graph "Implement two independent slices, integrate them, then review the result"
+
+官方提醒，Graph 会用隔离 Git worktree，源项目需要是干净的 Git worktree。换句话说，先  ` git status  `
+看干净，再让它动手；别把自己一堆未提交改动塞进去让 Agent 猜，猜错了还得你背锅。
+
+  1. 回到 Desktop 看这次任务的记录：重点看工具调用时间线、审批点、最终状态、有没有可恢复的 artifact。不要只看最后那段总结，最后总结是作文，过程记录才是凭证。 
+
+![Maka 30
+分钟可追溯审查试法](https://mmbiz.qpic.cn/mmbiz_png/alG8zqicEIzRwu7hTCcu7g6epRZibt7jyKTudahmXAIPKUFzicHvDiaQ1OGLqGiaIPjFnIbXU5IWBib1dAibNQRyymfqiacDcMvDVSyOaKTAYRcYlVY/640?from=appmsg)
+Maka 30 分钟可追溯审查试法
+
+这套试法的产出物很明确：不是一个“AI 生成的漂亮答案”，而是一条可回放的 Agent 工作记录。你拿它判断：这个工具有没有资格进入你的真实开发流程。
+
+##  最容易误会的一点：本地优先不等于完全离线
+
+Maka 的 README 写得比较克制：数据默认留在本机，你可以带自己的云端 API、本地模型或兼容网关。这里要分清楚两件事。
+
+“本地优先”说的是记录、配置和运行状态的归属；“完全离线”说的是模型推理、依赖安装、搜索和外部工具都不出网。后者需要你自己配置本地模型和禁用外部能力，不能自动脑补。
+
+还有几个边界我会提前记下来：
+
+第一，官方说 macOS Apple Silicon 桌面构建还是早期公开发布，Intel Mac 和 Linux 不是当前支持重点，Windows
+预览也不是稳定发布层级。
+
+第二，API Key 等凭据存在本地文件里，README 提到是  ` credential-vault.json  `
+，受操作系统账号权限保护，但不是“永远不可读的魔法保险箱”。团队机器、共享账号、录屏环境里要格外小心。
+
+第三，能写文件、跑 shell 的工具要经过沙箱边界审批。这个设计思路对真实团队很重要：Agent
+可以快，但不能快到把生产配置顺手改了。排期已经够刺激了，没必要再给自己加隐藏关卡。
+
+##  我会把它放在哪个位置
+
+短期看，Maka 不像是普通用户每天都要打开的新编辑器。它更像一个“AI 工作审计台”：当你开始让 Agent
+做跨文件、多命令、可中断的任务时，它帮你把过程保存下来。
+
+适合先试的场景有三个：
+
+  * 新同事接手旧仓库，让 Agent 先做结构阅读和风险梳理； 
+  * 让 Agent 改一段非核心逻辑，观察它到底读了哪些文件、跑了哪些验证； 
+  * 比较两个模型或两套提示词，看看谁的工具调用更稳、成本和失败原因是什么。 
+
+不适合的场景也很清楚：你只是想让 AI 补一个函数、解释一段代码，现有编辑器插件就够了；你需要稳定的跨平台桌面客户端，也先别把 Maka 当成生产依赖。
+
+我喜欢它的地方，是方向不花哨。很多 Agent 工具都在比“谁更像一个同事”，Maka
+更像在补一张工作记录表：这个同事到底做了什么，留下了什么证据，失败以后能不能接着查。
+
+这比“又聪明 20%”更接近真需求。
+
+##  最后一句
+
+今天可以试 Maka，但别急着把它当主力 IDE。拿一个小仓库跑一次 30 分钟可追溯审查，看清楚读文件、跑命令、审批、失败和恢复记录是否完整。
+
+如果结果能回放，问题能定位，记录能保存，它就不是又一个热闹的 Agent 壳子，而是你把 AI 放进真项目之前的一层工作台。
+
+* * *
+
+参考来源：
+
+  * Apache Maka GitHub README：https://github.com/apache/maka 
+  * Apache Maka Releases：https://github.com/apache/maka/releases 
+  * GitHub Trending 今日榜：https://github.com/trending?since=daily 
+  * Hacker News newest 页面：https://news.ycombinator.com/newest 
+  * Claude Plugins Community GitHub：https://github.com/anthropics/claude-plugins-community 
+
+说明：本文基于 2026 年 8 月 26 日公开信息整理，未声称已完成 Maka 本地端到端实测。Maka 仍处于 Apache Incubator
+孵化和早期公开发布阶段，命令、数据格式和支持平台后续可能变化，请以官方 README 和 Release 为准。
+
+预览时标签不可点
+
+微信扫一扫  
+关注该公众号
+
+知道了
+
+微信扫一扫  
+使用小程序
+
+****
+
+取消  允许
+
+****
+
+取消  允许
+
+****
+
+取消  允许
+
+×  分析
+
+__
+
+![作者头像](http://mmbiz.qpic.cn/mmbiz_png/alG8zqicEIzRLGVO5ZFjbKVeXo5ZVVWIqP9OHFy3SjGhZ4MD9H9ZkhWKrVibxichicd2F8TUxYt3POSicktsmpJp4DANFJbsf5V2HkiasxP8Fo8yc/0?wx_fmt=png)
+
+微信扫一扫可打开此内容，  
+使用完整服务
+
+：  ，  ，  ，  ，  ，  ，  ，  ，  ，  ，  ，  ，  。  视频  小程序  赞  ，轻点两下取消赞  在看  ，轻点两下取消在看
+分享  留言  收藏  听过
+

@@ -1,0 +1,17 @@
+{
+  "retrievedAt": "2026-09-11T23:55:17.238420+00:00",
+  "operation": "search_knowledge",
+  "request": {
+    "knowledge_base_id": "TAx6cRZX5nq5ZWjeEUO4wiX--0Re7P1yYPZEHhxS2tk=",
+    "cursor": "",
+    "query": "本体"
+  },
+  "exitCode": 0,
+  "response": {
+    "code": 0,
+    "msg": "success",
+    "data": {
+      "info_list": []
+    }
+  }
+}

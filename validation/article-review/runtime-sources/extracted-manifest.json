@@ -1,0 +1,135 @@
+[
+  {
+    "repo": "agentscope",
+    "commit": "b82253ba1b680a67091c4de32f074477c30ba416",
+    "path": "README.md",
+    "localPath": "validation/article-review/runtime-sources/agentscope--README.md",
+    "sha256": "503d03c6f6e53f6c0083061d363be63269b431101d5d25540d3cf1ff76157691"
+  },
+  {
+    "repo": "agentscope",
+    "commit": "b82253ba1b680a67091c4de32f074477c30ba416",
+    "path": "pyproject.toml",
+    "localPath": "validation/article-review/runtime-sources/agentscope--pyproject.toml",
+    "sha256": "3246d228d6c0efd3306b6d63809380dc06f96acdaac0e2328ed40a809ed965be"
+  },
+  {
+    "repo": "agentscope",
+    "commit": "b82253ba1b680a67091c4de32f074477c30ba416",
+    "path": "src/agentscope/_version.py",
+    "localPath": "validation/article-review/runtime-sources/agentscope--src__agentscope___version.py",
+    "sha256": "91474c4b8e7ee4c932f3904b7d7d3a110ee4a68b7162899215da0bcf4ecd647e"
+  },
+  {
+    "repo": "agentscope",
+    "commit": "b82253ba1b680a67091c4de32f074477c30ba416",
+    "path": "src/agentscope/app/deps.py",
+    "localPath": "validation/article-review/runtime-sources/agentscope--src__agentscope__app__deps.py",
+    "sha256": "b740dfd615e7063f222b60f7040ca544d13ebb4cf39cfd0f496383662b3fedeb"
+  },
+  {
+    "repo": "agentscope",
+    "commit": "b82253ba1b680a67091c4de32f074477c30ba416",
+    "path": "src/agentscope/app/storage/__init__.py",
+    "localPath": "validation/article-review/runtime-sources/agentscope--src__agentscope__app__storage____init__.py",
+    "sha256": "f70e16811d281bd716820956ef610fef4f57a50cccef4c4b52d0074ca0650acc"
+  },
+  {
+    "repo": "agentscope",
+    "commit": "b82253ba1b680a67091c4de32f074477c30ba416",
+    "path": "src/agentscope/app/storage/_sql/_storage.py",
+    "localPath": "validation/article-review/runtime-sources/agentscope--src__agentscope__app__storage___sql___storage.py",
+    "sha256": "3b12b1cf3d5b52a38cd1f97588c38a65c2a08e9dfd0ae92eddfc14d1dce72a9b"
+  },
+  {
+    "repo": "agentscope",
+    "commit": "b82253ba1b680a67091c4de32f074477c30ba416",
+    "path": "src/agentscope/app/_router/_workspace.py",
+    "localPath": "validation/article-review/runtime-sources/agentscope--src__agentscope__app___router___workspace.py",
+    "sha256": "08fbad0cbbe39d4a3c9a0580ff778463b8a246206fed4fe0cc3be4d1d67a4d89"
+  },
+  {
+    "repo": "agentscope",
+    "commit": "b82253ba1b680a67091c4de32f074477c30ba416",
+    "path": "src/agentscope/app/_service/_workspace.py",
+    "localPath": "validation/article-review/runtime-sources/agentscope--src__agentscope__app___service___workspace.py",
+    "sha256": "d352a32649ec7adcf6f1b5072d5468b409ff6502b9dcc476ed474d0ed8fe7a5d"
+  },
+  {
+    "repo": "agentscope",
+    "commit": "b82253ba1b680a67091c4de32f074477c30ba416",
+    "path": "src/agentscope/permission/_engine.py",
+    "localPath": "validation/article-review/runtime-sources/agentscope--src__agentscope__permission___engine.py",
+    "sha256": "9142e0ecf173542a197562b802879e4e84491436ec3f17a691e11ebc9a0654c7"
+  },
+  {
+    "repo": "deepagents",
+    "commit": "178417d0dad063fea0300db68455f4574ef67db3",
+    "path": "libs/deepagents/pyproject.toml",
+    "localPath": "validation/article-review/runtime-sources/deepagents--libs__deepagents__pyproject.toml",
+    "sha256": "2d37953fd38b92f3ff23c55d60cbd9a38e2479f3987f221d96e6356e3dae67b1"
+  },
+  {
+    "repo": "deepagents",
+    "commit": "178417d0dad063fea0300db68455f4574ef67db3",
+    "path": "libs/deepagents/deepagents/graph.py",
+    "localPath": "validation/article-review/runtime-sources/deepagents--libs__deepagents__deepagents__graph.py",
+    "sha256": "2c0c9a5fc4a836b17d31076834d884d00a705f369317eb30fd1ceddec3b12e95"
+  },
+  {
+    "repo": "deepagents",
+    "commit": "178417d0dad063fea0300db68455f4574ef67db3",
+    "path": "libs/deepagents/deepagents/middleware/permissions.py",
+    "localPath": "validation/article-review/runtime-sources/deepagents--libs__deepagents__deepagents__middleware__permissions.py",
+    "sha256": "dd44d44bcf08c382a9b63106dfb16bcff7298fbd54e49174ff65cecb09ff1ca9"
+  },
+  {
+    "repo": "deepagents",
+    "commit": "178417d0dad063fea0300db68455f4574ef67db3",
+    "path": "libs/deepagents/deepagents/middleware/subagents.py",
+    "localPath": "validation/article-review/runtime-sources/deepagents--libs__deepagents__deepagents__middleware__subagents.py",
+    "sha256": "fb72d2961baabdb9a541c6fe36df46712f4f987a88df7260d6b8b6e132425d25"
+  },
+  {
+    "repo": "nanzi-ai-agent-platform",
+    "commit": "2476fbd237e5f160697e6fbe7111ada9125e4bb7",
+    "path": "requirements.txt",
+    "localPath": "validation/article-review/runtime-sources/nanzi-ai-agent-platform--requirements.txt",
+    "sha256": "18d22e5b4a1f2173b2ee5ab76d032d0ab84055a2e9f965da5b671e38dc8fb3c8"
+  },
+  {
+    "repo": "nanzi-ai-agent-platform",
+    "commit": "2476fbd237e5f160697e6fbe7111ada9125e4bb7",
+    "path": "app/services/quota_service.py",
+    "localPath": "validation/article-review/runtime-sources/nanzi-ai-agent-platform--app__services__quota_service.py",
+    "sha256": "d49e5a9acf34ac35311224dd17db0797ca1090124331f6381e774f78a4462033"
+  },
+  {
+    "repo": "nanzi-ai-agent-platform",
+    "commit": "2476fbd237e5f160697e6fbe7111ada9125e4bb7",
+    "path": "app/utils/fs_access.py",
+    "localPath": "validation/article-review/runtime-sources/nanzi-ai-agent-platform--app__utils__fs_access.py",
+    "sha256": "f50aa07bbc4164641b2fe3480a768102899f70eb60436b949e1befd5f063c4ab"
+  },
+  {
+    "repo": "nanzi-ai-agent-platform",
+    "commit": "2476fbd237e5f160697e6fbe7111ada9125e4bb7",
+    "path": "app/services/ai/runtime/agentscope/session_lock.py",
+    "localPath": "validation/article-review/runtime-sources/nanzi-ai-agent-platform--app__services__ai__runtime__agentscope__session_lock.py",
+    "sha256": "dc98c8e6d9351d63ed3149f06101aa1322567e57c7d6f443084bcc75efdd4e30"
+  },
+  {
+    "repo": "nanzi-ai-agent-platform",
+    "commit": "2476fbd237e5f160697e6fbe7111ada9125e4bb7",
+    "path": "architech/design/AGENTSCOPE_RUNTIME.md",
+    "localPath": "validation/article-review/runtime-sources/nanzi-ai-agent-platform--architech__design__AGENTSCOPE_RUNTIME.md",
+    "sha256": "65bf834738ac2e78f519e7d932424b2b12182e25ddd9012dc5f7b676b777ed84"
+  },
+  {
+    "repo": "nanzi-ai-agent-platform",
+    "commit": "2476fbd237e5f160697e6fbe7111ada9125e4bb7",
+    "path": "architech/design/permission_design.md",
+    "localPath": "validation/article-review/runtime-sources/nanzi-ai-agent-platform--architech__design__permission_design.md",
+    "sha256": "e442da8493002907c842a2e7b75bfdd04db3608934b484e07056118ab92284b9"
+  }
+]

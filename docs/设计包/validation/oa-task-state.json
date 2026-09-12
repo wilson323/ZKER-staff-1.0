@@ -1,0 +1,111 @@
+{
+  "goal": "将OA多流程多实例统一工作台及任务隔离落实到设计与交互原型",
+  "scope": [
+    "New project 2设计包和验证产物；产品仓只读"
+  ],
+  "acceptance_criteria": [
+    "同模板同日多实例独立",
+    "本人跨流程跨节点统一队列",
+    "任务配置草稿对话及审批隔离",
+    "发起多笔事务及重复提交区分",
+    "41角色基线不回退",
+    "OA来源与数据ER/接口/用户故事一致"
+  ],
+  "status": "VERIFIED",
+  "current_node": "complete",
+  "completed_nodes": [
+    "sources",
+    "prototype",
+    "documents",
+    "verify"
+  ],
+  "failed_nodes": [],
+  "artifacts": [
+    "/Users/mac/Documents/New project 2/08-人员数字员工协作交互原型.html",
+    "/Users/mac/Documents/New project 2/18-OA多流程多实例产品设计.md",
+    "/Users/mac/Documents/New project 2/19-OA多实例演示数据.json",
+    "/Users/mac/Documents/New project 2/20-OA统一待办候选.schema.json",
+    "/Users/mac/Documents/New project 2/21-OA需求细化与验收追踪.json"
+  ],
+  "evidence": [
+    "/Users/mac/Documents/New project 2/validation/v25-role-regression.json",
+    "/Users/mac/Documents/New project 2/validation/v25-market-regression.json",
+    "/Users/mac/Documents/New project 2/validation/v25-oa-validation.json",
+    "/Users/mac/Documents/New project 2/validation/v25-oa-schema-validation.json",
+    "/Users/mac/Documents/New project 2/validation/v25-document-validation.json"
+  ],
+  "risks": [
+    "仅本地虚构数据，无真实后端或OAuth"
+  ],
+  "approvals": [
+    "用户授权完善多事务多流程OA设计"
+  ],
+  "sourceHead": "922ad8823ac5e99a21b8f13569f2e394ab42466a",
+  "nodes": [
+    {
+      "id": "sources",
+      "objective": "核对项目关系与OA一手资料",
+      "preconditions": [],
+      "action": "核对项目关系与OA一手资料",
+      "tool_or_skill": "现有文件、浏览器与官方文档工具",
+      "expected_output": "核对项目关系与OA一手资料",
+      "validation": "当前合同源码和来源可复核",
+      "success_condition": "当前合同源码和来源可复核",
+      "failure_path": "基于新诊断定点修复或明确未验证范围",
+      "rollback_or_compensation": "恢复v2.4原型备份"
+    },
+    {
+      "id": "prototype",
+      "objective": "完善多实例工作台及任务详情",
+      "preconditions": [
+        "sources"
+      ],
+      "action": "完善多实例工作台及任务详情",
+      "tool_or_skill": "现有文件、浏览器与官方文档工具",
+      "expected_output": "完善多实例工作台及任务详情",
+      "validation": "浏览器验证隔离及流程操作",
+      "success_condition": "浏览器验证隔离及流程操作",
+      "failure_path": "基于新诊断定点修复或明确未验证范围",
+      "rollback_or_compensation": "恢复v2.4原型备份"
+    },
+    {
+      "id": "documents",
+      "objective": "补充ER流程接口及故事设计",
+      "preconditions": [
+        "prototype"
+      ],
+      "action": "补充ER流程接口及故事设计",
+      "tool_or_skill": "现有文件、浏览器与官方文档工具",
+      "expected_output": "补充ER流程接口及故事设计",
+      "validation": "逐项追踪与计数一致",
+      "success_condition": "逐项追踪与计数一致",
+      "failure_path": "基于新诊断定点修复或明确未验证范围",
+      "rollback_or_compensation": "恢复v2.4原型备份"
+    },
+    {
+      "id": "verify",
+      "objective": "验证交付并记录边界",
+      "preconditions": [
+        "documents"
+      ],
+      "action": "验证交付并记录边界",
+      "tool_or_skill": "现有文件、浏览器与官方文档工具",
+      "expected_output": "验证交付并记录边界",
+      "validation": "所有声明有当前报告支持",
+      "success_condition": "所有声明有当前报告支持",
+      "failure_path": "基于新诊断定点修复或明确未验证范围",
+      "rollback_or_compensation": "恢复v2.4原型备份"
+    }
+  ],
+  "acceptanceResult": {
+    "roleProfiles": 41,
+    "humanRoleKeys": 44,
+    "requirements": 153,
+    "oaRefinements": 28,
+    "initialInstances": 7,
+    "initialFixtureTasks": 369,
+    "layoutChecks": 1620,
+    "interactionChecks": 482,
+    "screenshots": 97
+  }
+}

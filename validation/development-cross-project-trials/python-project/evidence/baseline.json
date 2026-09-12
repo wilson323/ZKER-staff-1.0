@@ -1,0 +1,43 @@
+{
+  "capturedAt": "2026-09-11T17:35:55.639513+00:00",
+  "root": "/private/var/folders/8l/6tnv8ssd2vs0h8463rnv66b00000gn/T/ai-sdlc-forward-sud9bya_/python-project",
+  "gitDirectoryPresent": false,
+  "pythonExecutable": "/usr/local/bin/python3",
+  "pythonVersion": "3.14.7 (v3.14.7:823f0323ee6, Aug  5 2026, 07:07:01) [Clang 21.0.0 (clang-2100.1.1.101)]",
+  "files": {
+    "AGENTS.md": {
+      "sha256": "1f239120d4b4105ff7adc482209eec9cbcc396b12d37ecc7dedc9e627b3b8c33",
+      "content": "Use TASKS.md as the existing work record. Keep this small library and its public function signature. Do not install dependencies, initialize Git or create a parallel task platform.\n"
+    },
+    "README.md": {
+      "sha256": "fec411d0d886930264b2e3b1b3fa096a37c4492231b799ff432256a7c413f01a",
+      "content": "# Labels utility\n\nparse_labels accepts a list of strings; trim whitespace, drop empty labels, remove duplicates while preserving first appearance.\n\nRun: python3 -m unittest discover -s tests -v\n"
+    },
+    "TASKS.md": {
+      "sha256": "9fe6e709b36e3c37e0368a717c75f6f7d2bd92489e264a61720fc703e356516c",
+      "content": "# Current work\n\nGoal: correct label normalization behavior documented in README.\nStatus: RUNNING\nEvidence: none yet\n"
+    },
+    "pyproject.toml": {
+      "sha256": "5cd982b42c92a97f435f801ddf9db8bb0cec827888b02a374f7765b81f554577",
+      "content": "[project]\nname=\"labels-fixture\"\nversion=\"0.0.1\"\nrequires-python=\">=3.10\"\n"
+    },
+    "labels.py": {
+      "sha256": "5a21a11d00c8e8dbd5abc356fc2331534d97977e3f6b31dc18107084ca0a142f",
+      "content": "def parse_labels(items):\n    return [value.strip() for value in items]\n"
+    },
+    "tests/test_labels.py": {
+      "sha256": "458150891e53cfd1da792061a5875dff9ceaab2542f9402198c6082459fda297",
+      "content": "import unittest\nfrom labels import parse_labels\n\nclass LabelsTests(unittest.TestCase):\n    def test_trim(self):\n        self.assertEqual(parse_labels([\" a \", \"b\"]), [\"a\", \"b\"])\n    def test_blank(self):\n        self.assertEqual(parse_labels([\"\", \"  \"]), [])\n    def test_unique_order(self):\n        self.assertEqual(parse_labels([\" b \", \"a\", \"b\", \"a\"]), [\"b\", \"a\"])\n    def test_empty(self):\n        self.assertEqual(parse_labels([]), [])\n"
+    }
+  },
+  "skillFilesRead": [
+    {
+      "path": "/Users/mac/.agents/skills/ai-native-sdlc/SKILL.md",
+      "sha256": "743508a73ab71722c71c91808d67ee8a0d7faa325badbfce97afdc046931a5a9"
+    },
+    {
+      "path": "/Users/mac/.agents/skills/ai-native-sdlc/references/evidence-evals.md",
+      "sha256": "d987cf6c876abae35c91013ceab8cf1816a2dbcb8f71771497b02a27c64e2ead"
+    }
+  ]
+}

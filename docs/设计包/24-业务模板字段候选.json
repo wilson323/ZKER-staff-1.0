@@ -1,0 +1,162 @@
+{
+  "revision": "v2.6",
+  "status": "TEMPLATE_FIELD_CANDIDATE_NOT_BACKEND_CONTRACT",
+  "productForm": "ENTERPRISE_BROWSER_SERVER",
+  "templates": {
+    "purchase": [
+      {
+        "key": "project",
+        "label": "采购项目",
+        "type": "text",
+        "required": true,
+        "example": "研发实验室建设"
+      },
+      {
+        "key": "amount",
+        "label": "申请预算金额",
+        "type": "money",
+        "required": true,
+        "example": 120000
+      },
+      {
+        "key": "currency",
+        "label": "币种",
+        "type": "select",
+        "required": true,
+        "options": [
+          "CNY"
+        ],
+        "example": "CNY"
+      }
+    ],
+    "contract": [
+      {
+        "key": "project",
+        "label": "关联合同事项",
+        "type": "text",
+        "required": true,
+        "example": "年度技术服务"
+      },
+      {
+        "key": "counterparty",
+        "label": "合同相对方",
+        "type": "text",
+        "required": true,
+        "example": "示例服务公司"
+      },
+      {
+        "key": "contractType",
+        "label": "合同类型",
+        "type": "select",
+        "required": true,
+        "options": [
+          "服务合同",
+          "采购合同"
+        ],
+        "example": "服务合同"
+      },
+      {
+        "key": "amount",
+        "label": "含税合同金额",
+        "type": "money",
+        "required": true,
+        "example": 120000
+      },
+      {
+        "key": "currency",
+        "label": "币种",
+        "type": "select",
+        "required": true,
+        "options": [
+          "CNY"
+        ],
+        "example": "CNY"
+      }
+    ],
+    "expense": [
+      {
+        "key": "claimant",
+        "label": "报销人员",
+        "type": "text",
+        "required": true,
+        "example": "示例员工 · 甲"
+      },
+      {
+        "key": "expenseType",
+        "label": "费用类型",
+        "type": "select",
+        "required": true,
+        "options": [
+          "差旅费",
+          "业务交通费",
+          "办公费"
+        ],
+        "example": "差旅费"
+      },
+      {
+        "key": "expenseDate",
+        "label": "费用发生日期",
+        "type": "date",
+        "required": true,
+        "example": "2026-09-09"
+      },
+      {
+        "key": "amount",
+        "label": "申报报销金额",
+        "type": "money",
+        "required": true,
+        "example": 2680
+      },
+      {
+        "key": "currency",
+        "label": "币种",
+        "type": "select",
+        "required": true,
+        "options": [
+          "CNY"
+        ],
+        "example": "CNY"
+      }
+    ],
+    "people": [
+      {
+        "key": "person",
+        "label": "交接人员",
+        "type": "text",
+        "required": true,
+        "example": "示例员工 · 己"
+      },
+      {
+        "key": "fromPosition",
+        "label": "原任职岗位",
+        "type": "text",
+        "required": true,
+        "example": "采购部 / 预算专员"
+      },
+      {
+        "key": "toPosition",
+        "label": "接收岗位",
+        "type": "text",
+        "required": true,
+        "example": "采购部 / 预算复核岗"
+      },
+      {
+        "key": "effectiveDate",
+        "label": "交接生效日期",
+        "type": "date",
+        "required": true,
+        "example": "2026-09-10"
+      }
+    ]
+  },
+  "rules": {
+    "textMaxLength": 120,
+    "currencyScope": [
+      "CNY"
+    ],
+    "money": "Positive finite amount, at most 2 decimal places, maximum 1e12 CNY in this demo; production uses fixed decimal/minor units.",
+    "date": "Strict ISO calendar date; expense date may not exceed demo business date.",
+    "identity": "Names are fictional display text. Production selectors resolve tenant-scoped member or position IDs from server.",
+    "source": "Business template candidates, not fields asserted to exist in the control-plane API."
+  }
+}

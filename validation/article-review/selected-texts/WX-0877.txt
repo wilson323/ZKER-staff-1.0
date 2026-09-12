@@ -1,0 +1,204 @@
+#  cumora：让 AI Agent 成为「同事」的团队协作工具，3 天狂揽 2400 星
+
+原创  uuaihub  uuaihub  CheeseLab 知识实验室
+
+_2026年08月19日 12:50_ __ _ _ _ _ _ 上海  _
+
+在小说阅读器读本章
+
+去阅读
+
+###  一句话总结
+
+开源项目  cumora  把 AI Agent
+从「被召唤的工具」升级为「团队里的一等公民」——它们有人设、有记忆、能认领任务、会互相协调、甚至能收发真实邮件。项目开源 3 天狂揽  2386 星
+，来自中国开发者  yetone  。
+
+* * *
+
+###  cumora 是什么：一个 AI Agent 与人类并肩工作的团队空间
+
+「Where agent teams gather.」（Agent 团队的聚集地。）这是 cumora 放在 README 最顶部的标语。
+
+大多数 AI 协作工具的默认假设是「人是中心，Agent 是辅助」；cumora 把假设反了过来：  人和 Agent
+在同一个通讯录、同一个群聊、同一块看板、同一个日历里  ，Agent 不是「被召唤时才响应」的机器人，而是持续在线的团队成员。
+
+根据官方 README，cumora 里的 Agent 具备：
+
+•
+
+人设（persona）与记忆（memory）  ：每个 Agent 有自己的性格和长期记忆；
+
+•
+
+认领工作（claim work）  ：Agent 会主动认领任务，而不是等人分派；
+
+•
+
+互相协调不冲突（coordinate without colliding）  ：多个 Agent 在同一房间协作时不会互相踩踏；
+
+•
+
+收发真实邮件（send and receive real email）  ：Agent 有独立的邮箱，能对外沟通。
+
+![cumora
+架构全景图](https://mmbiz.qpic.cn/sz_mmbiz_png/7Md1Jdc3iaeuj9nxTIEuDLia1zrEHYzy5L99QQLFcuFXLQMy7XybG7s2vVicePazGl6TU2mwgUMVXPbAVpicYXOPGdliaVwzINccwnOoYlVHW4ao/640?wx_fmt=png&from=appmsg)
+
+cumora 架构全景图
+
+* * *
+
+###  两种「大脑」：云端托管 vs 自带 Agent
+
+cumora 最巧妙的设定，是它给了 Agent 两种「大脑」路径，兼顾「开箱即用」和「数据自主」：
+
+① Cumora Cloud（云端大脑）  ：每个 Agent 跑在托管 pod 里，通过 OpenAI Responses API
+执行多跳工具调用——bash、文件、浏览器、邮件、记忆、技能……适合想快速体验、不想折腾部署的用户。
+
+② BYOA（Bring Your Own Agent，自带大脑）  ：在自己的 Mac 或 VPS 上跑  npx cumora agent
+computer  ，Agent 的大脑就变成你本地的  Claude Code  或  Codex  CLI，走你自己的订阅。  服务器永远看不到你的
+provider key  ——这对看重数据隐私的团队是杀手锏。
+
+![cumora
+双脑路径对比](https://mmbiz.qpic.cn/sz_mmbiz_png/7Md1Jdc3iaet5DiaMwmibgf3HpmvLwlsdq1iakK4NicCwrb5YsSKr9g2E8coZcMiclzheNreuoNx5HTraBxC4R5vJY6Xxnh1uLRBvvzUmicfoEaRRA/640?wx_fmt=png&from=appmsg)
+
+cumora 双脑路径对比
+
+* * *
+
+###  架构拆解：一套严肃的工程实现
+
+cumora 不是一个「玩具 demo」，它的工程栈相当完整：
+
+•
+
+前端  ：React 18 + Vite + TypeScript + Tailwind，同一套组件支撑 desktop / mobile / web /
+admin 四个壳，还有 Electron 桌面端、Capacitor 打包的 iOS / Android 原生壳；
+
+•
+
+后端  ：Express + WebSocket，Postgres 作为事实源（Drizzle schema），Redis 做 pub/sub
+扇出与在线状态；
+
+•
+
+Agent 运行时  ：云端 Agent 跑在 per-agent Kubernetes pod 里（Go FUSE 驱动挂载工作区）；BYOA Agent
+跑在你自己的机器上；
+
+•
+
+成本账本  ：无论云端还是 BYOA，每一次 LLM 调用都汇入同一个  llm_calls  成本账本。
+
+* * *
+
+###  Agent 之间如何「不打架」：三层协调机制
+
+多个 Agent 共处一室，最容易出问题的是「互相覆盖」——A 刚发完消息，B 基于旧上下文又回了一条，导致逻辑混乱。cumora 用三层机制来解决：
+
+1\.
+
+seen-cursor freshness gate（新鲜度门）  ：如果一个 Agent 的回复是基于「过期的消息流」，这条回复会被  扣住（HELD）
+，先给它看最新的消息，再让它重新决策；
+
+2\.
+
+atomic claims（原子认领）  ：Agent 认领的是「真实的工作单元」，一个任务不会被两个 Agent 同时领走；
+
+3\.
+
+small-brain triage gate（小脑分诊门）  ：先用小模型做一层分诊，把简单问题挡住，避免所有请求都砸向大模型（既省成本也更快）。
+
+![cumora
+三层协调机制](https://mmbiz.qpic.cn/sz_mmbiz_png/7Md1Jdc3iaet7IrMeAgdvxibMS159ib8fn222y4AlqFoomUaNyJ6WUvc6V5hiaWq3m8CiacSLSUQtTloMjf0OT2ycd962mWhB5qJc1YqBZwBIv2I/640?wx_fmt=png&from=appmsg)
+
+cumora 三层协调机制
+
+* * *
+
+###  本地跑起来：一条命令
+
+cumora 的开源仓库（MIT 协议）支持完全本地部署，依赖只有 Postgres 和 Redis：
+
+    
+    
+    createdb -h localhost cumora  
+    export OPENAI_API_KEY=sk-...  
+      
+    npm install  
+    npm run dev:all   # Vite 渲染器 :5180 + API 服务器 :5181  
+    
+
+打开  http://localhost:5180  即可。空数据库会自动 seed 一个「starter team」：6 个 Agent、3 个人类、9
+个对话——  零条预设消息  ，聊天里出现的一切都是 Agent 现场生成的。
+
+* * *
+
+###  为什么值得关注
+
+作者 yetone  是国内知名开源作者（8365 followers，633 个公开仓库），此前作品多为 AI 开发者工具，社区号召力强。cumora 3
+天 2386 星、260 fork 的增速，说明「多 Agent 协作」这个方向确实切中了需求。
+
+更深一层看，cumora 代表了一个正在形成的趋势：  AI Agent 正在从「命令行工具」走向「组织成员」  。当 Agent
+有了人设、记忆、认领任务和收发邮件的能力，「团队」的边界就不再只是人类。这对未来的工作流、协作软件、甚至组织形态，都是一个值得持续观察的信号。
+
+* * *
+
+###  总结
+
+•
+
+cumora 把 AI Agent 当作团队「一等公民」，与人类共享通讯录 / 群聊 / 看板 / 日历；
+
+•
+
+双脑架构（Cloud + BYOA）兼顾易用与数据自主；
+
+•
+
+三层协调机制解决多 Agent 互相覆盖的经典难题；
+
+•
+
+开源 3 天 2386 星，来自中国开发者 yetone，MIT 协议可本地部署。
+
+数据来源：GitHub 仓库 yetone/cumora（截至 2026-08-19）
+
+域名的一百种玩法
+![](https://mmbiz.qpic.cn/sz_mmbiz_png/7Md1Jdc3iaesscGfF5shYmloOGCL45HhNeLRuT3JWbwY1GCExwZMicCc6T1P4wxmPLj7IT8U2Krs7w50ocr4M6dQB9CiazvgOFZMD9PWIemYxI/640?wx_fmt=png&from=appmsg)
+
+预览时标签不可点
+
+阅读原文
+
+微信扫一扫  
+关注该公众号
+
+知道了
+
+微信扫一扫  
+使用小程序
+
+****
+
+取消  允许
+
+****
+
+取消  允许
+
+****
+
+取消  允许
+
+×  分析
+
+__
+
+![作者头像](http://mmbiz.qpic.cn/sz_mmbiz_png/3In7FXrhDCjnuwUvaMW66YRRpHyweibbIa30GBOPFDLhnG2uYfqPjdT2XEjDktoNfQkobibMbohWjGH1ibRbOmF1A/0?wx_fmt=png)
+
+微信扫一扫可打开此内容，  
+使用完整服务
+
+：  ，  ，  ，  ，  ，  ，  ，  ，  ，  ，  ，  ，  。  视频  小程序  赞  ，轻点两下取消赞  在看  ，轻点两下取消在看
+分享  留言  收藏  听过
+

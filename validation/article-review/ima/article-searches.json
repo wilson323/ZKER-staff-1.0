@@ -1,0 +1,2956 @@
+[
+  {
+    "knowledgeBase": "DeepSeek Harness",
+    "query": null,
+    "entries": [
+      {
+        "media_id": "markdown_ec33932d8853cbba6c243aca003fa1c2_fc4cbb5f9726a7f67ac1bf2c7f5a85a97493979318811421",
+        "title": "DSH Desktop 插件开发.md",
+        "parent_folder_id": "7493979318811421",
+        "tags": [],
+        "media_type": 7
+      },
+      {
+        "media_id": "markdown_ec33932d8853cbba6c243aca003fa1c2_888d06fac23243e11a1d94f0faa6a0547493979318811421",
+        "title": "20260816DSH插件精选-880+.md",
+        "parent_folder_id": "7493979318811421",
+        "tags": [],
+        "media_type": 7
+      },
+      {
+        "media_id": "wechatarticle_ec33932d8853cbba6c243aca003fa1c2_23994f145a4dabfac12d14daf23382d27493979318811421",
+        "title": "一个提示词，十五步DIY你的AI取证工作台",
+        "parent_folder_id": "7493979318811421",
+        "tags": [],
+        "media_type": 6
+      },
+      {
+        "media_id": "weburl_ec33932d8853cbba6c243aca003fa1c2_aa9167e6db312c71e78e498c9dd82d847493979318811421",
+        "title": "The deepseek of DeepSeek Harness: Overengineering or built for self-evolution? | Life Odyssey-Life Odyssey",
+        "parent_folder_id": "7493979318811421",
+        "tags": [],
+        "media_type": 2
+      },
+      {
+        "media_id": "wechatarticle_ec33932d8853cbba6c243aca003fa1c2_85dd6a1a991e1603435dc6304eb69b647493979318811421",
+        "title": "我封装的插件让DeepSeek Harness秒变多媒体工作台",
+        "parent_folder_id": "7493979318811421",
+        "tags": [],
+        "media_type": 6
+      },
+      {
+        "media_id": "wechatarticle_ec33932d8853cbba6c243aca003fa1c2_a079da317526bbb4214bef0e1fa694817493979318811421",
+        "title": "DSH：Minke v0.2.0 发布了",
+        "parent_folder_id": "7493979318811421",
+        "tags": [],
+        "media_type": 6
+      },
+      {
+        "media_id": "wechatarticle_ec33932d8853cbba6c243aca003fa1c2_bd56b80f02f0cf8193e13797bf9cca497493979318811421",
+        "title": "DeepSeek 终于支持多模态了（附实测及接入教程）",
+        "parent_folder_id": "7493979318811421",
+        "tags": [],
+        "media_type": 6
+      },
+      {
+        "media_id": "wechatarticle_ec33932d8853cbba6c243aca003fa1c2_8146c3f94a7052bc6d9b245fa66616b97493979318811421",
+        "title": "V4-Flash-Vision-Exp 上线，开启多模态 API 服务",
+        "parent_folder_id": "7493979318811421",
+        "tags": [],
+        "media_type": 6
+      },
+      {
+        "media_id": "wechatarticle_ec33932d8853cbba6c243aca003fa1c2_cfbb879572beb704e337470b253e68697493979318811421",
+        "title": "DeepSeek Harness 更新：官方多模态支持",
+        "parent_folder_id": "7493979318811421",
+        "tags": [],
+        "media_type": 6
+      },
+      {
+        "media_id": "wechatarticle_ec33932d8853cbba6c243aca003fa1c2_383179d3ab2b07ad3151edf30f3cd20d7493979318811421",
+        "title": "基于阿里云 AgentLoop 的 DeepSeek Harness 评测实践",
+        "parent_folder_id": "7493979318811421",
+        "tags": [],
+        "media_type": 6
+      },
+      {
+        "media_id": "wechatarticle_ec33932d8853cbba6c243aca003fa1c2_31fc8063b0f84d42c18cd6fe6c3c14527493979318811421",
+        "title": "DeepSeek Harness 大起底：这一次，重新定义「插件」",
+        "parent_folder_id": "7493979318811421",
+        "tags": [],
+        "media_type": 6
+      },
+      {
+        "media_id": "wechatarticle_ec33932d8853cbba6c243aca003fa1c2_288bd01b8e21e2bd96f4b270455d84e27493979318811421",
+        "title": "Minke：DeepSeek Harness 桌面应用",
+        "parent_folder_id": "7493979318811421",
+        "tags": [],
+        "media_type": 6
+      },
+      {
+        "media_id": "wechatarticle_ec33932d8853cbba6c243aca003fa1c2_bfee29077587df0a18de92c4f2ee52d97493979318811421",
+        "title": "DeepSeek Harness 首发实测 + 入门教程，夯爆了！",
+        "parent_folder_id": "7493979318811421",
+        "tags": [],
+        "media_type": 6
+      },
+      {
+        "media_id": "wechatarticle_ec33932d8853cbba6c243aca003fa1c2_24e18b2570c96692766d93b0c3411bf47493979318811421",
+        "title": "网友把DeepSeek Harness玩成了赛博乐高，我们挑出了最有意思的11个插件",
+        "parent_folder_id": "7493979318811421",
+        "tags": [],
+        "media_type": 6
+      },
+      {
+        "media_id": "wechatarticle_ec33932d8853cbba6c243aca003fa1c2_715c80dd6ce2741f75cd192d194665117493979318811421",
+        "title": "爆火的 DeepSeek Harness，全网最全小白接入教程！",
+        "parent_folder_id": "7493979318811421",
+        "tags": [],
+        "media_type": 6
+      },
+      {
+        "media_id": "wechatarticle_ec33932d8853cbba6c243aca003fa1c2_fa224d9e9ebc534201cabfdc3aab87d77493979318811421",
+        "title": "一个小众变态的 DeepSeek Harness 插件",
+        "parent_folder_id": "7493979318811421",
+        "tags": [],
+        "media_type": 6
+      },
+      {
+        "media_id": "wechatarticle_ec33932d8853cbba6c243aca003fa1c2_77615eb9a133940cb87bf9f00486376e7493979318811421",
+        "title": "DeepSeek Harness 保姆级教程！",
+        "parent_folder_id": "7493979318811421",
+        "tags": [],
+        "media_type": 6
+      },
+      {
+        "media_id": "wechatarticle_ec33932d8853cbba6c243aca003fa1c2_8f67f2082e3022936741568808e972f37493979318811421",
+        "title": "DeepSeek的Harness，为何是一头黑色鲸鱼？",
+        "parent_folder_id": "7493979318811421",
+        "tags": [],
+        "media_type": 6
+      },
+      {
+        "media_id": "wechatarticle_ec33932d8853cbba6c243aca003fa1c2_df2fd65f921f742c24622efc88265d097493979318811421",
+        "title": "DeepSeek Harness 必装插件清单：10个社区插件让你的DSH更好用",
+        "parent_folder_id": "7493979318811421",
+        "tags": [],
+        "media_type": 6
+      },
+      {
+        "media_id": "wechatarticle_ec33932d8853cbba6c243aca003fa1c2_d2f14a9e02f36282c09f73a360724cda7493979318811421",
+        "title": "太快了！聊聊 DeepSeek Harness 必装的插件。",
+        "parent_folder_id": "7493979318811421",
+        "tags": [],
+        "media_type": 6
+      },
+      {
+        "media_id": "wechatarticle_ec33932d8853cbba6c243aca003fa1c2_6a1c7209c05e3e12423d8a7d5e621b4b7493979318811421",
+        "title": "DeepSeek Harness从0到1实操教程",
+        "parent_folder_id": "7493979318811421",
+        "tags": [],
+        "media_type": 6
+      },
+      {
+        "media_id": "wechatarticle_ec33932d8853cbba6c243aca003fa1c2_7f2adacc84be17d6099f914781a5a6ca7493979318811421",
+        "title": "二次元头像=技术大佬？DeepSeek Harness揭开AI圈隐藏规律",
+        "parent_folder_id": "7493979318811421",
+        "tags": [],
+        "media_type": 6
+      },
+      {
+        "media_id": "wechatarticle_ec33932d8853cbba6c243aca003fa1c2_8d7cc7c5d3d0399b526f9c3c9ecaf6a37493979318811421",
+        "title": "DeepSeek V4 Pro 满血形态解锁指南",
+        "parent_folder_id": "7493979318811421",
+        "tags": [],
+        "media_type": 6
+      },
+      {
+        "media_id": "wechatarticle_ec33932d8853cbba6c243aca003fa1c2_45c6bce91cd1b2bcbf7c9d29a0b5b6947493979318811421",
+        "title": "深度拆解DeepSeek Harness：放弃桌面端、不内置TUI、主打插件生态的底层战略抉择",
+        "parent_folder_id": "7493979318811421",
+        "tags": [],
+        "media_type": 6
+      },
+      {
+        "media_id": "wechatarticle_ec33932d8853cbba6c243aca003fa1c2_6963bc0a5b20bc78b4f27770cf3464007493979318811421",
+        "title": "太夯了！6 个 DeepSeek Harness 必备插件！",
+        "parent_folder_id": "7493979318811421",
+        "tags": [],
+        "media_type": 6
+      },
+      {
+        "media_id": "wechatarticle_ec33932d8853cbba6c243aca003fa1c2_10dad76d1a3c8d312cd16ac6acef48667493979318811421",
+        "title": "DeepSeek Harness 插件搜索与安装",
+        "parent_folder_id": "7493979318811421",
+        "tags": [],
+        "media_type": 6
+      },
+      {
+        "media_id": "wechatarticle_ec33932d8853cbba6c243aca003fa1c2_7229dca3d14b42f6ff740eafb861b7157493979318811421",
+        "title": "二次元头像=技术大佬？DeepSeek Harness揭开AI圈隐藏规律",
+        "parent_folder_id": "7493979318811421",
+        "tags": [],
+        "media_type": 6
+      },
+      {
+        "media_id": "wechatarticle_ec33932d8853cbba6c243aca003fa1c2_314530c1f361a8b3cf34abed85e61b3d7493979318811421",
+        "title": "我的朋友，要不来试试 Harness？",
+        "parent_folder_id": "7493979318811421",
+        "tags": [],
+        "media_type": 6
+      },
+      {
+        "media_id": "wechatarticle_ec33932d8853cbba6c243aca003fa1c2_a3dcf2b5ff3ccfa0b563a4fc748deb987493979318811421",
+        "title": "花几天把 DeepSeek Harness 跑了个遍，跟你说说值不值得装",
+        "parent_folder_id": "7493979318811421",
+        "tags": [],
+        "media_type": 6
+      },
+      {
+        "media_id": "wechatarticle_ec33932d8853cbba6c243aca003fa1c2_ef5a44e7a1be8303c3afbad8305d02d37493979318811421",
+        "title": "从零开始，搭建你的 Harness，定制化懂你的 Agent",
+        "parent_folder_id": "7493979318811421",
+        "tags": [],
+        "media_type": 6
+      },
+      {
+        "media_id": "wechatarticle_ec33932d8853cbba6c243aca003fa1c2_3fe57553a22b80600b968aaf24c349cc7493979318811421",
+        "title": "从零开始，搭建你的 Harness，定制化懂你的 Agent",
+        "parent_folder_id": "7493979318811421",
+        "tags": [],
+        "media_type": 6
+      },
+      {
+        "media_id": "wechatarticle_ec33932d8853cbba6c243aca003fa1c2_7fc013b835c6cc2ae9dced0ad8ed305d7493979318811421",
+        "title": "我把 DeepSeek Harness 的二十万行，做成了一间可以亲手拆开的实验室",
+        "parent_folder_id": "7493979318811421",
+        "tags": [],
+        "media_type": 6
+      },
+      {
+        "media_id": "wechatarticle_ec33932d8853cbba6c243aca003fa1c2_afc1018571f35bb959347316a99ba7f27493979318811421",
+        "title": "10 万 Star 的 DeepSeek Harness，终于有开源桌面版了。",
+        "parent_folder_id": "7493979318811421",
+        "tags": [],
+        "media_type": 6
+      },
+      {
+        "media_id": "wechatarticle_ec33932d8853cbba6c243aca003fa1c2_813cbaf2091864186e7a8771b8bb766d7493979318811421",
+        "title": "实测DeepSeek Harness，原来PTC模式和Cordis插件才是隐藏大招",
+        "parent_folder_id": "7493979318811421",
+        "tags": [],
+        "media_type": 6
+      },
+      {
+        "media_id": "wechatarticle_ec33932d8853cbba6c243aca003fa1c2_62129f17b003a14c160af0cb1c09a8217493979318811421",
+        "title": "DeepSeek Harness插件一夜燃爆GitHub：长期记忆、电子宠物、4399小游戏全来了",
+        "parent_folder_id": "7493979318811421",
+        "tags": [],
+        "media_type": 6
+      },
+      {
+        "media_id": "wechatarticle_ec33932d8853cbba6c243aca003fa1c2_c5fecb01e3803b29187cfaceeff517267493979318811421",
+        "title": "DeepSeek Harness + Ollama = 新世界",
+        "parent_folder_id": "7493979318811421",
+        "tags": [],
+        "media_type": 6
+      },
+      {
+        "media_id": "weburl_ec33932d8853cbba6c243aca003fa1c2_9a013d92e3e54d6a378d5d7937bdcea77493979318811421",
+        "title": "DeepSeek Harness背后的论文：让Agent在运行中改写自己",
+        "parent_folder_id": "7493979318811421",
+        "tags": [],
+        "media_type": 2
+      },
+      {
+        "media_id": "weburl_ec33932d8853cbba6c243aca003fa1c2_02af0d5da29d5cec9846ea5fe7a87dcb7493979318811421",
+        "title": "深度体验DeepSeek Harness，我原谅它涨价了",
+        "parent_folder_id": "7493979318811421",
+        "tags": [],
+        "media_type": 2
+      },
+      {
+        "media_id": "wechatarticle_ec33932d8853cbba6c243aca003fa1c2_42ce6f117963c614f8f1504edf227f697493979318811421",
+        "title": "DeepSeek Harness 深度拆解，黑鲸出水掀起大模型终局之战？",
+        "parent_folder_id": "7493979318811421",
+        "tags": [],
+        "media_type": 6
+      },
+      {
+        "media_id": "wechatarticle_ec33932d8853cbba6c243aca003fa1c2_68c854f731decaf519208cb72763f1437493979318811421",
+        "title": "最新！DeepSeek Harness 插件教程来了！",
+        "parent_folder_id": "7493979318811421",
+        "tags": [],
+        "media_type": 6
+      },
+      {
+        "media_id": "wechatarticle_ec33932d8853cbba6c243aca003fa1c2_8f0cac9973ab3bed41c91509c30f4e6a7493979318811421",
+        "title": "高强度用了一天Deepseek Harness有兴奋有悲伤",
+        "parent_folder_id": "7493979318811421",
+        "tags": [],
+        "media_type": 6
+      },
+      {
+        "media_id": "wechatarticle_ec33932d8853cbba6c243aca003fa1c2_e06127ea2f36b8219d12ba671769069c7493979318811421",
+        "title": "DeepSeek Harness底层机制解析——北大&DS合作论文（附下载）",
+        "parent_folder_id": "7493979318811421",
+        "tags": [],
+        "media_type": 6
+      },
+      {
+        "media_id": "wechatarticle_ec33932d8853cbba6c243aca003fa1c2_cd4804cabe237655646cf5b401da4bde7493979318811421",
+        "title": "DeepSeek Harness从0到1实操教程",
+        "parent_folder_id": "7493979318811421",
+        "tags": [],
+        "media_type": 6
+      },
+      {
+        "media_id": "wechatarticle_ec33932d8853cbba6c243aca003fa1c2_5171541b1a3885018dca33ae076bbeb27493979318811421",
+        "title": "刚刚 DeepSeek-Harness 桌面版开源 win/mac",
+        "parent_folder_id": "7493979318811421",
+        "tags": [],
+        "media_type": 6
+      },
+      {
+        "media_id": "wechatarticle_ec33932d8853cbba6c243aca003fa1c2_dadedd54b73392fd3f92f7d5bc56e3c47493979318811421",
+        "title": "DeepSeek Harness 上手：一行命令，10 分钟跑起来",
+        "parent_folder_id": "7493979318811421",
+        "tags": [],
+        "media_type": 6
+      },
+      {
+        "media_id": "wechatarticle_ec33932d8853cbba6c243aca003fa1c2_2e156b4fdf77b4c935a5e5d3543ce3b67493979318811421",
+        "title": "DeepSeek Harness 首发实测 + 入门教程，夯爆了！对不起梁神我错了。。",
+        "parent_folder_id": "7493979318811421",
+        "tags": [],
+        "media_type": 6
+      },
+      {
+        "media_id": "wechatarticle_ec33932d8853cbba6c243aca003fa1c2_35731482e7961ae58c9b0386ac913be87493979318811421",
+        "title": "DeepSeek的Harness，为何是一头黑色鲸鱼？",
+        "parent_folder_id": "7493979318811421",
+        "tags": [],
+        "media_type": 6
+      },
+      {
+        "media_id": "wechatarticle_ec33932d8853cbba6c243aca003fa1c2_b16a5bc5651ba61cfc84fce5652536357493979318811421",
+        "title": "上手体验 DeepSeek Harness（ AI新手友好，附安装教程）",
+        "parent_folder_id": "7493979318811421",
+        "tags": [],
+        "media_type": 6
+      },
+      {
+        "media_id": "wechatarticle_ec33932d8853cbba6c243aca003fa1c2_3376291dc2c20665c20a2b1f5775ef947493979318811421",
+        "title": "DeepSeek黑鲸鱼Harness，“新”在哪里？",
+        "parent_folder_id": "7493979318811421",
+        "tags": [],
+        "media_type": 6
+      },
+      {
+        "media_id": "wechatarticle_ec33932d8853cbba6c243aca003fa1c2_7cb9afe7cadb5e9fba56fa56a700c2057493979318811421",
+        "title": "DeepSeek Harness：一切皆插件，以及 Agent 自进化",
+        "parent_folder_id": "7493979318811421",
+        "tags": [],
+        "media_type": 6
+      },
+      {
+        "media_id": "wechatarticle_ec33932d8853cbba6c243aca003fa1c2_0aef68bbd5f2e9d83571d8e6f4f3a0a67493979318811421",
+        "title": "DeepSeek Harness，是今年最有野心的一次Agent开源",
+        "parent_folder_id": "7493979318811421",
+        "tags": [],
+        "media_type": 6
+      },
+      {
+        "media_id": "wechatarticle_ec33932d8853cbba6c243aca003fa1c2_07505bc4c1b37f1f15b4a46ce74719af7493979318811421",
+        "title": "什么是 DeepSeek Harness？一键上手 + 图形界面 + 插件商店",
+        "parent_folder_id": "7493979318811421",
+        "tags": [],
+        "media_type": 6
+      },
+      {
+        "media_id": "wechatarticle_ec33932d8853cbba6c243aca003fa1c2_948926511cd72ac8240c3f6076a1e0347493979318811421",
+        "title": "“DeepSeek Harness”已上线",
+        "parent_folder_id": "7493979318811421",
+        "tags": [],
+        "media_type": 6
+      },
+      {
+        "media_id": "wechatarticle_ec33932d8853cbba6c243aca003fa1c2_34ff8a6186c5b964bc4a594fbdd4e3367493979318811421",
+        "title": "DeepSeek官方Agent来了，它不想做Codex",
+        "parent_folder_id": "7493979318811421",
+        "tags": [],
+        "media_type": 6
+      },
+      {
+        "media_id": "wechatarticle_ec33932d8853cbba6c243aca003fa1c2_bccb72e2dbff517ee0ef4d160193d3587493979318811421",
+        "title": "Deepseek harness尝鲜：利弊都很明显",
+        "parent_folder_id": "7493979318811421",
+        "tags": [],
+        "media_type": 6
+      },
+      {
+        "media_id": "wechatarticle_ec33932d8853cbba6c243aca003fa1c2_484003f97ba207f3b842303e6b6e43bf7493979318811421",
+        "title": "首发体验 | DeepSeek Harness 来了，它不想做下一个Codex",
+        "parent_folder_id": "7493979318811421",
+        "tags": [],
+        "media_type": 6
+      },
+      {
+        "media_id": "pdf_ec33932d8853cbba6c243aca003fa1c2_a49313ee4dbf70ce24f5a5ac4a048fc47493979318811421",
+        "title": "A Programming Paradigm for Spatiotemporal Composability.pdf",
+        "parent_folder_id": "7493979318811421",
+        "tags": [],
+        "media_type": 1
+      },
+      {
+        "media_id": "wechatarticle_ec33932d8853cbba6c243aca003fa1c2_afaf971cddb5a1606f6b86a3145eca087493979318811421",
+        "title": "DeepSeek Harness 深度解剖：一切皆插件，Agent 的\"安卓时刻\"来了",
+        "parent_folder_id": "7493979318811421",
+        "tags": [],
+        "media_type": 6
+      },
+      {
+        "media_id": "wechatarticle_ec33932d8853cbba6c243aca003fa1c2_d19dcc4f328e4384a9da6fd65e73ad6d7493979318811421",
+        "title": "DeepSeek Harness 开发者预览版：一切皆插件",
+        "parent_folder_id": "7493979318811421",
+        "tags": [],
+        "media_type": 6
+      },
+      {
+        "media_id": "wechatarticle_ec33932d8853cbba6c243aca003fa1c2_ad1e01e645a69ea597912e5f32dceb307493979318811421",
+        "title": "DeepSeek Harness刚发布，UP主做的插件冲上榜一！",
+        "parent_folder_id": "7493979318811421",
+        "tags": [],
+        "media_type": 6
+      },
+      {
+        "media_id": "wechatarticle_ec33932d8853cbba6c243aca003fa1c2_81b7ec1ef2c11827034e77e9fab7bdfd7493979318811421",
+        "title": "刚刚，DeepSeek Harness震撼开源：一切皆插件",
+        "parent_folder_id": "7493979318811421",
+        "tags": [],
+        "media_type": 6
+      },
+      {
+        "media_id": "wechatarticle_ec33932d8853cbba6c243aca003fa1c2_bde3970c786448b3ea3dec6fac7047b57493979318811421",
+        "title": "DeepSeek正式开源Harness：它终于有了自己的Vibe Coding入口",
+        "parent_folder_id": "7493979318811421",
+        "tags": [],
+        "media_type": 6
+      }
+    ],
+    "pages": 2,
+    "stopReason": "END",
+    "scope": "ROOT_ONLY; folders not recursively enumerated"
+  },
+  {
+    "knowledgeBase": "驾驭AI - Harness",
+    "query": null,
+    "entries": [
+      {
+        "media_id": "folder_7474707636960559",
+        "title": "harness",
+        "parent_folder_id": "7435298417965424",
+        "tags": [],
+        "media_type": 99
+      },
+      {
+        "media_id": "folder_7470259481090774",
+        "title": "loop",
+        "parent_folder_id": "7435298417965424",
+        "tags": [],
+        "media_type": 99
+      },
+      {
+        "media_id": "folder_7461235285059832",
+        "title": "wiki",
+        "parent_folder_id": "7435298417965424",
+        "tags": [],
+        "media_type": 99
+      },
+      {
+        "media_id": "folder_7458313193155446",
+        "title": "论文",
+        "parent_folder_id": "7435298417965424",
+        "tags": [],
+        "media_type": 99
+      },
+      {
+        "media_id": "folder_7456881152911052",
+        "title": "ACP",
+        "parent_folder_id": "7435298417965424",
+        "tags": [],
+        "media_type": 99
+      },
+      {
+        "media_id": "folder_7455386105834200",
+        "title": "安全",
+        "parent_folder_id": "7435298417965424",
+        "tags": [],
+        "media_type": 99
+      },
+      {
+        "media_id": "folder_7455385132748469",
+        "title": "产品思维",
+        "parent_folder_id": "7435298417965424",
+        "tags": [],
+        "media_type": 99
+      },
+      {
+        "media_id": "folder_7455010686266104",
+        "title": "Prompt",
+        "parent_folder_id": "7435298417965424",
+        "tags": [],
+        "media_type": 99
+      },
+      {
+        "media_id": "folder_7454701440228359",
+        "title": "SDD",
+        "parent_folder_id": "7435298417965424",
+        "tags": [],
+        "media_type": 99
+      },
+      {
+        "media_id": "folder_7454648378091280",
+        "title": "sandbox",
+        "parent_folder_id": "7435298417965424",
+        "tags": [],
+        "media_type": 99
+      },
+      {
+        "media_id": "folder_7452169632487964",
+        "title": "hooks",
+        "parent_folder_id": "7435298417965424",
+        "tags": [],
+        "media_type": 99
+      },
+      {
+        "media_id": "folder_7451944071229899",
+        "title": "RAG",
+        "parent_folder_id": "7435298417965424",
+        "tags": [],
+        "media_type": 99
+      },
+      {
+        "media_id": "folder_7451940514461137",
+        "title": "agent",
+        "parent_folder_id": "7435298417965424",
+        "tags": [],
+        "media_type": 99
+      },
+      {
+        "media_id": "folder_7451940300527283",
+        "title": "理念",
+        "parent_folder_id": "7435298417965424",
+        "tags": [],
+        "media_type": 99
+      },
+      {
+        "media_id": "folder_7451939801406307",
+        "title": "手册",
+        "parent_folder_id": "7435298417965424",
+        "tags": [],
+        "media_type": 99
+      },
+      {
+        "media_id": "folder_7451939549772202",
+        "title": "llm",
+        "parent_folder_id": "7435298417965424",
+        "tags": [],
+        "media_type": 99
+      },
+      {
+        "media_id": "folder_7451939407165693",
+        "title": "应用",
+        "parent_folder_id": "7435298417965424",
+        "tags": [],
+        "media_type": 99
+      },
+      {
+        "media_id": "folder_7451939264557465",
+        "title": "优化",
+        "parent_folder_id": "7435298417965424",
+        "tags": [],
+        "media_type": 99
+      },
+      {
+        "media_id": "folder_7450676774839305",
+        "title": "mcp",
+        "parent_folder_id": "7435298417965424",
+        "tags": [],
+        "media_type": 99
+      },
+      {
+        "media_id": "folder_7442867815454437",
+        "title": "skills",
+        "parent_folder_id": "7435298417965424",
+        "tags": [],
+        "media_type": 99
+      },
+      {
+        "media_id": "weburl_8518e6c23c3fdd4a0bd762e3d5bfa0cb_5ecaff4568bf4c3eeed4e40872a49b037435298417965424",
+        "title": "视频号",
+        "parent_folder_id": "7435298417965424",
+        "tags": [],
+        "media_type": 2
+      },
+      {
+        "media_id": "weburl_8518e6c23c3fdd4a0bd762e3d5bfa0cb_71fae84e6ba3e7c28bc68a1bf596f7c97435298417965424",
+        "title": "Prompt: HUMAN 3.0 Self-Discovery & Metatype Test",
+        "parent_folder_id": "7435298417965424",
+        "tags": [],
+        "media_type": 2
+      },
+      {
+        "media_id": "weburl_8518e6c23c3fdd4a0bd762e3d5bfa0cb_31640e9bcc6bcf944b9a60778ee402b47435298417965424",
+        "title": "视频号",
+        "parent_folder_id": "7435298417965424",
+        "tags": [],
+        "media_type": 2
+      },
+      {
+        "media_id": "wechatarticle_8518e6c23c3fdd4a0bd762e3d5bfa0cb_da64e921d2b46c3b5edec625861e6e867435298417965424",
+        "title": "Claude CodePlugins：从「会用」到「会造」的完整指南",
+        "parent_folder_id": "7435298417965424",
+        "tags": [],
+        "media_type": 6
+      },
+      {
+        "media_id": "weburl_8518e6c23c3fdd4a0bd762e3d5bfa0cb_29fb59a40383dcf63a6119cc34b2941b7435298417965424",
+        "title": "Open Design 深度分析：当 Coding Agent 成为你的设计师-知乎专栏",
+        "parent_folder_id": "7435298417965424",
+        "tags": [],
+        "media_type": 2
+      },
+      {
+        "media_id": "weburl_8518e6c23c3fdd4a0bd762e3d5bfa0cb_ed6d82e191defc4323b3eb25db35e8fb7435298417965424",
+        "title": "视频号",
+        "parent_folder_id": "7435298417965424",
+        "tags": [],
+        "media_type": 2
+      },
+      {
+        "media_id": "weburl_8518e6c23c3fdd4a0bd762e3d5bfa0cb_2d295069f9a4ea7c1b3cdf4f4ac0273b7435298417965424",
+        "title": "视频号",
+        "parent_folder_id": "7435298417965424",
+        "tags": [],
+        "media_type": 2
+      },
+      {
+        "media_id": "weburl_8518e6c23c3fdd4a0bd762e3d5bfa0cb_e5348c5ff3f91788221ce06df7191ad67435298417965424",
+        "title": "GitHub - tinyhumansai/openhuman: Your Personal AI super intelligence. Private, Simple and extremely powerful.-GitHub",
+        "parent_folder_id": "7435298417965424",
+        "tags": [],
+        "media_type": 2
+      },
+      {
+        "media_id": "weburl_8518e6c23c3fdd4a0bd762e3d5bfa0cb_63c72b643f28db48685d513a95720c8b7435298417965424",
+        "title": "每天一个热门框架全面解析-OpenHuman：一个主打私有、简单、强大的个人AI超级助理-知乎专栏",
+        "parent_folder_id": "7435298417965424",
+        "tags": [],
+        "media_type": 2
+      },
+      {
+        "media_id": "weburl_8518e6c23c3fdd4a0bd762e3d5bfa0cb_9a45340485c87d03033325b9b9f9c42e7435298417965424",
+        "title": "OpenHuman 深度解析：23k Star 的开源桌面 AI 超级助手完全指南 - 七牛云行业应用",
+        "parent_folder_id": "7435298417965424",
+        "tags": [],
+        "media_type": 2
+      },
+      {
+        "media_id": "note_8518e6c23c3fdd4a0bd762e3d5bfa0cb_74643115427839807435298417965424",
+        "title": "AI时代下该如何提升提问的能力",
+        "parent_folder_id": "7435298417965424",
+        "tags": [],
+        "media_type": 11
+      },
+      {
+        "media_id": "weburl_8518e6c23c3fdd4a0bd762e3d5bfa0cb_9b58f05f797c519a77001e1754eb29717435298417965424",
+        "title": "从玩具到生产力：用真实项目讲透 AI Agent 的 Harness Engineering-知乎专栏",
+        "parent_folder_id": "7435298417965424",
+        "tags": [],
+        "media_type": 2
+      },
+      {
+        "media_id": "weburl_8518e6c23c3fdd4a0bd762e3d5bfa0cb_0af60e18bc747bb121ef24281c628f0b7435298417965424",
+        "title": "（万字长文）说说大模型中的推理加速技术-知乎专栏",
+        "parent_folder_id": "7435298417965424",
+        "tags": [],
+        "media_type": 2
+      },
+      {
+        "media_id": "wechatarticle_8518e6c23c3fdd4a0bd762e3d5bfa0cb_231b4735de17953170f38598a0787c857435298417965424",
+        "title": "OpenAI翁家翌：梯度之外，下一个AI训练范式有着落了？",
+        "parent_folder_id": "7435298417965424",
+        "tags": [],
+        "media_type": 6
+      },
+      {
+        "media_id": "wechatarticle_8518e6c23c3fdd4a0bd762e3d5bfa0cb_88f93b6f1d7d5d4721541ad630899ac37435298417965424",
+        "title": "0%完成率！Claude、GPT、Gemini 全灭，SWE-Bench作者新作把AI圈干沉默了",
+        "parent_folder_id": "7435298417965424",
+        "tags": [],
+        "media_type": 6
+      },
+      {
+        "media_id": "weburl_8518e6c23c3fdd4a0bd762e3d5bfa0cb_5e81b3ea450135d68273e25f2f70cf9c7435298417965424",
+        "title": "从 Graphify 到 Hyper-Extract：当 Karpathy 的\"知识编译\"遇到超图-知乎专栏",
+        "parent_folder_id": "7435298417965424",
+        "tags": [],
+        "media_type": 2
+      },
+      {
+        "media_id": "weburl_8518e6c23c3fdd4a0bd762e3d5bfa0cb_15305e36dbb4351cf24d4eb922452ce37435298417965424",
+        "title": "3.77 微秒实例化的多 Agent 框架，6.4k star，接了 100+ 个 LLM | PraisonAI，6.4k ⭐。多 Agent 编排框…-知乎想法",
+        "parent_folder_id": "7435298417965424",
+        "tags": [],
+        "media_type": 2
+      },
+      {
+        "media_id": "weburl_8518e6c23c3fdd4a0bd762e3d5bfa0cb_9b740e173e91fdce7493628e4d7f42127435298417965424",
+        "title": "Tasi Harness 本地AI Agent正式发布！浏览器自动化与技能双线发力-知乎专栏",
+        "parent_folder_id": "7435298417965424",
+        "tags": [],
+        "media_type": 2
+      },
+      {
+        "media_id": "weburl_8518e6c23c3fdd4a0bd762e3d5bfa0cb_2ebe0b72c02b9f23cc27f7290b90cfd87435298417965424",
+        "title": "Scaling Managed Agents: Decoupling the brain from the hands",
+        "parent_folder_id": "7435298417965424",
+        "tags": [],
+        "media_type": 2
+      },
+      {
+        "media_id": "weburl_8518e6c23c3fdd4a0bd762e3d5bfa0cb_cadb41451dbd798311f337b5408a887e7435298417965424",
+        "title": "Qoder 工程实践：Harness Engineering 指南-知乎专栏",
+        "parent_folder_id": "7435298417965424",
+        "tags": [],
+        "media_type": 2
+      },
+      {
+        "media_id": "weburl_8518e6c23c3fdd4a0bd762e3d5bfa0cb_22177432e6bd1ddf69f8e926ef0e76097435298417965424",
+        "title": "Hermes Agent 源码解析：A Closed Learning Loop 是如何让 Agent 越用越聪明的？-知乎专栏",
+        "parent_folder_id": "7435298417965424",
+        "tags": [],
+        "media_type": 2
+      },
+      {
+        "media_id": "weburl_8518e6c23c3fdd4a0bd762e3d5bfa0cb_699c9b952e2a1fe944725240fc2a4f677435298417965424",
+        "title": "让 AI 稳定交付全栈项目：我的 Claude Code + OpenSpec + Superpowers 三件套实战-知乎专栏",
+        "parent_folder_id": "7435298417965424",
+        "tags": [],
+        "media_type": 2
+      },
+      {
+        "media_id": "pdf_8518e6c23c3fdd4a0bd762e3d5bfa0cb_5db2a8ef92248522c3afcf99545096997435298417965424",
+        "title": "这就是ChatGPT.pdf",
+        "parent_folder_id": "7435298417965424",
+        "tags": [],
+        "media_type": 1
+      },
+      {
+        "media_id": "pdf_8518e6c23c3fdd4a0bd762e3d5bfa0cb_3d69f8e7353e9e9818373460d78bda677435298417965424",
+        "title": "openclaw 使用记录.pdf",
+        "parent_folder_id": "7435298417965424",
+        "tags": [],
+        "media_type": 1
+      },
+      {
+        "media_id": "weburl_8518e6c23c3fdd4a0bd762e3d5bfa0cb_d725dc470d4645df4c60a2b48e84055f7435298417965424",
+        "title": "Claude Code 新增 /loop 命令：把定时任务搬进会话里-知乎专栏",
+        "parent_folder_id": "7435298417965424",
+        "tags": [],
+        "media_type": 2
+      },
+      {
+        "media_id": "pdf_8518e6c23c3fdd4a0bd762e3d5bfa0cb_40a0eaaa72f295c8fccd865040bc437f7435298417965424",
+        "title": "The-Complete-Guide-to-Building-Skill-for-Claude.pdf",
+        "parent_folder_id": "7435298417965424",
+        "tags": [],
+        "media_type": 1
+      },
+      {
+        "media_id": "pdf_8518e6c23c3fdd4a0bd762e3d5bfa0cb_75bc9921d7f07285ca8f7e37c98d541a7435298417965424",
+        "title": "The-Complete-Guide-to-Building-Skill-for-Claude.no_watermark.zh-CN.pdf",
+        "parent_folder_id": "7435298417965424",
+        "tags": [],
+        "media_type": 1
+      },
+      {
+        "media_id": "weburl_8518e6c23c3fdd4a0bd762e3d5bfa0cb_f2e8e657eff0ddb1a5210248cdfea8957435298417965424",
+        "title": "Claude Code 设计思想-知乎专栏",
+        "parent_folder_id": "7435298417965424",
+        "tags": [],
+        "media_type": 2
+      },
+      {
+        "media_id": "weburl_8518e6c23c3fdd4a0bd762e3d5bfa0cb_42d9ca41ba3bb80f1e3bae21d4bd4cff7435298417965424",
+        "title": "eval + builtins：比 tools 更好的 Agent 架构范式-知乎专栏",
+        "parent_folder_id": "7435298417965424",
+        "tags": [],
+        "media_type": 2
+      },
+      {
+        "media_id": "wechatarticle_8518e6c23c3fdd4a0bd762e3d5bfa0cb_524236d5dc0c398a490c43caf268728c7435298417965424",
+        "title": "我花了两天,把那个会自学的 Hermes Agent 跑通了",
+        "parent_folder_id": "7435298417965424",
+        "tags": [],
+        "media_type": 6
+      },
+      {
+        "media_id": "wechatarticle_8518e6c23c3fdd4a0bd762e3d5bfa0cb_dbf14cf96ffde41ba58ccdffd2a31c7d7435298417965424",
+        "title": "Harness 刚火，可能就要成为过去时了｜Hao好聊论文",
+        "parent_folder_id": "7435298417965424",
+        "tags": [],
+        "media_type": 6
+      },
+      {
+        "media_id": "weburl_8518e6c23c3fdd4a0bd762e3d5bfa0cb_cece43d75662f518b9bea7f22b1b319c7435298417965424",
+        "title": "My AI Adoption Journey-Mitchell Hashimoto",
+        "parent_folder_id": "7435298417965424",
+        "tags": [],
+        "media_type": 2
+      },
+      {
+        "media_id": "wechatarticle_8518e6c23c3fdd4a0bd762e3d5bfa0cb_0a9bc9825534c5a0059fe46ad74331cf7435298417965424",
+        "title": "Karpathy知识库「LLM Wiki」火爆了，全网围观讨论",
+        "parent_folder_id": "7435298417965424",
+        "tags": [],
+        "media_type": 6
+      },
+      {
+        "media_id": "weburl_8518e6c23c3fdd4a0bd762e3d5bfa0cb_25dbd3ea6289ebf3f2b7b7f6b019f1627435298417965424",
+        "title": "Andrej Karpathy 的 Claude Code 使用原则，被整理成了 CLAUDE.md | andrej-karpathy-skills，9.5k 星，…-知乎想法",
+        "parent_folder_id": "7435298417965424",
+        "tags": [],
+        "media_type": 2
+      },
+      {
+        "media_id": "weburl_8518e6c23c3fdd4a0bd762e3d5bfa0cb_aee836fb52590bc1678a7ee7b590ac997435298417965424",
+        "title": "你是在哪一刻感觉到AI时代真的到来了？ - Yixiao Huang 的回答-知乎回答",
+        "parent_folder_id": "7435298417965424",
+        "tags": [],
+        "media_type": 2
+      },
+      {
+        "media_id": "wechatarticle_8518e6c23c3fdd4a0bd762e3d5bfa0cb_46326ae7c6be10864ad4bdaa66a799147435298417965424",
+        "title": "Karpathy 亲手终结了RAG的草莽时代",
+        "parent_folder_id": "7435298417965424",
+        "tags": [],
+        "media_type": 6
+      },
+      {
+        "media_id": "weburl_8518e6c23c3fdd4a0bd762e3d5bfa0cb_6911aedf6a2038c1815dc331ede7ff8b7435298417965424",
+        "title": "谷歌新出的 DESIGN.md，可能是今年对大家最友好的东西-知乎专栏",
+        "parent_folder_id": "7435298417965424",
+        "tags": [],
+        "media_type": 2
+      },
+      {
+        "media_id": "weburl_8518e6c23c3fdd4a0bd762e3d5bfa0cb_29934c16938989407217d1837badf6957435298417965424",
+        "title": "Claude Code + OpenSpec + Superpowers：AI 协同开发实战指南-知乎专栏",
+        "parent_folder_id": "7435298417965424",
+        "tags": [],
+        "media_type": 2
+      },
+      {
+        "media_id": "weburl_8518e6c23c3fdd4a0bd762e3d5bfa0cb_be58b591be9af15a818acbd4f3d523bf7435298417965424",
+        "title": "AI First：把自己从执行者变成调度者-知乎专栏",
+        "parent_folder_id": "7435298417965424",
+        "tags": [],
+        "media_type": 2
+      },
+      {
+        "media_id": "weburl_8518e6c23c3fdd4a0bd762e3d5bfa0cb_809ad8a84c114bfccf6aa1518441c7137435298417965424",
+        "title": "人工智能（AI）真的会带来大规模失业吗？ - riba2534 的回答-知乎回答",
+        "parent_folder_id": "7435298417965424",
+        "tags": [],
+        "media_type": 2
+      },
+      {
+        "media_id": "weburl_8518e6c23c3fdd4a0bd762e3d5bfa0cb_b609132da45ef66523b2a40fb241951f7435298417965424",
+        "title": "Checking your browser...",
+        "parent_folder_id": "7435298417965424",
+        "tags": [],
+        "media_type": 2
+      },
+      {
+        "media_id": "weburl_8518e6c23c3fdd4a0bd762e3d5bfa0cb_ea6aa38bf0faa244b6c95605185da9377435298417965424",
+        "title": "Harness Engineering：当工程师不再写代码-知乎专栏",
+        "parent_folder_id": "7435298417965424",
+        "tags": [],
+        "media_type": 2
+      },
+      {
+        "media_id": "weburl_8518e6c23c3fdd4a0bd762e3d5bfa0cb_87b29765fa2a5a5a23c3f67d5aa3083d7435298417965424",
+        "title": "Harness Engineering的本质是什么？ - Chaspark茶思屋 的回答-知乎回答",
+        "parent_folder_id": "7435298417965424",
+        "tags": [],
+        "media_type": 2
+      },
+      {
+        "media_id": "weburl_8518e6c23c3fdd4a0bd762e3d5bfa0cb_1ea17641c6c7cdbb4e471c862a37a96b7435298417965424",
+        "title": "Pretext：值得关注的文本排版引擎 - guangzan",
+        "parent_folder_id": "7435298417965424",
+        "tags": [],
+        "media_type": 2
+      },
+      {
+        "media_id": "weburl_8518e6c23c3fdd4a0bd762e3d5bfa0cb_4a7466b77973c2853e2dc63c7a420fae7435298417965424",
+        "title": "AutoResearch by Karpathy and the Future of Autonomous AI Research-MLJAR",
+        "parent_folder_id": "7435298417965424",
+        "tags": [],
+        "media_type": 2
+      },
+      {
+        "media_id": "weburl_8518e6c23c3fdd4a0bd762e3d5bfa0cb_0d778a36adb02326ca787a381b86bc237435298417965424",
+        "title": "Andrej Karpathy's Autoresearch: AI Agents Running Experiments Overnight-Andrej Karpathy's Autoresearch: AI Agents Running Experiments Overnight",
+        "parent_folder_id": "7435298417965424",
+        "tags": [],
+        "media_type": 2
+      },
+      {
+        "media_id": "weburl_8518e6c23c3fdd4a0bd762e3d5bfa0cb_5bb39a1b315b2a4b327d1f23c19299e07435298417965424",
+        "title": "Harness Engineering的本质是什么？ - Allen 的回答-知乎回答",
+        "parent_folder_id": "7435298417965424",
+        "tags": [],
+        "media_type": 2
+      },
+      {
+        "media_id": "note_8518e6c23c3fdd4a0bd762e3d5bfa0cb_74443938626333277435298417965424",
+        "title": "AI时代高维出路：从执行者到统摄者的哲学跃迁与组织共生",
+        "parent_folder_id": "7435298417965424",
+        "tags": [],
+        "media_type": 11
+      },
+      {
+        "media_id": "note_8518e6c23c3fdd4a0bd762e3d5bfa0cb_74440308414262437435298417965424",
+        "title": "Harness design for long-runnin...",
+        "parent_folder_id": "7435298417965424",
+        "tags": [],
+        "media_type": 11
+      },
+      {
+        "media_id": "weburl_8518e6c23c3fdd4a0bd762e3d5bfa0cb_916d427ce340975022fd808d7d8933b37435298417965424",
+        "title": "GitHub - bigdatasciencegroup/bytedance-deer-flow: An open-source SuperAgent harness that researches, codes, and creates. With the help of sandboxes, memories, tools, skill, subagents and message gateway, it handles different levels of tasks that could take minutes to hours.-GitHub",
+        "parent_folder_id": "7435298417965424",
+        "tags": [],
+        "media_type": 2
+      },
+      {
+        "media_id": "weburl_8518e6c23c3fdd4a0bd762e3d5bfa0cb_197259c49ebaa1736e4aeacab8ef38447435298417965424",
+        "title": "GitHub - deepflowio/deepflow: eBPF Observability - Distributed Tracing and Profiling-GitHub",
+        "parent_folder_id": "7435298417965424",
+        "tags": [],
+        "media_type": 2
+      },
+      {
+        "media_id": "weburl_8518e6c23c3fdd4a0bd762e3d5bfa0cb_182c08e20538d920d6ea0ed21e596c197435298417965424",
+        "title": "Harness capabilities - Docs by LangChain-Docs by LangChain",
+        "parent_folder_id": "7435298417965424",
+        "tags": [],
+        "media_type": 2
+      },
+      {
+        "media_id": "pdf_8518e6c23c3fdd4a0bd762e3d5bfa0cb_7cb2a6726ef6fa8b0d56e7ca6e18daf97435298417965424",
+        "title": "AI Agents in Action.pdf",
+        "parent_folder_id": "7435298417965424",
+        "tags": [],
+        "media_type": 1
+      },
+      {
+        "media_id": "pdf_8518e6c23c3fdd4a0bd762e3d5bfa0cb_208d886c89b16c90d088ea4b278b1b457435298417965424",
+        "title": "Agentic Design Patterns A Hands-On Guide to Building Intelligent Systems.pdf",
+        "parent_folder_id": "7435298417965424",
+        "tags": [],
+        "media_type": 1
+      },
+      {
+        "media_id": "pdf_8518e6c23c3fdd4a0bd762e3d5bfa0cb_12bc51ecdcbcdcc9d1b6000a099529107435298417965424",
+        "title": "Building Embodied AI Systems The Agents, the Architecture Principles, Challenges, and Application Domains.pdf",
+        "parent_folder_id": "7435298417965424",
+        "tags": [],
+        "media_type": 1
+      },
+      {
+        "media_id": "wechatarticle_8518e6c23c3fdd4a0bd762e3d5bfa0cb_0634bc22e2e1c7793a3901e1d9c1317d7435298417965424",
+        "title": "Claude Code作者私藏13条心法，你就是自己的千军万马",
+        "parent_folder_id": "7435298417965424",
+        "tags": [],
+        "media_type": 6
+      },
+      {
+        "media_id": "weburl_8518e6c23c3fdd4a0bd762e3d5bfa0cb_993f8beeea2ca28029107fe68703acd37435298417965424",
+        "title": "GitHub - jnMetaCode/agency-agents-zh: 180 个即插即用的 AI 专家人设（中文版）— 覆盖 17 个部门，支持 Claude Code / OpenClaw / Cursor / Trae 等 11 种工具 | Chinese AI agent personas for dev tools-GitHub",
+        "parent_folder_id": "7435298417965424",
+        "tags": [],
+        "media_type": 2
+      },
+      {
+        "media_id": "wechatarticle_8518e6c23c3fdd4a0bd762e3d5bfa0cb_8a8f76681c97dd3f13a6a56e520b0dc47435298417965424",
+        "title": "给你的OpenClaw装上186个AI专家人格，小龙虾直接起飞",
+        "parent_folder_id": "7435298417965424",
+        "tags": [],
+        "media_type": 6
+      },
+      {
+        "media_id": "pdf_8518e6c23c3fdd4a0bd762e3d5bfa0cb_5b59de39e483b69f8f3d3a34e45bab967435298417965424",
+        "title": "2307.03172v3.pdf",
+        "parent_folder_id": "7435298417965424",
+        "tags": [],
+        "media_type": 1
+      },
+      {
+        "media_id": "weburl_8518e6c23c3fdd4a0bd762e3d5bfa0cb_7af8f2413dd5b2b3a60c6673b07f2bb37435298417965424",
+        "title": "Agent Harness 架构解析：构建生产级 AI 系统-Enterprise Unified LLM API Gateway (One Key for All Models) | n1n.ai",
+        "parent_folder_id": "7435298417965424",
+        "tags": [],
+        "media_type": 2
+      },
+      {
+        "media_id": "note_8518e6c23c3fdd4a0bd762e3d5bfa0cb_74396738235970837435298417965424",
+        "title": "AI工程系统的三个层次",
+        "parent_folder_id": "7435298417965424",
+        "tags": [],
+        "media_type": 11
+      },
+      {
+        "media_id": "weburl_8518e6c23c3fdd4a0bd762e3d5bfa0cb_90f003bf2fd5e03ce5d45a2fdb20c0a87435298417965424",
+        "title": "一人公司内容创业神器：baoyu-skills 实战指南-知乎专栏",
+        "parent_folder_id": "7435298417965424",
+        "tags": [],
+        "media_type": 2
+      },
+      {
+        "media_id": "weburl_8518e6c23c3fdd4a0bd762e3d5bfa0cb_b62c39f57eb1674dd2f6c20c3193ebde7435298417965424",
+        "title": "Hello Claw",
+        "parent_folder_id": "7435298417965424",
+        "tags": [],
+        "media_type": 2
+      },
+      {
+        "media_id": "weburl_8518e6c23c3fdd4a0bd762e3d5bfa0cb_4d34a7a41f329406cf6eaef55bf3d6e87435298417965424",
+        "title": "这个SKILL打通了AI写公众号文章的最后一公里",
+        "parent_folder_id": "7435298417965424",
+        "tags": [],
+        "media_type": 2
+      },
+      {
+        "media_id": "weburl_8518e6c23c3fdd4a0bd762e3d5bfa0cb_a1bf6c60d879242a78135550209868797435298417965424",
+        "title": "知乎 - 知乎",
+        "parent_folder_id": "7435298417965424",
+        "tags": [],
+        "media_type": 2
+      },
+      {
+        "media_id": "wechatarticle_8518e6c23c3fdd4a0bd762e3d5bfa0cb_ed50d052f18fa8313c55123bd11cea017435298417965424",
+        "title": "Martin Fowler深度访谈：软件工程正迎来 40 年来最猛烈的一次地震",
+        "parent_folder_id": "7435298417965424",
+        "tags": [],
+        "media_type": 6
+      },
+      {
+        "media_id": "weburl_8518e6c23c3fdd4a0bd762e3d5bfa0cb_bfcc002aaa53bb5e41ae096d59e69cdf7435298417965424",
+        "title": "OpenClaw接入企业微信智能机器人",
+        "parent_folder_id": "7435298417965424",
+        "tags": [],
+        "media_type": 2
+      },
+      {
+        "media_id": "weburl_8518e6c23c3fdd4a0bd762e3d5bfa0cb_e37e58fa85e064af8c69965fde1630267435298417965424",
+        "title": "GitHub - davidYichengWei/agentic-engineering-framework: 开箱即用、可按项目定制的 AI Coding Agent Skills 框架：提供通用 Workflow、可扩展的项目私有知识、自我学习闭环和问题排查能力，适配任意技术栈和工程场景。兼容主流 Coding Agent。-GitHub",
+        "parent_folder_id": "7435298417965424",
+        "tags": [],
+        "media_type": 2
+      },
+      {
+        "media_id": "note_8518e6c23c3fdd4a0bd762e3d5bfa0cb_74353023270556387435298417965424",
+        "title": "第11章 高级配置（多模型切换/成本优化/性能调优）",
+        "parent_folder_id": "7435298417965424",
+        "tags": [],
+        "media_type": 11
+      },
+      {
+        "media_id": "note_8518e6c23c3fdd4a0bd762e3d5bfa0cb_74353021173400287435298417965424",
+        "title": "第10章 API服务集成（绘图/Notion/视频/语音）",
+        "parent_folder_id": "7435298417965424",
+        "tags": [],
+        "media_type": 11
+      },
+      {
+        "media_id": "note_8518e6c23c3fdd4a0bd762e3d5bfa0cb_74353017440235427435298417965424",
+        "title": "第9章 多平台集成",
+        "parent_folder_id": "7435298417965424",
+        "tags": [],
+        "media_type": 11
+      },
+      {
+        "media_id": "note_8518e6c23c3fdd4a0bd762e3d5bfa0cb_74353014546428167435298417965424",
+        "title": "第8章 Skills扩展：让AI从\"能说\"到\"能做\"",
+        "parent_folder_id": "7435298417965424",
+        "tags": [],
+        "media_type": 11
+      },
+      {
+        "media_id": "note_8518e6c23c3fdd4a0bd762e3d5bfa0cb_74353004228425517435298417965424",
+        "title": "第5章 知识库管理",
+        "parent_folder_id": "7435298417965424",
+        "tags": [],
+        "media_type": 11
+      },
+      {
+        "media_id": "note_8518e6c23c3fdd4a0bd762e3d5bfa0cb_74353000663036227435298417965424",
+        "title": "第4章：本地文件管理",
+        "parent_folder_id": "7435298417965424",
+        "tags": [],
+        "media_type": 11
+      },
+      {
+        "media_id": "note_8518e6c23c3fdd4a0bd762e3d5bfa0cb_74352998146675467435298417965424",
+        "title": "第3章：快速上手",
+        "parent_folder_id": "7435298417965424",
+        "tags": [],
+        "media_type": 11
+      },
+      {
+        "media_id": "note_8518e6c23c3fdd4a0bd762e3d5bfa0cb_74352985060213877435298417965424",
+        "title": "三层记忆系统",
+        "parent_folder_id": "7435298417965424",
+        "tags": [],
+        "media_type": 11
+      }
+    ],
+    "pages": 2,
+    "stopReason": "END",
+    "scope": "ROOT_ONLY; folders not recursively enumerated"
+  },
+  {
+    "knowledgeBase": "Wilson的知识库",
+    "query": "智能体",
+    "entries": [
+      {
+        "media_id": "folder_7497578996312202",
+        "title": "🤖 AI Agent与编程智能体",
+        "parent_folder_id": "0019d010dc0025f8",
+        "highlight_content": "",
+        "media_type": 99
+      },
+      {
+        "media_id": "wechatarticle_8189f7408df6364eae772ea1fe3507df_297919fc0b9da17a6d6075f44a82e27b",
+        "title": "构建多智能体RAG应用程序：全面指南！",
+        "parent_folder_id": "folder_7497578996312202",
+        "highlight_content": "",
+        "media_type": 6
+      },
+      {
+        "media_id": "wechatarticle_8189f7408df6364eae772ea1fe3507df_8bb84fef8b2a7105fc7cb5ad19ecfc41",
+        "title": "LangMem 发布：任何人都能轻松构建智能体记忆！",
+        "parent_folder_id": "folder_7497578996312202",
+        "highlight_content": "",
+        "media_type": 6
+      },
+      {
+        "media_id": "wechatarticle_8189f7408df6364eae772ea1fe3507df_f51f454f62d259ef18da3357d623e374",
+        "title": "一键部署 Dify + MCP Server，高效开发 AI 智能体应用",
+        "parent_folder_id": "folder_7497578996312202",
+        "highlight_content": "",
+        "media_type": 6
+      },
+      {
+        "media_id": "wechatarticle_8189f7408df6364eae772ea1fe3507df_8fba19aeb902c24a2ba5a39cd6de47a6",
+        "title": "CODESIM：多智能体代码生成与问题解决的新思路",
+        "parent_folder_id": "folder_7497578996312202",
+        "highlight_content": "",
+        "media_type": 6
+      },
+      {
+        "media_id": "wechatarticle_8189f7408df6364eae772ea1fe3507df_a1d24606fb06c88a5bfe172ddb4129d3",
+        "title": "认知篇五——人机交互&小白上手Ai可以直接套用的提示词框架（下*智能体快捷生成与倒推提示词）",
+        "parent_folder_id": "folder_7497578996312202",
+        "highlight_content": "",
+        "media_type": 6
+      }
+    ],
+    "pages": 1,
+    "stopReason": "SEARCH_RESPONSE_NO_PAGINATION_FIELDS; completeness not established"
+  },
+  {
+    "knowledgeBase": "Wilson的知识库",
+    "query": "记忆",
+    "entries": [
+      {
+        "media_id": "wechatarticle_8189f7408df6364eae772ea1fe3507df_d7303b716a5b6671f7763e22eea523ec",
+        "title": "企业AI对话记忆为什么不能只存Redis？短期、摘要与长期记忆如何设计",
+        "parent_folder_id": "folder_7497578996312202",
+        "highlight_content": "",
+        "media_type": 6
+      },
+      {
+        "media_id": "wechatarticle_8189f7408df6364eae772ea1fe3507df_ec45b27a83b1b110264df0b6b04b9f9a",
+        "title": "拥抱 deepseek 的 AI 框架 deepseekers中记忆模块设计(2)—长短期记忆的设计",
+        "parent_folder_id": "folder_7497578996312202",
+        "highlight_content": "",
+        "media_type": 6
+      },
+      {
+        "media_id": "wechatarticle_8189f7408df6364eae772ea1fe3507df_e5731b37893a37adf643309f287836c7",
+        "title": "升级! DeepSeek有了记忆功能!",
+        "parent_folder_id": "folder_7497578996312202",
+        "highlight_content": "",
+        "media_type": 6
+      },
+      {
+        "media_id": "wechatarticle_8189f7408df6364eae772ea1fe3507df_ab0fe52d142a355c4a389401d280ae01",
+        "title": "deepseekers AI Agent 中记忆模块设计(1)—程序性记忆，让 Agent 对于一些高频问题无需思考，自动完成",
+        "parent_folder_id": "folder_7497578996312202",
+        "highlight_content": "",
+        "media_type": 6
+      },
+      {
+        "media_id": "wechatarticle_8189f7408df6364eae772ea1fe3507df_8bb84fef8b2a7105fc7cb5ad19ecfc41",
+        "title": "LangMem 发布：任何人都能轻松构建智能体记忆！",
+        "parent_folder_id": "folder_7497578996312202",
+        "highlight_content": "",
+        "media_type": 6
+      },
+      {
+        "media_id": "wechatarticle_8189f7408df6364eae772ea1fe3507df_bada7c82e4bad2fe2e1bacd804b45c78",
+        "title": "Python + DeepSeek：打造拥有记忆的AI 智能助手，让效率提升100倍！",
+        "parent_folder_id": "folder_7497578996312202",
+        "highlight_content": "",
+        "media_type": 6
+      },
+      {
+        "media_id": "wechatarticle_8189f7408df6364eae772ea1fe3507df_9a7b17143b5f72403505207f328c9053",
+        "title": "我做了一个会记忆、会复盘、会进化的店铺运营 Agent",
+        "parent_folder_id": "folder_7497578996312202",
+        "highlight_content": "",
+        "media_type": 6
+      },
+      {
+        "media_id": "wechatarticle_8189f7408df6364eae772ea1fe3507df_3163a6f2deb1d4b667affe7b471fa37b",
+        "title": "Dify 保姆级教程之：零代码打造个性化记忆助手",
+        "parent_folder_id": "folder_7497578996312202",
+        "highlight_content": "",
+        "media_type": 6
+      },
+      {
+        "media_id": "wechatarticle_8189f7408df6364eae772ea1fe3507df_4ad3adca309d96a74c3dc2174befb8f6",
+        "title": "我想要一个AI代码管家：当软件开发进入“记忆时代”",
+        "parent_folder_id": "folder_7497578996312202",
+        "highlight_content": "",
+        "media_type": 6
+      },
+      {
+        "media_id": "wechatarticle_8189f7408df6364eae772ea1fe3507df_65768c403d1b1442f3e29cf196d7a41c",
+        "title": "AI 编程新潮流：我和 Cursor 编辑器的长期记忆大作战",
+        "parent_folder_id": "folder_7497578996312202",
+        "highlight_content": "",
+        "media_type": 6
+      },
+      {
+        "media_id": "wechatarticle_8189f7408df6364eae772ea1fe3507df_ce6e0c7e62afac195e87b65f95e9ddd2",
+        "title": "计算机小白学习编程第48天的感受：真实感受 AI 连续记忆的能力与编程基础学习的重要性",
+        "parent_folder_id": "folder_7497578996312202",
+        "highlight_content": "",
+        "media_type": 6
+      }
+    ],
+    "pages": 1,
+    "stopReason": "SEARCH_RESPONSE_NO_PAGINATION_FIELDS; completeness not established"
+  },
+  {
+    "knowledgeBase": "AI Agent Coding知识库",
+    "query": "Harness",
+    "entries": [
+      {
+        "media_id": "wechatarticle_0ce7f07d83516512247a723823ac9ad6_ae5619605069921b18846dfccc2b93bb7447205136853569",
+        "title": "Meta-Harness：让AI 改进自己的Harness",
+        "parent_folder_id": "7447205136853569",
+        "highlight_content": "",
+        "media_type": 6
+      },
+      {
+        "media_id": "wechatarticle_0ce7f07d83516512247a723823ac9ad6_4835cb5d4b520656d5e79a1c31f9cc267447205136853569",
+        "title": "开箱即用的AI Harness工程：Wow-harness开源啦！",
+        "parent_folder_id": "7447205136853569",
+        "highlight_content": "",
+        "media_type": 6
+      },
+      {
+        "media_id": "wechatarticle_0ce7f07d83516512247a723823ac9ad6_b849bf3a3af14725b79c1e9b019e62ac7447205136853569",
+        "title": "刚刚，一篇最全Agent Harness综述来了！",
+        "parent_folder_id": "7447205136853569",
+        "highlight_content": "",
+        "media_type": 6
+      },
+      {
+        "media_id": "wechatarticle_0ce7f07d83516512247a723823ac9ad6_daca68aaca5648d6746493bb2db59f367447205136853569",
+        "title": "大家都在讲 Harness，但它到底该怎么理解",
+        "parent_folder_id": "7447205136853569",
+        "highlight_content": "",
+        "media_type": 6
+      },
+      {
+        "media_id": "wechatarticle_0ce7f07d83516512247a723823ac9ad6_a03aa4893fd7db88881decb62b78d1cb7447205136853569",
+        "title": "OpenAI团队编程Agent的Harness工程实践",
+        "parent_folder_id": "7447205136853569",
+        "highlight_content": "",
+        "media_type": 6
+      },
+      {
+        "media_id": "wechatarticle_0ce7f07d83516512247a723823ac9ad6_644ca40a3e54edc392480f558b1cfa3b7447205136853569",
+        "title": "AI 不缺智商缺纪律：我的 Harness 工程化实践",
+        "parent_folder_id": "7447205136853569",
+        "highlight_content": "",
+        "media_type": 6
+      },
+      {
+        "media_id": "wechatarticle_0ce7f07d83516512247a723823ac9ad6_6f7845e9ebc1e8f2dde6f4d84bf20bf57447205136853569",
+        "title": "Anthropic 官方 Harness 发布：全面解读 Managed Agents",
+        "parent_folder_id": "7447205136853569",
+        "highlight_content": "",
+        "media_type": 6
+      },
+      {
+        "media_id": "wechatarticle_0ce7f07d83516512247a723823ac9ad6_05344be7414693d8447ea3dfe13144547447205136853569",
+        "title": "AI 写完代码以后，需要一个 Verification Harness",
+        "parent_folder_id": "7447205136853569",
+        "highlight_content": "",
+        "media_type": 6
+      },
+      {
+        "media_id": "wechatarticle_0ce7f07d83516512247a723823ac9ad6_0ed3e73ae3766e8750dc4a80d9c89d727447205136853569",
+        "title": "一文讲透如何构建Harness——六大组件全解析",
+        "parent_folder_id": "7447205136853569",
+        "highlight_content": "",
+        "media_type": 6
+      },
+      {
+        "media_id": "wechatarticle_0ce7f07d83516512247a723823ac9ad6_b870f3eb47473f40725cf2ba644f266d7447205136853569",
+        "title": "Harness Engineering在硅谷爆火，一文带你搞懂！",
+        "parent_folder_id": "7447205136853569",
+        "highlight_content": "",
+        "media_type": 6
+      },
+      {
+        "media_id": "wechatarticle_0ce7f07d83516512247a723823ac9ad6_ee71427b6476f2aa8d69e38f17d5f1e37447205136853569",
+        "title": "代码从失控到可控 | 阿里云Qoder开源Better Harness",
+        "parent_folder_id": "7447205136853569",
+        "highlight_content": "",
+        "media_type": 6
+      },
+      {
+        "media_id": "wechatarticle_e5315c762097466743dc1bc435bd4178_375d05c8c1223497a4102fa870e230607447205136853569",
+        "title": "从 Rule、Spec 到 Harness：AI Coding 的渐进式建设路径",
+        "parent_folder_id": "7447205136853569",
+        "highlight_content": "",
+        "media_type": 6
+      },
+      {
+        "media_id": "wechatarticle_0ce7f07d83516512247a723823ac9ad6_065ce3fd7b103cb48338bd420bfccbf37447205136853569",
+        "title": "万字干货：理解 Harness Engineering，看这一篇就够了",
+        "parent_folder_id": "7447205136853569",
+        "highlight_content": "",
+        "media_type": 6
+      },
+      {
+        "media_id": "wechatarticle_e5315c762097466743dc1bc435bd4178_fd31a43ce494e9e2211584c58d28ba9d7447205136853569",
+        "title": "3天破5K stars！ OpenHarness：港大团队面向开放式智能体系统开源的轻量级 Agent Harness 框架",
+        "parent_folder_id": "7447205136853569",
+        "highlight_content": "",
+        "media_type": 6
+      },
+      {
+        "media_id": "wechatarticle_0ce7f07d83516512247a723823ac9ad6_a6a39c012b97024b3ec19f50df364fe57447205136853569",
+        "title": "Harness 工程可视化：在 Vibe Coding 中重建工程可控性",
+        "parent_folder_id": "7447205136853569",
+        "highlight_content": "",
+        "media_type": 6
+      },
+      {
+        "media_id": "wechatarticle_0ce7f07d83516512247a723823ac9ad6_ad8f35e4f5da116dff0b57aec82362c77447205136853569",
+        "title": "Harness项目推荐丨CLI-Anything 、CrewAI、LangGraph、EigenFlux....",
+        "parent_folder_id": "7447205136853569",
+        "highlight_content": "",
+        "media_type": 6
+      },
+      {
+        "media_id": "wechatarticle_0ce7f07d83516512247a723823ac9ad6_fcfe1f71620cb6c7e68b6805ad1c87a07447205136853569",
+        "title": "驾驭AI Coding：一份面向团队的Harness Engineering落地规范",
+        "parent_folder_id": "7447205136853569",
+        "highlight_content": "",
+        "media_type": 6
+      },
+      {
+        "media_id": "wechatarticle_0ce7f07d83516512247a723823ac9ad6_2911e30b206dadb6f6aae248346029d77447205136853569",
+        "title": "OpenSpec、Superpowers 和 Harness：AI 工程化开发的三层拼图",
+        "parent_folder_id": "7447205136853569",
+        "highlight_content": "",
+        "media_type": 6
+      },
+      {
+        "media_id": "wechatarticle_0ce7f07d83516512247a723823ac9ad6_ce5c0541c4d5277c66bba892bc7af2027447205136853569",
+        "title": "一文看懂 Harness engineering：智能体时代的 AI 编程驾驭之道",
+        "parent_folder_id": "7447205136853569",
+        "highlight_content": "",
+        "media_type": 6
+      },
+      {
+        "media_id": "wechatarticle_0ce7f07d83516512247a723823ac9ad6_36190f9e13da8d95c486c8808cf8c78a7447205136853569",
+        "title": "Harness 工程 Skill：使用 Entrix 技能开始你的代码熵治理",
+        "parent_folder_id": "7447205136853569",
+        "highlight_content": "",
+        "media_type": 6
+      },
+      {
+        "media_id": "wechatarticle_0ce7f07d83516512247a723823ac9ad6_f80d8f177d92454031acd3405bb6a0537447205136853569",
+        "title": "腾讯开源Harness管理工具，WorkBuddy和Codex共享Skill和规则！",
+        "parent_folder_id": "7447205136853569",
+        "highlight_content": "",
+        "media_type": 6
+      },
+      {
+        "media_id": "wechatarticle_e5315c762097466743dc1bc435bd4178_2ca79e5c8619be0c78c19083f34a54307447205136853569",
+        "title": "【万字】拆完 Claude Code 51万行源码后，我才明白什么叫 Harness",
+        "parent_folder_id": "7447205136853569",
+        "highlight_content": "",
+        "media_type": 6
+      },
+      {
+        "media_id": "wechatarticle_0ce7f07d83516512247a723823ac9ad6_5eb11e0c77015be6f9db3028467ada017447205136853569",
+        "title": "Anthropic说：网传的Harness思路过时了，做这3件事就够！",
+        "parent_folder_id": "7447205136853569",
+        "highlight_content": "",
+        "media_type": 6
+      },
+      {
+        "media_id": "wechatarticle_0ce7f07d83516512247a723823ac9ad6_0b2fc782f253527f1b706b270557d60f7447205136853569",
+        "title": "Harness Engineering 和 SDD：AI工程化时代的双轮驱动，还是规范冲突？",
+        "parent_folder_id": "7447205136853569",
+        "highlight_content": "",
+        "media_type": 6
+      },
+      {
+        "media_id": "wechatarticle_0ce7f07d83516512247a723823ac9ad6_115e5bbde5ded3ad15f8a8857fd8f8f57447205136853569",
+        "title": "Harness 到底是什么：一匹马、一辆车、一个 AI 时代的操作系统",
+        "parent_folder_id": "7447205136853569",
+        "highlight_content": "",
+        "media_type": 6
+      },
+      {
+        "media_id": "wechatarticle_0ce7f07d83516512247a723823ac9ad6_d2efca6a07aa97d24cfa0b7ee19f1f087447205136853569",
+        "title": "Brainstorming 之后，还缺什么？从 Superpowers 到 Harness Engineering 的一次观察",
+        "parent_folder_id": "7447205136853569",
+        "highlight_content": "",
+        "media_type": 6
+      },
+      {
+        "media_id": "wechatarticle_0ce7f07d83516512247a723823ac9ad6_5af65e103605fdec021b6fa9eb370c027447205136853569",
+        "title": "深度解析 OpenClaw 在 Prompt / Context / Harness 三个维度中的设计哲学与实践",
+        "parent_folder_id": "7447205136853569",
+        "highlight_content": "",
+        "media_type": 6
+      },
+      {
+        "media_id": "wechatarticle_0ce7f07d83516512247a723823ac9ad6_6e75eb9f20f03b7a7ae105660c0a54177447205136853569",
+        "title": "拆解京东海博 AI-Native 落地保障：Harness、双 Loop、知识库与技能自主迭代实践",
+        "parent_folder_id": "7447205136853569",
+        "highlight_content": "",
+        "media_type": 6
+      },
+      {
+        "media_id": "wechatarticle_e5315c762097466743dc1bc435bd4178_2b93aebe901e49be67f29237c28cb7fe7447205136853569",
+        "title": "重磅！Anthropic又一个平台级产品炸场:Harness难题一次性解决，把Agent宠物变成牲口",
+        "parent_folder_id": "7447205136853569",
+        "highlight_content": "",
+        "media_type": 6
+      },
+      {
+        "media_id": "wechatarticle_0ce7f07d83516512247a723823ac9ad6_9b733de784aa7147266f80d789bac4097447205136853569",
+        "title": "当自治阈值被跨越：Agent跑通开发闭环-openai《Harness engineering: leveraging Codex in an agent-first world》⑥",
+        "parent_folder_id": "7447205136853569",
+        "highlight_content": "",
+        "media_type": 6
+      },
+      {
+        "media_id": "wechatarticle_0ce7f07d83516512247a723823ac9ad6_b1df5da94e7c4ca59e2a5de5171ac71f7447205136853569",
+        "title": "6 个代表性 AI 编程 Harness 工程化框架拆解：OpenSpec、Superpowers、GSD、OMC、ECC、Trellis 怎么选？",
+        "parent_folder_id": "7447205136853569",
+        "highlight_content": "",
+        "media_type": 6
+      },
+      {
+        "media_id": "wechatarticle_0ce7f07d83516512247a723823ac9ad6_d3468bd5f78e20156429e167eafd64037447205136853569",
+        "title": "工程师不再写代码，而是为agent搭建工作环境：《Harness engineering: leveraging Codex in an agent-first world》①",
+        "parent_folder_id": "7447205136853569",
+        "highlight_content": "",
+        "media_type": 6
+      },
+      {
+        "media_id": "wechatarticle_0ce7f07d83516512247a723823ac9ad6_ded3fced9a1f548cde4533fb01c6b0e47447205136853569",
+        "title": "如何构建你自己的 Agent Harness？超越 Cursor / Codex / Claude Code，告别一次性 SDK 选型，15 项职责独立各自可替换升级",
+        "parent_folder_id": "7447205136853569",
+        "highlight_content": "",
+        "media_type": 6
+      },
+      {
+        "media_id": "wechatarticle_e5315c762097466743dc1bc435bd4178_a7ee4a600150a303b9f3b015be8723287447205136853569",
+        "title": "Hermes Agent vs OpenHarness实测：工程实现的两条路径",
+        "parent_folder_id": "7447205136853569",
+        "highlight_content": "",
+        "media_type": 6
+      }
+    ],
+    "pages": 1,
+    "stopReason": "SEARCH_RESPONSE_NO_PAGINATION_FIELDS; completeness not established"
+  },
+  {
+    "knowledgeBase": "AI Agent Coding知识库",
+    "query": "AgentScope",
+    "entries": [],
+    "pages": 1,
+    "stopReason": "SEARCH_RESPONSE_NO_PAGINATION_FIELDS; completeness not established"
+  },
+  {
+    "knowledgeBase": "智能化软件工程",
+    "query": "上下文",
+    "entries": [
+      {
+        "media_id": "wechatarticle_8063fdd1b44b6b1cc34019dc46a067c0_c68350fc8a93bab139acac4e45444a177314120386811241",
+        "title": "Agent上下文工程Overview",
+        "parent_folder_id": "7314120386811241",
+        "highlight_content": "",
+        "media_type": 6
+      },
+      {
+        "media_id": "wechatarticle_8063fdd1b44b6b1cc34019dc46a067c0_d333459536b8328379b2df17527826f17314120386811241",
+        "title": "从上下文工程到 Harness Engineering",
+        "parent_folder_id": "folder_7353352786546831",
+        "highlight_content": "",
+        "media_type": 6
+      },
+      {
+        "media_id": "wechatarticle_8063fdd1b44b6b1cc34019dc46a067c0_bd4d94352dd9d48428aa957f1c9913647314120386811241",
+        "title": "AgentScope AutoContextMemory：告别Agent上下文焦虑",
+        "parent_folder_id": "7314120386811241",
+        "highlight_content": "",
+        "media_type": 6
+      },
+      {
+        "media_id": "wechatarticle_8063fdd1b44b6b1cc34019dc46a067c0_5886172b313d8de40ab08fa0edb50dbb7314120386811241",
+        "title": "从氛围编程到上下文工程：2025软件开发者必须理解的上下文工程革命",
+        "parent_folder_id": "7314120386811241",
+        "highlight_content": "",
+        "media_type": 6
+      },
+      {
+        "media_id": "wechatarticle_8063fdd1b44b6b1cc34019dc46a067c0_e3dbf8576913cb9eda76cbd3ff04d4c17314120386811241",
+        "title": "浅谈上下文工程｜从 Claude Code 、Manus 和 Kiro 看提示工程到上下文工程的转变",
+        "parent_folder_id": "7314120386811241",
+        "highlight_content": "",
+        "media_type": 6
+      },
+      {
+        "media_id": "wechatarticle_8063fdd1b44b6b1cc34019dc46a067c0_a99858cceefc994249ee592b0ff3fa2c7314120386811241",
+        "title": "从提示词工程到上下文工程",
+        "parent_folder_id": "folder_7353352786546831",
+        "highlight_content": "",
+        "media_type": 6
+      },
+      {
+        "media_id": "pdf_8063fdd1b44b6b1cc34019dc46a067c0_6ffade587e1f1f02111a7cb226a694167314120386811241",
+        "title": "大模型上下文工程(ContextEngineering)指南.pdf",
+        "parent_folder_id": "folder_7353352786546831",
+        "highlight_content": "",
+        "media_type": 1
+      },
+      {
+        "media_id": "wechatarticle_8063fdd1b44b6b1cc34019dc46a067c0_f383729dea19f748560846ee8b2f03ec7314120386811241",
+        "title": "今年AI界大火的「上下文工程」",
+        "parent_folder_id": "7314120386811241",
+        "highlight_content": "",
+        "media_type": 6
+      },
+      {
+        "media_id": "wechatarticle_8063fdd1b44b6b1cc34019dc46a067c0_f7109aef044f58cd83a6b595d81736737314120386811241",
+        "title": "人的本质是其上下文的总和！上海交大重磅研究预测上下文工程的4个时代",
+        "parent_folder_id": "7314120386811241",
+        "highlight_content": "",
+        "media_type": 6
+      },
+      {
+        "media_id": "wechatarticle_8063fdd1b44b6b1cc34019dc46a067c0_a3595d1d25c7fe4a9d63ee24b5a071f37314120386811241",
+        "title": "我来彻底说说AI上下文工程（上）",
+        "parent_folder_id": "folder_7331591844031445",
+        "highlight_content": "",
+        "media_type": 6
+      },
+      {
+        "media_id": "wechatarticle_8063fdd1b44b6b1cc34019dc46a067c0_91ce2c4c560beecdfa82ee59377a2a547314120386811241",
+        "title": "我来彻底说说 AI 上下文工程（下）",
+        "parent_folder_id": "folder_7331591844031445",
+        "highlight_content": "",
+        "media_type": 6
+      },
+      {
+        "media_id": "wechatarticle_8063fdd1b44b6b1cc34019dc46a067c0_311c2cbbbb45e2680e46095e63e59b317314120386811241",
+        "title": "我来彻底说说AI上下文工程（中）",
+        "parent_folder_id": "folder_7331591844031445",
+        "highlight_content": "",
+        "media_type": 6
+      },
+      {
+        "media_id": "wechatarticle_8063fdd1b44b6b1cc34019dc46a067c0_7549280093abdd159332b2e7905944187314120386811241",
+        "title": "AI智能体的上下文工程：完整指南",
+        "parent_folder_id": "folder_7331591844031445",
+        "highlight_content": "",
+        "media_type": 6
+      },
+      {
+        "media_id": "wechatarticle_8063fdd1b44b6b1cc34019dc46a067c0_a6033f77c5c50fae9c0e681f862134cd7314120386811241",
+        "title": "想要更好的 AI 输出？试试上下文工程",
+        "parent_folder_id": "folder_7331591844031445",
+        "highlight_content": "",
+        "media_type": 6
+      },
+      {
+        "media_id": "wechatarticle_8063fdd1b44b6b1cc34019dc46a067c0_bf5cb3d8b94b9cf80bd611331622db937314120386811241",
+        "title": "垂直和领域 Agent 的护城河：上下文工程",
+        "parent_folder_id": "7314120386811241",
+        "highlight_content": "",
+        "media_type": 6
+      },
+      {
+        "media_id": "wechatarticle_8063fdd1b44b6b1cc34019dc46a067c0_08200c52ab1091e464310d625050894d7314120386811241",
+        "title": "Context is All You Need: 深入理解上下文工程",
+        "parent_folder_id": "7314120386811241",
+        "highlight_content": "",
+        "media_type": 6
+      },
+      {
+        "media_id": "wechatarticle_8063fdd1b44b6b1cc34019dc46a067c0_531ec15c3e5edb47fdf98cc144386e897314120386811241",
+        "title": "为 AI 智能体打造高效的上下文工程 -- Anthropic",
+        "parent_folder_id": "folder_7362290588345872",
+        "highlight_content": "",
+        "media_type": 6
+      },
+      {
+        "media_id": "wechatarticle_8063fdd1b44b6b1cc34019dc46a067c0_e49c388b03526724e8544f895aecc7677314120386811241",
+        "title": "智能体架构，利用文件系统重塑上下文工程",
+        "parent_folder_id": "7314120386811241",
+        "highlight_content": "",
+        "media_type": 6
+      },
+      {
+        "media_id": "wechatarticle_8063fdd1b44b6b1cc34019dc46a067c0_acf306e27d7a5b9862d07f190c2330b97314120386811241",
+        "title": "Prompt、Skills、MCP：大模型上下文工程核心链路",
+        "parent_folder_id": "folder_7353352786546831",
+        "highlight_content": "",
+        "media_type": 6
+      },
+      {
+        "media_id": "wechatarticle_8063fdd1b44b6b1cc34019dc46a067c0_cc48c39397c297075b1ee8f08fea50467314120386811241",
+        "title": "Claude Code 工程实践：上下文才是真正的战场",
+        "parent_folder_id": "7314120386811241",
+        "highlight_content": "",
+        "media_type": 6
+      },
+      {
+        "media_id": "wechatarticle_8063fdd1b44b6b1cc34019dc46a067c0_7e6b525a15972fc7258930f79235af397314120386811241",
+        "title": "为什么说上下文工程是AI产品成功的关键？",
+        "parent_folder_id": "7314120386811241",
+        "highlight_content": "",
+        "media_type": 6
+      },
+      {
+        "media_id": "wechatarticle_8063fdd1b44b6b1cc34019dc46a067c0_2b99126c56bdd247be1432bfab0c18be7314120386811241",
+        "title": "Context Engineering（上下文工程）是 AI Agent 成功的关键吗？",
+        "parent_folder_id": "7314120386811241",
+        "highlight_content": "",
+        "media_type": 6
+      },
+      {
+        "media_id": "wechatarticle_8063fdd1b44b6b1cc34019dc46a067c0_73b02030295edbc33b2896bc8db613257314120386811241",
+        "title": "CodeGenius Memory：构建面向代码生成的可控上下文系统",
+        "parent_folder_id": "7314120386811241",
+        "highlight_content": "",
+        "media_type": 6
+      },
+      {
+        "media_id": "wechatarticle_8063fdd1b44b6b1cc34019dc46a067c0_2bf346b4edad690588ca1ebd6c3f650d7314120386811241",
+        "title": "AI Agent 上下文管理：六大厂方案对比",
+        "parent_folder_id": "7314120386811241",
+        "highlight_content": "",
+        "media_type": 6
+      },
+      {
+        "media_id": "wechatarticle_8063fdd1b44b6b1cc34019dc46a067c0_d3b3f611309a70b1ec4298abf8cf7d107314120386811241",
+        "title": "Agent全面爆发！万字长文详解上下文工程",
+        "parent_folder_id": "7314120386811241",
+        "highlight_content": "",
+        "media_type": 6
+      },
+      {
+        "media_id": "wechatarticle_8063fdd1b44b6b1cc34019dc46a067c0_9d1e680be474e22506630b05b57a815d7314120386811241",
+        "title": "Cursor这篇文章揭开了他们上下文管理的秘密",
+        "parent_folder_id": "7314120386811241",
+        "highlight_content": "",
+        "media_type": 6
+      },
+      {
+        "media_id": "wechatarticle_8063fdd1b44b6b1cc34019dc46a067c0_b66b30e8e0279558c7b50b7aee43090e7314120386811241",
+        "title": "AI上下文工程：让大模型真正\"懂\"你的完整指南",
+        "parent_folder_id": "7314120386811241",
+        "highlight_content": "",
+        "media_type": 6
+      },
+      {
+        "media_id": "note_8063fdd1b44b6b1cc34019dc46a067c0_74382408438543257314120386811241",
+        "title": "提示词工程、上下文工程、SDD 与 Skill 驱动开发的关...",
+        "parent_folder_id": "folder_7362290588345872",
+        "highlight_content": "",
+        "media_type": 11
+      },
+      {
+        "media_id": "note_8063fdd1b44b6b1cc34019dc46a067c0_74380169393014997314120386811241",
+        "title": "上下文工程：AI认知架构的演进路径与商业未来",
+        "parent_folder_id": "7314120386811241",
+        "highlight_content": "",
+        "media_type": 11
+      },
+      {
+        "media_id": "note_8063fdd1b44b6b1cc34019dc46a067c0_74381460022525587314120386811241",
+        "title": "提示词工程、上下文工程、SDD 与 Skill 驱动开发的关...",
+        "parent_folder_id": "7314120386811241",
+        "highlight_content": "",
+        "media_type": 11
+      },
+      {
+        "media_id": "wechatarticle_8063fdd1b44b6b1cc34019dc46a067c0_c1ec653782d6d914bcab563d5b193c4c7314120386811241",
+        "title": "Agentic Coding场景下基于职责分离的上下文管理思路分享",
+        "parent_folder_id": "7314120386811241",
+        "highlight_content": "",
+        "media_type": 6
+      },
+      {
+        "media_id": "wechatarticle_8063fdd1b44b6b1cc34019dc46a067c0_cb0a5da2772004a0ac47b5455d7c3b047314120386811241",
+        "title": "AI编程新范式：Qoder如何用“上下文工程”破解真实工程挑战",
+        "parent_folder_id": "7314120386811241",
+        "highlight_content": "",
+        "media_type": 6
+      },
+      {
+        "media_id": "wechatarticle_8063fdd1b44b6b1cc34019dc46a067c0_b8d3c605eff4260d85a9b763384520527314120386811241",
+        "title": "Gemini CLI + Conductor：让Vibe Coding从SDD升级为CDD（上下文驱动开发）",
+        "parent_folder_id": "7314120386811241",
+        "highlight_content": "",
+        "media_type": 6
+      },
+      {
+        "media_id": "wechatarticle_8063fdd1b44b6b1cc34019dc46a067c0_6fef1eb7afa454953d70c9f9f44968727314120386811241",
+        "title": "提示词工程、上下文工程都过时了，现在是 Harness Engineering 的时代",
+        "parent_folder_id": "folder_7353352786546831",
+        "highlight_content": "",
+        "media_type": 6
+      },
+      {
+        "media_id": "wechatarticle_8063fdd1b44b6b1cc34019dc46a067c0_5dc2bb3988c89e069ee0e6d16eccc6d17314120386811241",
+        "title": "上下文工程的六大组件：构建高性能AI应用的核心指南",
+        "parent_folder_id": "folder_7331591844031445",
+        "highlight_content": "",
+        "media_type": 6
+      },
+      {
+        "media_id": "wechatarticle_8063fdd1b44b6b1cc34019dc46a067c0_0d7064cbd901df7efcc2adb794fb7f8c7314120386811241",
+        "title": "上下文工程的第一性原理：一场“恰到好处”的驾驭艺术",
+        "parent_folder_id": "7314120386811241",
+        "highlight_content": "",
+        "media_type": 6
+      },
+      {
+        "media_id": "note_8063fdd1b44b6b1cc34019dc46a067c0_74348516700367437314120386811241",
+        "title": "2026年智能化软件工程进展：上下文工程的核心突破与产业应用...",
+        "parent_folder_id": "7314120386811241",
+        "highlight_content": "",
+        "media_type": 11
+      },
+      {
+        "media_id": "wechatarticle_8063fdd1b44b6b1cc34019dc46a067c0_f4fb287c62a2575ab3da69be3626bc897314120386811241",
+        "title": "让每一个 Token 发挥更大价值：Copilot 如何优化上下文处理与模型路由",
+        "parent_folder_id": "7314120386811241",
+        "highlight_content": "",
+        "media_type": 6
+      },
+      {
+        "media_id": "wechatarticle_8063fdd1b44b6b1cc34019dc46a067c0_5419124384acdc3628d195d6626b226a7314120386811241",
+        "title": "Claude一夜拆掉AI编程天花板！百万token上下文登场，吞下整个代码库",
+        "parent_folder_id": "folder_7362289086766122",
+        "highlight_content": "",
+        "media_type": 6
+      },
+      {
+        "media_id": "wechatarticle_8063fdd1b44b6b1cc34019dc46a067c0_df72666ac3721bbf259e992648fbd9017314120386811241",
+        "title": "Pi harness 的极简主义：代码即真理、Bash is All You Need、构建上下文高效的工具",
+        "parent_folder_id": "7314120386811241",
+        "highlight_content": "",
+        "media_type": 6
+      },
+      {
+        "media_id": "wechatarticle_8063fdd1b44b6b1cc34019dc46a067c0_7a550036774913c4a4f1820bb0028a307314120386811241",
+        "title": "从 OpenCode 升级到 V2，我们看到上下文工程与驾驭工程的三个趋势",
+        "parent_folder_id": "7314120386811241",
+        "highlight_content": "",
+        "media_type": 6
+      },
+      {
+        "media_id": "wechatarticle_8063fdd1b44b6b1cc34019dc46a067c0_35150aaccb35b05554cb5f3739aeaa0d7314120386811241",
+        "title": "别再往上下文硬塞Token 了！Claude「高级工具三件套」到底有多狠？",
+        "parent_folder_id": "folder_7331591844031445",
+        "highlight_content": "",
+        "media_type": 6
+      },
+      {
+        "media_id": "wechatarticle_8063fdd1b44b6b1cc34019dc46a067c0_ab83ae9cf2f44dbf0543cefe0bed1a777314120386811241",
+        "title": "AI在测试自动化中的实际应用 — 上下文、UI-Tars LLM、Midscene（第二部分）",
+        "parent_folder_id": "folder_7331591642682077",
+        "highlight_content": "",
+        "media_type": 6
+      },
+      {
+        "media_id": "wechatarticle_8063fdd1b44b6b1cc34019dc46a067c0_c9bc2d92172ae01ee54bd6712c3bd16c7314120386811241",
+        "title": "这个编程上下文管理开源项目“Context Engineering”，让技术小白实现从\"随意编程\"到\"系统工程\"的AI开发革命",
+        "parent_folder_id": "folder_7362289086766122",
+        "highlight_content": "",
+        "media_type": 6
+      },
+      {
+        "media_id": "wechatarticle_8063fdd1b44b6b1cc34019dc46a067c0_0c0c145ab418921eccad8a11b39d3d497314120386811241",
+        "title": "AI在测试自动化中的实际应用 — 上下文、UI-Tars LLM、Midscene（第一部分）",
+        "parent_folder_id": "folder_7331591642682077",
+        "highlight_content": "",
+        "media_type": 6
+      },
+      {
+        "media_id": "wechatarticle_8063fdd1b44b6b1cc34019dc46a067c0_b63fb0e0e65a088016880d5d9ec623d37314120386811241",
+        "title": "AI Coding 生死局：Spec 正在蚕食人类编码，Agent 造轮子拖垮效率，Token成本失控后上下文工程成胜负手",
+        "parent_folder_id": "folder_7362289086766122",
+        "highlight_content": "",
+        "media_type": 6
+      },
+      {
+        "media_id": "wechatarticle_8063fdd1b44b6b1cc34019dc46a067c0_735dad54b1b6f65024d19ff04e2d75657314120386811241",
+        "title": "架构师需要懂的知识 | 提示词工程、上下文工程、Harness工程、AI工程、数据工程、知识工程、平台工程、软件工程、系统工程的区别和联系",
+        "parent_folder_id": "folder_7353352786546831",
+        "highlight_content": "",
+        "media_type": 6
+      },
+      {
+        "media_id": "wechatarticle_8063fdd1b44b6b1cc34019dc46a067c0_66b04dcb700d55bde9430018a72810fa7314120386811241",
+        "title": "无限代码危机！奈飞AI工程师曝自家上下文工程秘诀：三阶段方法论！AI不能理解软件为什么会失败！每一代工程师都会撞上一堵墙！",
+        "parent_folder_id": "7314120386811241",
+        "highlight_content": "",
+        "media_type": 6
+      }
+    ],
+    "pages": 1,
+    "stopReason": "SEARCH_RESPONSE_NO_PAGINATION_FIELDS; completeness not established"
+  },
+  {
+    "knowledgeBase": "智能化软件工程",
+    "query": "评测",
+    "entries": [
+      {
+        "media_id": "wechatarticle_8063fdd1b44b6b1cc34019dc46a067c0_4688cc275f55a48adb453fbb1580927a7314120386811241",
+        "title": "自动化评测的九九归一——评测agent",
+        "parent_folder_id": "folder_7331591642682077",
+        "highlight_content": "",
+        "media_type": 6
+      },
+      {
+        "media_id": "wechatarticle_8063fdd1b44b6b1cc34019dc46a067c0_53d88958a246da9f260bd469960524987314120386811241",
+        "title": "Anthropic：如何评测 Agent？",
+        "parent_folder_id": "folder_7331591642682077",
+        "highlight_content": "",
+        "media_type": 6
+      },
+      {
+        "media_id": "wechatarticle_8063fdd1b44b6b1cc34019dc46a067c0_d0fcc52e9c91df08a2a17f9e10daef8f7314120386811241",
+        "title": "面向业务落地的AI产品评测体系设计与平台实现",
+        "parent_folder_id": "folder_7331591642682077",
+        "highlight_content": "",
+        "media_type": 6
+      },
+      {
+        "media_id": "wechatarticle_8063fdd1b44b6b1cc34019dc46a067c0_931f1d844299b4a50c45e2a017f203737314120386811241",
+        "title": "能上生产才是硬道理！Coding Agent 评测，终于开始关注过程了",
+        "parent_folder_id": "folder_7362289086766122",
+        "highlight_content": "",
+        "media_type": 6
+      },
+      {
+        "media_id": "wechatarticle_8063fdd1b44b6b1cc34019dc46a067c0_3b351c5f0326bf6b0bba4286a6640ade7314120386811241",
+        "title": "让AI评测AI：构建智能客服的自动化运营Agent体系",
+        "parent_folder_id": "folder_7331591642682077",
+        "highlight_content": "",
+        "media_type": 6
+      },
+      {
+        "media_id": "wechatarticle_8063fdd1b44b6b1cc34019dc46a067c0_292ede8d0eab3a16ed855b8c31d1514c7314120386811241",
+        "title": "基于顶级 Agent（Claude Code）的 Harness 工程搭建式业务 Agent 评测方案",
+        "parent_folder_id": "7314120386811241",
+        "highlight_content": "",
+        "media_type": 6
+      },
+      {
+        "media_id": "wechatarticle_8063fdd1b44b6b1cc34019dc46a067c0_0d1422fcc3d66164b0357aa5f4232c8f7314120386811241",
+        "title": "【智能体评测指南大全】构建可观察、可评估、可进化的Agent质量体系",
+        "parent_folder_id": "7314120386811241",
+        "highlight_content": "",
+        "media_type": 6
+      },
+      {
+        "media_id": "wechatarticle_8063fdd1b44b6b1cc34019dc46a067c0_3732853d20bd9767bfa79ca43282dd2f7314120386811241",
+        "title": "让 Agent 研究走向「系统化」：人大高瓴开源 AweAgent，统一 Harness 构建、评测与训练",
+        "parent_folder_id": "7314120386811241",
+        "highlight_content": "",
+        "media_type": 6
+      },
+      {
+        "media_id": "wechatarticle_8063fdd1b44b6b1cc34019dc46a067c0_617f382c720c92191915ea43ffdcf6877314120386811241",
+        "title": "小程序 AI Skill 上线前，用 wxa-skill-eval + 云开发 CloudBase跑一遍评测",
+        "parent_folder_id": "7314120386811241",
+        "highlight_content": "",
+        "media_type": 6
+      },
+      {
+        "media_id": "wechatarticle_8063fdd1b44b6b1cc34019dc46a067c0_5b5d9706e209c1f91536b0e09071f7407314120386811241",
+        "title": "Harness Engineering实践，做了一个平台让AI一晚上自动评测和优化你的系统",
+        "parent_folder_id": "7314120386811241",
+        "highlight_content": "",
+        "media_type": 6
+      }
+    ],
+    "pages": 1,
+    "stopReason": "SEARCH_RESPONSE_NO_PAGINATION_FIELDS; completeness not established"
+  },
+  {
+    "knowledgeBase": "AI知识库RAG & LLM（持续更新）",
+    "query": "权限",
+    "entries": [
+      {
+        "media_id": "wechatarticle_0965810169bffd8606dec4fbe528269d_75de7716128c787843fc549ee0aac0467309037133652424",
+        "title": "KnowFlow v2.0.4 发布：重构 RAGFlow 权限管理，支持 RBAC 用户、团队权限管理，精准管控知识库权限",
+        "parent_folder_id": "7309037133652424",
+        "highlight_content": "",
+        "media_type": 6
+      },
+      {
+        "media_id": "wechatarticle_0965810169bffd8606dec4fbe528269d_475e60f104d21d10da1e60095f7106077309037133652424",
+        "title": "一文吃透Dify账户系统：多租户 + 多登录方式 + 权限模型全揭底",
+        "parent_folder_id": "7309037133652424",
+        "highlight_content": "",
+        "media_type": 6
+      },
+      {
+        "media_id": "wechatarticle_0965810169bffd8606dec4fbe528269d_95aea5943600995affaacbc30a5076d27309037133652424",
+        "title": "Dify元数据商业应用，知识库权限分级实战（内附全流程配置手册，建议收藏）",
+        "parent_folder_id": "7309037133652424",
+        "highlight_content": "",
+        "media_type": 6
+      },
+      {
+        "media_id": "wechatarticle_0965810169bffd8606dec4fbe528269d_b905357e6cbda6472b4bb2f4e495d2847309037133652424",
+        "title": "Dify v1.1.0新版杀器，用元数据过滤给知识库加权限管理，RAG 检索效率翻倍，含保姆级操作教程",
+        "parent_folder_id": "7309037133652424",
+        "highlight_content": "",
+        "media_type": 6
+      }
+    ],
+    "pages": 1,
+    "stopReason": "SEARCH_RESPONSE_NO_PAGINATION_FIELDS; completeness not established"
+  },
+  {
+    "knowledgeBase": "AI知识库RAG & LLM（持续更新）",
+    "query": "知识",
+    "entries": [
+      {
+        "media_id": "wechatarticle_0965810169bffd8606dec4fbe528269d_63771afdd96e7e37040fb4ac69c54f6a7309037133652424",
+        "title": "图像也能通过 RAG 加入知识库啦",
+        "parent_folder_id": "7309037133652424",
+        "highlight_content": "",
+        "media_type": 6
+      },
+      {
+        "media_id": "wechatarticle_0965810169bffd8606dec4fbe528269d_2f73d1b8072c07b0835194349271b5217309037133652424",
+        "title": "dify+mineru 构建知识库",
+        "parent_folder_id": "7309037133652424",
+        "highlight_content": "",
+        "media_type": 6
+      },
+      {
+        "media_id": "pdf_0965810169bffd8606dec4fbe528269d_f76a0dc39b54096eb12d66aad4eb484f7309037133652424",
+        "title": "ima知识库使用指南.pdf",
+        "parent_folder_id": "7309037133652424",
+        "highlight_content": "",
+        "media_type": 1
+      },
+      {
+        "media_id": "wechatarticle_0965810169bffd8606dec4fbe528269d_2538fe9a788875a9575088ca0b2a6f3a7309037133652424",
+        "title": "Dify知识库调优浅聊",
+        "parent_folder_id": "7309037133652424",
+        "highlight_content": "",
+        "media_type": 6
+      },
+      {
+        "media_id": "wechatarticle_0965810169bffd8606dec4fbe528269d_5311a6acee1064c478d7ff00794c57277309037133652424",
+        "title": "腾讯IMA知识库高阶玩法：咨询公司必备！3步打造政策咨询知识库，客户满意度提升90%！",
+        "parent_folder_id": "7309037133652424",
+        "highlight_content": "",
+        "media_type": 6
+      },
+      {
+        "media_id": "wechatarticle_0965810169bffd8606dec4fbe528269d_871b89615e9fcb5da5f79ed4ee0b2b127309037133652424",
+        "title": "OlmOCR如何成为搭建RAG 知识库的\"智能中枢\"？",
+        "parent_folder_id": "7309037133652424",
+        "highlight_content": "",
+        "media_type": 6
+      },
+      {
+        "media_id": "wechatarticle_0965810169bffd8606dec4fbe528269d_9f511dadba0cd993e05aed80472e09ca7309037133652424",
+        "title": "Dify知识流水线，父子模式怎么玩",
+        "parent_folder_id": "7309037133652424",
+        "highlight_content": "",
+        "media_type": 6
+      },
+      {
+        "media_id": "pdf_0965810169bffd8606dec4fbe528269d_f009236689d323f08a6788fe8b345d407309037133652424",
+        "title": "《知识图谱与大模型融合实践研究报告》.pdf",
+        "parent_folder_id": "7309037133652424",
+        "highlight_content": "",
+        "media_type": 1
+      },
+      {
+        "media_id": "wechatarticle_0965810169bffd8606dec4fbe528269d_6217a598326848c5e7119ee46e41c0677309037133652424",
+        "title": "本地知识库框架深度对比：Dify vs MaxKB vs FastGPT",
+        "parent_folder_id": "7309037133652424",
+        "highlight_content": "",
+        "media_type": 6
+      },
+      {
+        "media_id": "wechatarticle_0965810169bffd8606dec4fbe528269d_432dd1cf19484e13d8f5bf7e8edf913d7309037133652424",
+        "title": "AI研发自动化：Wiki知识库+技能包",
+        "parent_folder_id": "7309037133652424",
+        "highlight_content": "",
+        "media_type": 6
+      },
+      {
+        "media_id": "wechatarticle_0965810169bffd8606dec4fbe528269d_7527288df70e7688e3419ba8eeecbd317309037133652424",
+        "title": "Dify 平台知识库实战｜基于excel 格式的问答调优",
+        "parent_folder_id": "7309037133652424",
+        "highlight_content": "",
+        "media_type": 6
+      },
+      {
+        "media_id": "wechatarticle_0965810169bffd8606dec4fbe528269d_c9bba7b33e7f840f18441933f715fde57309037133652424",
+        "title": "RAG+QWQ 私有化知识库检索模型组合对比",
+        "parent_folder_id": "7309037133652424",
+        "highlight_content": "",
+        "media_type": 6
+      },
+      {
+        "media_id": "wechatarticle_0965810169bffd8606dec4fbe528269d_4c92c53d6dee4a8dc8949ee83662ed087309037133652424",
+        "title": "大揭秘：DeepSeek从知识库究竟获取到了什么内容",
+        "parent_folder_id": "7309037133652424",
+        "highlight_content": "",
+        "media_type": 6
+      },
+      {
+        "media_id": "wechatarticle_0965810169bffd8606dec4fbe528269d_c9310f1769e60aa13a4a87bef3fff5b77309037133652424",
+        "title": "LLM如何将杂乱文本变为可视化知识图谱？",
+        "parent_folder_id": "7309037133652424",
+        "highlight_content": "",
+        "media_type": 6
+      },
+      {
+        "media_id": "wechatarticle_0965810169bffd8606dec4fbe528269d_886b058d2fe30e51d82aa3eac758bcbc7309037133652424",
+        "title": "AI 基础知识从 0.3 到 0.4——如何选对深度学习模型？",
+        "parent_folder_id": "7309037133652424",
+        "highlight_content": "",
+        "media_type": 6
+      },
+      {
+        "media_id": "wechatarticle_0965810169bffd8606dec4fbe528269d_6cbeaf1900252708f639e9ec5ad6ffc37309037133652424",
+        "title": "Dify知识流水线，搞定复杂 PDF（含MinerU本地部署教程）",
+        "parent_folder_id": "7309037133652424",
+        "highlight_content": "",
+        "media_type": 6
+      },
+      {
+        "media_id": "wechatarticle_0965810169bffd8606dec4fbe528269d_289edb4e49d7202755d4845a778686767309037133652424",
+        "title": "知识库Dify和cherry无法解析影印pdf word解决方案",
+        "parent_folder_id": "7309037133652424",
+        "highlight_content": "",
+        "media_type": 6
+      },
+      {
+        "media_id": "wechatarticle_0965810169bffd8606dec4fbe528269d_397922dbc7d56fcfa6ce2fe5130a2cd87309037133652424",
+        "title": "AI 基础知识从-1到0.1：带你走进机器学习的世界",
+        "parent_folder_id": "7309037133652424",
+        "highlight_content": "",
+        "media_type": 6
+      },
+      {
+        "media_id": "word_0965810169bffd8606dec4fbe528269d_42ce0038851518c50ca76e5d8b2c64637309037133652424",
+        "title": "AI产品经理需了解的技术知识：语音识别技术1740900736.docx",
+        "parent_folder_id": "7309037133652424",
+        "highlight_content": "",
+        "media_type": 3
+      },
+      {
+        "media_id": "wechatarticle_0965810169bffd8606dec4fbe528269d_eca68c702cf263dbfafc5b09067496617309037133652424",
+        "title": "制造业如何打造企业知识库？DeepSeek + RAG 真的适合你吗？",
+        "parent_folder_id": "7309037133652424",
+        "highlight_content": "",
+        "media_type": 6
+      },
+      {
+        "media_id": "wechatarticle_0965810169bffd8606dec4fbe528269d_ca221675f538efbe202e150d53b26dcd7309037133652424",
+        "title": "Embedding模型选型思路：决定知识库与RAG的准确率上限！",
+        "parent_folder_id": "7309037133652424",
+        "highlight_content": "",
+        "media_type": 6
+      },
+      {
+        "media_id": "pdf_0965810169bffd8606dec4fbe528269d_f9753fbd30a449dbf1c21418ea5531c77309037133652424",
+        "title": "20-大模型外挂知识库优化——负样本样本挖掘篇.pdf",
+        "parent_folder_id": "7309037133652424",
+        "highlight_content": "",
+        "media_type": 1
+      },
+      {
+        "media_id": "wechatarticle_0965810169bffd8606dec4fbe528269d_0b32a17f7f0f6bc9f75740f4902e29077309037133652424",
+        "title": "让Dify知识库“看懂”图片！一款MinerU 工作流解决方案",
+        "parent_folder_id": "7309037133652424",
+        "highlight_content": "",
+        "media_type": 6
+      },
+      {
+        "media_id": "wechatarticle_0965810169bffd8606dec4fbe528269d_0e99fcc66ab1466b89122a862ffac5587309037133652424",
+        "title": "AI 基础知识从 0.5 到 0.6—— Transformer 架构为何能统治AI领域？",
+        "parent_folder_id": "7309037133652424",
+        "highlight_content": "",
+        "media_type": 6
+      },
+      {
+        "media_id": "wechatarticle_0965810169bffd8606dec4fbe528269d_0630073acc4b1bd9526cc2884b6121407309037133652424",
+        "title": "从代码逆向RAGFlow架构：藏在18张表里的AI知识库设计哲学",
+        "parent_folder_id": "7309037133652424",
+        "highlight_content": "",
+        "media_type": 6
+      },
+      {
+        "media_id": "wechatarticle_0965810169bffd8606dec4fbe528269d_137d99eb821c4c81c29a27422883b6a07309037133652424",
+        "title": "DeepSeek QwQ32B：解锁RAG知识库问答准确率提升秘籍！",
+        "parent_folder_id": "7309037133652424",
+        "highlight_content": "",
+        "media_type": 6
+      },
+      {
+        "media_id": "wechatarticle_0965810169bffd8606dec4fbe528269d_983e9ec908edb97d80f60cba9b5f960d7309037133652424",
+        "title": "dify+新版DeepSeek V3，知识库再次起飞！确实可以封神了",
+        "parent_folder_id": "7309037133652424",
+        "highlight_content": "",
+        "media_type": 6
+      },
+      {
+        "media_id": "pdf_0965810169bffd8606dec4fbe528269d_251a6ffbbcadec8101233416dfe765a87309037133652424",
+        "title": "19-大模型外挂知识库优化——如何利用大模型辅助召回？.pdf",
+        "parent_folder_id": "7309037133652424",
+        "highlight_content": "",
+        "media_type": 1
+      },
+      {
+        "media_id": "wechatarticle_0965810169bffd8606dec4fbe528269d_68246129c8152ee038f11cad60f7eafd7309037133652424",
+        "title": "从代码逆向RAGFlow架构：藏在18张表里的AI知识库设计哲学",
+        "parent_folder_id": "7309037133652424",
+        "highlight_content": "",
+        "media_type": 6
+      },
+      {
+        "media_id": "wechatarticle_0965810169bffd8606dec4fbe528269d_369b7123d188db67f1b27da42786ef487309037133652424",
+        "title": "升级Dify版本并修改配置文件使Dify知识库突破单文件15MB限制",
+        "parent_folder_id": "7309037133652424",
+        "highlight_content": "",
+        "media_type": 6
+      },
+      {
+        "media_id": "wechatarticle_0965810169bffd8606dec4fbe528269d_1a3c67d7f4924b94c1723582b2fcebeb7309037133652424",
+        "title": "构建可靠AI Agent：从提示词、工作流到知识库的实战指南",
+        "parent_folder_id": "7309037133652424",
+        "highlight_content": "",
+        "media_type": 6
+      },
+      {
+        "media_id": "pdf_0965810169bffd8606dec4fbe528269d_11aa616a36c2655d9c486df1be1785897309037133652424",
+        "title": "教大家如何使用Deepseek AI进行超级降维知识输出V1.0版.pdf",
+        "parent_folder_id": "7309037133652424",
+        "highlight_content": "",
+        "media_type": 1
+      },
+      {
+        "media_id": "wechatarticle_0965810169bffd8606dec4fbe528269d_f4b3d9cb49cc93c55f982d1cb99cacf07309037133652424",
+        "title": "MinerU本地化部署教程——一款AI知识库建站的必备工具",
+        "parent_folder_id": "7309037133652424",
+        "highlight_content": "",
+        "media_type": 6
+      },
+      {
+        "media_id": "wechatarticle_0965810169bffd8606dec4fbe528269d_ef78ce9c3b8354090716927592f510317309037133652424",
+        "title": "AI问数（八）：构建数据库知识图谱的实战经验与步骤",
+        "parent_folder_id": "7309037133652424",
+        "highlight_content": "",
+        "media_type": 6
+      },
+      {
+        "media_id": "wechatarticle_0965810169bffd8606dec4fbe528269d_48a3c90cf13f029d34353211a47aa9467309037133652424",
+        "title": "AI 基础知识从0.1到0.2——用“房价预测”入门机器学习全流程",
+        "parent_folder_id": "7309037133652424",
+        "highlight_content": "",
+        "media_type": 6
+      },
+      {
+        "media_id": "wechatarticle_0965810169bffd8606dec4fbe528269d_202a324018e129769eed390701474b677309037133652424",
+        "title": "Kimi上线了OpenClaw手机版，给大家分享5种知识管理的神级技巧",
+        "parent_folder_id": "7309037133652424",
+        "highlight_content": "",
+        "media_type": 6
+      },
+      {
+        "media_id": "wechatarticle_0965810169bffd8606dec4fbe528269d_5e102e7bbc7928ad33643a0cc15a34fa7309037133652424",
+        "title": "10万+之后，我用 WorkBuddy + Obsidian + Claude 重新搭了一遍个人知识库",
+        "parent_folder_id": "7309037133652424",
+        "highlight_content": "",
+        "media_type": 6
+      },
+      {
+        "media_id": "word_0965810169bffd8606dec4fbe528269d_51e29a1c30a420238b8cbdc59176df1b7309037133652424",
+        "title": "19-大模型外挂知识库优化——如何利用大模型辅助召回？1740903952.docx",
+        "parent_folder_id": "7309037133652424",
+        "highlight_content": "",
+        "media_type": 3
+      },
+      {
+        "media_id": "word_0965810169bffd8606dec4fbe528269d_df56b631a9a3172685fca3792aa511f37309037133652424",
+        "title": "20-大模型外挂知识库优化——负样本样本挖掘篇_20250302_1630271740904240.docx",
+        "parent_folder_id": "7309037133652424",
+        "highlight_content": "",
+        "media_type": 3
+      },
+      {
+        "media_id": "wechatarticle_0965810169bffd8606dec4fbe528269d_c441244f58dc3db877b83e529f2b6ce87309037133652424",
+        "title": "10分钟搞定，DeepSeek+Ollama+AnythingLLM 本地部署完全指南，打造专属知识库",
+        "parent_folder_id": "7309037133652424",
+        "highlight_content": "",
+        "media_type": 6
+      },
+      {
+        "media_id": "wechatarticle_0965810169bffd8606dec4fbe528269d_449e9d6ca404f7c2c0d8946a689111057309037133652424",
+        "title": "基于 Trae 开发的校园二手仓小程序｜AI编程社知识库精选",
+        "parent_folder_id": "7309037133652424",
+        "highlight_content": "",
+        "media_type": 6
+      },
+      {
+        "media_id": "pdf_0965810169bffd8606dec4fbe528269d_9a394bfccaa7038fc3c0cb47a7e8cf587309037133652424",
+        "title": "黄鸿波-大语言模型结合企业知识库的私有化部署[1].pdf",
+        "parent_folder_id": "7309037133652424",
+        "highlight_content": "",
+        "media_type": 1
+      },
+      {
+        "media_id": "wechatarticle_0965810169bffd8606dec4fbe528269d_3214852c5fdeebca8ca8933626f91c357309037133652424",
+        "title": "PandaWiki：更轻量的开源知识库，问答效果到底如何？（本地部署教程+效果实测）",
+        "parent_folder_id": "7309037133652424",
+        "highlight_content": "",
+        "media_type": 6
+      },
+      {
+        "media_id": "wechatarticle_0965810169bffd8606dec4fbe528269d_95aea5943600995affaacbc30a5076d27309037133652424",
+        "title": "Dify元数据商业应用，知识库权限分级实战（内附全流程配置手册，建议收藏）",
+        "parent_folder_id": "7309037133652424",
+        "highlight_content": "",
+        "media_type": 6
+      },
+      {
+        "media_id": "wechatarticle_0965810169bffd8606dec4fbe528269d_5b514a7a7a1a221d8c531f6a3b1a35317309037133652424",
+        "title": "万元级边缘算力方案：Mac Mini在几个知识库项目的部署实践",
+        "parent_folder_id": "7309037133652424",
+        "highlight_content": "",
+        "media_type": 6
+      },
+      {
+        "media_id": "pdf_0965810169bffd8606dec4fbe528269d_c8530e94a95a81603611090d25eb24207309037133652424",
+        "title": "25-Graph RAG 面 — 一种 基于知识图谱的大模型检索增强实现策略.pdf",
+        "parent_folder_id": "7309037133652424",
+        "highlight_content": "",
+        "media_type": 1
+      },
+      {
+        "media_id": "wechatarticle_0965810169bffd8606dec4fbe528269d_267551912ec10887fe1856c0bb5a14497309037133652424",
+        "title": "dify案例分享-0 代码搭建 Text2SQL 智能查询！用 Dify + 知识库 + Agent 实现自然语言秒变 SQL",
+        "parent_folder_id": "7309037133652424",
+        "highlight_content": "",
+        "media_type": 6
+      },
+      {
+        "media_id": "wechatarticle_0965810169bffd8606dec4fbe528269d_75de7716128c787843fc549ee0aac0467309037133652424",
+        "title": "KnowFlow v2.0.4 发布：重构 RAGFlow 权限管理，支持 RBAC 用户、团队权限管理，精准管控知识库权限",
+        "parent_folder_id": "7309037133652424",
+        "highlight_content": "",
+        "media_type": 6
+      },
+      {
+        "media_id": "word_0965810169bffd8606dec4fbe528269d_34b440afef6d037fb5af5953c5f014cb7309037133652424",
+        "title": "25-Graph+RAG+面+—+一种+基于知识图谱的大模型检索增强实现策略1740903972.docx",
+        "parent_folder_id": "7309037133652424",
+        "highlight_content": "",
+        "media_type": 3
+      },
+      {
+        "media_id": "pdf_0965810169bffd8606dec4fbe528269d_5f321af378375e8b103e021579f29cf97309037133652424",
+        "title": "一个简单的中文版教程-ChatGLM实战 基于LangChain构建自己的私有知识库.pdf",
+        "parent_folder_id": "7309037133652424",
+        "highlight_content": "",
+        "media_type": 1
+      },
+      {
+        "media_id": "wechatarticle_0965810169bffd8606dec4fbe528269d_54fa7d913dbaf320fb1a2faa318e04467309037133652424",
+        "title": "基于本体建模和LLM-Wiki的思路构建AI智能知识库-完成完整方案和长文写作",
+        "parent_folder_id": "7309037133652424",
+        "highlight_content": "",
+        "media_type": 6
+      },
+      {
+        "media_id": "wechatarticle_0965810169bffd8606dec4fbe528269d_0795d89496ee105711add2b29bf0c7b37309037133652424",
+        "title": "这个国产开源RAG项目ChatWiki厉害了，可以搭建企业级AI知识库和微信机器人",
+        "parent_folder_id": "7309037133652424",
+        "highlight_content": "",
+        "media_type": 6
+      },
+      {
+        "media_id": "wechatarticle_0965810169bffd8606dec4fbe528269d_645c5847bab6a9927d8f2efdf9c493117309037133652424",
+        "title": "670次问答、108个差评：一个工控知识库POC根因分析与优化方向（新书预售）",
+        "parent_folder_id": "7309037133652424",
+        "highlight_content": "",
+        "media_type": 6
+      },
+      {
+        "media_id": "wechatarticle_0965810169bffd8606dec4fbe528269d_903708f89e3e6cd33dfdd69d43d965b37309037133652424",
+        "title": "腾讯ima知识库掀桌：打工人1人开公司时代降临！这5个AI神技正在重构职场生存法则。",
+        "parent_folder_id": "7309037133652424",
+        "highlight_content": "",
+        "media_type": 6
+      },
+      {
+        "media_id": "wechatarticle_0965810169bffd8606dec4fbe528269d_58b583951cef33eda6c4208a170781f57309037133652424",
+        "title": "从8550秒到608秒！RAGFlow最新版本让知识图谱生成效率狂飙，终于不用通宵等结果了",
+        "parent_folder_id": "7309037133652424",
+        "highlight_content": "",
+        "media_type": 6
+      },
+      {
+        "media_id": "wechatarticle_0965810169bffd8606dec4fbe528269d_b905357e6cbda6472b4bb2f4e495d2847309037133652424",
+        "title": "Dify v1.1.0新版杀器，用元数据过滤给知识库加权限管理，RAG 检索效率翻倍，含保姆级操作教程",
+        "parent_folder_id": "7309037133652424",
+        "highlight_content": "",
+        "media_type": 6
+      },
+      {
+        "media_id": "wechatarticle_0965810169bffd8606dec4fbe528269d_8153b042ba009c5dcd059e1487f4c0017309037133652424",
+        "title": "2025最强开源RAG横评！五大知识库引擎+Agent平台实战测评：Dify、RAGFlow、FastGPT谁是你的AI外挂大脑",
+        "parent_folder_id": "7309037133652424",
+        "highlight_content": "",
+        "media_type": 6
+      }
+    ],
+    "pages": 1,
+    "stopReason": "SEARCH_RESPONSE_NO_PAGINATION_FIELDS; completeness not established"
+  },
+  {
+    "knowledgeBase": "AI BI Agent 人工智能 商业智能 智能体",
+    "query": "本体",
+    "entries": [],
+    "pages": 1,
+    "stopReason": "SEARCH_RESPONSE_NO_PAGINATION_FIELDS; completeness not established"
+  },
+  {
+    "knowledgeBase": "MCP、A2A和AG-UI宝库",
+    "query": "工具",
+    "entries": [
+      {
+        "media_id": "wechatarticle_4c4f8606da1f82a31c4760c087ab8a13_d472e53c96e02fb6e4d8a66025ad0d397311597441671523",
+        "title": "Bing MCP：中文必应高效搜索工具！",
+        "parent_folder_id": "7311597441671523",
+        "highlight_content": "",
+        "media_type": 6
+      },
+      {
+        "media_id": "wechatarticle_4c4f8606da1f82a31c4760c087ab8a13_431c89b4d662e046b9d8249334602c977311597441671523",
+        "title": "Palantir的强大生态工具 MCP 介绍",
+        "parent_folder_id": "7311597441671523",
+        "highlight_content": "",
+        "media_type": 6
+      },
+      {
+        "media_id": "wechatarticle_4c4f8606da1f82a31c4760c087ab8a13_4f0d7f6545921c700b74c3a9dd8365617311597441671523",
+        "title": "设计、工具与人工智能边界",
+        "parent_folder_id": "7311597441671523",
+        "highlight_content": "",
+        "media_type": 6
+      },
+      {
+        "media_id": "wechatarticle_4c4f8606da1f82a31c4760c087ab8a13_c1934881d87720f4ecb4d14b09471afe7311597441671523",
+        "title": "AI+MCP+测试工具来了！",
+        "parent_folder_id": "7311597441671523",
+        "highlight_content": "",
+        "media_type": 6
+      },
+      {
+        "media_id": "wechatarticle_4c4f8606da1f82a31c4760c087ab8a13_0dbb02db7474049dc05152e63671f0d97311597441671523",
+        "title": "OpenMemory MCP：跨AI工具的记忆服务",
+        "parent_folder_id": "7311597441671523",
+        "highlight_content": "",
+        "media_type": 6
+      },
+      {
+        "media_id": "wechatarticle_4c4f8606da1f82a31c4760c087ab8a13_555b9625541fee651d1995a1419137207311597441671523",
+        "title": "Stateless MCP：工具连接改为自包含请求",
+        "parent_folder_id": "7311597441671523",
+        "highlight_content": "",
+        "media_type": 6
+      },
+      {
+        "media_id": "wechatarticle_4c4f8606da1f82a31c4760c087ab8a13_c1c201a2d637dfaa01a82406bb3e5cb57311597441671523",
+        "title": "MCP进阶：一键批量搞定MCP工具部署",
+        "parent_folder_id": "7311597441671523",
+        "highlight_content": "",
+        "media_type": 6
+      },
+      {
+        "media_id": "wechatarticle_4c4f8606da1f82a31c4760c087ab8a13_b68fef1400c7e2e7433fe1ab8fe2ca6a7311597441671523",
+        "title": "MCP Server 开发必备：MCP Inspector 调试工具",
+        "parent_folder_id": "7311597441671523",
+        "highlight_content": "",
+        "media_type": 6
+      },
+      {
+        "media_id": "wechatarticle_4c4f8606da1f82a31c4760c087ab8a13_c7594e0cc7c18d2da136c98a309cf3727311597441671523",
+        "title": "如何看待MCP？大模型工具调用的解耦！",
+        "parent_folder_id": "7311597441671523",
+        "highlight_content": "",
+        "media_type": 6
+      },
+      {
+        "media_id": "wechatarticle_4c4f8606da1f82a31c4760c087ab8a13_65c7f5b95e00e514653334524b8918fc7311597441671523",
+        "title": "鹅厂这个低调工具，专帮大模型“扫雷”",
+        "parent_folder_id": "7311597441671523",
+        "highlight_content": "",
+        "media_type": 6
+      },
+      {
+        "media_id": "wechatarticle_4c4f8606da1f82a31c4760c087ab8a13_d55456e62509565c207b443cc2a3f61d7311597441671523",
+        "title": "开发MCP服务，何时使用工具？何时使用资源？",
+        "parent_folder_id": "7311597441671523",
+        "highlight_content": "",
+        "media_type": 6
+      },
+      {
+        "media_id": "wechatarticle_4c4f8606da1f82a31c4760c087ab8a13_a72f88dd6ea6186ada4c2ca2428f52397311597441671523",
+        "title": "RAG-MCP：突破大模型工具调用瓶颈，告别Prompt膨胀",
+        "parent_folder_id": "7311597441671523",
+        "highlight_content": "",
+        "media_type": 6
+      },
+      {
+        "media_id": "wechatarticle_4c4f8606da1f82a31c4760c087ab8a13_4900662439096f8daf7531a519aa56d37311597441671523",
+        "title": "RAG-MCP：突破大模型工具调用瓶颈，告别Prompt膨胀",
+        "parent_folder_id": "7311597441671523",
+        "highlight_content": "",
+        "media_type": 6
+      },
+      {
+        "media_id": "wechatarticle_4c4f8606da1f82a31c4760c087ab8a13_bd12da6c4ad130409715dbd66760af737311597441671523",
+        "title": "给MCP加上RAG，工具准确率提升200%，起飞~",
+        "parent_folder_id": "7311597441671523",
+        "highlight_content": "",
+        "media_type": 6
+      },
+      {
+        "media_id": "wechatarticle_4c4f8606da1f82a31c4760c087ab8a13_4d8669b9dfb8f428fc60fbcfc4acf9e07311597441671523",
+        "title": "GitHub 开源项目：MCP Registry——AI工具生态的「应用商店」",
+        "parent_folder_id": "7311597441671523",
+        "highlight_content": "",
+        "media_type": 6
+      },
+      {
+        "media_id": "wechatarticle_4c4f8606da1f82a31c4760c087ab8a13_08521725f3d22d609e1c1fad789a15f17311597441671523",
+        "title": "开发 .NET 本地工具作为 GitHub Copilot MCP 服务器",
+        "parent_folder_id": "7311597441671523",
+        "highlight_content": "",
+        "media_type": 6
+      },
+      {
+        "media_id": "wechatarticle_4c4f8606da1f82a31c4760c087ab8a13_391049bea6c79a505d74efddf20c84197311597441671523",
+        "title": "所有AI工具共享持久私有记忆，OpenMemory MCP杀疯了~",
+        "parent_folder_id": "folder_7336170807645602",
+        "highlight_content": "",
+        "media_type": 6
+      },
+      {
+        "media_id": "wechatarticle_4c4f8606da1f82a31c4760c087ab8a13_31456973dc133a44a301bb044d7e4a547311597441671523",
+        "title": "A16z：深入探讨 MCP 与 AI 工具的未来",
+        "parent_folder_id": "7311597441671523",
+        "highlight_content": "",
+        "media_type": 6
+      },
+      {
+        "media_id": "wechatarticle_4c4f8606da1f82a31c4760c087ab8a13_e4ea44282df4fee6bde6a9d256b2e9cb7311597441671523",
+        "title": "MCP Gateway，轻松聚合AI工具，打造你的超级智能体！",
+        "parent_folder_id": "7311597441671523",
+        "highlight_content": "",
+        "media_type": 6
+      },
+      {
+        "media_id": "wechatarticle_4c4f8606da1f82a31c4760c087ab8a13_9b519c2246ee5b7dfaadb0bab2350f3c7311597441671523",
+        "title": "MCP Security Inspector：AI驱动的MCP协议安全检测工具",
+        "parent_folder_id": "7311597441671523",
+        "highlight_content": "",
+        "media_type": 6
+      },
+      {
+        "media_id": "wechatarticle_4c4f8606da1f82a31c4760c087ab8a13_d5768372594a8abb7c9808970dbffa277311597441671523",
+        "title": "Google AI工具箱：生产级数据库MCP来了？",
+        "parent_folder_id": "7311597441671523",
+        "highlight_content": "",
+        "media_type": 6
+      },
+      {
+        "media_id": "wechatarticle_4c4f8606da1f82a31c4760c087ab8a13_062d3430190577870d569abf50ebbcf77311597441671523",
+        "title": "MCP 还是 CLI？AI 工具链的两条路",
+        "parent_folder_id": "7311597441671523",
+        "highlight_content": "",
+        "media_type": 6
+      },
+      {
+        "media_id": "wechatarticle_4c4f8606da1f82a31c4760c087ab8a13_c3d8cd4c6c8f953faee3463017883b917311597441671523",
+        "title": "拨开MCP的迷雾，聊聊LLM工具调用的本质（一）：Function Calling",
+        "parent_folder_id": "7311597441671523",
+        "highlight_content": "",
+        "media_type": 6
+      },
+      {
+        "media_id": "wechatarticle_4c4f8606da1f82a31c4760c087ab8a13_ce20f3913ca6c22e5fe28778722b084d7311597441671523",
+        "title": "CAMEL-AI x MCP：一篇文章读懂如何让 AI 智能体玩转所有工具",
+        "parent_folder_id": "7311597441671523",
+        "highlight_content": "",
+        "media_type": 6
+      },
+      {
+        "media_id": "pdf_4c4f8606da1f82a31c4760c087ab8a13_8682d820483f1d3f9db91c02e6c81c867311597441671523",
+        "title": "腾讯 AI Agent 生态战略：模型-工具-场景闭环构建超级入口壁垒.pdf",
+        "parent_folder_id": "7311597441671523",
+        "highlight_content": "",
+        "media_type": 1
+      },
+      {
+        "media_id": "wechatarticle_4c4f8606da1f82a31c4760c087ab8a13_f865931cf5a7e70f2622dbbac035233c7311597441671523",
+        "title": "面向多工具任务调度的两种路径：MCP vs Agent + Function call",
+        "parent_folder_id": "7311597441671523",
+        "highlight_content": "",
+        "media_type": 6
+      },
+      {
+        "media_id": "wechatarticle_4c4f8606da1f82a31c4760c087ab8a13_bb94ddd08ecb4389aa335a91ee9e927f7311597441671523",
+        "title": "A2A + MCP = AI Agent 完全体？AI Agent 既能 “单挑” 工具，又能 “群殴” 任务。",
+        "parent_folder_id": "7311597441671523",
+        "highlight_content": "",
+        "media_type": 6
+      },
+      {
+        "media_id": "wechatarticle_4c4f8606da1f82a31c4760c087ab8a13_c20a9ae082b3cf57cd19c2382ac1b5897311597441671523",
+        "title": "A2A与MCP协议对比：智能体协作与工具连接的互补范式",
+        "parent_folder_id": "7311597441671523",
+        "highlight_content": "",
+        "media_type": 6
+      },
+      {
+        "media_id": "wechatarticle_4c4f8606da1f82a31c4760c087ab8a13_3ccf432a7c7ac3e73482b470ca9788b77311597441671523",
+        "title": "MasterGo MCP Server：将设计工具与 AI 模型打通的技术新突破！",
+        "parent_folder_id": "7311597441671523",
+        "highlight_content": "",
+        "media_type": 6
+      },
+      {
+        "media_id": "wechatarticle_4c4f8606da1f82a31c4760c087ab8a13_d5f3b65c5941cef177066d78b58d662f7311597441671523",
+        "title": "模型上下文协议（MCP）：让AI工具与真实数据世界无缝对接",
+        "parent_folder_id": "7311597441671523",
+        "highlight_content": "",
+        "media_type": 6
+      },
+      {
+        "media_id": "wechatarticle_4c4f8606da1f82a31c4760c087ab8a13_1a0cf1684daeb0fa1d352ec886d18a287311597441671523",
+        "title": "拨开MCP的迷雾，聊聊LLM工具调用的本质（二）：Prompt和API限定法",
+        "parent_folder_id": "7311597441671523",
+        "highlight_content": "",
+        "media_type": 6
+      },
+      {
+        "media_id": "wechatarticle_4c4f8606da1f82a31c4760c087ab8a13_3a09cea8963d4a3295c27666c4e19ad17311597441671523",
+        "title": "MCP实战｜从0到1构建异步 DeepResearch 工具，支持进度推送与超时控制",
+        "parent_folder_id": "7311597441671523",
+        "highlight_content": "",
+        "media_type": 6
+      },
+      {
+        "media_id": "wechatarticle_4c4f8606da1f82a31c4760c087ab8a13_186b7e5b3a1c1b31eec38536496ee2897311597441671523",
+        "title": "一款专为微信聊天记录管理而设计的开源工具：Chatlog",
+        "parent_folder_id": "7311597441671523",
+        "highlight_content": "",
+        "media_type": 6
+      },
+      {
+        "media_id": "wechatarticle_4c4f8606da1f82a31c4760c087ab8a13_185aad986f66fa15eedc6224eed191bf7311597441671523",
+        "title": "一款专为 MCP 服务器设计的安全扫描开源工具：MCP-Scan",
+        "parent_folder_id": "7311597441671523",
+        "highlight_content": "",
+        "media_type": 6
+      },
+      {
+        "media_id": "wechatarticle_4c4f8606da1f82a31c4760c087ab8a13_4e1b1c4ad9fb31b984522445c2faa7947311597441671523",
+        "title": "停止在低代码层面内卷！解剖MCP工具链/A2A协同的底层生存法则！",
+        "parent_folder_id": "7311597441671523",
+        "highlight_content": "",
+        "media_type": 6
+      },
+      {
+        "media_id": "wechatarticle_4c4f8606da1f82a31c4760c087ab8a13_35305c17c77090cef1425e6b228786b87311597441671523",
+        "title": "解锁 MCP 工具管理新姿势：Docker MCP 如何让开发者的生活更简单、更安全？",
+        "parent_folder_id": "7311597441671523",
+        "highlight_content": "",
+        "media_type": 6
+      },
+      {
+        "media_id": "wechatarticle_4c4f8606da1f82a31c4760c087ab8a13_61d27a8b3bf284c9c0a6047bd1a921c57311597441671523",
+        "title": "警惕！MCP 曝出“工具投毒”致命漏洞，你的敏感数据和操作权限或被悄然窃取",
+        "parent_folder_id": "7311597441671523",
+        "highlight_content": "",
+        "media_type": 6
+      },
+      {
+        "media_id": "wechatarticle_4c4f8606da1f82a31c4760c087ab8a13_3e994271b60630ac981bd47d7f5537597311597441671523",
+        "title": "智能体落地“三驾马车”问世：MCP调优工具+A2A协作+AG-UI协议解读",
+        "parent_folder_id": "folder_7336171986238540",
+        "highlight_content": "",
+        "media_type": 6
+      },
+      {
+        "media_id": "wechatarticle_4c4f8606da1f82a31c4760c087ab8a13_87514c7d4aa216c9b81061f43fc332687311597441671523",
+        "title": "让 Agent 告别低效工具调用：用代码执行重构 MCP 工作流，节省 90% 的上下文开销",
+        "parent_folder_id": "7311597441671523",
+        "highlight_content": "",
+        "media_type": 6
+      },
+      {
+        "media_id": "wechatarticle_4c4f8606da1f82a31c4760c087ab8a13_12af7eb2eac47e1d05bfaf7c03ac04517311597441671523",
+        "title": "Quant-Skills 专栏开篇 | 我们给 AI 做了一套量化工具集，它现在能自己搜论文、挖因子、写策略了",
+        "parent_folder_id": "7311597441671523",
+        "highlight_content": "",
+        "media_type": 6
+      },
+      {
+        "media_id": "wechatarticle_4c4f8606da1f82a31c4760c087ab8a13_82c82a74c21ccf0a8bd394a7480371387311597441671523",
+        "title": "MCP不止工具调用！MCP联合创建者：绝大多数人用法都太初级！曝MCP五大原语、高阶玩法：丰富人机交互体验；MCP的未来在Web",
+        "parent_folder_id": "7311597441671523",
+        "highlight_content": "",
+        "media_type": 6
+      }
+    ],
+    "pages": 1,
+    "stopReason": "SEARCH_RESPONSE_NO_PAGINATION_FIELDS; completeness not established"
+  },
+  {
+    "knowledgeBase": "AI产品设计师UXUI用户体验B端SaaS",
+    "query": "Agent",
+    "entries": [
+      {
+        "media_id": "weburl_e20968f5446cc8239705c4154c1542cd_c02898e1e1b7f64c8e04d66c5981f9597282281571958196",
+        "title": "Lovart | The World’s First Design Agent",
+        "parent_folder_id": "folder_7323005654951740",
+        "highlight_content": "",
+        "media_type": 2
+      },
+      {
+        "media_id": "weburl_e20968f5446cc8239705c4154c1542cd_db490430dee1e4bcc325fb41c07e280d7282281571958196",
+        "title": "RoboNeo - 专注影像生产力的AI Agent",
+        "parent_folder_id": "folder_7323005654951740",
+        "highlight_content": "",
+        "media_type": 2
+      },
+      {
+        "media_id": "wechatarticle_e20968f5446cc8239705c4154c1542cd_67760ba5adc3d958f28a49a6aa40591d7282281571958196",
+        "title": "商家端PC Agent框架重构：从“对话问答”到“任务闭环”",
+        "parent_folder_id": "folder_7323005654951740",
+        "highlight_content": "",
+        "media_type": 6
+      }
+    ],
+    "pages": 1,
+    "stopReason": "SEARCH_RESPONSE_NO_PAGINATION_FIELDS; completeness not established"
+  },
+  {
+    "knowledgeBase": "AI Coding（每日更新 ing）",
+    "query": "Pi",
+    "entries": [
+      {
+        "media_id": "markdown_bb84751278d6332f670bfacfbabe13ad_25577434ca530414faf0cb9e72fc51f57475361604452466",
+        "title": "anthropics_anthropic-cookbook.md",
+        "parent_folder_id": "folder_7480871619671449",
+        "highlight_content": "",
+        "media_type": 7
+      },
+      {
+        "media_id": "markdown_bb84751278d6332f670bfacfbabe13ad_670daff7742c57000088fd6aad5902d27475361604452466",
+        "title": "[废-降级版]OpenSenseNova_SenseNova-U1_20260821_055001.md（元数据空，已被 API 版替代）",
+        "parent_folder_id": "folder_7480871619671449",
+        "highlight_content": "",
+        "media_type": 7
+      },
+      {
+        "media_id": "markdown_bb84751278d6332f670bfacfbabe13ad_9f5508317ae9fb929fb548806e112cfd7475361604452466",
+        "title": "[废-降级版]OpenSenseNova_SenseNova-U1_20260821_055117.md（元数据空，已被 API 版替代）",
+        "parent_folder_id": "folder_7480871619671449",
+        "highlight_content": "",
+        "media_type": 7
+      },
+      {
+        "media_id": "markdown_bb84751278d6332f670bfacfbabe13ad_bda5e7ddadaea05572ad4138eaec6d2b7475361604452466",
+        "title": "Wei-Shaw_sub2api.md",
+        "parent_folder_id": "folder_7480871619671449",
+        "highlight_content": "",
+        "media_type": 7
+      },
+      {
+        "media_id": "markdown_bb84751278d6332f670bfacfbabe13ad_0eaa45f6f577ed2b0956c4299494cc4a7475361604452466",
+        "title": "zhuweiyou_oc2api.md",
+        "parent_folder_id": "folder_7480871619671449",
+        "highlight_content": "",
+        "media_type": 7
+      },
+      {
+        "media_id": "wechatarticle_bb84751278d6332f670bfacfbabe13ad_8b2fdbe36f7d80aa559bba2b57e41d877475361604452466",
+        "title": "首批GPT-6内测结果好离谱啊。。。",
+        "parent_folder_id": "folder_7475362552375018",
+        "highlight_content": "",
+        "media_type": 6
+      },
+      {
+        "media_id": "markdown_bb84751278d6332f670bfacfbabe13ad_9a3b2eb5d3f6c97395a456bad25afce57475361604452466",
+        "title": "router-for-me_CLIProxyAPI.md",
+        "parent_folder_id": "folder_7475362552375018",
+        "highlight_content": "",
+        "media_type": 7
+      },
+      {
+        "media_id": "pdf_75a2d5309b7fc403b15b6a10dc83e7b9_86a7f99eeac9b64bd818b240ffeb1b977475361604452466",
+        "title": "OpenClaw橙皮书-从入门到精通.pdf",
+        "parent_folder_id": "folder_7475362564944572",
+        "highlight_content": "",
+        "media_type": 1
+      },
+      {
+        "media_id": "wechatarticle_bb84751278d6332f670bfacfbabe13ad_9960e101e91a6e0e1b3d68fa3054ea757475361604452466",
+        "title": "Gemini API 竟还有这么多免费额度？",
+        "parent_folder_id": "folder_7475362552375018",
+        "highlight_content": "",
+        "media_type": 6
+      },
+      {
+        "media_id": "markdown_bb84751278d6332f670bfacfbabe13ad_c1b4d1615d19a53798e12fa96082f01c7475361604452466",
+        "title": "anthropics_anthropic-sdk-python.md",
+        "parent_folder_id": "folder_7480871619671449",
+        "highlight_content": "",
+        "media_type": 7
+      },
+      {
+        "media_id": "wechatarticle_75a2d5309b7fc403b15b6a10dc83e7b9_d527a871d98b6908bca23995f927550e7475361604452466",
+        "title": "我的 token 恐惧，被这个 AI 管饱套餐治好了",
+        "parent_folder_id": "folder_7475362564944572",
+        "highlight_content": "",
+        "media_type": 6
+      },
+      {
+        "media_id": "wechatarticle_bb84751278d6332f670bfacfbabe13ad_52120a20d2e455d0bb0db542bd244e0e7475361604452466",
+        "title": "耗时7天，他们开源了WorkBuddy实战蓝皮书",
+        "parent_folder_id": "folder_7490582859497360",
+        "highlight_content": "",
+        "media_type": 6
+      },
+      {
+        "media_id": "markdown_bb84751278d6332f670bfacfbabe13ad_86eadbb9fc7120773309aeffec6788a47475361604452466",
+        "title": "anthropics_k12-teacher-skills.md",
+        "parent_folder_id": "folder_7480871619671449",
+        "highlight_content": "",
+        "media_type": 7
+      },
+      {
+        "media_id": "wechatarticle_bb84751278d6332f670bfacfbabe13ad_7f3542d26ff19f6bb863261ae39206417475361604452466",
+        "title": "你的ChatGPT被随机降智到5.5mini，终于有解法了！",
+        "parent_folder_id": "folder_7475362548168612",
+        "highlight_content": "",
+        "media_type": 6
+      },
+      {
+        "media_id": "wechatarticle_75a2d5309b7fc403b15b6a10dc83e7b9_5454f339a41acad0e495e2e762c2768b7475361604452466",
+        "title": "关于Claude Skills，我给你写了份82页的白皮书",
+        "parent_folder_id": "folder_7475362564944572",
+        "highlight_content": "",
+        "media_type": 6
+      },
+      {
+        "media_id": "wechatarticle_75a2d5309b7fc403b15b6a10dc83e7b9_b0152235033065503754542c25f67b377475361604452466",
+        "title": "国产模型API接到Codex之后，还能跑通这10个核心玩法",
+        "parent_folder_id": "folder_7475362543987459",
+        "highlight_content": "",
+        "media_type": 6
+      },
+      {
+        "media_id": "wechatarticle_bb84751278d6332f670bfacfbabe13ad_839274b9fe6a46d7f5e620e263cca1197475361604452466",
+        "title": "拍AI短剧的成本，被这款免费的视频模型打到地板｜实测Pavo",
+        "parent_folder_id": "folder_7475362552375018",
+        "highlight_content": "",
+        "media_type": 6
+      },
+      {
+        "media_id": "wechatarticle_75a2d5309b7fc403b15b6a10dc83e7b9_a2507d711b4a177f1560f4274f06fd317475361604452466",
+        "title": "终于有AI懂老师了！用Qwen3搭建智能作业批改系统的完整实战",
+        "parent_folder_id": "folder_7475362552375018",
+        "highlight_content": "",
+        "media_type": 6
+      },
+      {
+        "media_id": "wechatarticle_bb84751278d6332f670bfacfbabe13ad_251b83334b4b70a082c15352ec4d5f077475361604452466",
+        "title": "全球程序员都在给Anthropic白送钱！官方终于看不下去了",
+        "parent_folder_id": "folder_7475362548168612",
+        "highlight_content": "",
+        "media_type": 6
+      },
+      {
+        "media_id": "wechatarticle_bb84751278d6332f670bfacfbabe13ad_876b5431d53851228a4e94490ab75b967475361604452466",
+        "title": "刚刚，Anthropic发布物理MCP：Claude开始接管真实世界",
+        "parent_folder_id": "folder_7475362560763829",
+        "highlight_content": "",
+        "media_type": 6
+      },
+      {
+        "media_id": "weburl_bb84751278d6332f670bfacfbabe13ad_d184edb1c97582870365cd4363c539337475361604452466",
+        "title": "App unavailable in region | Claude by Anthropic-Claude",
+        "parent_folder_id": "folder_7475362548180236",
+        "highlight_content": "",
+        "media_type": 2
+      },
+      {
+        "media_id": "wechatarticle_75a2d5309b7fc403b15b6a10dc83e7b9_8f00049ce51df911f8b445f9e921f3517475361604452466",
+        "title": "cc最被低估的一个技巧：问卷工具",
+        "parent_folder_id": "folder_7475362564944572",
+        "highlight_content": "",
+        "media_type": 6
+      },
+      {
+        "media_id": "wechatarticle_75a2d5309b7fc403b15b6a10dc83e7b9_a0bc3f4f8517394943ec5948e7102e867475361604452466",
+        "title": "Anthropic创始人行动手册：打造一家AI-Native创业公司（附36页中文PDF）",
+        "parent_folder_id": "folder_7475362564944572",
+        "highlight_content": "",
+        "media_type": 6
+      },
+      {
+        "media_id": "wechatarticle_bb84751278d6332f670bfacfbabe13ad_4b2ca55e6f88cd8a9b9b1b01fd67b4fb7475361604452466",
+        "title": "Seedance2.5能否击败H3？在LibTV深度实测！",
+        "parent_folder_id": "folder_7475362552375018",
+        "highlight_content": "",
+        "media_type": 6
+      },
+      {
+        "media_id": "weburl_bb84751278d6332f670bfacfbabe13ad_9119c17782261b984d5c124a9d87a4757475361604452466",
+        "title": "router-for-me/CLIProxyAPI",
+        "parent_folder_id": "folder_7475362552375018",
+        "highlight_content": "",
+        "media_type": 2
+      },
+      {
+        "media_id": "wechatarticle_bb84751278d6332f670bfacfbabe13ad_2c6df9ccd638b6765f38d6ca8b0c35c27475361604452466",
+        "title": "最新扣子(coze)实战应用工作流: Deepseek + Coze + 飞书,批量二创网络热搜口播文案",
+        "parent_folder_id": "folder_7479057126011450",
+        "highlight_content": "",
+        "media_type": 6
+      },
+      {
+        "media_id": "markdown_bb84751278d6332f670bfacfbabe13ad_ce7a327a0e94a2d2180eb1109cd757f17475361604452466",
+        "title": "[废-首版降级]index-tts_index-tts.md（GitHub API 限流导致内容为空，请忽略）",
+        "parent_folder_id": "folder_7480871619671449",
+        "highlight_content": "",
+        "media_type": 7
+      },
+      {
+        "media_id": "weburl_bb84751278d6332f670bfacfbabe13ad_b34af6f45480901222dcc8dba01b9ea47475361604452466",
+        "title": "anthropics/k12-teacher-skills",
+        "parent_folder_id": "folder_7480871619671449",
+        "highlight_content": "",
+        "media_type": 2
+      },
+      {
+        "media_id": "wechatarticle_bb84751278d6332f670bfacfbabe13ad_20a6e46078bb0936477c852045e11ccd7475361604452466",
+        "title": "最新扣子(coze)实战应用工作流:能变现小红书批量\"精美表情包\"生成器制作流程,完成保姆级教程 快来瞅瞅吧",
+        "parent_folder_id": "folder_7479057126011450",
+        "highlight_content": "",
+        "media_type": 6
+      },
+      {
+        "media_id": "markdown_bb84751278d6332f670bfacfbabe13ad_5cc6fd200dee3140340ecffd4dfd34347475361604452466",
+        "title": "anthropics_k12-teacher-skills_降级版.md",
+        "parent_folder_id": "folder_7475362560763829",
+        "highlight_content": "",
+        "media_type": 7
+      },
+      {
+        "media_id": "wechatarticle_75a2d5309b7fc403b15b6a10dc83e7b9_61aeb63b95bc5b32cf8cfc09f7e11b5e7475361604452466",
+        "title": "最强OCR竟然不是DeepSeek、Paddle！HuggingFace新作：六大顶尖开源OCR模型横评！继DS后又杀出匹黑马！",
+        "parent_folder_id": "folder_7475362552363668",
+        "highlight_content": "",
+        "media_type": 6
+      },
+      {
+        "media_id": "wechatarticle_75a2d5309b7fc403b15b6a10dc83e7b9_5ddb063ef0667ef57c2066650e4e79797475361604452466",
+        "title": "Google Antigravity 不到两天提示词被破解，顶级Web生成原理揭晓",
+        "parent_folder_id": "folder_7475362560753349",
+        "highlight_content": "",
+        "media_type": 6
+      },
+      {
+        "media_id": "wechatarticle_75a2d5309b7fc403b15b6a10dc83e7b9_9ca17efc8b36d52c1543b36457c360cd7475361604452466",
+        "title": "今天给大家推荐两个开源项目：1. happyhttps://github.com/slopus/happy2. Paseohttps://github.com/getpaseo/paseo这两个项目主要干啥的呢，说白了就是可以让你在手机端进行 AI 编程，支持主流 AI 编程工具如 Claude Code，CodeX 等。它的使用场景也很简单，比如如果你在公司跑一个 AI 项目，但是还没跑完，这时候要去厕所，或者下班坐地铁，那么可以直接打开手机，远程控制你的电脑继续工作。我亲自使用下来，方便确实方便，酷也特别酷。但是我前面就说，AI 这玩意有毒，真的停不下来，简直是上瘾。感觉我的生活已经被 AI 主导了，但是以前上个厕所蹲个坑可以刷刷视频放松下，自从有了这玩意，连上厕所的时间，AI 都给我霸占了，我现在已经完全沦为 AI 的牛马了。所以亲自试用下来，这玩意是好东西，但是我不那么推荐。但是为什么今天还要推荐给大家呢？因为大家如果跟我一样都沦为 AI 的牛马，那么在 AI 这条不归路上，我就不孤单了[旺柴]",
+        "parent_folder_id": "folder_7475362564944572",
+        "highlight_content": "",
+        "media_type": 6
+      },
+      {
+        "media_id": "wechatarticle_75a2d5309b7fc403b15b6a10dc83e7b9_7ebe05927ce1383caafb864a4e9579537475361604452466",
+        "title": "20 个我最爱的神级 AI 编程扩展，堪比外挂，直接起飞 🛫☀️ MCP服务类MCP类似于给AI装上各种外挂，让它能连接外部工具和数据源。1、Firecrawl：让AI搜索网页、自动抓取和理解网页内容2、Brave Search MCP：让AI进行注重隐私地网络搜索，支持图片视频等多类内容搜索3、Context7：帮AI获取最新技术文档，避免过时的写法4、EdgeOne Pages MCP：让AI自动帮你部署项目，生成 URL5、GitHub MCP：让AI直接操作代码仓库，搜项目、看star、分析提交记录6、COS MCP：让AI直接操作对象存储（类似网盘），保存和下载共享文件7、Web to MCP：点击网页元素就能让AI生成对应代码，比给AI截图更准确8、Chrome DevTools MCP：控制浏览器进行调试，分析网站加载慢的原因、自动填写表单等🌙 IDE扩展插件类9、Claude Code 官方扩展：在代码编辑器中直接使用，提供图形界面，支持多会话并行10、GitLens：可视化查看Git代码修改历史，出Bug时能快速找到凶手11、Office Viewer：在编辑器里直接预览MD、Excel、Word 等各种文档，不用来回切换窗口12、ESLint：代码质量检查工具，实时检查代码问题并给出修复建议13、Prettier：代码格式化工具，保证整个项目代码风格一致14、Error Lens：让错误信息直接高亮显示在代码行尾，一眼就能看到哪里有问题15、Console Ninja：在编辑器里直接看到console.log输出结果，不用切换到浏览器查看⭐️ 跨编辑器通用工具16、Spec-kit：GitHub推出的规范驱动开发框架，先写规范文档，AI严格遵守规范生成代码，适合大型新项目17、OpenSpec：轻量的规范驱动开发框架，每次改功能都先写变更提案再实现，让文档和代码始终同步18、Agent Skills：Anthropic官方AI技能系统，把复杂任务打包成技能，安装后 AI 就能立刻学会19、Superpowers：让AI变得更专业的软件开发流程，AI会先问清楚需求、出设计方案、制定执行计划，最后才分步骤实现20、AIChat：AI命令行助手，能把自然语言转换成可执行命令，再也不用记命令了收藏起来，按需安装，用好这些工具，能大幅提高效率和代码质量。一些对你有用的资源：👉🏻 100+ 编程学习路线/实战项目/求职指导 codefather.cn👉🏻 100+ 简历模板 laoyujianli.com👉🏻 300+ 企业面试题库 mianshiya.com👉🏻 500+ AI 资源大全 ai.codefather.cn👉🏻 1 对 1 模拟面试 ai.mianshiya.com👉🏻 动画学算法教程 algo.codefather.cn↓ 完整版",
+        "parent_folder_id": "folder_7475362564944572",
+        "highlight_content": "",
+        "media_type": 6
+      }
+    ],
+    "pages": 1,
+    "stopReason": "SEARCH_RESPONSE_NO_PAGINATION_FIELDS; completeness not established"
+  }
+]

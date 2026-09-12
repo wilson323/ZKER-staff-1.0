@@ -1,0 +1,353 @@
+{
+  "retrievedAt": "2026-09-11T23:55:14.187794+00:00",
+  "operation": "get_knowledge_list",
+  "request": {
+    "knowledge_base_id": "-v0uVQmR3R54LtoVzNkzAz2ug-pWSkJgJMP2wmztuFo=",
+    "cursor": "CDI=",
+    "limit": 50
+  },
+  "exitCode": 0,
+  "response": {
+    "code": 0,
+    "msg": "success",
+    "data": {
+      "knowledge_list": [
+        {
+          "media_id": "wechatarticle_8518e6c23c3fdd4a0bd762e3d5bfa0cb_dbf14cf96ffde41ba58ccdffd2a31c7d7435298417965424",
+          "title": "Harness 刚火，可能就要成为过去时了｜Hao好聊论文",
+          "parent_folder_id": "7435298417965424",
+          "tags": [],
+          "media_type": 6
+        },
+        {
+          "media_id": "weburl_8518e6c23c3fdd4a0bd762e3d5bfa0cb_cece43d75662f518b9bea7f22b1b319c7435298417965424",
+          "title": "My AI Adoption Journey-Mitchell Hashimoto",
+          "parent_folder_id": "7435298417965424",
+          "tags": [],
+          "media_type": 2
+        },
+        {
+          "media_id": "wechatarticle_8518e6c23c3fdd4a0bd762e3d5bfa0cb_0a9bc9825534c5a0059fe46ad74331cf7435298417965424",
+          "title": "Karpathy知识库「LLM Wiki」火爆了，全网围观讨论",
+          "parent_folder_id": "7435298417965424",
+          "tags": [],
+          "media_type": 6
+        },
+        {
+          "media_id": "weburl_8518e6c23c3fdd4a0bd762e3d5bfa0cb_25dbd3ea6289ebf3f2b7b7f6b019f1627435298417965424",
+          "title": "Andrej Karpathy 的 Claude Code 使用原则，被整理成了 CLAUDE.md | andrej-karpathy-skills，9.5k 星，…-知乎想法",
+          "parent_folder_id": "7435298417965424",
+          "tags": [],
+          "media_type": 2
+        },
+        {
+          "media_id": "weburl_8518e6c23c3fdd4a0bd762e3d5bfa0cb_aee836fb52590bc1678a7ee7b590ac997435298417965424",
+          "title": "你是在哪一刻感觉到AI时代真的到来了？ - Yixiao Huang 的回答-知乎回答",
+          "parent_folder_id": "7435298417965424",
+          "tags": [],
+          "media_type": 2
+        },
+        {
+          "media_id": "wechatarticle_8518e6c23c3fdd4a0bd762e3d5bfa0cb_46326ae7c6be10864ad4bdaa66a799147435298417965424",
+          "title": "Karpathy 亲手终结了RAG的草莽时代",
+          "parent_folder_id": "7435298417965424",
+          "tags": [],
+          "media_type": 6
+        },
+        {
+          "media_id": "weburl_8518e6c23c3fdd4a0bd762e3d5bfa0cb_6911aedf6a2038c1815dc331ede7ff8b7435298417965424",
+          "title": "谷歌新出的 DESIGN.md，可能是今年对大家最友好的东西-知乎专栏",
+          "parent_folder_id": "7435298417965424",
+          "tags": [],
+          "media_type": 2
+        },
+        {
+          "media_id": "weburl_8518e6c23c3fdd4a0bd762e3d5bfa0cb_29934c16938989407217d1837badf6957435298417965424",
+          "title": "Claude Code + OpenSpec + Superpowers：AI 协同开发实战指南-知乎专栏",
+          "parent_folder_id": "7435298417965424",
+          "tags": [],
+          "media_type": 2
+        },
+        {
+          "media_id": "weburl_8518e6c23c3fdd4a0bd762e3d5bfa0cb_be58b591be9af15a818acbd4f3d523bf7435298417965424",
+          "title": "AI First：把自己从执行者变成调度者-知乎专栏",
+          "parent_folder_id": "7435298417965424",
+          "tags": [],
+          "media_type": 2
+        },
+        {
+          "media_id": "weburl_8518e6c23c3fdd4a0bd762e3d5bfa0cb_809ad8a84c114bfccf6aa1518441c7137435298417965424",
+          "title": "人工智能（AI）真的会带来大规模失业吗？ - riba2534 的回答-知乎回答",
+          "parent_folder_id": "7435298417965424",
+          "tags": [],
+          "media_type": 2
+        },
+        {
+          "media_id": "weburl_8518e6c23c3fdd4a0bd762e3d5bfa0cb_b609132da45ef66523b2a40fb241951f7435298417965424",
+          "title": "Checking your browser...",
+          "parent_folder_id": "7435298417965424",
+          "tags": [],
+          "media_type": 2
+        },
+        {
+          "media_id": "weburl_8518e6c23c3fdd4a0bd762e3d5bfa0cb_ea6aa38bf0faa244b6c95605185da9377435298417965424",
+          "title": "Harness Engineering：当工程师不再写代码-知乎专栏",
+          "parent_folder_id": "7435298417965424",
+          "tags": [],
+          "media_type": 2
+        },
+        {
+          "media_id": "weburl_8518e6c23c3fdd4a0bd762e3d5bfa0cb_87b29765fa2a5a5a23c3f67d5aa3083d7435298417965424",
+          "title": "Harness Engineering的本质是什么？ - Chaspark茶思屋 的回答-知乎回答",
+          "parent_folder_id": "7435298417965424",
+          "tags": [],
+          "media_type": 2
+        },
+        {
+          "media_id": "weburl_8518e6c23c3fdd4a0bd762e3d5bfa0cb_1ea17641c6c7cdbb4e471c862a37a96b7435298417965424",
+          "title": "Pretext：值得关注的文本排版引擎 - guangzan",
+          "parent_folder_id": "7435298417965424",
+          "tags": [],
+          "media_type": 2
+        },
+        {
+          "media_id": "weburl_8518e6c23c3fdd4a0bd762e3d5bfa0cb_4a7466b77973c2853e2dc63c7a420fae7435298417965424",
+          "title": "AutoResearch by Karpathy and the Future of Autonomous AI Research-MLJAR",
+          "parent_folder_id": "7435298417965424",
+          "tags": [],
+          "media_type": 2
+        },
+        {
+          "media_id": "weburl_8518e6c23c3fdd4a0bd762e3d5bfa0cb_0d778a36adb02326ca787a381b86bc237435298417965424",
+          "title": "Andrej Karpathy's Autoresearch: AI Agents Running Experiments Overnight-Andrej Karpathy's Autoresearch: AI Agents Running Experiments Overnight",
+          "parent_folder_id": "7435298417965424",
+          "tags": [],
+          "media_type": 2
+        },
+        {
+          "media_id": "weburl_8518e6c23c3fdd4a0bd762e3d5bfa0cb_5bb39a1b315b2a4b327d1f23c19299e07435298417965424",
+          "title": "Harness Engineering的本质是什么？ - Allen 的回答-知乎回答",
+          "parent_folder_id": "7435298417965424",
+          "tags": [],
+          "media_type": 2
+        },
+        {
+          "media_id": "note_8518e6c23c3fdd4a0bd762e3d5bfa0cb_74443938626333277435298417965424",
+          "title": "AI时代高维出路：从执行者到统摄者的哲学跃迁与组织共生",
+          "parent_folder_id": "7435298417965424",
+          "tags": [],
+          "media_type": 11
+        },
+        {
+          "media_id": "note_8518e6c23c3fdd4a0bd762e3d5bfa0cb_74440308414262437435298417965424",
+          "title": "Harness design for long-runnin...",
+          "parent_folder_id": "7435298417965424",
+          "tags": [],
+          "media_type": 11
+        },
+        {
+          "media_id": "weburl_8518e6c23c3fdd4a0bd762e3d5bfa0cb_916d427ce340975022fd808d7d8933b37435298417965424",
+          "title": "GitHub - bigdatasciencegroup/bytedance-deer-flow: An open-source SuperAgent harness that researches, codes, and creates. With the help of sandboxes, memories, tools, skill, subagents and message gateway, it handles different levels of tasks that could take minutes to hours.-GitHub",
+          "parent_folder_id": "7435298417965424",
+          "tags": [],
+          "media_type": 2
+        },
+        {
+          "media_id": "weburl_8518e6c23c3fdd4a0bd762e3d5bfa0cb_197259c49ebaa1736e4aeacab8ef38447435298417965424",
+          "title": "GitHub - deepflowio/deepflow: eBPF Observability - Distributed Tracing and Profiling-GitHub",
+          "parent_folder_id": "7435298417965424",
+          "tags": [],
+          "media_type": 2
+        },
+        {
+          "media_id": "weburl_8518e6c23c3fdd4a0bd762e3d5bfa0cb_182c08e20538d920d6ea0ed21e596c197435298417965424",
+          "title": "Harness capabilities - Docs by LangChain-Docs by LangChain",
+          "parent_folder_id": "7435298417965424",
+          "tags": [],
+          "media_type": 2
+        },
+        {
+          "media_id": "pdf_8518e6c23c3fdd4a0bd762e3d5bfa0cb_7cb2a6726ef6fa8b0d56e7ca6e18daf97435298417965424",
+          "title": "AI Agents in Action.pdf",
+          "parent_folder_id": "7435298417965424",
+          "tags": [],
+          "media_type": 1
+        },
+        {
+          "media_id": "pdf_8518e6c23c3fdd4a0bd762e3d5bfa0cb_208d886c89b16c90d088ea4b278b1b457435298417965424",
+          "title": "Agentic Design Patterns A Hands-On Guide to Building Intelligent Systems.pdf",
+          "parent_folder_id": "7435298417965424",
+          "tags": [],
+          "media_type": 1
+        },
+        {
+          "media_id": "pdf_8518e6c23c3fdd4a0bd762e3d5bfa0cb_12bc51ecdcbcdcc9d1b6000a099529107435298417965424",
+          "title": "Building Embodied AI Systems The Agents, the Architecture Principles, Challenges, and Application Domains.pdf",
+          "parent_folder_id": "7435298417965424",
+          "tags": [],
+          "media_type": 1
+        },
+        {
+          "media_id": "wechatarticle_8518e6c23c3fdd4a0bd762e3d5bfa0cb_0634bc22e2e1c7793a3901e1d9c1317d7435298417965424",
+          "title": "Claude Code作者私藏13条心法，你就是自己的千军万马",
+          "parent_folder_id": "7435298417965424",
+          "tags": [],
+          "media_type": 6
+        },
+        {
+          "media_id": "weburl_8518e6c23c3fdd4a0bd762e3d5bfa0cb_993f8beeea2ca28029107fe68703acd37435298417965424",
+          "title": "GitHub - jnMetaCode/agency-agents-zh: 180 个即插即用的 AI 专家人设（中文版）— 覆盖 17 个部门，支持 Claude Code / OpenClaw / Cursor / Trae 等 11 种工具 | Chinese AI agent personas for dev tools-GitHub",
+          "parent_folder_id": "7435298417965424",
+          "tags": [],
+          "media_type": 2
+        },
+        {
+          "media_id": "wechatarticle_8518e6c23c3fdd4a0bd762e3d5bfa0cb_8a8f76681c97dd3f13a6a56e520b0dc47435298417965424",
+          "title": "给你的OpenClaw装上186个AI专家人格，小龙虾直接起飞",
+          "parent_folder_id": "7435298417965424",
+          "tags": [],
+          "media_type": 6
+        },
+        {
+          "media_id": "pdf_8518e6c23c3fdd4a0bd762e3d5bfa0cb_5b59de39e483b69f8f3d3a34e45bab967435298417965424",
+          "title": "2307.03172v3.pdf",
+          "parent_folder_id": "7435298417965424",
+          "tags": [],
+          "media_type": 1
+        },
+        {
+          "media_id": "weburl_8518e6c23c3fdd4a0bd762e3d5bfa0cb_7af8f2413dd5b2b3a60c6673b07f2bb37435298417965424",
+          "title": "Agent Harness 架构解析：构建生产级 AI 系统-Enterprise Unified LLM API Gateway (One Key for All Models) | n1n.ai",
+          "parent_folder_id": "7435298417965424",
+          "tags": [],
+          "media_type": 2
+        },
+        {
+          "media_id": "note_8518e6c23c3fdd4a0bd762e3d5bfa0cb_74396738235970837435298417965424",
+          "title": "AI工程系统的三个层次",
+          "parent_folder_id": "7435298417965424",
+          "tags": [],
+          "media_type": 11
+        },
+        {
+          "media_id": "weburl_8518e6c23c3fdd4a0bd762e3d5bfa0cb_90f003bf2fd5e03ce5d45a2fdb20c0a87435298417965424",
+          "title": "一人公司内容创业神器：baoyu-skills 实战指南-知乎专栏",
+          "parent_folder_id": "7435298417965424",
+          "tags": [],
+          "media_type": 2
+        },
+        {
+          "media_id": "weburl_8518e6c23c3fdd4a0bd762e3d5bfa0cb_b62c39f57eb1674dd2f6c20c3193ebde7435298417965424",
+          "title": "Hello Claw",
+          "parent_folder_id": "7435298417965424",
+          "tags": [],
+          "media_type": 2
+        },
+        {
+          "media_id": "weburl_8518e6c23c3fdd4a0bd762e3d5bfa0cb_4d34a7a41f329406cf6eaef55bf3d6e87435298417965424",
+          "title": "这个SKILL打通了AI写公众号文章的最后一公里",
+          "parent_folder_id": "7435298417965424",
+          "tags": [],
+          "media_type": 2
+        },
+        {
+          "media_id": "weburl_8518e6c23c3fdd4a0bd762e3d5bfa0cb_a1bf6c60d879242a78135550209868797435298417965424",
+          "title": "知乎 - 知乎",
+          "parent_folder_id": "7435298417965424",
+          "tags": [],
+          "media_type": 2
+        },
+        {
+          "media_id": "wechatarticle_8518e6c23c3fdd4a0bd762e3d5bfa0cb_ed50d052f18fa8313c55123bd11cea017435298417965424",
+          "title": "Martin Fowler深度访谈：软件工程正迎来 40 年来最猛烈的一次地震",
+          "parent_folder_id": "7435298417965424",
+          "tags": [],
+          "media_type": 6
+        },
+        {
+          "media_id": "weburl_8518e6c23c3fdd4a0bd762e3d5bfa0cb_bfcc002aaa53bb5e41ae096d59e69cdf7435298417965424",
+          "title": "OpenClaw接入企业微信智能机器人",
+          "parent_folder_id": "7435298417965424",
+          "tags": [],
+          "media_type": 2
+        },
+        {
+          "media_id": "weburl_8518e6c23c3fdd4a0bd762e3d5bfa0cb_e37e58fa85e064af8c69965fde1630267435298417965424",
+          "title": "GitHub - davidYichengWei/agentic-engineering-framework: 开箱即用、可按项目定制的 AI Coding Agent Skills 框架：提供通用 Workflow、可扩展的项目私有知识、自我学习闭环和问题排查能力，适配任意技术栈和工程场景。兼容主流 Coding Agent。-GitHub",
+          "parent_folder_id": "7435298417965424",
+          "tags": [],
+          "media_type": 2
+        },
+        {
+          "media_id": "note_8518e6c23c3fdd4a0bd762e3d5bfa0cb_74353023270556387435298417965424",
+          "title": "第11章 高级配置（多模型切换/成本优化/性能调优）",
+          "parent_folder_id": "7435298417965424",
+          "tags": [],
+          "media_type": 11
+        },
+        {
+          "media_id": "note_8518e6c23c3fdd4a0bd762e3d5bfa0cb_74353021173400287435298417965424",
+          "title": "第10章 API服务集成（绘图/Notion/视频/语音）",
+          "parent_folder_id": "7435298417965424",
+          "tags": [],
+          "media_type": 11
+        },
+        {
+          "media_id": "note_8518e6c23c3fdd4a0bd762e3d5bfa0cb_74353017440235427435298417965424",
+          "title": "第9章 多平台集成",
+          "parent_folder_id": "7435298417965424",
+          "tags": [],
+          "media_type": 11
+        },
+        {
+          "media_id": "note_8518e6c23c3fdd4a0bd762e3d5bfa0cb_74353014546428167435298417965424",
+          "title": "第8章 Skills扩展：让AI从\"能说\"到\"能做\"",
+          "parent_folder_id": "7435298417965424",
+          "tags": [],
+          "media_type": 11
+        },
+        {
+          "media_id": "note_8518e6c23c3fdd4a0bd762e3d5bfa0cb_74353004228425517435298417965424",
+          "title": "第5章 知识库管理",
+          "parent_folder_id": "7435298417965424",
+          "tags": [],
+          "media_type": 11
+        },
+        {
+          "media_id": "note_8518e6c23c3fdd4a0bd762e3d5bfa0cb_74353000663036227435298417965424",
+          "title": "第4章：本地文件管理",
+          "parent_folder_id": "7435298417965424",
+          "tags": [],
+          "media_type": 11
+        },
+        {
+          "media_id": "note_8518e6c23c3fdd4a0bd762e3d5bfa0cb_74352998146675467435298417965424",
+          "title": "第3章：快速上手",
+          "parent_folder_id": "7435298417965424",
+          "tags": [],
+          "media_type": 11
+        },
+        {
+          "media_id": "note_8518e6c23c3fdd4a0bd762e3d5bfa0cb_74352985060213877435298417965424",
+          "title": "三层记忆系统",
+          "parent_folder_id": "7435298417965424",
+          "tags": [],
+          "media_type": 11
+        }
+      ],
+      "is_end": true,
+      "next_cursor": "CGA=",
+      "current_path": [
+        {
+          "folder_id": "7435298417965424",
+          "name": "驾驭AI - Harness",
+          "file_number": "0",
+          "folder_number": "0",
+          "parent_folder_id": "",
+          "is_top": false
+        }
+      ],
+      "searched_tags": []
+    }
+  }
+}

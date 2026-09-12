@@ -1,0 +1,39 @@
+{
+  "retrievedAt": "2026-09-11T23:55:17.766690+00:00",
+  "operation": "search_knowledge",
+  "request": {
+    "knowledge_base_id": "3sgnGtCCpe14DHMqlX3DfPtVGW0arxL77eelST1-ibc=",
+    "cursor": "",
+    "query": "Agent"
+  },
+  "exitCode": 0,
+  "response": {
+    "code": 0,
+    "msg": "success",
+    "data": {
+      "info_list": [
+        {
+          "media_id": "weburl_e20968f5446cc8239705c4154c1542cd_c02898e1e1b7f64c8e04d66c5981f9597282281571958196",
+          "title": "Lovart | The World’s First Design Agent",
+          "parent_folder_id": "folder_7323005654951740",
+          "highlight_content": "",
+          "media_type": 2
+        },
+        {
+          "media_id": "weburl_e20968f5446cc8239705c4154c1542cd_db490430dee1e4bcc325fb41c07e280d7282281571958196",
+          "title": "RoboNeo - 专注影像生产力的AI Agent",
+          "parent_folder_id": "folder_7323005654951740",
+          "highlight_content": "",
+          "media_type": 2
+        },
+        {
+          "media_id": "wechatarticle_e20968f5446cc8239705c4154c1542cd_67760ba5adc3d958f28a49a6aa40591d7282281571958196",
+          "title": "商家端PC Agent框架重构：从“对话问答”到“任务闭环”",
+          "parent_folder_id": "folder_7323005654951740",
+          "highlight_content": "",
+          "media_type": 6
+        }
+      ]
+    }
+  }
+}

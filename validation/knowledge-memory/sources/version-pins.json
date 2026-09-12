@@ -1,0 +1,50 @@
+[
+  {
+    "repo": "qdrant/qdrant",
+    "ref": "v1.19.1",
+    "url": "https://api.github.com/repos/qdrant/qdrant/commits/v1.19.1",
+    "exit": 0,
+    "sha": "6ab21cac18ebb6f4ae29102c7f8f5cc11affd5de",
+    "date": "2026-09-03T12:36:18Z"
+  },
+  {
+    "repo": "docling-project/docling",
+    "ref": "v2.126.0",
+    "url": "https://api.github.com/repos/docling-project/docling/commits/v2.126.0",
+    "exit": 0,
+    "sha": "8071466f2c9f844d630dac879b3988dfb66e4277",
+    "date": "2026-09-04T15:47:31Z"
+  },
+  {
+    "repo": "pgvector/pgvector",
+    "ref": "v0.8.2",
+    "url": "https://api.github.com/repos/pgvector/pgvector/commits/v0.8.2",
+    "exit": 0,
+    "sha": "cab9da72c04353f143bb06b42ab70a403daac64a",
+    "date": "2026-02-25T18:46:57Z"
+  },
+  {
+    "repo": "apache/tika",
+    "ref": "3.3.2",
+    "url": "https://api.github.com/repos/apache/tika/commits/3.3.2",
+    "exit": 0,
+    "sha": "b8a6916eab70ccdb5d4551c69be1a46af29c2cff",
+    "date": "2026-07-16T17:25:27Z"
+  },
+  {
+    "repo": "weaviate/weaviate",
+    "ref": "HEAD",
+    "url": "https://api.github.com/repos/weaviate/weaviate/commits/HEAD",
+    "exit": 0,
+    "sha": "77063adc7497182f688a0bcefa099c9232f6e6e8",
+    "date": "2026-09-11T14:34:43Z"
+  },
+  {
+    "repo": "VectifyAI/PageIndex",
+    "ref": "HEAD",
+    "url": "https://api.github.com/repos/VectifyAI/PageIndex/commits/HEAD",
+    "exit": 0,
+    "sha": "c75800506c43c6d0b147d3032e291867f190e159",
+    "date": "2026-09-11T09:36:02Z"
+  }
+]

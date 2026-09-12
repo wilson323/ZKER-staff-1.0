@@ -1,0 +1,413 @@
+#  7.1k Star！RAGFlow：最新开源OCR+深度文档理解的RAG引擎、大海捞针测试、降低幻觉、服务化API集成进业务！
+
+原创  Aitrainee  Aitrainee  AI进修生
+
+_2024年05月10日 17:06_ __ _ _ _ _ _ 浙江  _
+
+在小说阅读器读本章
+
+去阅读
+
+> Aitrainee | 公众号：AI进修生
+
+> 🌟RAGFlow 是一个  基于Deepdoc（  深度文档理解）  的开源 RAG（检索增强生成）引擎，  仅仅一月，Github斩获近7.1k
+> Star！
+>
+>  
+>
+>
+> RAGFlow  大大提升知识库RAG的召回率，  不  仅智能，而且可控可解释、  真正在无限上下文（token）的场景下快速完成大海捞针测试、
+> 提供易用的 API，可以轻松集成到各类企业系统。
+
+###  体验地址：https://ragflow.io/
+
+为了确保大家了解一下“先验知识“，这里解释一下：什么是RAG？
+
+###  什么是RAG？
+
+**RAG**
+，也就是检索增强生成，听上去可能有点科技感，但其实这个概念相当直观。它基本上就是通过一个巧妙的方法来让大型语言模型（LLM）生成更精准、更有用的回答。
+
+这个过程开始于一种特殊的数据库，我们可以称之为“垂直领域数据库”。当你向LLM提出一个问题时，RAG不是直接回答，而是先到这个数据库里去搜索与你的问题最相关的信息。这就好比你问了一个复杂的问题，RAG先跑去图书馆查资料。
+
+接下来的步骤是关键：RAG把这些检索到的信息整合成一个精细的提示模板。然后，这个模板和你的原始问题一起被送到LLM。有了这个“答题纲要”，LLM就能够根据这些详细的信息给出一个更加全面和准确的答案。
+
+简单来说，RAG的工作就是作为一个信息的搜集者和整合者，帮助LLM更好地理解和回应提问。一句话总结就是：RAG = 检索技术 +
+LLM提示。就像你问一个问题，RAG先从各种数据源中找到相关信息，然后将这些信息融入到LLM的提示中，最后由LLM给出一个精准的回答。
+
+通过这种方式，RAG实际上是在扩展LLM的知识边界，使其不仅依赖于训练时学到的信息，还能动态地利用最新、最相关的数据。这就大大提升了回答的质量和实用性，让机器的回答不再是冷冰冰的重复，而是真正有帮助的知识分享。
+
+![](https://mmbiz.qpic.cn/mmbiz_png/Sn1tJhGWmibtyxEGjHtTX7XLAxhFvLL5karzC8fbrK5N0zkUejC4XugU8Mtd0xvT6P0HpeJmhHInrF5KXgpmRCg/640?wx_fmt=png&from=appmsg)
+
+  
+
+###  💡 RAGFlow 是什么？
+
+首先，RAGFlow 作为一个全面的 RAG 解决方案，使用户能够上传和管理他们的文档。用户可以灵活地上传各种格式的文档，例如
+PDF、Word、PPT、Excel 和 TXT。
+
+通过智能解析，将数据准确录入数据库，允许用户使用任何大型语言模型查询其上传的文档。本质上，RAGFlow 包含以下端到端流程：
+
+![](https://mmbiz.qpic.cn/mmbiz_png/Sn1tJhGWmibtyxEGjHtTX7XLAxhFvLL5k4aTViaszr2AKLhWMFibdiagPewux1y3GPQz9VuqHsZG2x6lu5luOXVgVw/640?wx_fmt=png&from=appmsg)
+
+在处理文档时，RAGFlow 提供了多种选项：问答、简历、纸张、手册、表格、书籍、法律、一般文档等
+
+![](https://mmbiz.qpic.cn/mmbiz_gif/Sn1tJhGWmibtyxEGjHtTX7XLAxhFvLL5kcSNKI3bE4H4YWSHHYq69k7azJeJric3VASLYcabA4nzGWtENFvhVyFQ/640?wx_fmt=gif&from=appmsg)
+
+####  智能文档处理的可视化和可解释性
+
+在智能文档处理系统中，让用户能清楚了解他们上传的文档是如何被处理的非常重要。  比如，系统处理了多少部分，以及如何识别和处理文档中的图表、图形和表格。
+因为基于大型语言模型（LLM）的系统不能保证完全准确，所以提供一个透明的过程让用户可以随时介入和控制，这非常关键。
+
+尤其是处理PDF文档时，因为PDF格式多样且在各个行业中广泛使用，所以保持对处理过程的控制尤其重要。
+ragflow不仅展示处理的最终结果，还允许用户查看文档解析的具体细节。
+
+用户可以通过点击定位到文档中的原始文本，比较原文和处理后的文本之间的差异，并进行必要的编辑和修正，如添加、修改或删除信息。
+这样的设计使得整个处理过程更加透明和可控，帮助用户更好地理解和使用系统。
+
+![](https://mmbiz.qpic.cn/mmbiz_gif/Sn1tJhGWmibtyxEGjHtTX7XLAxhFvLL5kZmMvBjOJOjiahic6OjCBn1vdGufbljxq5gXdNdJrFV0PiaTajtic89Ia0w/640?wx_fmt=gif&from=appmsg)
+
+####  查看 LLM 用于制定答复的原始文本
+
+RAGFlow 是一个综合性的 RAG 系统。目前，许多开源 RAG 系统忽视了 RAG 的关键优势之一：使 LLM
+能够以受控方式响应查询，推广一种理性的、基于证据的方法，消除幻觉。
+
+人们普遍认为，根据模型的能力，LLM可能会遇到幻觉。  在这种情况下，RAG 产品应该随时为用户提供参考，使他们能够查看 LLM 用于制定答复的原始文本。
+
+这就需要生成原始文本的引用链接，使用户能够将鼠标悬停在其上以访问原始内容，包括图表、图表和表格。如果不确定性仍然存在，点击参考文献应该会引导用户看到原始文本，如下图所示：
+
+![](https://mmbiz.qpic.cn/mmbiz_gif/Sn1tJhGWmibtyxEGjHtTX7XLAxhFvLL5k6GBKcTgNbuljNiacdNGtQVUuf6ju9bn7FPtMiajvcHRanQJOX8rJrChQ/640?wx_fmt=gif&from=appmsg)
+
+下面提供Ragflow官方的文档介绍、相关资源、部署教程等，进一步支撑你的行动，以提升本文的帮助力。  
+
+##  🌟 RAGFlow主要功能
+
+###  🍭 **"Quality in, quality out"**
+
+  * •  基于  深度文档理解  ，能够从各类复杂格式的非结构化数据中提取真知灼见。 
+
+  * •  真正在无限上下文（token）的场景下快速完成大海捞针测试。 
+
+###  🍱 **基于模板的文本切片**
+
+  * •  不仅仅是智能，更重要的是可控可解释。 
+
+  * •  多种文本模板可供选择 
+
+###  🌱 **有理有据、最大程度降低幻觉（hallucination）**
+
+  * •  文本切片过程可视化，支持手动调整。 
+
+  * •  有理有据：答案提供关键引用的快照并支持追根溯源。 
+
+###  🍔 **兼容各类异构数据源**
+
+  * •  支持丰富的文件类型，包括 Word 文档、PPT、excel 表格、txt 文件、图片、PDF、影印件、复印件、结构化数据, 网页等。 
+
+###  🛀 **全程无忧、自动化的 RAG 工作流**
+
+  * •  全面优化的 RAG 工作流可以支持从个人应用乃至超大型企业的各类生态系统。 
+
+  * •  大语言模型 LLM 以及向量模型均支持配置。 
+
+  * •  基于多路召回、融合重排序。 
+
+  * •  提供易用的 API，可以轻松集成到各类企业系统。 
+
+##  📌 新增功能
+
+  * •  2024-05-08 集成大模型 DeepSeek 
+
+  * •  2024-04-26 增添了'文件管理'功能. 
+
+  * •  2024-04-19 支持对话 API (  更多  ). 
+
+  * •  2024-04-16 集成嵌入模型  BCEmbedding  和 专为轻型和高速嵌入而设计的  FastEmbed  。 
+
+  * •  2024-04-11 支持用  Xinference  本地化部署大模型。 
+
+  * •  2024-04-10 为‘Laws’版面分析增加了底层模型。 
+
+  * •  2024-04-08 支持用  Ollama  本地化部署大模型。 
+
+  * •  2024-04-07 支持中文界面。 
+
+##  🔎 系统架构
+
+![](https://mmbiz.qpic.cn/mmbiz_png/Sn1tJhGWmibtyxEGjHtTX7XLAxhFvLL5kuIJMOQ84AbqcImKAOzLE0wrMG9NgoibfaeQ3Ynib4nl8j3GuKHyVumqA/640?wx_fmt=png&from=appmsg)
+
+##  🎬 快速开始
+
+###  📝 前提条件
+
+  * •  CPU >= 4 核 
+
+  * •  RAM >= 16 GB 
+
+  * •  Disk >= 50 GB 
+
+  * •  Docker >= 24.0.0 & Docker Compose >= v2.26.1 
+
+> 如果你并没有在本机安装 Docker（Windows、Mac，或者 Linux）, 可以参考文档  Install Docker Engine
+> 自行安装。
+
+###  🚀 启动服务器
+
+  1. 1\.  确保 ` vm.max_map_count ` 不小于 262144 【  更多  】： 
+
+> 如需确认 ` vm.max_map_count ` 的大小： ` $ sysctl vm  .  max_map_count  ` 如果 `
+> vm.max_map_count ` 的值小于 262144，可以进行重置： ` # 这里我们设为 262144:  
+>  $ sudo sysctl  -  w vm  .  max_map_count  =  262144  `
+> 你的改动会在下次系统重启时被重置。如果希望做永久改动，还需要在 **/etc/sysctl.conf** 文件里把 ` vm.max_map_count
+> ` 的值再相应更新一遍： ` vm  .  max_map_count  =  262144  `
+
+  2. 2\.  克隆仓库： 
+    
+        $ git clone https://github.com/infiniflow/ragflow.git
+
+  3. 3\.  进入 **docker** 文件夹，利用提前编译好的 Docker 镜像启动服务器： 
+    
+        $ cd ragflow/docker  
+    $ chmod +x ./entrypoint.sh  
+    $ docker compose -f docker-compose-CN.yml up -d
+
+> 请注意，运行上述命令会自动下载 RAGFlow 的开发版本 docker 镜像。如果你想下载并运行特定版本的 docker 镜像，请在
+> docker/.env 文件中找到 RAGFLOW_VERSION 变量，将其改为对应版本。例如
+> RAGFLOW_VERSION=v0.5.0，然后运行上述命令。
+
+> 核心镜像文件大约 9 GB，可能需要一定时间拉取。请耐心等待。
+
+  4. 4\.  服务器启动成功后再次确认服务器状态： 
+    
+        $ docker logs -f ragflow-server
+
+出现以下界面提示说明服务器启动成功：
+
+    
+            ____                 ______ __  
+       / __ \ ____ _ ____ _ / ____// /____  _      __  
+      / /_/ // __ `// __ `// /_   / // __ \| | /| / /  
+     / _, _// /_/ // /_/ // __/  / // /_/ /| |/ |/ /  
+    /_/ |_| \__,_/ \__, //_/    /_/ \____/ |__/|__/  
+                  /____/  
+      
+     * Running on all addresses (0.0.0.0)  
+     * Running on http://127.0.0.1:9380  
+     * Running on http://x.x.x.x:9380  
+     INFO:werkzeug:Press CTRL+C to quit
+
+> 如果您跳过这一步系统确认步骤就登录 RAGFlow，你的浏览器有可能会提示 ` network anomaly ` 或 ` 网络异常 ` ，因为
+> RAGFlow 可能并未完全启动成功。
+
+  5. 5\.  在你的浏览器中输入你的服务器对应的 IP 地址并登录 RAGFlow。 
+
+> 上面这个例子中，您只需输入 http://IP_OF_YOUR_MACHINE 即可：未改动过配置则无需输入端口（默认的 HTTP 服务端口 80）。
+
+  6. 6\.  在  service_conf.yaml  文件的 ` user_default_llm ` 栏配置 LLM factory，并在 ` API_KEY ` 栏填写和你选择的大模型相对应的 API key。 
+
+> 详见 ./docs/llm_api_key_setup.md。
+
+好戏开始，接着奏乐接着舞！
+
+##  🔧 系统配置
+
+系统配置涉及以下三份文件：
+
+  * •  .env  ：存放一些基本的系统环境变量，比如 ` SVR_HTTP_PORT ` 、 ` MYSQL_PASSWORD ` 、 ` MINIO_PASSWORD ` 等。 
+
+  * •  service_conf.yaml  ：配置各类后台服务。 
+
+  * •  docker-compose-CN.yml  : 系统依赖该文件完成启动。 
+
+请务必确保  .env  文件中的变量设置与  service_conf.yaml  文件中的配置保持一致！
+
+> ./docker/README  文件提供了环境变量设置和服务配置的详细信息。请 **一定要** 确保  ./docker/README
+> 文件当中列出来的环境变量的值与  service_conf.yaml  文件当中的系统配置保持一致。
+
+如需更新默认的 HTTP 服务端口(80), 可以在  docker-compose-CN.yml  文件中将配置 ` 80:80 ` 改为 `
+<YOUR_SERVING_PORT>:80 ` 。
+
+> 所有系统配置都需要通过系统重启生效：
+>
+> ` $ docker compose  -  f docker  -  compose  -  CN  .  yml up  -  d  `
+
+##  🛠️ 源码编译、安装 Docker 镜像
+
+如需从源码安装 Docker 镜像：
+
+    
+    
+    $ git clone https://github.com/infiniflow/ragflow.git  
+    $ cd ragflow/  
+    $ docker build -t infiniflow/ragflow:v0.5.0 .  
+    $ cd ragflow/docker  
+    $ chmod +x ./entrypoint.sh  
+    $ docker compose up -d
+
+##  🛠️ 源码启动服务
+
+如需从源码启动服务，请参考以下步骤：
+
+  1. 1\.  克隆仓库 
+
+    
+    
+    $ git clone https://github.com/infiniflow/ragflow.git  
+    $ cd ragflow/
+
+  1. 2\.  创建虚拟环境（确保已安装 Anaconda 或 Miniconda） 
+
+    
+    
+    $ conda create -n ragflow python=3.11.0  
+    $ conda activate ragflow  
+    $ pip install -r requirements.txt
+
+如果cuda > 12.0，需额外执行以下命令：
+
+    
+    
+    $ pip uninstall -y onnxruntime-gpu  
+    $ pip install onnxruntime-gpu --extra-index-url https://aiinfra.pkgs.visualstudio.com/PublicPackages/_packaging/onnxruntime-cuda-12/pypi/simple/
+
+  1. 3\.  拷贝入口脚本并配置环境变量 
+
+    
+    
+    $ cp docker/entrypoint.sh .  
+    $ vi entrypoint.sh
+
+使用以下命令获取python路径及ragflow项目路径：
+
+    
+    
+    $ which python  
+    $ pwd
+
+将上述 ` which python ` 的输出作为 ` PY ` 的值，将 ` pwd ` 的输出作为 ` PYTHONPATH ` 的值。
+
+` LD_LIBRARY_PATH ` 如果环境已经配置好，可以注释掉。
+
+    
+    
+    # 此处配置需要按照实际情况调整，两个export为新增配置  
+    PY=${PY}  
+    export PYTHONPATH=${PYTHONPATH}  
+    # 可选：添加Hugging Face镜像  
+    export HF_ENDPOINT=https://hf-mirror.com
+
+  1. 4\.  启动基础服务 
+
+    
+    
+    $ cd docker  
+    $ docker compose -f docker-compose-base.yml up -d 
+
+  1. 5\.  检查配置文件 确保 **docker/.env** 中的配置与 **conf/service_conf.yaml** 中配置一致， **service_conf.yaml** 中相关服务的IP地址与端口应该改成本机IP地址及容器映射出来的端口。 
+
+  2. 6\.  启动服务 
+
+    
+    
+    $ chmod +x ./entrypoint.sh  
+    $ bash ./entrypoint.sh
+
+  1. 7\.  启动WebUI服务 
+
+    
+    
+    $ cd web  
+    $ npm install --registry=https://registry.npmmirror.com --force  
+    $ vim .umirc.ts  
+    # 修改proxy.target为127.0.0.1:9380  
+    $ npm run dev 
+
+  1. 8\.  部署WebUI服务 
+
+    
+    
+    $ cd web  
+    $ npm install --registry=https://registry.npmmirror.com --force  
+    $ umi build  
+    $ mkdir -p /ragflow/web  
+    $ cp -r dist /ragflow/web  
+    $ apt install nginx -y  
+    $ cp ../docker/nginx/proxy.conf /etc/nginx  
+    $ cp ../docker/nginx/nginx.conf /etc/nginx  
+    $ cp ../docker/nginx/ragflow.conf /etc/nginx/conf.d  
+    $ systemctl start nginx
+
+  
+
+参考链接：  
+
+项目存储库：https://github.com/infiniflow/ragflow
+
+项目网站：https://ragflow.io
+
+在线演示：https://demo.ragflow.io
+
+  
+
+**知音难求，自我修炼亦艰**
+
+抓住前沿技术的机遇，与我们一起成为创新的超级个体
+
+**（把握AIGC时代的个人力量）**
+
+**![](https://mmbiz.qpic.cn/mmbiz_png/Sn1tJhGWmibv5VakJrbpOqXWrhE4BzVOxq7ue54biaeagoWxCKtrrvnmYxyiaxVicXh01Hj9e8nAIqVM0iaZgia4mVAw/640?wx_fmt=png&from=appmsg)
+**
+
+— **完** —
+
+** 点这里  👇  关注我，记得标星哦～  **
+
+**  
+**
+
+**一键三连「分享」、「点赞」和「在看」**
+
+**科技前沿进展日日相见 ~**
+
+![](https://mmbiz.qpic.cn/mmbiz_svg/g9RQicMD01M0tYoRQT2cMQRmPS5ZDyrrfzeksiay90KaDzlGBH61icqHxmgFKfvfXtVuwTHV740CDLAaXU1LIfZyoJEpYKcRIiaE/640?wx_fmt=svg&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1)
+
+  
+
+  
+
+预览时标签不可点
+
+修改于
+
+微信扫一扫  
+关注该公众号
+
+知道了
+
+微信扫一扫  
+使用小程序
+
+****
+
+取消  允许
+
+****
+
+取消  允许
+
+****
+
+取消  允许
+
+×  分析
+
+__
+
+![作者头像](http://mmbiz.qpic.cn/mmbiz_png/Sn1tJhGWmibtFwbmUBxBMPV4xkRIPw473KL1kN2sx944Brex67ujFxdH98qd4YtmI6ceaMX0bcFtUibEZM7pKsdw/0?wx_fmt=png)
+
+微信扫一扫可打开此内容，  
+使用完整服务
+
+：  ，  ，  ，  ，  ，  ，  ，  ，  ，  ，  ，  ，  。  视频  小程序  赞  ，轻点两下取消赞  在看  ，轻点两下取消在看
+分享  留言  收藏  听过
+

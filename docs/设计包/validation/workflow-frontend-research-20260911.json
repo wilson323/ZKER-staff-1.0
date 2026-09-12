@@ -1,0 +1,536 @@
+{
+  "date": "2026-09-11",
+  "status": "RESEARCHED_CANDIDATES_NOT_INTEGRATED",
+  "scope": "Research and design artifacts only; no dependency installation or product edits",
+  "goal": "核对开源工作流和成熟前端的适配性",
+  "acceptance_criteria": [
+    "当前代码对照",
+    "官方仓库与许可",
+    "成熟度与集成代价分开",
+    "不虚报版本兼容验证"
+  ],
+  "current_node": "delivery",
+  "completed_nodes": [
+    "local_sources",
+    "official_sources",
+    "candidate_comparison",
+    "report"
+  ],
+  "failed_nodes": [],
+  "risks": [
+    "Npm registry metadata unavailable; frontend compatible lock set not verified",
+    "No engine executed"
+  ],
+  "approvals": [],
+  "nodes": [
+    {
+      "id": "local_sources",
+      "objective": "核对现有技术栈与流程对象",
+      "preconditions": [],
+      "action": "核对现有技术栈与流程对象",
+      "tool_or_skill": "read-only tools",
+      "expected_output": "source evidence or report",
+      "validation": "source links and metadata",
+      "success_condition": "conclusion distinguished from unverified integration",
+      "failure_path": "record limitation",
+      "rollback_or_compensation": "no product mutation"
+    },
+    {
+      "id": "official_sources",
+      "objective": "读取官方元数据与关键接口",
+      "preconditions": [],
+      "action": "读取官方元数据与关键接口",
+      "tool_or_skill": "read-only tools",
+      "expected_output": "source evidence or report",
+      "validation": "source links and metadata",
+      "success_condition": "conclusion distinguished from unverified integration",
+      "failure_path": "record limitation",
+      "rollback_or_compensation": "no product mutation"
+    },
+    {
+      "id": "candidate_comparison",
+      "objective": "比较复用范围和现有架构代价",
+      "preconditions": [],
+      "action": "比较复用范围和现有架构代价",
+      "tool_or_skill": "read-only tools",
+      "expected_output": "source evidence or report",
+      "validation": "source links and metadata",
+      "success_condition": "conclusion distinguished from unverified integration",
+      "failure_path": "record limitation",
+      "rollback_or_compensation": "no product mutation"
+    },
+    {
+      "id": "report",
+      "objective": "交付选型建议",
+      "preconditions": [],
+      "action": "交付选型建议",
+      "tool_or_skill": "read-only tools",
+      "expected_output": "source evidence or report",
+      "validation": "source links and metadata",
+      "success_condition": "conclusion distinguished from unverified integration",
+      "failure_path": "record limitation",
+      "rollback_or_compensation": "no product mutation"
+    }
+  ],
+  "sourceHead": "40dbeebf2610c863f07cc65eaf825dd063d26e68",
+  "sourceHashes": {
+    "apps/web/package.json": "ad4e7a637d1c57cf32c741fdcd6fa83256c36000fc65e6caa43cbdb0b5bce827",
+    "apps/web/src/pages/sops/SopStateMachineEditor.tsx": "1944f27c0070aa82c9173709d90a20ac7623f8ff1b0d7ee34184a677e0d0241c",
+    "docs/ai/decision-register.yaml": "ae2e73280802b45557a83c18b84b6b0cd746e5aef775480014fdb422299e14f8",
+    "docs/ui/information-architecture.md": "2a827b844054a167b05c455d6a0a07dd190e426f11f7837a37cb13489e296ca8",
+    "contracts/jsonschema/sop-definition.schema.json": "751d9ca214d0147218d586fe52e111583a86f2bf73a29a60d90ff8022691e4a6",
+    "services/control-plane/control_plane/sop_node_advance_after_commit.py": "c8ec9525c1901f804cbb17479e415304853d5bf916642c79a06f0261bd82cc9f"
+  },
+  "semanticFreshness": "possibly_stale / served_from_current_index / background_refresh running; followed by direct reads",
+  "repositoryMetadata": [
+    {
+      "name": "flowable/flowable-engine",
+      "repository": {
+        "default_branch": "main",
+        "archived": false,
+        "pushed_at": "2026-09-04T15:41:32Z",
+        "license": {
+          "key": "apache-2.0",
+          "name": "Apache License 2.0",
+          "spdx_id": "Apache-2.0",
+          "url": "https://api.github.com/licenses/apache-2.0",
+          "node_id": "MDc6TGljZW5zZTI="
+        },
+        "html_url": "https://github.com/flowable/flowable-engine"
+      },
+      "release": {
+        "tag_name": "flowable-8.0.0",
+        "published_at": "2026-02-27T16:35:48Z",
+        "prerelease": false,
+        "html_url": "https://github.com/flowable/flowable-engine/releases/tag/flowable-8.0.0"
+      }
+    },
+    {
+      "name": "sartography/SpiffWorkflow",
+      "repository": {
+        "default_branch": "main",
+        "archived": false,
+        "pushed_at": "2026-09-02T15:41:04Z",
+        "license": {
+          "key": "lgpl-3.0",
+          "name": "GNU Lesser General Public License v3.0",
+          "spdx_id": "LGPL-3.0",
+          "url": "https://api.github.com/licenses/lgpl-3.0",
+          "node_id": "MDc6TGljZW5zZTEy"
+        },
+        "html_url": "https://github.com/sartography/SpiffWorkflow"
+      },
+      "release": {
+        "tag_name": "v3.2.0",
+        "published_at": "2026-08-10T16:11:05Z",
+        "prerelease": false,
+        "html_url": "https://github.com/sartography/SpiffWorkflow/releases/tag/v3.2.0"
+      }
+    },
+    {
+      "name": "operaton/operaton",
+      "repository": {
+        "default_branch": "main",
+        "archived": false,
+        "pushed_at": "2026-09-11T11:30:25Z",
+        "license": {
+          "key": "apache-2.0",
+          "name": "Apache License 2.0",
+          "spdx_id": "Apache-2.0",
+          "url": "https://api.github.com/licenses/apache-2.0",
+          "node_id": "MDc6TGljZW5zZTI="
+        },
+        "html_url": "https://github.com/operaton/operaton"
+      },
+      "release": {
+        "tag_name": "v2.1.4",
+        "published_at": "2026-08-21T09:21:01Z",
+        "prerelease": false,
+        "html_url": "https://github.com/operaton/operaton/releases/tag/v2.1.4"
+      }
+    },
+    {
+      "name": "temporalio/temporal",
+      "repository": {
+        "error": "Command '['/usr/bin/curl', '-fLsS', '--max-time', '25', 'https://api.github.com/repos/temporalio/temporal']' returned non-zero exit status 28."
+      },
+      "release": {
+        "tag_name": "v1.31.2",
+        "published_at": "2026-07-08T17:10:11Z",
+        "prerelease": false,
+        "html_url": "https://github.com/temporalio/temporal/releases/tag/v1.31.2"
+      }
+    },
+    {
+      "name": "xyflow/xyflow",
+      "repository": {
+        "default_branch": "main",
+        "archived": false,
+        "pushed_at": "2026-09-10T15:18:27Z",
+        "license": {
+          "key": "mit",
+          "name": "MIT License",
+          "spdx_id": "MIT",
+          "url": "https://api.github.com/licenses/mit",
+          "node_id": "MDc6TGljZW5zZTEz"
+        },
+        "html_url": "https://github.com/xyflow/xyflow"
+      },
+      "release": {
+        "tag_name": "@xyflow/svelte@1.6.6",
+        "published_at": "2026-09-01T12:03:53Z",
+        "prerelease": false,
+        "html_url": "https://github.com/xyflow/xyflow/releases/tag/%40xyflow/svelte%401.6.6"
+      }
+    },
+    {
+      "name": "bpmn-io/bpmn-js",
+      "repository": {
+        "default_branch": "develop",
+        "archived": false,
+        "pushed_at": "2026-09-10T18:06:55Z",
+        "license": {
+          "key": "other",
+          "name": "Other",
+          "spdx_id": "NOASSERTION",
+          "url": null,
+          "node_id": "MDc6TGljZW5zZTA="
+        },
+        "html_url": "https://github.com/bpmn-io/bpmn-js"
+      },
+      "release": {
+        "tag_name": "v18.28.0",
+        "published_at": "2026-09-04T14:49:13Z",
+        "prerelease": false,
+        "html_url": "https://github.com/bpmn-io/bpmn-js/releases/tag/v18.28.0"
+      }
+    },
+    {
+      "name": "YunaiV/ruoyi-vue-pro",
+      "repository": {
+        "default_branch": "master",
+        "archived": false,
+        "pushed_at": "2026-09-04T01:51:59Z",
+        "license": {
+          "key": "mit",
+          "name": "MIT License",
+          "spdx_id": "MIT",
+          "url": "https://api.github.com/licenses/mit",
+          "node_id": "MDc6TGljZW5zZTEz"
+        },
+        "html_url": "https://github.com/YunaiV/ruoyi-vue-pro"
+      },
+      "release": {
+        "tag_name": "v2026.08(jdk25)",
+        "published_at": "2026-09-02T14:37:40Z",
+        "prerelease": false,
+        "html_url": "https://github.com/YunaiV/ruoyi-vue-pro/releases/tag/v2026.08(jdk25)"
+      }
+    }
+  ],
+  "frontendMetadataAttempts": {
+    "antd": {
+      "source": "https://registry.npmjs.org/antd/latest",
+      "error": "Command '['/usr/bin/curl', '-fLsS', '--max-time', '20', 'https://registry.npmjs.org/antd/latest']' returned non-zero exit status 35."
+    },
+    "pro-components": {
+      "source": "https://registry.npmjs.org/@ant-design%2fpro-components/latest",
+      "error": "Command '['/usr/bin/curl', '-fLsS', '--max-time', '20', 'https://registry.npmjs.org/@ant-design%2fpro-components/latest']' returned non-zero exit status 35."
+    },
+    "ant-design-x": {
+      "source": "https://registry.npmjs.org/@ant-design%2fx/latest",
+      "error": "Command '['/usr/bin/curl', '-fLsS', '--max-time', '20', 'https://registry.npmjs.org/@ant-design%2fx/latest']' returned non-zero exit status 35."
+    },
+    "xyflow-react": {
+      "source": "https://registry.npmjs.org/@xyflow%2freact/latest",
+      "error": "Command '['/usr/bin/curl', '-fLsS', '--max-time', '20', 'https://registry.npmjs.org/@xyflow%2freact/latest']' returned non-zero exit status 35."
+    },
+    "refine-core": {
+      "source": "https://registry.npmjs.org/@refinedev%2fcore/latest",
+      "error": "Command '['/usr/bin/curl', '-fLsS', '--max-time', '20', 'https://registry.npmjs.org/@refinedev%2fcore/latest']' returned non-zero exit status 35."
+    },
+    "spiff-license": {
+      "source": "https://api.github.com/repos/sartography/SpiffWorkflow/license",
+      "path": "COPYING",
+      "html_url": "https://github.com/sartography/SpiffWorkflow/blob/main/COPYING",
+      "sha": "aad50338b333110548a842ea8c2e4f5635958101",
+      "license": {
+        "key": "lgpl-3.0",
+        "name": "GNU Lesser General Public License v3.0",
+        "spdx_id": "LGPL-3.0",
+        "url": "https://api.github.com/licenses/lgpl-3.0",
+        "node_id": "MDc6TGljZW5zZTEy"
+      }
+    }
+  },
+  "selectedSourceMetadata": {
+    "antd": {
+      "source": "https://github.com/ant-design/ant-design/blob/master/package.json",
+      "sha": "356034aa3f922f2dfd7f5244aa8e2532956b255f",
+      "scope": "repository branch source, not a pinned installed release",
+      "name": "antd",
+      "version": "6.6.3",
+      "license": "MIT",
+      "peerDependencies": {
+        "react": ">=18.0.0",
+        "react-dom": ">=18.0.0"
+      }
+    },
+    "pro-components": {
+      "source": "https://api.github.com/repos/ant-design/pro-components/contents/packages/components/package.json",
+      "error": "Command '['/usr/bin/curl', '-fLsS', '--max-time', '20', 'https://api.github.com/repos/ant-design/pro-components/contents/packages/components/package.json']' returned non-zero exit status 56."
+    },
+    "ant-design-x": {
+      "source": "https://github.com/ant-design/x/blob/main/packages/x/package.json",
+      "sha": "c56403aa62a389d3993896244424ac45993a9b93",
+      "scope": "repository branch source, not a pinned installed release",
+      "name": "@ant-design/x",
+      "version": "2.9.0",
+      "license": "MIT",
+      "peerDependencies": {
+        "antd": "^6.1.1",
+        "react": ">=18.0.0",
+        "react-dom": ">=18.0.0"
+      }
+    },
+    "refine-core": {
+      "source": "https://github.com/refinedev/refine/blob/main/packages/core/package.json",
+      "sha": "f85be30c9b0e6b167fe5afe4227c138fa4a74a56",
+      "scope": "repository branch source, not a pinned installed release",
+      "name": "@refinedev/core",
+      "version": "5.2.0",
+      "license": "MIT",
+      "peerDependencies": {
+        "@tanstack/react-query": "^5.81.5",
+        "@types/react": "^18.0.0 || ^19.0.0",
+        "@types/react-dom": "^18.0.0 || ^19.0.0",
+        "react": "^18.0.0 || ^19.0.0",
+        "react-dom": "^18.0.0 || ^19.0.0"
+      }
+    },
+    "flowable-task-service": {
+      "source": "https://github.com/flowable/flowable-engine/blob/main/modules/flowable-engine/src/main/java/org/flowable/engine/TaskService.java",
+      "sha": "51b06693125e746ec7f827611f3a53e49fe6e202",
+      "scope": "repository branch source, not a pinned installed release",
+      "matchingLines": [
+        {
+          "line": 182,
+          "text": "void claim(String taskId, String userId);"
+        },
+        {
+          "line": 192,
+          "text": "void unclaim(String taskId);"
+        },
+        {
+          "line": 241,
+          "text": "void delegateTask(String taskId, String userId);"
+        },
+        {
+          "line": 252,
+          "text": "void resolveTask(String taskId);"
+        },
+        {
+          "line": 263,
+          "text": "void resolveTask(String taskId, Map<String, Object> variables);"
+        },
+        {
+          "line": 268,
+          "text": "void resolveTask(String taskId, Map<String, Object> variables, Map<String, Object> transientVariables);"
+        },
+        {
+          "line": 280,
+          "text": "void complete(String taskId);"
+        },
+        {
+          "line": 294,
+          "text": "void complete(String taskId, String userId);"
+        },
+        {
+          "line": 306,
+          "text": "void complete(String taskId, Map<String, Object> variables);"
+        },
+        {
+          "line": 320,
+          "text": "void complete(String taskId, String userId, Map<String, Object> variables);"
+        },
+        {
+          "line": 325,
+          "text": "void complete(String taskId, Map<String, Object> variables, Map<String, Object> transientVariables);"
+        },
+        {
+          "line": 330,
+          "text": "void complete(String taskId, String userId, Map<String, Object> variables, Map<String, Object> transientVariables);"
+        },
+        {
+          "line": 344,
+          "text": "void complete(String taskId, Map<String, Object> variables, boolean localScope);"
+        },
+        {
+          "line": 360,
+          "text": "void complete(String taskId, String userId, Map<String, Object> variables, boolean localScope);"
+        },
+        {
+          "line": 376,
+          "text": "void completeTaskWithForm(String taskId, String formDefinitionId, String outcome, Map<String, Object> variables);"
+        },
+        {
+          "line": 394,
+          "text": "void completeTaskWithForm(String taskId, String formDefinitionId, String outcome,"
+        },
+        {
+          "line": 413,
+          "text": "void completeTaskWithForm(String taskId, String formDefinitionId, String outcome,"
+        },
+        {
+          "line": 434,
+          "text": "void completeTaskWithForm(String taskId, String formDefinitionId, String outcome, String userId,"
+        },
+        {
+          "line": 453,
+          "text": "void completeTaskWithForm(String taskId, String formDefinitionId, String outcome,"
+        },
+        {
+          "line": 474,
+          "text": "void completeTaskWithForm(String taskId, String formDefinitionId, String outcome, String userId,"
+        },
+        {
+          "line": 509,
+          "text": "void setAssignee(String taskId, String userId);"
+        }
+      ]
+    },
+    "yudao-task-service": {
+      "source": "https://github.com/YunaiV/ruoyi-vue-pro/blob/master/yudao-module-bpm/src/main/java/cn/iocoder/yudao/module/bpm/service/task/BpmTaskServiceImpl.java",
+      "sha": "1ebd5426a2e6f412760bd2e92db7a17fb1a7c662",
+      "scope": "repository branch source, not a pinned installed release",
+      "matchingLines": [
+        {
+          "line": 575,
+          "text": "public void approveTask(Long userId, @Valid BpmTaskApproveReqVO reqVO) {"
+        },
+        {
+          "line": 650,
+          "text": "log.info(\"[approveTask][taskId({}) 清理退回标记变量({})]\", task.getId(), returnFlagKey);"
+        },
+        {
+          "line": 837,
+          "text": "public void rejectTask(Long userId, @Valid BpmTaskRejectReqVO reqVO) {"
+        },
+        {
+          "line": 874,
+          "text": "String returnTaskId = BpmnModelUtils.parseReturnTaskId(userTaskElement);"
+        },
+        {
+          "line": 875,
+          "text": "Assert.notNull(returnTaskId, \"退回的节点不能为空\");"
+        },
+        {
+          "line": 876,
+          "text": "returnTask(userId, new BpmTaskReturnReqVO().setId(task.getId())"
+        },
+        {
+          "line": 877,
+          "text": ".setTargetTaskDefinitionKey(returnTaskId).setReason(reqVO.getReason()));"
+        },
+        {
+          "line": 911,
+          "text": "public void returnTask(Long userId, BpmTaskReturnReqVO reqVO) {"
+        },
+        {
+          "line": 924,
+          "text": "returnTask(userId, bpmnModel, task, targetElement, reqVO);"
+        },
+        {
+          "line": 960,
+          "text": "public void returnTask(Long userId, BpmnModel bpmnModel, Task currentTask, FlowElement targetElement, BpmTaskReturnReqVO reqVO) {"
+        },
+        {
+          "line": 968,
+          "text": "List<String> returnTaskKeyList = convertList(returnUserTaskList, UserTask::getId);"
+        },
+        {
+          "line": 972,
+          "text": "if (!returnTaskKeyList.contains(task.getTaskDefinitionKey())) {"
+        },
+        {
+          "line": 1004,
+          "text": ".moveActivityIdsToSingleActivityId(returnTaskKeyList, reqVO.getTargetTaskDefinitionKey())"
+        },
+        {
+          "line": 1042,
+          "text": "public void delegateTask(Long userId, BpmTaskDelegateReqVO reqVO) {"
+        },
+        {
+          "line": 1066,
+          "text": "taskService.delegateTask(taskId, reqVO.getDelegateUserId().toString());"
+        },
+        {
+          "line": 1073,
+          "text": "public void transferTask(Long userId, BpmTaskTransferReqVO reqVO) {"
+        },
+        {
+          "line": 1143,
+          "text": "public void createSignTask(Long userId, BpmTaskSignCreateReqVO reqVO) {"
+        },
+        {
+          "line": 1170,
+          "text": "createSignTaskList(convertList(reqVO.getUserIds(), String::valueOf), taskEntity);"
+        },
+        {
+          "line": 1216,
+          "text": "private void createSignTaskList(List<String> userIds, TaskEntityImpl taskEntity) {"
+        },
+        {
+          "line": 1221,
+          "text": "for (String addSignId : userIds) {"
+        },
+        {
+          "line": 1222,
+          "text": "if (StrUtil.isBlank(addSignId)) {"
+        },
+        {
+          "line": 1225,
+          "text": "createSignTask(taskEntity, addSignId);"
+        },
+        {
+          "line": 1235,
+          "text": "private void createSignTask(TaskEntityImpl parentTask, String assignee) {"
+        },
+        {
+          "line": 1260,
+          "text": "public void deleteSignTask(Long userId, BpmTaskSignDeleteReqVO reqVO) {"
+        },
+        {
+          "line": 1436,
+          "text": "getSelf().approveTask(null, new BpmTaskApproveReqVO()"
+        },
+        {
+          "line": 1439,
+          "text": "getSelf().rejectTask(null, new BpmTaskRejectReqVO()"
+        },
+        {
+          "line": 1445,
+          "text": "getSelf().approveTask(null, new BpmTaskApproveReqVO()"
+        },
+        {
+          "line": 1448,
+          "text": "getSelf().rejectTask(null, new BpmTaskRejectReqVO()"
+        }
+      ]
+    }
+  },
+  "prototypeChangedByResearch": false,
+  "integrationTests": "NOT_EXECUTED",
+  "runtimeTests": "NOT_EXECUTED",
+  "artifacts": [
+    {
+      "path": "/Users/mac/Documents/New project 2/22-开源工作流与成熟前端复用选型.md",
+      "sha256": "78b850ab30ffbc1efd5f3e01e57c547508a81b174f0c0013d9d93b4b8664db3a"
+    }
+  ],
+  "evidence": [
+    "GitHub official repository and release metadata",
+    "Official source contents read with blob hashes",
+    "Current local source reads"
+  ]
+}

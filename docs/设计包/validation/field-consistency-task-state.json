@@ -1,0 +1,132 @@
+{
+  "goal": "以OA工作流连接人和任务，由本人配置数字员工；确保B/S设计一致并保留存量能力",
+  "scope": [
+    "New project 2设计文档、HTML原型与验证产物",
+    "ZKER-staff产品仓只读"
+  ],
+  "acceptance_criteria": [
+    "153项原需求及角色基线未删减",
+    "已证实字段与状态问题修正",
+    "原角色市场OA交互回归",
+    "当前文档与证据摘要一致",
+    "候选设计和真实后端验收分开"
+  ],
+  "current_node": "complete",
+  "completed_nodes": [
+    "sources",
+    "prototype",
+    "browser_regression",
+    "document_validation",
+    "delivery"
+  ],
+  "failed_nodes": [],
+  "artifacts": [
+    "/Users/mac/Documents/New project 2/08-人员数字员工协作交互原型.html",
+    "/Users/mac/Documents/New project 2/22-开源工作流与成熟前端复用选型.md",
+    "/Users/mac/Documents/New project 2/23-OA主旨与BS字段一致性核查.md",
+    "/Users/mac/Documents/New project 2/24-业务模板字段候选.json"
+  ],
+  "evidence": [
+    "/Users/mac/Documents/New project 2/validation/v26-role-regression.json",
+    "/Users/mac/Documents/New project 2/validation/v26-market-regression.json",
+    "/Users/mac/Documents/New project 2/validation/v26-oa-validation.json",
+    "/Users/mac/Documents/New project 2/validation/v26-field-audit.json",
+    "/Users/mac/Documents/New project 2/validation/v26-contract-field-source-audit.json",
+    "/Users/mac/Documents/New project 2/validation/v26-preservation-baseline.json",
+    "/Users/mac/Documents/New project 2/validation/v26-document-validation.json"
+  ],
+  "risks": [
+    "本地虚构数据交互原型，不是生产B/S运行验收",
+    "237个字段清单页面组合不代表全部UI字段语义及后端绑定验收",
+    "开源候选未安装，完整前端版本组合未锁定验证"
+  ],
+  "approvals": [
+    "用户要求完善设计原型、确保全局一致及现有代码功能不能减少"
+  ],
+  "status": "VERIFIED",
+  "nodes": [
+    {
+      "id": "sources",
+      "preconditions": [],
+      "objective": "核对当前合同代码及官方选型来源",
+      "action": "核对当前合同代码及官方选型来源",
+      "tool_or_skill": "本地文件工具与Playwright独立验证",
+      "expected_output": "源文件摘要与具体引用可复核",
+      "validation": "源文件摘要与具体引用可复核",
+      "success_condition": "源文件摘要与具体引用可复核",
+      "failure_path": "定位不一致并定点修复；不能验证的范围明确披露",
+      "rollback_or_compensation": "必要时用本轮v2.5原型备份恢复局部变更；不触碰产品代码"
+    },
+    {
+      "id": "prototype",
+      "preconditions": [
+        "sources"
+      ],
+      "objective": "修正已证实的14类字段状态及定位问题",
+      "action": "修正已证实的14类字段状态及定位问题",
+      "tool_or_skill": "本地文件工具与Playwright独立验证",
+      "expected_output": "字段专项44项交互通过",
+      "validation": "字段专项44项交互通过",
+      "success_condition": "字段专项44项交互通过",
+      "failure_path": "定位不一致并定点修复；不能验证的范围明确披露",
+      "rollback_or_compensation": "必要时用本轮v2.5原型备份恢复局部变更；不触碰产品代码"
+    },
+    {
+      "id": "browser_regression",
+      "preconditions": [
+        "prototype"
+      ],
+      "objective": "回归角色市场和多实例原有交互",
+      "action": "回归角色市场和多实例原有交互",
+      "tool_or_skill": "本地文件工具与Playwright独立验证",
+      "expected_output": "四组原始报告全部通过且摘要绑定当前HTML",
+      "validation": "四组原始报告全部通过且摘要绑定当前HTML",
+      "success_condition": "四组原始报告全部通过且摘要绑定当前HTML",
+      "failure_path": "定位不一致并定点修复；不能验证的范围明确披露",
+      "rollback_or_compensation": "必要时用本轮v2.5原型备份恢复局部变更；不触碰产品代码"
+    },
+    {
+      "id": "document_validation",
+      "preconditions": [
+        "browser_regression"
+      ],
+      "objective": "核对文档字段角色覆盖和保留基线",
+      "action": "核对文档字段角色覆盖和保留基线",
+      "tool_or_skill": "本地文件工具与Playwright独立验证",
+      "expected_output": "文档验证退出0",
+      "validation": "文档验证退出0",
+      "success_condition": "文档验证退出0",
+      "failure_path": "定位不一致并定点修复；不能验证的范围明确披露",
+      "rollback_or_compensation": "必要时用本轮v2.5原型备份恢复局部变更；不触碰产品代码"
+    },
+    {
+      "id": "delivery",
+      "preconditions": [
+        "document_validation"
+      ],
+      "objective": "刷新聚合证据并交付可打开文件",
+      "action": "刷新聚合证据并交付可打开文件",
+      "tool_or_skill": "本地文件工具与Playwright独立验证",
+      "expected_output": "产物摘要与当前验证报告一致",
+      "validation": "产物摘要与当前验证报告一致",
+      "success_condition": "产物摘要与当前验证报告一致",
+      "failure_path": "定位不一致并定点修复；不能验证的范围明确披露",
+      "rollback_or_compensation": "必要时用本轮v2.5原型备份恢复局部变更；不触碰产品代码"
+    }
+  ],
+  "acceptanceResult": {
+    "roleProfiles": 41,
+    "humanRoleKeys": 44,
+    "requirements": 153,
+    "oaRefinements": 28,
+    "initialInstances": 7,
+    "initialFixtureTasks": 369,
+    "layoutChecks": 1632,
+    "interactionChecks": 526,
+    "screenshots": 109,
+    "fieldInventoryViews": 237,
+    "businessTemplateFields": 17
+  },
+  "sourceHeadAtFinalValidation": "40dbeebf2610c863f07cc65eaf825dd063d26e68",
+  "verificationScope": "Design artifacts and local prototype only"
+}

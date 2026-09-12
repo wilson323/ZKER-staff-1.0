@@ -1,0 +1,301 @@
+#  给所有Agent加一层总调度！Databricks开源的Harness冲上GitHub趋势榜
+
+关注AI Agent  关注AI Agent  智猩猩AI
+
+_2026年08月27日 18:58_ __ _ _ _ _ _ 北京  _
+
+在小说阅读器读本章
+
+去阅读
+
+智猩猩AI整理
+
+编辑：金水
+
+  
+
+Omnigent v0.11.0 昨天（8 月 26 日）刚发布，带来了原生 harness 控制、自动化花费上限、更快的网页与桌面体验，以及项目
+emoji 图标等更新。
+
+  
+
+借着这波新版本，我们来看看这个跑在所有 AI Agent 之上的开源项目。
+
+  
+
+![](https://mmbiz.qpic.cn/sz_mmbiz_png/zJVQUll3YIZKj3GibGqc3u5OrrYynYicbEcsQmXFQ2xZFtTSF3F1S36mWb9iaibK0YYicJ5MmALuaYINpKdLePRxdcwAPU82icDictAys4pkOCAHu0/640?wx_fmt=png&from=appmsg)
+
+  
+
+这两年 AI 编程 Agent 井喷，Claude Code、Codex、Cursor、OpenCode
+一个接一个，每个都好用，却像不同品牌的遥控器，凑不到一块。
+
+  
+
+想让 Claude 写代码、Codex 来 review、Pi 去查资料，只能在多个窗口间手动搬运；
+
+  
+
+换个设备就断了线，真要交给团队共用，又怕它"乱动"。
+
+  
+
+由Databricks 主导的开源项目 Omnigent，给出的答案是别再逐个适配 Agent，而是建一个覆盖所有 Agent 的"元编排层"（meta-
+harness）。  这个项目开源以来关注度很高，  目前已经有 9.3k star，还登上了 GitHub Trending趋势榜。
+
+  
+
+它在 Claude Code、Codex、Cursor、OpenCode、Hermes、Pi 以及自研的 Agent 之上，  套了一层统一调度，换
+harness 不用重写代码  ，组合多个 Agent 也不用从零搭框架，策略与沙箱统一下发。
+
+  
+
+于是同一段会话里，不同厂商的 Agent 可以同框协作；会话在终端、浏览器、手机之间无缝接力；团队既能实时共驾，又能用策略卡住危险操作和花费上限。
+
+  
+
+![](https://mmbiz.qpic.cn/mmbiz_png/zJVQUll3YIYvIdNPlAmnCLdvPLICH3Sn34nwvPUo9XeJapbQibaEicQiaibwkZD6841OqTwFKcq6NwVbHOzZPicnv0AibrKJzY9pojcVmXNibOmBdc/640?wx_fmt=png&from=appmsg)
+
+  
+
+_ ** 01  ** _
+
+** Omnigent 凭什么  **
+
+** 统一所有 Agent？  
+**
+
+  
+
+Omnigent 支持 Claude Code、Codex、Cursor、OpenCode、Hermes、Pi，也支持你自己定义 Agent。
+
+  
+
+关键是，你不用为了换工具而重写整套工作流，想换底层引擎，改 YAML 里一个字段就行。
+
+  
+
+过去我们被绑死在一个工具上，是因为 Skill、MCP、插件都装在那一个里。  Omnigent 的思路是：把这些工作流从具体厂商里抽出来，放到统一层上。
+
+  
+
+![](https://mmbiz.qpic.cn/mmbiz_png/zJVQUll3YIZFUmH3deibcgMEDnh5B4DwAzONMGmL2JicnffvGVdiayqUIfJzpcUKM0C6Jjcwwjngdckms6dlviatXciaXz4kHjhI2hZDmJfGaibhE/640?wx_fmt=png&from=appmsg)
+
+  
+
+1、  让 Agent 们互相协作、互相挑刺
+
+这是最让我觉得聪明的地方。
+
+  
+
+在 Omnigent 的一个会话里，你不是单雇一个 Agent，而是能同时拉起好几个，甚至让它们彼此当对方的质量关卡，A 写出来的代码，交给 B 去挑毛病。
+
+  
+
+比如让 Claude Code 写代码，让 Codex 来 review。
+
+  
+
+仓库里自带一个叫 Polly 的示例 Agent，它的工作流是：先理解你要做什么，把任务拆开，再把子任务分给多个写代码的子 Agent（Claude
+Code、Codex、Pi），每个在独立的 git worktree 里干活，互不干扰，然后把每个子 Agent 产出的
+diff，路由给"不同厂商"的审查者；
+
+  
+
+比如  Codex  写的让  Claude  审，审查完的 diff 摆在你面前，你拍板 merge。
+
+  
+
+![](https://mmbiz.qpic.cn/sz_mmbiz_png/zJVQUll3YIZ0ukLZQPtxDCRf5Xz0SicY1Jf1TjJztUiazkwuhLOZJJz5On6CW9H5N0P7lg01sIsRFjHgGuGbhvNhicFcWPkbPF58UI9wBwR92k/640?wx_fmt=png&from=appmsg)
+
+  
+
+交叉审查是关键。
+
+  
+
+因为每个模型都有自己的盲区，让它们互相挑刺，比单押一家稳得多。这其实就是工程团队里早就有的 cross-review 实践，Omnigent 把它搬到了
+Agent 之间。
+
+  
+
+还有个叫 Debby 的样例。
+
+  
+
+它换个思路玩：你抛出一个问题，它同时丢给 Claude 和 GPT，两边答案并排摆出来；输入
+/debate，两个模型还会你来我往地辩上几轮，最后往一个结论上收。
+
+  
+
+这种玩法以前得自己接两套 API 才能拼出来，现在一条命令就能跑。
+
+  
+
+2、跨设备同步与实时协作
+
+![](https://mmbiz.qpic.cn/mmbiz_png/zJVQUll3YIZB2mCvdWJPZ13epeqtBUia25CMI924H5zudpiaybGMnp2CQPF9KRQekuq9Rep9ibicC6cFPzd72YaDeJxombIJcmVzFmyyaJJjRTE/640?wx_fmt=png&from=appmsg)
+
+  
+
+一个 session 可以在终端里起头，切到浏览器继续，然后在手机上收尾。  消息、子 Agent、终端、文件全程同步。
+
+  
+
+"为什么手机能接管？"本质是服务端持有会话状态，客户端只是个视图。
+
+  
+
+所以你从本机的一个 CLI 会话，可以变成团队能围观、评论、接手的实时工作流。在路上想躺着盯 Agent 进度的人，这是个真实需求。
+
+  
+
+4、策略治理与云沙箱
+
+  
+
+最后落到可控。  Policies 可以在 server、单 Agent、单会话三层叠加，越细的规则优先级越高。
+
+  
+
+内置审批危险操作、限制调用次数、硬性花费封顶（比如 max_cost_usd: 5.00）。
+
+  
+
+配合 Modal、E2B、K8s 等云沙箱，Agent 可以跑在远端一次性环境里，不必让本机一直在线。
+
+  
+
+_ ** 02  ** _
+
+** 怎么上手  
+**
+
+  
+
+安装：
+
+  * 
+
+    
+    
+    curl -fsSL https://raw.githubusercontent.com/omnigent-ai/omnigent/main/scripts/install_oss.sh | sh
+
+把 Omnigent 和它要用的东西一次性装好。装完你会得到两个一模一样的命令 omnigent 和 omni，用哪个都行。
+
+  
+
+启动也很直接：
+
+  *   *   * 
+
+    
+    
+    omnigent claude                # 跑 Claude Code，session 可分享给团队omnigent codex                 # 跑 Codexomnigent run examples/polly/   # 直接跑 polly Agent
+
+自己写一个 Agent 更简单，就是一个短 YAML 文件：
+
+  *   *   *   *   *   *   *   *   *   *   *   *   *   * 
+
+    
+    
+    yamlname: my_agentprompt: You are a helpful data analyst.executor:  harness: claude-sdk     # 也能换成 codex、cursor、pi...tools:  word_count:    type: function    callable: mypackage.mymodule.word_count  researcher:    type: agent    prompt: Search for relevant information and summarize it.    tools:      word_count: inherit
+
+一个文件里就能声明工具、子 Agent、审查者。
+
+  
+
+跑示例：
+
+  *   *   *   *   *   *   * 
+
+    
+    
+    omnigent run examples/polly/omnigent run examples/debby/omnigent run examples/deep-research/  
+    # ...or on a different harness (sub-agents keep their own):omnigent run examples/polly/ --harness <harness>omnigent run examples/debby/ --harness <harness>
+
+  
+
+polly 是个"技术主管"型 Agent.自己不动手写代码，只做规划，把活派给并行的子 Agent 去写，再找另一家的 Agent 来帮你 review。
+
+  
+
+examples/debby/ 是双头脑暴（一个 Claude 一个 GPT，答案并排互怼）;
+
+  
+
+examples/deep-research/ 是联网做带出处的研究报告，都是现成作业，直接抄。
+
+  
+
+从装好到看到第一个多 Agent 会话，差不多就是一杯咖啡的时间。
+
+  
+
+_ ** 04  ** _
+
+** 总结  
+**
+
+  
+
+把视线拉远一点，AI Agent 正从"单兵作战"走向"兵团作战"，而编排层 / 调度层会是接下来开源圈最值得盯的方向之一。
+
+  
+
+Omnigent 是其中把"统一 + 治理 + 协作"打包得相对完整的一个。
+
+  
+
+如果你本就是重度多 Agent 用户，或正在带团队把 Agent 落进真实工作流，现在这个 alpha 阶段反而是个好窗口：趁早入坑、提
+issue，甚至能反向影响它的路线图。
+
+  
+
+当然也要泼盆冷水，它还处在 alpha，生产环境别贸然上；各家 harness 的适配矩阵仍在补齐，少数厂商的 native 模式可能还得等官方跟上。
+
+  
+
+但方向是清楚的：你的 Agent 不该被某个厂商的遥控器绑架——这一层，正在被开源填上。
+
+** END  **
+
+  
+
+** 关注+星标，获取AI前沿进展与开源一线动态  **
+
+预览时标签不可点
+
+微信扫一扫  
+关注该公众号
+
+知道了
+
+微信扫一扫  
+使用小程序
+
+****
+
+取消  允许
+
+****
+
+取消  允许
+
+****
+
+取消  允许
+
+×  分析
+
+__
+
+![作者头像](http://mmbiz.qpic.cn/sz_mmbiz_png/DPAHibibAl3vRucibjtBRsFa4OaXd2L5oNOTxyXO8G9fC42Ic8lYEySicttZIQNhNWem4xr9QHRcs7KoWUfsAf2Yvg/0?wx_fmt=png)
+
+微信扫一扫可打开此内容，  
+使用完整服务
+
+：  ，  ，  ，  ，  ，  ，  ，  ，  ，  ，  ，  ，  。  视频  小程序  赞  ，轻点两下取消赞  在看  ，轻点两下取消在看
+分享  留言  收藏  听过
+

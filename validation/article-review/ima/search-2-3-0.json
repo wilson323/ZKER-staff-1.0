@@ -1,0 +1,95 @@
+{
+  "retrievedAt": "2026-09-11T23:55:14.151831+00:00",
+  "operation": "search_knowledge",
+  "request": {
+    "knowledge_base_id": "zkNpMBlsldSUzjVy341WpV2n17XNTEqZIL6VCUn5WM8=",
+    "cursor": "",
+    "query": "记忆"
+  },
+  "exitCode": 0,
+  "response": {
+    "code": 0,
+    "msg": "success",
+    "data": {
+      "info_list": [
+        {
+          "media_id": "wechatarticle_8189f7408df6364eae772ea1fe3507df_d7303b716a5b6671f7763e22eea523ec",
+          "title": "企业AI对话记忆为什么不能只存Redis？短期、摘要与长期记忆如何设计",
+          "parent_folder_id": "folder_7497578996312202",
+          "highlight_content": "",
+          "media_type": 6
+        },
+        {
+          "media_id": "wechatarticle_8189f7408df6364eae772ea1fe3507df_ec45b27a83b1b110264df0b6b04b9f9a",
+          "title": "拥抱 deepseek 的 AI 框架 deepseekers中记忆模块设计(2)—长短期记忆的设计",
+          "parent_folder_id": "folder_7497578996312202",
+          "highlight_content": "",
+          "media_type": 6
+        },
+        {
+          "media_id": "wechatarticle_8189f7408df6364eae772ea1fe3507df_e5731b37893a37adf643309f287836c7",
+          "title": "升级! DeepSeek有了记忆功能!",
+          "parent_folder_id": "folder_7497578996312202",
+          "highlight_content": "",
+          "media_type": 6
+        },
+        {
+          "media_id": "wechatarticle_8189f7408df6364eae772ea1fe3507df_ab0fe52d142a355c4a389401d280ae01",
+          "title": "deepseekers AI Agent 中记忆模块设计(1)—程序性记忆，让 Agent 对于一些高频问题无需思考，自动完成",
+          "parent_folder_id": "folder_7497578996312202",
+          "highlight_content": "",
+          "media_type": 6
+        },
+        {
+          "media_id": "wechatarticle_8189f7408df6364eae772ea1fe3507df_8bb84fef8b2a7105fc7cb5ad19ecfc41",
+          "title": "LangMem 发布：任何人都能轻松构建智能体记忆！",
+          "parent_folder_id": "folder_7497578996312202",
+          "highlight_content": "",
+          "media_type": 6
+        },
+        {
+          "media_id": "wechatarticle_8189f7408df6364eae772ea1fe3507df_bada7c82e4bad2fe2e1bacd804b45c78",
+          "title": "Python + DeepSeek：打造拥有记忆的AI 智能助手，让效率提升100倍！",
+          "parent_folder_id": "folder_7497578996312202",
+          "highlight_content": "",
+          "media_type": 6
+        },
+        {
+          "media_id": "wechatarticle_8189f7408df6364eae772ea1fe3507df_9a7b17143b5f72403505207f328c9053",
+          "title": "我做了一个会记忆、会复盘、会进化的店铺运营 Agent",
+          "parent_folder_id": "folder_7497578996312202",
+          "highlight_content": "",
+          "media_type": 6
+        },
+        {
+          "media_id": "wechatarticle_8189f7408df6364eae772ea1fe3507df_3163a6f2deb1d4b667affe7b471fa37b",
+          "title": "Dify 保姆级教程之：零代码打造个性化记忆助手",
+          "parent_folder_id": "folder_7497578996312202",
+          "highlight_content": "",
+          "media_type": 6
+        },
+        {
+          "media_id": "wechatarticle_8189f7408df6364eae772ea1fe3507df_4ad3adca309d96a74c3dc2174befb8f6",
+          "title": "我想要一个AI代码管家：当软件开发进入“记忆时代”",
+          "parent_folder_id": "folder_7497578996312202",
+          "highlight_content": "",
+          "media_type": 6
+        },
+        {
+          "media_id": "wechatarticle_8189f7408df6364eae772ea1fe3507df_65768c403d1b1442f3e29cf196d7a41c",
+          "title": "AI 编程新潮流：我和 Cursor 编辑器的长期记忆大作战",
+          "parent_folder_id": "folder_7497578996312202",
+          "highlight_content": "",
+          "media_type": 6
+        },
+        {
+          "media_id": "wechatarticle_8189f7408df6364eae772ea1fe3507df_ce6e0c7e62afac195e87b65f95e9ddd2",
+          "title": "计算机小白学习编程第48天的感受：真实感受 AI 连续记忆的能力与编程基础学习的重要性",
+          "parent_folder_id": "folder_7497578996312202",
+          "highlight_content": "",
+          "media_type": 6
+        }
+      ]
+    }
+  }
+}

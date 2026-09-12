@@ -1,0 +1,118 @@
+[
+  {
+    "repo": "ageerle/ruoyi-ai",
+    "commit": {
+      "sha": "cca30905778357e3aeb42b6adb65ef2384e75e60",
+      "date": "2026-09-11T02:49:29Z"
+    },
+    "release": {
+      "tag": "v3.1.0",
+      "published_at": "2026-08-04T07:24:20Z",
+      "url": "https://github.com/ageerle/ruoyi-ai/releases/tag/v3.1.0"
+    }
+  },
+  {
+    "repo": "langchain4j/langchain4j",
+    "commit": {
+      "sha": "0028928eab6d3b0c11d9be13c6a06e9f0abd9512",
+      "date": "2026-09-11T13:48:56Z"
+    },
+    "release": {
+      "tag": "1.20.0",
+      "published_at": "2026-09-04T12:27:58Z",
+      "url": "https://github.com/langchain4j/langchain4j/releases/tag/1.20.0"
+    }
+  },
+  {
+    "repo": "qdrant/qdrant",
+    "commit": {
+      "sha": "6ab21cac18ebb6f4ae29102c7f8f5cc11affd5de",
+      "date": "2026-09-03T12:36:18Z"
+    },
+    "release": {
+      "tag": "v1.19.1",
+      "published_at": "2026-09-04T07:59:14Z",
+      "url": "https://github.com/qdrant/qdrant/releases/tag/v1.19.1"
+    }
+  },
+  {
+    "repo": "pgvector/pgvector",
+    "commit": {
+      "sha": "efa08fda9ec485d80292d0487a77939c087dedcc",
+      "date": "2026-09-08T14:26:15Z"
+    },
+    "release": {
+      "error": "curl: (56) The requested URL returned error: 404\n"
+    }
+  },
+  {
+    "repo": "docling-project/docling",
+    "commit": {
+      "sha": "5ea6490ffdc57b2fd7de5cc436f2d0a22f2214d4",
+      "date": "2026-09-11T15:42:20Z"
+    },
+    "release": {
+      "tag": "v2.126.0",
+      "published_at": "2026-09-04T15:47:33Z",
+      "url": "https://github.com/docling-project/docling/releases/tag/v2.126.0"
+    }
+  },
+  {
+    "repo": "apache/tika",
+    "commit": {
+      "sha": "dccc702fca054c47f43fa3c7ce73cc328ace1ebf",
+      "date": "2026-09-11T21:27:55Z"
+    },
+    "release": {
+      "error": "curl: (56) The requested URL returned error: 404\n"
+    }
+  },
+  {
+    "repo": "infiniflow/ragflow",
+    "commit": {
+      "sha": "1f5d33333a3ff67fda2aa302c843699e994453e3",
+      "date": "2026-09-11T14:37:33Z"
+    },
+    "release": {
+      "tag": "v0.27.2",
+      "published_at": "2026-09-10T11:11:35Z",
+      "url": "https://github.com/infiniflow/ragflow/releases/tag/v0.27.2"
+    }
+  },
+  {
+    "repo": "langgenius/dify",
+    "commit": {
+      "sha": "085a79c748be47111d2e1c1b65b3f82200998d5c",
+      "date": "2026-09-11T17:07:04Z"
+    },
+    "release": {
+      "tag": "1.17.1",
+      "published_at": "2026-09-10T10:04:06Z",
+      "url": "https://github.com/langgenius/dify/releases/tag/1.17.1"
+    }
+  },
+  {
+    "repo": "labring/FastGPT",
+    "commit": {
+      "sha": "a9025a40802384fc274eb2704b30541c9d64c034",
+      "date": "2026-09-11T10:05:05Z"
+    },
+    "release": {
+      "tag": "v4.17.0",
+      "published_at": "2026-09-11T10:11:32Z",
+      "url": "https://github.com/labring/FastGPT/releases/tag/v4.17.0"
+    }
+  },
+  {
+    "repo": "milvus-io/milvus",
+    "commit": {
+      "sha": "82bcce8867c92e7d55f669e034a00dcb0f37d2bc",
+      "date": "2026-09-11T21:18:26Z"
+    },
+    "release": {
+      "tag": "v3.0.1",
+      "published_at": "2026-09-09T07:32:57Z",
+      "url": "https://github.com/milvus-io/milvus/releases/tag/v3.0.1"
+    }
+  }
+]

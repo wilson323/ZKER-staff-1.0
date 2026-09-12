@@ -1,0 +1,240 @@
+{
+  "retrievedAt": "2026-09-11T23:53:49.474530+00:00",
+  "operation": "search_knowledge_base",
+  "request": {
+    "query": "",
+    "cursor": "CgUI6QcYAQoFCOoHGAEKBQjsBxgBCgcI7QcSAjEy",
+    "limit": 20
+  },
+  "exitCode": 0,
+  "response": {
+    "code": 0,
+    "msg": "success",
+    "data": {
+      "info_list": [
+        {
+          "kb_id": "bIS6y6oJPjTwpK7Mqx4NOt6KuqSEPPwHugqaw5DW0B0=",
+          "kb_name": "AI视频提示词册库【续更中】",
+          "cover_url": "",
+          "member_count": "55",
+          "content_count": "99",
+          "description": "特别打造“AI电商智慧手册”，用简洁易懂的方式带您解锁智能电商的必备知识，开启高效运营之旅",
+          "creator": "李烨",
+          "role_type": "普通成员",
+          "base_type": "我加入的订阅知识库"
+        },
+        {
+          "kb_id": "7fx0QK6ZCSgHOzdZqxc-nU31di9Mnzxt_M0kfXoST3Y=",
+          "kb_name": "AI视频实战手册（工具/提示词/案例）",
+          "cover_url": "",
+          "member_count": "675",
+          "content_count": "463",
+          "description": "AI 视频大全，汇集 Sora、Runway、Veo3、可灵、海螺、即梦等实战教程、自动化脚本、Prompt/模板库与版权合规指南，面向视频创作者、社媒运营与开发者的一站式资源中心。",
+          "creator": "AI智镜",
+          "role_type": "普通成员",
+          "base_type": "我加入的订阅知识库"
+        },
+        {
+          "kb_id": "z2WXSysiElSNKB45UCGV2207TXrlQufZp0eym5iGSYw=",
+          "kb_name": "AIGC提示词【生图生视频专用】",
+          "cover_url": "",
+          "member_count": "342",
+          "content_count": "677",
+          "description": "AIGC创作用",
+          "creator": "LUFASTER",
+          "role_type": "普通成员",
+          "base_type": "我加入的订阅知识库"
+        },
+        {
+          "kb_id": "ZoLHCPDFrKFzZFBNU9qGLypV4dotcH8hqF0qA_TrtGw=",
+          "kb_name": "threejs",
+          "cover_url": "",
+          "member_count": "208",
+          "content_count": "2148",
+          "description": "常用webgl。(现在支持双击文件夹内对基于当前文件夹提问。输入#筛选标签咨询将更准确，深度咨询请用deepseek r1，ima已更新最新。)",
+          "creator": "🇸 🇾 🇱 🇦 🇷_不私聊",
+          "role_type": "普通成员",
+          "base_type": "我加入的订阅知识库"
+        },
+        {
+          "kb_id": "CkNgIEIPYImdh9S_psF34Lse7SUj-fhtVoiX2GUjPZQ=",
+          "kb_name": "【UI/UX】设计类文章合集",
+          "cover_url": "",
+          "member_count": "668",
+          "content_count": "470",
+          "description": "各大厂以及设计类公众号文章合集。工作日更新，采集顺序非发布时间顺序。（自2025年开始）",
+          "creator": "絮絮絮Lira",
+          "role_type": "普通成员",
+          "base_type": "我加入的订阅知识库"
+        },
+        {
+          "kb_id": "7DsB5bJylC6pZX2cKvvc16ZT3ObPMRibifiygSDWEdQ=",
+          "kb_name": "3D高斯泼溅",
+          "cover_url": "",
+          "member_count": "37",
+          "content_count": "13",
+          "description": "基于3D高斯泼溅的三维重建相关技术",
+          "creator": "monkey",
+          "role_type": "普通成员",
+          "base_type": "我加入的订阅知识库"
+        },
+        {
+          "kb_id": "aEsNY6oa3TywDGOrs2lWZBD5Z7SY1a_ruupbEiseHB0=",
+          "kb_name": "WorkBuddy 官方知识库",
+          "cover_url": "",
+          "member_count": "16049",
+          "content_count": "73",
+          "description": "持续更新，WorkBuddy 使用小技巧",
+          "creator": "腾讯WorkBuddy",
+          "role_type": "普通成员",
+          "base_type": "我加入的订阅知识库"
+        },
+        {
+          "kb_id": "x1QnrnOxF0cT9wjoDrICxyQVpyn00RK2_fi74sQMQP8=",
+          "kb_name": "木易毛毛知识库",
+          "cover_url": "",
+          "member_count": "2170",
+          "content_count": "8",
+          "description": "无论你是Blender、After Effects (AE)、Cinema 4D (C4D)、Premiere Pro (PR)、Photoshop (PS)、Illustrator (AI)的爱好者，还是对CG影视后期和3D建模感兴趣的专业人士，这里都有你需要的软件、插件、脚本等学习工具。",
+          "creator": "木易毛毛知识库",
+          "role_type": "普通成员",
+          "base_type": "我加入的订阅知识库"
+        },
+        {
+          "kb_id": "BuyQzUVRcAh2uzF79Y9wym8DBJAnQmqaX1KuMMOqAW0=",
+          "kb_name": "WorkBuddy",
+          "cover_url": "",
+          "member_count": "10669",
+          "content_count": "3505",
+          "description": "豆包工作？千问办公？我选WorkBuddy。WorkBuddy最全知识库，WorkBuddy应用精选案例。【公众号：猴哥AI运营笔记】",
+          "creator": "猴哥调皮了",
+          "role_type": "普通成员",
+          "base_type": "我加入的订阅知识库"
+        },
+        {
+          "kb_id": "CGYq1MKGIa2JBkKVHFqpTBmlTya_HsRIHiNrdGeb_wM=",
+          "kb_name": "【AI赋能教育与教学】知识库",
+          "cover_url": "",
+          "member_count": "774",
+          "content_count": "5534",
+          "description": "精选家人自用的5000余篇AI教育教学实战指南！",
+          "creator": "周烧锅慢享生活录",
+          "role_type": "普通成员",
+          "base_type": "我加入的订阅知识库"
+        },
+        {
+          "kb_id": "B_ZxuLoLhoBEHZvl6FMNGzEys8XfWdIxHdOsbijyy_E=",
+          "kb_name": "Ai人工智能OPC搭档",
+          "cover_url": "",
+          "member_count": "48",
+          "content_count": "39399",
+          "description": "AI × OPC 搭档库：97 个精选专题，从大模型到一人公司变现，常更常新，陪你踩准 AI风口。OpcBuddy.com.cn",
+          "creator": "金控樨牛®",
+          "role_type": "普通成员",
+          "base_type": "我加入的订阅知识库"
+        },
+        {
+          "kb_id": "gjj6_smz2LH_rBe5-mLMbGIpxQp1S166R5ZdnM14E3I=",
+          "kb_name": "不动卷 产品经理UXUI一家亲",
+          "cover_url": "",
+          "member_count": "160",
+          "content_count": "9931",
+          "description": "sorry～请不要叫我老师，我是这个班的主理人\n\n加入班级添加管理员：Sengine2023",
+          "creator": "不动卷",
+          "role_type": "普通成员",
+          "base_type": "我加入的订阅知识库"
+        },
+        {
+          "kb_id": "cVmNxdmsjTXEX8Eig17pvujF4_kEfg7l3XzFrd_YmAI=",
+          "kb_name": "UI/UX 工作流可自定义 Skills",
+          "cover_url": "",
+          "member_count": "3",
+          "content_count": "1",
+          "description": "手搓UI/UX 设计师友好型 skill，帮助解决日常 banner，icon 等素材快速生成和保持系列套图风格一致性等常见问题",
+          "creator": "Mr.baoo",
+          "role_type": "普通成员",
+          "base_type": "我加入的订阅知识库"
+        },
+        {
+          "kb_id": "JdbJkSQdYLwM9C0f-82qlJMqYnxd6-jjWOni09qy-1A=",
+          "kb_name": "ai相关超全知识库（持续更新）",
+          "cover_url": "",
+          "member_count": "2649",
+          "content_count": "19669",
+          "description": "几乎和ai相关的最新资讯皆有，收藏的不错的ai相关公众号。(输入#筛选标签咨询将更准确，深度咨询请用deepseek r1，ima已更新最新。)",
+          "creator": "🇸 🇾 🇱 🇦 🇷_不私聊",
+          "role_type": "普通成员",
+          "base_type": "我加入的订阅知识库"
+        },
+        {
+          "kb_id": "HVusIBmPpuWIDsaJAebHV4AQIVjfY4A2AHtUKcVs8D0=",
+          "kb_name": "WorkBuddy知识库",
+          "cover_url": "",
+          "member_count": "5062",
+          "content_count": "275",
+          "description": "WorkBuddy是腾讯版“OpenClaw”全场景AI智能体，完全兼容OpenClaw的技能。",
+          "creator": "Smile",
+          "role_type": "普通成员",
+          "base_type": "我加入的订阅知识库"
+        },
+        {
+          "kb_id": "pXBDGwhZ-4nCmUs85uqWOoRDrMiwd11k9poHvKHBOnY=",
+          "kb_name": "从0到1学视觉",
+          "cover_url": "",
+          "member_count": "66",
+          "content_count": "255",
+          "description": "个人微信公众号：从0到1学视觉。\n后面会补充2D相机/镜头/光源/采集卡等相关知识，同时补充3D相机原理/应用等",
+          "creator": "从0到1学视觉",
+          "role_type": "普通成员",
+          "base_type": "我加入的订阅知识库"
+        },
+        {
+          "kb_id": "t_uMbWPOkPlB2SHepJWPnIxcNi_5_ZsM3XcjCer9gxk=",
+          "kb_name": "【深度】AI·ima·workbuddy自学FDE",
+          "cover_url": "",
+          "member_count": "8754",
+          "content_count": "815",
+          "description": "IMA知识号@阿靖，连续两年受邀参加ima线下大会，接受官方采访推荐。这库只留干货：IMA Copilot + Skill + WorkBuddy 的工作流玩法，从\"会用AI\"到\"让AI替你干活\"。想系统学完一套跑通的流程，看我的IMA实操营。微信：aj10718",
+          "creator": "阿靖",
+          "role_type": "普通成员",
+          "base_type": "我加入的订阅知识库"
+        },
+        {
+          "kb_id": "iW87kVm1EobaPZJyGDG_OVPgbOZY-iRS1xOnVIQ36JI=",
+          "kb_name": "【PX/UI/UX】产品体验与拆解",
+          "cover_url": "",
+          "member_count": "135",
+          "content_count": "96",
+          "description": "产品体验与拆解相关文章合集。建议根据名称顺序查看❤️公众号：絮絮絮Lira",
+          "creator": "絮絮絮Lira",
+          "role_type": "普通成员",
+          "base_type": "我加入的订阅知识库"
+        },
+        {
+          "kb_id": "V8dP6X_cjG2Ggh_syMq3vIAdhusULHYAHXBrBFoYMRE=",
+          "kb_name": "AI办公提效（持续更新）",
+          "cover_url": "",
+          "member_count": "6565",
+          "content_count": "9647",
+          "description": "最前沿AI工具的提效方案，ChatGPT、DeepSeek、Claude等，各行各业都用得上。欢迎交流vx：Nekoi119，公众号：智井AI",
+          "creator": "智井AI",
+          "role_type": "普通成员",
+          "base_type": "我加入的订阅知识库"
+        },
+        {
+          "kb_id": "3sgnGtCCpe14DHMqlX3DfPtVGW0arxL77eelST1-ibc=",
+          "kb_name": "AI产品设计师UXUI用户体验B端SaaS",
+          "cover_url": "",
+          "member_count": "3080",
+          "content_count": "1071",
+          "description": "覆盖了从C端到B端及AI前沿的全链路知识，AI设计/UX/UI用户体验设计/B端设计/C端设计专业/出海场景/设计管理等真实项目复盘。AI设计交流crchenrun",
+          "creator": "RainUX",
+          "role_type": "普通成员",
+          "base_type": "我加入的订阅知识库"
+        }
+      ],
+      "is_end": false,
+      "next_cursor": "CgUI6QcYAQoFCOoHGAEKBQjsBxgBCgcI7QcSAjMy"
+    }
+  }
+}

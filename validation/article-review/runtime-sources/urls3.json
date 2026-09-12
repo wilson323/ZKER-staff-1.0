@@ -1,0 +1,34 @@
+[
+  [
+    "agentloop-article.html",
+    "https://developer.aliyun.com/article/1755376"
+  ],
+  [
+    "agentloop-concepts.html",
+    "https://help.aliyun.com/zh/document_detail/3042001.html"
+  ],
+  [
+    "deepagents-subagents.html",
+    "https://docs.langchain.com/oss/python/deepagents/subagents"
+  ],
+  [
+    "deepagents-safety.html",
+    "https://docs.langchain.com/oss/python/deepagents/security"
+  ],
+  [
+    "agentscope-pypi.json",
+    "https://pypi.org/pypi/agentscope/json"
+  ],
+  [
+    "deepagents-pypi.json",
+    "https://pypi.org/pypi/deepagents/json"
+  ],
+  [
+    "voyager.html",
+    "https://voyager.minedojo.org/"
+  ],
+  [
+    "alphaevolve.html",
+    "https://deepmind.google/blog/alphaevolve-a-gemini-powered-coding-agent-for-designing-advanced-algorithms/"
+  ]
+]

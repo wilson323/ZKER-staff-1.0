@@ -1,0 +1,6 @@
+{
+  "hooks": {
+    "SessionStart": [{"hooks": [{"type": "command", "command": "python3 \"$CLAUDE_PROJECT_DIR/validation/development_workflow.py\" hook-start", "timeout": 15}]}],
+    "Stop": [{"hooks": [{"type": "command", "command": "python3 \"$CLAUDE_PROJECT_DIR/validation/development_workflow.py\" hook-stop", "timeout": 15}]}]
+  }
+}

@@ -1,0 +1,81 @@
+{
+  "source": "https://app-dl.ima.qq.com/skills/ima-skills-1.1.9.zip",
+  "archiveSha256": "8ee88bf653d905e91cee7ad95e44589f2de78db9c601d450807a144c09e89e33",
+  "files": [
+    {
+      "path": ".DS_Store",
+      "upstreamSha256": "22520c9a52be4e60ebf8ffe0d22a6a6ebf98b26c9b2532b2c42d87833b650e16",
+      "exists": true,
+      "identical": true
+    },
+    {
+      "path": "SKILL.md",
+      "upstreamSha256": "b4caeb77060d870e0ee8d7d9be4e844513bf04c0e34552bb6b68344988b8b624",
+      "exists": true,
+      "identical": true
+    },
+    {
+      "path": "ima_api.cjs",
+      "upstreamSha256": "3ef318c47cdcd894e41d3c33fb675b592a33c36555800a123119b7ed1451b1e5",
+      "exists": true,
+      "identical": false
+    },
+    {
+      "path": "meta.json",
+      "upstreamSha256": "ba0601f6d312eb76b7296f43b2eddbb470afc6d96c94a45efd7085755b8b9115",
+      "exists": true,
+      "identical": true
+    },
+    {
+      "path": "notes/.DS_Store",
+      "upstreamSha256": "f47f5cf69e9d7d4267bd51c836b1b7e3a5f65ebac51c3cb19006d328cd76b089",
+      "exists": true,
+      "identical": true
+    },
+    {
+      "path": "notes/SKILL.md",
+      "upstreamSha256": "0e57115fd6d9a6df437ee202bf7c37548645be7005d3768334c2162fb15bd608",
+      "exists": true,
+      "identical": true
+    },
+    {
+      "path": "knowledge-base/.DS_Store",
+      "upstreamSha256": "87b97a98dd438b5470330ed4bc2d3eab97bf517c66200dd22fc795b8e270f093",
+      "exists": true,
+      "identical": true
+    },
+    {
+      "path": "knowledge-base/SKILL.md",
+      "upstreamSha256": "50c1854c3352558bbc26486764303e7b62a4ea91121f99978611a361b0767e83",
+      "exists": true,
+      "identical": true
+    },
+    {
+      "path": "notes/references/api.md",
+      "upstreamSha256": "1dcd0615eb913a62a09c4fc164a3f8294f745196783791d20fe350120589311a",
+      "exists": true,
+      "identical": true
+    },
+    {
+      "path": "knowledge-base/references/api.md",
+      "upstreamSha256": "053ea380dfb0f358a066213d5302a92b38687bfe801cdac4e08ad9817c7e7ae5",
+      "exists": true,
+      "identical": true
+    },
+    {
+      "path": "knowledge-base/scripts/cos-upload.cjs",
+      "upstreamSha256": "523440e1f724b27fac79660a649afe1c38dcc788304e90003c774bbb332fd083",
+      "exists": true,
+      "identical": true
+    },
+    {
+      "path": "knowledge-base/scripts/preflight-check.cjs",
+      "upstreamSha256": "8189a2c0959b4dd2e1208b6805ce860e130682a342ee350e6e67b7a7ed7c57df",
+      "exists": true,
+      "identical": true
+    }
+  ],
+  "fileCount": 12,
+  "identical": 11,
+  "missing": 0
+}

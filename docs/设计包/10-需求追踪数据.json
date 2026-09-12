@@ -1,0 +1,5683 @@
+{
+  "schemaVersion": "zker.design-requirement-map/v1",
+  "date": "2026-09-11",
+  "sourceHead": "21a230f2c7a6a26e68a5eff1c36788d6f4206eab",
+  "status": "DESIGN_PROPOSAL_NOT_IMPLEMENTED",
+  "requirements": [
+    {
+      "id": "WD-01",
+      "priority": "P0",
+      "type": "修复",
+      "requirement": "修复 MyWork 路由与 props；接通节点打开/开始动作，统一会话壳层",
+      "acceptance": "typecheck 通过；普通员工从首页进入自己的节点，按钮触发真实动作，刷新可恢复",
+      "storyId": "US-WD-01",
+      "domain": "WD",
+      "persona": "业务员工",
+      "pages": [
+        "P01",
+        "P02"
+      ],
+      "entities": [
+        "WorkItem",
+        "HumanTask"
+      ],
+      "flows": [
+        "F01"
+      ],
+      "interfaces": [
+        "A01",
+        "A02"
+      ],
+      "negative": "他人任务不得混入本人列表",
+      "given": "本人有效会话下存在获准可见工作",
+      "batch": "B1",
+      "sourcePath": "/Users/mac/Documents/ChatGPT/ZKER- staff/apps/web/src/pages/work/MyWorkPage.tsx",
+      "designStatus": "PROPOSED_NOT_IMPLEMENTED"
+    },
+    {
+      "id": "WD-02",
+      "priority": "P0",
+      "type": "接通",
+      "requirement": "合并分散的“待执行、工作项、对话、产物”入口为任务上下文",
+      "acceptance": "从任务卡可完成配置、执行、检查和提交；全程保持同一业务任务关联",
+      "storyId": "US-WD-02",
+      "domain": "WD",
+      "persona": "业务员工",
+      "pages": [
+        "P01",
+        "P02",
+        "P22"
+      ],
+      "entities": [
+        "WorkItem",
+        "HumanTask"
+      ],
+      "flows": [
+        "F01",
+        "F13"
+      ],
+      "interfaces": [
+        "A01",
+        "A02",
+        "A17"
+      ],
+      "negative": "他人任务不得混入本人列表",
+      "given": "本人有效会话下存在获准可见工作",
+      "batch": "B1",
+      "sourcePath": "/Users/mac/Documents/ChatGPT/ZKER- staff/apps/web/src/pages/work/MyWorkPage.tsx",
+      "designStatus": "PROPOSED_NOT_IMPLEMENTED",
+      "marketRefinements": [
+        "MC-01"
+      ]
+    },
+    {
+      "id": "WD-03",
+      "priority": "P1",
+      "type": "完善",
+      "requirement": "按待领取、待我处理、AI 执行中、待审核、被退回、已交付组织列表",
+      "acceptance": "每个状态对应权威记录；同一任务在切换视图后状态一致，无重复计数",
+      "storyId": "US-WD-03",
+      "domain": "WD",
+      "persona": "业务员工",
+      "pages": [
+        "P01",
+        "P02"
+      ],
+      "entities": [
+        "WorkItem",
+        "HumanTask"
+      ],
+      "flows": [
+        "F01"
+      ],
+      "interfaces": [
+        "A01",
+        "A02"
+      ],
+      "negative": "他人任务不得混入本人列表",
+      "given": "本人有效会话下存在获准可见工作",
+      "batch": "B6",
+      "sourcePath": "/Users/mac/Documents/ChatGPT/ZKER- staff/apps/web/src/pages/work/MyWorkPage.tsx",
+      "designStatus": "PROPOSED_NOT_IMPLEMENTED"
+    },
+    {
+      "id": "WD-04",
+      "priority": "P0",
+      "type": "完善",
+      "requirement": "任务卡显示本人职责、交付物、期限、上游输入、下一接收人",
+      "acceptance": "用户无需打开流程后台即可回答“做什么、为什么是我、交给谁”",
+      "storyId": "US-WD-04",
+      "domain": "WD",
+      "persona": "业务员工",
+      "pages": [
+        "P01",
+        "P02"
+      ],
+      "entities": [
+        "WorkItem",
+        "HumanTask"
+      ],
+      "flows": [
+        "F01"
+      ],
+      "interfaces": [
+        "A01",
+        "A02"
+      ],
+      "negative": "他人任务不得混入本人列表",
+      "given": "本人有效会话下存在获准可见工作",
+      "batch": "B1",
+      "sourcePath": "/Users/mac/Documents/ChatGPT/ZKER- staff/apps/web/src/pages/work/MyWorkPage.tsx",
+      "designStatus": "PROPOSED_NOT_IMPLEMENTED"
+    },
+    {
+      "id": "WD-05",
+      "priority": "P1",
+      "type": "完善",
+      "requirement": "支持按流程、项目、期限、人员责任和执行 Agent 筛选，保存个人视图",
+      "acceptance": "普通员工仅查询可见集合；筛选与返回导航保留，不暴露全租户总数",
+      "storyId": "US-WD-05",
+      "domain": "WD",
+      "persona": "业务员工",
+      "pages": [
+        "P01",
+        "P02"
+      ],
+      "entities": [
+        "WorkItem",
+        "HumanTask"
+      ],
+      "flows": [
+        "F01"
+      ],
+      "interfaces": [
+        "A01",
+        "A02"
+      ],
+      "negative": "他人任务不得混入本人列表",
+      "given": "本人有效会话下存在获准可见工作",
+      "batch": "B6",
+      "sourcePath": "/Users/mac/Documents/ChatGPT/ZKER- staff/apps/web/src/pages/work/MyWorkPage.tsx",
+      "designStatus": "PROPOSED_NOT_IMPLEMENTED"
+    },
+    {
+      "id": "WD-06",
+      "priority": "P1",
+      "type": "完善",
+      "requirement": "将异常、求助、审核和资源失效集中到“需要我处理”",
+      "acceptance": "通知能直接定位任务内待处理项；已解决项自动消失并保留处理历史",
+      "storyId": "US-WD-06",
+      "domain": "WD",
+      "persona": "业务员工",
+      "pages": [
+        "P01",
+        "P02"
+      ],
+      "entities": [
+        "WorkItem",
+        "HumanTask"
+      ],
+      "flows": [
+        "F01"
+      ],
+      "interfaces": [
+        "A01",
+        "A02"
+      ],
+      "negative": "他人任务不得混入本人列表",
+      "given": "本人有效会话下存在获准可见工作",
+      "batch": "B6",
+      "sourcePath": "/Users/mac/Documents/ChatGPT/ZKER- staff/apps/web/src/pages/work/MyWorkPage.tsx",
+      "designStatus": "PROPOSED_NOT_IMPLEMENTED"
+    },
+    {
+      "id": "HR-01",
+      "priority": "P0",
+      "type": "接通",
+      "requirement": "节点明确责任人、实际执行人、协作人、复核/审批角色，激活时解析具体人员",
+      "acceptance": "同一实例能查到各角色与解析来源；模板岗位变更不覆写已发生责任记录",
+      "storyId": "US-HR-01",
+      "domain": "HR",
+      "persona": "节点责任人",
+      "pages": [
+        "P02",
+        "P03",
+        "P18"
+      ],
+      "entities": [
+        "HumanTask",
+        "Delegation",
+        "CollaborationLink"
+      ],
+      "flows": [
+        "F02",
+        "F07"
+      ],
+      "interfaces": [
+        "A02",
+        "A04"
+      ],
+      "negative": "转派后的旧执行权必须失效",
+      "given": "工作项已激活且候选人员、责任和授权可解析",
+      "batch": "B1",
+      "sourcePath": "/Users/mac/Documents/ChatGPT/ZKER- staff/CONTEXT.md",
+      "designStatus": "PROPOSED_NOT_IMPLEMENTED"
+    },
+    {
+      "id": "HR-02",
+      "priority": "P0",
+      "type": "接通",
+      "requirement": "领取、指派、释放、转派使用同一责任状态并处理并发",
+      "acceptance": "两人同时领取只有一人成功；失败者看到最新归属；转派后旧执行权失效",
+      "storyId": "US-HR-02",
+      "domain": "HR",
+      "persona": "节点责任人",
+      "pages": [
+        "P02",
+        "P03",
+        "P18"
+      ],
+      "entities": [
+        "HumanTask",
+        "Delegation",
+        "CollaborationLink"
+      ],
+      "flows": [
+        "F02",
+        "F07"
+      ],
+      "interfaces": [
+        "A02",
+        "A04"
+      ],
+      "negative": "转派后的旧执行权必须失效",
+      "given": "工作项已激活且候选人员、责任和授权可解析",
+      "batch": "B1",
+      "sourcePath": "/Users/mac/Documents/ChatGPT/ZKER- staff/CONTEXT.md",
+      "designStatus": "PROPOSED_NOT_IMPLEMENTED"
+    },
+    {
+      "id": "HR-03",
+      "priority": "P1",
+      "type": "完善",
+      "requirement": "支持按授权的候选组、岗位、负载及代理关系分派",
+      "acceptance": "无合格人员时产生明确异常任务；不悄悄分给无权限人员",
+      "storyId": "US-HR-03",
+      "domain": "HR",
+      "persona": "节点责任人",
+      "pages": [
+        "P02",
+        "P03",
+        "P18"
+      ],
+      "entities": [
+        "HumanTask",
+        "Delegation",
+        "CollaborationLink"
+      ],
+      "flows": [
+        "F02",
+        "F07"
+      ],
+      "interfaces": [
+        "A02",
+        "A04"
+      ],
+      "negative": "转派后的旧执行权必须失效",
+      "given": "工作项已激活且候选人员、责任和授权可解析",
+      "batch": "B3",
+      "sourcePath": "/Users/mac/Documents/ChatGPT/ZKER- staff/CONTEXT.md",
+      "designStatus": "PROPOSED_NOT_IMPLEMENTED"
+    },
+    {
+      "id": "HR-04",
+      "priority": "P0",
+      "type": "接通",
+      "requirement": "将人工复核、风险审批和专业咨询分成不同待办",
+      "acceptance": "专家给意见不自动批准；节点执行人不能借“确认完成”替代独立审批",
+      "storyId": "US-HR-04",
+      "domain": "HR",
+      "persona": "节点责任人",
+      "pages": [
+        "P02",
+        "P03",
+        "P18"
+      ],
+      "entities": [
+        "HumanTask",
+        "Delegation",
+        "CollaborationLink"
+      ],
+      "flows": [
+        "F02",
+        "F07"
+      ],
+      "interfaces": [
+        "A02",
+        "A04"
+      ],
+      "negative": "转派后的旧执行权必须失效",
+      "given": "工作项已激活且候选人员、责任和授权可解析",
+      "batch": "B3",
+      "sourcePath": "/Users/mac/Documents/ChatGPT/ZKER- staff/CONTEXT.md",
+      "designStatus": "PROPOSED_NOT_IMPLEMENTED"
+    },
+    {
+      "id": "HR-05",
+      "priority": "P1",
+      "type": "完善",
+      "requirement": "提供催办、延期、请人协助、退回补充和升级入口",
+      "acceptance": "每次处理保留理由、接收人、期限与结果；返回原节点继续而非丢失上下文",
+      "storyId": "US-HR-05",
+      "domain": "HR",
+      "persona": "节点责任人",
+      "pages": [
+        "P02",
+        "P03",
+        "P18"
+      ],
+      "entities": [
+        "HumanTask",
+        "Delegation",
+        "CollaborationLink"
+      ],
+      "flows": [
+        "F02",
+        "F07"
+      ],
+      "interfaces": [
+        "A02",
+        "A04"
+      ],
+      "negative": "转派后的旧执行权必须失效",
+      "given": "工作项已激活且候选人员、责任和授权可解析",
+      "batch": "B3",
+      "sourcePath": "/Users/mac/Documents/ChatGPT/ZKER- staff/CONTEXT.md",
+      "designStatus": "PROPOSED_NOT_IMPLEMENTED"
+    },
+    {
+      "id": "HR-06",
+      "priority": "P1",
+      "type": "完善",
+      "requirement": "人员离岗、休假、停用后同时处理任务和数字资产的交接",
+      "acceptance": "未完成任务有接收人；旧会话/授权不能继续写；个人私有材料按范围处理",
+      "storyId": "US-HR-06",
+      "domain": "HR",
+      "persona": "节点责任人",
+      "pages": [
+        "P02",
+        "P03",
+        "P18"
+      ],
+      "entities": [
+        "HumanTask",
+        "Delegation",
+        "CollaborationLink"
+      ],
+      "flows": [
+        "F02",
+        "F07"
+      ],
+      "interfaces": [
+        "A02",
+        "A04"
+      ],
+      "negative": "转派后的旧执行权必须失效",
+      "given": "工作项已激活且候选人员、责任和授权可解析",
+      "batch": "B3",
+      "sourcePath": "/Users/mac/Documents/ChatGPT/ZKER- staff/CONTEXT.md",
+      "designStatus": "PROPOSED_NOT_IMPLEMENTED"
+    },
+    {
+      "id": "NC-01",
+      "priority": "P0",
+      "type": "接通",
+      "requirement": "每个可执行节点提供“本次执行配置”，把配置和开始执行连接起来",
+      "acceptance": "保存后重开节点配置仍在；真实执行读取相同版本，不只显示摘要",
+      "storyId": "US-NC-01",
+      "domain": "NC",
+      "persona": "任务执行人",
+      "pages": [
+        "P04"
+      ],
+      "entities": [
+        "CandidateSnapshot",
+        "AgentAssignment",
+        "ExecutionSnapshot"
+      ],
+      "flows": [
+        "F03"
+      ],
+      "interfaces": [
+        "A03",
+        "A05"
+      ],
+      "negative": "个人偏好不得覆盖节点必需能力",
+      "given": "工作项允许执行且有当前节点合同与候选资源",
+      "batch": "B2",
+      "sourcePath": "/Users/mac/Documents/ChatGPT/ZKER- staff/apps/web/src/pages/work/NodeCapabilityPanel.tsx",
+      "designStatus": "PROPOSED_NOT_IMPLEMENTED"
+    },
+    {
+      "id": "NC-02",
+      "priority": "P0",
+      "type": "完善",
+      "requirement": "用候选选择器替代 ID 输入：数字员工、技能、知识、连接器、执行方案",
+      "acceptance": "可搜索可见候选，显示名称/用途/可用状态；普通用户无需知道内部 ID",
+      "storyId": "US-NC-02",
+      "domain": "NC",
+      "persona": "任务执行人",
+      "pages": [
+        "P04",
+        "P22"
+      ],
+      "entities": [
+        "CandidateSnapshot",
+        "AgentAssignment",
+        "ExecutionSnapshot"
+      ],
+      "flows": [
+        "F03",
+        "F13"
+      ],
+      "interfaces": [
+        "A03",
+        "A05",
+        "A17"
+      ],
+      "negative": "个人偏好不得覆盖节点必需能力",
+      "given": "工作项允许执行且有当前节点合同与候选资源",
+      "batch": "B2",
+      "sourcePath": "/Users/mac/Documents/ChatGPT/ZKER- staff/apps/web/src/pages/work/NodeCapabilityPanel.tsx",
+      "designStatus": "PROPOSED_NOT_IMPLEMENTED",
+      "marketRefinements": [
+        "MC-03"
+      ]
+    },
+    {
+      "id": "NC-03",
+      "priority": "P0",
+      "type": "接通",
+      "requirement": "同时提供“我的数字员工、共享给我的、节点推荐”候选",
+      "acceptance": "选择自己的 Agent 可完成任务；所有候选均通过节点资格和当前用户权限校验",
+      "storyId": "US-NC-03",
+      "domain": "NC",
+      "persona": "任务执行人",
+      "pages": [
+        "P04",
+        "P22"
+      ],
+      "entities": [
+        "CandidateSnapshot",
+        "AgentAssignment",
+        "ExecutionSnapshot"
+      ],
+      "flows": [
+        "F03",
+        "F13"
+      ],
+      "interfaces": [
+        "A03",
+        "A05",
+        "A17"
+      ],
+      "negative": "个人偏好不得覆盖节点必需能力",
+      "given": "工作项允许执行且有当前节点合同与候选资源",
+      "batch": "B2",
+      "sourcePath": "/Users/mac/Documents/ChatGPT/ZKER- staff/apps/web/src/pages/work/NodeCapabilityPanel.tsx",
+      "designStatus": "PROPOSED_NOT_IMPLEMENTED",
+      "marketRefinements": [
+        "MC-10"
+      ]
+    },
+    {
+      "id": "NC-04",
+      "priority": "P0",
+      "type": "完善",
+      "requirement": "展示必需项、可替换项、可追加项与不可用原因",
+      "acceptance": "已授权替换可直接执行；不满足要求时显示可理解的缺项与下一步",
+      "storyId": "US-NC-04",
+      "domain": "NC",
+      "persona": "任务执行人",
+      "pages": [
+        "P04",
+        "P22"
+      ],
+      "entities": [
+        "CandidateSnapshot",
+        "AgentAssignment",
+        "ExecutionSnapshot"
+      ],
+      "flows": [
+        "F03",
+        "F13"
+      ],
+      "interfaces": [
+        "A03",
+        "A05",
+        "A17"
+      ],
+      "negative": "个人偏好不得覆盖节点必需能力",
+      "given": "工作项允许执行且有当前节点合同与候选资源",
+      "batch": "B2",
+      "sourcePath": "/Users/mac/Documents/ChatGPT/ZKER- staff/apps/web/src/pages/work/NodeCapabilityPanel.tsx",
+      "designStatus": "PROPOSED_NOT_IMPLEMENTED",
+      "marketRefinements": [
+        "MC-06"
+      ]
+    },
+    {
+      "id": "NC-05",
+      "priority": "P1",
+      "type": "完善",
+      "requirement": "区分“仅本节点、我的偏好、共享模板提案”保存范围",
+      "acceptance": "本次替换不改变别人或其他节点；个人偏好重用时重新做资格校验",
+      "storyId": "US-NC-05",
+      "domain": "NC",
+      "persona": "任务执行人",
+      "pages": [
+        "P04"
+      ],
+      "entities": [
+        "CandidateSnapshot",
+        "AgentAssignment",
+        "ExecutionSnapshot"
+      ],
+      "flows": [
+        "F03"
+      ],
+      "interfaces": [
+        "A03",
+        "A05"
+      ],
+      "negative": "个人偏好不得覆盖节点必需能力",
+      "given": "工作项允许执行且有当前节点合同与候选资源",
+      "batch": "B6",
+      "sourcePath": "/Users/mac/Documents/ChatGPT/ZKER- staff/apps/web/src/pages/work/NodeCapabilityPanel.tsx",
+      "designStatus": "PROPOSED_NOT_IMPLEMENTED"
+    },
+    {
+      "id": "NC-06",
+      "priority": "P1",
+      "type": "完善",
+      "requirement": "为人工、协助、自动执行提供清楚的模式选择和默认值",
+      "acceptance": "人工模式仍能提交交付物；协助模式由人确认；自动模式遵守既定风险合同",
+      "storyId": "US-NC-06",
+      "domain": "NC",
+      "persona": "任务执行人",
+      "pages": [
+        "P04"
+      ],
+      "entities": [
+        "CandidateSnapshot",
+        "AgentAssignment",
+        "ExecutionSnapshot"
+      ],
+      "flows": [
+        "F03"
+      ],
+      "interfaces": [
+        "A03",
+        "A05"
+      ],
+      "negative": "个人偏好不得覆盖节点必需能力",
+      "given": "工作项允许执行且有当前节点合同与候选资源",
+      "batch": "B6",
+      "sourcePath": "/Users/mac/Documents/ChatGPT/ZKER- staff/apps/web/src/pages/work/NodeCapabilityPanel.tsx",
+      "designStatus": "PROPOSED_NOT_IMPLEMENTED"
+    },
+    {
+      "id": "NC-07",
+      "priority": "P0",
+      "type": "修复/接通",
+      "requirement": "配置引用真正持久化，并贯通有效配置解析、快照、Runtime 消费",
+      "acceptance": "数据库关联可回读；重启仍有效；执行证据能证明实际使用的 Agent/技能/连接器版本",
+      "storyId": "US-NC-07",
+      "domain": "NC",
+      "persona": "任务执行人",
+      "pages": [
+        "P04",
+        "P22"
+      ],
+      "entities": [
+        "CandidateSnapshot",
+        "AgentAssignment",
+        "ExecutionSnapshot"
+      ],
+      "flows": [
+        "F03",
+        "F13"
+      ],
+      "interfaces": [
+        "A03",
+        "A05",
+        "A17"
+      ],
+      "negative": "个人偏好不得覆盖节点必需能力",
+      "given": "工作项允许执行且有当前节点合同与候选资源",
+      "batch": "B2",
+      "sourcePath": "/Users/mac/Documents/ChatGPT/ZKER- staff/apps/web/src/pages/work/NodeCapabilityPanel.tsx",
+      "designStatus": "PROPOSED_NOT_IMPLEMENTED",
+      "marketRefinements": [
+        "MC-06"
+      ]
+    },
+    {
+      "id": "NC-08",
+      "priority": "P1",
+      "type": "完善",
+      "requirement": "更换执行者或资源时显示差异、运行中限制及恢复方式",
+      "acceptance": "已运行结果可追溯旧配置；替换后旧尝试不可提交，新尝试从明确输入继续",
+      "storyId": "US-NC-08",
+      "domain": "NC",
+      "persona": "任务执行人",
+      "pages": [
+        "P04",
+        "P22"
+      ],
+      "entities": [
+        "CandidateSnapshot",
+        "AgentAssignment",
+        "ExecutionSnapshot"
+      ],
+      "flows": [
+        "F03",
+        "F13"
+      ],
+      "interfaces": [
+        "A03",
+        "A05",
+        "A17"
+      ],
+      "negative": "个人偏好不得覆盖节点必需能力",
+      "given": "工作项允许执行且有当前节点合同与候选资源",
+      "batch": "B6",
+      "sourcePath": "/Users/mac/Documents/ChatGPT/ZKER- staff/apps/web/src/pages/work/NodeCapabilityPanel.tsx",
+      "designStatus": "PROPOSED_NOT_IMPLEMENTED",
+      "marketRefinements": [
+        "MC-07"
+      ]
+    },
+    {
+      "id": "AG-01",
+      "priority": "P0",
+      "type": "修复",
+      "requirement": "用真实档案内容和能力引用生成版本，移除固定占位 digest 的主路径",
+      "acceptance": "修改配置产生对应版本差异和摘要；版本读取、发布、执行所用内容一致",
+      "storyId": "US-AG-01",
+      "domain": "AG",
+      "persona": "数字员工维护者与使用者",
+      "pages": [
+        "P05"
+      ],
+      "entities": [
+        "AgentProfile",
+        "AgentDefinitionVersion",
+        "Grant"
+      ],
+      "flows": [
+        "F08"
+      ],
+      "interfaces": [
+        "A11"
+      ],
+      "negative": "共享使用权不自动包含编辑权或私人凭据",
+      "given": "用户拥有相应资产维护权或使用权",
+      "batch": "B2",
+      "sourcePath": "/Users/mac/Documents/ChatGPT/ZKER- staff/apps/web/src/pages/agents/AgentDetailPage.tsx",
+      "designStatus": "PROPOSED_NOT_IMPLEMENTED"
+    },
+    {
+      "id": "AG-02",
+      "priority": "P0",
+      "type": "修复",
+      "requirement": "拆开使用、编辑、共享、发布动作；替换固定 self/editor 授权表单",
+      "acceptance": "可选择授权对象/范围并预览影响；只有已有权限允许的动作出现，服务端同样拒绝越权",
+      "storyId": "US-AG-02",
+      "domain": "AG",
+      "persona": "数字员工维护者与使用者",
+      "pages": [
+        "P05",
+        "P22"
+      ],
+      "entities": [
+        "AgentProfile",
+        "AgentDefinitionVersion",
+        "Grant"
+      ],
+      "flows": [
+        "F08",
+        "F13"
+      ],
+      "interfaces": [
+        "A11",
+        "A17"
+      ],
+      "negative": "共享使用权不自动包含编辑权或私人凭据",
+      "given": "用户拥有相应资产维护权或使用权",
+      "batch": "B2",
+      "sourcePath": "/Users/mac/Documents/ChatGPT/ZKER- staff/apps/web/src/pages/agents/AgentDetailPage.tsx",
+      "designStatus": "PROPOSED_NOT_IMPLEMENTED",
+      "marketRefinements": [
+        "MC-02",
+        "MC-04"
+      ]
+    },
+    {
+      "id": "AG-03",
+      "priority": "P1",
+      "type": "完善",
+      "requirement": "提供基于已批准岗位模板的创建向导，支持自然语言生成草稿和人工编辑",
+      "acceptance": "能完成名称、职责、输入、交付、风格、边界配置，并试运行后保存",
+      "storyId": "US-AG-03",
+      "domain": "AG",
+      "persona": "数字员工维护者与使用者",
+      "pages": [
+        "P05"
+      ],
+      "entities": [
+        "AgentProfile",
+        "AgentDefinitionVersion",
+        "Grant"
+      ],
+      "flows": [
+        "F08"
+      ],
+      "interfaces": [
+        "A11"
+      ],
+      "negative": "共享使用权不自动包含编辑权或私人凭据",
+      "given": "用户拥有相应资产维护权或使用权",
+      "batch": "B6",
+      "sourcePath": "/Users/mac/Documents/ChatGPT/ZKER- staff/apps/web/src/pages/agents/AgentDetailPage.tsx",
+      "designStatus": "PROPOSED_NOT_IMPLEMENTED"
+    },
+    {
+      "id": "AG-04",
+      "priority": "P1",
+      "type": "完善",
+      "requirement": "建立数字员工详情页：概览、能力、任务、记忆、运行记录、设置",
+      "acceptance": "每个标签来自同一 Agent；资源变化、版本与任务历史可以互相定位",
+      "storyId": "US-AG-04",
+      "domain": "AG",
+      "persona": "数字员工维护者与使用者",
+      "pages": [
+        "P05",
+        "P22"
+      ],
+      "entities": [
+        "AgentProfile",
+        "AgentDefinitionVersion",
+        "Grant"
+      ],
+      "flows": [
+        "F08",
+        "F13"
+      ],
+      "interfaces": [
+        "A11",
+        "A17"
+      ],
+      "negative": "共享使用权不自动包含编辑权或私人凭据",
+      "given": "用户拥有相应资产维护权或使用权",
+      "batch": "B6",
+      "sourcePath": "/Users/mac/Documents/ChatGPT/ZKER- staff/apps/web/src/pages/agents/AgentDetailPage.tsx",
+      "designStatus": "PROPOSED_NOT_IMPLEMENTED",
+      "marketRefinements": [
+        "MC-07"
+      ]
+    },
+    {
+      "id": "AG-05",
+      "priority": "P1",
+      "type": "完善",
+      "requirement": "支持“我创建的、共享给我的、团队使用”关系与搜索/收藏",
+      "acceptance": "相同 Agent 不因多种关系重复；可用权限清楚，私有资产不被其他用户枚举",
+      "storyId": "US-AG-05",
+      "domain": "AG",
+      "persona": "数字员工维护者与使用者",
+      "pages": [
+        "P05",
+        "P22"
+      ],
+      "entities": [
+        "AgentProfile",
+        "AgentDefinitionVersion",
+        "Grant"
+      ],
+      "flows": [
+        "F08",
+        "F13"
+      ],
+      "interfaces": [
+        "A11",
+        "A17"
+      ],
+      "negative": "共享使用权不自动包含编辑权或私人凭据",
+      "given": "用户拥有相应资产维护权或使用权",
+      "batch": "B6",
+      "sourcePath": "/Users/mac/Documents/ChatGPT/ZKER- staff/apps/web/src/pages/agents/AgentDetailPage.tsx",
+      "designStatus": "PROPOSED_NOT_IMPLEMENTED",
+      "marketRefinements": [
+        "MC-01"
+      ]
+    },
+    {
+      "id": "AG-06",
+      "priority": "P1",
+      "type": "完善",
+      "requirement": "完整处理草稿、测试、可用、停用、归档、恢复和替代版本",
+      "acceptance": "草稿作者能回到草稿继续；停用有依赖影响，历史仍能还原原版本",
+      "storyId": "US-AG-06",
+      "domain": "AG",
+      "persona": "数字员工维护者与使用者",
+      "pages": [
+        "P05",
+        "P22"
+      ],
+      "entities": [
+        "AgentProfile",
+        "AgentDefinitionVersion",
+        "Grant"
+      ],
+      "flows": [
+        "F08",
+        "F13"
+      ],
+      "interfaces": [
+        "A11",
+        "A17"
+      ],
+      "negative": "共享使用权不自动包含编辑权或私人凭据",
+      "given": "用户拥有相应资产维护权或使用权",
+      "batch": "B6",
+      "sourcePath": "/Users/mac/Documents/ChatGPT/ZKER- staff/apps/web/src/pages/agents/AgentDetailPage.tsx",
+      "designStatus": "PROPOSED_NOT_IMPLEMENTED",
+      "marketRefinements": [
+        "MC-09"
+      ]
+    },
+    {
+      "id": "AG-07",
+      "priority": "P2",
+      "type": "补建/核验",
+      "requirement": "岗位配置包导入/导出、模板复制、受控分享与升级提示",
+      "acceptance": "包不含个人凭据/隐私；导入先预览，缺依赖明确提示，升级不修改在途实例",
+      "storyId": "US-AG-07",
+      "domain": "AG",
+      "persona": "数字员工维护者与使用者",
+      "pages": [
+        "P05",
+        "P22"
+      ],
+      "entities": [
+        "AgentProfile",
+        "AgentDefinitionVersion",
+        "Grant"
+      ],
+      "flows": [
+        "F08",
+        "F13"
+      ],
+      "interfaces": [
+        "A11",
+        "A17"
+      ],
+      "negative": "共享使用权不自动包含编辑权或私人凭据",
+      "given": "用户拥有相应资产维护权或使用权",
+      "batch": "B8",
+      "sourcePath": "/Users/mac/Documents/ChatGPT/ZKER- staff/apps/web/src/pages/agents/AgentDetailPage.tsx",
+      "designStatus": "PROPOSED_NOT_IMPLEMENTED",
+      "marketRefinements": [
+        "MC-03",
+        "MC-04",
+        "MC-08"
+      ]
+    },
+    {
+      "id": "SK-01",
+      "priority": "P1",
+      "type": "接通",
+      "requirement": "打通技能目录、详情、我的草稿、已批准技能与节点选择器",
+      "acceptance": "新建后可返回继续编辑；已发布版本能在合格节点被发现和选用",
+      "storyId": "US-SK-01",
+      "domain": "SK",
+      "persona": "技能作者与任务执行人",
+      "pages": [
+        "P06",
+        "P04",
+        "P22"
+      ],
+      "entities": [
+        "SkillVersion",
+        "CapabilityManifest"
+      ],
+      "flows": [
+        "F08",
+        "F13"
+      ],
+      "interfaces": [
+        "A11",
+        "A17"
+      ],
+      "negative": "未经发布和批准的技能不得成为正式运行资源",
+      "given": "技能来源和版本明确，用户有对应使用/创作权",
+      "batch": "B6",
+      "sourcePath": "/Users/mac/Documents/ChatGPT/ZKER- staff/contracts/jsonschema/staffdeck-skill-card.schema.json",
+      "designStatus": "PROPOSED_NOT_IMPLEMENTED",
+      "marketRefinements": [
+        "MC-01",
+        "MC-03"
+      ]
+    },
+    {
+      "id": "SK-02",
+      "priority": "P1",
+      "type": "完善",
+      "requirement": "技能卡说明适用任务、输入、输出、例子、依赖、版本与维护者",
+      "acceptance": "员工能据业务说明判断是否适用；不依赖阅读脚本或 Manifest",
+      "storyId": "US-SK-02",
+      "domain": "SK",
+      "persona": "技能作者与任务执行人",
+      "pages": [
+        "P06",
+        "P04"
+      ],
+      "entities": [
+        "SkillVersion",
+        "CapabilityManifest"
+      ],
+      "flows": [
+        "F08"
+      ],
+      "interfaces": [
+        "A11"
+      ],
+      "negative": "未经发布和批准的技能不得成为正式运行资源",
+      "given": "技能来源和版本明确，用户有对应使用/创作权",
+      "batch": "B6",
+      "sourcePath": "/Users/mac/Documents/ChatGPT/ZKER- staff/contracts/jsonschema/staffdeck-skill-card.schema.json",
+      "designStatus": "PROPOSED_NOT_IMPLEMENTED"
+    },
+    {
+      "id": "SK-03",
+      "priority": "P1",
+      "type": "完善",
+      "requirement": "在节点中填写技能业务参数，支持多个技能排序、依赖和冲突提示",
+      "acceptance": "缺依赖/参数错误在执行前发现；有效参数实际传到技能调用",
+      "storyId": "US-SK-03",
+      "domain": "SK",
+      "persona": "技能作者与任务执行人",
+      "pages": [
+        "P06",
+        "P04",
+        "P22"
+      ],
+      "entities": [
+        "SkillVersion",
+        "CapabilityManifest"
+      ],
+      "flows": [
+        "F08",
+        "F13"
+      ],
+      "interfaces": [
+        "A11",
+        "A17"
+      ],
+      "negative": "未经发布和批准的技能不得成为正式运行资源",
+      "given": "技能来源和版本明确，用户有对应使用/创作权",
+      "batch": "B6",
+      "sourcePath": "/Users/mac/Documents/ChatGPT/ZKER- staff/contracts/jsonschema/staffdeck-skill-card.schema.json",
+      "designStatus": "PROPOSED_NOT_IMPLEMENTED",
+      "marketRefinements": [
+        "MC-06"
+      ]
+    },
+    {
+      "id": "SK-04",
+      "priority": "P1",
+      "type": "接通",
+      "requirement": "上传 Markdown/资源包、校验、隔离试验、提交发布形成完整创作流",
+      "acceptance": "解析错误可定位；导入不立即执行；发布版本有对应测试和内容摘要",
+      "storyId": "US-SK-04",
+      "domain": "SK",
+      "persona": "技能作者与任务执行人",
+      "pages": [
+        "P06",
+        "P04",
+        "P22"
+      ],
+      "entities": [
+        "SkillVersion",
+        "CapabilityManifest"
+      ],
+      "flows": [
+        "F08",
+        "F13"
+      ],
+      "interfaces": [
+        "A11",
+        "A17"
+      ],
+      "negative": "未经发布和批准的技能不得成为正式运行资源",
+      "given": "技能来源和版本明确，用户有对应使用/创作权",
+      "batch": "B6",
+      "sourcePath": "/Users/mac/Documents/ChatGPT/ZKER- staff/contracts/jsonschema/staffdeck-skill-card.schema.json",
+      "designStatus": "PROPOSED_NOT_IMPLEMENTED",
+      "marketRefinements": [
+        "MC-09"
+      ]
+    },
+    {
+      "id": "SK-05",
+      "priority": "P1",
+      "type": "完善",
+      "requirement": "节点内试用技能，预览示例输出和拟执行动作",
+      "acceptance": "试用输入与真实业务隔离；员工能比较结果，试用不擅自产生正式副作用",
+      "storyId": "US-SK-05",
+      "domain": "SK",
+      "persona": "技能作者与任务执行人",
+      "pages": [
+        "P06",
+        "P04"
+      ],
+      "entities": [
+        "SkillVersion",
+        "CapabilityManifest"
+      ],
+      "flows": [
+        "F08"
+      ],
+      "interfaces": [
+        "A11"
+      ],
+      "negative": "未经发布和批准的技能不得成为正式运行资源",
+      "given": "技能来源和版本明确，用户有对应使用/创作权",
+      "batch": "B6",
+      "sourcePath": "/Users/mac/Documents/ChatGPT/ZKER- staff/contracts/jsonschema/staffdeck-skill-card.schema.json",
+      "designStatus": "PROPOSED_NOT_IMPLEMENTED"
+    },
+    {
+      "id": "SK-06",
+      "priority": "P1",
+      "type": "完善",
+      "requirement": "更新、回退、停用技能时展示 Agent、节点、方案和自动化依赖",
+      "acceptance": "受影响对象可定位；历史运行仍引用旧版；失效不被报告为已生效",
+      "storyId": "US-SK-06",
+      "domain": "SK",
+      "persona": "技能作者与任务执行人",
+      "pages": [
+        "P06",
+        "P04",
+        "P22"
+      ],
+      "entities": [
+        "SkillVersion",
+        "CapabilityManifest"
+      ],
+      "flows": [
+        "F08",
+        "F13"
+      ],
+      "interfaces": [
+        "A11",
+        "A17"
+      ],
+      "negative": "未经发布和批准的技能不得成为正式运行资源",
+      "given": "技能来源和版本明确，用户有对应使用/创作权",
+      "batch": "B6",
+      "sourcePath": "/Users/mac/Documents/ChatGPT/ZKER- staff/contracts/jsonschema/staffdeck-skill-card.schema.json",
+      "designStatus": "PROPOSED_NOT_IMPLEMENTED",
+      "marketRefinements": [
+        "MC-04",
+        "MC-07"
+      ]
+    },
+    {
+      "id": "SK-07",
+      "priority": "P2",
+      "type": "完善",
+      "requirement": "按岗位建立精选技能集合，用经过验收的效果反馈改进排序",
+      "acceptance": "指标能回溯到任务；安装量不冒充成功率；不因推荐扩大授权",
+      "storyId": "US-SK-07",
+      "domain": "SK",
+      "persona": "技能作者与任务执行人",
+      "pages": [
+        "P06",
+        "P04"
+      ],
+      "entities": [
+        "SkillVersion",
+        "CapabilityManifest"
+      ],
+      "flows": [
+        "F08"
+      ],
+      "interfaces": [
+        "A11"
+      ],
+      "negative": "未经发布和批准的技能不得成为正式运行资源",
+      "given": "技能来源和版本明确，用户有对应使用/创作权",
+      "batch": "B8",
+      "sourcePath": "/Users/mac/Documents/ChatGPT/ZKER- staff/contracts/jsonschema/staffdeck-skill-card.schema.json",
+      "designStatus": "PROPOSED_NOT_IMPLEMENTED"
+    },
+    {
+      "id": "CN-01",
+      "priority": "P0",
+      "type": "修复",
+      "requirement": "修复 Agent 绑定能力仅更新 revision 的路径，建立可回读关联与撤销",
+      "acceptance": "绑定后查询可见且 Runtime 实际可用；解绑后未来调用被拒绝；重启保持一致",
+      "storyId": "US-CN-01",
+      "domain": "CN",
+      "persona": "任务执行人与连接维护者",
+      "pages": [
+        "P07",
+        "P04"
+      ],
+      "entities": [
+        "CapabilityManifest",
+        "ConnectionIdentity",
+        "Grant",
+        "Invocation"
+      ],
+      "flows": [
+        "F09"
+      ],
+      "interfaces": [
+        "A12"
+      ],
+      "negative": "连接状态、授权、调用回执不得互相替代",
+      "given": "目标应用、身份、授权范围与当前任务明确",
+      "batch": "B2",
+      "sourcePath": "/Users/mac/Documents/ChatGPT/ZKER- staff/contracts/openapi/staffdeck-public-v1.yaml",
+      "designStatus": "PROPOSED_NOT_IMPLEMENTED"
+    },
+    {
+      "id": "CN-02",
+      "priority": "P0",
+      "type": "完善",
+      "requirement": "分开已接入、待授权、已授权、已授予、节点可用、健康/失效状态",
+      "acceptance": "每一状态有真实来源；“允许启用”不被展示成“已连接”；异常能定位到对应阶段",
+      "storyId": "US-CN-02",
+      "domain": "CN",
+      "persona": "任务执行人与连接维护者",
+      "pages": [
+        "P07",
+        "P04",
+        "P22"
+      ],
+      "entities": [
+        "CapabilityManifest",
+        "ConnectionIdentity",
+        "Grant",
+        "Invocation"
+      ],
+      "flows": [
+        "F09",
+        "F13"
+      ],
+      "interfaces": [
+        "A12",
+        "A17"
+      ],
+      "negative": "连接状态、授权、调用回执不得互相替代",
+      "given": "目标应用、身份、授权范围与当前任务明确",
+      "batch": "B2",
+      "sourcePath": "/Users/mac/Documents/ChatGPT/ZKER- staff/contracts/openapi/staffdeck-public-v1.yaml",
+      "designStatus": "PROPOSED_NOT_IMPLEMENTED",
+      "marketRefinements": [
+        "MC-06"
+      ]
+    },
+    {
+      "id": "CN-03",
+      "priority": "P1",
+      "type": "完善",
+      "requirement": "普通员工通过应用/动作卡选择连接器，以业务表单替代工具 ID 和 JSON",
+      "acceptance": "完成一次授权范围内查询无需填写标识或协议字段；技术调试仍从管理端可达",
+      "storyId": "US-CN-03",
+      "domain": "CN",
+      "persona": "任务执行人与连接维护者",
+      "pages": [
+        "P07",
+        "P04",
+        "P22"
+      ],
+      "entities": [
+        "CapabilityManifest",
+        "ConnectionIdentity",
+        "Grant",
+        "Invocation"
+      ],
+      "flows": [
+        "F09",
+        "F13"
+      ],
+      "interfaces": [
+        "A12",
+        "A17"
+      ],
+      "negative": "连接状态、授权、调用回执不得互相替代",
+      "given": "目标应用、身份、授权范围与当前任务明确",
+      "batch": "B6",
+      "sourcePath": "/Users/mac/Documents/ChatGPT/ZKER- staff/contracts/openapi/staffdeck-public-v1.yaml",
+      "designStatus": "PROPOSED_NOT_IMPLEMENTED",
+      "marketRefinements": [
+        "MC-01",
+        "MC-03"
+      ]
+    },
+    {
+      "id": "CN-04",
+      "priority": "P1",
+      "type": "完善",
+      "requirement": "区分个人连接身份、共享服务身份与受委托身份",
+      "acceptance": "员工明确知道“以谁的账号执行”；分享 Agent 不附带分享原作者外部账号",
+      "storyId": "US-CN-04",
+      "domain": "CN",
+      "persona": "任务执行人与连接维护者",
+      "pages": [
+        "P07",
+        "P04",
+        "P22"
+      ],
+      "entities": [
+        "CapabilityManifest",
+        "ConnectionIdentity",
+        "Grant",
+        "Invocation"
+      ],
+      "flows": [
+        "F09",
+        "F13"
+      ],
+      "interfaces": [
+        "A12",
+        "A17"
+      ],
+      "negative": "连接状态、授权、调用回执不得互相替代",
+      "given": "目标应用、身份、授权范围与当前任务明确",
+      "batch": "B6",
+      "sourcePath": "/Users/mac/Documents/ChatGPT/ZKER- staff/contracts/openapi/staffdeck-public-v1.yaml",
+      "designStatus": "PROPOSED_NOT_IMPLEMENTED",
+      "marketRefinements": [
+        "MC-05"
+      ]
+    },
+    {
+      "id": "CN-05",
+      "priority": "P1",
+      "type": "接通",
+      "requirement": "提供 OAuth/受保护凭据配置、重授权、到期提醒、轮换和撤销",
+      "acceptance": "失效可修复后回到原任务；密钥不进入对话、导出或前端普通字段",
+      "storyId": "US-CN-05",
+      "domain": "CN",
+      "persona": "任务执行人与连接维护者",
+      "pages": [
+        "P07",
+        "P04",
+        "P22"
+      ],
+      "entities": [
+        "CapabilityManifest",
+        "ConnectionIdentity",
+        "Grant",
+        "Invocation"
+      ],
+      "flows": [
+        "F09",
+        "F13"
+      ],
+      "interfaces": [
+        "A12",
+        "A17"
+      ],
+      "negative": "连接状态、授权、调用回执不得互相替代",
+      "given": "目标应用、身份、授权范围与当前任务明确",
+      "batch": "B6",
+      "sourcePath": "/Users/mac/Documents/ChatGPT/ZKER- staff/contracts/openapi/staffdeck-public-v1.yaml",
+      "designStatus": "PROPOSED_NOT_IMPLEMENTED",
+      "marketRefinements": [
+        "MC-05"
+      ]
+    },
+    {
+      "id": "CN-06",
+      "priority": "P1",
+      "type": "完善",
+      "requirement": "提供自定义 MCP/HTTP 连接器向导、工具发现和只读连通性验证",
+      "acceptance": "显示实际发现的工具及参数；服务不可达/零工具/版本不兼容有不同处理",
+      "storyId": "US-CN-06",
+      "domain": "CN",
+      "persona": "任务执行人与连接维护者",
+      "pages": [
+        "P07",
+        "P04"
+      ],
+      "entities": [
+        "CapabilityManifest",
+        "ConnectionIdentity",
+        "Grant",
+        "Invocation"
+      ],
+      "flows": [
+        "F09"
+      ],
+      "interfaces": [
+        "A12"
+      ],
+      "negative": "连接状态、授权、调用回执不得互相替代",
+      "given": "目标应用、身份、授权范围与当前任务明确",
+      "batch": "B6",
+      "sourcePath": "/Users/mac/Documents/ChatGPT/ZKER- staff/contracts/openapi/staffdeck-public-v1.yaml",
+      "designStatus": "PROPOSED_NOT_IMPLEMENTED"
+    },
+    {
+      "id": "CN-07",
+      "priority": "P1",
+      "type": "完善",
+      "requirement": "完善浏览器、电脑操作、文件和命令执行能力的节点入口",
+      "acceptance": "员工能确认目标网页/设备/目录；读写边界、当前任务和实际执行对象一致",
+      "storyId": "US-CN-07",
+      "domain": "CN",
+      "persona": "任务执行人与连接维护者",
+      "pages": [
+        "P07",
+        "P04"
+      ],
+      "entities": [
+        "CapabilityManifest",
+        "ConnectionIdentity",
+        "Grant",
+        "Invocation"
+      ],
+      "flows": [
+        "F09"
+      ],
+      "interfaces": [
+        "A12"
+      ],
+      "negative": "连接状态、授权、调用回执不得互相替代",
+      "given": "目标应用、身份、授权范围与当前任务明确",
+      "batch": "B6",
+      "sourcePath": "/Users/mac/Documents/ChatGPT/ZKER- staff/contracts/openapi/staffdeck-public-v1.yaml",
+      "designStatus": "PROPOSED_NOT_IMPLEMENTED"
+    },
+    {
+      "id": "CN-08",
+      "priority": "P1",
+      "type": "完善",
+      "requirement": "写操作提供目标预览、必要确认、结果回执、超时查证与重复调用保护",
+      "acceptance": "同一提交重试不重复创建外部对象；超时显示待确认，确认后可恢复任务",
+      "storyId": "US-CN-08",
+      "domain": "CN",
+      "persona": "任务执行人与连接维护者",
+      "pages": [
+        "P07",
+        "P04",
+        "P22"
+      ],
+      "entities": [
+        "CapabilityManifest",
+        "ConnectionIdentity",
+        "Grant",
+        "Invocation"
+      ],
+      "flows": [
+        "F09",
+        "F13"
+      ],
+      "interfaces": [
+        "A12",
+        "A17"
+      ],
+      "negative": "连接状态、授权、调用回执不得互相替代",
+      "given": "目标应用、身份、授权范围与当前任务明确",
+      "batch": "B6",
+      "sourcePath": "/Users/mac/Documents/ChatGPT/ZKER- staff/contracts/openapi/staffdeck-public-v1.yaml",
+      "designStatus": "PROPOSED_NOT_IMPLEMENTED",
+      "marketRefinements": [
+        "MC-08"
+      ]
+    },
+    {
+      "id": "CN-09",
+      "priority": "P2",
+      "type": "补建/核验",
+      "requirement": "形成企业应用连接器目录及扩展包生命周期：维护者、版本、能力、健康、依赖",
+      "acceptance": "每个宣称可用的连接器有独立实例调用证据；停止维护/撤回后依赖任务有替代方案",
+      "storyId": "US-CN-09",
+      "domain": "CN",
+      "persona": "任务执行人与连接维护者",
+      "pages": [
+        "P07",
+        "P04",
+        "P22"
+      ],
+      "entities": [
+        "CapabilityManifest",
+        "ConnectionIdentity",
+        "Grant",
+        "Invocation"
+      ],
+      "flows": [
+        "F09",
+        "F13"
+      ],
+      "interfaces": [
+        "A12",
+        "A17"
+      ],
+      "negative": "连接状态、授权、调用回执不得互相替代",
+      "given": "目标应用、身份、授权范围与当前任务明确",
+      "batch": "B8",
+      "sourcePath": "/Users/mac/Documents/ChatGPT/ZKER- staff/contracts/openapi/staffdeck-public-v1.yaml",
+      "designStatus": "PROPOSED_NOT_IMPLEMENTED",
+      "marketRefinements": [
+        "MC-09"
+      ]
+    },
+    {
+      "id": "KB-01",
+      "priority": "P1",
+      "type": "完善",
+      "requirement": "建立知识详情工作区和“我维护/共享给我/可使用”范围",
+      "acceptance": "作者可找到草稿；使用者只见被授权的可用知识；绑定 Agent 与共享给人分别生效",
+      "storyId": "US-KB-01",
+      "domain": "KB",
+      "persona": "知识维护者与任务执行人",
+      "pages": [
+        "P08",
+        "P20"
+      ],
+      "entities": [
+        "KnowledgeVersion",
+        "Citation",
+        "ContextManifest"
+      ],
+      "flows": [
+        "F08",
+        "F04"
+      ],
+      "interfaces": [
+        "A11",
+        "A06"
+      ],
+      "negative": "拥有索引不能绕过源文件读取权",
+      "given": "知识来源、版本、授权和当前任务用途明确",
+      "batch": "B6",
+      "sourcePath": "/Users/mac/Documents/ChatGPT/ZKER- staff/apps/web/src/pages/knowledge/KnowledgeListPage.tsx",
+      "designStatus": "PROPOSED_NOT_IMPLEMENTED"
+    },
+    {
+      "id": "KB-02",
+      "priority": "P1",
+      "type": "接通",
+      "requirement": "文件、URL、业务系统来源导入后展示解析、加工、发布和更新状态",
+      "acceptance": "上传成功与可检索分开显示；错误页/空页/失败文档不能显示可用于回答",
+      "storyId": "US-KB-02",
+      "domain": "KB",
+      "persona": "知识维护者与任务执行人",
+      "pages": [
+        "P08",
+        "P20"
+      ],
+      "entities": [
+        "KnowledgeVersion",
+        "Citation",
+        "ContextManifest"
+      ],
+      "flows": [
+        "F08",
+        "F04"
+      ],
+      "interfaces": [
+        "A11",
+        "A06"
+      ],
+      "negative": "拥有索引不能绕过源文件读取权",
+      "given": "知识来源、版本、授权和当前任务用途明确",
+      "batch": "B6",
+      "sourcePath": "/Users/mac/Documents/ChatGPT/ZKER- staff/apps/web/src/pages/knowledge/KnowledgeListPage.tsx",
+      "designStatus": "PROPOSED_NOT_IMPLEMENTED"
+    },
+    {
+      "id": "KB-03",
+      "priority": "P1",
+      "type": "完善",
+      "requirement": "支持主题/文件夹、结构化知识条目、模板化加工和定期更新",
+      "acceptance": "加工条目能回到原文；更新产生可追溯版本，失败可重试且不重复导入",
+      "storyId": "US-KB-03",
+      "domain": "KB",
+      "persona": "知识维护者与任务执行人",
+      "pages": [
+        "P08",
+        "P20"
+      ],
+      "entities": [
+        "KnowledgeVersion",
+        "Citation",
+        "ContextManifest"
+      ],
+      "flows": [
+        "F08",
+        "F04"
+      ],
+      "interfaces": [
+        "A11",
+        "A06"
+      ],
+      "negative": "拥有索引不能绕过源文件读取权",
+      "given": "知识来源、版本、授权和当前任务用途明确",
+      "batch": "B6",
+      "sourcePath": "/Users/mac/Documents/ChatGPT/ZKER- staff/apps/web/src/pages/knowledge/KnowledgeListPage.tsx",
+      "designStatus": "PROPOSED_NOT_IMPLEMENTED"
+    },
+    {
+      "id": "KB-04",
+      "priority": "P1",
+      "type": "完善/核验",
+      "requirement": "用真实业务问题评测关键词、语义和混合检索，选择合适实现",
+      "acceptance": "同义问题、无答案问题、更新后问题有固定评测集；报告真实召回与引用结果",
+      "storyId": "US-KB-04",
+      "domain": "KB",
+      "persona": "知识维护者与任务执行人",
+      "pages": [
+        "P08",
+        "P20"
+      ],
+      "entities": [
+        "KnowledgeVersion",
+        "Citation",
+        "ContextManifest"
+      ],
+      "flows": [
+        "F08",
+        "F04"
+      ],
+      "interfaces": [
+        "A11",
+        "A06"
+      ],
+      "negative": "拥有索引不能绕过源文件读取权",
+      "given": "知识来源、版本、授权和当前任务用途明确",
+      "batch": "B6",
+      "sourcePath": "/Users/mac/Documents/ChatGPT/ZKER- staff/apps/web/src/pages/knowledge/KnowledgeListPage.tsx",
+      "designStatus": "PROPOSED_NOT_IMPLEMENTED"
+    },
+    {
+      "id": "KB-05",
+      "priority": "P1",
+      "type": "接通",
+      "requirement": "在节点对话和产物中提供可打开的引用、版本、片段和来源",
+      "acceptance": "引用确实支持结论；用户失去原文权限后不能借引用继续读取",
+      "storyId": "US-KB-05",
+      "domain": "KB",
+      "persona": "知识维护者与任务执行人",
+      "pages": [
+        "P08",
+        "P20"
+      ],
+      "entities": [
+        "KnowledgeVersion",
+        "Citation",
+        "ContextManifest"
+      ],
+      "flows": [
+        "F08",
+        "F04"
+      ],
+      "interfaces": [
+        "A11",
+        "A06"
+      ],
+      "negative": "拥有索引不能绕过源文件读取权",
+      "given": "知识来源、版本、授权和当前任务用途明确",
+      "batch": "B6",
+      "sourcePath": "/Users/mac/Documents/ChatGPT/ZKER- staff/apps/web/src/pages/knowledge/KnowledgeListPage.tsx",
+      "designStatus": "PROPOSED_NOT_IMPLEMENTED"
+    },
+    {
+      "id": "KB-06",
+      "priority": "P1",
+      "type": "完善",
+      "requirement": "节点区分流程必需知识与员工追加知识，显式展示冲突/过期资料",
+      "acceptance": "必需版本无法误删；资料互相矛盾时提示来源与有效期，不静默混用",
+      "storyId": "US-KB-06",
+      "domain": "KB",
+      "persona": "知识维护者与任务执行人",
+      "pages": [
+        "P08",
+        "P20"
+      ],
+      "entities": [
+        "KnowledgeVersion",
+        "Citation",
+        "ContextManifest"
+      ],
+      "flows": [
+        "F08",
+        "F04"
+      ],
+      "interfaces": [
+        "A11",
+        "A06"
+      ],
+      "negative": "拥有索引不能绕过源文件读取权",
+      "given": "知识来源、版本、授权和当前任务用途明确",
+      "batch": "B6",
+      "sourcePath": "/Users/mac/Documents/ChatGPT/ZKER- staff/apps/web/src/pages/knowledge/KnowledgeListPage.tsx",
+      "designStatus": "PROPOSED_NOT_IMPLEMENTED"
+    },
+    {
+      "id": "KB-07",
+      "priority": "P2",
+      "type": "完善",
+      "requirement": "知识授权、停用、更新影响同步到 Agent、节点和自动化",
+      "acceptance": "能预览受影响范围；历史交付保留原引用事实，未来使用遵守当前授权",
+      "storyId": "US-KB-07",
+      "domain": "KB",
+      "persona": "知识维护者与任务执行人",
+      "pages": [
+        "P08",
+        "P20"
+      ],
+      "entities": [
+        "KnowledgeVersion",
+        "Citation",
+        "ContextManifest"
+      ],
+      "flows": [
+        "F08",
+        "F04"
+      ],
+      "interfaces": [
+        "A11",
+        "A06"
+      ],
+      "negative": "拥有索引不能绕过源文件读取权",
+      "given": "知识来源、版本、授权和当前任务用途明确",
+      "batch": "B8",
+      "sourcePath": "/Users/mac/Documents/ChatGPT/ZKER- staff/apps/web/src/pages/knowledge/KnowledgeListPage.tsx",
+      "designStatus": "PROPOSED_NOT_IMPLEMENTED"
+    },
+    {
+      "id": "MM-01",
+      "priority": "P1",
+      "type": "完善",
+      "requirement": "明确个人、Agent、项目、团队、节点实例与渠道记忆的适用范围",
+      "acceptance": "相同 Agent 服务不同员工时，私人记忆不会进入他人的任务或群聊",
+      "storyId": "US-MM-01",
+      "domain": "MM",
+      "persona": "数字员工使用者",
+      "pages": [
+        "P09",
+        "P20",
+        "P22"
+      ],
+      "entities": [
+        "Memory",
+        "ContextManifest",
+        "EvolutionProposal"
+      ],
+      "flows": [
+        "F04",
+        "F08",
+        "F13"
+      ],
+      "interfaces": [
+        "A11",
+        "A06",
+        "A17"
+      ],
+      "negative": "私人记忆不能自动进入团队上下文",
+      "given": "当前主体及个人/项目/团队记忆范围明确",
+      "batch": "B6",
+      "sourcePath": "/Users/mac/Documents/ChatGPT/ZKER- staff/docs/ui/domain-agent-evolution-design.md",
+      "designStatus": "PROPOSED_NOT_IMPLEMENTED",
+      "marketRefinements": [
+        "MC-05"
+      ]
+    },
+    {
+      "id": "MM-02",
+      "priority": "P1",
+      "type": "完善",
+      "requirement": "提供分类、搜索、来源、时间线、编辑、失效、导出和保留设置",
+      "acceptance": "用户能回答一条记忆从哪来、在哪里生效；修改和失效有回读结果",
+      "storyId": "US-MM-02",
+      "domain": "MM",
+      "persona": "数字员工使用者",
+      "pages": [
+        "P09",
+        "P20"
+      ],
+      "entities": [
+        "Memory",
+        "ContextManifest",
+        "EvolutionProposal"
+      ],
+      "flows": [
+        "F04",
+        "F08"
+      ],
+      "interfaces": [
+        "A11",
+        "A06"
+      ],
+      "negative": "私人记忆不能自动进入团队上下文",
+      "given": "当前主体及个人/项目/团队记忆范围明确",
+      "batch": "B6",
+      "sourcePath": "/Users/mac/Documents/ChatGPT/ZKER- staff/docs/ui/domain-agent-evolution-design.md",
+      "designStatus": "PROPOSED_NOT_IMPLEMENTED"
+    },
+    {
+      "id": "MM-03",
+      "priority": "P1",
+      "type": "接通",
+      "requirement": "展示“本次使用了哪些记忆”，支持纠正、忽略及冲突处理",
+      "acceptance": "本节点禁用的记忆不进入执行上下文；更正不被旧缓存再次带回",
+      "storyId": "US-MM-03",
+      "domain": "MM",
+      "persona": "数字员工使用者",
+      "pages": [
+        "P09",
+        "P20"
+      ],
+      "entities": [
+        "Memory",
+        "ContextManifest",
+        "EvolutionProposal"
+      ],
+      "flows": [
+        "F04",
+        "F08"
+      ],
+      "interfaces": [
+        "A11",
+        "A06"
+      ],
+      "negative": "私人记忆不能自动进入团队上下文",
+      "given": "当前主体及个人/项目/团队记忆范围明确",
+      "batch": "B6",
+      "sourcePath": "/Users/mac/Documents/ChatGPT/ZKER- staff/docs/ui/domain-agent-evolution-design.md",
+      "designStatus": "PROPOSED_NOT_IMPLEMENTED"
+    },
+    {
+      "id": "MM-04",
+      "priority": "P1",
+      "type": "完善",
+      "requirement": "将任务复盘形成的经验以建议方式呈现，明确保存范围",
+      "acceptance": "只有可复用且有依据的内容进入长期经验；未验收结果不自动变成规则",
+      "storyId": "US-MM-04",
+      "domain": "MM",
+      "persona": "数字员工使用者",
+      "pages": [
+        "P09",
+        "P20"
+      ],
+      "entities": [
+        "Memory",
+        "ContextManifest",
+        "EvolutionProposal"
+      ],
+      "flows": [
+        "F04",
+        "F08"
+      ],
+      "interfaces": [
+        "A11",
+        "A06"
+      ],
+      "negative": "私人记忆不能自动进入团队上下文",
+      "given": "当前主体及个人/项目/团队记忆范围明确",
+      "batch": "B6",
+      "sourcePath": "/Users/mac/Documents/ChatGPT/ZKER- staff/docs/ui/domain-agent-evolution-design.md",
+      "designStatus": "PROPOSED_NOT_IMPLEMENTED"
+    },
+    {
+      "id": "MM-05",
+      "priority": "P2",
+      "type": "接通",
+      "requirement": "将已验证任务方法转换为 Skill 提案，支持预览、回归和发布",
+      "acceptance": "新方法能通过不同输入的相似任务；不能仅复制一次聊天就标为成熟技能",
+      "storyId": "US-MM-05",
+      "domain": "MM",
+      "persona": "数字员工使用者",
+      "pages": [
+        "P09",
+        "P20"
+      ],
+      "entities": [
+        "Memory",
+        "ContextManifest",
+        "EvolutionProposal"
+      ],
+      "flows": [
+        "F04",
+        "F08"
+      ],
+      "interfaces": [
+        "A11",
+        "A06"
+      ],
+      "negative": "私人记忆不能自动进入团队上下文",
+      "given": "当前主体及个人/项目/团队记忆范围明确",
+      "batch": "B8",
+      "sourcePath": "/Users/mac/Documents/ChatGPT/ZKER- staff/docs/ui/domain-agent-evolution-design.md",
+      "designStatus": "PROPOSED_NOT_IMPLEMENTED"
+    },
+    {
+      "id": "MM-06",
+      "priority": "P2",
+      "type": "完善",
+      "requirement": "记忆与技能分别提供版本差异、冲突合并、回滚和影响说明",
+      "acceptance": "回滚目标与范围明确；回滚内容不声称撤销已发生外部操作",
+      "storyId": "US-MM-06",
+      "domain": "MM",
+      "persona": "数字员工使用者",
+      "pages": [
+        "P09",
+        "P20"
+      ],
+      "entities": [
+        "Memory",
+        "ContextManifest",
+        "EvolutionProposal"
+      ],
+      "flows": [
+        "F04",
+        "F08"
+      ],
+      "interfaces": [
+        "A11",
+        "A06"
+      ],
+      "negative": "私人记忆不能自动进入团队上下文",
+      "given": "当前主体及个人/项目/团队记忆范围明确",
+      "batch": "B8",
+      "sourcePath": "/Users/mac/Documents/ChatGPT/ZKER- staff/docs/ui/domain-agent-evolution-design.md",
+      "designStatus": "PROPOSED_NOT_IMPLEMENTED"
+    },
+    {
+      "id": "MM-07",
+      "priority": "P1",
+      "type": "完善",
+      "requirement": "共享、离职、撤权和保留期变化时处理学习内容的权限与归属",
+      "acceptance": "私人偏好不会自动变团队知识；删除/保留动作满足既定策略并可验证",
+      "storyId": "US-MM-07",
+      "domain": "MM",
+      "persona": "数字员工使用者",
+      "pages": [
+        "P09",
+        "P20"
+      ],
+      "entities": [
+        "Memory",
+        "ContextManifest",
+        "EvolutionProposal"
+      ],
+      "flows": [
+        "F04",
+        "F08"
+      ],
+      "interfaces": [
+        "A11",
+        "A06"
+      ],
+      "negative": "私人记忆不能自动进入团队上下文",
+      "given": "当前主体及个人/项目/团队记忆范围明确",
+      "batch": "B6",
+      "sourcePath": "/Users/mac/Documents/ChatGPT/ZKER- staff/docs/ui/domain-agent-evolution-design.md",
+      "designStatus": "PROPOSED_NOT_IMPLEMENTED"
+    },
+    {
+      "id": "WS-01",
+      "priority": "P1",
+      "type": "补建/核验",
+      "requirement": "支持个人、团队和业务实例工作空间，显式绑定到节点",
+      "acceptance": "打开任务就知道实际工作位置；同名项目不能造成跨租户/跨客户混用",
+      "storyId": "US-WS-01",
+      "domain": "WS",
+      "persona": "任务执行人",
+      "pages": [
+        "P10",
+        "P02"
+      ],
+      "entities": [
+        "ArtifactVersion",
+        "WorkThreadEntry",
+        "ExecutionSnapshot"
+      ],
+      "flows": [
+        "F05",
+        "F09"
+      ],
+      "interfaces": [
+        "A07",
+        "A12"
+      ],
+      "negative": "文件同名不等于相同版本或合法写入位置",
+      "given": "工作空间和文件操作范围已授权",
+      "batch": "B6",
+      "sourcePath": "/Users/mac/Documents/ChatGPT/ZKER- staff/CONTEXT.md",
+      "designStatus": "PROPOSED_NOT_IMPLEMENTED"
+    },
+    {
+      "id": "WS-02",
+      "priority": "P1",
+      "type": "完善",
+      "requirement": "在节点中上传附件、选择文件、预览内容及引用文件片段",
+      "acceptance": "文件上传完成、已解析、可用于执行分别明确；引用在刷新后仍指向原文件版本",
+      "storyId": "US-WS-02",
+      "domain": "WS",
+      "persona": "任务执行人",
+      "pages": [
+        "P10",
+        "P02"
+      ],
+      "entities": [
+        "ArtifactVersion",
+        "WorkThreadEntry",
+        "ExecutionSnapshot"
+      ],
+      "flows": [
+        "F05",
+        "F09"
+      ],
+      "interfaces": [
+        "A07",
+        "A12"
+      ],
+      "negative": "文件同名不等于相同版本或合法写入位置",
+      "given": "工作空间和文件操作范围已授权",
+      "batch": "B6",
+      "sourcePath": "/Users/mac/Documents/ChatGPT/ZKER- staff/CONTEXT.md",
+      "designStatus": "PROPOSED_NOT_IMPLEMENTED"
+    },
+    {
+      "id": "WS-03",
+      "priority": "P1",
+      "type": "补建/核验",
+      "requirement": "对确需本机资源的任务提供受控设备/浏览器桥接，B/S 保持主入口",
+      "acceptance": "用户先授权具体设备与范围；设备离线能识别；不假设网页服务器能读用户本机路径",
+      "storyId": "US-WS-03",
+      "domain": "WS",
+      "persona": "任务执行人",
+      "pages": [
+        "P10",
+        "P02"
+      ],
+      "entities": [
+        "ArtifactVersion",
+        "WorkThreadEntry",
+        "ExecutionSnapshot"
+      ],
+      "flows": [
+        "F05",
+        "F09"
+      ],
+      "interfaces": [
+        "A07",
+        "A12"
+      ],
+      "negative": "文件同名不等于相同版本或合法写入位置",
+      "given": "工作空间和文件操作范围已授权",
+      "batch": "B6",
+      "sourcePath": "/Users/mac/Documents/ChatGPT/ZKER- staff/CONTEXT.md",
+      "designStatus": "PROPOSED_NOT_IMPLEMENTED"
+    },
+    {
+      "id": "WS-04",
+      "priority": "P1",
+      "type": "完善",
+      "requirement": "文件读写范围、外部网络、命令权限从节点配置传到执行环境",
+      "acceptance": "测试越界文件访问被真实阻止；路径预览与实际访问位置一致",
+      "storyId": "US-WS-04",
+      "domain": "WS",
+      "persona": "任务执行人",
+      "pages": [
+        "P10",
+        "P02"
+      ],
+      "entities": [
+        "ArtifactVersion",
+        "WorkThreadEntry",
+        "ExecutionSnapshot"
+      ],
+      "flows": [
+        "F05",
+        "F09"
+      ],
+      "interfaces": [
+        "A07",
+        "A12"
+      ],
+      "negative": "文件同名不等于相同版本或合法写入位置",
+      "given": "工作空间和文件操作范围已授权",
+      "batch": "B6",
+      "sourcePath": "/Users/mac/Documents/ChatGPT/ZKER- staff/CONTEXT.md",
+      "designStatus": "PROPOSED_NOT_IMPLEMENTED"
+    },
+    {
+      "id": "WS-05",
+      "priority": "P1",
+      "type": "接通",
+      "requirement": "建立节点产物列表、可视预览、差异、下载与版本关系",
+      "acceptance": "报告、表格、图片或代码在约定位置真实存在；查看权限与任务一致",
+      "storyId": "US-WS-05",
+      "domain": "WS",
+      "persona": "任务执行人",
+      "pages": [
+        "P10",
+        "P02"
+      ],
+      "entities": [
+        "ArtifactVersion",
+        "WorkThreadEntry",
+        "ExecutionSnapshot"
+      ],
+      "flows": [
+        "F05",
+        "F09"
+      ],
+      "interfaces": [
+        "A07",
+        "A12"
+      ],
+      "negative": "文件同名不等于相同版本或合法写入位置",
+      "given": "工作空间和文件操作范围已授权",
+      "batch": "B6",
+      "sourcePath": "/Users/mac/Documents/ChatGPT/ZKER- staff/CONTEXT.md",
+      "designStatus": "PROPOSED_NOT_IMPLEMENTED"
+    },
+    {
+      "id": "WS-06",
+      "priority": "P2",
+      "type": "完善",
+      "requirement": "多 Agent 文件协作的隔离、合并、冲突和归档策略",
+      "acceptance": "并行工作不覆盖他人产物；合并有明确结果；归档后历史仍可定位",
+      "storyId": "US-WS-06",
+      "domain": "WS",
+      "persona": "任务执行人",
+      "pages": [
+        "P10",
+        "P02"
+      ],
+      "entities": [
+        "ArtifactVersion",
+        "WorkThreadEntry",
+        "ExecutionSnapshot"
+      ],
+      "flows": [
+        "F05",
+        "F09"
+      ],
+      "interfaces": [
+        "A07",
+        "A12"
+      ],
+      "negative": "文件同名不等于相同版本或合法写入位置",
+      "given": "工作空间和文件操作范围已授权",
+      "batch": "B8",
+      "sourcePath": "/Users/mac/Documents/ChatGPT/ZKER- staff/CONTEXT.md",
+      "designStatus": "PROPOSED_NOT_IMPLEMENTED"
+    },
+    {
+      "id": "CV-01",
+      "priority": "P0",
+      "type": "修复/接通",
+      "requirement": "将节点目标、输入、个人补充、Agent 和有效配置真正传入执行链",
+      "acceptance": "Runtime 接收内容与节点一致；缺业务输入时明确拒绝，不以 attempt ID 充当任务",
+      "storyId": "US-CV-01",
+      "domain": "CV",
+      "persona": "任务执行人",
+      "pages": [
+        "P11",
+        "P02"
+      ],
+      "entities": [
+        "ConversationSession",
+        "WorkThread",
+        "ExecutionAttempt"
+      ],
+      "flows": [
+        "F03",
+        "F04"
+      ],
+      "interfaces": [
+        "A05",
+        "A06",
+        "A07"
+      ],
+      "negative": "对话成功不能直接改变业务完成状态",
+      "given": "对话已绑定当前工作项及合法执行上下文",
+      "batch": "B2",
+      "sourcePath": "/Users/mac/Documents/ChatGPT/ZKER- staff/services/control-plane/control_plane/business_api/conversation_reply_runtime.py",
+      "designStatus": "PROPOSED_NOT_IMPLEMENTED"
+    },
+    {
+      "id": "CV-02",
+      "priority": "P0",
+      "type": "修复/接通",
+      "requirement": "打通真实运行进度与流式输出，区分排队、运行、等人、失败和完成",
+      "acceptance": "第一条进度在任务结束前可见；断线重连不丢消息、不重复回复、不重跑业务",
+      "storyId": "US-CV-02",
+      "domain": "CV",
+      "persona": "任务执行人",
+      "pages": [
+        "P11",
+        "P02"
+      ],
+      "entities": [
+        "ConversationSession",
+        "WorkThread",
+        "ExecutionAttempt"
+      ],
+      "flows": [
+        "F03",
+        "F04"
+      ],
+      "interfaces": [
+        "A05",
+        "A06",
+        "A07"
+      ],
+      "negative": "对话成功不能直接改变业务完成状态",
+      "given": "对话已绑定当前工作项及合法执行上下文",
+      "batch": "B2",
+      "sourcePath": "/Users/mac/Documents/ChatGPT/ZKER- staff/services/control-plane/control_plane/business_api/conversation_reply_runtime.py",
+      "designStatus": "PROPOSED_NOT_IMPLEMENTED"
+    },
+    {
+      "id": "CV-03",
+      "priority": "P1",
+      "type": "修复/完善",
+      "requirement": "补充信息、暂停、停止、继续及人工接管有明确可用行为",
+      "acceptance": "不支持的 Runtime 操作不显示为成功；支持时对实际任务生效并能查到恢复点",
+      "storyId": "US-CV-03",
+      "domain": "CV",
+      "persona": "任务执行人",
+      "pages": [
+        "P11",
+        "P02"
+      ],
+      "entities": [
+        "ConversationSession",
+        "WorkThread",
+        "ExecutionAttempt"
+      ],
+      "flows": [
+        "F03",
+        "F04"
+      ],
+      "interfaces": [
+        "A05",
+        "A06",
+        "A07"
+      ],
+      "negative": "对话成功不能直接改变业务完成状态",
+      "given": "对话已绑定当前工作项及合法执行上下文",
+      "batch": "B6",
+      "sourcePath": "/Users/mac/Documents/ChatGPT/ZKER- staff/services/control-plane/control_plane/business_api/conversation_reply_runtime.py",
+      "designStatus": "PROPOSED_NOT_IMPLEMENTED"
+    },
+    {
+      "id": "CV-04",
+      "priority": "P1",
+      "type": "完善",
+      "requirement": "支持同一任务多轮修改、引用产物/历史、附件和执行范围说明",
+      "acceptance": "返工与原结果有关联；新目标/项目切换有明确新任务或新尝试边界",
+      "storyId": "US-CV-04",
+      "domain": "CV",
+      "persona": "任务执行人",
+      "pages": [
+        "P11",
+        "P02"
+      ],
+      "entities": [
+        "ConversationSession",
+        "WorkThread",
+        "ExecutionAttempt"
+      ],
+      "flows": [
+        "F03",
+        "F04"
+      ],
+      "interfaces": [
+        "A05",
+        "A06",
+        "A07"
+      ],
+      "negative": "对话成功不能直接改变业务完成状态",
+      "given": "对话已绑定当前工作项及合法执行上下文",
+      "batch": "B6",
+      "sourcePath": "/Users/mac/Documents/ChatGPT/ZKER- staff/services/control-plane/control_plane/business_api/conversation_reply_runtime.py",
+      "designStatus": "PROPOSED_NOT_IMPLEMENTED"
+    },
+    {
+      "id": "CV-05",
+      "priority": "P1",
+      "type": "完善",
+      "requirement": "将工具调用和待确认问题转为业务可读卡片",
+      "acceptance": "用户能看到操作对象、所需决定和结果；协议字段在诊断中展开",
+      "storyId": "US-CV-05",
+      "domain": "CV",
+      "persona": "任务执行人",
+      "pages": [
+        "P11",
+        "P02"
+      ],
+      "entities": [
+        "ConversationSession",
+        "WorkThread",
+        "ExecutionAttempt"
+      ],
+      "flows": [
+        "F03",
+        "F04"
+      ],
+      "interfaces": [
+        "A05",
+        "A06",
+        "A07"
+      ],
+      "negative": "对话成功不能直接改变业务完成状态",
+      "given": "对话已绑定当前工作项及合法执行上下文",
+      "batch": "B6",
+      "sourcePath": "/Users/mac/Documents/ChatGPT/ZKER- staff/services/control-plane/control_plane/business_api/conversation_reply_runtime.py",
+      "designStatus": "PROPOSED_NOT_IMPLEMENTED"
+    },
+    {
+      "id": "CV-06",
+      "priority": "P1",
+      "type": "接通",
+      "requirement": "自由对话可转为有明确责任和交付要求的任务，节点也可继续既有对话",
+      "acceptance": "转换保留授权上下文及来源；不重复创建业务实例，不自动判定节点完成",
+      "storyId": "US-CV-06",
+      "domain": "CV",
+      "persona": "任务执行人",
+      "pages": [
+        "P11",
+        "P02"
+      ],
+      "entities": [
+        "ConversationSession",
+        "WorkThread",
+        "ExecutionAttempt"
+      ],
+      "flows": [
+        "F03",
+        "F04"
+      ],
+      "interfaces": [
+        "A05",
+        "A06",
+        "A07"
+      ],
+      "negative": "对话成功不能直接改变业务完成状态",
+      "given": "对话已绑定当前工作项及合法执行上下文",
+      "batch": "B6",
+      "sourcePath": "/Users/mac/Documents/ChatGPT/ZKER- staff/services/control-plane/control_plane/business_api/conversation_reply_runtime.py",
+      "designStatus": "PROPOSED_NOT_IMPLEMENTED"
+    },
+    {
+      "id": "CV-07",
+      "priority": "P1",
+      "type": "完善",
+      "requirement": "运行失败保留产物、草稿和已发生动作，提供可恢复下一步",
+      "acceptance": "模型额度不足、网络中断、连接器失效均有不同恢复方法；重试不复制副作用",
+      "storyId": "US-CV-07",
+      "domain": "CV",
+      "persona": "任务执行人",
+      "pages": [
+        "P11",
+        "P02"
+      ],
+      "entities": [
+        "ConversationSession",
+        "WorkThread",
+        "ExecutionAttempt"
+      ],
+      "flows": [
+        "F03",
+        "F04"
+      ],
+      "interfaces": [
+        "A05",
+        "A06",
+        "A07"
+      ],
+      "negative": "对话成功不能直接改变业务完成状态",
+      "given": "对话已绑定当前工作项及合法执行上下文",
+      "batch": "B6",
+      "sourcePath": "/Users/mac/Documents/ChatGPT/ZKER- staff/services/control-plane/control_plane/business_api/conversation_reply_runtime.py",
+      "designStatus": "PROPOSED_NOT_IMPLEMENTED"
+    },
+    {
+      "id": "TM-01",
+      "priority": "P1",
+      "type": "补建/核验",
+      "requirement": "员工可以在允许的节点选择团队执行，定义协调者和专业成员",
+      "acceptance": "团队资格按成员能力、权限及整体需求核验；仍有明确人类责任人",
+      "storyId": "US-TM-01",
+      "domain": "TM",
+      "persona": "被授权团队使用者",
+      "pages": [
+        "P12",
+        "P02"
+      ],
+      "entities": [
+        "AgentAssignment",
+        "ExecutionAttempt",
+        "Team"
+      ],
+      "flows": [
+        "F02",
+        "F03"
+      ],
+      "interfaces": [
+        "A03",
+        "A05"
+      ],
+      "negative": "团队能力启用仍服从现有可用性门，成员不得互相扩大权限",
+      "given": "团队能力经过现有启用门，成员资格与输出边界明确",
+      "batch": "B6",
+      "sourcePath": "/Users/mac/Documents/ChatGPT/ZKER- staff/CONTEXT.md",
+      "designStatus": "PROPOSED_NOT_IMPLEMENTED"
+    },
+    {
+      "id": "TM-02",
+      "priority": "P1",
+      "type": "完善",
+      "requirement": "支持对具体成员发起任务、查看分工和统一汇总",
+      "acceptance": "每个子任务有目标与输出；员工从一个节点工作区找到成员产物及最终结论",
+      "storyId": "US-TM-02",
+      "domain": "TM",
+      "persona": "被授权团队使用者",
+      "pages": [
+        "P12",
+        "P02"
+      ],
+      "entities": [
+        "AgentAssignment",
+        "ExecutionAttempt",
+        "Team"
+      ],
+      "flows": [
+        "F02",
+        "F03"
+      ],
+      "interfaces": [
+        "A03",
+        "A05"
+      ],
+      "negative": "团队能力启用仍服从现有可用性门，成员不得互相扩大权限",
+      "given": "团队能力经过现有启用门，成员资格与输出边界明确",
+      "batch": "B6",
+      "sourcePath": "/Users/mac/Documents/ChatGPT/ZKER- staff/CONTEXT.md",
+      "designStatus": "PROPOSED_NOT_IMPLEMENTED"
+    },
+    {
+      "id": "TM-03",
+      "priority": "P1",
+      "type": "完善",
+      "requirement": "区分团队共享技能/知识与成员私有能力",
+      "acceptance": "共享配置不能扩大成员数据权限；团队输出不会泄漏其他成员私人上下文",
+      "storyId": "US-TM-03",
+      "domain": "TM",
+      "persona": "被授权团队使用者",
+      "pages": [
+        "P12",
+        "P02"
+      ],
+      "entities": [
+        "AgentAssignment",
+        "ExecutionAttempt",
+        "Team"
+      ],
+      "flows": [
+        "F02",
+        "F03"
+      ],
+      "interfaces": [
+        "A03",
+        "A05"
+      ],
+      "negative": "团队能力启用仍服从现有可用性门，成员不得互相扩大权限",
+      "given": "团队能力经过现有启用门，成员资格与输出边界明确",
+      "batch": "B6",
+      "sourcePath": "/Users/mac/Documents/ChatGPT/ZKER- staff/CONTEXT.md",
+      "designStatus": "PROPOSED_NOT_IMPLEMENTED"
+    },
+    {
+      "id": "TM-04",
+      "priority": "P1",
+      "type": "补建/核验",
+      "requirement": "支持成员替换、离线、排队、失败后的降级与人工接管",
+      "acceptance": "单个成员失败不会无说明地将团队标为成功；替代成员有记录",
+      "storyId": "US-TM-04",
+      "domain": "TM",
+      "persona": "被授权团队使用者",
+      "pages": [
+        "P12",
+        "P02"
+      ],
+      "entities": [
+        "AgentAssignment",
+        "ExecutionAttempt",
+        "Team"
+      ],
+      "flows": [
+        "F02",
+        "F03"
+      ],
+      "interfaces": [
+        "A03",
+        "A05"
+      ],
+      "negative": "团队能力启用仍服从现有可用性门，成员不得互相扩大权限",
+      "given": "团队能力经过现有启用门，成员资格与输出边界明确",
+      "batch": "B6",
+      "sourcePath": "/Users/mac/Documents/ChatGPT/ZKER- staff/CONTEXT.md",
+      "designStatus": "PROPOSED_NOT_IMPLEMENTED"
+    },
+    {
+      "id": "TM-05",
+      "priority": "P1",
+      "type": "完善",
+      "requirement": "控制团队预算、并发、写入冲突、递归委派与终止条件",
+      "acceptance": "无无限相互委派；额度与子任务可对账；停止后无新的下游副作用",
+      "storyId": "US-TM-05",
+      "domain": "TM",
+      "persona": "被授权团队使用者",
+      "pages": [
+        "P12",
+        "P02"
+      ],
+      "entities": [
+        "AgentAssignment",
+        "ExecutionAttempt",
+        "Team"
+      ],
+      "flows": [
+        "F02",
+        "F03"
+      ],
+      "interfaces": [
+        "A03",
+        "A05"
+      ],
+      "negative": "团队能力启用仍服从现有可用性门，成员不得互相扩大权限",
+      "given": "团队能力经过现有启用门，成员资格与输出边界明确",
+      "batch": "B6",
+      "sourcePath": "/Users/mac/Documents/ChatGPT/ZKER- staff/CONTEXT.md",
+      "designStatus": "PROPOSED_NOT_IMPLEMENTED"
+    },
+    {
+      "id": "TM-06",
+      "priority": "P1",
+      "type": "接通",
+      "requirement": "团队执行输出对接节点完成检查和交接包",
+      "acceptance": "子任务结束不直接推动企业下一节点；汇总结果通过同一业务完成标准",
+      "storyId": "US-TM-06",
+      "domain": "TM",
+      "persona": "被授权团队使用者",
+      "pages": [
+        "P12",
+        "P02"
+      ],
+      "entities": [
+        "AgentAssignment",
+        "ExecutionAttempt",
+        "Team"
+      ],
+      "flows": [
+        "F02",
+        "F03"
+      ],
+      "interfaces": [
+        "A03",
+        "A05"
+      ],
+      "negative": "团队能力启用仍服从现有可用性门，成员不得互相扩大权限",
+      "given": "团队能力经过现有启用门，成员资格与输出边界明确",
+      "batch": "B5",
+      "sourcePath": "/Users/mac/Documents/ChatGPT/ZKER- staff/CONTEXT.md",
+      "designStatus": "PROPOSED_NOT_IMPLEMENTED"
+    },
+    {
+      "id": "FL-01",
+      "priority": "P1",
+      "type": "补建/核验",
+      "requirement": "建立可在节点选择的执行方案目录，支持单 Agent/团队/技术流程",
+      "acceptance": "方案能解释用途、所需输入、资源和交付；选择后准确绑定节点实例",
+      "storyId": "US-FL-01",
+      "domain": "FL",
+      "persona": "执行方案维护者",
+      "pages": [
+        "P13",
+        "P04"
+      ],
+      "entities": [
+        "SkillVersion",
+        "ExecutionSnapshot",
+        "Run"
+      ],
+      "flows": [
+        "F03",
+        "F08"
+      ],
+      "interfaces": [
+        "A05",
+        "A11"
+      ],
+      "negative": "技术流程完成仅生成业务结果候选",
+      "given": "节点允许选用方案且依赖已发布可用",
+      "batch": "B6",
+      "sourcePath": "/Users/mac/Documents/ChatGPT/ZKER- staff/packages/runtime-gateway/lib/dsh_adapter.mjs",
+      "designStatus": "PROPOSED_NOT_IMPLEMENTED"
+    },
+    {
+      "id": "FL-02",
+      "priority": "P2",
+      "type": "完善",
+      "requirement": "提供自然语言生成方案、画布查看和高级定义编辑",
+      "acceptance": "三种视图从同一有效定义生成；修改可预览，不能把画布显示当执行定义",
+      "storyId": "US-FL-02",
+      "domain": "FL",
+      "persona": "执行方案维护者",
+      "pages": [
+        "P13",
+        "P04"
+      ],
+      "entities": [
+        "SkillVersion",
+        "ExecutionSnapshot",
+        "Run"
+      ],
+      "flows": [
+        "F03",
+        "F08"
+      ],
+      "interfaces": [
+        "A05",
+        "A11"
+      ],
+      "negative": "技术流程完成仅生成业务结果候选",
+      "given": "节点允许选用方案且依赖已发布可用",
+      "batch": "B8",
+      "sourcePath": "/Users/mac/Documents/ChatGPT/ZKER- staff/packages/runtime-gateway/lib/dsh_adapter.mjs",
+      "designStatus": "PROPOSED_NOT_IMPLEMENTED"
+    },
+    {
+      "id": "FL-03",
+      "priority": "P1",
+      "type": "完善",
+      "requirement": "支持结构化输入、串行、并行、条件分支、汇总与人工确认",
+      "acceptance": "缺输入和无出口分支在运行前报错；分支选择有可追溯依据",
+      "storyId": "US-FL-03",
+      "domain": "FL",
+      "persona": "执行方案维护者",
+      "pages": [
+        "P13",
+        "P04"
+      ],
+      "entities": [
+        "SkillVersion",
+        "ExecutionSnapshot",
+        "Run"
+      ],
+      "flows": [
+        "F03",
+        "F08"
+      ],
+      "interfaces": [
+        "A05",
+        "A11"
+      ],
+      "negative": "技术流程完成仅生成业务结果候选",
+      "given": "节点允许选用方案且依赖已发布可用",
+      "batch": "B6",
+      "sourcePath": "/Users/mac/Documents/ChatGPT/ZKER- staff/packages/runtime-gateway/lib/dsh_adapter.mjs",
+      "designStatus": "PROPOSED_NOT_IMPLEMENTED"
+    },
+    {
+      "id": "FL-04",
+      "priority": "P1",
+      "type": "完善",
+      "requirement": "方案有草稿、发布版本、差异、回退及依赖检查",
+      "acceptance": "已运行节点仍指向原版本；输入变化能定位受影响 SOP 和自动化",
+      "storyId": "US-FL-04",
+      "domain": "FL",
+      "persona": "执行方案维护者",
+      "pages": [
+        "P13",
+        "P04"
+      ],
+      "entities": [
+        "SkillVersion",
+        "ExecutionSnapshot",
+        "Run"
+      ],
+      "flows": [
+        "F03",
+        "F08"
+      ],
+      "interfaces": [
+        "A05",
+        "A11"
+      ],
+      "negative": "技术流程完成仅生成业务结果候选",
+      "given": "节点允许选用方案且依赖已发布可用",
+      "batch": "B6",
+      "sourcePath": "/Users/mac/Documents/ChatGPT/ZKER- staff/packages/runtime-gateway/lib/dsh_adapter.mjs",
+      "designStatus": "PROPOSED_NOT_IMPLEMENTED"
+    },
+    {
+      "id": "FL-05",
+      "priority": "P1",
+      "type": "接通",
+      "requirement": "展示节点执行轨迹、阶段产物、重试和部分失败",
+      "acceptance": "捕获异常后返回的业务失败仍显示失败/待处理；跳过阶段有原因",
+      "storyId": "US-FL-05",
+      "domain": "FL",
+      "persona": "执行方案维护者",
+      "pages": [
+        "P13",
+        "P04"
+      ],
+      "entities": [
+        "SkillVersion",
+        "ExecutionSnapshot",
+        "Run"
+      ],
+      "flows": [
+        "F03",
+        "F08"
+      ],
+      "interfaces": [
+        "A05",
+        "A11"
+      ],
+      "negative": "技术流程完成仅生成业务结果候选",
+      "given": "节点允许选用方案且依赖已发布可用",
+      "batch": "B6",
+      "sourcePath": "/Users/mac/Documents/ChatGPT/ZKER- staff/packages/runtime-gateway/lib/dsh_adapter.mjs",
+      "designStatus": "PROPOSED_NOT_IMPLEMENTED"
+    },
+    {
+      "id": "FL-06",
+      "priority": "P1",
+      "type": "接通",
+      "requirement": "通过既有 DSH Adapter 执行方案，并设置有界运行与完成出口",
+      "acceptance": "无平行 Agent Loop；方案完成只生成结果候选，交由业务层校验与推进",
+      "storyId": "US-FL-06",
+      "domain": "FL",
+      "persona": "执行方案维护者",
+      "pages": [
+        "P13",
+        "P04"
+      ],
+      "entities": [
+        "SkillVersion",
+        "ExecutionSnapshot",
+        "Run"
+      ],
+      "flows": [
+        "F03",
+        "F08"
+      ],
+      "interfaces": [
+        "A05",
+        "A11"
+      ],
+      "negative": "技术流程完成仅生成业务结果候选",
+      "given": "节点允许选用方案且依赖已发布可用",
+      "batch": "B6",
+      "sourcePath": "/Users/mac/Documents/ChatGPT/ZKER- staff/packages/runtime-gateway/lib/dsh_adapter.mjs",
+      "designStatus": "PROPOSED_NOT_IMPLEMENTED"
+    },
+    {
+      "id": "AT-01",
+      "priority": "P1",
+      "type": "接通",
+      "requirement": "为个人、Agent 和节点提供一致的自动化创建与运行记录入口",
+      "acceptance": "不同入口编辑同一对象；明确创建的是新任务、当前节点步骤还是新业务实例",
+      "storyId": "US-AT-01",
+      "domain": "AT",
+      "persona": "任务执行人与自动化维护者",
+      "pages": [
+        "P14"
+      ],
+      "entities": [
+        "Schedule",
+        "WorkExecution",
+        "ExecutionAttempt"
+      ],
+      "flows": [
+        "F10"
+      ],
+      "interfaces": [
+        "A13"
+      ],
+      "negative": "重复触发不能创建重复业务副作用",
+      "given": "触发配置具有合法工作作用域和责任主体",
+      "batch": "B7",
+      "sourcePath": "/Users/mac/Documents/ChatGPT/ZKER- staff/contracts/openapi/staffdeck-public-v1.yaml",
+      "designStatus": "PROPOSED_NOT_IMPLEMENTED"
+    },
+    {
+      "id": "AT-02",
+      "priority": "P1",
+      "type": "完善",
+      "requirement": "周期/一次性/事件/API/条件拉取统一配置输入和执行对象",
+      "acceptance": "每种宣布支持的触发方式都有独立真实触发证据，不能只靠手动运行验收",
+      "storyId": "US-AT-02",
+      "domain": "AT",
+      "persona": "任务执行人与自动化维护者",
+      "pages": [
+        "P14"
+      ],
+      "entities": [
+        "Schedule",
+        "WorkExecution",
+        "ExecutionAttempt"
+      ],
+      "flows": [
+        "F10"
+      ],
+      "interfaces": [
+        "A13"
+      ],
+      "negative": "重复触发不能创建重复业务副作用",
+      "given": "触发配置具有合法工作作用域和责任主体",
+      "batch": "B7",
+      "sourcePath": "/Users/mac/Documents/ChatGPT/ZKER- staff/contracts/openapi/staffdeck-public-v1.yaml",
+      "designStatus": "PROPOSED_NOT_IMPLEMENTED"
+    },
+    {
+      "id": "AT-03",
+      "priority": "P1",
+      "type": "完善",
+      "requirement": "展示时区、下一次时间、最大次数、截止时间、暂停/恢复",
+      "acceptance": "跨时区与夏令时行为明确；过期/暂停不再自动启动",
+      "storyId": "US-AT-03",
+      "domain": "AT",
+      "persona": "任务执行人与自动化维护者",
+      "pages": [
+        "P14"
+      ],
+      "entities": [
+        "Schedule",
+        "WorkExecution",
+        "ExecutionAttempt"
+      ],
+      "flows": [
+        "F10"
+      ],
+      "interfaces": [
+        "A13"
+      ],
+      "negative": "重复触发不能创建重复业务副作用",
+      "given": "触发配置具有合法工作作用域和责任主体",
+      "batch": "B7",
+      "sourcePath": "/Users/mac/Documents/ChatGPT/ZKER- staff/contracts/openapi/staffdeck-public-v1.yaml",
+      "designStatus": "PROPOSED_NOT_IMPLEMENTED"
+    },
+    {
+      "id": "AT-04",
+      "priority": "P1",
+      "type": "接通",
+      "requirement": "配置并发、去重、重试、错过触发后的补跑与失败通知",
+      "acceptance": "同一事件重复投递不重复办事；补跑有明确策略和记录",
+      "storyId": "US-AT-04",
+      "domain": "AT",
+      "persona": "任务执行人与自动化维护者",
+      "pages": [
+        "P14"
+      ],
+      "entities": [
+        "Schedule",
+        "WorkExecution",
+        "ExecutionAttempt"
+      ],
+      "flows": [
+        "F10"
+      ],
+      "interfaces": [
+        "A13"
+      ],
+      "negative": "重复触发不能创建重复业务副作用",
+      "given": "触发配置具有合法工作作用域和责任主体",
+      "batch": "B7",
+      "sourcePath": "/Users/mac/Documents/ChatGPT/ZKER- staff/contracts/openapi/staffdeck-public-v1.yaml",
+      "designStatus": "PROPOSED_NOT_IMPLEMENTED"
+    },
+    {
+      "id": "AT-05",
+      "priority": "P1",
+      "type": "完善",
+      "requirement": "自动化随节点完成、权限变化、资源失效及人员离岗联动",
+      "acceptance": "节点已交付后不继续生成无归属结果；身份失效时停止受影响动作",
+      "storyId": "US-AT-05",
+      "domain": "AT",
+      "persona": "任务执行人与自动化维护者",
+      "pages": [
+        "P14"
+      ],
+      "entities": [
+        "Schedule",
+        "WorkExecution",
+        "ExecutionAttempt"
+      ],
+      "flows": [
+        "F10"
+      ],
+      "interfaces": [
+        "A13"
+      ],
+      "negative": "重复触发不能创建重复业务副作用",
+      "given": "触发配置具有合法工作作用域和责任主体",
+      "batch": "B7",
+      "sourcePath": "/Users/mac/Documents/ChatGPT/ZKER- staff/contracts/openapi/staffdeck-public-v1.yaml",
+      "designStatus": "PROPOSED_NOT_IMPLEMENTED"
+    },
+    {
+      "id": "AT-06",
+      "priority": "P2",
+      "type": "完善",
+      "requirement": "提供自动化测试、条件预览、最近触发原因及执行成本",
+      "acceptance": "用户知道“为何触发/为何未触发”；可用测试对象验证且不污染正式统计",
+      "storyId": "US-AT-06",
+      "domain": "AT",
+      "persona": "任务执行人与自动化维护者",
+      "pages": [
+        "P14"
+      ],
+      "entities": [
+        "Schedule",
+        "WorkExecution",
+        "ExecutionAttempt"
+      ],
+      "flows": [
+        "F10"
+      ],
+      "interfaces": [
+        "A13"
+      ],
+      "negative": "重复触发不能创建重复业务副作用",
+      "given": "触发配置具有合法工作作用域和责任主体",
+      "batch": "B7",
+      "sourcePath": "/Users/mac/Documents/ChatGPT/ZKER- staff/contracts/openapi/staffdeck-public-v1.yaml",
+      "designStatus": "PROPOSED_NOT_IMPLEMENTED"
+    },
+    {
+      "id": "IM-01",
+      "priority": "P1",
+      "type": "接通",
+      "requirement": "将渠道连接、聊天接入与成员身份绑定做成明确向导",
+      "acceptance": "未绑定身份/未授权群无法使用任务能力；已绑定者消息定位到正确租户和人员",
+      "storyId": "US-IM-01",
+      "domain": "IM",
+      "persona": "渠道成员与专家",
+      "pages": [
+        "P15",
+        "P21"
+      ],
+      "entities": [
+        "Channel",
+        "Membership",
+        "Notification",
+        "Delegation"
+      ],
+      "flows": [
+        "F10",
+        "F02"
+      ],
+      "interfaces": [
+        "A13",
+        "A04"
+      ],
+      "negative": "群成员身份不能被当作工作项授权",
+      "given": "渠道身份已绑定当前租户与成员且任务访问获准",
+      "batch": "B7",
+      "sourcePath": "/Users/mac/Documents/ChatGPT/ZKER- staff/contracts/openapi/staffdeck-public-v1.yaml",
+      "designStatus": "PROPOSED_NOT_IMPLEMENTED"
+    },
+    {
+      "id": "IM-02",
+      "priority": "P1",
+      "type": "完善",
+      "requirement": "支持从群/单聊发起、跟进节点任务及返回进度、附件/成果链接",
+      "acceptance": "Web 与 IM 显示同一任务状态；引用继续原任务不产生重复节点",
+      "storyId": "US-IM-02",
+      "domain": "IM",
+      "persona": "渠道成员与专家",
+      "pages": [
+        "P15",
+        "P21"
+      ],
+      "entities": [
+        "Channel",
+        "Membership",
+        "Notification",
+        "Delegation"
+      ],
+      "flows": [
+        "F10",
+        "F02"
+      ],
+      "interfaces": [
+        "A13",
+        "A04"
+      ],
+      "negative": "群成员身份不能被当作工作项授权",
+      "given": "渠道身份已绑定当前租户与成员且任务访问获准",
+      "batch": "B7",
+      "sourcePath": "/Users/mac/Documents/ChatGPT/ZKER- staff/contracts/openapi/staffdeck-public-v1.yaml",
+      "designStatus": "PROPOSED_NOT_IMPLEMENTED"
+    },
+    {
+      "id": "IM-03",
+      "priority": "P1",
+      "type": "完善",
+      "requirement": "配置专业 Agent、默认 Agent、职责冲突提示和可审查的路由",
+      "acceptance": "明确任务路由正确；歧义进入澄清；不因群内发话获得新资源权限",
+      "storyId": "US-IM-03",
+      "domain": "IM",
+      "persona": "渠道成员与专家",
+      "pages": [
+        "P15",
+        "P21"
+      ],
+      "entities": [
+        "Channel",
+        "Membership",
+        "Notification",
+        "Delegation"
+      ],
+      "flows": [
+        "F10",
+        "F02"
+      ],
+      "interfaces": [
+        "A13",
+        "A04"
+      ],
+      "negative": "群成员身份不能被当作工作项授权",
+      "given": "渠道身份已绑定当前租户与成员且任务访问获准",
+      "batch": "B7",
+      "sourcePath": "/Users/mac/Documents/ChatGPT/ZKER- staff/contracts/openapi/staffdeck-public-v1.yaml",
+      "designStatus": "PROPOSED_NOT_IMPLEMENTED"
+    },
+    {
+      "id": "IM-04",
+      "priority": "P1",
+      "type": "完善",
+      "requirement": "将真人专家咨询与正式审批接入原任务",
+      "acceptance": "专家能看到被授权的必要背景，意见返回原节点；咨询不替代审批回执",
+      "storyId": "US-IM-04",
+      "domain": "IM",
+      "persona": "渠道成员与专家",
+      "pages": [
+        "P15",
+        "P21"
+      ],
+      "entities": [
+        "Channel",
+        "Membership",
+        "Notification",
+        "Delegation"
+      ],
+      "flows": [
+        "F10",
+        "F02"
+      ],
+      "interfaces": [
+        "A13",
+        "A04"
+      ],
+      "negative": "群成员身份不能被当作工作项授权",
+      "given": "渠道身份已绑定当前租户与成员且任务访问获准",
+      "batch": "B7",
+      "sourcePath": "/Users/mac/Documents/ChatGPT/ZKER- staff/contracts/openapi/staffdeck-public-v1.yaml",
+      "designStatus": "PROPOSED_NOT_IMPLEMENTED"
+    },
+    {
+      "id": "IM-05",
+      "priority": "P2",
+      "type": "完善",
+      "requirement": "支持 @、关键词/条件、定时响应、冷却与话题归纳",
+      "acceptance": "群规则只在配置范围生效；防重复响应；群/成员/单聊记忆分别隔离",
+      "storyId": "US-IM-05",
+      "domain": "IM",
+      "persona": "渠道成员与专家",
+      "pages": [
+        "P15",
+        "P21"
+      ],
+      "entities": [
+        "Channel",
+        "Membership",
+        "Notification",
+        "Delegation"
+      ],
+      "flows": [
+        "F10",
+        "F02"
+      ],
+      "interfaces": [
+        "A13",
+        "A04"
+      ],
+      "negative": "群成员身份不能被当作工作项授权",
+      "given": "渠道身份已绑定当前租户与成员且任务访问获准",
+      "batch": "B7",
+      "sourcePath": "/Users/mac/Documents/ChatGPT/ZKER- staff/contracts/openapi/staffdeck-public-v1.yaml",
+      "designStatus": "PROPOSED_NOT_IMPLEMENTED"
+    },
+    {
+      "id": "IM-06",
+      "priority": "P1",
+      "type": "完善",
+      "requirement": "完善连接失效、成员退群、暂停/解除、重新授权和消息投递恢复",
+      "acceptance": "停用立即停止新接入；失败消息可查证/重投；不重复发送已确认内容",
+      "storyId": "US-IM-06",
+      "domain": "IM",
+      "persona": "渠道成员与专家",
+      "pages": [
+        "P15",
+        "P21"
+      ],
+      "entities": [
+        "Channel",
+        "Membership",
+        "Notification",
+        "Delegation"
+      ],
+      "flows": [
+        "F10",
+        "F02"
+      ],
+      "interfaces": [
+        "A13",
+        "A04"
+      ],
+      "negative": "群成员身份不能被当作工作项授权",
+      "given": "渠道身份已绑定当前租户与成员且任务访问获准",
+      "batch": "B7",
+      "sourcePath": "/Users/mac/Documents/ChatGPT/ZKER- staff/contracts/openapi/staffdeck-public-v1.yaml",
+      "designStatus": "PROPOSED_NOT_IMPLEMENTED"
+    },
+    {
+      "id": "RS-01",
+      "priority": "P0",
+      "type": "接通",
+      "requirement": "节点集中显示交付物、完成条件与检查结果，连接真实 Result Commit",
+      "acceptance": "产物可打开；业务条件、必要审批和当前执行权全部成立才接受提交",
+      "storyId": "US-RS-01",
+      "domain": "RS",
+      "persona": "执行人、审核者与接收人",
+      "pages": [
+        "P16",
+        "P02"
+      ],
+      "entities": [
+        "CompletionCheckResult",
+        "HandoffPackage",
+        "ResultCommit"
+      ],
+      "flows": [
+        "F05",
+        "F06"
+      ],
+      "interfaces": [
+        "A08",
+        "A09",
+        "A10"
+      ],
+      "negative": "子任务或运行完成不直接激活下游",
+      "given": "当前结果候选及输入、贡献、检查、权限均可回查",
+      "batch": "B5",
+      "sourcePath": "/Users/mac/Documents/ChatGPT/ZKER- staff/services/control-plane/control_plane/result_commit_store.py",
+      "designStatus": "PROPOSED_NOT_IMPLEMENTED"
+    },
+    {
+      "id": "RS-02",
+      "priority": "P0",
+      "type": "修复/接通",
+      "requirement": "统一“AI 运行结束、待人确认、已提交、已审核、已交接”的状态",
+      "acceptance": "运行成功无产物/检查不通过不能显示业务完成；计数与详情一致",
+      "storyId": "US-RS-02",
+      "domain": "RS",
+      "persona": "执行人、审核者与接收人",
+      "pages": [
+        "P16",
+        "P02"
+      ],
+      "entities": [
+        "CompletionCheckResult",
+        "HandoffPackage",
+        "ResultCommit"
+      ],
+      "flows": [
+        "F05",
+        "F06"
+      ],
+      "interfaces": [
+        "A08",
+        "A09",
+        "A10"
+      ],
+      "negative": "子任务或运行完成不直接激活下游",
+      "given": "当前结果候选及输入、贡献、检查、权限均可回查",
+      "batch": "B5",
+      "sourcePath": "/Users/mac/Documents/ChatGPT/ZKER- staff/services/control-plane/control_plane/result_commit_store.py",
+      "designStatus": "PROPOSED_NOT_IMPLEMENTED"
+    },
+    {
+      "id": "RS-03",
+      "priority": "P0",
+      "type": "接通",
+      "requirement": "交接包包含结构化输出、文件版本、依据、未决项与下一步",
+      "acceptance": "接收人无需复制上游聊天即可继续；只收到其被授权的业务上下文",
+      "storyId": "US-RS-03",
+      "domain": "RS",
+      "persona": "执行人、审核者与接收人",
+      "pages": [
+        "P16",
+        "P02"
+      ],
+      "entities": [
+        "CompletionCheckResult",
+        "HandoffPackage",
+        "ResultCommit"
+      ],
+      "flows": [
+        "F05",
+        "F06"
+      ],
+      "interfaces": [
+        "A08",
+        "A09",
+        "A10"
+      ],
+      "negative": "子任务或运行完成不直接激活下游",
+      "given": "当前结果候选及输入、贡献、检查、权限均可回查",
+      "batch": "B5",
+      "sourcePath": "/Users/mac/Documents/ChatGPT/ZKER- staff/services/control-plane/control_plane/result_commit_store.py",
+      "designStatus": "PROPOSED_NOT_IMPLEMENTED"
+    },
+    {
+      "id": "RS-04",
+      "priority": "P0",
+      "type": "接通",
+      "requirement": "完成记录、交接与下一节点激活形成可恢复且幂等的链",
+      "acceptance": "重复提交/服务重启只激活一次下一节点；中间失败可定位并调和",
+      "storyId": "US-RS-04",
+      "domain": "RS",
+      "persona": "执行人、审核者与接收人",
+      "pages": [
+        "P16",
+        "P02"
+      ],
+      "entities": [
+        "CompletionCheckResult",
+        "HandoffPackage",
+        "ResultCommit"
+      ],
+      "flows": [
+        "F05",
+        "F06"
+      ],
+      "interfaces": [
+        "A08",
+        "A09",
+        "A10"
+      ],
+      "negative": "子任务或运行完成不直接激活下游",
+      "given": "当前结果候选及输入、贡献、检查、权限均可回查",
+      "batch": "B5",
+      "sourcePath": "/Users/mac/Documents/ChatGPT/ZKER- staff/services/control-plane/control_plane/result_commit_store.py",
+      "designStatus": "PROPOSED_NOT_IMPLEMENTED"
+    },
+    {
+      "id": "RS-05",
+      "priority": "P1",
+      "type": "完善",
+      "requirement": "审核者可逐项接受、退回、要求补充，查看结果差异",
+      "acceptance": "退回理由绑定交付项；原执行人收到明确返工任务，历史版本保留",
+      "storyId": "US-RS-05",
+      "domain": "RS",
+      "persona": "执行人、审核者与接收人",
+      "pages": [
+        "P16",
+        "P02"
+      ],
+      "entities": [
+        "CompletionCheckResult",
+        "HandoffPackage",
+        "ResultCommit"
+      ],
+      "flows": [
+        "F05",
+        "F06"
+      ],
+      "interfaces": [
+        "A08",
+        "A09",
+        "A10"
+      ],
+      "negative": "子任务或运行完成不直接激活下游",
+      "given": "当前结果候选及输入、贡献、检查、权限均可回查",
+      "batch": "B5",
+      "sourcePath": "/Users/mac/Documents/ChatGPT/ZKER- staff/services/control-plane/control_plane/result_commit_store.py",
+      "designStatus": "PROPOSED_NOT_IMPLEMENTED"
+    },
+    {
+      "id": "RS-06",
+      "priority": "P1",
+      "type": "完善",
+      "requirement": "外部系统写入结果能与提交产物交叉核验",
+      "acceptance": "回执指向真实外部对象及当前状态；失败/不确定/部分成功均可表达",
+      "storyId": "US-RS-06",
+      "domain": "RS",
+      "persona": "执行人、审核者与接收人",
+      "pages": [
+        "P16",
+        "P02"
+      ],
+      "entities": [
+        "CompletionCheckResult",
+        "HandoffPackage",
+        "ResultCommit"
+      ],
+      "flows": [
+        "F05",
+        "F06"
+      ],
+      "interfaces": [
+        "A08",
+        "A09",
+        "A10"
+      ],
+      "negative": "子任务或运行完成不直接激活下游",
+      "given": "当前结果候选及输入、贡献、检查、权限均可回查",
+      "batch": "B5",
+      "sourcePath": "/Users/mac/Documents/ChatGPT/ZKER- staff/services/control-plane/control_plane/result_commit_store.py",
+      "designStatus": "PROPOSED_NOT_IMPLEMENTED"
+    },
+    {
+      "id": "RS-07",
+      "priority": "P1",
+      "type": "完善",
+      "requirement": "定义接收确认、权限不足、业务取消、回退和补偿的处理入口",
+      "acceptance": "下游无法读取交付物时不静默继续；取消/补偿有责任人和可追踪结果",
+      "storyId": "US-RS-07",
+      "domain": "RS",
+      "persona": "执行人、审核者与接收人",
+      "pages": [
+        "P16",
+        "P02"
+      ],
+      "entities": [
+        "CompletionCheckResult",
+        "HandoffPackage",
+        "ResultCommit"
+      ],
+      "flows": [
+        "F05",
+        "F06"
+      ],
+      "interfaces": [
+        "A08",
+        "A09",
+        "A10"
+      ],
+      "negative": "子任务或运行完成不直接激活下游",
+      "given": "当前结果候选及输入、贡献、检查、权限均可回查",
+      "batch": "B5",
+      "sourcePath": "/Users/mac/Documents/ChatGPT/ZKER- staff/services/control-plane/control_plane/result_commit_store.py",
+      "designStatus": "PROPOSED_NOT_IMPLEMENTED"
+    },
+    {
+      "id": "SD-01",
+      "priority": "P0",
+      "type": "修复/接通",
+      "requirement": "接入统一节点合同，打通人员、三元配置和其他执行资源字段",
+      "acceptance": "画布保存、版本读取、员工待办和 Runtime 有相同节点配置；不维护两套脱节表单",
+      "storyId": "US-SD-01",
+      "domain": "SD",
+      "persona": "流程设计者",
+      "pages": [
+        "P17"
+      ],
+      "entities": [
+        "SOPVersion",
+        "NodeContract",
+        "CandidateSnapshot"
+      ],
+      "flows": [
+        "F11"
+      ],
+      "interfaces": [
+        "A14"
+      ],
+      "negative": "已发布版本和在途实例不得被草稿静默覆盖",
+      "given": "设计者有当前 SOP 草稿的维护权",
+      "batch": "B6",
+      "sourcePath": "/Users/mac/Documents/ChatGPT/ZKER- staff/contracts/jsonschema/node-contract.schema.json",
+      "designStatus": "PROPOSED_NOT_IMPLEMENTED"
+    },
+    {
+      "id": "SD-02",
+      "priority": "P1",
+      "type": "完善",
+      "requirement": "属性区按职责、输入、交付、AI 能力、审核、异常组织",
+      "acceptance": "设计者能完成一个业务节点而无需手写角色/能力字符串",
+      "storyId": "US-SD-02",
+      "domain": "SD",
+      "persona": "流程设计者",
+      "pages": [
+        "P17"
+      ],
+      "entities": [
+        "SOPVersion",
+        "NodeContract",
+        "CandidateSnapshot"
+      ],
+      "flows": [
+        "F11"
+      ],
+      "interfaces": [
+        "A14"
+      ],
+      "negative": "已发布版本和在途实例不得被草稿静默覆盖",
+      "given": "设计者有当前 SOP 草稿的维护权",
+      "batch": "B6",
+      "sourcePath": "/Users/mac/Documents/ChatGPT/ZKER- staff/contracts/jsonschema/node-contract.schema.json",
+      "designStatus": "PROPOSED_NOT_IMPLEMENTED"
+    },
+    {
+      "id": "SD-03",
+      "priority": "P1",
+      "type": "完善",
+      "requirement": "显式配置员工可选择、可追加、必须保留的资源与参数",
+      "acceptance": "设计预览和员工实际可选集合一致；更严格节点要求不可被个人默认覆盖",
+      "storyId": "US-SD-03",
+      "domain": "SD",
+      "persona": "流程设计者",
+      "pages": [
+        "P17"
+      ],
+      "entities": [
+        "SOPVersion",
+        "NodeContract",
+        "CandidateSnapshot"
+      ],
+      "flows": [
+        "F11"
+      ],
+      "interfaces": [
+        "A14"
+      ],
+      "negative": "已发布版本和在途实例不得被草稿静默覆盖",
+      "given": "设计者有当前 SOP 草稿的维护权",
+      "batch": "B6",
+      "sourcePath": "/Users/mac/Documents/ChatGPT/ZKER- staff/contracts/jsonschema/node-contract.schema.json",
+      "designStatus": "PROPOSED_NOT_IMPLEMENTED"
+    },
+    {
+      "id": "SD-04",
+      "priority": "P1",
+      "type": "完善",
+      "requirement": "增加员工视角预览和人员解析/资料/能力缺口预检",
+      "acceptance": "发布前能看到每种责任人的待办内容；空候选、缺资料、无输出映射被发现",
+      "storyId": "US-SD-04",
+      "domain": "SD",
+      "persona": "流程设计者",
+      "pages": [
+        "P17"
+      ],
+      "entities": [
+        "SOPVersion",
+        "NodeContract",
+        "CandidateSnapshot"
+      ],
+      "flows": [
+        "F11"
+      ],
+      "interfaces": [
+        "A14"
+      ],
+      "negative": "已发布版本和在途实例不得被草稿静默覆盖",
+      "given": "设计者有当前 SOP 草稿的维护权",
+      "batch": "B6",
+      "sourcePath": "/Users/mac/Documents/ChatGPT/ZKER- staff/contracts/jsonschema/node-contract.schema.json",
+      "designStatus": "PROPOSED_NOT_IMPLEMENTED"
+    },
+    {
+      "id": "SD-05",
+      "priority": "P1",
+      "type": "完善",
+      "requirement": "完善分支、并行、等待、超时、返工、子流程和终止/补偿",
+      "acceptance": "发布检查可定位断路/无出口/循环无停止条件；异常有明确接手者",
+      "storyId": "US-SD-05",
+      "domain": "SD",
+      "persona": "流程设计者",
+      "pages": [
+        "P17"
+      ],
+      "entities": [
+        "SOPVersion",
+        "NodeContract",
+        "CandidateSnapshot"
+      ],
+      "flows": [
+        "F11"
+      ],
+      "interfaces": [
+        "A14"
+      ],
+      "negative": "已发布版本和在途实例不得被草稿静默覆盖",
+      "given": "设计者有当前 SOP 草稿的维护权",
+      "batch": "B6",
+      "sourcePath": "/Users/mac/Documents/ChatGPT/ZKER- staff/contracts/jsonschema/node-contract.schema.json",
+      "designStatus": "PROPOSED_NOT_IMPLEMENTED"
+    },
+    {
+      "id": "SD-06",
+      "priority": "P1",
+      "type": "接通",
+      "requirement": "流程版本、Diff、发布、回退和在途实例影响分析联动",
+      "acceptance": "旧实例不被静默改写；新版本清楚影响哪些岗位、资源和调用方",
+      "storyId": "US-SD-06",
+      "domain": "SD",
+      "persona": "流程设计者",
+      "pages": [
+        "P17"
+      ],
+      "entities": [
+        "SOPVersion",
+        "NodeContract",
+        "CandidateSnapshot"
+      ],
+      "flows": [
+        "F11"
+      ],
+      "interfaces": [
+        "A14"
+      ],
+      "negative": "已发布版本和在途实例不得被草稿静默覆盖",
+      "given": "设计者有当前 SOP 草稿的维护权",
+      "batch": "B6",
+      "sourcePath": "/Users/mac/Documents/ChatGPT/ZKER- staff/contracts/jsonschema/node-contract.schema.json",
+      "designStatus": "PROPOSED_NOT_IMPLEMENTED"
+    },
+    {
+      "id": "AD-01",
+      "priority": "P0",
+      "type": "修复",
+      "requirement": "导航、路由、字段、动作按已有业务角色/对象关系投影",
+      "acceptance": "七类 canonical 登录夹具逐项验证；HR、身份、流程、审计、权限管理面互不误开放/误隐藏",
+      "storyId": "US-AD-01",
+      "domain": "AD",
+      "persona": "各领域管理员",
+      "pages": [
+        "P18",
+        "P07",
+        "P22"
+      ],
+      "entities": [
+        "Membership",
+        "RoleBinding",
+        "Grant",
+        "Policy"
+      ],
+      "flows": [
+        "F07",
+        "F12",
+        "F13"
+      ],
+      "interfaces": [
+        "A15",
+        "A17"
+      ],
+      "negative": "不存在万能管理员读取全部私人内容的默认权限",
+      "given": "当前登录夹具、对象关系和领域授权已明确",
+      "batch": "B1",
+      "sourcePath": "/Users/mac/Documents/ChatGPT/ZKER- staff/docs/security/business-role-ui-projection-matrix.md",
+      "designStatus": "PROPOSED_NOT_IMPLEMENTED",
+      "marketRefinements": [
+        "MC-02"
+      ]
+    },
+    {
+      "id": "AD-02",
+      "priority": "P0",
+      "type": "修复",
+      "requirement": "从“管理员专属”中解耦分配给业务人员的审核/审批待办",
+      "acceptance": "被指定的普通业务审批人可完成自己的审批；其他请求仍不可见，自批仍拒绝",
+      "storyId": "US-AD-02",
+      "domain": "AD",
+      "persona": "各领域管理员",
+      "pages": [
+        "P18",
+        "P07"
+      ],
+      "entities": [
+        "Membership",
+        "RoleBinding",
+        "Grant",
+        "Policy"
+      ],
+      "flows": [
+        "F07",
+        "F12"
+      ],
+      "interfaces": [
+        "A15"
+      ],
+      "negative": "不存在万能管理员读取全部私人内容的默认权限",
+      "given": "当前登录夹具、对象关系和领域授权已明确",
+      "batch": "B1",
+      "sourcePath": "/Users/mac/Documents/ChatGPT/ZKER- staff/docs/security/business-role-ui-projection-matrix.md",
+      "designStatus": "PROPOSED_NOT_IMPLEMENTED"
+    },
+    {
+      "id": "AD-03",
+      "priority": "P1",
+      "type": "完善",
+      "requirement": "分开组织任职、身份认证、角色策略、资源归属与资产授权",
+      "acceptance": "调岗不会自动自授高权；每个授权可说明来源、用途、到期与撤销影响",
+      "storyId": "US-AD-03",
+      "domain": "AD",
+      "persona": "各领域管理员",
+      "pages": [
+        "P18",
+        "P07"
+      ],
+      "entities": [
+        "Membership",
+        "RoleBinding",
+        "Grant",
+        "Policy"
+      ],
+      "flows": [
+        "F07",
+        "F12"
+      ],
+      "interfaces": [
+        "A15"
+      ],
+      "negative": "不存在万能管理员读取全部私人内容的默认权限",
+      "given": "当前登录夹具、对象关系和领域授权已明确",
+      "batch": "B6",
+      "sourcePath": "/Users/mac/Documents/ChatGPT/ZKER- staff/docs/security/business-role-ui-projection-matrix.md",
+      "designStatus": "PROPOSED_NOT_IMPLEMENTED"
+    },
+    {
+      "id": "AD-04",
+      "priority": "P1",
+      "type": "完善",
+      "requirement": "管理员维护资源目录、发布规则和可用范围；员工配置个人使用组合",
+      "acceptance": "已批准资源用户能自助选用；超范围申请精确到资源/动作，不默认要求全租户权限",
+      "storyId": "US-AD-04",
+      "domain": "AD",
+      "persona": "各领域管理员",
+      "pages": [
+        "P18",
+        "P07",
+        "P22"
+      ],
+      "entities": [
+        "Membership",
+        "RoleBinding",
+        "Grant",
+        "Policy"
+      ],
+      "flows": [
+        "F07",
+        "F12",
+        "F13"
+      ],
+      "interfaces": [
+        "A15",
+        "A17"
+      ],
+      "negative": "不存在万能管理员读取全部私人内容的默认权限",
+      "given": "当前登录夹具、对象关系和领域授权已明确",
+      "batch": "B6",
+      "sourcePath": "/Users/mac/Documents/ChatGPT/ZKER- staff/docs/security/business-role-ui-projection-matrix.md",
+      "designStatus": "PROPOSED_NOT_IMPLEMENTED",
+      "marketRefinements": [
+        "MC-02",
+        "MC-09"
+      ]
+    },
+    {
+      "id": "AD-05",
+      "priority": "P1",
+      "type": "完善",
+      "requirement": "Tenant 模型、网络、预算与运行环境提供可理解的继承和用量视图",
+      "acceptance": "员工能看实际继承配置及不可更改原因；管理员变更不覆写历史执行证据",
+      "storyId": "US-AD-05",
+      "domain": "AD",
+      "persona": "各领域管理员",
+      "pages": [
+        "P18",
+        "P07"
+      ],
+      "entities": [
+        "Membership",
+        "RoleBinding",
+        "Grant",
+        "Policy"
+      ],
+      "flows": [
+        "F07",
+        "F12"
+      ],
+      "interfaces": [
+        "A15"
+      ],
+      "negative": "不存在万能管理员读取全部私人内容的默认权限",
+      "given": "当前登录夹具、对象关系和领域授权已明确",
+      "batch": "B6",
+      "sourcePath": "/Users/mac/Documents/ChatGPT/ZKER- staff/docs/security/business-role-ui-projection-matrix.md",
+      "designStatus": "PROPOSED_NOT_IMPLEMENTED"
+    },
+    {
+      "id": "AD-06",
+      "priority": "P1",
+      "type": "完善",
+      "requirement": "连接身份、SecretRef 和授权维护集中到受保护管理面",
+      "acceptance": "管理员看状态、范围、到期和引用；私人凭据及聊天内容不因管理员身份直接可见",
+      "storyId": "US-AD-06",
+      "domain": "AD",
+      "persona": "各领域管理员",
+      "pages": [
+        "P18",
+        "P07"
+      ],
+      "entities": [
+        "Membership",
+        "RoleBinding",
+        "Grant",
+        "Policy"
+      ],
+      "flows": [
+        "F07",
+        "F12"
+      ],
+      "interfaces": [
+        "A15"
+      ],
+      "negative": "不存在万能管理员读取全部私人内容的默认权限",
+      "given": "当前登录夹具、对象关系和领域授权已明确",
+      "batch": "B6",
+      "sourcePath": "/Users/mac/Documents/ChatGPT/ZKER- staff/docs/security/business-role-ui-projection-matrix.md",
+      "designStatus": "PROPOSED_NOT_IMPLEMENTED"
+    },
+    {
+      "id": "AD-07",
+      "priority": "P1",
+      "type": "接通",
+      "requirement": "离职、撤权、冻结资产与交接做跨任务/Agent/资源的一致性预览",
+      "acceptance": "能列出受影响任务和资源；执行后授权与运行中动作及时复判",
+      "storyId": "US-AD-07",
+      "domain": "AD",
+      "persona": "各领域管理员",
+      "pages": [
+        "P18",
+        "P07"
+      ],
+      "entities": [
+        "Membership",
+        "RoleBinding",
+        "Grant",
+        "Policy"
+      ],
+      "flows": [
+        "F07",
+        "F12"
+      ],
+      "interfaces": [
+        "A15"
+      ],
+      "negative": "不存在万能管理员读取全部私人内容的默认权限",
+      "given": "当前登录夹具、对象关系和领域授权已明确",
+      "batch": "B6",
+      "sourcePath": "/Users/mac/Documents/ChatGPT/ZKER- staff/docs/security/business-role-ui-projection-matrix.md",
+      "designStatus": "PROPOSED_NOT_IMPLEMENTED"
+    },
+    {
+      "id": "AD-08",
+      "priority": "P2",
+      "type": "完善",
+      "requirement": "面向资产维护者提供版本批量推广、回退、兼容性和使用反馈",
+      "acceptance": "批量操作有预览和分批结果；失败可恢复，不改在途快照，不把未验证资源标可用",
+      "storyId": "US-AD-08",
+      "domain": "AD",
+      "persona": "各领域管理员",
+      "pages": [
+        "P18",
+        "P07",
+        "P22"
+      ],
+      "entities": [
+        "Membership",
+        "RoleBinding",
+        "Grant",
+        "Policy"
+      ],
+      "flows": [
+        "F07",
+        "F12",
+        "F13"
+      ],
+      "interfaces": [
+        "A15",
+        "A17"
+      ],
+      "negative": "不存在万能管理员读取全部私人内容的默认权限",
+      "given": "当前登录夹具、对象关系和领域授权已明确",
+      "batch": "B8",
+      "sourcePath": "/Users/mac/Documents/ChatGPT/ZKER- staff/docs/security/business-role-ui-projection-matrix.md",
+      "designStatus": "PROPOSED_NOT_IMPLEMENTED",
+      "marketRefinements": [
+        "MC-07"
+      ]
+    },
+    {
+      "id": "OP-01",
+      "priority": "P0",
+      "type": "修复/核验",
+      "requirement": "恢复项目指定服务，完成当前代码的真实启动与业务链验收",
+      "acceptance": "指定 8765 页面可访问；版本可对应；真实租户、人、Agent、依赖共同完成首条链",
+      "storyId": "US-OP-01",
+      "domain": "OP",
+      "persona": "运行维护者与业务员工",
+      "pages": [
+        "P19",
+        "P21"
+      ],
+      "entities": [
+        "Run",
+        "Invocation",
+        "UsageRecord",
+        "Audit"
+      ],
+      "flows": [
+        "F12"
+      ],
+      "interfaces": [
+        "A16"
+      ],
+      "negative": "运行成功率不能冒充业务完成率",
+      "given": "原始运行/用量/审计事实可关联到业务",
+      "batch": "B1",
+      "sourcePath": "/Users/mac/Documents/ChatGPT/ZKER- staff/contracts/states/runtime.yaml",
+      "designStatus": "PROPOSED_NOT_IMPLEMENTED"
+    },
+    {
+      "id": "OP-02",
+      "priority": "P0",
+      "type": "接通",
+      "requirement": "统一关键链证据：节点配置、执行输入、实际工具、产物、审核、交接",
+      "acceptance": "能从一条业务任务逐级追到原始记录；不以接口 200 或单测通过替代运行完成",
+      "storyId": "US-OP-02",
+      "domain": "OP",
+      "persona": "运行维护者与业务员工",
+      "pages": [
+        "P19",
+        "P21",
+        "P22"
+      ],
+      "entities": [
+        "Run",
+        "Invocation",
+        "UsageRecord",
+        "Audit"
+      ],
+      "flows": [
+        "F12",
+        "F13"
+      ],
+      "interfaces": [
+        "A16",
+        "A17"
+      ],
+      "negative": "运行成功率不能冒充业务完成率",
+      "given": "原始运行/用量/审计事实可关联到业务",
+      "batch": "B6",
+      "sourcePath": "/Users/mac/Documents/ChatGPT/ZKER- staff/contracts/states/runtime.yaml",
+      "designStatus": "PROPOSED_NOT_IMPLEMENTED",
+      "marketRefinements": [
+        "MC-08"
+      ]
+    },
+    {
+      "id": "OP-03",
+      "priority": "P1",
+      "type": "完善",
+      "requirement": "员工只看自己的进度/成本/可恢复错误，运维看运行健康与技术诊断",
+      "acceptance": "相同异常两种视图关联；普通页面没有 Cookie、UUID、实现状态等探测文案",
+      "storyId": "US-OP-03",
+      "domain": "OP",
+      "persona": "运行维护者与业务员工",
+      "pages": [
+        "P19",
+        "P21"
+      ],
+      "entities": [
+        "Run",
+        "Invocation",
+        "UsageRecord",
+        "Audit"
+      ],
+      "flows": [
+        "F12"
+      ],
+      "interfaces": [
+        "A16"
+      ],
+      "negative": "运行成功率不能冒充业务完成率",
+      "given": "原始运行/用量/审计事实可关联到业务",
+      "batch": "B6",
+      "sourcePath": "/Users/mac/Documents/ChatGPT/ZKER- staff/contracts/states/runtime.yaml",
+      "designStatus": "PROPOSED_NOT_IMPLEMENTED"
+    },
+    {
+      "id": "OP-04",
+      "priority": "P1",
+      "type": "完善",
+      "requirement": "区分模型/工具消耗、运行成功率、业务完成率、返工与交接等待时间",
+      "acceptance": "费用/指标可对账；空数据明确无数据；不把 AI 运行数冒充岗位工作成果",
+      "storyId": "US-OP-04",
+      "domain": "OP",
+      "persona": "运行维护者与业务员工",
+      "pages": [
+        "P19",
+        "P21"
+      ],
+      "entities": [
+        "Run",
+        "Invocation",
+        "UsageRecord",
+        "Audit"
+      ],
+      "flows": [
+        "F12"
+      ],
+      "interfaces": [
+        "A16"
+      ],
+      "negative": "运行成功率不能冒充业务完成率",
+      "given": "原始运行/用量/审计事实可关联到业务",
+      "batch": "B6",
+      "sourcePath": "/Users/mac/Documents/ChatGPT/ZKER- staff/contracts/states/runtime.yaml",
+      "designStatus": "PROPOSED_NOT_IMPLEMENTED"
+    },
+    {
+      "id": "OP-05",
+      "priority": "P1",
+      "type": "完善",
+      "requirement": "提供语言、回复偏好、时区、通知、会话和可访问性设置",
+      "acceptance": "中文长文本、键盘/读屏、窄屏、加载/空/错/权限态均按实际覆盖矩阵验收",
+      "storyId": "US-OP-05",
+      "domain": "OP",
+      "persona": "运行维护者与业务员工",
+      "pages": [
+        "P19",
+        "P21"
+      ],
+      "entities": [
+        "Run",
+        "Invocation",
+        "UsageRecord",
+        "Audit"
+      ],
+      "flows": [
+        "F12"
+      ],
+      "interfaces": [
+        "A16"
+      ],
+      "negative": "运行成功率不能冒充业务完成率",
+      "given": "原始运行/用量/审计事实可关联到业务",
+      "batch": "B6",
+      "sourcePath": "/Users/mac/Documents/ChatGPT/ZKER- staff/contracts/states/runtime.yaml",
+      "designStatus": "PROPOSED_NOT_IMPLEMENTED"
+    },
+    {
+      "id": "OP-06",
+      "priority": "P1",
+      "type": "完善",
+      "requirement": "管理执行环境、设备连接、模型健康、容量、断网/重启恢复",
+      "acceptance": "本地任务不依赖浏览器持续在线；不可用环境明确排队/失败，恢复无重复执行",
+      "storyId": "US-OP-06",
+      "domain": "OP",
+      "persona": "运行维护者与业务员工",
+      "pages": [
+        "P19",
+        "P21"
+      ],
+      "entities": [
+        "Run",
+        "Invocation",
+        "UsageRecord",
+        "Audit"
+      ],
+      "flows": [
+        "F12"
+      ],
+      "interfaces": [
+        "A16"
+      ],
+      "negative": "运行成功率不能冒充业务完成率",
+      "given": "原始运行/用量/审计事实可关联到业务",
+      "batch": "B6",
+      "sourcePath": "/Users/mac/Documents/ChatGPT/ZKER- staff/contracts/states/runtime.yaml",
+      "designStatus": "PROPOSED_NOT_IMPLEMENTED"
+    },
+    {
+      "id": "OP-07",
+      "priority": "P2",
+      "type": "完善",
+      "requirement": "CLI/API/插件事件源与管理界面使用同一合同和状态，提供诊断导出",
+      "acceptance": "同一变更各入口一致；扩展事件有来源和去重；导出默认脱敏且可支持排错",
+      "storyId": "US-OP-07",
+      "domain": "OP",
+      "persona": "运行维护者与业务员工",
+      "pages": [
+        "P19",
+        "P21"
+      ],
+      "entities": [
+        "Run",
+        "Invocation",
+        "UsageRecord",
+        "Audit"
+      ],
+      "flows": [
+        "F12"
+      ],
+      "interfaces": [
+        "A16"
+      ],
+      "negative": "运行成功率不能冒充业务完成率",
+      "given": "原始运行/用量/审计事实可关联到业务",
+      "batch": "B8",
+      "sourcePath": "/Users/mac/Documents/ChatGPT/ZKER- staff/contracts/states/runtime.yaml",
+      "designStatus": "PROPOSED_NOT_IMPLEMENTED"
+    },
+    {
+      "id": "OP-08",
+      "priority": "P2",
+      "type": "完善",
+      "requirement": "建立升级、兼容性、备份恢复与持续效果验证",
+      "acceptance": "升级后关键任务回归通过；备份恢复后的任务、版本、产物关联完整；业务收益由实际试点测量",
+      "storyId": "US-OP-08",
+      "domain": "OP",
+      "persona": "运行维护者与业务员工",
+      "pages": [
+        "P19",
+        "P21"
+      ],
+      "entities": [
+        "Run",
+        "Invocation",
+        "UsageRecord",
+        "Audit"
+      ],
+      "flows": [
+        "F12"
+      ],
+      "interfaces": [
+        "A16"
+      ],
+      "negative": "运行成功率不能冒充业务完成率",
+      "given": "原始运行/用量/审计事实可关联到业务",
+      "batch": "B8",
+      "sourcePath": "/Users/mac/Documents/ChatGPT/ZKER- staff/contracts/states/runtime.yaml",
+      "designStatus": "PROPOSED_NOT_IMPLEMENTED"
+    },
+    {
+      "id": "HC-01",
+      "priority": "P0",
+      "type": "完善",
+      "requirement": "在参与者关系中区分资产维护者、被授权使用者、任务承担人和最终业务责任；关联 HR-01、AG-02",
+      "acceptance": "同一共享 Agent 被 A/B 使用时，可追溯每次调用由谁发起、为哪项分工服务、谁负责结果；不误转移资产归属",
+      "storyId": "US-HC-01",
+      "domain": "HC",
+      "persona": "主执行人与协作人",
+      "pages": [
+        "P03",
+        "P02"
+      ],
+      "entities": [
+        "CollaborationLink",
+        "HumanTask",
+        "AgentAssignment",
+        "Contribution"
+      ],
+      "flows": [
+        "F02",
+        "F05"
+      ],
+      "interfaces": [
+        "A04",
+        "A08"
+      ],
+      "negative": "多人不得覆盖同一个工作项的当前Agent分配",
+      "given": "主任务已有责任人，协作请求和业务范围明确",
+      "batch": "B3",
+      "sourcePath": "/Users/mac/Documents/ChatGPT/ZKER- staff/services/control-plane/control_plane/agent_assignment_create_session.py",
+      "designStatus": "PROPOSED_NOT_IMPLEMENTED"
+    },
+    {
+      "id": "HC-02",
+      "priority": "P0",
+      "type": "补合同/接通",
+      "requirement": "明确同节点协作的合法工作单元、主从关联、各自 Assignment/Attempt 及汇总规则；关联 NC-07、TM-06",
+      "acceptance": "A/B 同时选择不同 Agent 不竞争覆盖主任务 current_assignment_id；每项贡献能回到唯一主任务",
+      "storyId": "US-HC-02",
+      "domain": "HC",
+      "persona": "主执行人与协作人",
+      "pages": [
+        "P03",
+        "P02"
+      ],
+      "entities": [
+        "CollaborationLink",
+        "HumanTask",
+        "AgentAssignment",
+        "Contribution"
+      ],
+      "flows": [
+        "F02",
+        "F05"
+      ],
+      "interfaces": [
+        "A04",
+        "A08"
+      ],
+      "negative": "多人不得覆盖同一个工作项的当前Agent分配",
+      "given": "主任务已有责任人，协作请求和业务范围明确",
+      "batch": "B3",
+      "sourcePath": "/Users/mac/Documents/ChatGPT/ZKER- staff/services/control-plane/control_plane/agent_assignment_create_session.py",
+      "designStatus": "PROPOSED_NOT_IMPLEMENTED"
+    },
+    {
+      "id": "HC-03",
+      "priority": "P0",
+      "type": "完善",
+      "requirement": "分开只读抄送、协作分派和有界代办；跨人 Agent 调用校验使用权/委托范围；关联 HR-04、AD-03",
+      "acceptance": "发送共享消息不能获得修改他人 Agent、运行私人连接器或代替对方审批的权力",
+      "storyId": "US-HC-03",
+      "domain": "HC",
+      "persona": "主执行人与协作人",
+      "pages": [
+        "P03",
+        "P02",
+        "P22"
+      ],
+      "entities": [
+        "CollaborationLink",
+        "HumanTask",
+        "AgentAssignment",
+        "Contribution"
+      ],
+      "flows": [
+        "F02",
+        "F05",
+        "F13"
+      ],
+      "interfaces": [
+        "A04",
+        "A08",
+        "A17"
+      ],
+      "negative": "多人不得覆盖同一个工作项的当前Agent分配",
+      "given": "主任务已有责任人，协作请求和业务范围明确",
+      "batch": "B3",
+      "sourcePath": "/Users/mac/Documents/ChatGPT/ZKER- staff/services/control-plane/control_plane/agent_assignment_create_session.py",
+      "designStatus": "PROPOSED_NOT_IMPLEMENTED",
+      "marketRefinements": [
+        "MC-05"
+      ]
+    },
+    {
+      "id": "HC-04",
+      "priority": "P1",
+      "type": "完善",
+      "requirement": "协作请求带目标、输入、交付、期限和范围；支持预授权自动分派或需确认的接受/拒绝；关联 HR-03、HR-05",
+      "acceptance": "人能知道接下什么；拒绝/超时有回路；自动分派有已存在的合法依据",
+      "storyId": "US-HC-04",
+      "domain": "HC",
+      "persona": "主执行人与协作人",
+      "pages": [
+        "P03",
+        "P02"
+      ],
+      "entities": [
+        "CollaborationLink",
+        "HumanTask",
+        "AgentAssignment",
+        "Contribution"
+      ],
+      "flows": [
+        "F02",
+        "F05"
+      ],
+      "interfaces": [
+        "A04",
+        "A08"
+      ],
+      "negative": "多人不得覆盖同一个工作项的当前Agent分配",
+      "given": "主任务已有责任人，协作请求和业务范围明确",
+      "batch": "B3",
+      "sourcePath": "/Users/mac/Documents/ChatGPT/ZKER- staff/services/control-plane/control_plane/agent_assignment_create_session.py",
+      "designStatus": "PROPOSED_NOT_IMPLEMENTED"
+    },
+    {
+      "id": "HC-05",
+      "priority": "P1",
+      "type": "接通",
+      "requirement": "参与者加入、退出、替补与转派同步影响子任务、Agent 运行及可见资料；关联 HR-06、AD-07",
+      "acceptance": "新成员得到当前允许的上下文；退出者不能继续提交；在途贡献有清楚接收人",
+      "storyId": "US-HC-05",
+      "domain": "HC",
+      "persona": "主执行人与协作人",
+      "pages": [
+        "P03",
+        "P02"
+      ],
+      "entities": [
+        "CollaborationLink",
+        "HumanTask",
+        "AgentAssignment",
+        "Contribution"
+      ],
+      "flows": [
+        "F02",
+        "F05"
+      ],
+      "interfaces": [
+        "A04",
+        "A08"
+      ],
+      "negative": "多人不得覆盖同一个工作项的当前Agent分配",
+      "given": "主任务已有责任人，协作请求和业务范围明确",
+      "batch": "B3",
+      "sourcePath": "/Users/mac/Documents/ChatGPT/ZKER- staff/services/control-plane/control_plane/agent_assignment_create_session.py",
+      "designStatus": "PROPOSED_NOT_IMPLEMENTED"
+    },
+    {
+      "id": "HC-06",
+      "priority": "P1",
+      "type": "完善",
+      "requirement": "贡献流程区分草稿、已提交、已接受、被退回、被替代；关联 RS-05",
+      "acceptance": "协作人确认专业贡献、主执行人汇总、责任人/审核者履职均可追溯；子任务完成不自动关闭主节点",
+      "storyId": "US-HC-06",
+      "domain": "HC",
+      "persona": "主执行人与协作人",
+      "pages": [
+        "P03",
+        "P02"
+      ],
+      "entities": [
+        "CollaborationLink",
+        "HumanTask",
+        "AgentAssignment",
+        "Contribution"
+      ],
+      "flows": [
+        "F02",
+        "F05"
+      ],
+      "interfaces": [
+        "A04",
+        "A08"
+      ],
+      "negative": "多人不得覆盖同一个工作项的当前Agent分配",
+      "given": "主任务已有责任人，协作请求和业务范围明确",
+      "batch": "B3",
+      "sourcePath": "/Users/mac/Documents/ChatGPT/ZKER- staff/services/control-plane/control_plane/agent_assignment_create_session.py",
+      "designStatus": "PROPOSED_NOT_IMPLEMENTED"
+    },
+    {
+      "id": "HC-07",
+      "priority": "P1",
+      "type": "完善",
+      "requirement": "为人—Agent、Agent—Agent 的协作请求标记目标分工、用途、接收者和允许动作；关联 TM-02、IM-03",
+      "acceptance": "回复返回正确协作工作；不能借自由消息生成无责任归属的任务或无限跨人委派",
+      "storyId": "US-HC-07",
+      "domain": "HC",
+      "persona": "主执行人与协作人",
+      "pages": [
+        "P03",
+        "P02"
+      ],
+      "entities": [
+        "CollaborationLink",
+        "HumanTask",
+        "AgentAssignment",
+        "Contribution"
+      ],
+      "flows": [
+        "F02",
+        "F05"
+      ],
+      "interfaces": [
+        "A04",
+        "A08"
+      ],
+      "negative": "多人不得覆盖同一个工作项的当前Agent分配",
+      "given": "主任务已有责任人，协作请求和业务范围明确",
+      "batch": "B3",
+      "sourcePath": "/Users/mac/Documents/ChatGPT/ZKER- staff/services/control-plane/control_plane/agent_assignment_create_session.py",
+      "designStatus": "PROPOSED_NOT_IMPLEMENTED"
+    },
+    {
+      "id": "HC-08",
+      "priority": "P1",
+      "type": "完善",
+      "requirement": "节点展示参与者、分工、所用 Agent 的授权摘要和各自配置入口；关联 WD-02、NC-02",
+      "acceptance": "A 看得到 B 的协作进度与可见 Agent 信息，但不能浏览 B 私人记忆/凭据；B 能独立配置自己的执行组合",
+      "storyId": "US-HC-08",
+      "domain": "HC",
+      "persona": "主执行人与协作人",
+      "pages": [
+        "P03",
+        "P02",
+        "P22"
+      ],
+      "entities": [
+        "CollaborationLink",
+        "HumanTask",
+        "AgentAssignment",
+        "Contribution"
+      ],
+      "flows": [
+        "F02",
+        "F05",
+        "F13"
+      ],
+      "interfaces": [
+        "A04",
+        "A08",
+        "A17"
+      ],
+      "negative": "多人不得覆盖同一个工作项的当前Agent分配",
+      "given": "主任务已有责任人，协作请求和业务范围明确",
+      "batch": "B3",
+      "sourcePath": "/Users/mac/Documents/ChatGPT/ZKER- staff/services/control-plane/control_plane/agent_assignment_create_session.py",
+      "designStatus": "PROPOSED_NOT_IMPLEMENTED",
+      "marketRefinements": [
+        "MC-10"
+      ]
+    },
+    {
+      "id": "CX-01",
+      "priority": "P0",
+      "type": "完善",
+      "requirement": "从业务对象和已确认决定形成可版本化的共同任务基线，列出必需目标/约束/完成条件；关联 NC-01、RS-01",
+      "acceptance": "A/B 的共同事实指向相同有效版本；不是分别由两个 Agent 从聊天猜测任务要求",
+      "storyId": "US-CX-01",
+      "domain": "CX",
+      "persona": "任务执行人与上下文服务",
+      "pages": [
+        "P20",
+        "P04"
+      ],
+      "entities": [
+        "ContextManifest",
+        "ExecutionSnapshot",
+        "ContextApplication"
+      ],
+      "flows": [
+        "F04"
+      ],
+      "interfaces": [
+        "A06",
+        "A05"
+      ],
+      "negative": "写入上下文文件不能单独证明数字员工已读取",
+      "given": "任务目标、必需事实、来源版本和接收主体可解析",
+      "batch": "B4",
+      "sourcePath": "/Users/mac/Documents/ChatGPT/ZKER- staff/services/control-plane/control_plane/business_api/conversation_context_projection.py",
+      "designStatus": "PROPOSED_NOT_IMPLEMENTED"
+    },
+    {
+      "id": "CX-02",
+      "priority": "P1",
+      "type": "接通",
+      "requirement": "WorkThread 统一收录人、Agent、系统的业务消息、纠正、决定、引用与贡献，并按条目授权；关联 CV-04",
+      "acceptance": "每项内容可追溯作者、序列、来源、用途和可见范围；读写/重连是可运行链路",
+      "storyId": "US-CX-02",
+      "domain": "CX",
+      "persona": "任务执行人与上下文服务",
+      "pages": [
+        "P20",
+        "P04"
+      ],
+      "entities": [
+        "ContextManifest",
+        "ExecutionSnapshot",
+        "ContextApplication"
+      ],
+      "flows": [
+        "F04"
+      ],
+      "interfaces": [
+        "A06",
+        "A05"
+      ],
+      "negative": "写入上下文文件不能单独证明数字员工已读取",
+      "given": "任务目标、必需事实、来源版本和接收主体可解析",
+      "batch": "B4",
+      "sourcePath": "/Users/mac/Documents/ChatGPT/ZKER- staff/services/control-plane/control_plane/business_api/conversation_context_projection.py",
+      "designStatus": "PROPOSED_NOT_IMPLEMENTED"
+    },
+    {
+      "id": "CX-03",
+      "priority": "P0",
+      "type": "补合同/接通",
+      "requirement": "为每个接收人/Agent 构建目的限定的 ContextManifest，与分工和执行快照关联；关联 NC-07、CN-04",
+      "acceptance": "相同任务可有不同授权投影，必要共同约束一致；投影不足时明确缺项",
+      "storyId": "US-CX-03",
+      "domain": "CX",
+      "persona": "任务执行人与上下文服务",
+      "pages": [
+        "P20",
+        "P04"
+      ],
+      "entities": [
+        "ContextManifest",
+        "ExecutionSnapshot",
+        "ContextApplication"
+      ],
+      "flows": [
+        "F04"
+      ],
+      "interfaces": [
+        "A06",
+        "A05"
+      ],
+      "negative": "写入上下文文件不能单独证明数字员工已读取",
+      "given": "任务目标、必需事实、来源版本和接收主体可解析",
+      "batch": "B4",
+      "sourcePath": "/Users/mac/Documents/ChatGPT/ZKER- staff/services/control-plane/control_plane/business_api/conversation_context_projection.py",
+      "designStatus": "PROPOSED_NOT_IMPLEMENTED"
+    },
+    {
+      "id": "CX-04",
+      "priority": "P1",
+      "type": "完善",
+      "requirement": "必需规则和确认决定固定保留，较长历史按来源摘要和按需检索装配；关联 KB-05、CV-04",
+      "acceptance": "关键规则在第 8 条消息以前或正文第 512 字符之后仍能影响后续执行；摘要可回查原文",
+      "storyId": "US-CX-04",
+      "domain": "CX",
+      "persona": "任务执行人与上下文服务",
+      "pages": [
+        "P20",
+        "P04"
+      ],
+      "entities": [
+        "ContextManifest",
+        "ExecutionSnapshot",
+        "ContextApplication"
+      ],
+      "flows": [
+        "F04"
+      ],
+      "interfaces": [
+        "A06",
+        "A05"
+      ],
+      "negative": "写入上下文文件不能单独证明数字员工已读取",
+      "given": "任务目标、必需事实、来源版本和接收主体可解析",
+      "batch": "B4",
+      "sourcePath": "/Users/mac/Documents/ChatGPT/ZKER- staff/services/control-plane/control_plane/business_api/conversation_context_projection.py",
+      "designStatus": "PROPOSED_NOT_IMPLEMENTED"
+    },
+    {
+      "id": "CX-05",
+      "priority": "P0",
+      "type": "修复/完善",
+      "requirement": "区分可选历史缺失与必需业务输入缺失，改变空上下文仍无差别派发的规则；关联 CV-01、CV-07",
+      "acceptance": "自由咨询可明确降级；节点缺必需资料时拒绝相关执行或请求补齐，并在用户界面显示原因",
+      "storyId": "US-CX-05",
+      "domain": "CX",
+      "persona": "任务执行人与上下文服务",
+      "pages": [
+        "P20",
+        "P04"
+      ],
+      "entities": [
+        "ContextManifest",
+        "ExecutionSnapshot",
+        "ContextApplication"
+      ],
+      "flows": [
+        "F04"
+      ],
+      "interfaces": [
+        "A06",
+        "A05"
+      ],
+      "negative": "写入上下文文件不能单独证明数字员工已读取",
+      "given": "任务目标、必需事实、来源版本和接收主体可解析",
+      "batch": "B4",
+      "sourcePath": "/Users/mac/Documents/ChatGPT/ZKER- staff/services/control-plane/control_plane/business_api/conversation_context_projection.py",
+      "designStatus": "PROPOSED_NOT_IMPLEMENTED"
+    },
+    {
+      "id": "CX-06",
+      "priority": "P0",
+      "type": "接通/核验",
+      "requirement": "在既有 DSH 边界验证真实上下文装载/消费，区分文件物化和 Runtime 接收；关联 CV-01、OP-02",
+      "acceptance": "不能仅凭 written=true 验收；受控真实任务能依照仅在授权上下文中的条件行动并提供可核验证据",
+      "storyId": "US-CX-06",
+      "domain": "CX",
+      "persona": "任务执行人与上下文服务",
+      "pages": [
+        "P20",
+        "P04"
+      ],
+      "entities": [
+        "ContextManifest",
+        "ExecutionSnapshot",
+        "ContextApplication"
+      ],
+      "flows": [
+        "F04"
+      ],
+      "interfaces": [
+        "A06",
+        "A05"
+      ],
+      "negative": "写入上下文文件不能单独证明数字员工已读取",
+      "given": "任务目标、必需事实、来源版本和接收主体可解析",
+      "batch": "B4",
+      "sourcePath": "/Users/mac/Documents/ChatGPT/ZKER- staff/services/control-plane/control_plane/business_api/conversation_context_projection.py",
+      "designStatus": "PROPOSED_NOT_IMPLEMENTED"
+    },
+    {
+      "id": "CX-07",
+      "priority": "P1",
+      "type": "完善",
+      "requirement": "划分共享业务资料、私人偏好、私有记忆、私有草稿及连接身份；关联 MM-01、MM-03、WS-01",
+      "acceptance": "共用 Agent 不串上下文；私人偏好不覆盖业务硬条件；只把明确发布的贡献共享给其他人",
+      "storyId": "US-CX-07",
+      "domain": "CX",
+      "persona": "任务执行人与上下文服务",
+      "pages": [
+        "P20",
+        "P04",
+        "P22"
+      ],
+      "entities": [
+        "ContextManifest",
+        "ExecutionSnapshot",
+        "ContextApplication"
+      ],
+      "flows": [
+        "F04",
+        "F13"
+      ],
+      "interfaces": [
+        "A06",
+        "A05",
+        "A17"
+      ],
+      "negative": "写入上下文文件不能单独证明数字员工已读取",
+      "given": "任务目标、必需事实、来源版本和接收主体可解析",
+      "batch": "B4",
+      "sourcePath": "/Users/mac/Documents/ChatGPT/ZKER- staff/services/control-plane/control_plane/business_api/conversation_context_projection.py",
+      "designStatus": "PROPOSED_NOT_IMPLEMENTED",
+      "marketRefinements": [
+        "MC-10"
+      ]
+    },
+    {
+      "id": "CX-08",
+      "priority": "P1",
+      "type": "接通",
+      "requirement": "上下文引用附件、知识、业务记录和工具结果时固定可解析的版本及摘要；关联 KB-05、WS-02、RS-06",
+      "acceptance": "同名文件被替换后可发现变化；所有必需引用能按接收者权限解析，不能只有无内容的 digest",
+      "storyId": "US-CX-08",
+      "domain": "CX",
+      "persona": "任务执行人与上下文服务",
+      "pages": [
+        "P20",
+        "P04"
+      ],
+      "entities": [
+        "ContextManifest",
+        "ExecutionSnapshot",
+        "ContextApplication"
+      ],
+      "flows": [
+        "F04"
+      ],
+      "interfaces": [
+        "A06",
+        "A05"
+      ],
+      "negative": "写入上下文文件不能单独证明数字员工已读取",
+      "given": "任务目标、必需事实、来源版本和接收主体可解析",
+      "batch": "B4",
+      "sourcePath": "/Users/mac/Documents/ChatGPT/ZKER- staff/services/control-plane/control_plane/business_api/conversation_context_projection.py",
+      "designStatus": "PROPOSED_NOT_IMPLEMENTED"
+    },
+    {
+      "id": "CX-09",
+      "priority": "P1",
+      "type": "完善",
+      "requirement": "关键任务提供公开的目标/约束理解摘要和可判定完成检查；关联 CV-05、RS-01",
+      "acceptance": "能定位遗漏或误解；模型自述“理解”不独立通过验收，不要求保存模型内部思维过程",
+      "storyId": "US-CX-09",
+      "domain": "CX",
+      "persona": "任务执行人与上下文服务",
+      "pages": [
+        "P20",
+        "P04"
+      ],
+      "entities": [
+        "ContextManifest",
+        "ExecutionSnapshot",
+        "ContextApplication"
+      ],
+      "flows": [
+        "F04"
+      ],
+      "interfaces": [
+        "A06",
+        "A05"
+      ],
+      "negative": "写入上下文文件不能单独证明数字员工已读取",
+      "given": "任务目标、必需事实、来源版本和接收主体可解析",
+      "batch": "B4",
+      "sourcePath": "/Users/mac/Documents/ChatGPT/ZKER- staff/services/control-plane/control_plane/business_api/conversation_context_projection.py",
+      "designStatus": "PROPOSED_NOT_IMPLEMENTED"
+    },
+    {
+      "id": "CX-10",
+      "priority": "P0",
+      "type": "修复/核验",
+      "requirement": "上下文使用和提交时校验当前授权、版本和有效期；验证 policyRevision 比较语义；关联 AD-07、RS-04",
+      "acceptance": "版本标识不是简单按字典序判断新旧；撤权/过期后不继续读写，最低版本来自可信服务端事实",
+      "storyId": "US-CX-10",
+      "domain": "CX",
+      "persona": "任务执行人与上下文服务",
+      "pages": [
+        "P20",
+        "P04"
+      ],
+      "entities": [
+        "ContextManifest",
+        "ExecutionSnapshot",
+        "ContextApplication"
+      ],
+      "flows": [
+        "F04"
+      ],
+      "interfaces": [
+        "A06",
+        "A05"
+      ],
+      "negative": "写入上下文文件不能单独证明数字员工已读取",
+      "given": "任务目标、必需事实、来源版本和接收主体可解析",
+      "batch": "B4",
+      "sourcePath": "/Users/mac/Documents/ChatGPT/ZKER- staff/services/control-plane/control_plane/business_api/conversation_context_projection.py",
+      "designStatus": "PROPOSED_NOT_IMPLEMENTED"
+    },
+    {
+      "id": "CX-11",
+      "priority": "P1",
+      "type": "补合同",
+      "requirement": "明确 ContextManifest、Assignment、Attempt、Agent/能力/插件版本和基线水位之间的引用闭包；关联 AG-01、NC-07",
+      "acceptance": "用当前 Schema/消费者校验整组引用；不添加未声明字段，不重复发明事实源",
+      "storyId": "US-CX-11",
+      "domain": "CX",
+      "persona": "任务执行人与上下文服务",
+      "pages": [
+        "P20",
+        "P04"
+      ],
+      "entities": [
+        "ContextManifest",
+        "ExecutionSnapshot",
+        "ContextApplication"
+      ],
+      "flows": [
+        "F04"
+      ],
+      "interfaces": [
+        "A06",
+        "A05"
+      ],
+      "negative": "写入上下文文件不能单独证明数字员工已读取",
+      "given": "任务目标、必需事实、来源版本和接收主体可解析",
+      "batch": "B4",
+      "sourcePath": "/Users/mac/Documents/ChatGPT/ZKER- staff/services/control-plane/control_plane/business_api/conversation_context_projection.py",
+      "designStatus": "PROPOSED_NOT_IMPLEMENTED"
+    },
+    {
+      "id": "CX-12",
+      "priority": "P1",
+      "type": "完善",
+      "requirement": "用户界面分别展示上下文准备、投递、装载、更新待应用、失效和冲突；关联 OP-03、WD-06",
+      "acceptance": "已读通知不被显示成 Agent 已应用新版；状态能对应真实服务端记录与恢复动作",
+      "storyId": "US-CX-12",
+      "domain": "CX",
+      "persona": "任务执行人与上下文服务",
+      "pages": [
+        "P20",
+        "P04"
+      ],
+      "entities": [
+        "ContextManifest",
+        "ExecutionSnapshot",
+        "ContextApplication"
+      ],
+      "flows": [
+        "F04"
+      ],
+      "interfaces": [
+        "A06",
+        "A05"
+      ],
+      "negative": "写入上下文文件不能单独证明数字员工已读取",
+      "given": "任务目标、必需事实、来源版本和接收主体可解析",
+      "batch": "B4",
+      "sourcePath": "/Users/mac/Documents/ChatGPT/ZKER- staff/services/control-plane/control_plane/business_api/conversation_context_projection.py",
+      "designStatus": "PROPOSED_NOT_IMPLEMENTED"
+    },
+    {
+      "id": "SY-01",
+      "priority": "P0",
+      "type": "接通",
+      "requirement": "为业务变更和贡献提供有序事件、幂等重放、缺口检测及消费者已应用水位；关联 CV-02、AT-04",
+      "acceptance": "重复/乱序/离线后各方收敛到同一可见业务版本，不漏决定、不重复执行",
+      "storyId": "US-SY-01",
+      "domain": "SY",
+      "persona": "协作参与者与接收人",
+      "pages": [
+        "P20",
+        "P02",
+        "P16"
+      ],
+      "entities": [
+        "WorkThreadEntry",
+        "Contribution",
+        "ContextApplication",
+        "ResultCommit"
+      ],
+      "flows": [
+        "F04",
+        "F05",
+        "F06"
+      ],
+      "interfaces": [
+        "A06",
+        "A08",
+        "A09"
+      ],
+      "negative": "旧版本贡献不得作为最新依据提交",
+      "given": "存在已冻结基线、运行/贡献，以及可辨别依赖的变更",
+      "batch": "B4",
+      "sourcePath": "/Users/mac/Documents/ChatGPT/ZKER- staff/services/control-plane/control_plane/context_manifest_session.py",
+      "designStatus": "PROPOSED_NOT_IMPLEMENTED"
+    },
+    {
+      "id": "SY-02",
+      "priority": "P0",
+      "type": "完善",
+      "requirement": "对输入、正式决定和权限变化做依赖影响分类，标记受影响工作；关联 NC-08、SD-06",
+      "acceptance": "一般聊天不全局停工；关键输入变化使相关贡献待重核；撤权在下一使用点阻止动作",
+      "storyId": "US-SY-02",
+      "domain": "SY",
+      "persona": "协作参与者与接收人",
+      "pages": [
+        "P20",
+        "P02",
+        "P16"
+      ],
+      "entities": [
+        "WorkThreadEntry",
+        "Contribution",
+        "ContextApplication",
+        "ResultCommit"
+      ],
+      "flows": [
+        "F04",
+        "F05",
+        "F06"
+      ],
+      "interfaces": [
+        "A06",
+        "A08",
+        "A09"
+      ],
+      "negative": "旧版本贡献不得作为最新依据提交",
+      "given": "存在已冻结基线、运行/贡献，以及可辨别依赖的变更",
+      "batch": "B4",
+      "sourcePath": "/Users/mac/Documents/ChatGPT/ZKER- staff/services/control-plane/control_plane/context_manifest_session.py",
+      "designStatus": "PROPOSED_NOT_IMPLEMENTED"
+    },
+    {
+      "id": "SY-03",
+      "priority": "P0",
+      "type": "接通",
+      "requirement": "贡献提交检查依据版本、当前分工/执行权、必需输入及完成条件；关联 RS-01～RS-04",
+      "acceptance": "旧预算不能在设备清单更新后作为最新结果提交；重复或旧 Agent 尝试不能抢占终态",
+      "storyId": "US-SY-03",
+      "domain": "SY",
+      "persona": "协作参与者与接收人",
+      "pages": [
+        "P20",
+        "P02",
+        "P16",
+        "P22"
+      ],
+      "entities": [
+        "WorkThreadEntry",
+        "Contribution",
+        "ContextApplication",
+        "ResultCommit"
+      ],
+      "flows": [
+        "F04",
+        "F05",
+        "F06",
+        "F13"
+      ],
+      "interfaces": [
+        "A06",
+        "A08",
+        "A09",
+        "A17"
+      ],
+      "negative": "旧版本贡献不得作为最新依据提交",
+      "given": "存在已冻结基线、运行/贡献，以及可辨别依赖的变更",
+      "batch": "B4",
+      "sourcePath": "/Users/mac/Documents/ChatGPT/ZKER- staff/services/control-plane/control_plane/context_manifest_session.py",
+      "designStatus": "PROPOSED_NOT_IMPLEMENTED",
+      "marketRefinements": [
+        "MC-10"
+      ]
+    },
+    {
+      "id": "SY-04",
+      "priority": "P1",
+      "type": "完善",
+      "requirement": "结构化事实与文件协作分别处理并发冲突，保留候选和来源；关联 WS-06、TM-05",
+      "acceptance": "不用最后写入静默覆盖；有权维护事实的人接受变更，文件合并可审阅",
+      "storyId": "US-SY-04",
+      "domain": "SY",
+      "persona": "协作参与者与接收人",
+      "pages": [
+        "P20",
+        "P02",
+        "P16"
+      ],
+      "entities": [
+        "WorkThreadEntry",
+        "Contribution",
+        "ContextApplication",
+        "ResultCommit"
+      ],
+      "flows": [
+        "F04",
+        "F05",
+        "F06"
+      ],
+      "interfaces": [
+        "A06",
+        "A08",
+        "A09"
+      ],
+      "negative": "旧版本贡献不得作为最新依据提交",
+      "given": "存在已冻结基线、运行/贡献，以及可辨别依赖的变更",
+      "batch": "B4",
+      "sourcePath": "/Users/mac/Documents/ChatGPT/ZKER- staff/services/control-plane/control_plane/context_manifest_session.py",
+      "designStatus": "PROPOSED_NOT_IMPLEMENTED"
+    },
+    {
+      "id": "SY-05",
+      "priority": "P1",
+      "type": "完善",
+      "requirement": "区分已送达、已阅读、贡献已接受、主任务达标、业务交接完成；关联 RS-02、HC-06",
+      "acceptance": "UI、通知、统计的状态含义一致；单个 Agent/协作人的完成不冒充全节点完成",
+      "storyId": "US-SY-05",
+      "domain": "SY",
+      "persona": "协作参与者与接收人",
+      "pages": [
+        "P20",
+        "P02",
+        "P16"
+      ],
+      "entities": [
+        "WorkThreadEntry",
+        "Contribution",
+        "ContextApplication",
+        "ResultCommit"
+      ],
+      "flows": [
+        "F04",
+        "F05",
+        "F06"
+      ],
+      "interfaces": [
+        "A06",
+        "A08",
+        "A09"
+      ],
+      "negative": "旧版本贡献不得作为最新依据提交",
+      "given": "存在已冻结基线、运行/贡献，以及可辨别依赖的变更",
+      "batch": "B4",
+      "sourcePath": "/Users/mac/Documents/ChatGPT/ZKER- staff/services/control-plane/control_plane/context_manifest_session.py",
+      "designStatus": "PROPOSED_NOT_IMPLEMENTED"
+    },
+    {
+      "id": "SY-06",
+      "priority": "P1",
+      "type": "完善",
+      "requirement": "人类纠正和摘要冲突产生新事实版本，更新所有受影响引用与贡献；关联 MM-03、KB-06",
+      "acceptance": "纠正已采纳事实后，旧摘要/旧缓存不能继续把错误结论当有效依据",
+      "storyId": "US-SY-06",
+      "domain": "SY",
+      "persona": "协作参与者与接收人",
+      "pages": [
+        "P20",
+        "P02",
+        "P16"
+      ],
+      "entities": [
+        "WorkThreadEntry",
+        "Contribution",
+        "ContextApplication",
+        "ResultCommit"
+      ],
+      "flows": [
+        "F04",
+        "F05",
+        "F06"
+      ],
+      "interfaces": [
+        "A06",
+        "A08",
+        "A09"
+      ],
+      "negative": "旧版本贡献不得作为最新依据提交",
+      "given": "存在已冻结基线、运行/贡献，以及可辨别依赖的变更",
+      "batch": "B4",
+      "sourcePath": "/Users/mac/Documents/ChatGPT/ZKER- staff/services/control-plane/control_plane/context_manifest_session.py",
+      "designStatus": "PROPOSED_NOT_IMPLEMENTED"
+    },
+    {
+      "id": "SY-07",
+      "priority": "P1",
+      "type": "接通",
+      "requirement": "断线、暂停、换 Agent、重试和 Runtime 重启后从明确检查点恢复并重授权；关联 CV-03、CV-07",
+      "acceptance": "恢复时知道已完成/未完成/待查证部分；不重复外部操作，不假装热注入不支持的输入",
+      "storyId": "US-SY-07",
+      "domain": "SY",
+      "persona": "协作参与者与接收人",
+      "pages": [
+        "P20",
+        "P02",
+        "P16"
+      ],
+      "entities": [
+        "WorkThreadEntry",
+        "Contribution",
+        "ContextApplication",
+        "ResultCommit"
+      ],
+      "flows": [
+        "F04",
+        "F05",
+        "F06"
+      ],
+      "interfaces": [
+        "A06",
+        "A08",
+        "A09"
+      ],
+      "negative": "旧版本贡献不得作为最新依据提交",
+      "given": "存在已冻结基线、运行/贡献，以及可辨别依赖的变更",
+      "batch": "B4",
+      "sourcePath": "/Users/mac/Documents/ChatGPT/ZKER- staff/services/control-plane/control_plane/context_manifest_session.py",
+      "designStatus": "PROPOSED_NOT_IMPLEMENTED"
+    },
+    {
+      "id": "SY-08",
+      "priority": "P1",
+      "type": "完善",
+      "requirement": "对迟到贡献、已撤回资料和已提交节点变更提供明确处置",
+      "acceptance": "历史交接包不可静默改写；通过新版本、返工或补充流程处理，并通知实际受影响方",
+      "storyId": "US-SY-08",
+      "domain": "SY",
+      "persona": "协作参与者与接收人",
+      "pages": [
+        "P20",
+        "P02",
+        "P16"
+      ],
+      "entities": [
+        "WorkThreadEntry",
+        "Contribution",
+        "ContextApplication",
+        "ResultCommit"
+      ],
+      "flows": [
+        "F04",
+        "F05",
+        "F06"
+      ],
+      "interfaces": [
+        "A06",
+        "A08",
+        "A09"
+      ],
+      "negative": "旧版本贡献不得作为最新依据提交",
+      "given": "存在已冻结基线、运行/贡献，以及可辨别依赖的变更",
+      "batch": "B4",
+      "sourcePath": "/Users/mac/Documents/ChatGPT/ZKER- staff/services/control-plane/control_plane/context_manifest_session.py",
+      "designStatus": "PROPOSED_NOT_IMPLEMENTED"
+    },
+    {
+      "id": "SY-09",
+      "priority": "P1",
+      "type": "接通",
+      "requirement": "下游验证交接包、贡献版本、未决项和必需上下文可读性，再确认接手；关联 RS-03、RS-07",
+      "acceptance": "收到包不等于可执行；无法解析必需资料时明确阻塞原因并保持可恢复状态",
+      "storyId": "US-SY-09",
+      "domain": "SY",
+      "persona": "协作参与者与接收人",
+      "pages": [
+        "P20",
+        "P02",
+        "P16"
+      ],
+      "entities": [
+        "WorkThreadEntry",
+        "Contribution",
+        "ContextApplication",
+        "ResultCommit"
+      ],
+      "flows": [
+        "F04",
+        "F05",
+        "F06"
+      ],
+      "interfaces": [
+        "A06",
+        "A08",
+        "A09"
+      ],
+      "negative": "旧版本贡献不得作为最新依据提交",
+      "given": "存在已冻结基线、运行/贡献，以及可辨别依赖的变更",
+      "batch": "B4",
+      "sourcePath": "/Users/mac/Documents/ChatGPT/ZKER- staff/services/control-plane/control_plane/context_manifest_session.py",
+      "designStatus": "PROPOSED_NOT_IMPLEMENTED"
+    },
+    {
+      "id": "SY-10",
+      "priority": "P2",
+      "type": "完善",
+      "requirement": "增加上下文缺失、过期提交、重同步、摘要纠错及重试重复等质量指标；关联 OP-04",
+      "acceptance": "指标有真实分母与事件来源；不以消息数、token 数或同步次数宣称协作质量提升",
+      "storyId": "US-SY-10",
+      "domain": "SY",
+      "persona": "协作参与者与接收人",
+      "pages": [
+        "P20",
+        "P02",
+        "P16"
+      ],
+      "entities": [
+        "WorkThreadEntry",
+        "Contribution",
+        "ContextApplication",
+        "ResultCommit"
+      ],
+      "flows": [
+        "F04",
+        "F05",
+        "F06"
+      ],
+      "interfaces": [
+        "A06",
+        "A08",
+        "A09"
+      ],
+      "negative": "旧版本贡献不得作为最新依据提交",
+      "given": "存在已冻结基线、运行/贡献，以及可辨别依赖的变更",
+      "batch": "B4",
+      "sourcePath": "/Users/mac/Documents/ChatGPT/ZKER- staff/services/control-plane/control_plane/context_manifest_session.py",
+      "designStatus": "PROPOSED_NOT_IMPLEMENTED"
+    }
+  ],
+  "pages": [
+    [
+      "P01",
+      "我的工作台",
+      "/workbench、/my-work",
+      "本人待办、职责、期限、上下游、AI进度、异常",
+      "领取、打开、筛选、保存视图",
+      "HumanTask/WorkItem 的本人聚合",
+      "加载骨架；无任务给已授权入口；错误可重试；越权不显示全租户计数"
+    ],
+    [
+      "P02",
+      "节点工作区",
+      "/work-item/:id",
+      "目标、本人职责、输入、协作贡献、检查、交付、流程位置",
+      "配置、开始、请人协助、提交、返工",
+      "WorkItem + WorkThread + 当前 Assignment",
+      "缺输入定位资料；旧版本保留草稿；无权/不存在统一处理"
+    ],
+    [
+      "P03",
+      "参与者与协作分工",
+      "P02 内协作标签/抽屉（增量）",
+      "分工、承担人、期限、可见Agent摘要、贡献状态",
+      "请求、接受、拒绝、转派、查看贡献",
+      "HumanTask/请求事实/CollaborationLink",
+      "没有候选显示原因；不能编辑他人Agent；退出者动作立即失效"
+    ],
+    [
+      "P04",
+      "本次执行配置",
+      "P02 内配置抽屉（增量）",
+      "人工/协助/自动、Agent、技能参数、知识、连接身份、空间、方案、预算继承",
+      "预览差异、保存本次、保存个人偏好、开始",
+      "CandidateSnapshot/有效配置/ExecutionSnapshot",
+      "必需/替换/追加/失效有文字解释；冲突先回读"
+    ],
+    [
+      "P05",
+      "数字员工目录与详情",
+      "/agents、/agents/:id",
+      "我创建/共享/推荐、职责、能力、版本、工作、记忆、设置",
+      "创建、编辑、试验、发布提案、共享、归档",
+      "AgentProfile/DefinitionVersion/Grant",
+      "使用与编辑按钮分别授权；草稿可回到；停用展示依赖"
+    ],
+    [
+      "P06",
+      "技能目录与创作",
+      "/skills；详情/编辑为增量",
+      "用途、输入输出、示例、依赖、参数、版本、维护者、测试",
+      "选择、导入、编辑、隔离测试、提交发布",
+      "SkillCard/CapabilityManifest",
+      "导入失败定位字段；未经发布不正式执行；技能冲突明确提示"
+    ],
+    [
+      "P07",
+      "工具和连接身份",
+      "/tools；连接向导为增量",
+      "应用动作、身份、授权范围、有效期、健康、调用记录",
+      "接入、授权、Grant配置、只读检查、撤销",
+      "Capability/Grant/ConnectionIdentity",
+      "已接入≠节点可用；零工具/过期/离线分别恢复；无密钥明文"
+    ],
+    [
+      "P08",
+      "知识库与来源",
+      "/knowledge、现有详情；加工页增量",
+      "文件/URL/系统来源、加工状态、版本、引用、读权",
+      "导入、加工、测试检索、发布、更新、授权提案",
+      "KnowledgeSource/Version/Citation",
+      "上传成功不冒充可检索；空来源/过期/不可读分别展示"
+    ],
+    [
+      "P09",
+      "记忆与经验",
+      "Agent详情内记忆标签（条件增量）",
+      "个人/Agent/项目/团队范围、来源、有效期、此次使用",
+      "纠正、忽略、提案发布、版本比较、归档",
+      "Memory/EvolutionProposal/ContextManifest",
+      "私人内容不进入共享列表；未验收经验不自动发布"
+    ],
+    [
+      "P10",
+      "文件与产物",
+      "P02 产物标签/工作空间（增量）",
+      "业务空间、文件版本、预览、引用片段、Diff、产物位置",
+      "上传、引用、下载、比较、合并候选",
+      "Artifact/对象存储版本/WorkThreadEntry",
+      "不可解析文件提示来源；同名版本不同；窄屏改列表"
+    ],
+    [
+      "P11",
+      "对话与执行",
+      "/conversations、/conversations/:id",
+      "任务关联、授权历史、输入、流式反馈、工具卡、候选成果",
+      "发送、补充、转任务、引用、支持的停止/恢复",
+      "ConversationSession/WorkThread/Run",
+      "断线补取不重跑；不支持恢复时提供真实替代入口"
+    ],
+    [
+      "P12",
+      "数字员工团队",
+      "Agent/任务内团队入口（条件增量）",
+      "协调者、成员、分工、依赖、预算、运行、汇总",
+      "选团队、查看分工、替换、接管",
+      "Team/Grant/Assignment/Attempt",
+      "未认证能力隐藏或明确条件态；成员失败不标整体成功"
+    ],
+    [
+      "P13",
+      "节点执行方案",
+      "技能/任务内方案入口（条件增量）",
+      "输入、阶段、分支、依赖、停止条件、版本、输出",
+      "选择、AI草拟、表单/画布编辑、试验、发布",
+      "Skill/方案版本/Runtime执行轨迹",
+      "无出口/无限递归在开始前阻止；画布有列表替代"
+    ],
+    [
+      "P14",
+      "自动化",
+      "任务/Agent 内自动化入口（增量）",
+      "触发类型、时区、下一次、并发、去重、截止、最近原因",
+      "创建、测试、暂停、恢复、查看运行",
+      "Schedule/ScheduledTask/Run",
+      "过期/无权停止；错过触发可解释；不混入正式测试统计"
+    ],
+    [
+      "P15",
+      "渠道与专家",
+      "工具/对话内渠道入口（条件增量）",
+      "身份绑定、会话、路由、专家用途、投递状态",
+      "绑定、发起原任务咨询、暂停、重授权",
+      "Channel/Membership/Delegation/Delivery",
+      "歧义澄清；专家意见与正式审批不同；重投不重复发送"
+    ],
+    [
+      "P16",
+      "审核、交付与接手",
+      "/approvals；P02 交付/接手增量",
+      "交付版本、检查项、变化、依据、未决项、下游输入",
+      "接受/退回、批准/拒绝、提交、接手",
+      "Approval/CompletionCheck/ResultCommit/Handoff",
+      "自批拒绝；审批过期重核；下游不可读不显示可开始"
+    ],
+    [
+      "P17",
+      "SOP Studio",
+      "/sops、现有Studio",
+      "职责、输入输出、AI能力、可选策略、审核、异常、版本Diff",
+      "编辑、预检、员工预览、评审、发布",
+      "SOPVersion/NodeContract",
+      "候选空/资料缺/断路定位节点；已发布只读"
+    ],
+    [
+      "P18",
+      "组织、人员与权限",
+      "/organization、/people、/access",
+      "组织岗位、成员状态、任职、角色授权、来源、影响、交接",
+      "按各管理角色允许的命令维护",
+      "Membership/Employment/RoleBinding/Grant",
+      "七类夹具分别投影；没有通用管理员；私人内容最小可见"
+    ],
+    [
+      "P19",
+      "运行、用量与审计",
+      "/audit；诊断/用量按既有入口增量",
+      "健康、容量、成本、失败、回执、对账、版本、证据",
+      "诊断、已授权恢复、策略调整、脱敏导出",
+      "Run/Invocation/Usage/Audit",
+      "员工看本人可恢复原因；运维看技术关联；无数据不造指标"
+    ],
+    [
+      "P20",
+      "上下文与变化",
+      "P02 上下文抽屉（增量）",
+      "共同基线、必需事实、来源版本、裁剪、装载状态、变化影响",
+      "预览、补资料、查看变化、重新核对",
+      "ContextManifest/ContextBinding/ContextApplication",
+      "未装载/失效/过期/冲突分开；已读通知不标AI已应用"
+    ],
+    [
+      "P21",
+      "通知与个人设置",
+      "/notifications；账号设置增量",
+      "需要我处理、关联任务、语言、时区、通知、会话、自助权限",
+      "定位、稍后、已读、配置个人偏好",
+      "Notification/Preference/Session",
+      "已读不改变任务；保留权限内深链接，无重复通知"
+    ],
+    [
+      "P22",
+      "员工资源市场",
+      "工作区/配置/资源目录快捷入口（增量）",
+      "数字员工/技能/工具、用途、版本、依赖、授权动作、我的复制",
+      "详情、复制并使用、复制编辑、来源Diff、回节点选择",
+      "Publication/LocalCopy/Lineage及类型资源授权投影",
+      "无权资源与计数隐藏；可看不可复制分开；复制成功与实际可用分开；不复制凭据/私人上下文"
+    ]
+  ],
+  "domains": [
+    [
+      "WD",
+      "员工工作台",
+      "业务员工",
+      "P01,P02,P22",
+      "WorkItem,HumanTask",
+      "F01,F13",
+      "A01,A02,A17",
+      "他人任务不得混入本人列表"
+    ],
+    [
+      "HR",
+      "人员职责",
+      "节点责任人",
+      "P02,P03,P18",
+      "HumanTask,Delegation,CollaborationLink",
+      "F02,F07",
+      "A02,A04",
+      "转派后的旧执行权必须失效"
+    ],
+    [
+      "NC",
+      "节点执行配置",
+      "任务执行人",
+      "P04,P22",
+      "CandidateSnapshot,AgentAssignment,ExecutionSnapshot",
+      "F03,F13",
+      "A03,A05,A17",
+      "个人偏好不得覆盖节点必需能力"
+    ],
+    [
+      "AG",
+      "数字员工资产",
+      "数字员工维护者与使用者",
+      "P05,P22",
+      "AgentProfile,AgentDefinitionVersion,Grant",
+      "F08,F13",
+      "A11,A17",
+      "共享使用权不自动包含编辑权或私人凭据"
+    ],
+    [
+      "SK",
+      "技能",
+      "技能作者与任务执行人",
+      "P06,P04,P22",
+      "SkillVersion,CapabilityManifest",
+      "F08,F13",
+      "A11,A17",
+      "未经发布和批准的技能不得成为正式运行资源"
+    ],
+    [
+      "CN",
+      "连接器与外部动作",
+      "任务执行人与连接维护者",
+      "P07,P04,P22",
+      "CapabilityManifest,ConnectionIdentity,Grant,Invocation",
+      "F09,F13",
+      "A12,A17",
+      "连接状态、授权、调用回执不得互相替代"
+    ],
+    [
+      "KB",
+      "知识与引用",
+      "知识维护者与任务执行人",
+      "P08,P20",
+      "KnowledgeVersion,Citation,ContextManifest",
+      "F08,F04",
+      "A11,A06",
+      "拥有索引不能绕过源文件读取权"
+    ],
+    [
+      "MM",
+      "记忆与经验",
+      "数字员工使用者",
+      "P09,P20,P22",
+      "Memory,ContextManifest,EvolutionProposal",
+      "F04,F08,F13",
+      "A11,A06,A17",
+      "私人记忆不能自动进入团队上下文"
+    ],
+    [
+      "WS",
+      "工作空间与产物",
+      "任务执行人",
+      "P10,P02",
+      "ArtifactVersion,WorkThreadEntry,ExecutionSnapshot",
+      "F05,F09",
+      "A07,A12",
+      "文件同名不等于相同版本或合法写入位置"
+    ],
+    [
+      "CV",
+      "对话与执行",
+      "任务执行人",
+      "P11,P02",
+      "ConversationSession,WorkThread,ExecutionAttempt",
+      "F03,F04",
+      "A05,A06,A07",
+      "对话成功不能直接改变业务完成状态"
+    ],
+    [
+      "TM",
+      "数字员工团队",
+      "被授权团队使用者",
+      "P12,P02",
+      "AgentAssignment,ExecutionAttempt,Team",
+      "F02,F03",
+      "A03,A05",
+      "团队能力启用仍服从现有可用性门，成员不得互相扩大权限"
+    ],
+    [
+      "FL",
+      "节点执行方案",
+      "执行方案维护者",
+      "P13,P04",
+      "SkillVersion,ExecutionSnapshot,Run",
+      "F03,F08",
+      "A05,A11",
+      "技术流程完成仅生成业务结果候选"
+    ],
+    [
+      "AT",
+      "自动化",
+      "任务执行人与自动化维护者",
+      "P14",
+      "Schedule,WorkExecution,ExecutionAttempt",
+      "F10",
+      "A13",
+      "重复触发不能创建重复业务副作用"
+    ],
+    [
+      "IM",
+      "消息渠道与专家协作",
+      "渠道成员与专家",
+      "P15,P21",
+      "Channel,Membership,Notification,Delegation",
+      "F10,F02",
+      "A13,A04",
+      "群成员身份不能被当作工作项授权"
+    ],
+    [
+      "RS",
+      "成果验收与交接",
+      "执行人、审核者与接收人",
+      "P16,P02",
+      "CompletionCheckResult,HandoffPackage,ResultCommit",
+      "F05,F06",
+      "A08,A09,A10",
+      "子任务或运行完成不直接激活下游"
+    ],
+    [
+      "SD",
+      "SOP设计",
+      "流程设计者",
+      "P17",
+      "SOPVersion,NodeContract,CandidateSnapshot",
+      "F11",
+      "A14",
+      "已发布版本和在途实例不得被草稿静默覆盖"
+    ],
+    [
+      "AD",
+      "组织权限与资产管理",
+      "各领域管理员",
+      "P18,P07,P22",
+      "Membership,RoleBinding,Grant,Policy",
+      "F07,F12,F13",
+      "A15,A17",
+      "不存在万能管理员读取全部私人内容的默认权限"
+    ],
+    [
+      "OP",
+      "运行与体验质量",
+      "运行维护者与业务员工",
+      "P19,P21,P22",
+      "Run,Invocation,UsageRecord,Audit",
+      "F12,F13",
+      "A16,A17",
+      "运行成功率不能冒充业务完成率"
+    ],
+    [
+      "HC",
+      "人员与数字员工关系",
+      "主执行人与协作人",
+      "P03,P02,P22",
+      "CollaborationLink,HumanTask,AgentAssignment,Contribution",
+      "F02,F05,F13",
+      "A04,A08,A17",
+      "多人不得覆盖同一个工作项的当前Agent分配"
+    ],
+    [
+      "CX",
+      "上下文构建与消费",
+      "任务执行人与上下文服务",
+      "P20,P04,P22",
+      "ContextManifest,ExecutionSnapshot,ContextApplication",
+      "F04,F13",
+      "A06,A05,A17",
+      "写入上下文文件不能单独证明数字员工已读取"
+    ],
+    [
+      "SY",
+      "上下文变更与一致性",
+      "协作参与者与接收人",
+      "P20,P02,P16,P22",
+      "WorkThreadEntry,Contribution,ContextApplication,ResultCommit",
+      "F04,F05,F06,F13",
+      "A06,A08,A09,A17",
+      "旧版本贡献不得作为最新依据提交"
+    ]
+  ],
+  "marketRefinements": [
+    {
+      "id": "MC-01",
+      "requirementIds": [
+        "AG-05",
+        "SK-01",
+        "CN-03",
+        "WD-02"
+      ],
+      "title": "员工市场入口与三类资源发现",
+      "story": "作为业务员工，我要从工作区或配置面板进入市场，按数字员工、技能、工具及业务用途筛选。",
+      "given": "已有市场浏览权与对应资源可见范围",
+      "when": "打开市场、切换类型、搜索并返回原工作",
+      "then": "仅展示有权查看的条目、字段与统计，保留任务定位和筛选；主执行人与协作人均可从自己的工作进入。",
+      "pages": [
+        "P22",
+        "P04"
+      ],
+      "flows": [
+        "F13"
+      ],
+      "interfaces": [
+        "A17"
+      ]
+    },
+    {
+      "id": "MC-02",
+      "requirementIds": [
+        "AD-01",
+        "AD-04",
+        "AG-02"
+      ],
+      "title": "列表、详情与动作分别按权限投影",
+      "story": "作为员工，我要知道资源是否可查看、复制、编辑和使用。",
+      "given": "同一资源对不同用户的授权不同",
+      "when": "查看列表/详情或打开资源深链接",
+      "then": "无权对象不泄漏名称或计数；可看不可复制者仍可读获准详情；伪造复制请求仍被服务端拒绝。",
+      "pages": [
+        "P22",
+        "P04"
+      ],
+      "flows": [
+        "F13"
+      ],
+      "interfaces": [
+        "A17"
+      ]
+    },
+    {
+      "id": "MC-03",
+      "requirementIds": [
+        "AG-07",
+        "SK-01",
+        "CN-03",
+        "NC-02"
+      ],
+      "title": "复制到我的资源并直接选用",
+      "story": "作为员工，我要把获准复制的数字员工、技能、工具变成自己的资源并用于当前节点。",
+      "given": "发布版本允许复制使用，当前主体权限和依赖均满足",
+      "when": "点击复制并使用",
+      "then": "创建有来源的新个人资源实例；加入对应我的目录并进入本节点选择；无需重复申请已有权限，也不自动开始运行。",
+      "pages": [
+        "P22",
+        "P04"
+      ],
+      "flows": [
+        "F13"
+      ],
+      "interfaces": [
+        "A17"
+      ]
+    },
+    {
+      "id": "MC-04",
+      "requirementIds": [
+        "AG-02",
+        "AG-07",
+        "SK-06"
+      ],
+      "title": "原样复制、引用使用与编辑派生",
+      "story": "作为资源使用者，我要明确副本、共享引用及编辑后版本的区别。",
+      "given": "资源声明允许的采用方式",
+      "when": "选择原样复制、加入使用或复制编辑",
+      "then": "复制记录新ID和来源；引用仍指向原发布版；编辑派生进入草稿/测试/发布流程，不修改源或冒用源批准。",
+      "pages": [
+        "P22",
+        "P04"
+      ],
+      "flows": [
+        "F13"
+      ],
+      "interfaces": [
+        "A17"
+      ]
+    },
+    {
+      "id": "MC-05",
+      "requirementIds": [
+        "CN-04",
+        "CN-05",
+        "MM-01",
+        "HC-03"
+      ],
+      "title": "复制范围与私人信息隔离",
+      "story": "作为员工，我要复用资源功能并使用自己合法的连接身份。",
+      "given": "资源包含依赖、外部动作或私有数据引用",
+      "when": "执行复制并查看复制结果",
+      "then": "不复制作者凭据、私人记忆、对话、业务文件或不可分享授权；缺连接时显示待配置而非可运行。",
+      "pages": [
+        "P22",
+        "P04"
+      ],
+      "flows": [
+        "F13"
+      ],
+      "interfaces": [
+        "A17"
+      ]
+    },
+    {
+      "id": "MC-06",
+      "requirementIds": [
+        "NC-04",
+        "NC-07",
+        "CN-02",
+        "SK-03"
+      ],
+      "title": "依赖与节点资格检查",
+      "story": "作为节点执行人，我要确认复制资源是否真正适用。",
+      "given": "资源具有技能/工具/知识依赖与发布/健康条件",
+      "when": "复制预检并将副本配置到节点",
+      "then": "按类型检查最小依赖、版本、当前授权、发布、健康和节点资格；齐备可直接用，缺项分别给授权/配置/兼容/发布恢复入口。",
+      "pages": [
+        "P22",
+        "P04"
+      ],
+      "flows": [
+        "F13"
+      ],
+      "interfaces": [
+        "A17"
+      ]
+    },
+    {
+      "id": "MC-07",
+      "requirementIds": [
+        "AG-04",
+        "SK-06",
+        "AD-08",
+        "NC-08"
+      ],
+      "title": "来源、版本与升级影响",
+      "story": "作为副本维护者，我要查看来源和新版差异并决定升级。",
+      "given": "已经存在个人副本且源发布新版本或下架",
+      "when": "查看来源、Diff和受影响任务",
+      "then": "来源版本固定；更新不静默覆盖个人修改或在途快照；下架按原因区分禁止新复制、撤权、风险停用及历史保留。",
+      "pages": [
+        "P22",
+        "P04"
+      ],
+      "flows": [
+        "F13"
+      ],
+      "interfaces": [
+        "A17"
+      ]
+    },
+    {
+      "id": "MC-08",
+      "requirementIds": [
+        "AG-07",
+        "CN-08",
+        "OP-02"
+      ],
+      "title": "复制幂等与中断恢复",
+      "story": "作为员工，我要在双击、断线和失败后找到确定的复制结果。",
+      "given": "复制命令已提交但界面未收到明确结果",
+      "when": "同键重试或查询采用记录",
+      "then": "同一意图只生成一个有效副本；显式再复制使用新意图；缺依赖/部分结果可恢复且不能误标全部成功。",
+      "pages": [
+        "P22",
+        "P04"
+      ],
+      "flows": [
+        "F13"
+      ],
+      "interfaces": [
+        "A17"
+      ]
+    },
+    {
+      "id": "MC-09",
+      "requirementIds": [
+        "AD-04",
+        "AG-06",
+        "SK-04",
+        "CN-09"
+      ],
+      "title": "员工自助使用与市场治理",
+      "story": "作为资源维护者，我要维护发布范围与版本；作为员工，我要自助使用已批准且获准的资源。",
+      "given": "发布、可见范围、复制和使用政策明确",
+      "when": "维护者发布/调整范围，员工浏览与采用",
+      "then": "员工看发现/复制/配置，维护者看自己的发布和依赖，管理员按领域治理；不要求每次合法复制都重复审批，不生成万能管理员。",
+      "pages": [
+        "P22",
+        "P04"
+      ],
+      "flows": [
+        "F13"
+      ],
+      "interfaces": [
+        "A17"
+      ]
+    },
+    {
+      "id": "MC-10",
+      "requirementIds": [
+        "NC-03",
+        "HC-08",
+        "CX-07",
+        "SY-03"
+      ],
+      "title": "市场副本回到本人节点并保持协作隔离",
+      "story": "作为协作人，我要把市场副本用于自己的分工，同时保留主任务的共同上下文。",
+      "given": "主执行人与协作人各有工作项及授权基线",
+      "when": "双方分别复制、配置并执行",
+      "then": "各自Assignment不被覆盖；个人副本加入本人资源；共享业务基线一致，私人上下文隔离，旧版本提交仍受守卫约束。",
+      "pages": [
+        "P22",
+        "P04"
+      ],
+      "flows": [
+        "F13"
+      ],
+      "interfaces": [
+        "A17"
+      ]
+    }
+  ],
+  "designRevision": "v2.2",
+  "marketSourceHead": "7fe65123c8dee1bb2a5542327bcdc6b80e1f7454"
+}

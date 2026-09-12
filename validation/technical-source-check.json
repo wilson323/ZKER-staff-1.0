@@ -1,0 +1,449 @@
+{
+  "scope": "PINNED_SOURCE_REREAD_ONLY_NO_BUILD_OR_LICENSE_OPINION",
+  "checkedAt": "2026-09-11T17:53:07.238521+00:00",
+  "status": "PASS",
+  "sources": [
+    {
+      "key": "yd-root",
+      "url": "https://raw.githubusercontent.com/YunaiV/ruoyi-vue-pro/8e43004cf68a405cd3485f98f8a539b97ca6544a/pom.xml",
+      "httpStatus": 200,
+      "bytes": 7718,
+      "sha256": "e7f381640a6f829870827a33cad6b85e72a0c33efe0cb1944c66391872ff62c5",
+      "lineEvidence": [
+        {
+          "line": 44,
+          "text": "<java.version>17</java.version>"
+        }
+      ]
+    },
+    {
+      "key": "yd-bom",
+      "url": "https://raw.githubusercontent.com/YunaiV/ruoyi-vue-pro/8e43004cf68a405cd3485f98f8a539b97ca6544a/yudao-dependencies/pom.xml",
+      "httpStatus": 200,
+      "bytes": 33491,
+      "sha256": "9f4f2ea64c44c9d19e6a2d314d174979bc3f116c904267f887864a247fd8be68",
+      "lineEvidence": [
+        {
+          "line": 20,
+          "text": "<spring.boot.version>3.5.15</spring.boot.version>"
+        },
+        {
+          "line": 50,
+          "text": "<flowable.version>8.0.0</flowable.version>"
+        }
+      ]
+    },
+    {
+      "key": "yd-file",
+      "url": "https://raw.githubusercontent.com/YunaiV/ruoyi-vue-pro/8e43004cf68a405cd3485f98f8a539b97ca6544a/yudao-module-infra/src/main/java/cn/iocoder/yudao/module/infra/controller/admin/file/FileController.java",
+      "httpStatus": 200,
+      "bytes": 6459,
+      "sha256": "3f1e5a603ebec7a1f507555e867827ffc93a35f29ef28a0f3e06f878f4762863",
+      "lineEvidence": [
+        {
+          "line": 57,
+          "text": "@GetMapping(\"/presigned-url\")"
+        },
+        {
+          "line": 75,
+          "text": "@GetMapping(\"/get\")"
+        },
+        {
+          "line": 101,
+          "text": "@GetMapping(\"/{configId}/get/**\")"
+        },
+        {
+          "line": 102,
+          "text": "@PermitAll"
+        },
+        {
+          "line": 103,
+          "text": "@TenantIgnore"
+        },
+        {
+          "line": 106,
+          "text": "public void getFileContent(HttpServletRequest request,"
+        },
+        {
+          "line": 131,
+          "text": "@GetMapping(\"/page\")"
+        }
+      ]
+    },
+    {
+      "key": "ra-root",
+      "url": "https://raw.githubusercontent.com/ageerle/ruoyi-ai/cca30905778357e3aeb42b6adb65ef2384e75e60/pom.xml",
+      "httpStatus": 200,
+      "bytes": 21705,
+      "sha256": "22ce4d492abe3faaf4484848300ac22af5a264f77f1a857d8b3e1421ce0bf5ab",
+      "lineEvidence": [
+        {
+          "line": 17,
+          "text": "<spring-boot.version>3.5.8</spring-boot.version>"
+        },
+        {
+          "line": 20,
+          "text": "<java.version>17</java.version>"
+        },
+        {
+          "line": 49,
+          "text": "<warm-flow.version>1.8.2</warm-flow.version>"
+        },
+        {
+          "line": 56,
+          "text": "<langchain4j.version>1.17.2</langchain4j.version>"
+        }
+      ]
+    },
+    {
+      "key": "ra-docx-license",
+      "url": "https://raw.githubusercontent.com/ageerle/ruoyi-ai/cca30905778357e3aeb42b6adb65ef2384e75e60/ruoyi-admin/src/main/resources/skills/docx/LICENSE.txt",
+      "httpStatus": 200,
+      "bytes": 1467,
+      "sha256": "79f6d8f5b427252fa3b1c11ecdbdb6bf610b944f7530b4de78f770f38741cfaa",
+      "lineEvidence": [
+        {
+          "line": 1,
+          "text": "© 2025 Anthropic, PBC. All rights reserved."
+        }
+      ],
+      "observation": "Independent Anthropic-related use and distribution conditions; root MIT does not replace this file."
+    },
+    {
+      "key": "ra-sql",
+      "url": "https://raw.githubusercontent.com/ageerle/ruoyi-ai/cca30905778357e3aeb42b6adb65ef2384e75e60/docs/script/sql/ruoyi-ai.sql",
+      "httpStatus": 200,
+      "bytes": 661848,
+      "sha256": "44b6c3267740e1e10c526066dc974b1039db059f7722d3b0a93d155dc52a0a1d",
+      "lineEvidence": [
+        {
+          "line": 8,
+          "text": "CREATE DATABASE IF NOT EXISTS `ruoyi-ai` DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci;"
+        },
+        {
+          "line": 9,
+          "text": "USE `ruoyi-ai`;"
+        },
+        {
+          "line": 34,
+          "text": "CREATE TABLE `agent_info`  ("
+        },
+        {
+          "line": 95,
+          "text": "CREATE TABLE `chat_model`  ("
+        },
+        {
+          "line": 250,
+          "text": "CREATE TABLE `flow_definition`  ("
+        },
+        {
+          "line": 1200,
+          "text": "CREATE TABLE `knowledge_info`  ("
+        },
+        {
+          "line": 1298,
+          "text": "CREATE TABLE `mcp_tool_info`  ("
+        },
+        {
+          "line": 3431,
+          "text": "CREATE TABLE `t_workflow`  ("
+        },
+        {
+          "line": 3455,
+          "text": "CREATE TABLE `t_workflow_component`  ("
+        },
+        {
+          "line": 3484,
+          "text": "CREATE TABLE `t_workflow_edge`  ("
+        },
+        {
+          "line": 3509,
+          "text": "CREATE TABLE `t_workflow_node`  ("
+        },
+        {
+          "line": 3540,
+          "text": "CREATE TABLE `t_workflow_runtime`  ("
+        },
+        {
+          "line": 3566,
+          "text": "CREATE TABLE `t_workflow_runtime_node`  ("
+        },
+        {
+          "line": 3916,
+          "text": "CREATE DATABASE snail_job;"
+        },
+        {
+          "line": 3917,
+          "text": "USE snail_job;"
+        }
+      ]
+    },
+    {
+      "key": "yd-mysql",
+      "url": "https://raw.githubusercontent.com/YunaiV/ruoyi-vue-pro/8e43004cf68a405cd3485f98f8a539b97ca6544a/sql/mysql/ruoyi-vue-pro.sql",
+      "httpStatus": 200,
+      "bytes": 2013435,
+      "sha256": "90d9445a987f83bbcd70474a32061dd9dcd48fa775118c71643d8e9a8d7b3593",
+      "lineEvidence": [
+        {
+          "line": 24,
+          "text": "CREATE TABLE `infra_api_access_log`  ("
+        },
+        {
+          "line": 64,
+          "text": "CREATE TABLE `infra_api_error_log`  ("
+        },
+        {
+          "line": 107,
+          "text": "CREATE TABLE `infra_codegen_column`  ("
+        },
+        {
+          "line": 145,
+          "text": "CREATE TABLE `infra_codegen_table`  ("
+        },
+        {
+          "line": 183,
+          "text": "CREATE TABLE `infra_config`  ("
+        },
+        {
+          "line": 218,
+          "text": "CREATE TABLE `infra_data_source_config`  ("
+        },
+        {
+          "line": 242,
+          "text": "CREATE TABLE `infra_file`  ("
+        },
+        {
+          "line": 268,
+          "text": "CREATE TABLE `infra_file_config`  ("
+        },
+        {
+          "line": 304,
+          "text": "CREATE TABLE `infra_file_content`  ("
+        },
+        {
+          "line": 328,
+          "text": "CREATE TABLE `infra_job`  ("
+        },
+        {
+          "line": 383,
+          "text": "CREATE TABLE `infra_job_log`  ("
+        },
+        {
+          "line": 414,
+          "text": "CREATE TABLE `system_dept`  ("
+        },
+        {
+          "line": 458,
+          "text": "CREATE TABLE `system_dict_data`  ("
+        },
+        {
+          "line": 1852,
+          "text": "CREATE TABLE `system_dict_type`  ("
+        },
+        {
+          "line": 2169,
+          "text": "CREATE TABLE `system_login_log`  ("
+        },
+        {
+          "line": 2200,
+          "text": "CREATE TABLE `system_mail_account`  ("
+        },
+        {
+          "line": 2231,
+          "text": "CREATE TABLE `system_mail_log`  ("
+        },
+        {
+          "line": 2268,
+          "text": "CREATE TABLE `system_mail_template`  ("
+        },
+        {
+          "line": 2300,
+          "text": "CREATE TABLE `system_menu`  ("
+        },
+        {
+          "line": 4394,
+          "text": "CREATE TABLE `system_notice`  ("
+        },
+        {
+          "line": 4422,
+          "text": "CREATE TABLE `system_notify_message`  ("
+        },
+        {
+          "line": 4536,
+          "text": "CREATE TABLE `system_notify_template`  ("
+        },
+        {
+          "line": 4564,
+          "text": "CREATE TABLE `system_oauth2_access_token`  ("
+        },
+        {
+          "line": 4595,
+          "text": "CREATE TABLE `system_oauth2_approve`  ("
+        },
+        {
+          "line": 4623,
+          "text": "CREATE TABLE `system_oauth2_client`  ("
+        },
+        {
+          "line": 4663,
+          "text": "CREATE TABLE `system_oauth2_code`  ("
+        },
+        {
+          "line": 4693,
+          "text": "CREATE TABLE `system_oauth2_refresh_token`  ("
+        },
+        {
+          "line": 4721,
+          "text": "CREATE TABLE `system_operate_log`  ("
+        },
+        {
+          "line": 4757,
+          "text": "CREATE TABLE `system_post`  ("
+        },
+        {
+          "line": 4787,
+          "text": "CREATE TABLE `system_role`  ("
+        },
+        {
+          "line": 4823,
+          "text": "CREATE TABLE `system_role_menu`  ("
+        },
+        {
+          "line": 6431,
+          "text": "CREATE TABLE `system_sms_channel`  ("
+        },
+        {
+          "line": 6461,
+          "text": "CREATE TABLE `system_sms_code`  ("
+        },
+        {
+          "line": 6491,
+          "text": "CREATE TABLE `system_sms_log`  ("
+        },
+        {
+          "line": 6532,
+          "text": "CREATE TABLE `system_sms_template`  ("
+        },
+        {
+          "line": 6577,
+          "text": "CREATE TABLE `system_social_client`  ("
+        },
+        {
+          "line": 6614,
+          "text": "CREATE TABLE `system_social_user`  ("
+        },
+        {
+          "line": 6646,
+          "text": "CREATE TABLE `system_social_user_bind`  ("
+        },
+        {
+          "line": 6672,
+          "text": "CREATE TABLE `system_tenant`  ("
+        },
+        {
+          "line": 6704,
+          "text": "CREATE TABLE `system_tenant_package`  ("
+        },
+        {
+          "line": 6730,
+          "text": "CREATE TABLE `system_user_post`  ("
+        },
+        {
+          "line": 6764,
+          "text": "CREATE TABLE `system_user_role`  ("
+        },
+        {
+          "line": 6811,
+          "text": "CREATE TABLE `system_users`  ("
+        },
+        {
+          "line": 6870,
+          "text": "CREATE TABLE `yudao_demo01_contact`  ("
+        },
+        {
+          "line": 6897,
+          "text": "CREATE TABLE `yudao_demo02_category`  ("
+        },
+        {
+          "line": 6927,
+          "text": "CREATE TABLE `yudao_demo03_course`  ("
+        },
+        {
+          "line": 6968,
+          "text": "CREATE TABLE `yudao_demo03_grade`  ("
+        },
+        {
+          "line": 6995,
+          "text": "CREATE TABLE `yudao_demo03_student`  ("
+        }
+      ],
+      "createTableCount": 48,
+      "aiOrBpmTables": []
+    },
+    {
+      "key": "gantt914",
+      "url": "https://registry.npmjs.org/dhtmlx-gantt/9.1.4",
+      "httpStatus": 200,
+      "bytes": 1601,
+      "sha256": "358358c7841141ecbcf49d942a7eafbea8a481d456c6bd36cf9f08638b283a3f",
+      "lineEvidence": [],
+      "version": "9.1.4",
+      "license": "GPL-2.0"
+    },
+    {
+      "key": "tinyflow126",
+      "url": "https://repo.maven.apache.org/maven2/dev/tinyflow/tinyflow-java/1.2.6/tinyflow-java-1.2.6.pom",
+      "httpStatus": 200,
+      "bytes": 6350,
+      "sha256": "ee7edda7fa663803e2bdda232f1f5aac1ba263521bee8cd179a7672d99deec55",
+      "lineEvidence": [
+        {
+          "line": 8,
+          "text": "<name>tinyflow-java</name>"
+        },
+        {
+          "line": 13,
+          "text": "<url>https://tinyflow.dev</url>"
+        },
+        {
+          "line": 21,
+          "text": "<url>https://github.com/tinyflow-ai/tinyflow-java/issues</url>"
+        },
+        {
+          "line": 23,
+          "text": "<licenses>"
+        },
+        {
+          "line": 24,
+          "text": "<license>"
+        },
+        {
+          "line": 25,
+          "text": "<name>GNU Lesser General Public License v3.0</name>"
+        },
+        {
+          "line": 26,
+          "text": "<url>https://github.com/tinyflow-ai/tinyflow-java/blob/main/LICENSE</url>"
+        },
+        {
+          "line": 31,
+          "text": "<name>Michael Yang</name>"
+        },
+        {
+          "line": 40,
+          "text": "<url>https://github.com/tinyflow-ai/tinyflow-java</url>"
+        },
+        {
+          "line": 167,
+          "text": "<url>https://central.sonatype.com/</url>"
+        }
+      ]
+    }
+  ],
+  "limits": [
+    "Only listed source declarations and source paths were re-read; no dependency resolution, build, SQL import or runtime test.",
+    "License observations do not grant rights or certify a complete distributed product."
+  ],
+  "supplementaryRead": "Same pinned yd-bom re-read with curl and rg: spring.boot.version at line 20; initial extractor used the wrong property spelling."
+}

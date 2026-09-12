@@ -1,0 +1,240 @@
+{
+  "retrievedAt": "2026-09-11T23:53:48.634834+00:00",
+  "operation": "search_knowledge_base",
+  "request": {
+    "query": "",
+    "cursor": "",
+    "limit": 20
+  },
+  "exitCode": 0,
+  "response": {
+    "code": 0,
+    "msg": "success",
+    "data": {
+      "info_list": [
+        {
+          "kb_id": "HOwnwFwc-_zQhDYkzWaSwRr201jnPI3VRddP8BZVl2w=",
+          "kb_name": "超哥知识库",
+          "cover_url": "",
+          "member_count": "7",
+          "content_count": "8",
+          "description": "我超哥的知识库",
+          "creator": "ZJ",
+          "role_type": "普通成员",
+          "base_type": "共享知识库"
+        },
+        {
+          "kb_id": "G9gQ8_QoewyijpgwdWWmNXc3DRkHPrFPqhVlYBzS8E8=",
+          "kb_name": "AI Coding（每日更新 ing）",
+          "cover_url": "",
+          "member_count": "79",
+          "content_count": "653",
+          "description": "聚焦 AI 编程的实战知识库，涵盖 Claude Code、Codex 全攻略、AI 编程工具（Cursor/TRAE/OpenCode/CodeBuddy等）、MCP 与 Skills 生态、AI Coding 方法论（Spec Coding/Vibe Coding）、AI 模型测评、开发实战",
+          "creator": "神经蛙",
+          "role_type": "普通成员",
+          "base_type": "我加入的订阅知识库"
+        },
+        {
+          "kb_id": "zkNpMBlsldSUzjVy341WpV2n17XNTEqZIL6VCUn5WM8=",
+          "kb_name": "Wilson的知识库",
+          "cover_url": "",
+          "member_count": "1",
+          "content_count": "286",
+          "description": "",
+          "creator": "Wilson",
+          "role_type": "创建者",
+          "base_type": "个人知识库"
+        },
+        {
+          "kb_id": "r6lzPxGxzxyth5lBOQsMcdFExktysIJuZSXtkWUmPtU=",
+          "kb_name": "AI Agent Coding知识库",
+          "cover_url": "",
+          "member_count": "60",
+          "content_count": "585",
+          "description": "AI提效、Agent、LLM大模型、插件、skills、Coding等知识库分享，核心收录各类微信公众号好文章",
+          "creator": "AI知识号",
+          "role_type": "普通成员",
+          "base_type": "我加入的订阅知识库"
+        },
+        {
+          "kb_id": "69TCrlW5K3QvsqVLTKTEf7ZW4PlQj7Vyw482o4VrxnQ=",
+          "kb_name": "Ai 编程(AiCoding)",
+          "cover_url": "",
+          "member_count": "46",
+          "content_count": "52",
+          "description": "Ai 编程技巧与资源交流。",
+          "creator": "边缘智算",
+          "role_type": "普通成员",
+          "base_type": "我加入的订阅知识库"
+        },
+        {
+          "kb_id": "KSgamO2aKfi1CFhxdXa7UD3EQYcpSzTT898ndsl9hDI=",
+          "kb_name": "安卓系统性能优化",
+          "cover_url": "",
+          "member_count": "112",
+          "content_count": "26",
+          "description": "包含安卓系统级性能优化思想、策略、方案、实战案例；Linux Kernel调度、内存等机制策略分析",
+          "creator": "赵曈",
+          "role_type": "普通成员",
+          "base_type": "共享知识库"
+        },
+        {
+          "kb_id": "46zgUEDojRps5IgNBUp7G05hvR_fpGFTLGwNwA2n7oo=",
+          "kb_name": "海康威视",
+          "cover_url": "",
+          "member_count": "8",
+          "content_count": "14",
+          "description": "",
+          "creator": "诚信",
+          "role_type": "普通成员",
+          "base_type": "我加入的订阅知识库"
+        },
+        {
+          "kb_id": "4w1rjfMDubcowdTR8qVYMPnzbD7d8XmYq0snJEyOPLk=",
+          "kb_name": "Vibe Coding",
+          "cover_url": "",
+          "member_count": "535",
+          "content_count": "589",
+          "description": "AI 驱动开发的知识库",
+          "creator": "OCC Lab",
+          "role_type": "普通成员",
+          "base_type": "我加入的订阅知识库"
+        },
+        {
+          "kb_id": "HofDtJbdaY7D4qeA3o-BpTOzRYBZSRWr0rMbzazsgC4=",
+          "kb_name": "AI资源集合（DeepSeek/GPT等）",
+          "cover_url": "",
+          "member_count": "7406",
+          "content_count": "384",
+          "description": "本知识库是全面的AI资源集合。包含主流AI模型如DeepSeek、OpenAI相关内容，还有各类AI技术资料、算法原理与应用案例等。适合不同层次人群，为探索AI世界提供丰富且实用的信息资源。",
+          "creator": "pdai",
+          "role_type": "普通成员",
+          "base_type": "共享知识库"
+        },
+        {
+          "kb_id": "pFHdbhRfhPLVzJrRZsOQ37ImDLH_Xt28gkLekH1rhLQ=",
+          "kb_name": "【AI编程军火库】\"项目代码核武器库\"",
+          "cover_url": "",
+          "member_count": "46",
+          "content_count": "12",
+          "description": "\"让GitHub Trending发抖的代码武器库\"\n→ 收录：一切AI编程相关的优质内容/竞赛代码/课程项目/部署教程（如本地化DeepSeek）/原理解析",
+          "creator": "浙大AI Lab",
+          "role_type": "普通成员",
+          "base_type": "共享知识库"
+        },
+        {
+          "kb_id": "tW9xDxDy9-wFk6ni1JAa7W7n2OoAAxRelG4qkgdxsZs=",
+          "kb_name": "AI产品库",
+          "cover_url": "",
+          "member_count": "633",
+          "content_count": "624",
+          "description": "云南IT资讯平台打造的，汇聚云南IT行业优质供应链的知识库。全行业产品报价、参数、供应链联系方式，一问即答，一手掌握！",
+          "creator": "云南IT资讯平台",
+          "role_type": "普通成员",
+          "base_type": "我加入的订阅知识库"
+        },
+        {
+          "kb_id": "-v0uVQmR3R54LtoVzNkzAz2ug-pWSkJgJMP2wmztuFo=",
+          "kb_name": "驾驭AI - Harness",
+          "cover_url": "",
+          "member_count": "283",
+          "content_count": "221",
+          "description": "AI时代需善用工具，收集整理浪潮前夕的有用信息：openclaw、agent、mcp、RAG、qclaw、opencode、cursor、skills、harness、sandbox、SDD。",
+          "creator": "寻叶",
+          "role_type": "普通成员",
+          "base_type": "我加入的订阅知识库"
+        },
+        {
+          "kb_id": "j2sL5YhV1NUUfvIvF0usrt2erGwY32E4WmwTdHM5lck=",
+          "kb_name": "openwebui",
+          "cover_url": "",
+          "member_count": "1",
+          "content_count": "184",
+          "description": "openwebui  的操作智能",
+          "creator": "Wilson",
+          "role_type": "创建者",
+          "base_type": "共享知识库"
+        },
+        {
+          "kb_id": "5PtqyxfKIIO3J4Ai-JS7MylBsUxZgyA18FvmudZz5J4=",
+          "kb_name": "DeepSeek Harness 系统教程",
+          "cover_url": "",
+          "member_count": "123",
+          "content_count": "51",
+          "description": "DeepSeek Harness 框架实战指南：安装部署、四种工作模式、插件体系、模型接入、实战案例与排错。\n对标 Claude Code 的开源 AI 编程 Agent 框架，持续更新。",
+          "creator": "干货补给站",
+          "role_type": "普通成员",
+          "base_type": "我加入的订阅知识库"
+        },
+        {
+          "kb_id": "FNq4Nk1Tg0TrvyZEnc2MDV7v8afna0te9J_Jr7iNRTA=",
+          "kb_name": "Cursor--Vibe Coding",
+          "cover_url": "",
+          "member_count": "102",
+          "content_count": "37",
+          "description": "拥抱代码新范式",
+          "creator": "空间具身智能体时代",
+          "role_type": "普通成员",
+          "base_type": "我加入的订阅知识库"
+        },
+        {
+          "kb_id": "vtcyapVk42UM9DjMMK4F1GZvkrRiM6u3pIEeAvagH1s=",
+          "kb_name": "科技爱好者周刊【Github53K星】",
+          "cover_url": "",
+          "member_count": "91",
+          "content_count": "330",
+          "description": "记录每周值得分享的科技内容\n【点击可看】周五更新\n\n来源 github：ruanyf/weekly",
+          "creator": "aiden",
+          "role_type": "普通成员",
+          "base_type": "共享知识库"
+        },
+        {
+          "kb_id": "EZaJK27OQDN1RKB8iUe3Ed-6DOyiMbP3IWkBH0H2H7U=",
+          "kb_name": "AI提示词-知识库",
+          "cover_url": "",
+          "member_count": "1565",
+          "content_count": "40",
+          "description": "精选高评分，保证质量! 本知识库整合提示词相关书籍和文档，向我提问:怎么设计提示词?1.你是古文学习者，怎么设计提示词？\n2.你是部门经理，怎么设计提示词?\n3.你是软件架构师，怎么设计提示词？\n4.你是产品架构师，怎么设计提示词？\n5.你是测试架构师，怎么设计提示词？",
+          "creator": "孙培涛",
+          "role_type": "普通成员",
+          "base_type": "共享知识库"
+        },
+        {
+          "kb_id": "9qBFdzySysnBv8x-60V2E4sF1eT7AKsvtt1hSndshpI=",
+          "kb_name": "海康威视大华",
+          "cover_url": "",
+          "member_count": "264",
+          "content_count": "395",
+          "description": "海康威视-产品手册、说明书等\n设计、施工、造价；\n验收规范、图集、标准; \n免费资料获取：微信：yanchengan",
+          "creator": "机电工程",
+          "role_type": "普通成员",
+          "base_type": "我加入的订阅知识库"
+        },
+        {
+          "kb_id": "tt7Hn9iH7TNPH-ip_qwndO33thfrfbK5FAo4_BUjUwg=",
+          "kb_name": "智能化软件工程",
+          "cover_url": "",
+          "member_count": "3336",
+          "content_count": "2148",
+          "description": "AI赋能软件开发、AI测试、AI Coding、AI开发模型、代码生成、敏捷开发、敏捷团队、敏捷管理、软件工程3.0、软件工程师、Python开发",
+          "creator": "HuangWZ",
+          "role_type": "普通成员",
+          "base_type": "我加入的订阅知识库"
+        },
+        {
+          "kb_id": "rTA7c5cPSJzEEruONUS2Ku0Afd01qlq2a64D56ZbH8o=",
+          "kb_name": "DeepSeek Harness",
+          "cover_url": "",
+          "member_count": "171",
+          "content_count": "62",
+          "description": "一切皆插件",
+          "creator": "AI知识库",
+          "role_type": "普通成员",
+          "base_type": "我加入的订阅知识库"
+        }
+      ],
+      "is_end": false,
+      "next_cursor": "CgUI6QcYAQoFCOoHGAEKBQjsBxgBCgcI7QcSAjEy"
+    }
+  }
+}

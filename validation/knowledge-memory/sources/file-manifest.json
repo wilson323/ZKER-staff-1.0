@@ -1,0 +1,488 @@
+[
+  {
+    "repo": "ageerle/ruoyi-ai",
+    "commit": "cca30905778357e3aeb42b6adb65ef2384e75e60",
+    "path": "LICENSE",
+    "url": "https://raw.githubusercontent.com/ageerle/ruoyi-ai/cca30905778357e3aeb42b6adb65ef2384e75e60/LICENSE",
+    "file": "validation/knowledge-memory/sources/ageerle_ruoyi-ai--LICENSE",
+    "exit": 0,
+    "sha256": "00fcb99d17bf06a9ce9bd901cdb5cb2cb326fc4937ee13e458071f49cc2de233"
+  },
+  {
+    "repo": "ageerle/ruoyi-ai",
+    "commit": "cca30905778357e3aeb42b6adb65ef2384e75e60",
+    "path": "ruoyi-modules/ruoyi-chat/pom.xml",
+    "url": "https://raw.githubusercontent.com/ageerle/ruoyi-ai/cca30905778357e3aeb42b6adb65ef2384e75e60/ruoyi-modules/ruoyi-chat/pom.xml",
+    "file": "validation/knowledge-memory/sources/ageerle_ruoyi-ai--ruoyi-modules__ruoyi-chat__pom.xml",
+    "exit": 0,
+    "sha256": "68ab188cc135242b1105523e599fcec548573e7184bd7b3a053159e4d924ecfc"
+  },
+  {
+    "repo": "ageerle/ruoyi-ai",
+    "commit": "cca30905778357e3aeb42b6adb65ef2384e75e60",
+    "path": "pom.xml",
+    "url": "https://raw.githubusercontent.com/ageerle/ruoyi-ai/cca30905778357e3aeb42b6adb65ef2384e75e60/pom.xml",
+    "file": "validation/knowledge-memory/sources/ageerle_ruoyi-ai--pom.xml",
+    "exit": 0,
+    "sha256": "22ce4d492abe3faaf4484848300ac22af5a264f77f1a857d8b3e1421ce0bf5ab"
+  },
+  {
+    "repo": "langchain4j/langchain4j",
+    "commit": "0028928eab6d3b0c11d9be13c6a06e9f0abd9512",
+    "path": "LICENSE",
+    "url": "https://raw.githubusercontent.com/langchain4j/langchain4j/0028928eab6d3b0c11d9be13c6a06e9f0abd9512/LICENSE",
+    "file": "validation/knowledge-memory/sources/langchain4j_langchain4j--LICENSE",
+    "exit": 0,
+    "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4"
+  },
+  {
+    "repo": "qdrant/qdrant",
+    "commit": "6ab21cac18ebb6f4ae29102c7f8f5cc11affd5de",
+    "path": "LICENSE",
+    "url": "https://raw.githubusercontent.com/qdrant/qdrant/6ab21cac18ebb6f4ae29102c7f8f5cc11affd5de/LICENSE",
+    "file": "validation/knowledge-memory/sources/qdrant_qdrant--LICENSE",
+    "exit": 0,
+    "sha256": "210b508429e913d9de5301f90508bc2cbf5b2281de5b45e607c04d58f0f3bd8f"
+  },
+  {
+    "repo": "qdrant/qdrant",
+    "commit": "6ab21cac18ebb6f4ae29102c7f8f5cc11affd5de",
+    "path": "README.md",
+    "url": "https://raw.githubusercontent.com/qdrant/qdrant/6ab21cac18ebb6f4ae29102c7f8f5cc11affd5de/README.md",
+    "file": "validation/knowledge-memory/sources/qdrant_qdrant--README.md",
+    "exit": 0,
+    "sha256": "f1455d12252bf40235ad0128d8e98b2cd6d42583e441ac832b01f4daf08df2e4"
+  },
+  {
+    "repo": "qdrant/qdrant",
+    "commit": "6ab21cac18ebb6f4ae29102c7f8f5cc11affd5de",
+    "path": "Cargo.toml",
+    "url": "https://raw.githubusercontent.com/qdrant/qdrant/6ab21cac18ebb6f4ae29102c7f8f5cc11affd5de/Cargo.toml",
+    "file": "validation/knowledge-memory/sources/qdrant_qdrant--Cargo.toml",
+    "exit": 0,
+    "sha256": "400b52abe55c22c7c59c8fb44ff2434b89fdbb06a5c307fcdfed102167d76d50"
+  },
+  {
+    "repo": "pgvector/pgvector",
+    "commit": "efa08fda9ec485d80292d0487a77939c087dedcc",
+    "path": "LICENSE",
+    "url": "https://raw.githubusercontent.com/pgvector/pgvector/efa08fda9ec485d80292d0487a77939c087dedcc/LICENSE",
+    "file": "validation/knowledge-memory/sources/pgvector_pgvector--LICENSE",
+    "exit": 0,
+    "sha256": "6bba9ebeb73e27477463b05e5ef1bf303bccbddb3db9bbc95905d351604d6a87"
+  },
+  {
+    "repo": "pgvector/pgvector",
+    "commit": "efa08fda9ec485d80292d0487a77939c087dedcc",
+    "path": "README.md",
+    "url": "https://raw.githubusercontent.com/pgvector/pgvector/efa08fda9ec485d80292d0487a77939c087dedcc/README.md",
+    "file": "validation/knowledge-memory/sources/pgvector_pgvector--README.md",
+    "exit": 0,
+    "sha256": "54cb3a5f4344308476cb2378469ac77d10fbff415d1b5be66608bb386ce8f527"
+  },
+  {
+    "repo": "pgvector/pgvector",
+    "commit": "efa08fda9ec485d80292d0487a77939c087dedcc",
+    "path": "CHANGELOG.md",
+    "url": "https://raw.githubusercontent.com/pgvector/pgvector/efa08fda9ec485d80292d0487a77939c087dedcc/CHANGELOG.md",
+    "file": "validation/knowledge-memory/sources/pgvector_pgvector--CHANGELOG.md",
+    "exit": 0,
+    "sha256": "245d62d189c6dff20735d13e8feea605ac460373a8158d578a15aa1166019e8a"
+  },
+  {
+    "repo": "docling-project/docling",
+    "commit": "5ea6490ffdc57b2fd7de5cc436f2d0a22f2214d4",
+    "path": "LICENSE",
+    "url": "https://raw.githubusercontent.com/docling-project/docling/5ea6490ffdc57b2fd7de5cc436f2d0a22f2214d4/LICENSE",
+    "file": "validation/knowledge-memory/sources/docling-project_docling--LICENSE",
+    "exit": 0,
+    "sha256": "edb765d1e3e60d0c7a7d5fba5f2bb2c3c29f7465cecb5c22cf1185c884954e4c"
+  },
+  {
+    "repo": "docling-project/docling",
+    "commit": "5ea6490ffdc57b2fd7de5cc436f2d0a22f2214d4",
+    "path": "pyproject.toml",
+    "url": "https://raw.githubusercontent.com/docling-project/docling/5ea6490ffdc57b2fd7de5cc436f2d0a22f2214d4/pyproject.toml",
+    "file": "validation/knowledge-memory/sources/docling-project_docling--pyproject.toml",
+    "exit": 0,
+    "sha256": "41134d271ddc52662608911a6b2059f232ae55cef1ef71df672c27a8155e9c4b"
+  },
+  {
+    "repo": "docling-project/docling",
+    "commit": "5ea6490ffdc57b2fd7de5cc436f2d0a22f2214d4",
+    "path": "README.md",
+    "url": "https://raw.githubusercontent.com/docling-project/docling/5ea6490ffdc57b2fd7de5cc436f2d0a22f2214d4/README.md",
+    "file": "validation/knowledge-memory/sources/docling-project_docling--README.md",
+    "exit": 0,
+    "sha256": "64e3e937b3cebc5f0da738f79a1546c6004eed448ee7b356325b19ebfc2fddf3"
+  },
+  {
+    "repo": "apache/tika",
+    "commit": "dccc702fca054c47f43fa3c7ce73cc328ace1ebf",
+    "path": "LICENSE.txt",
+    "url": "https://raw.githubusercontent.com/apache/tika/dccc702fca054c47f43fa3c7ce73cc328ace1ebf/LICENSE.txt",
+    "file": "validation/knowledge-memory/sources/apache_tika--LICENSE.txt",
+    "exit": 0,
+    "sha256": "ad5f4c4d0d4a04ac264ee55539191e1d36eb5d43ff63bbfc2cf97d541dc7ce8c"
+  },
+  {
+    "repo": "apache/tika",
+    "commit": "dccc702fca054c47f43fa3c7ce73cc328ace1ebf",
+    "path": "README.md",
+    "url": "https://raw.githubusercontent.com/apache/tika/dccc702fca054c47f43fa3c7ce73cc328ace1ebf/README.md",
+    "file": "validation/knowledge-memory/sources/apache_tika--README.md",
+    "exit": 0,
+    "sha256": "4d960b82f0f6521dd1a98d3bcb676d8aa596ddce841e520253738617538db4f3"
+  },
+  {
+    "repo": "apache/tika",
+    "commit": "dccc702fca054c47f43fa3c7ce73cc328ace1ebf",
+    "path": "pom.xml",
+    "url": "https://raw.githubusercontent.com/apache/tika/dccc702fca054c47f43fa3c7ce73cc328ace1ebf/pom.xml",
+    "file": "validation/knowledge-memory/sources/apache_tika--pom.xml",
+    "exit": 0,
+    "sha256": "b5ecc2145fcac3c51737bc24590737b48905a5a308b079eb7c059522b60904fa"
+  },
+  {
+    "repo": "infiniflow/ragflow",
+    "commit": "1f5d33333a3ff67fda2aa302c843699e994453e3",
+    "path": "LICENSE",
+    "url": "https://raw.githubusercontent.com/infiniflow/ragflow/1f5d33333a3ff67fda2aa302c843699e994453e3/LICENSE",
+    "file": "validation/knowledge-memory/sources/infiniflow_ragflow--LICENSE",
+    "exit": 0,
+    "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4"
+  },
+  {
+    "repo": "infiniflow/ragflow",
+    "commit": "1f5d33333a3ff67fda2aa302c843699e994453e3",
+    "path": "README.md",
+    "url": "https://raw.githubusercontent.com/infiniflow/ragflow/1f5d33333a3ff67fda2aa302c843699e994453e3/README.md",
+    "file": "validation/knowledge-memory/sources/infiniflow_ragflow--README.md",
+    "exit": 0,
+    "sha256": "e321e3b65b92b34121e96d147fe9145e1e428ec1453e3cbbf4426fab09d701ad"
+  },
+  {
+    "repo": "infiniflow/ragflow",
+    "commit": "1f5d33333a3ff67fda2aa302c843699e994453e3",
+    "path": "docker/docker-compose-base.yml",
+    "url": "https://raw.githubusercontent.com/infiniflow/ragflow/1f5d33333a3ff67fda2aa302c843699e994453e3/docker/docker-compose-base.yml",
+    "file": "validation/knowledge-memory/sources/infiniflow_ragflow--docker__docker-compose-base.yml",
+    "exit": 0,
+    "sha256": "fc5ee822d3073d8837444a0b69864e476f3f9659fad424d63bb15b9ad5869414"
+  },
+  {
+    "repo": "infiniflow/ragflow",
+    "commit": "1f5d33333a3ff67fda2aa302c843699e994453e3",
+    "path": "pyproject.toml",
+    "url": "https://raw.githubusercontent.com/infiniflow/ragflow/1f5d33333a3ff67fda2aa302c843699e994453e3/pyproject.toml",
+    "file": "validation/knowledge-memory/sources/infiniflow_ragflow--pyproject.toml",
+    "exit": 0,
+    "sha256": "7354a392255d1143719e8c0d8ccaa9900e7c09564f0284515784c6540ffbaa27"
+  },
+  {
+    "repo": "langgenius/dify",
+    "commit": "085a79c748be47111d2e1c1b65b3f82200998d5c",
+    "path": "LICENSE",
+    "url": "https://raw.githubusercontent.com/langgenius/dify/085a79c748be47111d2e1c1b65b3f82200998d5c/LICENSE",
+    "file": "validation/knowledge-memory/sources/langgenius_dify--LICENSE",
+    "exit": 0,
+    "sha256": "232cf91474932d5110ed304e53b6b742a58463857c571fae803fdf2ac36d7bb3"
+  },
+  {
+    "repo": "labring/FastGPT",
+    "commit": "a9025a40802384fc274eb2704b30541c9d64c034",
+    "path": "LICENSE",
+    "url": "https://raw.githubusercontent.com/labring/FastGPT/a9025a40802384fc274eb2704b30541c9d64c034/LICENSE",
+    "file": "validation/knowledge-memory/sources/labring_FastGPT--LICENSE",
+    "exit": 0,
+    "sha256": "84569a7a2a79f9f97093019ae12d914b975db773ed17443fb726a0b6f585bc24"
+  },
+  {
+    "repo": "milvus-io/milvus",
+    "commit": "82bcce8867c92e7d55f669e034a00dcb0f37d2bc",
+    "path": "LICENSE",
+    "url": "https://raw.githubusercontent.com/milvus-io/milvus/82bcce8867c92e7d55f669e034a00dcb0f37d2bc/LICENSE",
+    "file": "validation/knowledge-memory/sources/milvus-io_milvus--LICENSE",
+    "exit": 0,
+    "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4"
+  },
+  {
+    "repo": "milvus-io/milvus",
+    "commit": "82bcce8867c92e7d55f669e034a00dcb0f37d2bc",
+    "path": "README.md",
+    "url": "https://raw.githubusercontent.com/milvus-io/milvus/82bcce8867c92e7d55f669e034a00dcb0f37d2bc/README.md",
+    "file": "validation/knowledge-memory/sources/milvus-io_milvus--README.md",
+    "exit": 0,
+    "sha256": "8fedcdc9023fcd061a54405bf0d83afb4516c7ec053b2efd22476473ce10153f"
+  },
+  {
+    "repo": "ageerle/ruoyi-ai",
+    "commit": "cca30905778357e3aeb42b6adb65ef2384e75e60",
+    "path": "TREE",
+    "url": "https://api.github.com/repos/ageerle/ruoyi-ai/git/trees/cca30905778357e3aeb42b6adb65ef2384e75e60?recursive=1",
+    "file": "validation/knowledge-memory/sources/ageerle_ruoyi-ai--TREE",
+    "exit": 0,
+    "sha256": "cc569191571d0fd10183a703eb5688abbc7b5816ca7c2e89f3865bf152779a7d"
+  },
+  {
+    "repo": "langchain4j/langchain4j",
+    "commit": "0028928eab6d3b0c11d9be13c6a06e9f0abd9512",
+    "path": "TREE",
+    "url": "https://api.github.com/repos/langchain4j/langchain4j/git/trees/0028928eab6d3b0c11d9be13c6a06e9f0abd9512?recursive=1",
+    "file": "validation/knowledge-memory/sources/langchain4j_langchain4j--TREE",
+    "exit": 0,
+    "sha256": "b37bfc52de521deaf97f8fef4b4eb621ee510ad41165da664f309b561eadb367"
+  },
+  {
+    "repo": "ageerle/ruoyi-ai",
+    "commit": "cca30905778357e3aeb42b6adb65ef2384e75e60",
+    "path": "ruoyi-admin/src/main/resources/application-dev.yml",
+    "url": "https://raw.githubusercontent.com/ageerle/ruoyi-ai/cca30905778357e3aeb42b6adb65ef2384e75e60/ruoyi-admin/src/main/resources/application-dev.yml",
+    "file": "validation/knowledge-memory/sources/ageerle_ruoyi-ai--ruoyi-admin__src__main__resources__application-dev.yml",
+    "exit": 0,
+    "sha256": "1cb0ef492929466ef288b5e29cf655a880cc4c64ee5de7c681cd3d242cd41f41"
+  },
+  {
+    "repo": "ageerle/ruoyi-ai",
+    "commit": "cca30905778357e3aeb42b6adb65ef2384e75e60",
+    "path": "ruoyi-extend/ruoyi-snailjob-server/src/main/resources/application-dev.yml",
+    "url": "https://raw.githubusercontent.com/ageerle/ruoyi-ai/cca30905778357e3aeb42b6adb65ef2384e75e60/ruoyi-extend/ruoyi-snailjob-server/src/main/resources/application-dev.yml",
+    "file": "validation/knowledge-memory/sources/ageerle_ruoyi-ai--ruoyi-extend__ruoyi-snailjob-server__src__main__resources__application-dev.yml",
+    "exit": 0,
+    "sha256": "ff900a07c16dead2076082ab64474f5fb54c0515e68f9a48dc3a3b0a0eba0ec3"
+  },
+  {
+    "repo": "ageerle/ruoyi-ai",
+    "commit": "cca30905778357e3aeb42b6adb65ef2384e75e60",
+    "path": "ruoyi-modules/ruoyi-chat/src/main/java/org/ruoyi/config/VectorStoreProperties.java",
+    "url": "https://raw.githubusercontent.com/ageerle/ruoyi-ai/cca30905778357e3aeb42b6adb65ef2384e75e60/ruoyi-modules/ruoyi-chat/src/main/java/org/ruoyi/config/VectorStoreProperties.java",
+    "file": "validation/knowledge-memory/sources/ageerle_ruoyi-ai--ruoyi-modules__ruoyi-chat__src__main__java__org__ruoyi__config__VectorStoreProperties.java",
+    "exit": 0,
+    "sha256": "92604f9044ac8c23353cc7098a6d1e2aa9e4aa9104f80fff9f7be6c307a5e402"
+  },
+  {
+    "repo": "ageerle/ruoyi-ai",
+    "commit": "cca30905778357e3aeb42b6adb65ef2384e75e60",
+    "path": "ruoyi-modules/ruoyi-chat/src/main/java/org/ruoyi/domain/bo/vector/QueryVectorBo.java",
+    "url": "https://raw.githubusercontent.com/ageerle/ruoyi-ai/cca30905778357e3aeb42b6adb65ef2384e75e60/ruoyi-modules/ruoyi-chat/src/main/java/org/ruoyi/domain/bo/vector/QueryVectorBo.java",
+    "file": "validation/knowledge-memory/sources/ageerle_ruoyi-ai--ruoyi-modules__ruoyi-chat__src__main__java__org__ruoyi__domain__bo__vector__QueryVectorBo.java",
+    "exit": 0,
+    "sha256": "8042f17d91dc6f205103275db477f3ea882e52a557c2f9a13a46810ac3473ae9"
+  },
+  {
+    "repo": "ageerle/ruoyi-ai",
+    "commit": "cca30905778357e3aeb42b6adb65ef2384e75e60",
+    "path": "ruoyi-modules/ruoyi-chat/src/main/java/org/ruoyi/domain/bo/vector/StoreEmbeddingBo.java",
+    "url": "https://raw.githubusercontent.com/ageerle/ruoyi-ai/cca30905778357e3aeb42b6adb65ef2384e75e60/ruoyi-modules/ruoyi-chat/src/main/java/org/ruoyi/domain/bo/vector/StoreEmbeddingBo.java",
+    "file": "validation/knowledge-memory/sources/ageerle_ruoyi-ai--ruoyi-modules__ruoyi-chat__src__main__java__org__ruoyi__domain__bo__vector__StoreEmbeddingBo.java",
+    "exit": 0,
+    "sha256": "00a7eab5cb7e7391b785071cf1682136119d39e9e1c940ad087898f582add8cd"
+  },
+  {
+    "repo": "ageerle/ruoyi-ai",
+    "commit": "cca30905778357e3aeb42b6adb65ef2384e75e60",
+    "path": "ruoyi-modules/ruoyi-chat/src/main/java/org/ruoyi/domain/entity/knowledge/KnowledgeFragment.java",
+    "url": "https://raw.githubusercontent.com/ageerle/ruoyi-ai/cca30905778357e3aeb42b6adb65ef2384e75e60/ruoyi-modules/ruoyi-chat/src/main/java/org/ruoyi/domain/entity/knowledge/KnowledgeFragment.java",
+    "file": "validation/knowledge-memory/sources/ageerle_ruoyi-ai--ruoyi-modules__ruoyi-chat__src__main__java__org__ruoyi__domain__entity__knowledge__KnowledgeFragment.java",
+    "exit": 0,
+    "sha256": "7f7b3d6707e5555704b6a28b642cce066b8660f74d64e0f49d2887f0c93d20cf"
+  },
+  {
+    "repo": "ageerle/ruoyi-ai",
+    "commit": "cca30905778357e3aeb42b6adb65ef2384e75e60",
+    "path": "ruoyi-modules/ruoyi-chat/src/main/java/org/ruoyi/domain/entity/knowledge/KnowledgeInfo.java",
+    "url": "https://raw.githubusercontent.com/ageerle/ruoyi-ai/cca30905778357e3aeb42b6adb65ef2384e75e60/ruoyi-modules/ruoyi-chat/src/main/java/org/ruoyi/domain/entity/knowledge/KnowledgeInfo.java",
+    "file": "validation/knowledge-memory/sources/ageerle_ruoyi-ai--ruoyi-modules__ruoyi-chat__src__main__java__org__ruoyi__domain__entity__knowledge__KnowledgeInfo.java",
+    "exit": 0,
+    "sha256": "79afdaaeb4078f68d54623617a240286a859c4f25fd588aa81113745bf832809"
+  },
+  {
+    "repo": "ageerle/ruoyi-ai",
+    "commit": "cca30905778357e3aeb42b6adb65ef2384e75e60",
+    "path": "ruoyi-modules/ruoyi-chat/src/main/java/org/ruoyi/factory/VectorStoreStrategyFactory.java",
+    "url": "https://raw.githubusercontent.com/ageerle/ruoyi-ai/cca30905778357e3aeb42b6adb65ef2384e75e60/ruoyi-modules/ruoyi-chat/src/main/java/org/ruoyi/factory/VectorStoreStrategyFactory.java",
+    "file": "validation/knowledge-memory/sources/ageerle_ruoyi-ai--ruoyi-modules__ruoyi-chat__src__main__java__org__ruoyi__factory__VectorStoreStrategyFactory.java",
+    "exit": 0,
+    "sha256": "aaca5d651569679e8d12e91dc13cceb51196c1c931fe12a61a443e675681ec0d"
+  },
+  {
+    "repo": "ageerle/ruoyi-ai",
+    "commit": "cca30905778357e3aeb42b6adb65ef2384e75e60",
+    "path": "ruoyi-modules/ruoyi-chat/src/main/java/org/ruoyi/service/chat/impl/memory/PersistentChatMemoryStore.java",
+    "url": "https://raw.githubusercontent.com/ageerle/ruoyi-ai/cca30905778357e3aeb42b6adb65ef2384e75e60/ruoyi-modules/ruoyi-chat/src/main/java/org/ruoyi/service/chat/impl/memory/PersistentChatMemoryStore.java",
+    "file": "validation/knowledge-memory/sources/ageerle_ruoyi-ai--ruoyi-modules__ruoyi-chat__src__main__java__org__ruoyi__service__chat__impl__memory__PersistentChatMemoryStore.java",
+    "exit": 0,
+    "sha256": "7f7c6eb131284583d72f7867cc55408c9d16598e15ee42bc84dcec48f8328f16"
+  },
+  {
+    "repo": "ageerle/ruoyi-ai",
+    "commit": "cca30905778357e3aeb42b6adb65ef2384e75e60",
+    "path": "ruoyi-modules/ruoyi-chat/src/main/java/org/ruoyi/service/knowledge/impl/KnowledgeAttachServiceImpl.java",
+    "url": "https://raw.githubusercontent.com/ageerle/ruoyi-ai/cca30905778357e3aeb42b6adb65ef2384e75e60/ruoyi-modules/ruoyi-chat/src/main/java/org/ruoyi/service/knowledge/impl/KnowledgeAttachServiceImpl.java",
+    "file": "validation/knowledge-memory/sources/ageerle_ruoyi-ai--ruoyi-modules__ruoyi-chat__src__main__java__org__ruoyi__service__knowledge__impl__KnowledgeAttachServiceImpl.java",
+    "exit": 0,
+    "sha256": "8863fb9a1f0937f0e8fb5c348e5e1bad3e3794376edfbf979bdb4b25a5692db7"
+  },
+  {
+    "repo": "ageerle/ruoyi-ai",
+    "commit": "cca30905778357e3aeb42b6adb65ef2384e75e60",
+    "path": "ruoyi-modules/ruoyi-chat/src/main/java/org/ruoyi/service/knowledge/impl/KnowledgeFragmentServiceImpl.java",
+    "url": "https://raw.githubusercontent.com/ageerle/ruoyi-ai/cca30905778357e3aeb42b6adb65ef2384e75e60/ruoyi-modules/ruoyi-chat/src/main/java/org/ruoyi/service/knowledge/impl/KnowledgeFragmentServiceImpl.java",
+    "file": "validation/knowledge-memory/sources/ageerle_ruoyi-ai--ruoyi-modules__ruoyi-chat__src__main__java__org__ruoyi__service__knowledge__impl__KnowledgeFragmentServiceImpl.java",
+    "exit": 0,
+    "sha256": "b19f0cd4ef015424fda87ebd781800e435628ca491a346eec62a3dd8954bb795"
+  },
+  {
+    "repo": "ageerle/ruoyi-ai",
+    "commit": "cca30905778357e3aeb42b6adb65ef2384e75e60",
+    "path": "ruoyi-modules/ruoyi-chat/src/main/java/org/ruoyi/service/knowledge/impl/loader/PdfFileLoader.java",
+    "url": "https://raw.githubusercontent.com/ageerle/ruoyi-ai/cca30905778357e3aeb42b6adb65ef2384e75e60/ruoyi-modules/ruoyi-chat/src/main/java/org/ruoyi/service/knowledge/impl/loader/PdfFileLoader.java",
+    "file": "validation/knowledge-memory/sources/ageerle_ruoyi-ai--ruoyi-modules__ruoyi-chat__src__main__java__org__ruoyi__service__knowledge__impl__loader__PdfFileLoader.java",
+    "exit": 0,
+    "sha256": "fba699d9d634729cfe54f54670248c41b7c1542d6b4acf330b25fafd91f22ae4"
+  },
+  {
+    "repo": "ageerle/ruoyi-ai",
+    "commit": "cca30905778357e3aeb42b6adb65ef2384e75e60",
+    "path": "ruoyi-modules/ruoyi-chat/src/main/java/org/ruoyi/service/knowledge/impl/loader/WordLoader.java",
+    "url": "https://raw.githubusercontent.com/ageerle/ruoyi-ai/cca30905778357e3aeb42b6adb65ef2384e75e60/ruoyi-modules/ruoyi-chat/src/main/java/org/ruoyi/service/knowledge/impl/loader/WordLoader.java",
+    "file": "validation/knowledge-memory/sources/ageerle_ruoyi-ai--ruoyi-modules__ruoyi-chat__src__main__java__org__ruoyi__service__knowledge__impl__loader__WordLoader.java",
+    "exit": 0,
+    "sha256": "39b05534d5dd418a5b2d89297a25d48e2caf4158ed3e300a2d92ab7518d11055"
+  },
+  {
+    "repo": "ageerle/ruoyi-ai",
+    "commit": "cca30905778357e3aeb42b6adb65ef2384e75e60",
+    "path": "ruoyi-modules/ruoyi-chat/src/main/java/org/ruoyi/service/retrieval/impl/KnowledgeRetrievalServiceImpl.java",
+    "url": "https://raw.githubusercontent.com/ageerle/ruoyi-ai/cca30905778357e3aeb42b6adb65ef2384e75e60/ruoyi-modules/ruoyi-chat/src/main/java/org/ruoyi/service/retrieval/impl/KnowledgeRetrievalServiceImpl.java",
+    "file": "validation/knowledge-memory/sources/ageerle_ruoyi-ai--ruoyi-modules__ruoyi-chat__src__main__java__org__ruoyi__service__retrieval__impl__KnowledgeRetrievalServiceImpl.java",
+    "exit": 0,
+    "sha256": "504f0c25896c721d0d95ce4d46cef808f56eb00eaca70500bd3220ffeb095bd5"
+  },
+  {
+    "repo": "ageerle/ruoyi-ai",
+    "commit": "cca30905778357e3aeb42b6adb65ef2384e75e60",
+    "path": "ruoyi-modules/ruoyi-chat/src/main/java/org/ruoyi/service/vector/impl/AbstractVectorStoreStrategy.java",
+    "url": "https://raw.githubusercontent.com/ageerle/ruoyi-ai/cca30905778357e3aeb42b6adb65ef2384e75e60/ruoyi-modules/ruoyi-chat/src/main/java/org/ruoyi/service/vector/impl/AbstractVectorStoreStrategy.java",
+    "file": "validation/knowledge-memory/sources/ageerle_ruoyi-ai--ruoyi-modules__ruoyi-chat__src__main__java__org__ruoyi__service__vector__impl__AbstractVectorStoreStrategy.java",
+    "exit": 0,
+    "sha256": "0719ac258e2c591e0f5e1fbecbd57f73914928bed7bbad574fda3cd7f3eee67c"
+  },
+  {
+    "repo": "ageerle/ruoyi-ai",
+    "commit": "cca30905778357e3aeb42b6adb65ef2384e75e60",
+    "path": "ruoyi-modules/ruoyi-chat/src/main/java/org/ruoyi/service/vector/impl/QdrantVectorStoreStrategy.java",
+    "url": "https://raw.githubusercontent.com/ageerle/ruoyi-ai/cca30905778357e3aeb42b6adb65ef2384e75e60/ruoyi-modules/ruoyi-chat/src/main/java/org/ruoyi/service/vector/impl/QdrantVectorStoreStrategy.java",
+    "file": "validation/knowledge-memory/sources/ageerle_ruoyi-ai--ruoyi-modules__ruoyi-chat__src__main__java__org__ruoyi__service__vector__impl__QdrantVectorStoreStrategy.java",
+    "exit": 0,
+    "sha256": "0426860cd515bd3a689441d9b216853ef251e812c107aa5986a8e1f00adfe543"
+  },
+  {
+    "repo": "ageerle/ruoyi-ai",
+    "commit": "cca30905778357e3aeb42b6adb65ef2384e75e60",
+    "path": "ruoyi-modules/ruoyi-chat/src/main/java/org/ruoyi/service/vector/impl/VectorStoreServiceImpl.java",
+    "url": "https://raw.githubusercontent.com/ageerle/ruoyi-ai/cca30905778357e3aeb42b6adb65ef2384e75e60/ruoyi-modules/ruoyi-chat/src/main/java/org/ruoyi/service/vector/impl/VectorStoreServiceImpl.java",
+    "file": "validation/knowledge-memory/sources/ageerle_ruoyi-ai--ruoyi-modules__ruoyi-chat__src__main__java__org__ruoyi__service__vector__impl__VectorStoreServiceImpl.java",
+    "exit": 0,
+    "sha256": "2bf686905614a151719fc0cd403c3fcac3555dc8de34087090b424c588551f79"
+  },
+  {
+    "repo": "ageerle/ruoyi-ai",
+    "commit": "cca30905778357e3aeb42b6adb65ef2384e75e60",
+    "path": "ruoyi-modules/ruoyi-chat/src/test/java/org/ruoyi/service/retrieval/impl/KnowledgeRetrievalServiceRegressionTest.java",
+    "url": "https://raw.githubusercontent.com/ageerle/ruoyi-ai/cca30905778357e3aeb42b6adb65ef2384e75e60/ruoyi-modules/ruoyi-chat/src/test/java/org/ruoyi/service/retrieval/impl/KnowledgeRetrievalServiceRegressionTest.java",
+    "file": "validation/knowledge-memory/sources/ageerle_ruoyi-ai--ruoyi-modules__ruoyi-chat__src__test__java__org__ruoyi__service__retrieval__impl__KnowledgeRetrievalServiceRegressionTest.java",
+    "exit": 0,
+    "sha256": "3a48c464ce239779f2122dced1da6d3d626691f9f13db466eeae7691e04f4dd7"
+  },
+  {
+    "repo": "ageerle/ruoyi-ai",
+    "commit": "cca30905778357e3aeb42b6adb65ef2384e75e60",
+    "path": "ruoyi-modules/ruoyi-chat/src/test/java/org/ruoyi/service/vector/impl/QdrantVectorStoreStrategyTest.java",
+    "url": "https://raw.githubusercontent.com/ageerle/ruoyi-ai/cca30905778357e3aeb42b6adb65ef2384e75e60/ruoyi-modules/ruoyi-chat/src/test/java/org/ruoyi/service/vector/impl/QdrantVectorStoreStrategyTest.java",
+    "file": "validation/knowledge-memory/sources/ageerle_ruoyi-ai--ruoyi-modules__ruoyi-chat__src__test__java__org__ruoyi__service__vector__impl__QdrantVectorStoreStrategyTest.java",
+    "exit": 0,
+    "sha256": "96012e58e1f54bb731c23acffcea016116d5347ad14dc2e0ec7e73249d62c986"
+  },
+  {
+    "repo": "ageerle/ruoyi-ai",
+    "commit": "cca30905778357e3aeb42b6adb65ef2384e75e60",
+    "path": "ruoyi-modules/ruoyi-chat/src/test/java/org/ruoyi/service/vector/impl/ThreeVectorStoresDockerIT.java",
+    "url": "https://raw.githubusercontent.com/ageerle/ruoyi-ai/cca30905778357e3aeb42b6adb65ef2384e75e60/ruoyi-modules/ruoyi-chat/src/test/java/org/ruoyi/service/vector/impl/ThreeVectorStoresDockerIT.java",
+    "file": "validation/knowledge-memory/sources/ageerle_ruoyi-ai--ruoyi-modules__ruoyi-chat__src__test__java__org__ruoyi__service__vector__impl__ThreeVectorStoresDockerIT.java",
+    "exit": 0,
+    "sha256": "80f86f3d31910e5caeacff7ca6c69a0a0c2e4af1daa4cdffa58bfb49cf41d7d6"
+  },
+  {
+    "repo": "ageerle/ruoyi-ai",
+    "commit": "cca30905778357e3aeb42b6adb65ef2384e75e60",
+    "path": "docs/docker/qdrant/docker-compose.yml",
+    "url": "https://raw.githubusercontent.com/ageerle/ruoyi-ai/cca30905778357e3aeb42b6adb65ef2384e75e60/docs/docker/qdrant/docker-compose.yml",
+    "file": "validation/knowledge-memory/sources/ageerle_ruoyi-ai--docs__docker__qdrant__docker-compose.yml",
+    "exit": 0,
+    "sha256": "600ee28bca3f285310adde1b0aae937d8b94fa94d5d9e8e712e307b1715249b7"
+  },
+  {
+    "repo": "ageerle/ruoyi-ai",
+    "commit": "cca30905778357e3aeb42b6adb65ef2384e75e60",
+    "path": "docs/docker/milvus/docker-compose.yml",
+    "url": "https://raw.githubusercontent.com/ageerle/ruoyi-ai/cca30905778357e3aeb42b6adb65ef2384e75e60/docs/docker/milvus/docker-compose.yml",
+    "file": "validation/knowledge-memory/sources/ageerle_ruoyi-ai--docs__docker__milvus__docker-compose.yml",
+    "exit": 0,
+    "sha256": "7288473e5bc9f87ffbf0430ea26d523ee4e1d51e293c83a9621d80e783223422"
+  },
+  {
+    "repo": "langchain4j/langchain4j",
+    "commit": "80b747681106494d57d767cb66ef2c4999d20cb1",
+    "path": "langchain4j-document-parser-apache-tika/pom.xml",
+    "url": "https://raw.githubusercontent.com/langchain4j/langchain4j/80b747681106494d57d767cb66ef2c4999d20cb1/langchain4j-document-parser-apache-tika/pom.xml",
+    "file": "validation/knowledge-memory/sources/langchain4j_langchain4j--langchain4j-document-parser-apache-tika__pom.xml",
+    "exit": 56,
+    "error": "curl: (56) The requested URL returned error: 404\n"
+  },
+  {
+    "repo": "langchain4j/langchain4j",
+    "commit": "80b747681106494d57d767cb66ef2c4999d20cb1",
+    "path": "langchain4j-qdrant/pom.xml",
+    "url": "https://raw.githubusercontent.com/langchain4j/langchain4j/80b747681106494d57d767cb66ef2c4999d20cb1/langchain4j-qdrant/pom.xml",
+    "file": "validation/knowledge-memory/sources/langchain4j_langchain4j--langchain4j-qdrant__pom.xml",
+    "exit": 0,
+    "sha256": "fe84f1c3f3316c4f8ba0135689042073d4017220f134411b480b23fadb3fc577"
+  },
+  {
+    "repo": "langchain4j/langchain4j",
+    "commit": "80b747681106494d57d767cb66ef2c4999d20cb1",
+    "path": "langchain4j-qdrant/src/main/java/dev/langchain4j/store/embedding/qdrant/QdrantEmbeddingStore.java",
+    "url": "https://raw.githubusercontent.com/langchain4j/langchain4j/80b747681106494d57d767cb66ef2c4999d20cb1/langchain4j-qdrant/src/main/java/dev/langchain4j/store/embedding/qdrant/QdrantEmbeddingStore.java",
+    "file": "validation/knowledge-memory/sources/langchain4j_langchain4j--langchain4j-qdrant__src__main__java__dev__langchain4j__store__embedding__qdrant__QdrantEmbeddingStore.java",
+    "exit": 0,
+    "sha256": "f82be8a03edbe6f9ec8dd08008e4a8e8fe52f6f06e0d18259f51311f675cb7dc"
+  },
+  {
+    "repo": "langchain4j/langchain4j",
+    "commit": "80b747681106494d57d767cb66ef2c4999d20cb1",
+    "path": "langchain4j-qdrant/src/main/java/dev/langchain4j/store/embedding/qdrant/QdrantFilterMapper.java",
+    "url": "https://raw.githubusercontent.com/langchain4j/langchain4j/80b747681106494d57d767cb66ef2c4999d20cb1/langchain4j-qdrant/src/main/java/dev/langchain4j/store/embedding/qdrant/QdrantFilterMapper.java",
+    "file": "validation/knowledge-memory/sources/langchain4j_langchain4j--langchain4j-qdrant__src__main__java__dev__langchain4j__store__embedding__qdrant__QdrantFilterMapper.java",
+    "exit": 56,
+    "error": "curl: (56) The requested URL returned error: 404\n"
+  },
+  {
+    "repo": "langchain4j/langchain4j",
+    "commit": "80b747681106494d57d767cb66ef2c4999d20cb1",
+    "path": "document-parsers/langchain4j-document-parser-apache-tika/pom.xml",
+    "url": "https://raw.githubusercontent.com/langchain4j/langchain4j/80b747681106494d57d767cb66ef2c4999d20cb1/document-parsers/langchain4j-document-parser-apache-tika/pom.xml",
+    "file": "validation/knowledge-memory/sources/langchain4j_langchain4j--document-parsers__langchain4j-document-parser-apache-tika__pom.xml",
+    "exit": 0,
+    "sha256": "21f97d66d873da650f711ca92e54fd69e54db28c5bf66154e54030a859105e52"
+  },
+  {
+    "repo": "langchain4j/langchain4j",
+    "commit": "80b747681106494d57d767cb66ef2c4999d20cb1",
+    "path": "langchain4j-qdrant/src/main/java/dev/langchain4j/store/embedding/qdrant/QdrantFilterConverter.java",
+    "url": "https://raw.githubusercontent.com/langchain4j/langchain4j/80b747681106494d57d767cb66ef2c4999d20cb1/langchain4j-qdrant/src/main/java/dev/langchain4j/store/embedding/qdrant/QdrantFilterConverter.java",
+    "file": "validation/knowledge-memory/sources/langchain4j_langchain4j--langchain4j-qdrant__src__main__java__dev__langchain4j__store__embedding__qdrant__QdrantFilterConverter.java",
+    "exit": 0,
+    "sha256": "f477706f7ecde438d5149da62d96ce8ddbf3a43a8516dc50efca442079e5eb29"
+  }
+]

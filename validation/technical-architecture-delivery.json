@@ -1,0 +1,24 @@
+{
+  "schemaVersion": 1,
+  "ok": true,
+  "command": "deliver",
+  "type": "architecture",
+  "input": "/Users/mac/Documents/OA数字员工协作平台/docs/设计包/44-技术架构图.architecture.json",
+  "output": "/Users/mac/Documents/OA数字员工协作平台/docs/设计包/44-技术架构交互图.html",
+  "specification": {
+    "sha256": "51a667b959b2ccae7b9893017fb909e7e8d022df7963d1c77c7c1505eb4a64d2",
+    "bytes": 4703
+  },
+  "artifact": {
+    "sha256": "2d306f81e493018a85b1fb5525686a422595dc4f4181f177535040ab83bc1dc7",
+    "bytes": 712424
+  },
+  "validation": {
+    "checksPassed": 9,
+    "checkCount": 9,
+    "compositionProfile": "showcase",
+    "compositionStatus": "pass",
+    "errors": 0,
+    "warnings": 0
+  }
+}

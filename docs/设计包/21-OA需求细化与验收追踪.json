@@ -1,0 +1,693 @@
+{
+  "revision": "v2.5",
+  "status": "REFINEMENTS_OF_EXISTING_153_REQUIREMENTS",
+  "originalRequirementCount": 153,
+  "refinementCount": 28,
+  "refinements": [
+    {
+      "id": "OA-01",
+      "title": "同模板同日多次发起",
+      "priority": "P0",
+      "requirementIds": [
+        "SD-06",
+        "WD-01"
+      ],
+      "roleProfiles": [
+        "initiator"
+      ],
+      "pageGroups": [
+        "P01",
+        "P17"
+      ],
+      "given": "当前主体、实例及任务引用合法，具备本场景说明的状态与条件",
+      "when": "同模板同日多次发起",
+      "then": "每个明确的新申请都生成不同实例ID和展示单号",
+      "negative": "相同幂等键重试不得重复建单",
+      "prototypeScope": "LOCAL_REPRESENTATIVE_SCENARIO",
+      "implementationStatus": "NOT_VERIFIED_BY_THIS_DELIVERY"
+    },
+    {
+      "id": "OA-02",
+      "title": "多流程统一待办",
+      "priority": "P0",
+      "requirementIds": [
+        "WD-03",
+        "WD-04"
+      ],
+      "roleProfiles": [
+        "main",
+        "member",
+        "writer",
+        "hr",
+        "identity"
+      ],
+      "pageGroups": [
+        "P01"
+      ],
+      "given": "当前主体、实例及任务引用合法，具备本场景说明的状态与条件",
+      "when": "多流程统一待办",
+      "then": "本人跨流程的当前待办都按任务分别列出",
+      "negative": "不得按模板或人员只保留一行",
+      "prototypeScope": "LOCAL_REPRESENTATIVE_SCENARIO",
+      "implementationStatus": "NOT_VERIFIED_BY_THIS_DELIVERY"
+    },
+    {
+      "id": "OA-03",
+      "title": "同人同实例多个节点",
+      "priority": "P0",
+      "requirementIds": [
+        "HR-01",
+        "HC-02"
+      ],
+      "roleProfiles": [
+        "main",
+        "writer",
+        "responsible"
+      ],
+      "pageGroups": [
+        "P01",
+        "P02",
+        "P03"
+      ],
+      "given": "当前主体、实例及任务引用合法，具备本场景说明的状态与条件",
+      "when": "同人同实例多个节点",
+      "then": "同一人两个节点具有独立WorkItem与人员任务引用",
+      "negative": "完成一个节点不得合并关闭另一个",
+      "prototypeScope": "LOCAL_REPRESENTATIVE_SCENARIO",
+      "implementationStatus": "NOT_VERIFIED_BY_THIS_DELIVERY"
+    },
+    {
+      "id": "OA-04",
+      "title": "业务号和类型筛选",
+      "priority": "P0",
+      "requirementIds": [
+        "WD-05",
+        "WD-04"
+      ],
+      "roleProfiles": [
+        "main",
+        "member"
+      ],
+      "pageGroups": [
+        "P01"
+      ],
+      "given": "当前主体、实例及任务引用合法，具备本场景说明的状态与条件",
+      "when": "业务号和类型筛选",
+      "then": "按流程、精确单号和期限找到不同业务实例",
+      "negative": "隐藏对象不得通过搜索或计数泄露",
+      "prototypeScope": "LOCAL_REPRESENTATIVE_SCENARIO",
+      "implementationStatus": "NOT_VERIFIED_BY_THIS_DELIVERY"
+    },
+    {
+      "id": "OA-05",
+      "title": "待办已办发起抄送分层",
+      "priority": "P0",
+      "requirementIds": [
+        "WD-03",
+        "HC-03",
+        "SY-05"
+      ],
+      "roleProfiles": [
+        "member",
+        "main",
+        "approver"
+      ],
+      "pageGroups": [
+        "P01",
+        "P16"
+      ],
+      "given": "当前主体、实例及任务引用合法，具备本场景说明的状态与条件",
+      "when": "待办已办发起抄送分层",
+      "then": "处理记录、发起实例和阅读记录各有明确分类",
+      "negative": "已读或已提交不得冒充实例完成",
+      "prototypeScope": "LOCAL_REPRESENTATIVE_SCENARIO",
+      "implementationStatus": "NOT_VERIFIED_BY_THIS_DELIVERY"
+    },
+    {
+      "id": "OA-06",
+      "title": "稳定分页和同口径统计",
+      "priority": "P0",
+      "requirementIds": [
+        "WD-05",
+        "AD-01"
+      ],
+      "roleProfiles": [
+        "member",
+        "main",
+        "auditor"
+      ],
+      "pageGroups": [
+        "P01"
+      ],
+      "given": "当前主体、实例及任务引用合法，具备本场景说明的状态与条件",
+      "when": "稳定分页和同口径统计",
+      "then": "列表与计数使用相同范围、筛选和快照水位",
+      "negative": "分页漏项/重复不得解释为业务删除",
+      "prototypeScope": "LOCAL_REPRESENTATIVE_SCENARIO",
+      "implementationStatus": "NOT_VERIFIED_BY_THIS_DELIVERY"
+    },
+    {
+      "id": "OA-07",
+      "title": "当前任务数字员工配置",
+      "priority": "P0",
+      "requirementIds": [
+        "NC-01",
+        "NC-05",
+        "NC-07"
+      ],
+      "roleProfiles": [
+        "main",
+        "writer",
+        "collab"
+      ],
+      "pageGroups": [
+        "P02",
+        "P04"
+      ],
+      "given": "当前主体、实例及任务引用合法，具备本场景说明的状态与条件",
+      "when": "当前任务数字员工配置",
+      "then": "配置只修改当前工作项和当前有效Assignment",
+      "negative": "同人另一单据或另一节点配置不改变",
+      "prototypeScope": "LOCAL_REPRESENTATIVE_SCENARIO",
+      "implementationStatus": "NOT_VERIFIED_BY_THIS_DELIVERY"
+    },
+    {
+      "id": "OA-08",
+      "title": "市场采用目标明确",
+      "priority": "P0",
+      "requirementIds": [
+        "NC-02",
+        "NC-03",
+        "NC-05"
+      ],
+      "roleProfiles": [
+        "main",
+        "writer",
+        "member"
+      ],
+      "pageGroups": [
+        "P04",
+        "P22"
+      ],
+      "given": "当前主体、实例及任务引用合法，具备本场景说明的状态与条件",
+      "when": "市场采用目标明确",
+      "then": "资源副本属于本人，选用显示准确业务单号和任务",
+      "negative": "没有选任务不自动改隐藏的上次节点",
+      "prototypeScope": "LOCAL_REPRESENTATIVE_SCENARIO",
+      "implementationStatus": "NOT_VERIFIED_BY_THIS_DELIVERY"
+    },
+    {
+      "id": "OA-09",
+      "title": "任务草稿隔离和回到工作",
+      "priority": "P0",
+      "requirementIds": [
+        "WD-02",
+        "CX-07"
+      ],
+      "roleProfiles": [
+        "main",
+        "writer"
+      ],
+      "pageGroups": [
+        "P02",
+        "P10"
+      ],
+      "given": "当前主体、实例及任务引用合法，具备本场景说明的状态与条件",
+      "when": "任务草稿隔离和回到工作",
+      "then": "任务间切换保存本人各自草稿缓存",
+      "negative": "不能按role或sopId复用同一草稿",
+      "prototypeScope": "LOCAL_REPRESENTATIVE_SCENARIO",
+      "implementationStatus": "NOT_VERIFIED_BY_THIS_DELIVERY"
+    },
+    {
+      "id": "OA-10",
+      "title": "任务对话和依据隔离",
+      "priority": "P0",
+      "requirementIds": [
+        "CX-03",
+        "CX-07",
+        "CX-11"
+      ],
+      "roleProfiles": [
+        "main",
+        "writer",
+        "interactor"
+      ],
+      "pageGroups": [
+        "P02",
+        "P11",
+        "P20"
+      ],
+      "given": "当前主体、实例及任务引用合法，具备本场景说明的状态与条件",
+      "when": "任务对话和依据隔离",
+      "then": "每个工作项只显示本任务对话与授权资料",
+      "negative": "同一助手定义不得共享业务会话",
+      "prototypeScope": "LOCAL_REPRESENTATIVE_SCENARIO",
+      "implementationStatus": "NOT_VERIFIED_BY_THIS_DELIVERY"
+    },
+    {
+      "id": "OA-11",
+      "title": "依据变更与审批失效",
+      "priority": "P0",
+      "requirementIds": [
+        "SY-02",
+        "SY-03",
+        "CX-10"
+      ],
+      "roleProfiles": [
+        "main",
+        "review",
+        "writer"
+      ],
+      "pageGroups": [
+        "P16",
+        "P20"
+      ],
+      "given": "当前主体、实例及任务引用合法，具备本场景说明的状态与条件",
+      "when": "依据变更与审批失效",
+      "then": "仅受影响节点重核，旧审批目标版本失效",
+      "negative": "重新打开旧审批不得批准新版本",
+      "prototypeScope": "LOCAL_REPRESENTATIVE_SCENARIO",
+      "implementationStatus": "NOT_VERIFIED_BY_THIS_DELIVERY"
+    },
+    {
+      "id": "OA-12",
+      "title": "跨角色独立审批",
+      "priority": "P0",
+      "requirementIds": [
+        "HR-04",
+        "AD-02",
+        "RS-05"
+      ],
+      "roleProfiles": [
+        "main",
+        "review",
+        "approver"
+      ],
+      "pageGroups": [
+        "P16"
+      ],
+      "given": "当前主体、实例及任务引用合法，具备本场景说明的状态与条件",
+      "when": "跨角色独立审批",
+      "then": "提交创建指向准确节点版本的独立审批任务",
+      "negative": "请求人不得自批且重复决定不能二次生效",
+      "prototypeScope": "LOCAL_REPRESENTATIVE_SCENARIO",
+      "implementationStatus": "NOT_VERIFIED_BY_THIS_DELIVERY"
+    },
+    {
+      "id": "OA-13",
+      "title": "退回和新轮次",
+      "priority": "P0",
+      "requirementIds": [
+        "HC-06",
+        "RS-05",
+        "SY-08"
+      ],
+      "roleProfiles": [
+        "main",
+        "review"
+      ],
+      "pageGroups": [
+        "P02",
+        "P16"
+      ],
+      "given": "当前主体、实例及任务引用合法，具备本场景说明的状态与条件",
+      "when": "退回和新轮次",
+      "then": "退回原因可追踪，重新提交生成新轮审批",
+      "negative": "不重用旧回执覆盖新的任务轮次",
+      "prototypeScope": "LOCAL_REPRESENTATIVE_SCENARIO",
+      "implementationStatus": "NOT_VERIFIED_BY_THIS_DELIVERY"
+    },
+    {
+      "id": "OA-14",
+      "title": "单次意图幂等与业务去重",
+      "priority": "P0",
+      "requirementIds": [
+        "AT-04",
+        "RS-04",
+        "SY-01"
+      ],
+      "roleProfiles": [
+        "initiator",
+        "automation",
+        "api"
+      ],
+      "pageGroups": [
+        "P01",
+        "P14"
+      ],
+      "given": "当前主体、实例及任务引用合法，具备本场景说明的状态与条件",
+      "when": "单次意图幂等与业务去重",
+      "then": "同key同载荷返回原结果，新意图创建新实例",
+      "negative": "同key不同载荷拒绝；不能用模板+日期全局去重",
+      "prototypeScope": "LOCAL_REPRESENTATIVE_SCENARIO",
+      "implementationStatus": "NOT_VERIFIED_BY_THIS_DELIVERY"
+    },
+    {
+      "id": "OA-15",
+      "title": "合格领取和竞争",
+      "priority": "P0",
+      "requirementIds": [
+        "HR-02",
+        "HR-03"
+      ],
+      "roleProfiles": [
+        "member",
+        "assignment"
+      ],
+      "pageGroups": [
+        "P01",
+        "P03"
+      ],
+      "given": "当前主体、实例及任务引用合法，具备本场景说明的状态与条件",
+      "when": "合格领取和竞争",
+      "then": "候选人只能成功领取一次并记录当前责任",
+      "negative": "真实两会话竞争须一成功一冲突，本轮只测本地重复",
+      "prototypeScope": "LOCAL_REPRESENTATIVE_SCENARIO",
+      "implementationStatus": "NOT_VERIFIED_BY_THIS_DELIVERY"
+    },
+    {
+      "id": "OA-16",
+      "title": "实例催办与冷却",
+      "priority": "P1",
+      "requirementIds": [
+        "HR-05",
+        "WD-06"
+      ],
+      "roleProfiles": [
+        "initiator",
+        "main"
+      ],
+      "pageGroups": [
+        "P01",
+        "P21"
+      ],
+      "given": "当前主体、实例及任务引用合法，具备本场景说明的状态与条件",
+      "when": "实例催办与冷却",
+      "then": "只催办当前实例的未决任务且冷却去重",
+      "negative": "不按模板群发，不把已记录当已送达",
+      "prototypeScope": "LOCAL_REPRESENTATIVE_SCENARIO",
+      "implementationStatus": "NOT_VERIFIED_BY_THIS_DELIVERY"
+    },
+    {
+      "id": "OA-17",
+      "title": "撤回与外部效果",
+      "priority": "P0",
+      "requirementIds": [
+        "RS-07",
+        "RS-06"
+      ],
+      "roleProfiles": [
+        "initiator",
+        "runtime"
+      ],
+      "pageGroups": [
+        "P01",
+        "P16",
+        "P19"
+      ],
+      "given": "当前主体、实例及任务引用合法，具备本场景说明的状态与条件",
+      "when": "撤回与外部效果",
+      "then": "无既有回执的示例可本地撤回；其他实例不变",
+      "negative": "真实外部效果先对账和补偿，不能直接取消",
+      "prototypeScope": "LOCAL_REPRESENTATIVE_SCENARIO",
+      "implementationStatus": "NOT_VERIFIED_BY_THIS_DELIVERY"
+    },
+    {
+      "id": "OA-18",
+      "title": "抄送阅读与批量边界",
+      "priority": "P0",
+      "requirementIds": [
+        "HC-03",
+        "SY-05"
+      ],
+      "roleProfiles": [
+        "member",
+        "main"
+      ],
+      "pageGroups": [
+        "P01",
+        "P21"
+      ],
+      "given": "当前主体、实例及任务引用合法，具备本场景说明的状态与条件",
+      "when": "抄送阅读与批量边界",
+      "then": "只对选中且获准抄送更新本人阅读状态",
+      "negative": "批量已读不能含审批或业务完成",
+      "prototypeScope": "LOCAL_REPRESENTATIVE_SCENARIO",
+      "implementationStatus": "NOT_VERIFIED_BY_THIS_DELIVERY"
+    },
+    {
+      "id": "OA-19",
+      "title": "并行会签与或签",
+      "priority": "P1",
+      "requirementIds": [
+        "SD-05",
+        "RS-05"
+      ],
+      "roleProfiles": [
+        "designer",
+        "approver",
+        "workflow"
+      ],
+      "pageGroups": [
+        "P16",
+        "P17"
+      ],
+      "given": "当前主体、实例及任务引用合法，具备本场景说明的状态与条件",
+      "when": "并行会签与或签",
+      "then": "模板固定并行策略、参与者集合、拒绝和迟到决定规则",
+      "negative": "并行多实例不等于同一单据或签；不得跳过未决人",
+      "prototypeScope": "DESIGN_ONLY_NOT_DEMONSTRATED",
+      "implementationStatus": "NOT_VERIFIED_BY_THIS_DELIVERY"
+    },
+    {
+      "id": "OA-20",
+      "title": "加签与嵌套分支时间线",
+      "priority": "P1",
+      "requirementIds": [
+        "SD-05",
+        "RS-05"
+      ],
+      "roleProfiles": [
+        "designer",
+        "review",
+        "workflow"
+      ],
+      "pageGroups": [
+        "P16",
+        "P17"
+      ],
+      "given": "当前主体、实例及任务引用合法，具备本场景说明的状态与条件",
+      "when": "加签与嵌套分支时间线",
+      "then": "加签位置、原因与影响单独留痕，分支可展开",
+      "negative": "新参与者不隐含继承旧审批结论",
+      "prototypeScope": "DESIGN_ONLY_NOT_DEMONSTRATED",
+      "implementationStatus": "NOT_VERIFIED_BY_THIS_DELIVERY"
+    },
+    {
+      "id": "OA-21",
+      "title": "离岗代理与多任务改派",
+      "priority": "P0",
+      "requirementIds": [
+        "HR-06",
+        "HC-05",
+        "AD-07"
+      ],
+      "roleProfiles": [
+        "hr",
+        "identity",
+        "assignment",
+        "responsible"
+      ],
+      "pageGroups": [
+        "P03",
+        "P18"
+      ],
+      "given": "当前主体、实例及任务引用合法，具备本场景说明的状态与条件",
+      "when": "离岗代理与多任务改派",
+      "then": "识别该人所有未结束任务及私有资源依赖并交接",
+      "negative": "不能只转移当前页面一项或转移凭据",
+      "prototypeScope": "DESIGN_ONLY_NOT_DEMONSTRATED",
+      "implementationStatus": "NOT_VERIFIED_BY_THIS_DELIVERY"
+    },
+    {
+      "id": "OA-22",
+      "title": "数字员工并发与运行隔离",
+      "priority": "P0",
+      "requirementIds": [
+        "NC-07",
+        "OP-06",
+        "CX-11"
+      ],
+      "roleProfiles": [
+        "runtime",
+        "workforce",
+        "main"
+      ],
+      "pageGroups": [
+        "P04",
+        "P19"
+      ],
+      "given": "当前主体、实例及任务引用合法，具备本场景说明的状态与条件",
+      "when": "数字员工并发与运行隔离",
+      "then": "每个Attempt独立会话/空间/预算，容量不足排队",
+      "negative": "取消A不终止B，不可隔离的连接器不能硬并行",
+      "prototypeScope": "DESIGN_ONLY_NOT_DEMONSTRATED",
+      "implementationStatus": "NOT_VERIFIED_BY_THIS_DELIVERY"
+    },
+    {
+      "id": "OA-23",
+      "title": "SLA与工作日历",
+      "priority": "P1",
+      "requirementIds": [
+        "WD-04",
+        "AT-03",
+        "OP-05"
+      ],
+      "roleProfiles": [
+        "main",
+        "workflow",
+        "org"
+      ],
+      "pageGroups": [
+        "P01",
+        "P14",
+        "P19"
+      ],
+      "given": "当前主体、实例及任务引用合法，具备本场景说明的状态与条件",
+      "when": "SLA与工作日历",
+      "then": "按任务截止、用户时区和明确日历计算，等待时长单列",
+      "negative": "不得默认24小时就是1工作日或用日期当唯一任务键",
+      "prototypeScope": "DESIGN_ONLY_NOT_DEMONSTRATED",
+      "implementationStatus": "NOT_VERIFIED_BY_THIS_DELIVERY"
+    },
+    {
+      "id": "OA-24",
+      "title": "组织负荷与管理投影",
+      "priority": "P1",
+      "requirementIds": [
+        "HR-03",
+        "OP-03",
+        "OP-04"
+      ],
+      "roleProfiles": [
+        "hr",
+        "assignment",
+        "workflow",
+        "auditor"
+      ],
+      "pageGroups": [
+        "P18",
+        "P19"
+      ],
+      "given": "当前主体、实例及任务引用合法，具备本场景说明的状态与条件",
+      "when": "组织负荷与管理投影",
+      "then": "按授权范围区分人工量、AI运行、等待审批和逾期",
+      "negative": "租户管理员不得默认读取全员正文或混算绩效",
+      "prototypeScope": "DESIGN_ONLY_NOT_DEMONSTRATED",
+      "implementationStatus": "NOT_VERIFIED_BY_THIS_DELIVERY"
+    },
+    {
+      "id": "OA-25",
+      "title": "通知Outbox与跨OA接入",
+      "priority": "P1",
+      "requirementIds": [
+        "AT-02",
+        "OP-07",
+        "SY-01"
+      ],
+      "roleProfiles": [
+        "api",
+        "apiadmin",
+        "channel",
+        "runtime"
+      ],
+      "pageGroups": [
+        "P15",
+        "P19",
+        "P21"
+      ],
+      "given": "当前主体、实例及任务引用合法，具备本场景说明的状态与条件",
+      "when": "通知Outbox与跨OA接入",
+      "then": "源事件去重，待办与通知独立，断点补齐并核对源状态",
+      "negative": "不能外部消息到达就把业务状态改完成",
+      "prototypeScope": "DESIGN_ONLY_NOT_DEMONSTRATED",
+      "implementationStatus": "NOT_VERIFIED_BY_THIS_DELIVERY"
+    },
+    {
+      "id": "OA-26",
+      "title": "保存个人视图与恢复",
+      "priority": "P1",
+      "requirementIds": [
+        "WD-05",
+        "OP-05"
+      ],
+      "roleProfiles": [
+        "member",
+        "main"
+      ],
+      "pageGroups": [
+        "P01",
+        "P21"
+      ],
+      "given": "当前主体、实例及任务引用合法，具备本场景说明的状态与条件",
+      "when": "保存个人视图与恢复",
+      "then": "保存筛选与排序偏好，返回原条件并按当前授权查询",
+      "negative": "偏好不得缓存他人数据或冻结过期权限",
+      "prototypeScope": "DESIGN_ONLY_NOT_DEMONSTRATED",
+      "implementationStatus": "NOT_VERIFIED_BY_THIS_DELIVERY"
+    },
+    {
+      "id": "OA-27",
+      "title": "作用域深链接与撤权",
+      "priority": "P0",
+      "requirementIds": [
+        "AD-01",
+        "CX-10"
+      ],
+      "roleProfiles": [
+        "member",
+        "identity",
+        "main"
+      ],
+      "pageGroups": [
+        "P01",
+        "P02",
+        "P18"
+      ],
+      "given": "当前主体、实例及任务引用合法，具备本场景说明的状态与条件",
+      "when": "作用域深链接与撤权",
+      "then": "实例与任务对应且当前主体合法才能打开与操作",
+      "negative": "猜ID、错配实例、撤权后命令都拒绝",
+      "prototypeScope": "LOCAL_REPRESENTATIVE_SCENARIO",
+      "implementationStatus": "NOT_VERIFIED_BY_THIS_DELIVERY"
+    },
+    {
+      "id": "OA-28",
+      "title": "真实端到端与反重复验收",
+      "priority": "P0",
+      "requirementIds": [
+        "OP-01",
+        "OP-02",
+        "RS-04"
+      ],
+      "roleProfiles": [
+        "runtime",
+        "release",
+        "main",
+        "review"
+      ],
+      "pageGroups": [
+        "P01",
+        "P02",
+        "P19"
+      ],
+      "given": "当前主体、实例及任务引用合法，具备本场景说明的状态与条件",
+      "when": "真实端到端与反重复验收",
+      "then": "真实身份、多页签并发、持续化、DSH、外部回执逐层验收",
+      "negative": "原型绿色测试不能替代真实服务和生产证据",
+      "prototypeScope": "DESIGN_ONLY_NOT_DEMONSTRATED",
+      "implementationStatus": "NOT_VERIFIED_BY_THIS_DELIVERY"
+    }
+  ]
+}

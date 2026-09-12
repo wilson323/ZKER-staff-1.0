@@ -1,0 +1,101 @@
+{
+  "sha": "c75800506c43c6d0b147d3032e291867f190e159",
+  "node_id": "C_kwDOOSIGEdoAKGM3NTgwMDUwNmM0M2M2ZDBiMTQ3ZDMwMzJlMjkxODY3ZjE5MGUxNTk",
+  "commit": {
+    "author": {
+      "name": "Ray",
+      "email": "mailtangyu@gmail.com",
+      "date": "2026-09-11T09:36:02Z"
+    },
+    "committer": {
+      "name": "GitHub",
+      "email": "noreply@github.com",
+      "date": "2026-09-11T09:36:02Z"
+    },
+    "message": "Three docstring truths the 0.2.16 merges outran (#501)\n\n- chat(instructions=) called the managed system prompt the carrier of\n  \"the tool guidance and the document context\". Targeting moved to the\n  first user message, so it carries the tool guidance alone.\n- chat(citations=) said the managed endpoint's resolved citations come\n  back \"only from chat_completions\". They ride the response envelope,\n  which protocol=\"chat_completions\" returns whole as well; what cannot\n  reach them is the answer lane, which returns the answer string.\n- Rejoins a line as_claude_mcp()'s paragraph lost to a merge.\n\nEach clause was written on a branch cut before the change that voided it,\nand survived the merge because neither side conflicted.",
+    "tree": {
+      "sha": "641d9b7580272794fedac3912a9aeee5ead8a3a7",
+      "url": "https://api.github.com/repos/VectifyAI/PageIndex/git/trees/641d9b7580272794fedac3912a9aeee5ead8a3a7"
+    },
+    "url": "https://api.github.com/repos/VectifyAI/PageIndex/git/commits/c75800506c43c6d0b147d3032e291867f190e159",
+    "comment_count": 0,
+    "verification": {
+      "verified": true,
+      "reason": "valid",
+      "signature": "-----BEGIN PGP SIGNATURE-----\n\nwsFcBAABCAAQBQJqo8uCCRC1aQ7uu5UhlAAAbHIQACPwmJwtaDz/OupxO6xMVOgO\nlSqNA2Ru79/YPfz9zYGHQVW0pt2WLvkA8xRRDC0GKMqxbL4/EiSRWT5qojxq8o9H\n2AG1FzIdX6UILLlD+UY8peMx8fa9Hp8WoLDn9BhfV71a0yxenL8L5jQmS1ukCR3O\nr64Xy10M2WkXM/ey3YG0oeZxW+STozbDRz4gvJdDHQkeMvRfByQsSy8SyK16GF7R\nYgOnpFzN5l52MR8Bq87X2n2FmdLpmlli/gzk4iTrIyxBLKYdYxMkL/L3gCBbDboD\nNzp+ZbtDIq4ioz5KsdUgdecGhmAkdqFlUaILgpVLLNK81/PRW745rAlY7RnywjdI\nnvrHpLK6M7wuNnCycHq+cvQNnTD6IB0Z6R9wNtAoSwS2QtRU0M2QAawN/SvL/9cO\ngSxjarSCAeIa2A23A1ULzL65C+Z2uEZJrwKzsvycSVIHnXDiG3/5LAmblqJmNnBA\nx/DuV1lhyQUe7RY2XgGsrjOlhmyKmg6+/CWM5QGZ5al8o1WXF/M8odQCxfPFsKhQ\nFbO06FbFvRV8zd6/OBT5PxURLynR0EGF12Zi7SyV6iH8RF08uEBlZ1eAUnkgVvzO\n6mhb2/oKyV2WDXKTizf8IvdTPNFPJbtd6CII62b0Iq5kU1D2m7BO/wdwl94IC83O\nQgmDElqR6RbHycWmLwMP\n=oMJx\n-----END PGP SIGNATURE-----\n",
+      "payload": "tree 641d9b7580272794fedac3912a9aeee5ead8a3a7\nparent fc2dc41c167c5dcddc3c1fe263ec3999ab97f019\nauthor Ray <mailtangyu@gmail.com> 1789119362 +0800\ncommitter GitHub <noreply@github.com> 1789119362 +0800\n\nThree docstring truths the 0.2.16 merges outran (#501)\n\n- chat(instructions=) called the managed system prompt the carrier of\n  \"the tool guidance and the document context\". Targeting moved to the\n  first user message, so it carries the tool guidance alone.\n- chat(citations=) said the managed endpoint's resolved citations come\n  back \"only from chat_completions\". They ride the response envelope,\n  which protocol=\"chat_completions\" returns whole as well; what cannot\n  reach them is the answer lane, which returns the answer string.\n- Rejoins a line as_claude_mcp()'s paragraph lost to a merge.\n\nEach clause was written on a branch cut before the change that voided it,\nand survived the merge because neither side conflicted.",
+      "verified_at": "2026-09-11T09:36:03Z"
+    }
+  },
+  "url": "https://api.github.com/repos/VectifyAI/PageIndex/commits/c75800506c43c6d0b147d3032e291867f190e159",
+  "html_url": "https://github.com/VectifyAI/PageIndex/commit/c75800506c43c6d0b147d3032e291867f190e159",
+  "comments_url": "https://api.github.com/repos/VectifyAI/PageIndex/commits/c75800506c43c6d0b147d3032e291867f190e159/comments",
+  "author": {
+    "login": "rejojer",
+    "id": 8255061,
+    "node_id": "MDQ6VXNlcjgyNTUwNjE=",
+    "avatar_url": "https://avatars.githubusercontent.com/u/8255061?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/rejojer",
+    "html_url": "https://github.com/rejojer",
+    "followers_url": "https://api.github.com/users/rejojer/followers",
+    "following_url": "https://api.github.com/users/rejojer/following{/other_user}",
+    "gists_url": "https://api.github.com/users/rejojer/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/rejojer/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/rejojer/subscriptions",
+    "organizations_url": "https://api.github.com/users/rejojer/orgs",
+    "repos_url": "https://api.github.com/users/rejojer/repos",
+    "events_url": "https://api.github.com/users/rejojer/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/rejojer/received_events",
+    "type": "User",
+    "user_view_type": "public",
+    "site_admin": false
+  },
+  "committer": {
+    "login": "web-flow",
+    "id": 19864447,
+    "node_id": "MDQ6VXNlcjE5ODY0NDQ3",
+    "avatar_url": "https://avatars.githubusercontent.com/u/19864447?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/web-flow",
+    "html_url": "https://github.com/web-flow",
+    "followers_url": "https://api.github.com/users/web-flow/followers",
+    "following_url": "https://api.github.com/users/web-flow/following{/other_user}",
+    "gists_url": "https://api.github.com/users/web-flow/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/web-flow/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/web-flow/subscriptions",
+    "organizations_url": "https://api.github.com/users/web-flow/orgs",
+    "repos_url": "https://api.github.com/users/web-flow/repos",
+    "events_url": "https://api.github.com/users/web-flow/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/web-flow/received_events",
+    "type": "User",
+    "user_view_type": "public",
+    "site_admin": false
+  },
+  "parents": [
+    {
+      "sha": "fc2dc41c167c5dcddc3c1fe263ec3999ab97f019",
+      "url": "https://api.github.com/repos/VectifyAI/PageIndex/commits/fc2dc41c167c5dcddc3c1fe263ec3999ab97f019",
+      "html_url": "https://github.com/VectifyAI/PageIndex/commit/fc2dc41c167c5dcddc3c1fe263ec3999ab97f019"
+    }
+  ],
+  "stats": {
+    "total": 15,
+    "additions": 8,
+    "deletions": 7
+  },
+  "files": [
+    {
+      "sha": "0843e4da2614f80ac1d134c1b670a37614d421ec",
+      "filename": "pageindex/client.py",
+      "status": "modified",
+      "additions": 8,
+      "deletions": 7,
+      "changes": 15,
+      "blob_url": "https://github.com/VectifyAI/PageIndex/blob/c75800506c43c6d0b147d3032e291867f190e159/pageindex%2Fclient.py",
+      "raw_url": "https://github.com/VectifyAI/PageIndex/raw/c75800506c43c6d0b147d3032e291867f190e159/pageindex%2Fclient.py",
+      "contents_url": "https://api.github.com/repos/VectifyAI/PageIndex/contents/pageindex%2Fclient.py?ref=c75800506c43c6d0b147d3032e291867f190e159",
+      "patch": "@@ -1057,9 +1057,9 @@ def chat(\n                 ``\"chat_completions\"``, which the managed chat serves too.\n             instructions: Persona or extra guidance for this call,\n                 appended after the managed system prompt (which stays: it\n-                carries the tool guidance and the document context) and\n-                the client's own ``instructions``. A string on every\n-                lane; with ``protocol=\"messages\"`` also a list of\n+                carries the tool guidance) and the client's own\n+                ``instructions``. A string on every lane; with\n+                ``protocol=\"messages\"`` also a list of\n                 Messages system blocks. On the answer lane and\n                 ``protocol=\"chat_completions\"`` it precedes any ``system``\n                 rows in the history; the managed cloud chat receives them\n@@ -1074,8 +1074,10 @@ def chat(\n                 through ``instructions=`` instead. Managed chat:\n                 ``chat_completions``'s ``enable_citations`` — the endpoint\n                 cites in its own inline markup, not ``<cite>`` tags, and\n-                the resolved citations it returns come back only from\n-                ``chat_completions``.\n+                the resolved citations it returns ride the response\n+                envelope, so they need ``chat_completions()`` or\n+                ``protocol=\"chat_completions\"``; the answer lane returns\n+                the answer string alone.\n             max_turns: Own-model chat only — cap on agent turns per call\n                 (default 10). The OpenAI lanes raise at the cap;\n                 ``protocol=\"messages\"`` returns the truncated run\n@@ -1977,8 +1979,7 @@ def as_claude_mcp(self, include_management: bool = False, *,\n         guidance natively — not the client's ``instructions``, which only\n         ``system_prompt`` carries; passing both duplicates the guidance\n         (harmless). ``system_prompt`` stays the recommended channel: it is\n-        guaranteed delivery, and the only\n-        channel local mode has.\n+        guaranteed delivery, and the only channel local mode has.\n \n         Usage (or ``claude_agent_config()`` for all three slots in one\n         call)::"
+    }
+  ]
+}

@@ -1,0 +1,240 @@
+{
+  "retrievedAt": "2026-09-11T23:53:50.322528+00:00",
+  "operation": "search_knowledge_base",
+  "request": {
+    "query": "",
+    "cursor": "CgUI6QcYAQoFCOoHGAEKBQjsBxgBCgcI7QcSAjMy",
+    "limit": 20
+  },
+  "exitCode": 0,
+  "response": {
+    "code": 0,
+    "msg": "success",
+    "data": {
+      "info_list": [
+        {
+          "kb_id": "ZiNX0054xzvcqKBBYip_rgzqDwfMjY3iJ2ctp7qWXH8=",
+          "kb_name": "3D视觉技术",
+          "cover_url": "",
+          "member_count": "76",
+          "content_count": "412",
+          "description": "分享交流有关3D视觉方面的技术，提供视纳弗3D视觉解决方案",
+          "creator": "3D视觉技术交流分享",
+          "role_type": "普通成员",
+          "base_type": "我加入的订阅知识库"
+        },
+        {
+          "kb_id": "pDRCz4ubmiiP0iQWBqw3z7FovDXLx2_VHdC3O_g6nlU=",
+          "kb_name": "从零学做智能体·完整版(AI Agent)",
+          "cover_url": "",
+          "member_count": "275",
+          "content_count": "99",
+          "description": "零基础系统课式智能体学习库（订阅版）：4周路线图+10章扣子实战+6份实战案例手册+每章作业+46模板+500工作流，官方文档打底，学完有作品、有认证、有变现出路。每周更新。",
+          "creator": "Geo AI",
+          "role_type": "普通成员",
+          "base_type": "我加入的订阅知识库"
+        },
+        {
+          "kb_id": "nwySvlUH9kPYEr2eMvzvvjHn4FAj6cu4HsT4O24zoBE=",
+          "kb_name": "全球AI人工智能报告库",
+          "cover_url": "",
+          "member_count": "1174",
+          "content_count": "416",
+          "description": "引力场AI商业创新研究院出品 \n旗下包括：\n案例智库|引力场实验室|引力场OPC联盟|引力场CXO联盟|品牌叙事专家团|钱文颖AI科技",
+          "creator": "钱文颖AI科技",
+          "role_type": "普通成员",
+          "base_type": "我加入的订阅知识库"
+        },
+        {
+          "kb_id": "ZQEXhu12tBeOhBhBtQYP8SV57tFctHRGujYcn6f0Mgo=",
+          "kb_name": "3D建模",
+          "cover_url": "",
+          "member_count": "361",
+          "content_count": "353",
+          "description": "包含Creo、Catia、UGNX、Solidworks、AutoCAD等3D建模教程",
+          "creator": "大浪淘沙",
+          "role_type": "普通成员",
+          "base_type": "我加入的订阅知识库"
+        },
+        {
+          "kb_id": "v1nUv1wyR_FJ-eAWQNab5hN1FJYCRVgx7miM0mcOpwY=",
+          "kb_name": "腾讯混元",
+          "cover_url": "",
+          "member_count": "78",
+          "content_count": "27",
+          "description": "腾讯混元团队发布全新3D生成框架“混元3D-Omni”，支持多模态控制信号输入，实现高精度3D资产生成，并宣布全面开源。  混元3D-Omni基于Hunyuan3D 2.1架构，首次统一整合点云、骨骼姿态、边界框、体素四种控制模态",
+          "creator": "蔡伟华",
+          "role_type": "普通成员",
+          "base_type": "我加入的订阅知识库"
+        },
+        {
+          "kb_id": "wVBjqe3IHDJpKlleeg8Ucvz6s81UIaqJwh4nVQa0pUQ=",
+          "kb_name": "Unity 3D交互开发",
+          "cover_url": "",
+          "member_count": "79",
+          "content_count": "3",
+          "description": "",
+          "creator": "Science",
+          "role_type": "普通成员",
+          "base_type": "我加入的订阅知识库"
+        },
+        {
+          "kb_id": "5HJmt7KtpWnu5c-pz2Vh7fRpMSfsTB5ZPcdkltXv6Ts=",
+          "kb_name": "AI蝶变工坊 | 轻松学AI通识库",
+          "cover_url": "",
+          "member_count": "1103",
+          "content_count": "495",
+          "description": "普通人学AI的第一站。400+篇精选内容覆盖选工具→学会提问→工作/生活实战→进阶玩法，按场景/工具/身份3维打标精准检索。每天10分钟从0到1用AI提效。\n【关注公众号：AI蝶变工坊】",
+          "creator": "AI蝶变工坊 | 墨凡",
+          "role_type": "普通成员",
+          "base_type": "我加入的订阅知识库"
+        },
+        {
+          "kb_id": "0WcqH3jwnhHXHEIPvAJDdC-R2jpQ7ntyMLkSpLEaoGw=",
+          "kb_name": "AI与3D精品库",
+          "cover_url": "",
+          "member_count": "55",
+          "content_count": "34",
+          "description": "本知识库能为你提供从AI技术学习到实际应用的全方位支持，包括掌握AI基础知识、快速开发上线Web应用（如通过Yourware平台）、轻松制作并发布AI表情包（如ChatGPT 4o教程）、生成互动3D效果（如DeepSeek创建克莱因瓶演示），以及获取行业案例、技术指南和前沿趋势分析，帮助你提升素养",
+          "creator": "AI智能体、提示词与人工智能",
+          "role_type": "普通成员",
+          "base_type": "我加入的订阅知识库"
+        },
+        {
+          "kb_id": "9lnjUTze6nDky70iOT2G0xFz8fvi3rMY1MCth8ZOkJY=",
+          "kb_name": "Token产业观察局",
+          "cover_url": "",
+          "member_count": "72",
+          "content_count": "97",
+          "description": "专注Token经济在产业端的落地实战研究，聚焦运营商、云商、设备商三大核心角色在Token转型中的战略重构、技术路径与竞争博弈。\n不做空谈概念，只输出可验证的底层逻辑、可落地的竞合策略、可复用的技术路线。",
+          "creator": "碧波湖畔杂记",
+          "role_type": "普通成员",
+          "base_type": "我加入的订阅知识库"
+        },
+        {
+          "kb_id": "ghjcqkUywc3yJm9Y8HnwwbrB7bAaZwmeQogcCKePzFQ=",
+          "kb_name": "用Blender建模并3D打印",
+          "cover_url": "",
+          "member_count": "177",
+          "content_count": "24",
+          "description": "3DPrinting using Blender",
+          "creator": "Blender",
+          "role_type": "普通成员",
+          "base_type": "我加入的订阅知识库"
+        },
+        {
+          "kb_id": "59cXCmaanEl8NHjGUPi4LCKCceiONgEjJQC2RtVqusk=",
+          "kb_name": "AI前沿·进化笔记 🔥🔥🔥",
+          "cover_url": "",
+          "member_count": "20",
+          "content_count": "3938",
+          "description": "每天5分钟和AI世界实时同步进化，这里有海量精选 AI 爆文 🔥（本知识库主打权威、前沿、专业），你的AI信息差，就是你的竞争力。前沿资讯·工具实测·提示词库·AI创业&兼职，各大权威网站实时更新提炼，信息专业及时分类总结。",
+          "creator": "阿方兄",
+          "role_type": "普通成员",
+          "base_type": "我加入的订阅知识库"
+        },
+        {
+          "kb_id": "6G9Su0Q3VdhoGVGCEOdg9bSdGpk_P3JgxRGzEpCU4Zk=",
+          "kb_name": "image2海报图片提示词",
+          "cover_url": "",
+          "member_count": "36",
+          "content_count": "25",
+          "description": "image2生图提示词\n体验网站：https://999.lk888.ai/\n更新一些image2的生图提示词\n",
+          "creator": "老牛的自选",
+          "role_type": "普通成员",
+          "base_type": "我加入的订阅知识库"
+        },
+        {
+          "kb_id": "5AgEBOdFHa4pSRSs2L0Vt5TgeRVQj96mlKM6c0KdNhA=",
+          "kb_name": "计算机图形学",
+          "cover_url": "",
+          "member_count": "70",
+          "content_count": "1404",
+          "description": "汇集计算机图形学核心领域：SIGGRAPH顶会与前沿论文、3D高斯泼溅/NeRF神经渲染、几何处理与三维重建、实时渲染与GPU编程、光线追踪、体绘制可视化、动画与物理模拟、游戏引擎及OpenUSD/glTF开放标准，并覆盖AI驱动的三维生成。1979篇学术与产业资料，从数学基础到产业落地。",
+          "creator": "知与行Lab",
+          "role_type": "普通成员",
+          "base_type": "我加入的订阅知识库"
+        },
+        {
+          "kb_id": "8d_B75uIuR7CQW77HvPxKmQ9fvJN1vSZ38NAncW1QE8=",
+          "kb_name": "游戏资讯（2024-2026）-游戏日报知识库",
+          "cover_url": "",
+          "member_count": "130",
+          "content_count": "54079",
+          "description": "覆盖30+游戏媒体内容",
+          "creator": "游戏日报",
+          "role_type": "普通成员",
+          "base_type": "我加入的订阅知识库"
+        },
+        {
+          "kb_id": "SF6q5ngBEio9ByLAX2FsDfX2l-E1Mt-5LJWPOUAUW-8=",
+          "kb_name": "3D打印知识库",
+          "cover_url": "",
+          "member_count": "421",
+          "content_count": "222",
+          "description": "聚焦拓竹、创想三维等大厂出海动态，硬核拆解光固化（齿科/手办）与FDM（工业/家用）技术内核，覆盖爱好者DIY到企业级量产全流程指南。前沿资讯、实战工具、生态情报，助你抢占3D打印红利先机。",
+          "creator": "撸猫大师",
+          "role_type": "普通成员",
+          "base_type": "我加入的订阅知识库"
+        },
+        {
+          "kb_id": "5A9HgzvkMs5pvS6t5rkHIK5mMbCPG1yZ3au-wJZ3wRs=",
+          "kb_name": "AI大模型算法",
+          "cover_url": "",
+          "member_count": "16",
+          "content_count": "16",
+          "description": "Transformer、向量数据库、RAG等知识汇总",
+          "creator": "Tailway",
+          "role_type": "普通成员",
+          "base_type": "我加入的订阅知识库"
+        },
+        {
+          "kb_id": "bg-koiu0jgvuOkaGqNyNb0GgcCZvR5LAw7GtXeLPeXU=",
+          "kb_name": "3D打印技术制造",
+          "cover_url": "",
+          "member_count": "109",
+          "content_count": "94",
+          "description": "专注于3D打印技术制造及应用。",
+          "creator": "3D打印技术制造",
+          "role_type": "普通成员",
+          "base_type": "我加入的订阅知识库"
+        },
+        {
+          "kb_id": "FHyIqwa1Z-1vcY1dstwLZXdbQTp0_B0KWr5YIYBTO7M=",
+          "kb_name": "虚幻引擎实战 · UE5 · UE6",
+          "cover_url": "",
+          "member_count": "127",
+          "content_count": "895",
+          "description": "UE5·UE6实战：覆盖MegaLights/Lumen/Nanite渲染、PCG关卡、Niagara视效、MetaHuman与Control Rig动画、CommonUI与Audio Insights，收录UE6路线图、MCP、虚拟制片与国产游戏案例。916篇教程，助开发者把引擎能力落地真实项目。",
+          "creator": "知与行Lab",
+          "role_type": "普通成员",
+          "base_type": "我加入的订阅知识库"
+        },
+        {
+          "kb_id": "6H3dBCZiXNmohCZcksDBo8ArU41rpKT7FM1MYHPIfr4=",
+          "kb_name": "AI生成海报实用工具集",
+          "cover_url": "",
+          "member_count": "283",
+          "content_count": "490",
+          "description": "利用AI自动生成海报的实用工具，会用电脑的人就能用",
+          "creator": "浅蓝天空",
+          "role_type": "普通成员",
+          "base_type": "我加入的订阅知识库"
+        },
+        {
+          "kb_id": "YU_xhlSD-pz4SsO-MBxYFhsgIOy41klkWM-3En8i2N0=",
+          "kb_name": "光固化3D打印知识分享",
+          "cover_url": "",
+          "member_count": "158",
+          "content_count": "77",
+          "description": "汇总光固化3D打印的相关知识，有自己遇到问题的总结，也有别人的经验总结",
+          "creator": "为无为，事无事，味无味",
+          "role_type": "普通成员",
+          "base_type": "我加入的订阅知识库"
+        }
+      ],
+      "is_end": false,
+      "next_cursor": "CgUI6QcYAQoFCOoHGAEKBQjsBxgBCgcI7QcSAjUy"
+    }
+  }
+}

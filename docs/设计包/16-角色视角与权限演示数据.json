@@ -1,0 +1,675 @@
+{
+  "revision": "v2.4",
+  "status": "PROTOTYPE_FIXTURES_NOT_SERVER_AUTHORIZATION",
+  "profiles": [
+    {
+      "id": "member",
+      "label": "普通员工",
+      "group": "七类登录验收",
+      "canonicalRoles": [
+        "MEMBER"
+      ],
+      "module": "member",
+      "title": "我的工作与个人设置",
+      "responsibility": "本人资料、合格待办与获授权资源",
+      "primaryAction": "领取合格任务",
+      "scope": "本人及授权资源",
+      "market": true
+    },
+    {
+      "id": "main",
+      "label": "主执行人 · 甲",
+      "group": "业务协作",
+      "canonicalRoles": [
+        "MEMBER",
+        "HUMAN_EXECUTOR"
+      ],
+      "module": "node",
+      "title": "方案编制与汇总",
+      "responsibility": "汇总协作贡献、核对依据、提交节点交付",
+      "primaryAction": "提交节点交付",
+      "scope": "本人节点及授权贡献",
+      "market": true
+    },
+    {
+      "id": "tech",
+      "label": "技术协作人 · 乙",
+      "group": "业务协作",
+      "canonicalRoles": [
+        "MEMBER",
+        "HUMAN_EXECUTOR"
+      ],
+      "module": "contribute",
+      "title": "确认设备技术清单",
+      "responsibility": "对设备型号、数量和技术约束负责",
+      "primaryAction": "确认新版清单",
+      "scope": "本人分工及共同技术依据",
+      "market": true
+    },
+    {
+      "id": "collab",
+      "label": "预算协作人 · 丙",
+      "group": "业务协作",
+      "canonicalRoles": [
+        "MEMBER",
+        "HUMAN_EXECUTOR"
+      ],
+      "module": "node",
+      "title": "编制设备预算",
+      "responsibility": "对报价、数量和含税预算负责",
+      "primaryAction": "提交预算贡献",
+      "scope": "本人分工及授权报价",
+      "market": true
+    },
+    {
+      "id": "writer",
+      "label": "写作协作人 · 戊",
+      "group": "业务协作",
+      "canonicalRoles": [
+        "MEMBER",
+        "HUMAN_EXECUTOR"
+      ],
+      "module": "contribute",
+      "title": "撰写采购方案说明",
+      "responsibility": "以已确认清单和预算为依据编写方案，逐项引用",
+      "primaryAction": "提交写作贡献",
+      "scope": "授权事实及本人写作草稿",
+      "market": true
+    },
+    {
+      "id": "responsible",
+      "label": "节点责任人",
+      "group": "业务协作",
+      "canonicalRoles": [
+        "MEMBER",
+        "NODE_RESPONSIBLE",
+        "BUSINESS_OWNER"
+      ],
+      "module": "responsibility",
+      "title": "节点责任与异常处置",
+      "responsibility": "明确分工、跟踪阻塞和协调返工，不代替专业确认",
+      "primaryAction": "提出改派方案",
+      "scope": "本流程责任范围",
+      "market": true
+    },
+    {
+      "id": "review",
+      "label": "专业审核人 · 丁",
+      "group": "业务协作",
+      "canonicalRoles": [
+        "MEMBER",
+        "REVIEWER"
+      ],
+      "module": "node",
+      "title": "审核采购方案",
+      "responsibility": "审核当前交付版本，明确退回原因",
+      "primaryAction": "作出专业审核决定",
+      "scope": "被指定交付与证据",
+      "market": true
+    },
+    {
+      "id": "approver",
+      "label": "访问审批人",
+      "group": "业务协作",
+      "canonicalRoles": [
+        "MEMBER",
+        "APPROVER",
+        "ACCESS_REVIEWER"
+      ],
+      "module": "approval",
+      "title": "待我审批",
+      "responsibility": "按精确资源、动作、期限和职责分离决定授权请求",
+      "primaryAction": "批准或拒绝请求",
+      "scope": "当前指派的审批请求",
+      "market": false
+    },
+    {
+      "id": "receiver",
+      "label": "下游接收人",
+      "group": "业务协作",
+      "canonicalRoles": [
+        "MEMBER",
+        "HUMAN_EXECUTOR"
+      ],
+      "module": "handoff",
+      "title": "接收上游交付",
+      "responsibility": "核验必需资料、版本与可读性后接手工作",
+      "primaryAction": "确认接手",
+      "scope": "已获授权的交接包",
+      "market": true
+    },
+    {
+      "id": "designer",
+      "label": "流程设计者",
+      "group": "资源与流程",
+      "canonicalRoles": [
+        "MEMBER",
+        "SOP_DESIGNER"
+      ],
+      "module": "sop",
+      "title": "流程设计与预检",
+      "responsibility": "定义岗位、输入输出、可选数字员工及异常处理",
+      "primaryAction": "提交流程评审",
+      "scope": "本人维护的流程草稿",
+      "market": true
+    },
+    {
+      "id": "publisher",
+      "label": "流程与资源发布人",
+      "group": "资源与流程",
+      "canonicalRoles": [
+        "MEMBER",
+        "SOP_PUBLISHER",
+        "AGENT_PUBLISHER"
+      ],
+      "module": "publish",
+      "title": "发布中心",
+      "responsibility": "核对独立评审、版本差异及在途影响后发布",
+      "primaryAction": "发布已批准版本",
+      "scope": "被授权发布的版本",
+      "market": false
+    },
+    {
+      "id": "resource",
+      "label": "数字员工维护者",
+      "group": "资源与流程",
+      "canonicalRoles": [
+        "MEMBER",
+        "AGENT_OWNER"
+      ],
+      "module": "assets",
+      "title": "数字员工版本维护",
+      "responsibility": "管理职责、技能和依赖，测试并提交独立评审",
+      "primaryAction": "提交数字员工版本",
+      "scope": "本人负责的数字员工",
+      "market": true
+    },
+    {
+      "id": "knowledge",
+      "label": "知识维护者",
+      "group": "资源与流程",
+      "canonicalRoles": [
+        "MEMBER",
+        "KNOWLEDGE_OWNER"
+      ],
+      "module": "knowledge",
+      "title": "知识与引用管理",
+      "responsibility": "维护知识来源、加工状态、访问范围和引用版本",
+      "primaryAction": "提交知识版本",
+      "scope": "本人负责的知识源",
+      "market": true
+    },
+    {
+      "id": "skill",
+      "label": "技能作者",
+      "group": "资源与流程",
+      "canonicalRoles": [
+        "MEMBER",
+        "CAPABILITY_OWNER"
+      ],
+      "module": "skill",
+      "title": "技能创作与测试",
+      "responsibility": "定义输入输出和依赖，隔离测试后提交评审",
+      "primaryAction": "提交技能版本",
+      "scope": "本人负责的技能",
+      "market": true
+    },
+    {
+      "id": "tool",
+      "label": "工具与连接维护者",
+      "group": "资源与流程",
+      "canonicalRoles": [
+        "MEMBER",
+        "CAPABILITY_ADMIN",
+        "INTEGRATION_ADMIN"
+      ],
+      "module": "tools",
+      "title": "工具与连接器管理",
+      "responsibility": "定义动作、连接身份范围、健康及失效恢复",
+      "primaryAction": "提交工具版本",
+      "scope": "被授权集成与动作定义",
+      "market": true
+    },
+    {
+      "id": "org",
+      "label": "组织与岗位管理员",
+      "group": "组织与权限",
+      "canonicalRoles": [
+        "MEMBER",
+        "ORGANIZATION_ADMIN"
+      ],
+      "module": "organization",
+      "title": "组织与岗位",
+      "responsibility": "维护组织、岗位及任职关系，调岗不自动授予高权",
+      "primaryAction": "预览岗位调整",
+      "scope": "获授权组织范围",
+      "market": false
+    },
+    {
+      "id": "hr",
+      "label": "人事运营",
+      "group": "七类登录验收",
+      "canonicalRoles": [
+        "MEMBER",
+        "HR_OPS"
+      ],
+      "module": "people",
+      "title": "人员与任职",
+      "responsibility": "处理入转调离和逐项工作交接",
+      "primaryAction": "推进任职交接",
+      "scope": "FULL_EMPLOYMENT",
+      "market": false
+    },
+    {
+      "id": "identity",
+      "label": "身份管理员",
+      "group": "七类登录验收",
+      "canonicalRoles": [
+        "MEMBER",
+        "IDENTITY_ADMIN"
+      ],
+      "module": "identity",
+      "title": "身份与会话",
+      "responsibility": "核对身份供应、状态和会话元数据，处理撤销",
+      "primaryAction": "撤销指定会话",
+      "scope": "FULL_NO_SECRET",
+      "market": false
+    },
+    {
+      "id": "access",
+      "label": "权限管理员",
+      "group": "七类登录验收",
+      "canonicalRoles": [
+        "MEMBER",
+        "ROLE_ADMIN"
+      ],
+      "module": "access",
+      "title": "角色与权限",
+      "responsibility": "维护精确授权范围，检查影响并提交审批",
+      "primaryAction": "提交权限变更",
+      "scope": "角色与绑定元数据",
+      "market": false
+    },
+    {
+      "id": "auditor",
+      "label": "安全审计员",
+      "group": "七类登录验收",
+      "canonicalRoles": [
+        "MEMBER",
+        "SECURITY_AUDITOR"
+      ],
+      "module": "audit",
+      "title": "审计与证据",
+      "responsibility": "按范围查询脱敏事件与证据，不改变业务结果",
+      "primaryAction": "预览脱敏审计包",
+      "scope": "MASKED",
+      "market": false
+    },
+    {
+      "id": "security",
+      "label": "安全复核人",
+      "group": "组织与权限",
+      "canonicalRoles": [
+        "MEMBER",
+        "SECURITY_REVIEWER"
+      ],
+      "module": "security",
+      "title": "独立安全复核",
+      "responsibility": "复核被指派的能力或策略变更，验证职责分离",
+      "primaryAction": "批准或拒绝待审版本",
+      "scope": "风险与必要证据",
+      "market": false
+    },
+    {
+      "id": "privacy",
+      "label": "隐私负责人",
+      "group": "组织与权限",
+      "canonicalRoles": [
+        "MEMBER",
+        "PRIVACY_OFFICER"
+      ],
+      "module": "privacy",
+      "title": "保留与隐私请求",
+      "responsibility": "核验保留范围、法律保留和删除请求的冲突",
+      "primaryAction": "记录隐私处理决定",
+      "scope": "脱敏请求与保留元数据",
+      "market": false
+    },
+    {
+      "id": "runtime",
+      "label": "运行维护者",
+      "group": "平台运行",
+      "canonicalRoles": [
+        "MEMBER",
+        "RUNTIME_OPERATOR"
+      ],
+      "module": "runtime",
+      "title": "运行诊断与恢复",
+      "responsibility": "核对执行、回执和未知外部效果后决定恢复",
+      "primaryAction": "查询未知效果",
+      "scope": "运行关联与健康元数据",
+      "market": false
+    },
+    {
+      "id": "release",
+      "label": "发布运维负责人",
+      "group": "平台运行",
+      "canonicalRoles": [
+        "MEMBER",
+        "RELEASE_MANAGER"
+      ],
+      "module": "release",
+      "title": "运行版本与回退",
+      "responsibility": "核对兼容性证据和回退方案，不绕过业务批准",
+      "primaryAction": "预览回退计划",
+      "scope": "被授权运行版本元数据",
+      "market": false
+    },
+    {
+      "id": "tenant",
+      "label": "租户所有者",
+      "group": "七类登录验收",
+      "canonicalRoles": [
+        "MEMBER",
+        "TENANT_OWNER"
+      ],
+      "module": "tenant",
+      "title": "租户设置",
+      "responsibility": "查看本租户生命周期和配置边界，不自动获得其他管理域",
+      "primaryAction": "预览生命周期变更",
+      "scope": "本租户元数据",
+      "market": false
+    },
+    {
+      "id": "workflow",
+      "label": "工作流管理员",
+      "group": "七类登录验收",
+      "canonicalRoles": [
+        "MEMBER",
+        "WORKFLOW_ADMIN"
+      ],
+      "module": "workflow",
+      "title": "流程运行管理",
+      "responsibility": "查看授权流程实例、阻塞节点和责任链",
+      "primaryAction": "查看实例与版本影响",
+      "scope": "获授权工作流",
+      "market": true
+    },
+    {
+      "id": "policy",
+      "label": "策略维护者",
+      "group": "组织与权限",
+      "canonicalRoles": [
+        "MEMBER",
+        "POLICY_OWNER"
+      ],
+      "module": "policy",
+      "title": "策略草稿与模拟",
+      "responsibility": "定义字段与动作约束，执行正负例后提交独立复核",
+      "primaryAction": "提交策略评审",
+      "scope": "本人维护的策略元数据",
+      "market": false
+    },
+    {
+      "id": "automation",
+      "label": "自动化维护者",
+      "group": "资源与流程",
+      "canonicalRoles": [
+        "MEMBER",
+        "SCHEDULE_OWNER"
+      ],
+      "module": "automation",
+      "title": "自动化计划",
+      "responsibility": "配置时区、触发、并发、去重和失败处理",
+      "primaryAction": "保存或暂停计划",
+      "scope": "本人计划与运行摘要",
+      "market": true
+    },
+    {
+      "id": "channel",
+      "label": "渠道与专家协作人",
+      "group": "资源与流程",
+      "canonicalRoles": [
+        "MEMBER",
+        "CHANNEL_BINDING_OWNER",
+        "CHANNEL_USER"
+      ],
+      "module": "channel",
+      "title": "渠道与专家协作",
+      "responsibility": "在授权会话内发起咨询并区分意见与审批",
+      "primaryAction": "发起专业咨询",
+      "scope": "绑定会话及最小必要背景",
+      "market": true
+    },
+    {
+      "id": "team",
+      "label": "数字团队协调者",
+      "group": "资源与流程",
+      "canonicalRoles": [
+        "MEMBER",
+        "TEAM_LEADER",
+        "TEAM_MEMBER"
+      ],
+      "module": "team",
+      "title": "数字团队与分工",
+      "responsibility": "查看成员职责与贡献，处理失败和汇总阻塞",
+      "primaryAction": "检查团队交付",
+      "scope": "获授权团队及贡献摘要",
+      "market": true
+    },
+    {
+      "id": "api",
+      "label": "应用集成负责人",
+      "group": "平台运行",
+      "canonicalRoles": [
+        "MEMBER",
+        "API_CLIENT_OWNER",
+        "API_CALLER"
+      ],
+      "module": "api",
+      "title": "应用接入与调用范围",
+      "responsibility": "检查应用身份、精确动作、期限及回调回执",
+      "primaryAction": "预览调用合同",
+      "scope": "本人应用与授权元数据",
+      "market": false
+    },
+    {
+      "id": "interactor",
+      "label": "数字员工使用者",
+      "group": "专项职责",
+      "canonicalRoles": [
+        "MEMBER",
+        "AGENT_INTERACTOR"
+      ],
+      "module": "interactor",
+      "title": "数字员工使用准备",
+      "responsibility": "检查本人获授权助手的能力和依赖，确认后准备执行",
+      "primaryAction": "检查使用条件",
+      "scope": "本人获授权数字员工",
+      "market": true
+    },
+    {
+      "id": "apiadmin",
+      "label": "应用接入管理员",
+      "group": "专项职责",
+      "canonicalRoles": [
+        "MEMBER",
+        "API_CLIENT_ADMIN"
+      ],
+      "module": "apiadmin",
+      "title": "应用接入管理",
+      "responsibility": "预览停用应用的影响并记录管理决定",
+      "primaryAction": "预览应用停用",
+      "scope": "获授权应用元数据",
+      "market": false
+    },
+    {
+      "id": "assignment",
+      "label": "派工管理员",
+      "group": "专项职责",
+      "canonicalRoles": [
+        "MEMBER",
+        "ASSIGNMENT_MANAGER"
+      ],
+      "module": "assignment",
+      "title": "派工与人员负荷",
+      "responsibility": "核验任职和任务范围后提出改派，等待接收人确认",
+      "primaryAction": "提出任务改派",
+      "scope": "获授权工作与合格候选人",
+      "market": false
+    },
+    {
+      "id": "auditgeneral",
+      "label": "授权解释审阅者",
+      "group": "专项职责",
+      "canonicalRoles": [
+        "MEMBER",
+        "AUDITOR"
+      ],
+      "module": "auditgeneral",
+      "title": "授权解释与核对",
+      "responsibility": "核对指定资源的授权理由和字段裁剪，不扩大数据范围",
+      "primaryAction": "查看授权解释",
+      "scope": "获授权对象的决策摘要",
+      "market": false
+    },
+    {
+      "id": "datasubject",
+      "label": "个人数据主体",
+      "group": "专项职责",
+      "canonicalRoles": [
+        "MEMBER",
+        "DATA_SUBJECT"
+      ],
+      "module": "datasubject",
+      "title": "我的数据与记忆",
+      "responsibility": "管理本人数据请求，区分请求、复核和实际处理",
+      "primaryAction": "提交本人数据请求",
+      "scope": "仅本人数据与同意范围",
+      "market": false
+    },
+    {
+      "id": "evolution",
+      "label": "能力改进复核人",
+      "group": "专项职责",
+      "canonicalRoles": [
+        "MEMBER",
+        "EVOLUTION_REVIEWER"
+      ],
+      "module": "evolution",
+      "title": "改进建议与评估",
+      "responsibility": "核对反馈来源、评估差异和提出人，记录独立复核",
+      "primaryAction": "复核改进建议",
+      "scope": "被指派改进与评估证据",
+      "market": false
+    },
+    {
+      "id": "knowledgeadmin",
+      "label": "知识管理员",
+      "group": "专项职责",
+      "canonicalRoles": [
+        "MEMBER",
+        "KNOWLEDGE_ADMIN"
+      ],
+      "module": "knowledgeadmin",
+      "title": "知识发布与访问范围",
+      "responsibility": "核对加工、独立批准和访问范围后发布他人编写的知识版本",
+      "primaryAction": "发布已批准知识版本",
+      "scope": "获授权知识版本与加工状态",
+      "market": true
+    },
+    {
+      "id": "initiator",
+      "label": "流程发起人",
+      "group": "专项职责",
+      "canonicalRoles": [
+        "MEMBER",
+        "PROCESS_INITIATOR"
+      ],
+      "module": "initiator",
+      "title": "发起业务流程",
+      "responsibility": "从已发布流程发起工作，明确输入及责任岗位",
+      "primaryAction": "发起已验证流程",
+      "scope": "可发起流程与本人实例",
+      "market": true
+    },
+    {
+      "id": "securityadmin",
+      "label": "安全管理员",
+      "group": "专项职责",
+      "canonicalRoles": [
+        "MEMBER",
+        "SECURITY_ADMIN"
+      ],
+      "module": "securityadmin",
+      "title": "安全事件与紧急访问",
+      "responsibility": "限定事件、目的和时效提出紧急访问申请，不自行批准",
+      "primaryAction": "提交紧急访问请求",
+      "scope": "被指派事件与最小必要范围",
+      "market": false
+    },
+    {
+      "id": "workforce",
+      "label": "数字员工管理员",
+      "group": "专项职责",
+      "canonicalRoles": [
+        "MEMBER",
+        "WORKFORCE_ADMIN"
+      ],
+      "module": "workforce",
+      "title": "数字员工目录与就绪",
+      "responsibility": "核对获授权数字员工的版本、归属及就绪状态",
+      "primaryAction": "检查数字员工就绪",
+      "scope": "获授权数字员工目录及绑定元数据",
+      "market": true
+    }
+  ],
+  "canonicalFixtures": {
+    "member": [
+      "MEMBER"
+    ],
+    "hr": [
+      "MEMBER",
+      "HR_OPS"
+    ],
+    "identity": [
+      "MEMBER",
+      "IDENTITY_ADMIN"
+    ],
+    "auditor": [
+      "MEMBER",
+      "SECURITY_AUDITOR"
+    ],
+    "workflow": [
+      "MEMBER",
+      "WORKFLOW_ADMIN"
+    ],
+    "tenant": [
+      "MEMBER",
+      "TENANT_OWNER"
+    ],
+    "access": [
+      "MEMBER",
+      "ROLE_ADMIN"
+    ]
+  },
+  "sourceRoleKeyCount": 45,
+  "sourceSha256": "12263586cd56b40c21416249eafac41b3ba715454ec679e78671a372afe31228",
+  "sourceRoot": "/Users/mac/Documents/ChatGPT/ZKER- staff",
+  "sourceHead": "e983c9c0a68200a63f1f8f093575f55f99453774",
+  "notes": [
+    "Business assignments are separate from identity roles",
+    "Writing is a task responsibility, not a new platform role",
+    "Service/Runtime Worker has no human navigation and is not a switchable human profile",
+    "Each profile is explicit example allocation, not role inheritance",
+    "All 44 HUMAN_USER role keys map to explicit profiles; PROVISIONING_SERVICE is not a human profile"
+  ],
+  "nonHumanRoles": [
+    {
+      "roleKey": "PROVISIONING_SERVICE",
+      "assignableTo": "SERVICE_ACCOUNT",
+      "humanNavigation": false,
+      "presentation": "身份管理员查看供应状态，应用管理员查看服务调用边界；服务不能代替自然人审批"
+    }
+  ]
+}

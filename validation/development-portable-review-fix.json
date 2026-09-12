@@ -1,0 +1,53 @@
+{
+  "checkedAt": "2026-09-11T17:47:29.302156+00:00",
+  "scope": "INDEPENDENT_REVIEW_FIX",
+  "status": "PASS",
+  "before": {
+    "argv": [
+      "/usr/local/bin/python3",
+      "-m",
+      "unittest",
+      "discover",
+      "-s",
+      "/Users/mac/.agents/skills/ai-native-sdlc/tests",
+      "-p",
+      "test_*.py",
+      "-v"
+    ],
+    "exitCode": 1,
+    "stdout": "",
+    "stderr": "test_absolute_artifact_rejected (test_helpers.HelpersTests.test_absolute_artifact_rejected) ... ok\ntest_boolean_exit_code_rejected (test_helpers.HelpersTests.test_boolean_exit_code_rejected) ... ok\ntest_business_requires_runtime (test_helpers.HelpersTests.test_business_requires_runtime) ... ok\ntest_document_project_probe_does_not_create_files (test_helpers.HelpersTests.test_document_project_probe_does_not_create_files) ... ok\ntest_duplicate_checks_rejected (test_helpers.HelpersTests.test_duplicate_checks_rejected) ... ok\ntest_empty_artifact_rejected (test_helpers.HelpersTests.test_empty_artifact_rejected) ... ok\ntest_empty_log_with_matching_hash_rejected (test_helpers.HelpersTests.test_empty_log_with_matching_hash_rejected) ... ok\ntest_empty_source_input_is_valid (test_helpers.HelpersTests.test_empty_source_input_is_valid) ... FAIL\ntest_empty_source_later_change_invalidates (test_helpers.HelpersTests.test_empty_source_later_change_invalidates) ... ok\ntest_existing_governance_reported_without_replacement (test_helpers.HelpersTests.test_existing_governance_reported_without_replacement) ... ok\ntest_external_symlink_not_read (test_helpers.HelpersTests.test_external_symlink_not_read) ... ok\ntest_multi_stack_declarations_not_installation (test_helpers.HelpersTests.test_multi_stack_declarations_not_installation) ... ok\ntest_nonzero_command_rejected (test_helpers.HelpersTests.test_nonzero_command_rejected) ... ok\ntest_old_input_invalidates_record (test_helpers.HelpersTests.test_old_input_invalidates_record) ... ok\ntest_old_log_invalidates_record (test_helpers.HelpersTests.test_old_log_invalidates_record) ... ok\ntest_relative_probe_root_rejected (test_helpers.HelpersTests.test_relative_probe_root_rejected) ... ok\ntest_simulation_cannot_certify_business (test_helpers.HelpersTests.test_simulation_cannot_certify_business) ... ok\ntest_symlink_escape_rejected (test_helpers.HelpersTests.test_symlink_escape_rejected) ... ok\ntest_template_cannot_pass (test_helpers.HelpersTests.test_template_cannot_pass) ... ok\ntest_timestamp_order_rejected (test_helpers.HelpersTests.test_timestamp_order_rejected) ... ok\ntest_unzoned_timestamp_rejected (test_helpers.HelpersTests.test_unzoned_timestamp_rejected) ... ok\ntest_valid_record_integrity (test_helpers.HelpersTests.test_valid_record_integrity) ... ok\ntest_wrong_project_rejected (test_helpers.HelpersTests.test_wrong_project_rejected) ... ok\ntest_zero_assertions_rejected (test_helpers.HelpersTests.test_zero_assertions_rejected) ... ok\ntest_zero_checks_rejected (test_helpers.HelpersTests.test_zero_checks_rejected) ... ok\n\n======================================================================\nFAIL: test_empty_source_input_is_valid (test_helpers.HelpersTests.test_empty_source_input_is_valid)\n----------------------------------------------------------------------\nTraceback (most recent call last):\n  File \"/Users/mac/.agents/skills/ai-native-sdlc/tests/test_helpers.py\", line 56, in test_empty_source_input_is_valid\n    self.assertEqual(self.errors(), [])\n    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^\nAssertionError: Lists differ: ['inputs: file missing or empty'] != []\n\nFirst list contains 1 additional elements.\nFirst extra element 0:\n'inputs: file missing or empty'\n\n- ['inputs: file missing or empty']\n+ []\n\n----------------------------------------------------------------------\nRan 25 tests in 0.020s\n\nFAILED (failures=1)\n"
+  },
+  "findings": [
+    "Valid empty source inputs are rejected",
+    "Report source mirror omits S17-S20"
+  ],
+  "after": {
+    "argv": [
+      "/usr/local/bin/python3",
+      "-m",
+      "unittest",
+      "discover",
+      "-s",
+      "/Users/mac/.agents/skills/ai-native-sdlc/tests",
+      "-p",
+      "test_*.py",
+      "-v"
+    ],
+    "exitCode": 0,
+    "stdout": "",
+    "stderr": "test_absolute_artifact_rejected (test_helpers.HelpersTests.test_absolute_artifact_rejected) ... ok\ntest_boolean_exit_code_rejected (test_helpers.HelpersTests.test_boolean_exit_code_rejected) ... ok\ntest_business_requires_runtime (test_helpers.HelpersTests.test_business_requires_runtime) ... ok\ntest_document_project_probe_does_not_create_files (test_helpers.HelpersTests.test_document_project_probe_does_not_create_files) ... ok\ntest_duplicate_checks_rejected (test_helpers.HelpersTests.test_duplicate_checks_rejected) ... ok\ntest_empty_artifact_rejected (test_helpers.HelpersTests.test_empty_artifact_rejected) ... ok\ntest_empty_log_with_matching_hash_rejected (test_helpers.HelpersTests.test_empty_log_with_matching_hash_rejected) ... ok\ntest_empty_source_input_is_valid (test_helpers.HelpersTests.test_empty_source_input_is_valid) ... ok\ntest_empty_source_later_change_invalidates (test_helpers.HelpersTests.test_empty_source_later_change_invalidates) ... ok\ntest_existing_governance_reported_without_replacement (test_helpers.HelpersTests.test_existing_governance_reported_without_replacement) ... ok\ntest_external_symlink_not_read (test_helpers.HelpersTests.test_external_symlink_not_read) ... ok\ntest_multi_stack_declarations_not_installation (test_helpers.HelpersTests.test_multi_stack_declarations_not_installation) ... ok\ntest_nonzero_command_rejected (test_helpers.HelpersTests.test_nonzero_command_rejected) ... ok\ntest_old_input_invalidates_record (test_helpers.HelpersTests.test_old_input_invalidates_record) ... ok\ntest_old_log_invalidates_record (test_helpers.HelpersTests.test_old_log_invalidates_record) ... ok\ntest_relative_probe_root_rejected (test_helpers.HelpersTests.test_relative_probe_root_rejected) ... ok\ntest_simulation_cannot_certify_business (test_helpers.HelpersTests.test_simulation_cannot_certify_business) ... ok\ntest_symlink_escape_rejected (test_helpers.HelpersTests.test_symlink_escape_rejected) ... ok\ntest_template_cannot_pass (test_helpers.HelpersTests.test_template_cannot_pass) ... ok\ntest_timestamp_order_rejected (test_helpers.HelpersTests.test_timestamp_order_rejected) ... ok\ntest_unzoned_timestamp_rejected (test_helpers.HelpersTests.test_unzoned_timestamp_rejected) ... ok\ntest_valid_record_integrity (test_helpers.HelpersTests.test_valid_record_integrity) ... ok\ntest_wrong_project_rejected (test_helpers.HelpersTests.test_wrong_project_rejected) ... ok\ntest_zero_assertions_rejected (test_helpers.HelpersTests.test_zero_assertions_rejected) ... ok\ntest_zero_checks_rejected (test_helpers.HelpersTests.test_zero_checks_rejected) ... ok\n\n----------------------------------------------------------------------\nRan 25 tests in 0.019s\n\nOK\n"
+  },
+  "sourceMirrorCount": 20,
+  "repairs": [
+    "Allow empty source inputs while requiring correct hashes; empty proof artifacts/logs remain invalid.",
+    "Synchronized source mirror and identified canonical register in report."
+  ],
+  "independentRecheck": {
+    "reviewer": "portable_review",
+    "status": "PASS",
+    "scope": "two findings and relevant negative cases only",
+    "result": "Empty inputs accepted; incorrect hash, missing inputs, empty logs/artifacts rejected. Source mirror 20 records and canonical hash match.",
+    "checkedAt": "2026-09-11T17:49:28.174274+00:00"
+  }
+}

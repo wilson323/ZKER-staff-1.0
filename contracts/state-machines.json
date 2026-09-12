@@ -1,0 +1,148 @@
+{
+  "status": "DESIGN_REFERENCE_NOT_RUNTIME_ENGINE",
+  "guardsRequired": true,
+  "machines": {
+    "HumanTask": {
+      "AVAILABLE": [
+        "ASSIGNED",
+        "CANCELLED",
+        "SUPERSEDED"
+      ],
+      "ASSIGNED": [
+        "IN_PROGRESS",
+        "CANCELLED",
+        "SUPERSEDED"
+      ],
+      "IN_PROGRESS": [
+        "COMPLETED",
+        "CANCELLED",
+        "SUPERSEDED"
+      ],
+      "COMPLETED": [],
+      "CANCELLED": [],
+      "SUPERSEDED": []
+    },
+    "WorkItem": {
+      "READY": [
+        "IN_PROGRESS",
+        "CANCELLED"
+      ],
+      "IN_PROGRESS": [
+        "AWAITING_REVIEW",
+        "READY_TO_COMMIT",
+        "CANCELLED"
+      ],
+      "AWAITING_REVIEW": [
+        "IN_PROGRESS",
+        "READY_TO_COMMIT",
+        "CANCELLED"
+      ],
+      "READY_TO_COMMIT": [
+        "COMMITTED",
+        "IN_PROGRESS",
+        "CANCELLED"
+      ],
+      "COMMITTED": [],
+      "CANCELLED": []
+    },
+    "Attempt": {
+      "QUEUED": [
+        "PREPARING",
+        "CANCELLED",
+        "CANCEL_REQUESTED"
+      ],
+      "PREPARING": [
+        "RUNNING",
+        "FAILED",
+        "CANCEL_REQUESTED"
+      ],
+      "RUNNING": [
+        "WAITING_HUMAN",
+        "PAUSED",
+        "SUCCEEDED",
+        "FAILED",
+        "CANCEL_REQUESTED",
+        "RESULT_UNKNOWN"
+      ],
+      "WAITING_HUMAN": [
+        "RUNNING",
+        "FAILED",
+        "CANCEL_REQUESTED"
+      ],
+      "PAUSED": [
+        "RUNNING",
+        "FAILED",
+        "CANCEL_REQUESTED"
+      ],
+      "CANCEL_REQUESTED": [
+        "CANCELLED",
+        "RESULT_UNKNOWN"
+      ],
+      "RESULT_UNKNOWN": [
+        "SUCCEEDED",
+        "FAILED"
+      ],
+      "SUCCEEDED": [],
+      "FAILED": [],
+      "CANCELLED": []
+    },
+    "Review": {
+      "PENDING": [
+        "APPROVED",
+        "REJECTED",
+        "RETURNED",
+        "OBSOLETE",
+        "CANCELLED"
+      ],
+      "APPROVED": [
+        "OBSOLETE"
+      ],
+      "REJECTED": [],
+      "RETURNED": [],
+      "OBSOLETE": [],
+      "CANCELLED": []
+    },
+    "Handoff": {
+      "PENDING": [
+        "ACCEPTED",
+        "BLOCKED",
+        "CANCELLED"
+      ],
+      "BLOCKED": [
+        "PENDING",
+        "CANCELLED"
+      ],
+      "ACCEPTED": [],
+      "CANCELLED": []
+    },
+    "Operation": {
+      "QUEUED": [
+        "PENDING_COMMIT",
+        "CONFIRMED",
+        "FAILED",
+        "UNKNOWN"
+      ],
+      "PENDING_COMMIT": [
+        "CONFIRMED",
+        "FAILED",
+        "UNKNOWN"
+      ],
+      "UNKNOWN": [
+        "CONFIRMED",
+        "FAILED"
+      ],
+      "CONFIRMED": [],
+      "FAILED": []
+    }
+  },
+  "guards": {
+    "WorkItem:AWAITING_REVIEW:IN_PROGRESS": "退回明确产生新epoch，并废弃旧审核/配置/执行；不是原轮次重写",
+    "WorkItem:READY_TO_COMMIT:IN_PROGRESS": "候选版本变化，新epoch；旧预检废弃",
+    "Attempt:RESULT_UNKNOWN:SUCCEEDED": "仅C14查证真实回执",
+    "Attempt:RESULT_UNKNOWN:FAILED": "仅查证无实际效果/对端明确失败",
+    "Attempt:CANCEL_REQUESTED:CANCELLED": "运行方确认已停止且无未知副作用",
+    "Attempt:QUEUED:CANCELLED": "调度器原子确认尚未被worker领取；否则进入CANCEL_REQUESTED",
+    "HumanTask:AVAILABLE:ASSIGNED": "合格候选人且OA原子领取",
+    "WorkItem:READY_TO_COMMIT:COMMITTED": "C11全部守卫且OA同步/查证确认"
+  }
+}

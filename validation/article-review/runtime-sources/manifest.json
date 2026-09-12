@@ -1,0 +1,305 @@
+[
+  {
+    "name": "pi-v2-design.md",
+    "url": "https://raw.githubusercontent.com/earendil-works/pi/harness-v2/j4/packages/agent/docs/harness-v2.md",
+    "retrievedAt": "2026-09-12T00:00:11.590702+00:00",
+    "exitCode": 0,
+    "sha256": "454db4ee6f7bc9fd040533e4f72e00d69b1d0e04cf1aa5840d1c3902b70d0258",
+    "bytes": 233525
+  },
+  {
+    "name": "pi-v2-readme.md",
+    "url": "https://raw.githubusercontent.com/earendil-works/pi/harness-v2/j4/README.md",
+    "retrievedAt": "2026-09-12T00:00:11.418465+00:00",
+    "exitCode": 0,
+    "sha256": "0fc693dc1b7ede6acc205710ab67e5928ae7aea09cd27ea2a2dd5910e1b894ad",
+    "bytes": 6762
+  },
+  {
+    "name": "pi-v2-package.json",
+    "url": "https://raw.githubusercontent.com/earendil-works/pi/harness-v2/j4/packages/agent/package.json",
+    "retrievedAt": "2026-09-12T00:00:11.459919+00:00",
+    "exitCode": 0,
+    "sha256": "457a24a34000da4837274246688c0b64b32f6600830010d14be2b2e6fcfc258e",
+    "bytes": 1719
+  },
+  {
+    "name": "pi-v2-article-design.md",
+    "url": "https://raw.githubusercontent.com/earendil-works/pi/f7f933c6e0a127bd2b56336338512092fec0399d/packages/agent/docs/harness-v2.md",
+    "retrievedAt": "2026-09-12T00:00:11.553139+00:00",
+    "exitCode": 0,
+    "sha256": "454db4ee6f7bc9fd040533e4f72e00d69b1d0e04cf1aa5840d1c3902b70d0258",
+    "bytes": 233525
+  },
+  {
+    "name": "agentscope-readme.md",
+    "url": "https://raw.githubusercontent.com/agentscope-ai/agentscope/main/README.md",
+    "retrievedAt": "2026-09-12T00:00:12.017905+00:00",
+    "exitCode": 0,
+    "sha256": "503d03c6f6e53f6c0083061d363be63269b431101d5d25540d3cf1ff76157691",
+    "bytes": 15060
+  },
+  {
+    "name": "agentscope-pyproject.toml",
+    "url": "https://raw.githubusercontent.com/agentscope-ai/agentscope/main/pyproject.toml",
+    "retrievedAt": "2026-09-12T00:00:12.066534+00:00",
+    "exitCode": 0,
+    "sha256": "3246d228d6c0efd3306b6d63809380dc06f96acdaac0e2328ed40a809ed965be",
+    "bytes": 7657
+  },
+  {
+    "name": "agentscope-license.txt",
+    "url": "https://raw.githubusercontent.com/agentscope-ai/agentscope/main/LICENSE",
+    "retrievedAt": "2026-09-12T00:00:12.175780+00:00",
+    "exitCode": 0,
+    "sha256": "4186bcadf358c60080060309769db6b2a352720d7353d827bb574c600fee9913",
+    "bytes": 20637
+  },
+  {
+    "name": "deepagents-readme.md",
+    "url": "https://raw.githubusercontent.com/langchain-ai/deepagents/main/README.md",
+    "retrievedAt": "2026-09-12T00:00:12.195518+00:00",
+    "exitCode": 0,
+    "sha256": "c404867a799a46fc6b26ac0d3824eb61135007b0e93793b07819621b9405fda1",
+    "bytes": 6980
+  },
+  {
+    "name": "deepagents-license.txt",
+    "url": "https://raw.githubusercontent.com/langchain-ai/deepagents/main/LICENSE",
+    "retrievedAt": "2026-09-12T00:00:12.859631+00:00",
+    "exitCode": 0,
+    "sha256": "4ec67e4ca6e6721dba849b2ca82261597c86a61ee214bbf21416006b7b2d0478",
+    "bytes": 1067
+  },
+  {
+    "name": "omnigent-readme.md",
+    "url": "https://raw.githubusercontent.com/omnigent-ai/omnigent/main/README.md",
+    "retrievedAt": "2026-09-12T00:00:12.863047+00:00",
+    "exitCode": 0,
+    "sha256": "c3f2811bdf358aca5cd86c6a70db200554017b0da370e9cbf9695fd376b06298",
+    "bytes": 25483
+  },
+  {
+    "name": "omnigent-license.txt",
+    "url": "https://raw.githubusercontent.com/omnigent-ai/omnigent/main/LICENSE",
+    "retrievedAt": "2026-09-12T00:00:13.374802+00:00",
+    "exitCode": 0,
+    "sha256": "a6cba85bc92e0cff7a450b1d873c0eaa2e9fc96bf472df0247a26bec77bf3ff9",
+    "bytes": 10173
+  },
+  {
+    "name": "nanzi-readme.md",
+    "url": "https://raw.githubusercontent.com/RandyChen1985/nanzi-ai-agent-platform/main/README.md",
+    "retrievedAt": "2026-09-12T00:00:13.212664+00:00",
+    "exitCode": 0,
+    "sha256": "758b8addecb48884ee96f063deb191ac9e412f51dc57cb9df8c0def0d5ac5d2c",
+    "bytes": 30214
+  },
+  {
+    "name": "nanzi-license.txt",
+    "url": "https://raw.githubusercontent.com/RandyChen1985/nanzi-ai-agent-platform/main/LICENSE",
+    "retrievedAt": "2026-09-12T00:00:13.806176+00:00",
+    "exitCode": 0,
+    "sha256": "4cf2a46b7a71f8aabc31f6a5c596ba3a59d9a70fafb41487c90d12d801b43cc1",
+    "bytes": 1067
+  },
+  {
+    "name": "better-harness-readme.md",
+    "url": "https://raw.githubusercontent.com/QoderAI/better-harness/main/README.md",
+    "retrievedAt": "2026-09-12T00:00:13.818553+00:00",
+    "exitCode": 0,
+    "sha256": "a56feaa3871713c751cff7d65232a7d6f08d43101cb96a92ce0a8f8c7ca75755",
+    "bytes": 19871
+  },
+  {
+    "name": "better-harness-license.txt",
+    "url": "https://raw.githubusercontent.com/QoderAI/better-harness/main/LICENSE",
+    "retrievedAt": "2026-09-12T00:00:13.829092+00:00",
+    "exitCode": 0,
+    "sha256": "c3fb19cc6411a8ae7130ad1d024e458487372c7df4f4f8a5920b351e64b0030b",
+    "bytes": 1062
+  },
+  {
+    "name": "harnesseval-readme.md",
+    "url": "https://raw.githubusercontent.com/MirroS-Lab/HarnessEval-W/main/README.md",
+    "retrievedAt": "2026-09-12T00:00:14.028745+00:00",
+    "exitCode": 0,
+    "sha256": "a87be531db4b10c1d6ab3c691bf02ea151818d6254de5a93ffda7b17882fa097",
+    "bytes": 8207
+  },
+  {
+    "name": "prime-readme.md",
+    "url": "https://raw.githubusercontent.com/PrimeIntellect-ai/prime-agent/main/README.md",
+    "retrievedAt": "2026-09-12T00:00:14.435928+00:00",
+    "exitCode": 0,
+    "sha256": "320f78239f81b49eafcefb7ca27046672be7aa8b4af4c81671d263ec06932aeb",
+    "bytes": 9345
+  },
+  {
+    "name": "prime-license.txt",
+    "url": "https://raw.githubusercontent.com/PrimeIntellect-ai/prime-agent/main/LICENSE",
+    "retrievedAt": "2026-09-12T00:00:14.424679+00:00",
+    "exitCode": 0,
+    "sha256": "b288615fb31dc504623582fb790a28e6d86bc2f5c1396845af555e43386da5a0",
+    "bytes": 1105
+  },
+  {
+    "name": "cmu-readme.md",
+    "url": "https://raw.githubusercontent.com/malusamayo/migration-analysis/main/README.md",
+    "retrievedAt": "2026-09-12T00:00:14.427702+00:00",
+    "exitCode": 0,
+    "sha256": "11fd7e24d5e5b0489df4216e23aef2e69cfabbf4f4a8c6a10d924937e235033e",
+    "bytes": 5568
+  },
+  {
+    "name": "cmu-paper.html",
+    "url": "https://arxiv.org/html/2607.08938v1",
+    "retrievedAt": "2026-09-12T00:00:14.699225+00:00",
+    "exitCode": 0,
+    "sha256": "aaa02b628d650c64f424d7f94b2e6e91e37babee0dcc9821fbfea5a4a1cc190d",
+    "bytes": 353250
+  },
+  {
+    "name": "prime-paper.html",
+    "url": "https://arxiv.org/html/2608.23552v1",
+    "retrievedAt": "2026-09-12T00:00:15.052303+00:00",
+    "exitCode": 0,
+    "sha256": "14e64b1ae601fec9169d257584bc0f40602d0df898f9d93efbbbd8bbdc2f7cb1",
+    "bytes": 239715
+  },
+  {
+    "name": "agentscope.tar.gz",
+    "url": "https://codeload.github.com/agentscope-ai/agentscope/tar.gz/b82253ba1b680a67091c4de32f074477c30ba416",
+    "retrievedAt": "2026-09-12T00:04:09.678671+00:00",
+    "exitCode": 0,
+    "sha256": "61ad02d5b2134c4b1fb264978237ef49a11850e4c958b72837c924eda134ae2c",
+    "bytes": 7916734
+  },
+  {
+    "name": "deepagents.tar.gz",
+    "url": "https://codeload.github.com/langchain-ai/deepagents/tar.gz/178417d0dad063fea0300db68455f4574ef67db3",
+    "retrievedAt": "2026-09-12T00:04:12.936272+00:00",
+    "exitCode": 0,
+    "sha256": "d1dbfeab6817b3d0fa1d1d901b0676f740842c0a832ddde6756b4a4dd6004674",
+    "bytes": 24014357
+  },
+  {
+    "name": "nanzi-ai-agent-platform.tar.gz",
+    "url": "https://codeload.github.com/RandyChen1985/nanzi-ai-agent-platform/tar.gz/2476fbd237e5f160697e6fbe7111ada9125e4bb7",
+    "retrievedAt": "2026-09-12T00:04:19.579159+00:00",
+    "exitCode": 0,
+    "sha256": "8d531d237199b8cbe5da8f9113382927f537fda9992a5ba66983a1f8feb4a012",
+    "bytes": 77260752
+  },
+  {
+    "name": "dsh-host-readme.txt",
+    "url": "https://raw.githubusercontent.com/deepseek-ai/deepseek-harness/c291e7961a515f6d7af9304e7fd1d257929aef26/packages/extensions/cordis-host-runner/README.md",
+    "retrievedAt": "2026-09-12T00:04:06.559579+00:00",
+    "exitCode": 0,
+    "sha256": "3a9046acd2c58cc6169b96344016df87c9dc5ba789c5c1a63425e7cc7aa93d0e",
+    "bytes": 11518
+  },
+  {
+    "name": "dsh-registry.txt",
+    "url": "https://raw.githubusercontent.com/deepseek-ai/deepseek-harness/c291e7961a515f6d7af9304e7fd1d257929aef26/packages/extensions/cordis-host-runner/src/registry.ts",
+    "retrievedAt": "2026-09-12T00:04:08.178520+00:00",
+    "exitCode": 0,
+    "sha256": "8d37d583a0e0f94581416ccb9c82b5bd37873c603c0a2c010fafa5366008587e",
+    "bytes": 8903
+  },
+  {
+    "name": "dsh-selftool.txt",
+    "url": "https://raw.githubusercontent.com/deepseek-ai/deepseek-harness/c291e7961a515f6d7af9304e7fd1d257929aef26/packages/extensions/tool-cordis/src/index.ts",
+    "retrievedAt": "2026-09-12T00:04:09.759478+00:00",
+    "exitCode": 0,
+    "sha256": "7b2f57367fe0fff2051c004e753c383b7054f676aa60f28a630846bc12156ae4",
+    "bytes": 25434
+  },
+  {
+    "name": "better-harness-readme-fixed.md",
+    "url": "https://raw.githubusercontent.com/QoderAI/better-harness/e084d2c3e3984c7df7ec1fd08f88f05f18270193/README.md",
+    "retrievedAt": "2026-09-12T00:04:10.501286+00:00",
+    "exitCode": 0,
+    "sha256": "a56feaa3871713c751cff7d65232a7d6f08d43101cb96a92ce0a8f8c7ca75755",
+    "bytes": 19871
+  },
+  {
+    "name": "omnigent-readme-fixed.md",
+    "url": "https://raw.githubusercontent.com/omnigent-ai/omnigent/d94e288e579606f2f2567f10d5cb8f238b105f5f/README.md",
+    "retrievedAt": "2026-09-12T00:04:10.722062+00:00",
+    "exitCode": 0,
+    "sha256": "c3f2811bdf358aca5cd86c6a70db200554017b0da370e9cbf9695fd376b06298",
+    "bytes": 25483
+  },
+  {
+    "name": "prime-agent-readme-fixed.md",
+    "url": "https://raw.githubusercontent.com/PrimeIntellect-ai/prime-agent/b53c2e9d0666d62ac72b94b754fd649f1f9ff366/README.md",
+    "retrievedAt": "2026-09-12T00:04:11.115273+00:00",
+    "exitCode": 0,
+    "sha256": "320f78239f81b49eafcefb7ca27046672be7aa8b4af4c81671d263ec06932aeb",
+    "bytes": 9345
+  },
+  {
+    "name": "agentloop-article.html",
+    "url": "https://developer.aliyun.com/article/1755376",
+    "retrievedAt": "2026-09-12T00:08:02.795746+00:00",
+    "exitCode": 0,
+    "sha256": "d609e65e888f580808b0582cfffede9798dba0e6f61e249591a49df947bd5489",
+    "bytes": 185452
+  },
+  {
+    "name": "agentloop-concepts.html",
+    "url": "https://help.aliyun.com/zh/document_detail/3042001.html",
+    "retrievedAt": "2026-09-12T00:08:02.624615+00:00",
+    "exitCode": 0,
+    "sha256": "2143aead717c7615e9301cac7ffb805a751a42a93bd71b6ef1e803b1dddc5b92",
+    "bytes": 65436
+  },
+  {
+    "name": "deepagents-subagents.html",
+    "url": "https://docs.langchain.com/oss/python/deepagents/subagents",
+    "retrievedAt": "2026-09-12T00:08:03.335354+00:00",
+    "exitCode": 0,
+    "sha256": "540fe1746ead128b5f00c1e9d02b8b0931ea6f1ca84a0716de3e08783c8c1d4d",
+    "bytes": 3845753
+  },
+  {
+    "name": "deepagents-safety.html",
+    "url": "https://docs.langchain.com/oss/python/deepagents/security",
+    "retrievedAt": "2026-09-12T00:08:03.158741+00:00",
+    "exitCode": 56,
+    "error": "curl: (56) The requested URL returned error: 404\n"
+  },
+  {
+    "name": "agentscope-pypi.json",
+    "url": "https://pypi.org/pypi/agentscope/json",
+    "retrievedAt": "2026-09-12T00:08:03.391755+00:00",
+    "exitCode": 0,
+    "sha256": "22c07da81b8f8a633e0ecb43790ceeb14333676b00350dbc38f871a86623794a",
+    "bytes": 103881
+  },
+  {
+    "name": "deepagents-pypi.json",
+    "url": "https://pypi.org/pypi/deepagents/json",
+    "retrievedAt": "2026-09-12T00:08:03.430399+00:00",
+    "exitCode": 0,
+    "sha256": "73a3c4f6f2e1e132b5ffe273c299374212110bf80fddb8b4e93e4ad551cc2748",
+    "bytes": 206282
+  },
+  {
+    "name": "voyager.html",
+    "url": "https://voyager.minedojo.org/",
+    "retrievedAt": "2026-09-12T00:08:04.347519+00:00",
+    "exitCode": 0,
+    "sha256": "cc6114d7b3d23354f280c3195d326500dd00c28aa3a51f4b2b11bc489a43858f",
+    "bytes": 46665
+  },
+  {
+    "name": "alphaevolve.html",
+    "url": "https://deepmind.google/blog/alphaevolve-a-gemini-powered-coding-agent-for-designing-advanced-algorithms/",
+    "retrievedAt": "2026-09-12T00:08:04.221743+00:00",
+    "exitCode": 0,
+    "sha256": "820cb81d54ac9010723f58563141204bdc7c2a755cd584ec91578db2741abfad",
+    "bytes": 155753
+  }
+]

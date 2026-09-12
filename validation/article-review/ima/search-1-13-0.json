@@ -1,0 +1,256 @@
+{
+  "retrievedAt": "2026-09-11T23:55:18.671145+00:00",
+  "operation": "search_knowledge",
+  "request": {
+    "knowledge_base_id": "G9gQ8_QoewyijpgwdWWmNXc3DRkHPrFPqhVlYBzS8E8=",
+    "cursor": "",
+    "query": "Pi"
+  },
+  "exitCode": 0,
+  "response": {
+    "code": 0,
+    "msg": "success",
+    "data": {
+      "info_list": [
+        {
+          "media_id": "markdown_bb84751278d6332f670bfacfbabe13ad_25577434ca530414faf0cb9e72fc51f57475361604452466",
+          "title": "anthropics_anthropic-cookbook.md",
+          "parent_folder_id": "folder_7480871619671449",
+          "highlight_content": "",
+          "media_type": 7
+        },
+        {
+          "media_id": "markdown_bb84751278d6332f670bfacfbabe13ad_670daff7742c57000088fd6aad5902d27475361604452466",
+          "title": "[废-降级版]OpenSenseNova_SenseNova-U1_20260821_055001.md（元数据空，已被 API 版替代）",
+          "parent_folder_id": "folder_7480871619671449",
+          "highlight_content": "",
+          "media_type": 7
+        },
+        {
+          "media_id": "markdown_bb84751278d6332f670bfacfbabe13ad_9f5508317ae9fb929fb548806e112cfd7475361604452466",
+          "title": "[废-降级版]OpenSenseNova_SenseNova-U1_20260821_055117.md（元数据空，已被 API 版替代）",
+          "parent_folder_id": "folder_7480871619671449",
+          "highlight_content": "",
+          "media_type": 7
+        },
+        {
+          "media_id": "markdown_bb84751278d6332f670bfacfbabe13ad_bda5e7ddadaea05572ad4138eaec6d2b7475361604452466",
+          "title": "Wei-Shaw_sub2api.md",
+          "parent_folder_id": "folder_7480871619671449",
+          "highlight_content": "",
+          "media_type": 7
+        },
+        {
+          "media_id": "markdown_bb84751278d6332f670bfacfbabe13ad_0eaa45f6f577ed2b0956c4299494cc4a7475361604452466",
+          "title": "zhuweiyou_oc2api.md",
+          "parent_folder_id": "folder_7480871619671449",
+          "highlight_content": "",
+          "media_type": 7
+        },
+        {
+          "media_id": "wechatarticle_bb84751278d6332f670bfacfbabe13ad_8b2fdbe36f7d80aa559bba2b57e41d877475361604452466",
+          "title": "首批GPT-6内测结果好离谱啊。。。",
+          "parent_folder_id": "folder_7475362552375018",
+          "highlight_content": "",
+          "media_type": 6
+        },
+        {
+          "media_id": "markdown_bb84751278d6332f670bfacfbabe13ad_9a3b2eb5d3f6c97395a456bad25afce57475361604452466",
+          "title": "router-for-me_CLIProxyAPI.md",
+          "parent_folder_id": "folder_7475362552375018",
+          "highlight_content": "",
+          "media_type": 7
+        },
+        {
+          "media_id": "pdf_75a2d5309b7fc403b15b6a10dc83e7b9_86a7f99eeac9b64bd818b240ffeb1b977475361604452466",
+          "title": "OpenClaw橙皮书-从入门到精通.pdf",
+          "parent_folder_id": "folder_7475362564944572",
+          "highlight_content": "",
+          "media_type": 1
+        },
+        {
+          "media_id": "wechatarticle_bb84751278d6332f670bfacfbabe13ad_9960e101e91a6e0e1b3d68fa3054ea757475361604452466",
+          "title": "Gemini API 竟还有这么多免费额度？",
+          "parent_folder_id": "folder_7475362552375018",
+          "highlight_content": "",
+          "media_type": 6
+        },
+        {
+          "media_id": "markdown_bb84751278d6332f670bfacfbabe13ad_c1b4d1615d19a53798e12fa96082f01c7475361604452466",
+          "title": "anthropics_anthropic-sdk-python.md",
+          "parent_folder_id": "folder_7480871619671449",
+          "highlight_content": "",
+          "media_type": 7
+        },
+        {
+          "media_id": "wechatarticle_75a2d5309b7fc403b15b6a10dc83e7b9_d527a871d98b6908bca23995f927550e7475361604452466",
+          "title": "我的 token 恐惧，被这个 AI 管饱套餐治好了",
+          "parent_folder_id": "folder_7475362564944572",
+          "highlight_content": "",
+          "media_type": 6
+        },
+        {
+          "media_id": "wechatarticle_bb84751278d6332f670bfacfbabe13ad_52120a20d2e455d0bb0db542bd244e0e7475361604452466",
+          "title": "耗时7天，他们开源了WorkBuddy实战蓝皮书",
+          "parent_folder_id": "folder_7490582859497360",
+          "highlight_content": "",
+          "media_type": 6
+        },
+        {
+          "media_id": "markdown_bb84751278d6332f670bfacfbabe13ad_86eadbb9fc7120773309aeffec6788a47475361604452466",
+          "title": "anthropics_k12-teacher-skills.md",
+          "parent_folder_id": "folder_7480871619671449",
+          "highlight_content": "",
+          "media_type": 7
+        },
+        {
+          "media_id": "wechatarticle_bb84751278d6332f670bfacfbabe13ad_7f3542d26ff19f6bb863261ae39206417475361604452466",
+          "title": "你的ChatGPT被随机降智到5.5mini，终于有解法了！",
+          "parent_folder_id": "folder_7475362548168612",
+          "highlight_content": "",
+          "media_type": 6
+        },
+        {
+          "media_id": "wechatarticle_75a2d5309b7fc403b15b6a10dc83e7b9_5454f339a41acad0e495e2e762c2768b7475361604452466",
+          "title": "关于Claude Skills，我给你写了份82页的白皮书",
+          "parent_folder_id": "folder_7475362564944572",
+          "highlight_content": "",
+          "media_type": 6
+        },
+        {
+          "media_id": "wechatarticle_75a2d5309b7fc403b15b6a10dc83e7b9_b0152235033065503754542c25f67b377475361604452466",
+          "title": "国产模型API接到Codex之后，还能跑通这10个核心玩法",
+          "parent_folder_id": "folder_7475362543987459",
+          "highlight_content": "",
+          "media_type": 6
+        },
+        {
+          "media_id": "wechatarticle_bb84751278d6332f670bfacfbabe13ad_839274b9fe6a46d7f5e620e263cca1197475361604452466",
+          "title": "拍AI短剧的成本，被这款免费的视频模型打到地板｜实测Pavo",
+          "parent_folder_id": "folder_7475362552375018",
+          "highlight_content": "",
+          "media_type": 6
+        },
+        {
+          "media_id": "wechatarticle_75a2d5309b7fc403b15b6a10dc83e7b9_a2507d711b4a177f1560f4274f06fd317475361604452466",
+          "title": "终于有AI懂老师了！用Qwen3搭建智能作业批改系统的完整实战",
+          "parent_folder_id": "folder_7475362552375018",
+          "highlight_content": "",
+          "media_type": 6
+        },
+        {
+          "media_id": "wechatarticle_bb84751278d6332f670bfacfbabe13ad_251b83334b4b70a082c15352ec4d5f077475361604452466",
+          "title": "全球程序员都在给Anthropic白送钱！官方终于看不下去了",
+          "parent_folder_id": "folder_7475362548168612",
+          "highlight_content": "",
+          "media_type": 6
+        },
+        {
+          "media_id": "wechatarticle_bb84751278d6332f670bfacfbabe13ad_876b5431d53851228a4e94490ab75b967475361604452466",
+          "title": "刚刚，Anthropic发布物理MCP：Claude开始接管真实世界",
+          "parent_folder_id": "folder_7475362560763829",
+          "highlight_content": "",
+          "media_type": 6
+        },
+        {
+          "media_id": "weburl_bb84751278d6332f670bfacfbabe13ad_d184edb1c97582870365cd4363c539337475361604452466",
+          "title": "App unavailable in region | Claude by Anthropic-Claude",
+          "parent_folder_id": "folder_7475362548180236",
+          "highlight_content": "",
+          "media_type": 2
+        },
+        {
+          "media_id": "wechatarticle_75a2d5309b7fc403b15b6a10dc83e7b9_8f00049ce51df911f8b445f9e921f3517475361604452466",
+          "title": "cc最被低估的一个技巧：问卷工具",
+          "parent_folder_id": "folder_7475362564944572",
+          "highlight_content": "",
+          "media_type": 6
+        },
+        {
+          "media_id": "wechatarticle_75a2d5309b7fc403b15b6a10dc83e7b9_a0bc3f4f8517394943ec5948e7102e867475361604452466",
+          "title": "Anthropic创始人行动手册：打造一家AI-Native创业公司（附36页中文PDF）",
+          "parent_folder_id": "folder_7475362564944572",
+          "highlight_content": "",
+          "media_type": 6
+        },
+        {
+          "media_id": "wechatarticle_bb84751278d6332f670bfacfbabe13ad_4b2ca55e6f88cd8a9b9b1b01fd67b4fb7475361604452466",
+          "title": "Seedance2.5能否击败H3？在LibTV深度实测！",
+          "parent_folder_id": "folder_7475362552375018",
+          "highlight_content": "",
+          "media_type": 6
+        },
+        {
+          "media_id": "weburl_bb84751278d6332f670bfacfbabe13ad_9119c17782261b984d5c124a9d87a4757475361604452466",
+          "title": "router-for-me/CLIProxyAPI",
+          "parent_folder_id": "folder_7475362552375018",
+          "highlight_content": "",
+          "media_type": 2
+        },
+        {
+          "media_id": "wechatarticle_bb84751278d6332f670bfacfbabe13ad_2c6df9ccd638b6765f38d6ca8b0c35c27475361604452466",
+          "title": "最新扣子(coze)实战应用工作流: Deepseek + Coze + 飞书,批量二创网络热搜口播文案",
+          "parent_folder_id": "folder_7479057126011450",
+          "highlight_content": "",
+          "media_type": 6
+        },
+        {
+          "media_id": "markdown_bb84751278d6332f670bfacfbabe13ad_ce7a327a0e94a2d2180eb1109cd757f17475361604452466",
+          "title": "[废-首版降级]index-tts_index-tts.md（GitHub API 限流导致内容为空，请忽略）",
+          "parent_folder_id": "folder_7480871619671449",
+          "highlight_content": "",
+          "media_type": 7
+        },
+        {
+          "media_id": "weburl_bb84751278d6332f670bfacfbabe13ad_b34af6f45480901222dcc8dba01b9ea47475361604452466",
+          "title": "anthropics/k12-teacher-skills",
+          "parent_folder_id": "folder_7480871619671449",
+          "highlight_content": "",
+          "media_type": 2
+        },
+        {
+          "media_id": "wechatarticle_bb84751278d6332f670bfacfbabe13ad_20a6e46078bb0936477c852045e11ccd7475361604452466",
+          "title": "最新扣子(coze)实战应用工作流:能变现小红书批量\"精美表情包\"生成器制作流程,完成保姆级教程 快来瞅瞅吧",
+          "parent_folder_id": "folder_7479057126011450",
+          "highlight_content": "",
+          "media_type": 6
+        },
+        {
+          "media_id": "markdown_bb84751278d6332f670bfacfbabe13ad_5cc6fd200dee3140340ecffd4dfd34347475361604452466",
+          "title": "anthropics_k12-teacher-skills_降级版.md",
+          "parent_folder_id": "folder_7475362560763829",
+          "highlight_content": "",
+          "media_type": 7
+        },
+        {
+          "media_id": "wechatarticle_75a2d5309b7fc403b15b6a10dc83e7b9_61aeb63b95bc5b32cf8cfc09f7e11b5e7475361604452466",
+          "title": "最强OCR竟然不是DeepSeek、Paddle！HuggingFace新作：六大顶尖开源OCR模型横评！继DS后又杀出匹黑马！",
+          "parent_folder_id": "folder_7475362552363668",
+          "highlight_content": "",
+          "media_type": 6
+        },
+        {
+          "media_id": "wechatarticle_75a2d5309b7fc403b15b6a10dc83e7b9_5ddb063ef0667ef57c2066650e4e79797475361604452466",
+          "title": "Google Antigravity 不到两天提示词被破解，顶级Web生成原理揭晓",
+          "parent_folder_id": "folder_7475362560753349",
+          "highlight_content": "",
+          "media_type": 6
+        },
+        {
+          "media_id": "wechatarticle_75a2d5309b7fc403b15b6a10dc83e7b9_9ca17efc8b36d52c1543b36457c360cd7475361604452466",
+          "title": "今天给大家推荐两个开源项目：1. happyhttps://github.com/slopus/happy2. Paseohttps://github.com/getpaseo/paseo这两个项目主要干啥的呢，说白了就是可以让你在手机端进行 AI 编程，支持主流 AI 编程工具如 Claude Code，CodeX 等。它的使用场景也很简单，比如如果你在公司跑一个 AI 项目，但是还没跑完，这时候要去厕所，或者下班坐地铁，那么可以直接打开手机，远程控制你的电脑继续工作。我亲自使用下来，方便确实方便，酷也特别酷。但是我前面就说，AI 这玩意有毒，真的停不下来，简直是上瘾。感觉我的生活已经被 AI 主导了，但是以前上个厕所蹲个坑可以刷刷视频放松下，自从有了这玩意，连上厕所的时间，AI 都给我霸占了，我现在已经完全沦为 AI 的牛马了。所以亲自试用下来，这玩意是好东西，但是我不那么推荐。但是为什么今天还要推荐给大家呢？因为大家如果跟我一样都沦为 AI 的牛马，那么在 AI 这条不归路上，我就不孤单了[旺柴]",
+          "parent_folder_id": "folder_7475362564944572",
+          "highlight_content": "",
+          "media_type": 6
+        },
+        {
+          "media_id": "wechatarticle_75a2d5309b7fc403b15b6a10dc83e7b9_7ebe05927ce1383caafb864a4e9579537475361604452466",
+          "title": "20 个我最爱的神级 AI 编程扩展，堪比外挂，直接起飞 🛫☀️ MCP服务类MCP类似于给AI装上各种外挂，让它能连接外部工具和数据源。1、Firecrawl：让AI搜索网页、自动抓取和理解网页内容2、Brave Search MCP：让AI进行注重隐私地网络搜索，支持图片视频等多类内容搜索3、Context7：帮AI获取最新技术文档，避免过时的写法4、EdgeOne Pages MCP：让AI自动帮你部署项目，生成 URL5、GitHub MCP：让AI直接操作代码仓库，搜项目、看star、分析提交记录6、COS MCP：让AI直接操作对象存储（类似网盘），保存和下载共享文件7、Web to MCP：点击网页元素就能让AI生成对应代码，比给AI截图更准确8、Chrome DevTools MCP：控制浏览器进行调试，分析网站加载慢的原因、自动填写表单等🌙 IDE扩展插件类9、Claude Code 官方扩展：在代码编辑器中直接使用，提供图形界面，支持多会话并行10、GitLens：可视化查看Git代码修改历史，出Bug时能快速找到凶手11、Office Viewer：在编辑器里直接预览MD、Excel、Word 等各种文档，不用来回切换窗口12、ESLint：代码质量检查工具，实时检查代码问题并给出修复建议13、Prettier：代码格式化工具，保证整个项目代码风格一致14、Error Lens：让错误信息直接高亮显示在代码行尾，一眼就能看到哪里有问题15、Console Ninja：在编辑器里直接看到console.log输出结果，不用切换到浏览器查看⭐️ 跨编辑器通用工具16、Spec-kit：GitHub推出的规范驱动开发框架，先写规范文档，AI严格遵守规范生成代码，适合大型新项目17、OpenSpec：轻量的规范驱动开发框架，每次改功能都先写变更提案再实现，让文档和代码始终同步18、Agent Skills：Anthropic官方AI技能系统，把复杂任务打包成技能，安装后 AI 就能立刻学会19、Superpowers：让AI变得更专业的软件开发流程，AI会先问清楚需求、出设计方案、制定执行计划，最后才分步骤实现20、AIChat：AI命令行助手，能把自然语言转换成可执行命令，再也不用记命令了收藏起来，按需安装，用好这些工具，能大幅提高效率和代码质量。一些对你有用的资源：👉🏻 100+ 编程学习路线/实战项目/求职指导 codefather.cn👉🏻 100+ 简历模板 laoyujianli.com👉🏻 300+ 企业面试题库 mianshiya.com👉🏻 500+ AI 资源大全 ai.codefather.cn👉🏻 1 对 1 模拟面试 ai.mianshiya.com👉🏻 动画学算法教程 algo.codefather.cn↓ 完整版",
+          "parent_folder_id": "folder_7475362564944572",
+          "highlight_content": "",
+          "media_type": 6
+        }
+      ]
+    }
+  }
+}

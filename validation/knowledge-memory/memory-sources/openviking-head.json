@@ -1,0 +1,113 @@
+{
+  "sha": "0f77ab5625a5e2ead4f286d4e58ea77e05fcfdee",
+  "node_id": "C_kwDOQz3MytoAKDBmNzdhYjU2MjVhNWUyZWFkNGYyODZkNGU1OGVhNzdlMDVmY2ZkZWU",
+  "commit": {
+    "author": {
+      "name": "alanhuangyoo",
+      "email": "alanhuangyoo@gmail.com",
+      "date": "2026-09-11T17:34:22Z"
+    },
+    "committer": {
+      "name": "GitHub",
+      "email": "noreply@github.com",
+      "date": "2026-09-11T17:34:22Z"
+    },
+    "message": "fix(mcp): bound search's context arguments the way POST /search does (#4892)\n\n`SearchRequest` constrains four of them with pydantic `Field`; the tool declared them\nas plain ints and a plain list, so the MCP face accepted values the REST face rejects:\n\n    max_tokens           REST ge=64 le=32000        tool: any int\n    dedup_turns          REST ge=0  le=100          tool: any int\n    rewrite_max_bullets  REST ge=1  le=20           tool: any int\n    exclude_uris         REST max_length=200        tool: any length\n\nThree of those are only permissive -- the values are clamped downstream. `exclude_uris`\nis not. `normalize_exclude_uris` slices to MAX_EXCLUDE_URIS regardless, so the extra\nexclusions were dropped in silence and the URIs the caller asked to exclude came back\nin the results:\n\n    MAX_EXCLUDE_URIS = 200; asking to exclude 250 URIs\n      MCP path  -> kept 200 of 250; silently dropped 50\n      REST path -> too_long: List should have at most 200 items after validation, not 250\n\nDeclare the bounds with Annotated/Field rather than checking them in the body: FastMCP\nputs them in the tool's published input schema (minimum/maximum/maxItems), so the model\ndriving the tool sees them before it picks a value, and enforces them on call_tool,\nwhich is the path an MCP client takes.\n\nMAX_EXCLUDE_URIS is imported rather than repeated, so the cap and the slice that\nmotivated it cannot drift apart.\n\nIndependent of #4886: that one is the list-mode guard, this is the context-mode bounds.\n\nCo-authored-by: Claude Opus 5 <noreply@anthropic.com>",
+    "tree": {
+      "sha": "b1f2490434e3f5e8c5b7780ad23b4fd33d08f6da",
+      "url": "https://api.github.com/repos/volcengine/OpenViking/git/trees/b1f2490434e3f5e8c5b7780ad23b4fd33d08f6da"
+    },
+    "url": "https://api.github.com/repos/volcengine/OpenViking/git/commits/0f77ab5625a5e2ead4f286d4e58ea77e05fcfdee",
+    "comment_count": 0,
+    "verification": {
+      "verified": true,
+      "reason": "valid",
+      "signature": "-----BEGIN PGP SIGNATURE-----\n\nwsFcBAABCAAQBQJqpDueCRC1aQ7uu5UhlAAA5sAQABajtKlnWzeIGDt3+xwoC3A/\nx+IOG9NW+pRWHlGnmI6ufrjCkUpHOFRQB4OhJe7m5vN/SQcBvzcMCMqnsKBiAV+U\nln97iTxrvekyCufJRRNHRBePNwb1X7f7Xg74P9JFKlkDCNDziluP2cJRShCCkgn/\nAGz8/sk4kJ5MauhW2CL+/QDjYYwF5aION0gHd5Ns5cv7IXe731LUwoQ4aFDMbPS0\nQJs7LJ5hJAmJmQisGV5MZEtyr7YkzJrnouDinWFEoudpgS0rP/ooq9OiWlq0svQz\nDHXqzM/bxG8EpqUfmUPk7KOgcTqNJ3s4NVwBDJfhM/n7GROJN4dLd/5DJTVsKJVm\nMNJml2CYvBMOrFhGcvAkLY1LWmKeFDTGxxVxcevaKz7FpHwHJiqFIEiiTwwmaTNe\nxSdaa6vZpS7SmXXhFBilaSRrEVYf9qJ7cBX3693kB4i671nxgpeg4bs/j6Q86TTP\nDLWxOAv0UMfSEu7Og12Fcp8S0/mCeyjScvZf/o5Lat+Z2vJKr3Knvf/U7vXr8CSm\nYA5hzd4FIxW3yY3LIs0uixri7ZX/eobzcVviBy9wfyZS5fjOSGOW/5uSkU4VLGAy\nt/Ee72xah/JmEoVPftMhfpyepoijWSly+w560GQxMidd8h09QWtZwTRVkNCH3uoI\nfJ1ZHItj+D6lvc5hQvz+\n=XZqs\n-----END PGP SIGNATURE-----\n",
+      "payload": "tree b1f2490434e3f5e8c5b7780ad23b4fd33d08f6da\nparent 7c88d5c5ad6af10cfaba653a350c0b54451c6ebf\nauthor alanhuangyoo <alanhuangyoo@gmail.com> 1789148062 +0800\ncommitter GitHub <noreply@github.com> 1789148062 +0800\n\nfix(mcp): bound search's context arguments the way POST /search does (#4892)\n\n`SearchRequest` constrains four of them with pydantic `Field`; the tool declared them\nas plain ints and a plain list, so the MCP face accepted values the REST face rejects:\n\n    max_tokens           REST ge=64 le=32000        tool: any int\n    dedup_turns          REST ge=0  le=100          tool: any int\n    rewrite_max_bullets  REST ge=1  le=20           tool: any int\n    exclude_uris         REST max_length=200        tool: any length\n\nThree of those are only permissive -- the values are clamped downstream. `exclude_uris`\nis not. `normalize_exclude_uris` slices to MAX_EXCLUDE_URIS regardless, so the extra\nexclusions were dropped in silence and the URIs the caller asked to exclude came back\nin the results:\n\n    MAX_EXCLUDE_URIS = 200; asking to exclude 250 URIs\n      MCP path  -> kept 200 of 250; silently dropped 50\n      REST path -> too_long: List should have at most 200 items after validation, not 250\n\nDeclare the bounds with Annotated/Field rather than checking them in the body: FastMCP\nputs them in the tool's published input schema (minimum/maximum/maxItems), so the model\ndriving the tool sees them before it picks a value, and enforces them on call_tool,\nwhich is the path an MCP client takes.\n\nMAX_EXCLUDE_URIS is imported rather than repeated, so the cap and the slice that\nmotivated it cannot drift apart.\n\nIndependent of #4886: that one is the list-mode guard, this is the context-mode bounds.\n\nCo-authored-by: Claude Opus 5 <noreply@anthropic.com>",
+      "verified_at": "2026-09-11T17:34:23Z"
+    }
+  },
+  "url": "https://api.github.com/repos/volcengine/OpenViking/commits/0f77ab5625a5e2ead4f286d4e58ea77e05fcfdee",
+  "html_url": "https://github.com/volcengine/OpenViking/commit/0f77ab5625a5e2ead4f286d4e58ea77e05fcfdee",
+  "comments_url": "https://api.github.com/repos/volcengine/OpenViking/commits/0f77ab5625a5e2ead4f286d4e58ea77e05fcfdee/comments",
+  "author": {
+    "login": "alanhuangyoo",
+    "id": 263162109,
+    "node_id": "U_kgDOD6-I_Q",
+    "avatar_url": "https://avatars.githubusercontent.com/u/263162109?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/alanhuangyoo",
+    "html_url": "https://github.com/alanhuangyoo",
+    "followers_url": "https://api.github.com/users/alanhuangyoo/followers",
+    "following_url": "https://api.github.com/users/alanhuangyoo/following{/other_user}",
+    "gists_url": "https://api.github.com/users/alanhuangyoo/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/alanhuangyoo/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/alanhuangyoo/subscriptions",
+    "organizations_url": "https://api.github.com/users/alanhuangyoo/orgs",
+    "repos_url": "https://api.github.com/users/alanhuangyoo/repos",
+    "events_url": "https://api.github.com/users/alanhuangyoo/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/alanhuangyoo/received_events",
+    "type": "User",
+    "user_view_type": "public",
+    "site_admin": false
+  },
+  "committer": {
+    "login": "web-flow",
+    "id": 19864447,
+    "node_id": "MDQ6VXNlcjE5ODY0NDQ3",
+    "avatar_url": "https://avatars.githubusercontent.com/u/19864447?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/web-flow",
+    "html_url": "https://github.com/web-flow",
+    "followers_url": "https://api.github.com/users/web-flow/followers",
+    "following_url": "https://api.github.com/users/web-flow/following{/other_user}",
+    "gists_url": "https://api.github.com/users/web-flow/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/web-flow/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/web-flow/subscriptions",
+    "organizations_url": "https://api.github.com/users/web-flow/orgs",
+    "repos_url": "https://api.github.com/users/web-flow/repos",
+    "events_url": "https://api.github.com/users/web-flow/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/web-flow/received_events",
+    "type": "User",
+    "user_view_type": "public",
+    "site_admin": false
+  },
+  "parents": [
+    {
+      "sha": "7c88d5c5ad6af10cfaba653a350c0b54451c6ebf",
+      "url": "https://api.github.com/repos/volcengine/OpenViking/commits/7c88d5c5ad6af10cfaba653a350c0b54451c6ebf",
+      "html_url": "https://github.com/volcengine/OpenViking/commit/7c88d5c5ad6af10cfaba653a350c0b54451c6ebf"
+    }
+  ],
+  "stats": {
+    "total": 101,
+    "additions": 96,
+    "deletions": 5
+  },
+  "files": [
+    {
+      "sha": "0061e4a7db3a7aeb762849beb4f9f37c1aef9a70",
+      "filename": "openviking/server/mcp_endpoint.py",
+      "status": "modified",
+      "additions": 6,
+      "deletions": 5,
+      "changes": 11,
+      "blob_url": "https://github.com/volcengine/OpenViking/blob/0f77ab5625a5e2ead4f286d4e58ea77e05fcfdee/openviking%2Fserver%2Fmcp_endpoint.py",
+      "raw_url": "https://github.com/volcengine/OpenViking/raw/0f77ab5625a5e2ead4f286d4e58ea77e05fcfdee/openviking%2Fserver%2Fmcp_endpoint.py",
+      "contents_url": "https://api.github.com/repos/volcengine/OpenViking/contents/openviking%2Fserver%2Fmcp_endpoint.py?ref=0f77ab5625a5e2ead4f286d4e58ea77e05fcfdee",
+      "patch": "@@ -22,7 +22,7 @@\n from contextlib import asynccontextmanager\n from datetime import datetime, timezone\n from pathlib import PurePosixPath\n-from typing import Any, Dict, List, Literal, Optional, Union\n+from typing import Annotated, Any, Dict, List, Literal, Optional, Union\n from urllib.parse import quote\n \n from mcp.server.fastmcp import FastMCP\n@@ -47,6 +47,7 @@\n from openviking.resource.processing_mode import DEFAULT_PROCESSING_MODE, ProcessingMode\n from openviking.retrieve.context_assembler import (\n     DEFAULT_MAX_TOKENS,\n+    MAX_EXCLUDE_URIS,\n     AssembleParams,\n     assemble_context,\n )\n@@ -283,18 +284,18 @@ async def search(\n     context_type: Optional[Union[str, List[str]]] = None,\n     mode: Literal[\"list\", \"context\"] = \"list\",\n     query_expansion: Literal[\"off\", \"auto\"] = \"auto\",\n-    max_tokens: int = DEFAULT_MAX_TOKENS,\n+    max_tokens: Annotated[int, Field(ge=64, le=32000)] = DEFAULT_MAX_TOKENS,\n     quotas: Optional[Dict[str, int]] = None,\n     purpose: Optional[Literal[\"chat\", \"coding\"]] = None,\n     detail: Literal[\"auto\", \"abstract\", \"overview\", \"full\"] = \"auto\",\n     detail_by_category: Optional[Dict[str, str]] = None,\n-    dedup_turns: int = 0,\n-    exclude_uris: Optional[List[str]] = None,\n+    dedup_turns: Annotated[int, Field(ge=0, le=100)] = 0,\n+    exclude_uris: Annotated[Optional[List[str]], Field(max_length=MAX_EXCLUDE_URIS)] = None,\n     peer_scope: Literal[\"actor\", \"all\"] = \"all\",\n     other_peer_penalty: Optional[float] = None,\n     other_peer_penalties: Optional[Dict[str, float]] = None,\n     rewrite: Literal[\"off\", \"auto\"] = \"off\",\n-    rewrite_max_bullets: int = 6,\n+    rewrite_max_bullets: Annotated[int, Field(ge=1, le=20)] = 6,\n     read_content: bool = False,\n ) -> str:\n     \"\"\"Deep semantic retrieval with optional session context and intent analysis."
+    },
+    {
+      "sha": "0379bded4bd5a232b31aeed436e12481690431c3",
+      "filename": "tests/server/test_mcp_search_bounds.py",
+      "status": "added",
+      "additions": 90,
+      "deletions": 0,
+      "changes": 90,
+      "blob_url": "https://github.com/volcengine/OpenViking/blob/0f77ab5625a5e2ead4f286d4e58ea77e05fcfdee/tests%2Fserver%2Ftest_mcp_search_bounds.py",
+      "raw_url": "https://github.com/volcengine/OpenViking/raw/0f77ab5625a5e2ead4f286d4e58ea77e05fcfdee/tests%2Fserver%2Ftest_mcp_search_bounds.py",
+      "contents_url": "https://api.github.com/repos/volcengine/OpenViking/contents/tests%2Fserver%2Ftest_mcp_search_bounds.py?ref=0f77ab5625a5e2ead4f286d4e58ea77e05fcfdee",
+      "patch": "@@ -0,0 +1,90 @@\n+# Copyright (c) 2026 Beijing Volcano Engine Technology Co., Ltd.\n+# SPDX-License-Identifier: AGPL-3.0\n+\n+\"\"\"The MCP ``search`` tool must bound its context arguments the way ``POST /search`` does.\n+\n+``SearchRequest`` constrains four of them with pydantic ``Field``; the tool declared them\n+as plain ints and a plain list, so the MCP face accepted values the REST face rejects.\n+\n+``exclude_uris`` is the one where that is not merely permissive: ``normalize_exclude_uris``\n+slices to ``MAX_EXCLUDE_URIS`` regardless, so a caller passing more got the extra ones\n+dropped in silence and the URIs it asked to exclude came back in the results. Over REST the\n+same request is a validation error.\n+\n+Bounds are asserted on the tool's published input schema and through ``call_tool``, which\n+is the path an MCP client actually takes — a direct call to the undecorated function is not\n+validated by either face.\n+\"\"\"\n+\n+import pytest\n+from pydantic import ValidationError\n+\n+import openviking.server.mcp_endpoint as mcp_endpoint\n+from openviking.retrieve.context_assembler import MAX_EXCLUDE_URIS\n+from openviking.server.routers.search import SearchRequest\n+\n+# name -> (REST field bound as it appears in the JSON schema, out-of-range value)\n+BOUNDED = {\n+    \"max_tokens\": ({\"minimum\": 64, \"maximum\": 32000}, 32001),\n+    \"dedup_turns\": ({\"minimum\": 0, \"maximum\": 100}, 101),\n+    \"rewrite_max_bullets\": ({\"minimum\": 1, \"maximum\": 20}, 21),\n+}\n+\n+\n+async def _search_schema() -> dict:\n+    tools = await mcp_endpoint.mcp.list_tools()\n+    search = next(tool for tool in tools if tool.name == \"search\")\n+    return search.inputSchema[\"properties\"]\n+\n+\n+@pytest.mark.asyncio\n+@pytest.mark.parametrize(\"name,expected\", sorted((n, b) for n, (b, _) in BOUNDED.items()))\n+async def test_schema_publishes_the_same_bounds_as_rest(name, expected):\n+    # The bounds have to reach the schema, not just the validator: it is what the model\n+    # driving the tool reads before it picks a value.\n+    prop = (await _search_schema())[name]\n+\n+    assert {key: prop.get(key) for key in expected} == expected\n+\n+\n+@pytest.mark.asyncio\n+async def test_exclude_uris_schema_carries_the_shared_cap():\n+    prop = (await _search_schema())[\"exclude_uris\"]\n+\n+    assert prop.get(\"maxItems\") == MAX_EXCLUDE_URIS\n+\n+\n+@pytest.mark.asyncio\n+@pytest.mark.parametrize(\"name,value\", sorted((n, v) for n, (_, v) in BOUNDED.items()))\n+async def test_call_tool_rejects_an_out_of_range_value(name, value):\n+    with pytest.raises(Exception) as excinfo:\n+        await mcp_endpoint.mcp.call_tool(\"search\", {\"query\": \"q\", \"mode\": \"context\", name: value})\n+\n+    assert name in str(excinfo.value)\n+\n+\n+@pytest.mark.asyncio\n+async def test_call_tool_rejects_more_exclusions_than_it_can_apply():\n+    too_many = [f\"viking://user/u/memories/m{i}.md\" for i in range(MAX_EXCLUDE_URIS + 1)]\n+\n+    with pytest.raises(Exception) as excinfo:\n+        await mcp_endpoint.mcp.call_tool(\n+            \"search\", {\"query\": \"q\", \"mode\": \"context\", \"exclude_uris\": too_many}\n+        )\n+\n+    assert \"exclude_uris\" in str(excinfo.value)\n+\n+\n+def test_rest_rejects_the_same_values():\n+    # The point of this file is parity, so pin the side being matched too: if a bound is\n+    # relaxed over REST, this fails next to the tool test that would then be wrong.\n+    for name, (_, value) in BOUNDED.items():\n+        with pytest.raises(ValidationError):\n+            SearchRequest(query=\"q\", mode=\"context\", **{name: value})\n+\n+    with pytest.raises(ValidationError):\n+        SearchRequest(\n+            query=\"q\",\n+            mode=\"context\",\n+            exclude_uris=[f\"viking://user/u/m{i}.md\" for i in range(MAX_EXCLUDE_URIS + 1)],\n+        )"
+    }
+  ]
+}

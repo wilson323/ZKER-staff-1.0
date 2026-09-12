@@ -1,0 +1,16 @@
+name: local-development-system
+on: [push, pull_request, workflow_dispatch]
+permissions:
+  contents: read
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: make verify
+# 本地项目尚无 Git / remote。本文件尚未在 GitHub 执行；没有部署或自动合并步骤。
+# 实际启用时核对并固定 Actions 完整提交 SHA，配置仓库 required check。

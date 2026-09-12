@@ -1,0 +1,221 @@
+{
+  "sha": "cca30905778357e3aeb42b6adb65ef2384e75e60",
+  "node_id": "C_kwDOLFXf9toAKGNjYTMwOTA1Nzc4MzU3ZTNhZWI0MmI2YWRiNjVlZjIzODRlNzVlNjA",
+  "commit": {
+    "author": {
+      "name": "ageerle",
+      "email": "ageerle@163.com",
+      "date": "2026-09-11T02:49:29Z"
+    },
+    "committer": {
+      "name": "ageerle",
+      "email": "ageerle@163.com",
+      "date": "2026-09-11T02:49:29Z"
+    },
+    "message": "fix: support Atlas multimodal generation and media preview",
+    "tree": {
+      "sha": "3c056b871d0e114e63a9bb00049eee7c1f041a78",
+      "url": "https://api.github.com/repos/ageerle/ruoyi-ai/git/trees/3c056b871d0e114e63a9bb00049eee7c1f041a78"
+    },
+    "url": "https://api.github.com/repos/ageerle/ruoyi-ai/git/commits/cca30905778357e3aeb42b6adb65ef2384e75e60",
+    "comment_count": 0,
+    "verification": {
+      "verified": false,
+      "reason": "unsigned",
+      "signature": null,
+      "payload": null,
+      "verified_at": null
+    }
+  },
+  "url": "https://api.github.com/repos/ageerle/ruoyi-ai/commits/cca30905778357e3aeb42b6adb65ef2384e75e60",
+  "html_url": "https://github.com/ageerle/ruoyi-ai/commit/cca30905778357e3aeb42b6adb65ef2384e75e60",
+  "comments_url": "https://api.github.com/repos/ageerle/ruoyi-ai/commits/cca30905778357e3aeb42b6adb65ef2384e75e60/comments",
+  "author": {
+    "login": "ageerle",
+    "id": 32251822,
+    "node_id": "MDQ6VXNlcjMyMjUxODIy",
+    "avatar_url": "https://avatars.githubusercontent.com/u/32251822?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/ageerle",
+    "html_url": "https://github.com/ageerle",
+    "followers_url": "https://api.github.com/users/ageerle/followers",
+    "following_url": "https://api.github.com/users/ageerle/following{/other_user}",
+    "gists_url": "https://api.github.com/users/ageerle/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/ageerle/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/ageerle/subscriptions",
+    "organizations_url": "https://api.github.com/users/ageerle/orgs",
+    "repos_url": "https://api.github.com/users/ageerle/repos",
+    "events_url": "https://api.github.com/users/ageerle/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/ageerle/received_events",
+    "type": "User",
+    "user_view_type": "public",
+    "site_admin": false
+  },
+  "committer": {
+    "login": "ageerle",
+    "id": 32251822,
+    "node_id": "MDQ6VXNlcjMyMjUxODIy",
+    "avatar_url": "https://avatars.githubusercontent.com/u/32251822?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/ageerle",
+    "html_url": "https://github.com/ageerle",
+    "followers_url": "https://api.github.com/users/ageerle/followers",
+    "following_url": "https://api.github.com/users/ageerle/following{/other_user}",
+    "gists_url": "https://api.github.com/users/ageerle/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/ageerle/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/ageerle/subscriptions",
+    "organizations_url": "https://api.github.com/users/ageerle/orgs",
+    "repos_url": "https://api.github.com/users/ageerle/repos",
+    "events_url": "https://api.github.com/users/ageerle/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/ageerle/received_events",
+    "type": "User",
+    "user_view_type": "public",
+    "site_admin": false
+  },
+  "parents": [
+    {
+      "sha": "4766d2e6281e3157cb0f0b045fbab3a2027fb4db",
+      "url": "https://api.github.com/repos/ageerle/ruoyi-ai/commits/4766d2e6281e3157cb0f0b045fbab3a2027fb4db",
+      "html_url": "https://github.com/ageerle/ruoyi-ai/commit/4766d2e6281e3157cb0f0b045fbab3a2027fb4db"
+    }
+  ],
+  "stats": {
+    "total": 511,
+    "additions": 498,
+    "deletions": 13
+  },
+  "files": [
+    {
+      "sha": "4a462cd901a16ca8d34ededa48ffc1b176aa05ff",
+      "filename": "ruoyi-common/ruoyi-common-chat/src/main/java/org/ruoyi/common/chat/security/ChatModelCredentialPolicy.java",
+      "status": "modified",
+      "additions": 30,
+      "deletions": 0,
+      "changes": 30,
+      "blob_url": "https://github.com/ageerle/ruoyi-ai/blob/cca30905778357e3aeb42b6adb65ef2384e75e60/ruoyi-common%2Fruoyi-common-chat%2Fsrc%2Fmain%2Fjava%2Forg%2Fruoyi%2Fcommon%2Fchat%2Fsecurity%2FChatModelCredentialPolicy.java",
+      "raw_url": "https://github.com/ageerle/ruoyi-ai/raw/cca30905778357e3aeb42b6adb65ef2384e75e60/ruoyi-common%2Fruoyi-common-chat%2Fsrc%2Fmain%2Fjava%2Forg%2Fruoyi%2Fcommon%2Fchat%2Fsecurity%2FChatModelCredentialPolicy.java",
+      "contents_url": "https://api.github.com/repos/ageerle/ruoyi-ai/contents/ruoyi-common%2Fruoyi-common-chat%2Fsrc%2Fmain%2Fjava%2Forg%2Fruoyi%2Fcommon%2Fchat%2Fsecurity%2FChatModelCredentialPolicy.java?ref=cca30905778357e3aeb42b6adb65ef2384e75e60",
+      "patch": "@@ -16,6 +16,12 @@ public final class ChatModelCredentialPolicy {\n     public static final String DEEPSEEK_API_HOST = \"https://api.deepseek.com\";\n     public static final String PPIO_PROVIDER = \"ppio\";\n     public static final String PPIO_API_HOST = \"https://api.ppio.com/openai/v1\";\n+    public static final String ATLAS_PROVIDER = \"atlas\";\n+    private static final Set<String> ATLAS_API_HOSTS = Set.of(\n+        \"https://api.atlascloud.ai\", \"https://api.atlascloud.ai/\",\n+        \"https://api.atlascloud.ai/v1\", \"https://api.atlascloud.ai/v1/\",\n+        \"https://api.atlascloud.ai/api/v1\", \"https://api.atlascloud.ai/api/v1/\"\n+    );\n \n     private static final Set<String> PPIO_API_HOSTS = Set.of(\n         PPIO_API_HOST, PPIO_API_HOST + \"/\",\n@@ -69,6 +75,10 @@ public static void requirePersistableConfiguration(String providerCode,\n                                                        String apiHost,\n                                                        String apiKey) {\n         requireSecureApiHost(apiHost);\n+        if (ATLAS_PROVIDER.equals(providerCode)) {\n+            requireAtlasConfiguration(providerCode, modelName, apiHost, apiKey);\n+            return;\n+        }\n         if (CustomApiCredentialPolicy.isCustomProvider(providerCode)) {\n             CustomApiCredentialPolicy.requireConfiguration(providerCode, modelName, apiHost, apiKey);\n             return;\n@@ -121,6 +131,8 @@ public static void requireProviderReference(String providerCode, String apiKey)\n             expectedReference = \"env:DEEPSEEK_API_KEY\";\n         } else if (PPIO_PROVIDER.equals(providerCode)) {\n             expectedReference = \"env:PPIO_API_KEY\";\n+        } else if (ATLAS_PROVIDER.equals(providerCode)) {\n+            expectedReference = \"env:ATLAS_API_KEY\";\n         } else {\n             throw new IllegalArgumentException(\"Model credential provider is not allowlisted\");\n         }\n@@ -137,11 +149,29 @@ public static void requireTrustedConfiguration(String providerCode, String model\n             CustomApiCredentialPolicy.requireConfiguration(providerCode, modelName, apiHost, apiKey);\n         } else if (PPIO_PROVIDER.equals(providerCode)) {\n             requirePpioConfiguration(providerCode, modelName, apiHost, apiKey);\n+        } else if (ATLAS_PROVIDER.equals(providerCode)) {\n+            requireAtlasConfiguration(providerCode, modelName, apiHost, apiKey);\n         } else {\n             requireDeepSeekConfiguration(providerCode, modelName, apiHost, apiKey);\n         }\n     }\n \n+    /** Atlas credentials may only be sent to its official media API origin. */\n+    public static void requireAtlasConfiguration(String providerCode, String modelName,\n+                                                 String apiHost, String apiKey) {\n+        if (!ATLAS_PROVIDER.equals(providerCode)) {\n+            throw new IllegalArgumentException(\"Atlas model provider is not trusted\");\n+        }\n+        if (modelName == null || !modelName.matches(\"[A-Za-z0-9][A-Za-z0-9._/-]{0,254}\")) {\n+            throw new IllegalArgumentException(\"Atlas model ID is invalid\");\n+        }\n+        requireSecureApiHost(apiHost);\n+        if (!ATLAS_API_HOSTS.contains(apiHost)) {\n+            throw new IllegalArgumentException(\"Atlas API host is not allowlisted\");\n+        }\n+        requireProviderReference(providerCode, apiKey);\n+    }\n+\n     /** Validates PPIO and returns the base URL expected by the OpenAI Chat Completions client. */\n     public static String requirePpioConfiguration(String providerCode, String modelName,\n                                                   String apiHost, String apiKey) {"
+    },
+    {
+      "sha": "ba7b16ef55e1f25d08ae6b111f298a5c218e3677",
+      "filename": "ruoyi-common/ruoyi-common-chat/src/main/java/org/ruoyi/common/chat/security/ChatModelSecretReference.java",
+      "status": "modified",
+      "additions": 1,
+      "deletions": 1,
+      "changes": 2,
+      "blob_url": "https://github.com/ageerle/ruoyi-ai/blob/cca30905778357e3aeb42b6adb65ef2384e75e60/ruoyi-common%2Fruoyi-common-chat%2Fsrc%2Fmain%2Fjava%2Forg%2Fruoyi%2Fcommon%2Fchat%2Fsecurity%2FChatModelSecretReference.java",
+      "raw_url": "https://github.com/ageerle/ruoyi-ai/raw/cca30905778357e3aeb42b6adb65ef2384e75e60/ruoyi-common%2Fruoyi-common-chat%2Fsrc%2Fmain%2Fjava%2Forg%2Fruoyi%2Fcommon%2Fchat%2Fsecurity%2FChatModelSecretReference.java",
+      "contents_url": "https://api.github.com/repos/ageerle/ruoyi-ai/contents/ruoyi-common%2Fruoyi-common-chat%2Fsrc%2Fmain%2Fjava%2Forg%2Fruoyi%2Fcommon%2Fchat%2Fsecurity%2FChatModelSecretReference.java?ref=cca30905778357e3aeb42b6adb65ef2384e75e60",
+      "patch": "@@ -8,7 +8,7 @@\n public final class ChatModelSecretReference {\n \n     public static final String ENV_REFERENCE_REGEXP =\n-        \"^env:(?:(?:DEEPSEEK|PPIO)_API_KEY|\" + CustomApiCredentialPolicy.REFERENCE_PATTERN + \")$\";\n+        \"^env:(?:(?:DEEPSEEK|PPIO|ATLAS)_API_KEY|\" + CustomApiCredentialPolicy.REFERENCE_PATTERN + \")$\";\n \n     private static final String ENV_PREFIX = \"env:\";\n     private static final Pattern ENV_REFERENCE = Pattern.compile(ENV_REFERENCE_REGEXP);"
+    },
+    {
+      "sha": "561fb7c7db95fc5052bd033577b0f97bffca8d50",
+      "filename": "ruoyi-common/ruoyi-common-chat/src/test/java/org/ruoyi/common/chat/security/AtlasCredentialPolicyTest.java",
+      "status": "added",
+      "additions": 50,
+      "deletions": 0,
+      "changes": 50,
+      "blob_url": "https://github.com/ageerle/ruoyi-ai/blob/cca30905778357e3aeb42b6adb65ef2384e75e60/ruoyi-common%2Fruoyi-common-chat%2Fsrc%2Ftest%2Fjava%2Forg%2Fruoyi%2Fcommon%2Fchat%2Fsecurity%2FAtlasCredentialPolicyTest.java",
+      "raw_url": "https://github.com/ageerle/ruoyi-ai/raw/cca30905778357e3aeb42b6adb65ef2384e75e60/ruoyi-common%2Fruoyi-common-chat%2Fsrc%2Ftest%2Fjava%2Forg%2Fruoyi%2Fcommon%2Fchat%2Fsecurity%2FAtlasCredentialPolicyTest.java",
+      "contents_url": "https://api.github.com/repos/ageerle/ruoyi-ai/contents/ruoyi-common%2Fruoyi-common-chat%2Fsrc%2Ftest%2Fjava%2Forg%2Fruoyi%2Fcommon%2Fchat%2Fsecurity%2FAtlasCredentialPolicyTest.java?ref=cca30905778357e3aeb42b6adb65ef2384e75e60",
+      "patch": "@@ -0,0 +1,50 @@\n+package org.ruoyi.common.chat.security;\n+\n+import org.junit.jupiter.api.Tag;\n+import org.junit.jupiter.api.Test;\n+\n+import static org.junit.jupiter.api.Assertions.*;\n+\n+@Tag(\"dev\")\n+class AtlasCredentialPolicyTest {\n+    private static final String MODEL = \"bytedance/seed-audio-1.0\";\n+    private static final String HOST = \"https://api.atlascloud.ai/v1\";\n+    private static final String REF = \"env:ATLAS_API_KEY\";\n+\n+    @Test\n+    void acceptsOfficialEndpointFormsAtSaveAndUse() {\n+        for (String suffix : new String[]{\"\", \"/\", \"/v1\", \"/v1/\", \"/api/v1\", \"/api/v1/\"}) {\n+            String host = \"https://api.atlascloud.ai\" + suffix;\n+            assertDoesNotThrow(() -> ChatModelCredentialPolicy.requirePersistableConfiguration(\"atlas\", MODEL, host, REF));\n+            assertEquals(\"test-secret\", ChatModelCredentialPolicy.resolveApiKeyForUse(\"atlas\", \"atlas\", MODEL, host, REF,\n+                name -> \"ATLAS_API_KEY\".equals(name) ? \"test-secret\" : null));\n+        }\n+    }\n+\n+    @Test\n+    void rejectsUntrustedEndpointsBeforeReadingEnvironment() {\n+        for (String host : new String[]{\"http://api.atlascloud.ai/v1\", \"https://evil.example/v1\",\n+            \"https://api.atlascloud.ai.evil.example/v1\", \"https://api.atlascloud.ai:8443/v1\",\n+            \"https://user@api.atlascloud.ai/v1\", \"https://api.atlascloud.ai/v1?x=1\", \"https://api.atlascloud.ai/other\"}) {\n+            assertThrows(IllegalArgumentException.class,\n+                () -> ChatModelCredentialPolicy.requirePersistableConfiguration(\"atlas\", MODEL, host, REF));\n+            assertThrows(IllegalArgumentException.class,\n+                () -> ChatModelCredentialPolicy.resolveApiKeyForUse(\"atlas\", \"atlas\", MODEL, host, REF,\n+                    name -> { fail(\"Must validate endpoint before resolving secret\"); return null; }));\n+        }\n+    }\n+\n+    @Test\n+    void rejectsWrongProviderReferenceAndMissingSecret() {\n+        assertThrows(IllegalArgumentException.class, () -> ChatModelCredentialPolicy.resolveApiKeyForUse(\n+            \"openai\", \"atlas\", MODEL, HOST, REF, name -> \"secret\"));\n+        for (String key : new String[]{\"env:PPIO_API_KEY\", \"plaintext\", \"\", null}) {\n+            assertThrows(IllegalArgumentException.class,\n+                () -> ChatModelCredentialPolicy.requirePersistableConfiguration(\"atlas\", MODEL, HOST, key));\n+        }\n+        assertThrows(IllegalStateException.class, () -> ChatModelCredentialPolicy.resolveApiKeyForUse(\n+            \"atlas\", \"atlas\", MODEL, HOST, REF, name -> null));\n+        assertThrows(IllegalArgumentException.class,\n+            () -> ChatModelCredentialPolicy.requirePersistableConfiguration(\"atlas\", \"bad model\", HOST, REF));\n+    }\n+}"
+    },
+    {
+      "sha": "6c540e9284bf479161100104a34b94970f90c675",
+      "filename": "ruoyi-modules/ruoyi-chat/src/main/java/org/ruoyi/controller/chat/MediaContentController.java",
+      "status": "added",
+      "additions": 44,
+      "deletions": 0,
+      "changes": 44,
+      "blob_url": "https://github.com/ageerle/ruoyi-ai/blob/cca30905778357e3aeb42b6adb65ef2384e75e60/ruoyi-modules%2Fruoyi-chat%2Fsrc%2Fmain%2Fjava%2Forg%2Fruoyi%2Fcontroller%2Fchat%2FMediaContentController.java",
+      "raw_url": "https://github.com/ageerle/ruoyi-ai/raw/cca30905778357e3aeb42b6adb65ef2384e75e60/ruoyi-modules%2Fruoyi-chat%2Fsrc%2Fmain%2Fjava%2Forg%2Fruoyi%2Fcontroller%2Fchat%2FMediaContentController.java",
+      "contents_url": "https://api.github.com/repos/ageerle/ruoyi-ai/contents/ruoyi-modules%2Fruoyi-chat%2Fsrc%2Fmain%2Fjava%2Forg%2Fruoyi%2Fcontroller%2Fchat%2FMediaContentController.java?ref=cca30905778357e3aeb42b6adb65ef2384e75e60",
+      "patch": "@@ -0,0 +1,44 @@\n+package org.ruoyi.controller.chat;\n+\n+import jakarta.validation.constraints.NotBlank;\n+import lombok.RequiredArgsConstructor;\n+import org.ruoyi.common.chat.service.chat.IChatModelService;\n+import org.ruoyi.service.media.AtlasMediaContentService;\n+import org.springframework.http.CacheControl;\n+import org.springframework.http.HttpHeaders;\n+import org.springframework.http.MediaType;\n+import org.springframework.http.ResponseEntity;\n+import org.springframework.validation.annotation.Validated;\n+import org.springframework.web.bind.annotation.GetMapping;\n+import org.springframework.web.bind.annotation.RequestMapping;\n+import org.springframework.web.bind.annotation.RequestParam;\n+import org.springframework.web.bind.annotation.RestController;\n+\n+import java.io.IOException;\n+\n+@Validated\n+@RestController\n+@RequiredArgsConstructor\n+@RequestMapping(\"/media\")\n+public class MediaContentController {\n+    private final IChatModelService models;\n+    private final AtlasMediaContentService content;\n+\n+    /** Uses the normal login interceptor; browser clients fetch with their Authorization header. */\n+    @GetMapping(\"/content\")\n+    public ResponseEntity<byte[]> content(@RequestParam @NotBlank String model,\n+                                          @RequestParam @NotBlank String predictionId) throws IOException {\n+        var configuredModel = models.selectModelByName(model);\n+        if (configuredModel == null) {\n+            throw new IllegalArgumentException(\"未找到模型配置\");\n+        }\n+        var result = content.retrieve(configuredModel, predictionId);\n+        return ResponseEntity.ok()\n+            .contentType(MediaType.parseMediaType(result.mimeType()))\n+            .contentLength(result.bytes().length)\n+            .cacheControl(CacheControl.noStore())\n+            .header(HttpHeaders.CONTENT_DISPOSITION, \"inline\")\n+            .header(\"X-Content-Type-Options\", \"nosniff\")\n+            .body(result.bytes());\n+    }\n+}"
+    },
+    {
+      "sha": "5bf7ea08553aa86e398735cc405007883730352e",
+      "filename": "ruoyi-modules/ruoyi-chat/src/main/java/org/ruoyi/controller/chat/MediaGenerationController.java",
+      "status": "modified",
+      "additions": 12,
+      "deletions": 8,
+      "changes": 20,
+      "blob_url": "https://github.com/ageerle/ruoyi-ai/blob/cca30905778357e3aeb42b6adb65ef2384e75e60/ruoyi-modules%2Fruoyi-chat%2Fsrc%2Fmain%2Fjava%2Forg%2Fruoyi%2Fcontroller%2Fchat%2FMediaGenerationController.java",
+      "raw_url": "https://github.com/ageerle/ruoyi-ai/raw/cca30905778357e3aeb42b6adb65ef2384e75e60/ruoyi-modules%2Fruoyi-chat%2Fsrc%2Fmain%2Fjava%2Forg%2Fruoyi%2Fcontroller%2Fchat%2FMediaGenerationController.java",
+      "contents_url": "https://api.github.com/repos/ageerle/ruoyi-ai/contents/ruoyi-modules%2Fruoyi-chat%2Fsrc%2Fmain%2Fjava%2Forg%2Fruoyi%2Fcontroller%2Fchat%2FMediaGenerationController.java?ref=cca30905778357e3aeb42b6adb65ef2384e75e60",
+      "patch": "@@ -56,14 +56,18 @@ public R<MediaGenerationResponse> speech(@Valid @RequestBody SpeechGenerationReq\n     @PostMapping(\"/image\")\n     public R<MediaGenerationResponse> image(@Valid @RequestBody ImageGenerationRequest request) {\n         ChatModelVo model = loadModel(request.getModel(), ModelType.IMAGE.getKey());\n-        String result = imageServiceFactory.getOriginalService(model.getProviderCode())\n-            .generateImage(ImageContext.builder()\n-                .chatModelVo(model)\n-                .prompt(request.getPrompt())\n-                .size(request.getSize())\n-                .seed(request.getSeed())\n-                .build());\n-        return R.ok(toImageResponse(result));\n+        ImageContext context = ImageContext.builder()\n+            .chatModelVo(model)\n+            .prompt(request.getPrompt())\n+            .size(request.getSize())\n+            .seed(request.getSeed())\n+            .build();\n+        var service = imageServiceFactory.getOriginalService(model.getProviderCode());\n+        // Atlas sync requests can outlive its gateway timeout. Return a task for the workbench to poll.\n+        if (\"atlas\".equals(model.getProviderCode())) {\n+            return R.ok(service.startImageGeneration(context));\n+        }\n+        return R.ok(toImageResponse(service.generateImage(context)));\n     }\n \n     @PostMapping(\"/video\")"
+    },
+    {
+      "sha": "75b7ecd59c1dbd86da17f3a3bf408bb1c3bea48c",
+      "filename": "ruoyi-modules/ruoyi-chat/src/main/java/org/ruoyi/service/media/AtlasMediaContentService.java",
+      "status": "added",
+      "additions": 97,
+      "deletions": 0,
+      "changes": 97,
+      "blob_url": "https://github.com/ageerle/ruoyi-ai/blob/cca30905778357e3aeb42b6adb65ef2384e75e60/ruoyi-modules%2Fruoyi-chat%2Fsrc%2Fmain%2Fjava%2Forg%2Fruoyi%2Fservice%2Fmedia%2FAtlasMediaContentService.java",
+      "raw_url": "https://github.com/ageerle/ruoyi-ai/raw/cca30905778357e3aeb42b6adb65ef2384e75e60/ruoyi-modules%2Fruoyi-chat%2Fsrc%2Fmain%2Fjava%2Forg%2Fruoyi%2Fservice%2Fmedia%2FAtlasMediaContentService.java",
+      "contents_url": "https://api.github.com/repos/ageerle/ruoyi-ai/contents/ruoyi-modules%2Fruoyi-chat%2Fsrc%2Fmain%2Fjava%2Forg%2Fruoyi%2Fservice%2Fmedia%2FAtlasMediaContentService.java?ref=cca30905778357e3aeb42b6adb65ef2384e75e60",
+      "patch": "@@ -0,0 +1,97 @@\n+package org.ruoyi.service.media;\n+\n+import okhttp3.HttpUrl;\n+import okhttp3.OkHttpClient;\n+import okhttp3.Request;\n+import okhttp3.Response;\n+import okhttp3.ResponseBody;\n+import org.ruoyi.common.chat.domain.vo.chat.ChatModelVo;\n+import org.springframework.beans.factory.annotation.Autowired;\n+import org.springframework.stereotype.Service;\n+\n+import java.io.IOException;\n+import java.util.Locale;\n+import java.util.Set;\n+import java.util.concurrent.TimeUnit;\n+\n+/** Delivers Atlas task outputs without exposing a general-purpose URL proxy. */\n+@Service\n+public class AtlasMediaContentService {\n+    static final int MAX_BYTES = 64 * 1024 * 1024;\n+    private static final Set<String> OUTPUT_HOSTS = Set.of(\n+        \"atlas-media.oss-us-west-1.aliyuncs.com\",\n+        \"ark-acg-ap-southeast-1.tos-ap-southeast-1.volces.com\"\n+    );\n+    private static final Set<String> MIME_TYPES = Set.of(\n+        \"image/jpeg\", \"image/png\", \"image/webp\", \"image/gif\",\n+        \"audio/mpeg\", \"audio/wav\", \"audio/x-wav\", \"audio/ogg\", \"audio/mp4\", \"audio/flac\",\n+        \"video/mp4\", \"video/webm\"\n+    );\n+\n+    private final AtlasPredictionService predictions;\n+    private final OkHttpClient client;\n+\n+    @Autowired\n+    public AtlasMediaContentService(AtlasPredictionService predictions) {\n+        this(predictions, new OkHttpClient.Builder()\n+            .followRedirects(false).followSslRedirects(false)\n+            .connectTimeout(15, TimeUnit.SECONDS)\n+            .readTimeout(60, TimeUnit.SECONDS)\n+            .callTimeout(90, TimeUnit.SECONDS)\n+            .build());\n+    }\n+\n+    AtlasMediaContentService(AtlasPredictionService predictions, OkHttpClient client) {\n+        this.predictions = predictions;\n+        this.client = client;\n+    }\n+\n+    public Content retrieve(ChatModelVo model, String predictionId) throws IOException {\n+        if (!\"atlas\".equals(model.getProviderCode())\n+            || !Set.of(\"image\", \"audio\", \"video\").contains(model.getCategory())) {\n+            throw new IllegalArgumentException(\"此模型不支持 Atlas 资源预览\");\n+        }\n+        if (predictionId == null || !predictionId.matches(\"[A-Za-z0-9_-]{1,128}\")) {\n+            throw new IllegalArgumentException(\"无效的任务 ID\");\n+        }\n+        // Resolve the output using this configured model's credentials, never a caller-supplied URL.\n+        var result = predictions.retrieve(model, predictionId);\n+        if (!Set.of(\"completed\", \"succeeded\", \"success\").contains(String.valueOf(result.getStatus()))\n+            || !predictionId.equals(result.getId())) {\n+            throw new IllegalArgumentException(\"任务尚未完成、已过期或不存在\");\n+        }\n+        HttpUrl url = checkedOutputUrl(result.getUrl());\n+        // The API key belongs only on the prediction API request, never on the media CDN request.\n+        Request request = new Request.Builder().url(url).get().build();\n+        try (Response response = client.newCall(request).execute()) {\n+            ResponseBody body = response.body();\n+            if (response.code() != 200 || body == null) {\n+                throw new IOException(\"资源服务暂不可用，请稍后重试\");\n+            }\n+            String mime = response.header(\"Content-Type\", \"\").split(\";\", 2)[0].trim().toLowerCase(Locale.ROOT);\n+            if (!MIME_TYPES.contains(mime) || !mime.startsWith(model.getCategory() + \"/\")) {\n+                throw new IOException(\"资源格式与模型类型不匹配或不支持预览\");\n+            }\n+            if (body.contentLength() > MAX_BYTES) {\n+                throw new IOException(\"资源超过 64 MiB 预览上限\");\n+            }\n+            byte[] bytes = body.byteStream().readNBytes(MAX_BYTES + 1);\n+            if (bytes.length == 0 || bytes.length > MAX_BYTES) {\n+                throw new IOException(\"资源为空或超过 64 MiB 预览上限\");\n+            }\n+            return new Content(bytes, mime);\n+        }\n+    }\n+\n+    static HttpUrl checkedOutputUrl(String value) {\n+        HttpUrl url = value == null ? null : HttpUrl.parse(value);\n+        if (url == null || !url.isHttps() || url.port() != 443\n+            || !url.username().isEmpty() || !url.password().isEmpty() || url.fragment() != null\n+            || !OUTPUT_HOSTS.contains(url.host())) {\n+            throw new IllegalArgumentException(\"资源地址不在 Atlas 预览白名单内\");\n+        }\n+        return url;\n+    }\n+\n+    public record Content(byte[] bytes, String mimeType) { }\n+}"
+    },
+    {
+      "sha": "d688979ab2a47d31bd342f3db3562c618b5f7361",
+      "filename": "ruoyi-modules/ruoyi-chat/src/main/java/org/ruoyi/service/media/AtlasPredictionService.java",
+      "status": "modified",
+      "additions": 25,
+      "deletions": 4,
+      "changes": 29,
+      "blob_url": "https://github.com/ageerle/ruoyi-ai/blob/cca30905778357e3aeb42b6adb65ef2384e75e60/ruoyi-modules%2Fruoyi-chat%2Fsrc%2Fmain%2Fjava%2Forg%2Fruoyi%2Fservice%2Fmedia%2FAtlasPredictionService.java",
+      "raw_url": "https://github.com/ageerle/ruoyi-ai/raw/cca30905778357e3aeb42b6adb65ef2384e75e60/ruoyi-modules%2Fruoyi-chat%2Fsrc%2Fmain%2Fjava%2Forg%2Fruoyi%2Fservice%2Fmedia%2FAtlasPredictionService.java",
+      "contents_url": "https://api.github.com/repos/ageerle/ruoyi-ai/contents/ruoyi-modules%2Fruoyi-chat%2Fsrc%2Fmain%2Fjava%2Forg%2Fruoyi%2Fservice%2Fmedia%2FAtlasPredictionService.java?ref=cca30905778357e3aeb42b6adb65ef2384e75e60",
+      "patch": "@@ -43,7 +43,8 @@ public MediaGenerationResponse retrieve(ChatModelVo model, String predictionId)\n                 log.warn(\"Atlas Cloud 预测任务不存在或已过期: predictionId={}, category={}\", predictionId, model.getCategory());\n                 return MediaGenerationResponse.builder()\n                     .type(mediaType(model.getCategory()))\n-                    .mimeType(\"image\".equals(model.getCategory()) ? \"image/png\" : \"video/mp4\")\n+                    .mimeType(mimeType(mediaType(model.getCategory()), null))\n+                    .id(predictionId)\n                     .status(\"failed\")\n                     .rawResponse(responseText)\n                     .build();\n@@ -71,7 +72,7 @@ public MediaGenerationResponse toResponse(String raw, String type) throws IOExce\n         }\n         return MediaGenerationResponse.builder()\n             .type(type)\n-            .mimeType(\"image\".equals(type) ? \"image/png\" : \"video/mp4\")\n+            .mimeType(mimeType(type, firstOutput(data)))\n             .id(AtlasMediaSupport.text(data, \"id\"))\n             .status(status)\n             .url(firstOutput(data))\n@@ -80,6 +81,22 @@ public MediaGenerationResponse toResponse(String raw, String type) throws IOExce\n             .build();\n     }\n \n+    private String mimeType(String type, String url) {\n+        String path = url == null ? \"\" : url.split(\"[?#]\", 2)[0].toLowerCase(java.util.Locale.ROOT);\n+        if (\"audio\".equals(type)) {\n+            if (path.endsWith(\".wav\")) return \"audio/wav\";\n+            if (path.endsWith(\".ogg\") || path.endsWith(\".opus\")) return \"audio/ogg\";\n+            if (path.endsWith(\".pcm\")) return \"application/octet-stream\";\n+            return \"audio/mpeg\";\n+        }\n+        if (\"image\".equals(type)) {\n+            if (path.endsWith(\".jpg\") || path.endsWith(\".jpeg\")) return \"image/jpeg\";\n+            if (path.endsWith(\".webp\")) return \"image/webp\";\n+            return \"image/png\";\n+        }\n+        return \"video/mp4\";\n+    }\n+\n     /**\n      * 提取末帧 URL。Atlas return_last_frame=true 时会在 outputs 或顶层节点返回末帧图片，\n      * 字段名兼容 last_frame_url / end_frame_url / last_frame / last_frame_image。\n@@ -128,7 +145,11 @@ private String firstOutput(JsonNode data) {\n         return null;\n     }\n \n-    private String mediaType(String category) {\n-        return \"image\".equals(category) ? \"image\" : \"video\";\n+    static String mediaType(String category) {\n+        return switch (category) {\n+            case \"image\" -> \"image\";\n+            case \"audio\" -> \"audio\";\n+            default -> \"video\";\n+        };\n     }\n }"
+    },
+    {
+      "sha": "081e332f264aabcf7b509bb6a860680b257a3938",
+      "filename": "ruoyi-modules/ruoyi-chat/src/test/java/org/ruoyi/controller/chat/MediaContentControllerTest.java",
+      "status": "added",
+      "additions": 29,
+      "deletions": 0,
+      "changes": 29,
+      "blob_url": "https://github.com/ageerle/ruoyi-ai/blob/cca30905778357e3aeb42b6adb65ef2384e75e60/ruoyi-modules%2Fruoyi-chat%2Fsrc%2Ftest%2Fjava%2Forg%2Fruoyi%2Fcontroller%2Fchat%2FMediaContentControllerTest.java",
+      "raw_url": "https://github.com/ageerle/ruoyi-ai/raw/cca30905778357e3aeb42b6adb65ef2384e75e60/ruoyi-modules%2Fruoyi-chat%2Fsrc%2Ftest%2Fjava%2Forg%2Fruoyi%2Fcontroller%2Fchat%2FMediaContentControllerTest.java",
+      "contents_url": "https://api.github.com/repos/ageerle/ruoyi-ai/contents/ruoyi-modules%2Fruoyi-chat%2Fsrc%2Ftest%2Fjava%2Forg%2Fruoyi%2Fcontroller%2Fchat%2FMediaContentControllerTest.java?ref=cca30905778357e3aeb42b6adb65ef2384e75e60",
+      "patch": "@@ -0,0 +1,29 @@\n+package org.ruoyi.controller.chat;\n+\n+import org.junit.jupiter.api.Tag;\n+import org.junit.jupiter.api.Test;\n+import org.ruoyi.common.chat.domain.vo.chat.ChatModelVo;\n+import org.ruoyi.common.chat.service.chat.IChatModelService;\n+import org.ruoyi.service.media.AtlasMediaContentService;\n+\n+import static org.junit.jupiter.api.Assertions.*;\n+import static org.mockito.Mockito.*;\n+\n+@Tag(\"dev\")\n+class MediaContentControllerTest {\n+    @Test\n+    void returnsInlineNonCachedBytes() throws Exception {\n+        var models = mock(IChatModelService.class);\n+        var service = mock(AtlasMediaContentService.class);\n+        var model = new ChatModelVo();\n+        when(models.selectModelByName(\"image-model\")).thenReturn(model);\n+        when(service.retrieve(model, \"task-123\")).thenReturn(new AtlasMediaContentService.Content(new byte[]{1, 2}, \"image/jpeg\"));\n+        var result = new MediaContentController(models, service).content(\"image-model\", \"task-123\");\n+        assertEquals(\"image/jpeg\", result.getHeaders().getContentType().toString());\n+        assertEquals(\"inline\", result.getHeaders().getFirst(\"Content-Disposition\"));\n+        assertEquals(\"no-store\", result.getHeaders().getCacheControl());\n+        assertEquals(\"nosniff\", result.getHeaders().getFirst(\"X-Content-Type-Options\"));\n+        assertEquals(2, result.getHeaders().getContentLength());\n+        assertArrayEquals(new byte[]{1, 2}, result.getBody());\n+    }\n+}"
+    },
+    {
+      "sha": "45804425822c36a9072e136af296be0a4b2c7a58",
+      "filename": "ruoyi-modules/ruoyi-chat/src/test/java/org/ruoyi/controller/chat/MediaGenerationControllerTest.java",
+      "status": "added",
+      "additions": 65,
+      "deletions": 0,
+      "changes": 65,
+      "blob_url": "https://github.com/ageerle/ruoyi-ai/blob/cca30905778357e3aeb42b6adb65ef2384e75e60/ruoyi-modules%2Fruoyi-chat%2Fsrc%2Ftest%2Fjava%2Forg%2Fruoyi%2Fcontroller%2Fchat%2FMediaGenerationControllerTest.java",
+      "raw_url": "https://github.com/ageerle/ruoyi-ai/raw/cca30905778357e3aeb42b6adb65ef2384e75e60/ruoyi-modules%2Fruoyi-chat%2Fsrc%2Ftest%2Fjava%2Forg%2Fruoyi%2Fcontroller%2Fchat%2FMediaGenerationControllerTest.java",
+      "contents_url": "https://api.github.com/repos/ageerle/ruoyi-ai/contents/ruoyi-modules%2Fruoyi-chat%2Fsrc%2Ftest%2Fjava%2Forg%2Fruoyi%2Fcontroller%2Fchat%2FMediaGenerationControllerTest.java?ref=cca30905778357e3aeb42b6adb65ef2384e75e60",
+      "patch": "@@ -0,0 +1,65 @@\n+package org.ruoyi.controller.chat;\n+\n+import org.junit.jupiter.api.Tag;\n+import org.junit.jupiter.api.Test;\n+import org.ruoyi.common.chat.domain.vo.chat.ChatModelVo;\n+import org.ruoyi.common.chat.entity.media.MediaGenerationResponse;\n+import org.ruoyi.common.chat.factory.ImageServiceFactory;\n+import org.ruoyi.common.chat.service.chat.IChatModelService;\n+import org.ruoyi.common.chat.service.image.IImageGenerationService;\n+import org.ruoyi.domain.bo.media.ImageGenerationRequest;\n+import org.ruoyi.service.media.AtlasPredictionService;\n+\n+import static org.junit.jupiter.api.Assertions.assertEquals;\n+import static org.mockito.ArgumentMatchers.any;\n+import static org.mockito.Mockito.*;\n+\n+@Tag(\"dev\")\n+class MediaGenerationControllerTest {\n+    @Test\n+    void returnsAtlasTaskWithoutBlockingForImage() {\n+        var models = mock(IChatModelService.class);\n+        var factory = mock(ImageServiceFactory.class);\n+        var service = mock(IImageGenerationService.class);\n+        var model = model(\"atlas\");\n+        when(models.selectModelByName(\"test-image\")).thenReturn(model);\n+        when(factory.getOriginalService(\"atlas\")).thenReturn(service);\n+        when(service.startImageGeneration(any())).thenReturn(MediaGenerationResponse.builder()\n+            .id(\"task-123\").type(\"image\").status(\"pending\").build());\n+        var controller = new MediaGenerationController(models, null, factory, null, new AtlasPredictionService());\n+        var result = controller.image(request()).getData();\n+        assertEquals(\"task-123\", result.getId());\n+        assertEquals(\"pending\", result.getStatus());\n+        verify(service, never()).generateImage(any());\n+    }\n+\n+    @Test\n+    void preservesOtherProvidersBase64ImageResponse() {\n+        var models = mock(IChatModelService.class);\n+        var factory = mock(ImageServiceFactory.class);\n+        var service = mock(IImageGenerationService.class);\n+        when(models.selectModelByName(\"test-image\")).thenReturn(model(\"openai\"));\n+        when(factory.getOriginalService(\"openai\")).thenReturn(service);\n+        when(service.generateImage(any())).thenReturn(\"data:image/png;base64,aGVsbG8=\");\n+        var controller = new MediaGenerationController(models, null, factory, null, new AtlasPredictionService());\n+        var result = controller.image(request()).getData();\n+        assertEquals(\"image/png\", result.getMimeType());\n+        assertEquals(\"aGVsbG8=\", result.getB64Json());\n+        verify(service, never()).startImageGeneration(any());\n+    }\n+\n+    private ChatModelVo model(String provider) {\n+        var model = new ChatModelVo();\n+        model.setModelName(\"test-image\");\n+        model.setProviderCode(provider);\n+        model.setCategory(\"image\");\n+        return model;\n+    }\n+\n+    private ImageGenerationRequest request() {\n+        var request = new ImageGenerationRequest();\n+        request.setModel(\"test-image\");\n+        request.setPrompt(\"a blue book\");\n+        return request;\n+    }\n+}"
+    },
+    {
+      "sha": "1d10b88483d6004a84a282e6fcec75126fe1c8ca",
+      "filename": "ruoyi-modules/ruoyi-chat/src/test/java/org/ruoyi/service/media/AtlasMediaContentServiceTest.java",
+      "status": "added",
+      "additions": 119,
+      "deletions": 0,
+      "changes": 119,
+      "blob_url": "https://github.com/ageerle/ruoyi-ai/blob/cca30905778357e3aeb42b6adb65ef2384e75e60/ruoyi-modules%2Fruoyi-chat%2Fsrc%2Ftest%2Fjava%2Forg%2Fruoyi%2Fservice%2Fmedia%2FAtlasMediaContentServiceTest.java",
+      "raw_url": "https://github.com/ageerle/ruoyi-ai/raw/cca30905778357e3aeb42b6adb65ef2384e75e60/ruoyi-modules%2Fruoyi-chat%2Fsrc%2Ftest%2Fjava%2Forg%2Fruoyi%2Fservice%2Fmedia%2FAtlasMediaContentServiceTest.java",
+      "contents_url": "https://api.github.com/repos/ageerle/ruoyi-ai/contents/ruoyi-modules%2Fruoyi-chat%2Fsrc%2Ftest%2Fjava%2Forg%2Fruoyi%2Fservice%2Fmedia%2FAtlasMediaContentServiceTest.java?ref=cca30905778357e3aeb42b6adb65ef2384e75e60",
+      "patch": "@@ -0,0 +1,119 @@\n+package org.ruoyi.service.media;\n+\n+import okhttp3.Call;\n+import okhttp3.MediaType;\n+import okhttp3.OkHttpClient;\n+import okhttp3.Protocol;\n+import okhttp3.Request;\n+import okhttp3.Response;\n+import okhttp3.ResponseBody;\n+import org.junit.jupiter.api.Tag;\n+import org.junit.jupiter.api.Test;\n+import org.mockito.ArgumentCaptor;\n+import org.ruoyi.common.chat.domain.vo.chat.ChatModelVo;\n+import org.ruoyi.common.chat.entity.media.MediaGenerationResponse;\n+\n+import java.io.IOException;\n+\n+import static org.junit.jupiter.api.Assertions.*;\n+import static org.mockito.ArgumentMatchers.any;\n+import static org.mockito.Mockito.*;\n+\n+@Tag(\"dev\")\n+class AtlasMediaContentServiceTest {\n+    private static final String URL = \"https://atlas-media.oss-us-west-1.aliyuncs.com/assetd-history/result.mp3\";\n+    private final AtlasPredictionService predictions = mock(AtlasPredictionService.class);\n+    private final OkHttpClient client = mock(OkHttpClient.class);\n+    private final AtlasMediaContentService service = new AtlasMediaContentService(predictions, client);\n+\n+    @Test\n+    void servesMediaBytesWithoutForwardingCredentialsOrDownloadHeaders() throws Exception {\n+        var model = model();\n+        model.setApiKey(\"env:ATLAS_API_KEY\");\n+        completed(model);\n+        respond(200, ResponseBody.create(\"ID3audio\", MediaType.get(\"audio/mpeg\")), \"audio/mpeg\");\n+        var content = service.retrieve(model, \"task-123\");\n+        assertEquals(\"audio/mpeg\", content.mimeType());\n+        assertArrayEquals(\"ID3audio\".getBytes(), content.bytes());\n+        var capture = ArgumentCaptor.forClass(Request.class);\n+        verify(client).newCall(capture.capture());\n+        assertEquals(URL, capture.getValue().url().toString());\n+        assertNull(capture.getValue().header(\"Authorization\"));\n+        assertNull(capture.getValue().header(\"Cookie\"));\n+    }\n+\n+    @Test\n+    void rejectsUntrustedUrlsAndNonHttpsVariants() {\n+        for (String url : new String[]{\"http://atlas-media.oss-us-west-1.aliyuncs.com/a.mp3\",\n+            \"https://127.0.0.1/a\", \"https://atlas-media.oss-us-west-1.aliyuncs.com.evil.test/a\",\n+            \"https://user@atlas-media.oss-us-west-1.aliyuncs.com/a\",\n+            \"https://atlas-media.oss-us-west-1.aliyuncs.com:8443/a\",\n+            \"https://atlas-media.oss-us-west-1.aliyuncs.com/a#fragment\", \"file:///etc/passwd\"}) {\n+            assertThrows(IllegalArgumentException.class, () -> AtlasMediaContentService.checkedOutputUrl(url));\n+        }\n+        assertEquals(\"atlas-media.oss-us-west-1.aliyuncs.com\", AtlasMediaContentService.checkedOutputUrl(URL).host());\n+    }\n+\n+    @Test\n+    void rejectsInvalidIdsAndOtherProvidersBeforeMakingRequests() {\n+        var model = model();\n+        assertThrows(IllegalArgumentException.class, () -> service.retrieve(model, \"../task?url=bad\"));\n+        model.setProviderCode(\"openai\");\n+        assertThrows(IllegalArgumentException.class, () -> service.retrieve(model, \"task-123\"));\n+        verifyNoInteractions(predictions, client);\n+    }\n+\n+    @Test\n+    void rejectsUnfinishedOrMismatchedTasksBeforeFetchingContent() {\n+        var model = model();\n+        when(predictions.retrieve(model, \"task-123\")).thenReturn(MediaGenerationResponse.builder()\n+            .id(\"task-123\").status(\"processing\").url(URL).build());\n+        assertThrows(IllegalArgumentException.class, () -> service.retrieve(model, \"task-123\"));\n+        when(predictions.retrieve(model, \"task-123\")).thenReturn(MediaGenerationResponse.builder()\n+            .id(\"different\").status(\"completed\").url(URL).build());\n+        assertThrows(IllegalArgumentException.class, () -> service.retrieve(model, \"task-123\"));\n+        verifyNoInteractions(client);\n+    }\n+\n+    @Test\n+    void rejectsRedirectsAndHtmlResponses() throws Exception {\n+        var model = model();\n+        completed(model);\n+        respond(302, ResponseBody.create(\"\", MediaType.get(\"audio/mpeg\")), \"audio/mpeg\");\n+        assertThrows(IOException.class, () -> service.retrieve(model, \"task-123\"));\n+        respond(200, ResponseBody.create(\"<html>error</html>\", MediaType.get(\"text/html\")), \"text/html\");\n+        assertThrows(IOException.class, () -> service.retrieve(model, \"task-123\"));\n+    }\n+\n+    @Test\n+    void rejectsOversizedContentBeforeReadingTheBody() throws Exception {\n+        var model = model();\n+        completed(model);\n+        var body = mock(ResponseBody.class);\n+        when(body.contentLength()).thenReturn((long) AtlasMediaContentService.MAX_BYTES + 1);\n+        respond(200, body, \"audio/mpeg\");\n+        assertThrows(IOException.class, () -> service.retrieve(model, \"task-123\"));\n+        verify(body, never()).byteStream();\n+    }\n+\n+    private ChatModelVo model() {\n+        var model = new ChatModelVo();\n+        model.setCategory(\"audio\");\n+        model.setProviderCode(\"atlas\");\n+        return model;\n+    }\n+\n+    private void completed(ChatModelVo model) {\n+        when(predictions.retrieve(model, \"task-123\")).thenReturn(MediaGenerationResponse.builder()\n+            .id(\"task-123\").status(\"completed\").url(URL).build());\n+    }\n+\n+    private void respond(int status, ResponseBody body, String type) throws IOException {\n+        Call call = mock(Call.class);\n+        when(client.newCall(any())).thenReturn(call);\n+        when(call.execute()).thenReturn(new Response.Builder().request(new Request.Builder().url(URL).build())\n+            .protocol(Protocol.HTTP_1_1).code(status).message(\"test\").body(body)\n+            .header(\"Content-Type\", type).header(\"Content-Disposition\", \"attachment\")\n+            .header(\"x-oss-force-download\", \"true\").header(\"Location\", \"http://127.0.0.1/private\").build());\n+    }\n+}"
+    },
+    {
+      "sha": "6f6b93b9958d75be688de15c9406b8e54c37a57f",
+      "filename": "ruoyi-modules/ruoyi-chat/src/test/java/org/ruoyi/service/media/AtlasPredictionServiceTest.java",
+      "status": "added",
+      "additions": 26,
+      "deletions": 0,
+      "changes": 26,
+      "blob_url": "https://github.com/ageerle/ruoyi-ai/blob/cca30905778357e3aeb42b6adb65ef2384e75e60/ruoyi-modules%2Fruoyi-chat%2Fsrc%2Ftest%2Fjava%2Forg%2Fruoyi%2Fservice%2Fmedia%2FAtlasPredictionServiceTest.java",
+      "raw_url": "https://github.com/ageerle/ruoyi-ai/raw/cca30905778357e3aeb42b6adb65ef2384e75e60/ruoyi-modules%2Fruoyi-chat%2Fsrc%2Ftest%2Fjava%2Forg%2Fruoyi%2Fservice%2Fmedia%2FAtlasPredictionServiceTest.java",
+      "contents_url": "https://api.github.com/repos/ageerle/ruoyi-ai/contents/ruoyi-modules%2Fruoyi-chat%2Fsrc%2Ftest%2Fjava%2Forg%2Fruoyi%2Fservice%2Fmedia%2FAtlasPredictionServiceTest.java?ref=cca30905778357e3aeb42b6adb65ef2384e75e60",
+      "patch": "@@ -0,0 +1,26 @@\n+package org.ruoyi.service.media;\n+\n+import org.junit.jupiter.api.Tag;\n+import org.junit.jupiter.api.Test;\n+\n+import static org.junit.jupiter.api.Assertions.assertEquals;\n+\n+@Tag(\"dev\")\n+class AtlasPredictionServiceTest {\n+    @Test\n+    void keepsAudioTypeAndMimeThroughPolling() throws Exception {\n+        var service = new AtlasPredictionService();\n+        assertEquals(\"audio\", AtlasPredictionService.mediaType(\"audio\"));\n+        assertEquals(\"image\", AtlasPredictionService.mediaType(\"image\"));\n+        assertEquals(\"video\", AtlasPredictionService.mediaType(\"video\"));\n+        var pending = service.toResponse(\"{\\\"data\\\":{\\\"id\\\":\\\"task-123\\\",\\\"status\\\":\\\"processing\\\"}}\", \"audio\");\n+        assertEquals(\"audio\", pending.getType());\n+        assertEquals(\"audio/mpeg\", pending.getMimeType());\n+        assertEquals(\"task-123\", pending.getId());\n+        for (String[] sample : new String[][]{{\"mp3\", \"audio/mpeg\"}, {\"wav\", \"audio/wav\"}, {\"ogg\", \"audio/ogg\"}}) {\n+            var complete = service.toResponse(\"{\\\"data\\\":{\\\"status\\\":\\\"completed\\\",\\\"outputs\\\":[\\\"https://example.com/result.\"\n+                + sample[0] + \"?token=test\\\"]}}\", \"audio\");\n+            assertEquals(sample[1], complete.getMimeType());\n+        }\n+    }\n+}"
+    }
+  ]
+}

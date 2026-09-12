@@ -1,0 +1,924 @@
+{
+  "schema_version": "1.0",
+  "generated_at_utc": "2026-09-11T15:04:31.206707+00:00",
+  "status": "RESEARCH_COMPLETED_DESIGN_PROPOSAL_ONLY",
+  "scope": "OA AI体验与产品融合研究，仅新增两个文件",
+  "workspace_root": "/Users/mac/Documents/OA数字员工协作平台",
+  "staffdeck_root": "/Users/mac/Documents/StaffDeck-main",
+  "provenance": {
+    "workspace_git": "not_a_git_repository",
+    "staffdeck_git": "not_a_git_repository",
+    "staffdeck_local_version": "0.1.0 package metadata; release/commit unknown",
+    "staffdeck_public_snapshot": "GitHub README announces v0.5.0 on 2026-09-01; local equivalence unproven",
+    "semantic_probe": "INDEX_MISSING; used rg fallback; no index created"
+  },
+  "sources": [
+    {
+      "id": "Q01",
+      "title": "QoderWake CN 产品简介",
+      "url": "https://docs.qoder.cn/qoderwake/overview",
+      "owner": "Qoder",
+      "source_type": "primary_web",
+      "web_text_line_ranges": [
+        [
+          153,
+          203
+        ],
+        [
+          222,
+          229
+        ]
+      ],
+      "quote": "只添加完成首个验证任务需要的 Skill、连接器、知识库和项目。",
+      "finding": "预置角色、最小资源、逐步扩展；区域与账号能力有差异。",
+      "source_hash": "4dcb9d634916f6fdccb2233f85e105b02088b0eeb3cf886de36ed481c9ba532b",
+      "hash_kind": "sha256_http_response_body",
+      "fetched_at_utc": "2026-09-11T15:05:46.069222+00:00",
+      "http_status": 200,
+      "initial_capture_error": "Python urllib SSL certificate validation failed; no verification bypass used",
+      "resolved_url": "https://docs.qoder.cn/qoderwake/overview",
+      "body_bytes": 736788,
+      "capture_method": "system curl with default certificate validation"
+    },
+    {
+      "id": "Q02",
+      "title": "QoderWake @Waker",
+      "url": "https://docs.qoder.com/zh/qoderwake/im-configuration",
+      "owner": "Qoder",
+      "source_type": "primary_web",
+      "web_text_line_ranges": [
+        [
+          115,
+          145
+        ],
+        [
+          181,
+          207
+        ]
+      ],
+      "quote": "成员仍然只需要面对同一个机器人，不必了解后台分工。",
+      "finding": "统一入口后按职责路由；聊天配对、身份授权和执行者配置分别维护。",
+      "source_hash": null,
+      "hash_kind": null,
+      "fetched_at_utc": "2026-09-11T15:04:31.206707+00:00",
+      "http_status": null,
+      "capture_error": "curl exit 28",
+      "initial_capture_error": "Python urllib SSL certificate validation failed; no verification bypass used"
+    },
+    {
+      "id": "Q03",
+      "title": "QoderWake CN 自主工作",
+      "url": "https://docs.qoder.cn/qoderwake/automated-tasks",
+      "owner": "Qoder",
+      "source_type": "primary_web",
+      "web_text_line_ranges": [
+        [
+          63,
+          88
+        ],
+        [
+          98,
+          120
+        ],
+        [
+          254,
+          272
+        ],
+        [
+          321,
+          369
+        ]
+      ],
+      "quote": "列表中的“已完成”表示某次运行结束，不代表业务结果一定正确。",
+      "finding": "触发与编排分工；有限次数/截止日期、触发验证和实际产物验收；暂停不停止已有运行。",
+      "source_hash": "fc275b9ba40876f877804b441129139ea0f1f322c93ac7aee3fad6661b422dad",
+      "hash_kind": "sha256_http_response_body",
+      "fetched_at_utc": "2026-09-11T15:05:46.071678+00:00",
+      "http_status": 200,
+      "initial_capture_error": "Python urllib SSL certificate validation failed; no verification bypass used",
+      "resolved_url": "https://docs.qoder.cn/qoderwake/automated-tasks",
+      "body_bytes": 797318,
+      "capture_method": "system curl with default certificate validation"
+    },
+    {
+      "id": "Q04",
+      "title": "QoderWake CN 记忆系统",
+      "url": "https://docs.qoder.cn/qoderwake/memory",
+      "owner": "Qoder",
+      "source_type": "primary_web",
+      "web_text_line_ranges": [
+        [
+          63,
+          107
+        ],
+        [
+          112,
+          156
+        ]
+      ],
+      "quote": "同一规则只在最小必要范围保存",
+      "finding": "分范围、来源与时间线；编辑、版本比较和回滚；自动学习仍需抽查。",
+      "source_hash": "d4cbb4329e39ec4a7ab68a1ac0fa3f7abc33fb8865215fe1ea0c2ee9f905e707",
+      "hash_kind": "sha256_http_response_body",
+      "fetched_at_utc": "2026-09-11T15:05:46.071990+00:00",
+      "http_status": 200,
+      "initial_capture_error": "Python urllib SSL certificate validation failed; no verification bypass used",
+      "resolved_url": "https://docs.qoder.cn/qoderwake/memory",
+      "body_bytes": 730705,
+      "capture_method": "system curl with default certificate validation"
+    },
+    {
+      "id": "Q05",
+      "title": "QoderWake CN 知识库",
+      "url": "https://docs.qoder.cn/qoderwake/knowledge-base",
+      "owner": "Qoder",
+      "source_type": "primary_web",
+      "web_text_line_ranges": [
+        [
+          63,
+          80
+        ],
+        [
+          120,
+          156
+        ],
+        [
+          193,
+          224
+        ]
+      ],
+      "quote": "自动编译只负责生成知识卡，不替代资料质量检查和业务验收。",
+      "finding": "原资料/结构化卡片分离；解析与可检索分离；绑定及成员权限独立。",
+      "source_hash": "ee7b1ef3b338f50db27111eca7a1722fe06064f0068659cf3fab16299db75867",
+      "hash_kind": "sha256_http_response_body",
+      "fetched_at_utc": "2026-09-11T15:05:46.073831+00:00",
+      "http_status": 200,
+      "initial_capture_error": "Python urllib SSL certificate validation failed; no verification bypass used",
+      "resolved_url": "https://docs.qoder.cn/qoderwake/knowledge-base",
+      "body_bytes": 743212,
+      "capture_method": "system curl with default certificate validation"
+    },
+    {
+      "id": "Q06",
+      "title": "QoderWake CN Waker 管理",
+      "url": "https://docs.qoder.cn/qoderwake/manage-wakers",
+      "owner": "Qoder",
+      "source_type": "primary_web",
+      "web_text_line_ranges": [
+        [
+          63,
+          67
+        ],
+        [
+          106,
+          126
+        ]
+      ],
+      "quote": "预置角色已经包含建议的职责、工作方式和基础能力",
+      "finding": "先基于预置岗位创建，再按任务补充能力与环境。",
+      "source_hash": "8b7aa3c1f8b23a434d77005058a08c9b55d9888b6777c2a34f0a72f6b99470c4",
+      "hash_kind": "sha256_http_response_body",
+      "fetched_at_utc": "2026-09-11T15:05:46.074455+00:00",
+      "http_status": 200,
+      "initial_capture_error": "Python urllib SSL certificate validation failed; no verification bypass used",
+      "resolved_url": "https://docs.qoder.cn/qoderwake/manage-wakers",
+      "body_bytes": 764184,
+      "capture_method": "system curl with default certificate validation"
+    },
+    {
+      "id": "SD-PUBLIC",
+      "title": "OpenBMB/StaffDeck 公开仓库",
+      "url": "https://github.com/OpenBMB/StaffDeck",
+      "owner": "OpenBMB",
+      "source_type": "primary_web",
+      "web_text_line_ranges": [
+        [
+          186,
+          198
+        ]
+      ],
+      "quote": "Document-structure-aware knowledge retrieval",
+      "finding": "公开README描述SOP、层次检索、Trace、人工接管与反馈；不等于本地源码版本确认。",
+      "source_hash": "a04709e6afb4515d15fc6d4d603c85af10364d2427f2aad637610786b701baf1",
+      "hash_kind": "sha256_http_response_body",
+      "fetched_at_utc": "2026-09-11T15:05:46.076076+00:00",
+      "http_status": 200,
+      "initial_capture_error": "Python urllib SSL certificate validation failed; no verification bypass used",
+      "resolved_url": "https://github.com/OpenBMB/StaffDeck",
+      "body_bytes": 405650,
+      "capture_method": "system curl with default certificate validation"
+    },
+    {
+      "id": "SD-RAW",
+      "title": "StaffDeck 公开中文 README",
+      "url": "https://raw.githubusercontent.com/OpenBMB/StaffDeck/main/README.zh.md",
+      "owner": "OpenBMB",
+      "source_type": "primary_web",
+      "web_text_line_ranges": [],
+      "quote": "",
+      "finding": "公开原始文件可访问；与本地README的hash比较另记。",
+      "source_hash": "ea68d3c21c3967e2fe7a3d6850aed9f20703c5ea1d85ab339255f6670583f37d",
+      "hash_kind": "sha256_http_response_body",
+      "fetched_at_utc": "2026-09-11T15:05:46.080097+00:00",
+      "http_status": 200,
+      "initial_capture_error": "Python urllib SSL certificate validation failed; no verification bypass used",
+      "resolved_url": "https://raw.githubusercontent.com/OpenBMB/StaffDeck/main/README.zh.md",
+      "body_bytes": 18121,
+      "capture_method": "system curl with default certificate validation",
+      "matches_local_readme": false
+    },
+    {
+      "id": "SD-SITE",
+      "title": "StaffDeck 官网",
+      "url": "https://staffdeck.openbmb.cn/",
+      "owner": "OpenBMB",
+      "source_type": "primary_web",
+      "web_text_line_ranges": [],
+      "quote": "",
+      "finding": "web工具页面正文为0行；仅用于核对官网入口，不能当作功能独立证据。",
+      "source_hash": "15b0475ec4222c3a0fbc95ce814d6d90773d447ad36d61fd166b0935a8e0ce43",
+      "hash_kind": "sha256_http_response_body",
+      "fetched_at_utc": "2026-09-11T15:05:46.211347+00:00",
+      "http_status": 200,
+      "initial_capture_error": "Python urllib SSL certificate validation failed; no verification bypass used",
+      "resolved_url": "https://staffdeck.openbmb.cn/",
+      "body_bytes": 618,
+      "capture_method": "system curl with default certificate validation"
+    },
+    {
+      "id": "H01",
+      "title": "Microsoft Guidelines for Human-AI Interaction",
+      "url": "https://www.microsoft.com/en-us/research/articles/guidelines-for-human-ai-interaction-eighteen-best-practices-for-human-centered-ai-design/",
+      "owner": "Microsoft Research",
+      "source_type": "primary_web",
+      "web_text_line_ranges": [
+        [
+          24,
+          31
+        ],
+        [
+          37,
+          61
+        ],
+        [
+          67,
+          80
+        ]
+      ],
+      "quote": "Update and adapt cautiously.",
+      "finding": "能力边界、情境时机、易于纠正/忽略、谨慎变化、全局控制。",
+      "source_hash": "1445f051e9b8d389bf2059cfe5cf6c5b6a27f979e0faf89b31bedb1a5960831f",
+      "hash_kind": "sha256_http_response_body",
+      "fetched_at_utc": "2026-09-11T15:05:46.515318+00:00",
+      "http_status": 200,
+      "initial_capture_error": "Python urllib SSL certificate validation failed; no verification bypass used",
+      "resolved_url": "https://www.microsoft.com/en-us/research/articles/guidelines-for-human-ai-interaction-eighteen-best-practices-for-human-centered-ai-design/",
+      "body_bytes": 200231,
+      "capture_method": "system curl with default certificate validation"
+    },
+    {
+      "id": "H02",
+      "title": "Google PAIR Feedback + Control",
+      "url": "https://pair.withgoogle.com/guidebook-v2/chapter/feedback-controls/",
+      "owner": "Google PAIR",
+      "source_type": "primary_web",
+      "web_text_line_ranges": [
+        [
+          70,
+          74
+        ],
+        [
+          165,
+          208
+        ]
+      ],
+      "quote": "Not every action can be interpreted in the same way.",
+      "finding": "隐式反馈含义不唯一；说明反馈用途、影响范围及生效时间，可修改/重置。",
+      "source_hash": "9ad83f707b4f0c6847bbabf6c136a0f6cc819d17c5f7e64f783249e6ff27fcff",
+      "hash_kind": "sha256_http_response_body",
+      "fetched_at_utc": "2026-09-11T15:05:46.563442+00:00",
+      "http_status": 200,
+      "initial_capture_error": "Python urllib SSL certificate validation failed; no verification bypass used",
+      "resolved_url": "https://pair.withgoogle.com/guidebook-v2/chapter/feedback-controls/",
+      "body_bytes": 49644,
+      "capture_method": "system curl with default certificate validation"
+    },
+    {
+      "id": "H03",
+      "title": "Progressive Disclosure",
+      "url": "https://www.nngroup.com/articles/progressive-disclosure/",
+      "owner": "Nielsen Norman Group",
+      "source_type": "primary_web",
+      "web_text_line_ranges": [
+        [
+          48,
+          61
+        ],
+        [
+          75,
+          87
+        ]
+      ],
+      "quote": "Initially, show users only a few of the most important options.",
+      "finding": "优先呈现常用决策，按需打开高级选项；并未规定一级导航恰为4个。",
+      "source_hash": "704fe924fed0ccae22d094f3cc576b9b8f69972bc8cf7d6efb50ce74a9c45cf0",
+      "hash_kind": "sha256_http_response_body",
+      "fetched_at_utc": "2026-09-11T15:05:46.566786+00:00",
+      "http_status": 200,
+      "initial_capture_error": "Python urllib SSL certificate validation failed; no verification bypass used",
+      "resolved_url": "https://www.nngroup.com/articles/progressive-disclosure/",
+      "body_bytes": 127596,
+      "capture_method": "system curl with default certificate validation"
+    },
+    {
+      "id": "S01",
+      "title": "Power BI Prepare your data for AI",
+      "url": "https://learn.microsoft.com/en-us/power-bi/create-reports/copilot-prepare-data-ai",
+      "owner": "Microsoft Learn",
+      "source_type": "primary_web",
+      "web_text_line_ranges": [
+        [
+          31,
+          46
+        ],
+        [
+          85,
+          105
+        ],
+        [
+          145,
+          150
+        ]
+      ],
+      "quote": "AI behavior is nondeterministic.",
+      "finding": "语义模型结合AI数据schema、验证答案和指令；可查看回答依据；准备数据不能保证每次正确。",
+      "source_hash": "3826c1a3a9edfeb09662ae6b8ccf7143c8256193d3ea970cf683a5a35e9470d4",
+      "hash_kind": "sha256_http_response_body",
+      "fetched_at_utc": "2026-09-11T15:05:46.581986+00:00",
+      "http_status": 200,
+      "initial_capture_error": "Python urllib SSL certificate validation failed; no verification bypass used",
+      "resolved_url": "https://learn.microsoft.com/en-us/power-bi/create-reports/copilot-prepare-data-ai",
+      "body_bytes": 62372,
+      "capture_method": "system curl with default certificate validation"
+    },
+    {
+      "id": "S02",
+      "title": "Fabric data agent concepts",
+      "url": "https://learn.microsoft.com/en-us/fabric/data-science/concept-data-agent",
+      "owner": "Microsoft Learn",
+      "source_type": "primary_web",
+      "web_text_line_ranges": [
+        [
+          43,
+          63
+        ],
+        [
+          74,
+          90
+        ],
+        [
+          121,
+          132
+        ]
+      ],
+      "quote": "The Fabric data agent strictly enforces read-only access",
+      "finding": "用户权限下选择数据源、生成并校验查询；自然语言不改变权限边界。",
+      "source_hash": "13cff0a55a8bd4b5b053c1eeefb09dc87cb6c7940f1ac5a6582c77ecc9501199",
+      "hash_kind": "sha256_http_response_body",
+      "fetched_at_utc": "2026-09-11T15:05:46.812459+00:00",
+      "http_status": 200,
+      "initial_capture_error": "Python urllib SSL certificate validation failed; no verification bypass used",
+      "resolved_url": "https://learn.microsoft.com/en-us/fabric/data-science/concept-data-agent",
+      "body_bytes": 70770,
+      "capture_method": "system curl with default certificate validation"
+    },
+    {
+      "id": "S03",
+      "title": "PROV-O: The PROV Ontology",
+      "url": "https://www.w3.org/TR/prov-o/",
+      "owner": "W3C",
+      "source_type": "primary_web",
+      "web_text_line_ranges": [
+        [
+          118,
+          151
+        ],
+        [
+          215,
+          220
+        ],
+        [
+          2707,
+          2741
+        ]
+      ],
+      "quote": "Starting Point Terms",
+      "finding": "可增量使用Entity、Activity、Agent及来源、衍生、修订关系；并不要求一次实现完整本体。",
+      "source_hash": "6b96671ab84faf12ce3f041aca12c3f93a6df2ed242348810743179a68e69555",
+      "hash_kind": "sha256_http_response_body",
+      "fetched_at_utc": "2026-09-11T15:05:47.219657+00:00",
+      "http_status": 200,
+      "initial_capture_error": "Python urllib SSL certificate validation failed; no verification bypass used",
+      "resolved_url": "https://www.w3.org/TR/prov-o/",
+      "body_bytes": 464179,
+      "capture_method": "system curl with default certificate validation"
+    },
+    {
+      "id": "S04",
+      "title": "The Organization Ontology",
+      "url": "https://www.w3.org/TR/vocab-org/",
+      "owner": "W3C",
+      "source_type": "primary_web",
+      "web_text_line_ranges": [
+        [
+          57,
+          61
+        ],
+        [
+          130,
+          144
+        ],
+        [
+          192,
+          203
+        ]
+      ],
+      "quote": "there is no \"one size that fits all\"",
+      "finding": "组织、成员、岗位与角色可分开表达，关系可携带有效时间；可选择合适子集。",
+      "source_hash": "929fa2bdb305853cbe387fb200757d795813b18152b1e298be42202aa650f906",
+      "hash_kind": "sha256_http_response_body",
+      "fetched_at_utc": "2026-09-11T15:05:47.274188+00:00",
+      "http_status": 200,
+      "initial_capture_error": "Python urllib SSL certificate validation failed; no verification bypass used",
+      "resolved_url": "https://www.w3.org/TR/vocab-org/",
+      "body_bytes": 107669,
+      "capture_method": "system curl with default certificate validation"
+    },
+    {
+      "id": "P01",
+      "path": "/Users/mac/Documents/OA数字员工协作平台/CONTEXT.md",
+      "source_type": "local_requirement",
+      "source_hash": "a62443961104f77d84e0c3c6c4ac4c045df38cdccdf6593828673338bcde18df",
+      "hash_kind": "sha256_file_bytes",
+      "line_count": 37,
+      "line_ranges": [
+        [
+          8,
+          16
+        ],
+        [
+          21,
+          25
+        ]
+      ],
+      "finding": "OA责任及选型边界",
+      "inspected_at_utc": "2026-09-11T15:04:31.206707+00:00"
+    },
+    {
+      "id": "P02",
+      "path": "/Users/mac/Documents/OA数字员工协作平台/history/用户需求原文.md",
+      "source_type": "local_requirement",
+      "source_hash": "fe8d3d514fe49d2ce1f4131cacaed4e71ad6dbbb60c8132c11dd73ff8d499fdc",
+      "hash_kind": "sha256_file_bytes",
+      "line_count": 93,
+      "line_ranges": [
+        [
+          13,
+          15
+        ],
+        [
+          25,
+          35
+        ],
+        [
+          77,
+          85
+        ]
+      ],
+      "finding": "历史用户需求；具体引用以U编号核对",
+      "inspected_at_utc": "2026-09-11T15:04:31.206707+00:00"
+    },
+    {
+      "id": "SD01",
+      "path": "/Users/mac/Documents/StaffDeck-main/README.zh.md",
+      "source_type": "local_source",
+      "source_hash": "775a24a0fefcdc2f834bfbdf32336305398036c044288017ec00b95a4c2b1f6f",
+      "hash_kind": "sha256_file_bytes",
+      "line_count": 377,
+      "line_ranges": [
+        [
+          30,
+          37
+        ],
+        [
+          221,
+          228
+        ],
+        [
+          371,
+          377
+        ]
+      ],
+      "finding": "产品能力摘要、核心工作链；README标识AGPL-3.0，不能据此批准源码商用引入",
+      "inspected_at_utc": "2026-09-11T15:04:31.206707+00:00"
+    },
+    {
+      "id": "SD02",
+      "path": "/Users/mac/Documents/StaffDeck-main/frontend-enterprise/src/pages/chat/components/ScheduledDraftCard.tsx",
+      "source_type": "local_source",
+      "source_hash": "4ec7784c9c9088d98ebb9e18a1750d15d3c6707b33ba678eaa31cf95bdd85d7d",
+      "hash_kind": "sha256_file_bytes",
+      "line_count": 268,
+      "line_ranges": [
+        [
+          91,
+          128
+        ],
+        [
+          138,
+          145
+        ],
+        [
+          250,
+          265
+        ]
+      ],
+      "finding": "定时草案可编辑、校验后显式确认；仅静态源码证据",
+      "inspected_at_utc": "2026-09-11T15:04:31.206707+00:00"
+    },
+    {
+      "id": "SD03",
+      "path": "/Users/mac/Documents/StaffDeck-main/frontend-enterprise/src/pages/KnowledgePage.tsx",
+      "source_type": "local_source",
+      "source_hash": "853cbf0db7a02d8eac6c24d79197e7c21310571c3d6d525d1938b868e7f9711c",
+      "hash_kind": "sha256_file_bytes",
+      "line_count": 3484,
+      "line_ranges": [
+        [
+          1875,
+          1914
+        ],
+        [
+          2000,
+          2005
+        ]
+      ],
+      "finding": "知识发现候选筛选、去重、确认/拒绝；仅静态源码证据",
+      "inspected_at_utc": "2026-09-11T15:04:31.206707+00:00"
+    },
+    {
+      "id": "SD04",
+      "path": "/Users/mac/Documents/StaffDeck-main/frontend-enterprise/src/pages/chat/components/KnowledgeCitationList.tsx",
+      "source_type": "local_source",
+      "source_hash": "2f6036343765d8c473230ae7536130175c87e63603b0edec9465b50575b9d39f",
+      "hash_kind": "sha256_file_bytes",
+      "line_count": 50,
+      "line_ranges": [
+        [
+          23,
+          45
+        ]
+      ],
+      "finding": "知识来源按钮与onOpen；未验证正文跳转运行结果",
+      "inspected_at_utc": "2026-09-11T15:04:31.206707+00:00"
+    },
+    {
+      "id": "SD05",
+      "path": "/Users/mac/Documents/StaffDeck-main/backend/app/evolution/schema.py",
+      "source_type": "local_source",
+      "source_hash": "0272bbeb5d20ddb538dd539d1840bdb33b159057327280fde40a0a566ba100f7",
+      "hash_kind": "sha256_file_bytes",
+      "line_count": 54,
+      "line_ranges": [
+        [
+          7,
+          15
+        ],
+        [
+          27,
+          54
+        ]
+      ],
+      "finding": "SOP/通用技能候选含基线版本、证据、Diff、评估、审核和回退时间",
+      "inspected_at_utc": "2026-09-11T15:04:31.206707+00:00"
+    },
+    {
+      "id": "SD06",
+      "path": "/Users/mac/Documents/StaffDeck-main/backend/app/evolution/service.py",
+      "source_type": "local_source",
+      "source_hash": "e73d2d9b8527db58fc371be4ff485c5b83cb64b315a5a20b1f2d8c112b94f9c6",
+      "hash_kind": "sha256_file_bytes",
+      "line_count": 699,
+      "line_ranges": [
+        [
+          98,
+          163
+        ],
+        [
+          245,
+          254
+        ],
+        [
+          279,
+          324
+        ]
+      ],
+      "finding": "static_v1结构校验、审核后发布及回退代码；未验证真实基线/候选回放",
+      "inspected_at_utc": "2026-09-11T15:04:31.206707+00:00"
+    },
+    {
+      "id": "SD07",
+      "path": "/Users/mac/Documents/StaffDeck-main/backend/app/api/evolution.py",
+      "source_type": "local_source",
+      "source_hash": "35611bbc801b1ee5219ebfa20284106a296f1de840213ecb38617285f1cebe97",
+      "hash_kind": "sha256_file_bytes",
+      "line_count": 170,
+      "line_ranges": [
+        [
+          67,
+          124
+        ]
+      ],
+      "finding": "evaluate/approve/reject/rollback路径包含员工范围管理检查；未运行接口",
+      "inspected_at_utc": "2026-09-11T15:04:31.206707+00:00"
+    },
+    {
+      "id": "SD08",
+      "path": "/Users/mac/Documents/StaffDeck-main/frontend-enterprise/src/App.tsx",
+      "source_type": "local_source",
+      "source_hash": "426a129b802b60d33352938be8bb8e906112a722d718de72f6af689dc4661241",
+      "hash_kind": "sha256_file_bytes",
+      "line_count": 1187,
+      "line_ranges": [
+        [
+          690,
+          739
+        ]
+      ],
+      "finding": "知识、反馈、记忆与定时页面被路由引用；不能单独证明端到端可用",
+      "inspected_at_utc": "2026-09-11T15:04:31.206707+00:00"
+    },
+    {
+      "id": "SD09",
+      "path": "/Users/mac/Documents/StaffDeck-main/frontend-enterprise/package.json",
+      "source_type": "local_source",
+      "source_hash": "9118b69afa29826a3eb613082f146826292984eddac7ac1cebb9323ac8f210e3",
+      "hash_kind": "sha256_file_bytes",
+      "line_count": 54,
+      "line_ranges": [
+        [
+          1,
+          5
+        ]
+      ],
+      "finding": "本地包版本0.1.0不能对应公开v0.5.0发布",
+      "inspected_at_utc": "2026-09-11T15:04:31.206707+00:00"
+    },
+    {
+      "id": "SD10",
+      "path": "/Users/mac/Documents/StaffDeck-main/backend/pyproject.toml",
+      "source_type": "local_source",
+      "source_hash": "460979a2b879a551df940c7ff551150aca3e270a0a22fdd000c08e4d57b39054",
+      "hash_kind": "sha256_file_bytes",
+      "line_count": 77,
+      "line_ranges": [
+        [
+          1,
+          6
+        ]
+      ],
+      "finding": "本地包版本0.1.0，Git版本未知",
+      "inspected_at_utc": "2026-09-11T15:04:31.206707+00:00"
+    }
+  ],
+  "claims": [
+    {
+      "id": "C01",
+      "claim": "OA人员责任与AI技术执行必须分离",
+      "evidence": [
+        "P01",
+        "Q03"
+      ],
+      "classification": "source_supported_design"
+    },
+    {
+      "id": "C02",
+      "claim": "四个一级导航、任务内按需展开配置",
+      "evidence": [
+        "H03",
+        "Q02"
+      ],
+      "classification": "design_inference_exact_navigation_count_is_not_source_fact"
+    },
+    {
+      "id": "C03",
+      "claim": "默认预填并只询问缺失信息，配置可解释、可修改、可比较",
+      "evidence": [
+        "Q06",
+        "SD02",
+        "H01"
+      ],
+      "classification": "design_inference"
+    },
+    {
+      "id": "C04",
+      "claim": "知识资料、派生知识、记忆、业务事实分别记录来源和版本",
+      "evidence": [
+        "Q04",
+        "Q05",
+        "SD04",
+        "S03"
+      ],
+      "classification": "source_supported_design"
+    },
+    {
+      "id": "C05",
+      "claim": "本体先映射已有业务对象和版本关系",
+      "evidence": [
+        "P01",
+        "S03",
+        "S04"
+      ],
+      "classification": "design_inference_no_new_platform_selection"
+    },
+    {
+      "id": "C06",
+      "claim": "自然语言分析在授权只读查询上建立可复核口径",
+      "evidence": [
+        "S01",
+        "S02"
+      ],
+      "classification": "source_supported_design"
+    },
+    {
+      "id": "C07",
+      "claim": "主动建议支持触发原因、优先级、冷却与忽略",
+      "evidence": [
+        "Q03",
+        "H01",
+        "H02"
+      ],
+      "classification": "design_inference_cooldown_and_priority_are_product_decisions"
+    },
+    {
+      "id": "C08",
+      "claim": "受限授权内预备草案或执行，不代替OA人员审批",
+      "evidence": [
+        "P01",
+        "Q03",
+        "SD02"
+      ],
+      "classification": "source_supported_design"
+    },
+    {
+      "id": "C09",
+      "claim": "进化须证据、提案、离线评估、小范围、发布及回退",
+      "evidence": [
+        "SD05",
+        "SD06",
+        "H01",
+        "H02"
+      ],
+      "classification": "design_inference_static_checks_are_not_outcome_evaluation"
+    },
+    {
+      "id": "C10",
+      "claim": "借鉴体验不代表直接复制代码或已选底座",
+      "evidence": [
+        "P01",
+        "SD01",
+        "SD-PUBLIC"
+      ],
+      "classification": "scope_boundary"
+    }
+  ],
+  "limitations": [
+    "No install, connector authorization, model execution, API test, runtime, browser usability test or production action was performed.",
+    "Remote hashes identify the independently fetched HTTP body, not the web tool normalized text. Web line numbers refer to tool extraction at research time.",
+    "Local StaffDeck sources may contain local changes. No Git metadata exists to verify commit or release.",
+    "Microsoft Learn returned visible article bodies together with a generic authorization banner; no login was attempted.",
+    "Qoder CN and Global pages belong to one publisher and are not independent corroborating publishers.",
+    "Two citations may support complementary aspects, not independent confirmation of all details."
+  ],
+  "validation": {
+    "source_ids_unique": true,
+    "claim_references_valid": true,
+    "checked_at_utc": "2026-09-11T15:06:56.685703+00:00",
+    "local_line_ranges_valid": true,
+    "local_markdown_links_exist": true,
+    "ai_requirements_unique_and_complete": true,
+    "document_sha256_matches": true,
+    "errors": [],
+    "note": "Document/source integrity only; no runtime or product acceptance claimed"
+  },
+  "artifact": {
+    "path": "/Users/mac/Documents/OA数字员工协作平台/docs/设计包/33-QoderWake与StaffDeck融合及AI体验研究.md",
+    "sha256": "912757c5163345ca1ac9becba4c6408d9ab971a14683938e6648075f31227f17"
+  },
+  "requirements_alignment": {
+    "AI-01": "AC-61",
+    "AI-02": "AC-62",
+    "AI-03": "AC-63",
+    "AI-04": "AC-64",
+    "AI-05": "AC-65",
+    "AI-06": "AC-66",
+    "AI-07": "AC-67",
+    "AI-08": "AC-68",
+    "AI-09": "AC-69",
+    "AI-10": "AC-70",
+    "AI-11": "AC-71",
+    "AI-12": "AC-72"
+  },
+  "parent_final_recheck": {
+    "at_utc": "2026-09-11T15:28:42.081568+00:00",
+    "local_sources": [
+      {
+        "source_id": "P01",
+        "path": "/Users/mac/Documents/OA数字员工协作平台/CONTEXT.md",
+        "current_sha256": "ada0a08a91af4fcd1889e0d1b031e8919372e93a8627a65d8b205dfc1749f8bf",
+        "matches_captured_hash": false,
+        "interpretation": "CONTEXT received the authorized current-design navigation and new user-requirement summary after the research capture; original captured hash is retained."
+      },
+      {
+        "source_id": "P02",
+        "path": "/Users/mac/Documents/OA数字员工协作平台/history/用户需求原文.md",
+        "current_sha256": "fe8d3d514fe49d2ce1f4131cacaed4e71ad6dbbb60c8132c11dd73ff8d499fdc",
+        "matches_captured_hash": true,
+        "interpretation": "Captured source unchanged"
+      },
+      {
+        "source_id": "SD01",
+        "path": "/Users/mac/Documents/StaffDeck-main/README.zh.md",
+        "current_sha256": "775a24a0fefcdc2f834bfbdf32336305398036c044288017ec00b95a4c2b1f6f",
+        "matches_captured_hash": true,
+        "interpretation": "Captured source unchanged"
+      },
+      {
+        "source_id": "SD02",
+        "path": "/Users/mac/Documents/StaffDeck-main/frontend-enterprise/src/pages/chat/components/ScheduledDraftCard.tsx",
+        "current_sha256": "4ec7784c9c9088d98ebb9e18a1750d15d3c6707b33ba678eaa31cf95bdd85d7d",
+        "matches_captured_hash": true,
+        "interpretation": "Captured source unchanged"
+      },
+      {
+        "source_id": "SD03",
+        "path": "/Users/mac/Documents/StaffDeck-main/frontend-enterprise/src/pages/KnowledgePage.tsx",
+        "current_sha256": "853cbf0db7a02d8eac6c24d79197e7c21310571c3d6d525d1938b868e7f9711c",
+        "matches_captured_hash": true,
+        "interpretation": "Captured source unchanged"
+      },
+      {
+        "source_id": "SD04",
+        "path": "/Users/mac/Documents/StaffDeck-main/frontend-enterprise/src/pages/chat/components/KnowledgeCitationList.tsx",
+        "current_sha256": "2f6036343765d8c473230ae7536130175c87e63603b0edec9465b50575b9d39f",
+        "matches_captured_hash": true,
+        "interpretation": "Captured source unchanged"
+      },
+      {
+        "source_id": "SD05",
+        "path": "/Users/mac/Documents/StaffDeck-main/backend/app/evolution/schema.py",
+        "current_sha256": "0272bbeb5d20ddb538dd539d1840bdb33b159057327280fde40a0a566ba100f7",
+        "matches_captured_hash": true,
+        "interpretation": "Captured source unchanged"
+      },
+      {
+        "source_id": "SD06",
+        "path": "/Users/mac/Documents/StaffDeck-main/backend/app/evolution/service.py",
+        "current_sha256": "e73d2d9b8527db58fc371be4ff485c5b83cb64b315a5a20b1f2d8c112b94f9c6",
+        "matches_captured_hash": true,
+        "interpretation": "Captured source unchanged"
+      },
+      {
+        "source_id": "SD07",
+        "path": "/Users/mac/Documents/StaffDeck-main/backend/app/api/evolution.py",
+        "current_sha256": "35611bbc801b1ee5219ebfa20284106a296f1de840213ecb38617285f1cebe97",
+        "matches_captured_hash": true,
+        "interpretation": "Captured source unchanged"
+      },
+      {
+        "source_id": "SD08",
+        "path": "/Users/mac/Documents/StaffDeck-main/frontend-enterprise/src/App.tsx",
+        "current_sha256": "426a129b802b60d33352938be8bb8e906112a722d718de72f6af689dc4661241",
+        "matches_captured_hash": true,
+        "interpretation": "Captured source unchanged"
+      },
+      {
+        "source_id": "SD09",
+        "path": "/Users/mac/Documents/StaffDeck-main/frontend-enterprise/package.json",
+        "current_sha256": "9118b69afa29826a3eb613082f146826292984eddac7ac1cebb9323ac8f210e3",
+        "matches_captured_hash": true,
+        "interpretation": "Captured source unchanged"
+      },
+      {
+        "source_id": "SD10",
+        "path": "/Users/mac/Documents/StaffDeck-main/backend/pyproject.toml",
+        "current_sha256": "460979a2b879a551df940c7ff551150aca3e270a0a22fdd000c08e4d57b39054",
+        "matches_captured_hash": true,
+        "interpretation": "Captured source unchanged"
+      }
+    ],
+    "artifact_hash_matches": true,
+    "web_sources_re_fetched": false,
+    "scope": "Local source drift check; does not promote historical web research or static code to runtime validation."
+  }
+}

@@ -1,0 +1,580 @@
+{
+  "schemaVersion": 1,
+  "id": "article-architecture-review-20260911",
+  "goal": "结合IMA与本地微信公众号文章，对现有全部技术方案进行证据复核、减复杂与业务适配优化，形成可追溯研究和修订决策",
+  "scope": {
+    "allowed": [
+      "README.md",
+      "CONTEXT.md",
+      "docs/设计包/53-AI运行工具与效果评测规范.md",
+      "docs/设计包/55-知识库与记忆开源方案深度研究.md",
+      "docs/设计包/46-开发基线与低代码插件化决策.md",
+      "docs/设计包/58-Agent技术架构与性能实施设计.md",
+      "docs/设计包/41-AI运行知识分析与安全设计.md",
+      "docs/设计包/57-Agent运行框架最新源码研究.md",
+      "docs/设计包/56-知识记忆技术栈与实施决策.md",
+      "docs/设计包/37-技术架构总设计与决策.md",
+      "docs/设计包/54-开源二开与完整商用准入.md",
+      "docs/设计包/59-智能体文章证据复核与全栈优化.md",
+      "docs/设计包/60-最小技术方案与验证决策.md",
+      "validation/article-review/",
+      "validation/check_article_review.py",
+      "validation/development-task-article-architecture-review-20260911.json",
+      "validation/development-workflow.json",
+      "validation/technical-design-check.json",
+      "/Users/mac/.codex/skills/ima-skill/",
+      "/Users/mac/.config/ima/client_id",
+      "/Users/mac/.config/ima/api_key"
+    ],
+    "excluded": [
+      "不修改原30/31、contracts或产品实现",
+      "只读本地微信公众号文章及IMA；不上传、导入、修改或发送资料",
+      "不安装技术候选/新索引/无关全局技能，不部署，不执行文章脚本，不操作生产凭据"
+    ]
+  },
+  "acceptance_criteria": [
+    "确认IMA可访问范围、分页和正文可读边界；本地文章清单去重并按主题筛选",
+    "关键文章主张对应原文、一手来源与当前架构；标明事实/推断/缺口",
+    "覆盖OA/运行/知识记忆本体/插件工具/权限/UI/性能/评测进化/商用/开发体系",
+    "明确保留、修订、延后、否决及理由，减少首期运行组件和用户配置",
+    "形成文档和可执行后续验证计划；不把建议写为已采纳",
+    "来源与文档检查及make verify通过；原需求/页面/产品AC保留"
+  ],
+  "current_node": "N3",
+  "final_node": "N3",
+  "completed_nodes": [
+    "N1",
+    "NI",
+    "N2",
+    "N3"
+  ],
+  "failed_nodes": [],
+  "artifacts": [
+    "README.md",
+    "CONTEXT.md",
+    "docs/设计包/53-AI运行工具与效果评测规范.md",
+    "docs/设计包/55-知识库与记忆开源方案深度研究.md",
+    "docs/设计包/46-开发基线与低代码插件化决策.md",
+    "docs/设计包/58-Agent技术架构与性能实施设计.md",
+    "docs/设计包/41-AI运行知识分析与安全设计.md",
+    "docs/设计包/57-Agent运行框架最新源码研究.md",
+    "docs/设计包/56-知识记忆技术栈与实施决策.md",
+    "docs/设计包/37-技术架构总设计与决策.md",
+    "docs/设计包/54-开源二开与完整商用准入.md",
+    "docs/设计包/59-智能体文章证据复核与全栈优化.md",
+    "docs/设计包/60-最小技术方案与验证决策.md",
+    "validation/article-review/article-catalog.md"
+  ],
+  "evidence": [
+    "validation/article-review/ima-install/installation-check.json",
+    "validation/article-review/ima-install/package-check.json",
+    "validation/article-review/ima-install/auth-check.json",
+    "validation/article-review/selected-articles.json",
+    "validation/article-review/local-inventory.json",
+    "validation/article-review/ima/selected.json",
+    "validation/article-review/primary-simplification-review.md",
+    "validation/article-review/runtime-article-review.md",
+    "validation/article-review/review-resolutions.json",
+    "validation/article-review/review-check.json",
+    "validation/technical-design-check.json",
+    "validation/development-system-check.json"
+  ],
+  "risks": [
+    "公众号转述不等于一手事实；收录日期不等于文章发布时间",
+    "访问权限、标题命中不等于正文已读；不宣称全库穷尽",
+    "未运行候选或业务压测，不声称最优性能或商业放行"
+  ],
+  "approvals": [
+    {
+      "source": "本轮追加用户消息",
+      "authorization": "核对并安装指定官方IMA 1.1.9及安全配置其凭据；不记录凭据值",
+      "scope": "本机ima-skill与IMA凭据文件"
+    }
+  ],
+  "status": "VERIFIED",
+  "intent": {
+    "source": "本轮用户要求结合IMA及文档路径微信公众号文章系统性研究全部技术方案与优化空间",
+    "outcome": "研究复核与架构减复杂方案，保留完整业务能力"
+  },
+  "spec": {
+    "refs": [
+      "docs/设计包/37-技术架构总设计与决策.md",
+      "docs/设计包/56-知识记忆技术栈与实施决策.md",
+      "docs/设计包/58-Agent技术架构与性能实施设计.md"
+    ],
+    "behavior": "业务权威和权限不变，研究层修订选型依据与分期",
+    "negativeCases": [
+      "来源标题不可充作正文证据",
+      "不以新框架热度替代实际业务验证"
+    ]
+  },
+  "plan": {
+    "files": [
+      "README.md",
+      "CONTEXT.md",
+      "docs/设计包/53-AI运行工具与效果评测规范.md",
+      "docs/设计包/55-知识库与记忆开源方案深度研究.md",
+      "docs/设计包/46-开发基线与低代码插件化决策.md",
+      "docs/设计包/58-Agent技术架构与性能实施设计.md",
+      "docs/设计包/41-AI运行知识分析与安全设计.md",
+      "docs/设计包/57-Agent运行框架最新源码研究.md",
+      "docs/设计包/56-知识记忆技术栈与实施决策.md",
+      "docs/设计包/37-技术架构总设计与决策.md",
+      "docs/设计包/54-开源二开与完整商用准入.md"
+    ],
+    "checks": [
+      "python3 validation/check_article_review.py",
+      "python3 validation/validate_technical_design.py",
+      "make verify"
+    ],
+    "rollback": "本轮before.zip保存旧文档；只恢复本轮增量，不覆盖并发修改"
+  },
+  "requirementIds": [],
+  "caseIds": [],
+  "review": {
+    "mode": "INDEPENDENT_REVIEW_PLUS_DETERMINISTIC_CHECKS",
+    "findings": [
+      {
+        "id": "K1",
+        "review": "validation/article-review/primary-simplification-review.md",
+        "document": "docs/设计包/60-最小技术方案与验证决策.md",
+        "line": 91,
+        "resolution": "失效/撤权禁止以旧索引降级",
+        "status": "ADDRESSED_TEXT_REVIEW_ONLY",
+        "verifiedBy": "root direct reread + deterministic anchor check"
+      },
+      {
+        "id": "K2",
+        "review": "validation/article-review/primary-simplification-review.md",
+        "document": "docs/设计包/60-最小技术方案与验证决策.md",
+        "line": 109,
+        "resolution": "显式本人偏好直接保存；推断/共享/执行策略分级处理",
+        "status": "ADDRESSED_TEXT_REVIEW_ONLY",
+        "verifiedBy": "root direct reread + deterministic anchor check"
+      },
+      {
+        "id": "K3",
+        "review": "validation/article-review/primary-simplification-review.md",
+        "document": "docs/设计包/59-智能体文章证据复核与全栈优化.md",
+        "line": 68,
+        "resolution": "移动不自动扩大权限，复制校验目标受众",
+        "status": "ADDRESSED_TEXT_REVIEW_ONLY",
+        "verifiedBy": "root direct reread + deterministic anchor check"
+      },
+      {
+        "id": "R1",
+        "review": "validation/article-review/runtime-article-review.md",
+        "document": "docs/设计包/59-智能体文章证据复核与全栈优化.md",
+        "line": 100,
+        "resolution": "区分建议阈值与真实实验门槛，不推断同一门槛被违反",
+        "status": "ADDRESSED_TEXT_REVIEW_ONLY",
+        "verifiedBy": "root direct reread + deterministic anchor check"
+      },
+      {
+        "id": "R2",
+        "review": "validation/article-review/runtime-article-review.md",
+        "document": "docs/设计包/60-最小技术方案与验证决策.md",
+        "line": 144,
+        "resolution": "usage缺失不编造费用，保留预留并对账",
+        "status": "ADDRESSED_TEXT_REVIEW_ONLY",
+        "verifiedBy": "root direct reread + deterministic anchor check"
+      },
+      {
+        "id": "R3",
+        "review": "validation/article-review/runtime-article-review.md",
+        "document": "docs/设计包/60-最小技术方案与验证决策.md",
+        "line": 83,
+        "resolution": "基线也过门槛；同步53/57/58候选顺序",
+        "status": "ADDRESSED_TEXT_REVIEW_ONLY",
+        "verifiedBy": "root direct reread + deterministic anchor check"
+      }
+    ],
+    "checklist": [
+      {
+        "id": "RV-01",
+        "aspect": "来源与去重 / 现状与证据",
+        "status": "VERIFIED",
+        "scope": "DOCUMENT_REVIEW_ONLY",
+        "evidence": "59第1节；article-catalog.md",
+        "conclusion": "1362份清单不等于全文；25全文文字/7部分，IMA零正文"
+      },
+      {
+        "id": "RV-02",
+        "aspect": "来源与去重 / 优化与反例",
+        "status": "VERIFIED",
+        "scope": "DOCUMENT_REVIEW_ONLY",
+        "evidence": "59第1节；article-catalog.md",
+        "conclusion": "1362份清单不等于全文；25全文文字/7部分，IMA零正文"
+      },
+      {
+        "id": "RV-03",
+        "aspect": "来源与去重 / 验收与边界",
+        "status": "VERIFIED",
+        "scope": "DOCUMENT_REVIEW_ONLY",
+        "evidence": "59第1节；article-catalog.md",
+        "conclusion": "1362份清单不等于全文；25全文文字/7部分，IMA零正文"
+      },
+      {
+        "id": "RV-04",
+        "aspect": "OA与业务 / 现状与证据",
+        "status": "VERIFIED",
+        "scope": "DOCUMENT_REVIEW_ONLY",
+        "evidence": "60第1/2节；原30号",
+        "conclusion": "保留173需求22页72AC，责任与交付闭环不变"
+      },
+      {
+        "id": "RV-05",
+        "aspect": "OA与业务 / 优化与反例",
+        "status": "VERIFIED",
+        "scope": "DOCUMENT_REVIEW_ONLY",
+        "evidence": "60第1/2节；原30号",
+        "conclusion": "保留173需求22页72AC，责任与交付闭环不变"
+      },
+      {
+        "id": "RV-06",
+        "aspect": "OA与业务 / 验收与边界",
+        "status": "VERIFIED",
+        "scope": "DOCUMENT_REVIEW_ONLY",
+        "evidence": "60第1/2节；原30号",
+        "conclusion": "保留173需求22页72AC，责任与交付闭环不变"
+      },
+      {
+        "id": "RV-07",
+        "aspect": "Agent运行 / 现状与证据",
+        "status": "VERIFIED",
+        "scope": "DOCUMENT_REVIEW_ONLY",
+        "evidence": "59第3节；60第3节；运行专题报告",
+        "conclusion": "一个内核；候选先筛选；稳定发行与设计分支分离"
+      },
+      {
+        "id": "RV-08",
+        "aspect": "Agent运行 / 优化与反例",
+        "status": "VERIFIED",
+        "scope": "DOCUMENT_REVIEW_ONLY",
+        "evidence": "59第3节；60第3节；运行专题报告",
+        "conclusion": "一个内核；候选先筛选；稳定发行与设计分支分离"
+      },
+      {
+        "id": "RV-09",
+        "aspect": "Agent运行 / 验收与边界",
+        "status": "VERIFIED",
+        "scope": "DOCUMENT_REVIEW_ONLY",
+        "evidence": "59第3节；60第3节；运行专题报告",
+        "conclusion": "一个内核；候选先筛选；稳定发行与设计分支分离"
+      },
+      {
+        "id": "RV-10",
+        "aspect": "知识记忆本体 / 现状与证据",
+        "status": "VERIFIED",
+        "scope": "DOCUMENT_REVIEW_ONLY",
+        "evidence": "59第4节；60第4节；知识专题报告",
+        "conclusion": "索引按收益、源版本及受众投影；撤销规则禁降级"
+      },
+      {
+        "id": "RV-11",
+        "aspect": "知识记忆本体 / 优化与反例",
+        "status": "VERIFIED",
+        "scope": "DOCUMENT_REVIEW_ONLY",
+        "evidence": "59第4节；60第4节；知识专题报告",
+        "conclusion": "索引按收益、源版本及受众投影；撤销规则禁降级"
+      },
+      {
+        "id": "RV-12",
+        "aspect": "知识记忆本体 / 验收与边界",
+        "status": "VERIFIED",
+        "scope": "DOCUMENT_REVIEW_ONLY",
+        "evidence": "59第4节；60第4节；知识专题报告",
+        "conclusion": "索引按收益、源版本及受众投影；撤销规则禁降级"
+      },
+      {
+        "id": "RV-13",
+        "aspect": "插件工具 / 现状与证据",
+        "status": "VERIFIED",
+        "scope": "DOCUMENT_REVIEW_ONLY",
+        "evidence": "60第5节；48号合同",
+        "conclusion": "低代码模板优先，插件直接IO和子Agent仍受授权"
+      },
+      {
+        "id": "RV-14",
+        "aspect": "插件工具 / 优化与反例",
+        "status": "VERIFIED",
+        "scope": "DOCUMENT_REVIEW_ONLY",
+        "evidence": "60第5节；48号合同",
+        "conclusion": "低代码模板优先，插件直接IO和子Agent仍受授权"
+      },
+      {
+        "id": "RV-15",
+        "aspect": "插件工具 / 验收与边界",
+        "status": "VERIFIED",
+        "scope": "DOCUMENT_REVIEW_ONLY",
+        "evidence": "60第5节；48号合同",
+        "conclusion": "低代码模板优先，插件直接IO和子Agent仍受授权"
+      },
+      {
+        "id": "RV-16",
+        "aspect": "权限与商用 / 现状与证据",
+        "status": "VERIFIED",
+        "scope": "DOCUMENT_REVIEW_ONLY",
+        "evidence": "59第2/3节；60第5节；54号",
+        "conclusion": "根许可非整包；身份占位非认证；后台使用非人员可读"
+      },
+      {
+        "id": "RV-17",
+        "aspect": "权限与商用 / 优化与反例",
+        "status": "VERIFIED",
+        "scope": "DOCUMENT_REVIEW_ONLY",
+        "evidence": "59第2/3节；60第5节；54号",
+        "conclusion": "根许可非整包；身份占位非认证；后台使用非人员可读"
+      },
+      {
+        "id": "RV-18",
+        "aspect": "权限与商用 / 验收与边界",
+        "status": "VERIFIED",
+        "scope": "DOCUMENT_REVIEW_ONLY",
+        "evidence": "59第2/3节；60第5节；54号",
+        "conclusion": "根许可非整包；身份占位非认证；后台使用非人员可读"
+      },
+      {
+        "id": "RV-19",
+        "aspect": "UI体验 / 现状与证据",
+        "status": "VERIFIED",
+        "scope": "DOCUMENT_REVIEW_ONLY",
+        "evidence": "59第5节；60第6节",
+        "conclusion": "保留左右工作台；个人显式偏好无需额外审批"
+      },
+      {
+        "id": "RV-20",
+        "aspect": "UI体验 / 优化与反例",
+        "status": "VERIFIED",
+        "scope": "DOCUMENT_REVIEW_ONLY",
+        "evidence": "59第5节；60第6节",
+        "conclusion": "保留左右工作台；个人显式偏好无需额外审批"
+      },
+      {
+        "id": "RV-21",
+        "aspect": "UI体验 / 验收与边界",
+        "status": "VERIFIED",
+        "scope": "DOCUMENT_REVIEW_ONLY",
+        "evidence": "59第5节；60第6节",
+        "conclusion": "保留左右工作台；个人显式偏好无需额外审批"
+      },
+      {
+        "id": "RV-22",
+        "aspect": "性能 / 现状与证据",
+        "status": "VERIFIED",
+        "scope": "DOCUMENT_REVIEW_ONLY",
+        "evidence": "59第6节；60第7.1/7.2节",
+        "conclusion": "成本含失败与返工；用量缺失标待核；无压测结论"
+      },
+      {
+        "id": "RV-23",
+        "aspect": "性能 / 优化与反例",
+        "status": "VERIFIED",
+        "scope": "DOCUMENT_REVIEW_ONLY",
+        "evidence": "59第6节；60第7.1/7.2节",
+        "conclusion": "成本含失败与返工；用量缺失标待核；无压测结论"
+      },
+      {
+        "id": "RV-24",
+        "aspect": "性能 / 验收与边界",
+        "status": "VERIFIED",
+        "scope": "DOCUMENT_REVIEW_ONLY",
+        "evidence": "59第6节；60第7.1/7.2节",
+        "conclusion": "成本含失败与返工；用量缺失标待核；无压测结论"
+      },
+      {
+        "id": "RV-25",
+        "aspect": "评测进化 / 现状与证据",
+        "status": "VERIFIED",
+        "scope": "DOCUMENT_REVIEW_ONLY",
+        "evidence": "59第7节；60第7.2/7.3节",
+        "conclusion": "缺分不满分；保留诊断；影子不写；候选新Attempt生效"
+      },
+      {
+        "id": "RV-26",
+        "aspect": "评测进化 / 优化与反例",
+        "status": "VERIFIED",
+        "scope": "DOCUMENT_REVIEW_ONLY",
+        "evidence": "59第7节；60第7.2/7.3节",
+        "conclusion": "缺分不满分；保留诊断；影子不写；候选新Attempt生效"
+      },
+      {
+        "id": "RV-27",
+        "aspect": "评测进化 / 验收与边界",
+        "status": "VERIFIED",
+        "scope": "DOCUMENT_REVIEW_ONLY",
+        "evidence": "59第7节；60第7.2/7.3节",
+        "conclusion": "缺分不满分；保留诊断；影子不写；候选新Attempt生效"
+      },
+      {
+        "id": "RV-28",
+        "aspect": "开发体系 / 现状与证据",
+        "status": "VERIFIED",
+        "scope": "DOCUMENT_REVIEW_ONLY",
+        "evidence": "59第7/8节；60第8/9节；原开发体系",
+        "conclusion": "不叠平行任务权威；静态门禁不证明产品就绪"
+      },
+      {
+        "id": "RV-29",
+        "aspect": "开发体系 / 优化与反例",
+        "status": "VERIFIED",
+        "scope": "DOCUMENT_REVIEW_ONLY",
+        "evidence": "59第7/8节；60第8/9节；原开发体系",
+        "conclusion": "不叠平行任务权威；静态门禁不证明产品就绪"
+      },
+      {
+        "id": "RV-30",
+        "aspect": "开发体系 / 验收与边界",
+        "status": "VERIFIED",
+        "scope": "DOCUMENT_REVIEW_ONLY",
+        "evidence": "59第7/8节；60第8/9节；原开发体系",
+        "conclusion": "不叠平行任务权威；静态门禁不证明产品就绪"
+      }
+    ]
+  },
+  "nodes": [
+    {
+      "id": "N1",
+      "objective": "资料梳理与一手复核",
+      "dependsOn": [],
+      "preconditions": [
+        "项目身份、用户范围及已有文档已确认"
+      ],
+      "action": "IMA只读搜索及本地清单/正文取证，研究技能允许独立后台核验",
+      "tool_or_skill": "ima-skill / research / production-grade-task-methodology / 项目开发体系",
+      "expected_output": "文章证据与官方核验",
+      "validation": "直接回读来源和对应文档，确定性验证",
+      "success_condition": "对应验收有实际证据且标明未验证边界",
+      "failure_path": "有限换源，正文不可访问保留缺口，不重复无效请求",
+      "rollback_or_compensation": "只读原资料；局部文档可按备份恢复",
+      "status": "VERIFIED"
+    },
+    {
+      "id": "NI",
+      "objective": "完成用户追加的IMA 1.1.9安装配置与只读验证",
+      "dependsOn": [],
+      "preconditions": [
+        "用户明确要求安装并提供官方包与凭据"
+      ],
+      "action": "官方包校验、与现有版本比较、保留必要修复、安全配置及API验证",
+      "tool_or_skill": "ima-skill / skill-installer",
+      "expected_output": "无凭据内容的安装校验报告",
+      "validation": "包差异、现有脚本测试、文件权限及官方只读API业务码",
+      "success_condition": "1.1.9文件完整、授权配置可用、无回退已有修复",
+      "failure_path": "保留现有可用安装并记录失败，不绕过API权限",
+      "rollback_or_compensation": "只恢复本轮实际修改的Skill文件；不复制或输出秘密",
+      "status": "VERIFIED"
+    },
+    {
+      "id": "N2",
+      "objective": "全方案批判复核与减复杂设计",
+      "dependsOn": [
+        "N1",
+        "NI"
+      ],
+      "preconditions": [
+        "项目身份、用户范围及已有文档已确认"
+      ],
+      "action": "写59/60并同步关键方案",
+      "tool_or_skill": "ima-skill / research / production-grade-task-methodology / 项目开发体系",
+      "expected_output": "优化决策与分期",
+      "validation": "直接回读来源和对应文档，确定性验证",
+      "success_condition": "对应验收有实际证据且标明未验证边界",
+      "failure_path": "有限换源，正文不可访问保留缺口，不重复无效请求",
+      "rollback_or_compensation": "只读原资料；局部文档可按备份恢复",
+      "status": "VERIFIED"
+    },
+    {
+      "id": "N3",
+      "objective": "独立复核及交付",
+      "dependsOn": [
+        "N2"
+      ],
+      "preconditions": [
+        "项目身份、用户范围及已有文档已确认"
+      ],
+      "action": "运行文档与来源校验，检查完整需求和当前证据",
+      "tool_or_skill": "ima-skill / research / production-grade-task-methodology / 项目开发体系",
+      "expected_output": "真实检查报告",
+      "validation": "直接回读来源和对应文档，确定性验证",
+      "success_condition": "对应验收有实际证据且标明未验证边界",
+      "failure_path": "有限换源，正文不可访问保留缺口，不重复无效请求",
+      "rollback_or_compensation": "只读原资料；局部文档可按备份恢复",
+      "status": "VERIFIED"
+    }
+  ],
+  "projectRoot": "/Users/mac/Documents/OA数字员工协作平台",
+  "createdAt": "2026-09-11T23:51:24.098218+00:00",
+  "baseline": {
+    "README.md": "52a05307d7298b57265acefd4b64c2062e90b6c034edf67b3aa43e74633176c7",
+    "CONTEXT.md": "5e21873ee116f29e903429a8b7f70334746aae9970464f8355c1600de20b8e41",
+    "docs/设计包/53-AI运行工具与效果评测规范.md": "e86970cdef94b3dc728e71c0386e94ef965838c1f1026d75f935cb355de3a010",
+    "docs/设计包/55-知识库与记忆开源方案深度研究.md": "cf6946d6d50de169d3acf89bc735a996148d09360b28788d360d86b7e2e88e31",
+    "docs/设计包/46-开发基线与低代码插件化决策.md": "0c4012eb89a5ea48968aa845049905f76cb3226ee222e904fa7bee15d7601106",
+    "docs/设计包/58-Agent技术架构与性能实施设计.md": "9f87d31b4d4c889c77fd662cf689873293dd2517e6d5af99dda6f573667cd3d5",
+    "docs/设计包/41-AI运行知识分析与安全设计.md": "fd4e043d5a973d23888e75d845be1f73b029abbae07d6d9c3e635ef3d63083dc",
+    "docs/设计包/57-Agent运行框架最新源码研究.md": "c006f540dae9202bbd7589fe1ec05bffd265304971225008ce94bd169ce1ef23",
+    "docs/设计包/56-知识记忆技术栈与实施决策.md": "5b21de893137d2367f01ebd2dc407fe9a1a3207fc78ec39a89dbdc9a009b96af",
+    "docs/设计包/37-技术架构总设计与决策.md": "5b48431cb80c2d1efc84128c3ebb83d920ec163a58820ccc25eadfdb5241dd35",
+    "docs/设计包/54-开源二开与完整商用准入.md": "ebbf37fd05e3cbb4b1dcaaac80025dc9dfdaa4c0116735e206b1a32e8aa45bb7",
+    "docs/设计包/30-产品设计追踪数据.json": "5dbbe41a1e6853cfca898094a5e98ed929c9e4e8fe0c2d49da4cf213363b2fa8",
+    "docs/设计包/31-完整产品交互原型.html": "59a4d8948c86292bb3562218d534ae37154fb8d6317bcfd97883dfc98e7e5cbe"
+  },
+  "acceptanceEvidence": [
+    {
+      "criterion": "确认IMA可访问范围、分页和正文可读边界；本地文章清单去重并按主题筛选",
+      "evidence": [
+        "validation/article-review/local-inventory.json",
+        "validation/article-review/ima/article-searches.json",
+        "validation/article-review/selected-articles.json"
+      ],
+      "boundary": "全库未穷尽深读；IMA正文不可读"
+    },
+    {
+      "criterion": "关键文章主张对应原文、一手来源与当前架构；标明事实/推断/缺口",
+      "evidence": [
+        "docs/设计包/59-智能体文章证据复核与全栈优化.md",
+        "validation/article-review/primary-simplification-review.md",
+        "validation/article-review/runtime-article-review.md"
+      ],
+      "boundary": "固定源码/文章不等于运行"
+    },
+    {
+      "criterion": "覆盖OA/运行/知识记忆本体/插件工具/权限/UI/性能/评测进化/商用/开发体系",
+      "evidence": [
+        "docs/设计包/59-智能体文章证据复核与全栈优化.md"
+      ],
+      "boundary": "研究覆盖，不代表功能实现"
+    },
+    {
+      "criterion": "明确保留、修订、延后、否决及理由，减少首期运行组件和用户配置",
+      "evidence": [
+        "docs/设计包/60-最小技术方案与验证决策.md"
+      ],
+      "boundary": "条件建议未采用"
+    },
+    {
+      "criterion": "形成文档和可执行后续验证计划；不把建议写为已采纳",
+      "evidence": [
+        "docs/设计包/60-最小技术方案与验证决策.md",
+        "validation/article-review/review-resolutions.json"
+      ],
+      "boundary": "后续产品POC全部NOT_RUN"
+    },
+    {
+      "criterion": "来源与文档检查及make verify通过；原需求/页面/产品AC保留",
+      "evidence": [
+        "validation/article-review/review-check.json",
+        "validation/technical-design-check.json",
+        "validation/development-system-check.json"
+      ],
+      "boundary": "所有门禁均通过，仅限研究文档及开发体系；产品/AI/性能未验收"
+    }
+  ],
+  "verificationScope": "RESEARCH_DOCUMENTS_AND_IMA_INSTALLATION_ONLY",
+  "limits": [
+    "IMA全文读取0篇；本地25篇全文文字、7篇部分；并未穷尽资料库",
+    "方案未采用；无模型调用/运行器启动/业务压测/生产验收",
+    "原30/31和产品验收状态不变；6项独立审查建议均按具体修改关闭"
+  ]
+}

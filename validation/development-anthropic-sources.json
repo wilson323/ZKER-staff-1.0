@@ -1,0 +1,223 @@
+{
+  "schemaVersion": 1,
+  "researchDate": "2026-09-11",
+  "checkedAt": "2026-09-11T17:42:21.631286+00:00",
+  "scope": "Anthropic 和 Claude 官方关于开发体系的专题研究；非全网穷尽清单",
+  "report": "docs/Anthropic开发体系研究-2026-09-11.md",
+  "sourceCount": 20,
+  "articleBodiesRead": 16,
+  "officialLandingPagesRead": 1,
+  "limitations": [
+    "仅证明原文核对，不证明产品或 Skill 行为通过",
+    "网页发布日期不等于最后更新时间；采用动态产品能力前需再核对",
+    "Zero Trust 官方介绍页已读，其链接 PDF 返回不可重试读取错误，未核对全文"
+  ],
+  "sources": [
+    {
+      "id": "S01",
+      "url": "https://www.anthropic.com/engineering/building-effective-agents",
+      "title": "Building effective agents",
+      "date": "2024-12-19",
+      "checkedAt": "2026-09-11T17:28:30Z",
+      "lesson": "简单方法起步；按需求选择固定工作流或动态 Agent。",
+      "boundary": "原文提示工具生态已变化；不是必须重写成熟运行时。",
+      "readScope": "article_body"
+    },
+    {
+      "id": "S02",
+      "url": "https://www.anthropic.com/engineering/multi-agent-research-system",
+      "title": "How we built our multi-agent research system",
+      "date": "2025-06-13",
+      "checkedAt": "2026-09-11T17:28:30Z",
+      "lesson": "独立方向可并行，委派明确目标、工具、输出和范围。",
+      "boundary": "研究收益不可直接外推编码；共享上下文、依赖和 token 成本限制收益。",
+      "readScope": "article_body"
+    },
+    {
+      "id": "S03",
+      "url": "https://www.anthropic.com/engineering/writing-tools-for-agents",
+      "title": "Writing effective tools for agents — with agents",
+      "date": "2025-09-11",
+      "checkedAt": "2026-09-11T17:28:30Z",
+      "lesson": "清晰参数、职责、可行动错误与有限响应；用留出任务检验改进。",
+      "boundary": "不是工具越多越好，不以固定调用顺序拒绝合法结果。",
+      "readScope": "article_body"
+    },
+    {
+      "id": "S04",
+      "url": "https://www.anthropic.com/engineering/effective-context-engineering-for-ai-agents",
+      "title": "Effective context engineering for AI agents",
+      "date": "2025-09-29",
+      "checkedAt": "2026-09-11T17:28:30Z",
+      "lesson": "按需读取高信号材料，用引用和结构化交接管理长任务。",
+      "boundary": "压缩可能遗失约束；过少上下文和无效探索均损害结果。",
+      "readScope": "article_body"
+    },
+    {
+      "id": "S05",
+      "url": "https://www.anthropic.com/engineering/equipping-agents-for-the-real-world-with-agent-skills",
+      "title": "Equipping agents for the real world with Agent Skills",
+      "date": "2025-10-16",
+      "notedUpdateDate": "2025-12-18",
+      "checkedAt": "2026-09-11T17:28:30Z",
+      "lesson": "元数据、主体与资源渐进加载；根据代表性失败发展 Skill。",
+      "boundary": "可移植格式不保证宿主兼容；外部代码和网络行为需审查。",
+      "readScope": "article_body"
+    },
+    {
+      "id": "S06",
+      "url": "https://www.anthropic.com/engineering/claude-code-sandboxing",
+      "title": "Beyond permission prompts: making Claude Code more secure and autonomous",
+      "date": "2025-10-20",
+      "checkedAt": "2026-09-11T17:28:30Z",
+      "lesson": "以文件系统和网络边界支持范围内自主执行。",
+      "boundary": "产品实现经验；当前宿主隔离状态必须独立验证。",
+      "readScope": "article_body"
+    },
+    {
+      "id": "S07",
+      "url": "https://www.anthropic.com/engineering/effective-harnesses-for-long-running-agents",
+      "title": "Effective harnesses for long-running agents",
+      "date": "2025-11-26",
+      "checkedAt": "2026-09-11T17:28:30Z",
+      "lesson": "初始化、增量执行、接续记录和真实验收抑制过早完成。",
+      "boundary": "全栈 Web 实验；Git 提交及双角色不能变成未授权操作。",
+      "readScope": "article_body"
+    },
+    {
+      "id": "S08",
+      "url": "https://www.anthropic.com/engineering/demystifying-evals-for-ai-agents",
+      "title": "Demystifying evals for AI agents",
+      "date": "2026-01-09",
+      "checkedAt": "2026-09-11T17:28:30Z",
+      "lesson": "检查环境结果，隔离 trial，组合适用评测器并复核轨迹。",
+      "boundary": "单次成功不证明稳定性；错误评测器和共享状态可能制造假结果。",
+      "readScope": "article_body"
+    },
+    {
+      "id": "S09",
+      "url": "https://www.anthropic.com/engineering/infrastructure-noise",
+      "title": "Quantifying infrastructure noise in agentic coding evals",
+      "date": "2026-02-05",
+      "checkedAt": "2026-09-11T17:28:30Z",
+      "lesson": "记录并控制 CPU、RAM、超时、并发及资源强制方式。",
+      "boundary": "不把环境资源差异当作模型提升，不外推实验中的固定倍率。",
+      "readScope": "article_body"
+    },
+    {
+      "id": "S10",
+      "url": "https://www.anthropic.com/engineering/harness-design-long-running-apps",
+      "title": "Harness design for long-running application development",
+      "date": "2026-03-24",
+      "checkedAt": "2026-09-11T17:28:30Z",
+      "lesson": "评估者直接使用应用；模型升级后逐项比较并移除无效脚手架。",
+      "boundary": "额外角色增加成本和延迟，也仍会漏测；只在有实际收益时采用。",
+      "readScope": "article_body"
+    },
+    {
+      "id": "S11",
+      "url": "https://www.anthropic.com/engineering/claude-code-auto-mode",
+      "title": "How we built Claude Code auto mode: a safer way to skip permissions",
+      "date": "2026-03-25",
+      "checkedAt": "2026-09-11T17:28:30Z",
+      "lesson": "检查动作和委派边界，拒绝后在边界内改用安全路径。",
+      "boundary": "概率分类有误放，不能取代高风险授权或覆盖当前用户意图。",
+      "readScope": "article_body"
+    },
+    {
+      "id": "S12",
+      "url": "https://www.anthropic.com/engineering/managed-agents",
+      "title": "Scaling Managed Agents: Decoupling the brain from the hands",
+      "date": "2026-04-08",
+      "checkedAt": "2026-09-11T17:28:30Z",
+      "lesson": "持久会话与易失执行环境解耦，凭据不进入不可信执行空间。",
+      "boundary": "托管服务架构不等于所有项目须新增运行时或购买服务。",
+      "readScope": "article_body"
+    },
+    {
+      "id": "S13",
+      "url": "https://www.anthropic.com/engineering/how-we-contain-claude",
+      "title": "How we contain Claude across products",
+      "date": "2026-05-25",
+      "checkedAt": "2026-09-11T17:28:30Z",
+      "lesson": "优先成熟隔离机制；外部数据与子 Agent 返回值持续保留信任边界。",
+      "boundary": "域名白名单不等于账号和操作被限制；隔离也有可观测性代价。",
+      "readScope": "article_body"
+    },
+    {
+      "id": "S14",
+      "url": "https://claude.com/blog/zero-trust-for-ai-agents",
+      "title": "Zero Trust for AI agents",
+      "date": "2026-05-27",
+      "checkedAt": "2026-09-11T17:28:30Z",
+      "lesson": "按身份、任务权限、持久上下文和组织成熟度设计控制。",
+      "boundary": "仅已读官方介绍页，链接 PDF 读取失败，未核对其全文。",
+      "readScope": "official_landing_page",
+      "linkedPdfReadStatus": "UNAVAILABLE_NON_RETRYABLE_TOOL_ERROR"
+    },
+    {
+      "id": "S15",
+      "url": "https://claude.com/blog/how-anthropic-secures-its-ai-native-software-development-lifecycle",
+      "title": "How Anthropic secures its AI-native software development lifecycle",
+      "date": "2026-07-21",
+      "checkedAt": "2026-09-11T17:28:30Z",
+      "lesson": "按风险自动化、先观察再采用、抽样复核、分离诊断与发布身份。",
+      "boundary": "厂商自报经验不是本项目收益或控制有效性证明。",
+      "readScope": "article_body"
+    },
+    {
+      "id": "S16",
+      "url": "https://claude.com/blog/the-ai-native-sdlc-playbook",
+      "title": "The AI-Native SDLC playbook",
+      "date": "2026-08-21",
+      "checkedAt": "2026-09-11T17:28:30Z",
+      "lesson": "以可追溯产物连接生命周期，按依赖采用并明确权威系统。",
+      "boundary": "不机械复制三文件、每步审批、Git 或 Claude 专有执行命令。",
+      "readScope": "article_body"
+    },
+    {
+      "id": "S17",
+      "url": "https://claude.com/blog/running-an-ai-native-engineering-org",
+      "title": "Running an AI-native engineering org",
+      "date": "2026-06-03",
+      "checkedAt": "2026-09-11T17:42:21.631151+00:00",
+      "lesson": "即时规划与专业风险审查；工程组织不以代码产量替代价值。",
+      "boundary": "实践依赖团队现状，不要求取消规格。",
+      "readScope": "article_body"
+    },
+    {
+      "id": "S18",
+      "url": "https://code.claude.com/docs/en/skills",
+      "title": "Extend Claude with skills",
+      "date": null,
+      "checkedAt": "2026-09-11T17:42:21.631277+00:00",
+      "lesson": "个人/项目Skill发现入口与同名优先级。",
+      "boundary": "动态文档；放置文件不证明宿主实际加载。",
+      "readScope": "official_documentation"
+    },
+    {
+      "id": "S19",
+      "url": "https://code.claude.com/docs/en/hooks",
+      "title": "Hooks reference",
+      "date": null,
+      "checkedAt": "2026-09-11T17:42:21.631279+00:00",
+      "lesson": "事件、退出码、JSON和超时行为各异。",
+      "boundary": "hook不普遍具有失败即阻断语义，不能替代权限边界。",
+      "readScope": "official_documentation"
+    },
+    {
+      "id": "S20",
+      "url": "https://github.com/anthropics/skills",
+      "title": "anthropics/skills",
+      "date": null,
+      "checkedAt": "2026-09-11T17:42:21.631280+00:00",
+      "lesson": "官方Skill资源组织及分目录许可范围。",
+      "boundary": "source-available不等于开源；本次未复制执行其代码。",
+      "readScope": "official_repository"
+    }
+  ],
+  "officialDocumentationAndRepositoriesRead": 3,
+  "canonicalSource": "/Users/mac/.agents/skills/ai-native-sdlc/references/sources.json",
+  "canonicalSha256": "4eb3038eac5bf36d14e9f28d7a1bba2249bd15177d71a133c43fa5e44ca87b7a",
+  "copyRole": "project evidence snapshot; canonical source is the shared Skill source register"
+}

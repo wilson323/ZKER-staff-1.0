@@ -1,0 +1,5423 @@
+{
+  "scope": "SYNTHETIC_SCHEMA_ONLY_NOT_AUTHORIZATION_TEST",
+  "cases": [
+    {
+      "id": "C02_startProcess_valid",
+      "schema": "C02_startProcessRequest",
+      "valid": true,
+      "input": {
+        "command": "C02.startProcess",
+        "definitionRef": {
+          "kind": "WORK",
+          "id": "demo",
+          "version": 1,
+          "digest": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        },
+        "formRef": {
+          "kind": "WORK",
+          "id": "demo",
+          "version": 1,
+          "digest": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        },
+        "intent": "demo",
+        "fields": []
+      }
+    },
+    {
+      "id": "C02_startProcess_reject_subject_injection",
+      "schema": "C02_startProcessRequest",
+      "valid": false,
+      "input": {
+        "command": "C02.startProcess",
+        "definitionRef": {
+          "kind": "WORK",
+          "id": "demo",
+          "version": 1,
+          "digest": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        },
+        "formRef": {
+          "kind": "WORK",
+          "id": "demo",
+          "version": 1,
+          "digest": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        },
+        "intent": "demo",
+        "fields": [],
+        "tenantId": "evil_tenant"
+      }
+    },
+    {
+      "id": "C02_startProcess_missing_command",
+      "schema": "C02_startProcessRequest",
+      "valid": false,
+      "input": {
+        "definitionRef": {
+          "kind": "WORK",
+          "id": "demo",
+          "version": 1,
+          "digest": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        },
+        "formRef": {
+          "kind": "WORK",
+          "id": "demo",
+          "version": 1,
+          "digest": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        },
+        "intent": "demo",
+        "fields": []
+      }
+    },
+    {
+      "id": "C03_claim_valid",
+      "schema": "C03_claimRequest",
+      "valid": true,
+      "input": {
+        "command": "C03.claim",
+        "expectedRevision": 1,
+        "responsibilityEpoch": 1,
+        "humanTaskId": "demo"
+      }
+    },
+    {
+      "id": "C03_claim_reject_subject_injection",
+      "schema": "C03_claimRequest",
+      "valid": false,
+      "input": {
+        "command": "C03.claim",
+        "expectedRevision": 1,
+        "responsibilityEpoch": 1,
+        "humanTaskId": "demo",
+        "tenantId": "evil_tenant"
+      }
+    },
+    {
+      "id": "C03_claim_missing_command",
+      "schema": "C03_claimRequest",
+      "valid": false,
+      "input": {
+        "expectedRevision": 1,
+        "responsibilityEpoch": 1,
+        "humanTaskId": "demo"
+      }
+    },
+    {
+      "id": "C03_release_valid",
+      "schema": "C03_releaseRequest",
+      "valid": true,
+      "input": {
+        "command": "C03.release",
+        "expectedRevision": 1,
+        "responsibilityEpoch": 1,
+        "humanTaskId": "demo"
+      }
+    },
+    {
+      "id": "C03_release_reject_subject_injection",
+      "schema": "C03_releaseRequest",
+      "valid": false,
+      "input": {
+        "command": "C03.release",
+        "expectedRevision": 1,
+        "responsibilityEpoch": 1,
+        "humanTaskId": "demo",
+        "tenantId": "evil_tenant"
+      }
+    },
+    {
+      "id": "C03_release_missing_command",
+      "schema": "C03_releaseRequest",
+      "valid": false,
+      "input": {
+        "expectedRevision": 1,
+        "responsibilityEpoch": 1,
+        "humanTaskId": "demo"
+      }
+    },
+    {
+      "id": "C03_transfer_valid",
+      "schema": "C03_transferRequest",
+      "valid": true,
+      "input": {
+        "command": "C03.transfer",
+        "expectedRevision": 1,
+        "responsibilityEpoch": 1,
+        "humanTaskId": "demo",
+        "targetMemberId": "demo",
+        "reason": "demo"
+      }
+    },
+    {
+      "id": "C03_transfer_reject_subject_injection",
+      "schema": "C03_transferRequest",
+      "valid": false,
+      "input": {
+        "command": "C03.transfer",
+        "expectedRevision": 1,
+        "responsibilityEpoch": 1,
+        "humanTaskId": "demo",
+        "targetMemberId": "demo",
+        "reason": "demo",
+        "tenantId": "evil_tenant"
+      }
+    },
+    {
+      "id": "C03_transfer_missing_command",
+      "schema": "C03_transferRequest",
+      "valid": false,
+      "input": {
+        "expectedRevision": 1,
+        "responsibilityEpoch": 1,
+        "humanTaskId": "demo",
+        "targetMemberId": "demo",
+        "reason": "demo"
+      }
+    },
+    {
+      "id": "C03_delegate_valid",
+      "schema": "C03_delegateRequest",
+      "valid": true,
+      "input": {
+        "command": "C03.delegate",
+        "expectedRevision": 1,
+        "responsibilityEpoch": 1,
+        "humanTaskId": "demo",
+        "targetMemberId": "demo",
+        "reason": "demo"
+      }
+    },
+    {
+      "id": "C03_delegate_reject_subject_injection",
+      "schema": "C03_delegateRequest",
+      "valid": false,
+      "input": {
+        "command": "C03.delegate",
+        "expectedRevision": 1,
+        "responsibilityEpoch": 1,
+        "humanTaskId": "demo",
+        "targetMemberId": "demo",
+        "reason": "demo",
+        "tenantId": "evil_tenant"
+      }
+    },
+    {
+      "id": "C03_delegate_missing_command",
+      "schema": "C03_delegateRequest",
+      "valid": false,
+      "input": {
+        "expectedRevision": 1,
+        "responsibilityEpoch": 1,
+        "humanTaskId": "demo",
+        "targetMemberId": "demo",
+        "reason": "demo"
+      }
+    },
+    {
+      "id": "C04_saveDraft_valid",
+      "schema": "C04_saveDraftRequest",
+      "valid": true,
+      "input": {
+        "command": "C04.saveDraft",
+        "expectedRevision": 1,
+        "responsibilityEpoch": 1,
+        "humanTaskId": "demo",
+        "mode": "MANUAL",
+        "resourceRefs": [],
+        "outputFormat": "DOCUMENT",
+        "outputContractRef": {
+          "kind": "WORK",
+          "id": "demo",
+          "version": 1,
+          "digest": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        },
+        "budget": {
+          "maxTokens": 1,
+          "maxToolCalls": 0,
+          "timeoutSeconds": 1
+        }
+      }
+    },
+    {
+      "id": "C04_saveDraft_reject_subject_injection",
+      "schema": "C04_saveDraftRequest",
+      "valid": false,
+      "input": {
+        "command": "C04.saveDraft",
+        "expectedRevision": 1,
+        "responsibilityEpoch": 1,
+        "humanTaskId": "demo",
+        "mode": "MANUAL",
+        "resourceRefs": [],
+        "outputFormat": "DOCUMENT",
+        "outputContractRef": {
+          "kind": "WORK",
+          "id": "demo",
+          "version": 1,
+          "digest": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        },
+        "budget": {
+          "maxTokens": 1,
+          "maxToolCalls": 0,
+          "timeoutSeconds": 1
+        },
+        "tenantId": "evil_tenant"
+      }
+    },
+    {
+      "id": "C04_saveDraft_missing_command",
+      "schema": "C04_saveDraftRequest",
+      "valid": false,
+      "input": {
+        "expectedRevision": 1,
+        "responsibilityEpoch": 1,
+        "humanTaskId": "demo",
+        "mode": "MANUAL",
+        "resourceRefs": [],
+        "outputFormat": "DOCUMENT",
+        "outputContractRef": {
+          "kind": "WORK",
+          "id": "demo",
+          "version": 1,
+          "digest": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        },
+        "budget": {
+          "maxTokens": 1,
+          "maxToolCalls": 0,
+          "timeoutSeconds": 1
+        }
+      }
+    },
+    {
+      "id": "C04_saveTaskBinding_valid",
+      "schema": "C04_saveTaskBindingRequest",
+      "valid": true,
+      "input": {
+        "command": "C04.saveTaskBinding",
+        "expectedRevision": 1,
+        "responsibilityEpoch": 1,
+        "humanTaskId": "demo",
+        "mode": "MANUAL",
+        "resourceRefs": [],
+        "outputFormat": "DOCUMENT",
+        "outputContractRef": {
+          "kind": "WORK",
+          "id": "demo",
+          "version": 1,
+          "digest": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        },
+        "budget": {
+          "maxTokens": 1,
+          "maxToolCalls": 0,
+          "timeoutSeconds": 1
+        }
+      }
+    },
+    {
+      "id": "C04_saveTaskBinding_reject_subject_injection",
+      "schema": "C04_saveTaskBindingRequest",
+      "valid": false,
+      "input": {
+        "command": "C04.saveTaskBinding",
+        "expectedRevision": 1,
+        "responsibilityEpoch": 1,
+        "humanTaskId": "demo",
+        "mode": "MANUAL",
+        "resourceRefs": [],
+        "outputFormat": "DOCUMENT",
+        "outputContractRef": {
+          "kind": "WORK",
+          "id": "demo",
+          "version": 1,
+          "digest": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        },
+        "budget": {
+          "maxTokens": 1,
+          "maxToolCalls": 0,
+          "timeoutSeconds": 1
+        },
+        "tenantId": "evil_tenant"
+      }
+    },
+    {
+      "id": "C04_saveTaskBinding_missing_command",
+      "schema": "C04_saveTaskBindingRequest",
+      "valid": false,
+      "input": {
+        "expectedRevision": 1,
+        "responsibilityEpoch": 1,
+        "humanTaskId": "demo",
+        "mode": "MANUAL",
+        "resourceRefs": [],
+        "outputFormat": "DOCUMENT",
+        "outputContractRef": {
+          "kind": "WORK",
+          "id": "demo",
+          "version": 1,
+          "digest": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        },
+        "budget": {
+          "maxTokens": 1,
+          "maxToolCalls": 0,
+          "timeoutSeconds": 1
+        }
+      }
+    },
+    {
+      "id": "C05_previewContext_valid",
+      "schema": "C05_previewContextRequest",
+      "valid": true,
+      "input": {
+        "command": "C05.previewContext",
+        "expectedRevision": 1,
+        "responsibilityEpoch": 1,
+        "bindingVersion": 1,
+        "purpose": "demo"
+      }
+    },
+    {
+      "id": "C05_previewContext_reject_subject_injection",
+      "schema": "C05_previewContextRequest",
+      "valid": false,
+      "input": {
+        "command": "C05.previewContext",
+        "expectedRevision": 1,
+        "responsibilityEpoch": 1,
+        "bindingVersion": 1,
+        "purpose": "demo",
+        "tenantId": "evil_tenant"
+      }
+    },
+    {
+      "id": "C05_previewContext_missing_command",
+      "schema": "C05_previewContextRequest",
+      "valid": false,
+      "input": {
+        "expectedRevision": 1,
+        "responsibilityEpoch": 1,
+        "bindingVersion": 1,
+        "purpose": "demo"
+      }
+    },
+    {
+      "id": "C06_startAttempt_valid",
+      "schema": "C06_startAttemptRequest",
+      "valid": true,
+      "input": {
+        "command": "C06.startAttempt",
+        "expectedRevision": 1,
+        "responsibilityEpoch": 1,
+        "bindingVersion": 1,
+        "contextPreviewId": "demo",
+        "executionMode": "ASSISTED",
+        "outputContractRef": {
+          "kind": "WORK",
+          "id": "demo",
+          "version": 1,
+          "digest": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        }
+      }
+    },
+    {
+      "id": "C06_startAttempt_reject_subject_injection",
+      "schema": "C06_startAttemptRequest",
+      "valid": false,
+      "input": {
+        "command": "C06.startAttempt",
+        "expectedRevision": 1,
+        "responsibilityEpoch": 1,
+        "bindingVersion": 1,
+        "contextPreviewId": "demo",
+        "executionMode": "ASSISTED",
+        "outputContractRef": {
+          "kind": "WORK",
+          "id": "demo",
+          "version": 1,
+          "digest": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        },
+        "tenantId": "evil_tenant"
+      }
+    },
+    {
+      "id": "C06_startAttempt_missing_command",
+      "schema": "C06_startAttemptRequest",
+      "valid": false,
+      "input": {
+        "expectedRevision": 1,
+        "responsibilityEpoch": 1,
+        "bindingVersion": 1,
+        "contextPreviewId": "demo",
+        "executionMode": "ASSISTED",
+        "outputContractRef": {
+          "kind": "WORK",
+          "id": "demo",
+          "version": 1,
+          "digest": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        }
+      }
+    },
+    {
+      "id": "C07_pause_valid",
+      "schema": "C07_pauseRequest",
+      "valid": true,
+      "input": {
+        "command": "C07.pause",
+        "expectedRevision": 1,
+        "reason": "demo"
+      }
+    },
+    {
+      "id": "C07_pause_reject_subject_injection",
+      "schema": "C07_pauseRequest",
+      "valid": false,
+      "input": {
+        "command": "C07.pause",
+        "expectedRevision": 1,
+        "reason": "demo",
+        "tenantId": "evil_tenant"
+      }
+    },
+    {
+      "id": "C07_pause_missing_command",
+      "schema": "C07_pauseRequest",
+      "valid": false,
+      "input": {
+        "expectedRevision": 1,
+        "reason": "demo"
+      }
+    },
+    {
+      "id": "C07_resume_valid",
+      "schema": "C07_resumeRequest",
+      "valid": true,
+      "input": {
+        "command": "C07.resume",
+        "expectedRevision": 1,
+        "reason": "demo"
+      }
+    },
+    {
+      "id": "C07_resume_reject_subject_injection",
+      "schema": "C07_resumeRequest",
+      "valid": false,
+      "input": {
+        "command": "C07.resume",
+        "expectedRevision": 1,
+        "reason": "demo",
+        "tenantId": "evil_tenant"
+      }
+    },
+    {
+      "id": "C07_resume_missing_command",
+      "schema": "C07_resumeRequest",
+      "valid": false,
+      "input": {
+        "expectedRevision": 1,
+        "reason": "demo"
+      }
+    },
+    {
+      "id": "C07_cancel_valid",
+      "schema": "C07_cancelRequest",
+      "valid": true,
+      "input": {
+        "command": "C07.cancel",
+        "expectedRevision": 1,
+        "reason": "demo"
+      }
+    },
+    {
+      "id": "C07_cancel_reject_subject_injection",
+      "schema": "C07_cancelRequest",
+      "valid": false,
+      "input": {
+        "command": "C07.cancel",
+        "expectedRevision": 1,
+        "reason": "demo",
+        "tenantId": "evil_tenant"
+      }
+    },
+    {
+      "id": "C07_cancel_missing_command",
+      "schema": "C07_cancelRequest",
+      "valid": false,
+      "input": {
+        "expectedRevision": 1,
+        "reason": "demo"
+      }
+    },
+    {
+      "id": "C08_request_valid",
+      "schema": "C08_requestRequest",
+      "valid": true,
+      "input": {
+        "command": "C08.request",
+        "workId": "demo",
+        "expectedRevision": 1,
+        "responsibilityEpoch": 1,
+        "recipientMemberId": "demo",
+        "outputContractRef": {
+          "kind": "WORK",
+          "id": "demo",
+          "version": 1,
+          "digest": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        },
+        "dueAt": "2026-09-11T12:00:00Z"
+      }
+    },
+    {
+      "id": "C08_request_reject_subject_injection",
+      "schema": "C08_requestRequest",
+      "valid": false,
+      "input": {
+        "command": "C08.request",
+        "workId": "demo",
+        "expectedRevision": 1,
+        "responsibilityEpoch": 1,
+        "recipientMemberId": "demo",
+        "outputContractRef": {
+          "kind": "WORK",
+          "id": "demo",
+          "version": 1,
+          "digest": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        },
+        "dueAt": "2026-09-11T12:00:00Z",
+        "tenantId": "evil_tenant"
+      }
+    },
+    {
+      "id": "C08_request_missing_command",
+      "schema": "C08_requestRequest",
+      "valid": false,
+      "input": {
+        "workId": "demo",
+        "expectedRevision": 1,
+        "responsibilityEpoch": 1,
+        "recipientMemberId": "demo",
+        "outputContractRef": {
+          "kind": "WORK",
+          "id": "demo",
+          "version": 1,
+          "digest": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        },
+        "dueAt": "2026-09-11T12:00:00Z"
+      }
+    },
+    {
+      "id": "C08_accept_valid",
+      "schema": "C08_acceptRequest",
+      "valid": true,
+      "input": {
+        "command": "C08.accept",
+        "targetRef": {
+          "kind": "WORK",
+          "id": "demo",
+          "version": 1,
+          "digest": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        },
+        "expectedRevision": 1,
+        "reason": "demo"
+      }
+    },
+    {
+      "id": "C08_accept_reject_subject_injection",
+      "schema": "C08_acceptRequest",
+      "valid": false,
+      "input": {
+        "command": "C08.accept",
+        "targetRef": {
+          "kind": "WORK",
+          "id": "demo",
+          "version": 1,
+          "digest": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        },
+        "expectedRevision": 1,
+        "reason": "demo",
+        "tenantId": "evil_tenant"
+      }
+    },
+    {
+      "id": "C08_accept_missing_command",
+      "schema": "C08_acceptRequest",
+      "valid": false,
+      "input": {
+        "targetRef": {
+          "kind": "WORK",
+          "id": "demo",
+          "version": 1,
+          "digest": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        },
+        "expectedRevision": 1,
+        "reason": "demo"
+      }
+    },
+    {
+      "id": "C08_decline_valid",
+      "schema": "C08_declineRequest",
+      "valid": true,
+      "input": {
+        "command": "C08.decline",
+        "targetRef": {
+          "kind": "WORK",
+          "id": "demo",
+          "version": 1,
+          "digest": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        },
+        "expectedRevision": 1,
+        "reason": "demo"
+      }
+    },
+    {
+      "id": "C08_decline_reject_subject_injection",
+      "schema": "C08_declineRequest",
+      "valid": false,
+      "input": {
+        "command": "C08.decline",
+        "targetRef": {
+          "kind": "WORK",
+          "id": "demo",
+          "version": 1,
+          "digest": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        },
+        "expectedRevision": 1,
+        "reason": "demo",
+        "tenantId": "evil_tenant"
+      }
+    },
+    {
+      "id": "C08_decline_missing_command",
+      "schema": "C08_declineRequest",
+      "valid": false,
+      "input": {
+        "targetRef": {
+          "kind": "WORK",
+          "id": "demo",
+          "version": 1,
+          "digest": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        },
+        "expectedRevision": 1,
+        "reason": "demo"
+      }
+    },
+    {
+      "id": "C09_submit_valid",
+      "schema": "C09_submitRequest",
+      "valid": true,
+      "input": {
+        "command": "C09.submit",
+        "linkRef": {
+          "kind": "WORK",
+          "id": "demo",
+          "version": 1,
+          "digest": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        },
+        "expectedRevision": 1,
+        "responsibilityEpoch": 1,
+        "artifactRefs": [
+          {
+            "kind": "WORK",
+            "id": "demo",
+            "version": 1,
+            "digest": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+          }
+        ],
+        "baselineRef": {
+          "kind": "WORK",
+          "id": "demo",
+          "version": 1,
+          "digest": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        }
+      }
+    },
+    {
+      "id": "C09_submit_reject_subject_injection",
+      "schema": "C09_submitRequest",
+      "valid": false,
+      "input": {
+        "command": "C09.submit",
+        "linkRef": {
+          "kind": "WORK",
+          "id": "demo",
+          "version": 1,
+          "digest": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        },
+        "expectedRevision": 1,
+        "responsibilityEpoch": 1,
+        "artifactRefs": [
+          {
+            "kind": "WORK",
+            "id": "demo",
+            "version": 1,
+            "digest": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+          }
+        ],
+        "baselineRef": {
+          "kind": "WORK",
+          "id": "demo",
+          "version": 1,
+          "digest": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        },
+        "tenantId": "evil_tenant"
+      }
+    },
+    {
+      "id": "C09_submit_missing_command",
+      "schema": "C09_submitRequest",
+      "valid": false,
+      "input": {
+        "linkRef": {
+          "kind": "WORK",
+          "id": "demo",
+          "version": 1,
+          "digest": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        },
+        "expectedRevision": 1,
+        "responsibilityEpoch": 1,
+        "artifactRefs": [
+          {
+            "kind": "WORK",
+            "id": "demo",
+            "version": 1,
+            "digest": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+          }
+        ],
+        "baselineRef": {
+          "kind": "WORK",
+          "id": "demo",
+          "version": 1,
+          "digest": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        }
+      }
+    },
+    {
+      "id": "C09_decide_valid",
+      "schema": "C09_decideRequest",
+      "valid": true,
+      "input": {
+        "command": "C09.decide",
+        "targetRef": {
+          "kind": "WORK",
+          "id": "demo",
+          "version": 1,
+          "digest": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        },
+        "expectedRevision": 1,
+        "decision": "ACCEPT",
+        "reason": "demo",
+        "baselineRef": {
+          "kind": "WORK",
+          "id": "demo",
+          "version": 1,
+          "digest": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        }
+      }
+    },
+    {
+      "id": "C09_decide_reject_subject_injection",
+      "schema": "C09_decideRequest",
+      "valid": false,
+      "input": {
+        "command": "C09.decide",
+        "targetRef": {
+          "kind": "WORK",
+          "id": "demo",
+          "version": 1,
+          "digest": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        },
+        "expectedRevision": 1,
+        "decision": "ACCEPT",
+        "reason": "demo",
+        "baselineRef": {
+          "kind": "WORK",
+          "id": "demo",
+          "version": 1,
+          "digest": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        },
+        "tenantId": "evil_tenant"
+      }
+    },
+    {
+      "id": "C09_decide_missing_command",
+      "schema": "C09_decideRequest",
+      "valid": false,
+      "input": {
+        "targetRef": {
+          "kind": "WORK",
+          "id": "demo",
+          "version": 1,
+          "digest": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        },
+        "expectedRevision": 1,
+        "decision": "ACCEPT",
+        "reason": "demo",
+        "baselineRef": {
+          "kind": "WORK",
+          "id": "demo",
+          "version": 1,
+          "digest": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        }
+      }
+    },
+    {
+      "id": "C10_requestReview_valid",
+      "schema": "C10_requestReviewRequest",
+      "valid": true,
+      "input": {
+        "command": "C10.requestReview",
+        "workId": "demo",
+        "expectedRevision": 1,
+        "responsibilityEpoch": 1,
+        "candidateRef": {
+          "kind": "WORK",
+          "id": "demo",
+          "version": 1,
+          "digest": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        },
+        "reviewerMemberId": "demo",
+        "baselineRef": {
+          "kind": "WORK",
+          "id": "demo",
+          "version": 1,
+          "digest": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        }
+      }
+    },
+    {
+      "id": "C10_requestReview_reject_subject_injection",
+      "schema": "C10_requestReviewRequest",
+      "valid": false,
+      "input": {
+        "command": "C10.requestReview",
+        "workId": "demo",
+        "expectedRevision": 1,
+        "responsibilityEpoch": 1,
+        "candidateRef": {
+          "kind": "WORK",
+          "id": "demo",
+          "version": 1,
+          "digest": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        },
+        "reviewerMemberId": "demo",
+        "baselineRef": {
+          "kind": "WORK",
+          "id": "demo",
+          "version": 1,
+          "digest": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        },
+        "tenantId": "evil_tenant"
+      }
+    },
+    {
+      "id": "C10_requestReview_missing_command",
+      "schema": "C10_requestReviewRequest",
+      "valid": false,
+      "input": {
+        "workId": "demo",
+        "expectedRevision": 1,
+        "responsibilityEpoch": 1,
+        "candidateRef": {
+          "kind": "WORK",
+          "id": "demo",
+          "version": 1,
+          "digest": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        },
+        "reviewerMemberId": "demo",
+        "baselineRef": {
+          "kind": "WORK",
+          "id": "demo",
+          "version": 1,
+          "digest": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        }
+      }
+    },
+    {
+      "id": "C10_decideReview_valid",
+      "schema": "C10_decideReviewRequest",
+      "valid": true,
+      "input": {
+        "command": "C10.decideReview",
+        "targetRef": {
+          "kind": "WORK",
+          "id": "demo",
+          "version": 1,
+          "digest": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        },
+        "expectedRevision": 1,
+        "decision": "APPROVE",
+        "reason": "demo",
+        "candidateDigest": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+      }
+    },
+    {
+      "id": "C10_decideReview_reject_subject_injection",
+      "schema": "C10_decideReviewRequest",
+      "valid": false,
+      "input": {
+        "command": "C10.decideReview",
+        "targetRef": {
+          "kind": "WORK",
+          "id": "demo",
+          "version": 1,
+          "digest": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        },
+        "expectedRevision": 1,
+        "decision": "APPROVE",
+        "reason": "demo",
+        "candidateDigest": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "tenantId": "evil_tenant"
+      }
+    },
+    {
+      "id": "C10_decideReview_missing_command",
+      "schema": "C10_decideReviewRequest",
+      "valid": false,
+      "input": {
+        "targetRef": {
+          "kind": "WORK",
+          "id": "demo",
+          "version": 1,
+          "digest": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        },
+        "expectedRevision": 1,
+        "decision": "APPROVE",
+        "reason": "demo",
+        "candidateDigest": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+      }
+    },
+    {
+      "id": "C11_checkCompletion_valid",
+      "schema": "C11_checkCompletionRequest",
+      "valid": true,
+      "input": {
+        "command": "C11.checkCompletion",
+        "expectedRevision": 1,
+        "responsibilityEpoch": 1,
+        "artifactRefs": [
+          {
+            "kind": "WORK",
+            "id": "demo",
+            "version": 1,
+            "digest": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+          }
+        ],
+        "baselineRef": {
+          "kind": "WORK",
+          "id": "demo",
+          "version": 1,
+          "digest": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        },
+        "approvalRefs": []
+      }
+    },
+    {
+      "id": "C11_checkCompletion_reject_subject_injection",
+      "schema": "C11_checkCompletionRequest",
+      "valid": false,
+      "input": {
+        "command": "C11.checkCompletion",
+        "expectedRevision": 1,
+        "responsibilityEpoch": 1,
+        "artifactRefs": [
+          {
+            "kind": "WORK",
+            "id": "demo",
+            "version": 1,
+            "digest": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+          }
+        ],
+        "baselineRef": {
+          "kind": "WORK",
+          "id": "demo",
+          "version": 1,
+          "digest": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        },
+        "approvalRefs": [],
+        "tenantId": "evil_tenant"
+      }
+    },
+    {
+      "id": "C11_checkCompletion_missing_command",
+      "schema": "C11_checkCompletionRequest",
+      "valid": false,
+      "input": {
+        "expectedRevision": 1,
+        "responsibilityEpoch": 1,
+        "artifactRefs": [
+          {
+            "kind": "WORK",
+            "id": "demo",
+            "version": 1,
+            "digest": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+          }
+        ],
+        "baselineRef": {
+          "kind": "WORK",
+          "id": "demo",
+          "version": 1,
+          "digest": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        },
+        "approvalRefs": []
+      }
+    },
+    {
+      "id": "C11_submitDelivery_valid",
+      "schema": "C11_submitDeliveryRequest",
+      "valid": true,
+      "input": {
+        "command": "C11.submitDelivery",
+        "expectedRevision": 1,
+        "responsibilityEpoch": 1,
+        "completionCheckId": "demo",
+        "artifactRefs": [
+          {
+            "kind": "WORK",
+            "id": "demo",
+            "version": 1,
+            "digest": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+          }
+        ],
+        "artifactSetDigest": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "baselineRef": {
+          "kind": "WORK",
+          "id": "demo",
+          "version": 1,
+          "digest": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        },
+        "approvalRefs": [],
+        "provenance": {
+          "mode": "MANUAL",
+          "note": "demo",
+          "evidenceRefs": [
+            {
+              "kind": "WORK",
+              "id": "demo",
+              "version": 1,
+              "digest": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "C11_submitDelivery_reject_subject_injection",
+      "schema": "C11_submitDeliveryRequest",
+      "valid": false,
+      "input": {
+        "command": "C11.submitDelivery",
+        "expectedRevision": 1,
+        "responsibilityEpoch": 1,
+        "completionCheckId": "demo",
+        "artifactRefs": [
+          {
+            "kind": "WORK",
+            "id": "demo",
+            "version": 1,
+            "digest": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+          }
+        ],
+        "artifactSetDigest": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "baselineRef": {
+          "kind": "WORK",
+          "id": "demo",
+          "version": 1,
+          "digest": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        },
+        "approvalRefs": [],
+        "provenance": {
+          "mode": "MANUAL",
+          "note": "demo",
+          "evidenceRefs": [
+            {
+              "kind": "WORK",
+              "id": "demo",
+              "version": 1,
+              "digest": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+            }
+          ]
+        },
+        "tenantId": "evil_tenant"
+      }
+    },
+    {
+      "id": "C11_submitDelivery_missing_command",
+      "schema": "C11_submitDeliveryRequest",
+      "valid": false,
+      "input": {
+        "expectedRevision": 1,
+        "responsibilityEpoch": 1,
+        "completionCheckId": "demo",
+        "artifactRefs": [
+          {
+            "kind": "WORK",
+            "id": "demo",
+            "version": 1,
+            "digest": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+          }
+        ],
+        "artifactSetDigest": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "baselineRef": {
+          "kind": "WORK",
+          "id": "demo",
+          "version": 1,
+          "digest": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        },
+        "approvalRefs": [],
+        "provenance": {
+          "mode": "MANUAL",
+          "note": "demo",
+          "evidenceRefs": [
+            {
+              "kind": "WORK",
+              "id": "demo",
+              "version": 1,
+              "digest": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "C12_receiveHandoff_valid",
+      "schema": "C12_receiveHandoffRequest",
+      "valid": true,
+      "input": {
+        "command": "C12.receiveHandoff",
+        "packageVersion": 1,
+        "recipientWorkId": "demo",
+        "expectedRevision": 1,
+        "responsibilityEpoch": 1
+      }
+    },
+    {
+      "id": "C12_receiveHandoff_reject_subject_injection",
+      "schema": "C12_receiveHandoffRequest",
+      "valid": false,
+      "input": {
+        "command": "C12.receiveHandoff",
+        "packageVersion": 1,
+        "recipientWorkId": "demo",
+        "expectedRevision": 1,
+        "responsibilityEpoch": 1,
+        "tenantId": "evil_tenant"
+      }
+    },
+    {
+      "id": "C12_receiveHandoff_missing_command",
+      "schema": "C12_receiveHandoffRequest",
+      "valid": false,
+      "input": {
+        "packageVersion": 1,
+        "recipientWorkId": "demo",
+        "expectedRevision": 1,
+        "responsibilityEpoch": 1
+      }
+    },
+    {
+      "id": "C13_adoptMarket_valid",
+      "schema": "C13_adoptMarketRequest",
+      "valid": true,
+      "input": {
+        "command": "C13.adoptMarket",
+        "sourceRef": {
+          "kind": "WORK",
+          "id": "demo",
+          "version": 1,
+          "digest": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        },
+        "mode": "COPY_AND_USE",
+        "targetWorkId": "demo",
+        "expectedRevision": 1
+      }
+    },
+    {
+      "id": "C13_adoptMarket_reject_subject_injection",
+      "schema": "C13_adoptMarketRequest",
+      "valid": false,
+      "input": {
+        "command": "C13.adoptMarket",
+        "sourceRef": {
+          "kind": "WORK",
+          "id": "demo",
+          "version": 1,
+          "digest": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        },
+        "mode": "COPY_AND_USE",
+        "targetWorkId": "demo",
+        "expectedRevision": 1,
+        "tenantId": "evil_tenant"
+      }
+    },
+    {
+      "id": "C13_adoptMarket_missing_command",
+      "schema": "C13_adoptMarketRequest",
+      "valid": false,
+      "input": {
+        "sourceRef": {
+          "kind": "WORK",
+          "id": "demo",
+          "version": 1,
+          "digest": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        },
+        "mode": "COPY_AND_USE",
+        "targetWorkId": "demo",
+        "expectedRevision": 1
+      }
+    },
+    {
+      "id": "C14_reconcile_valid",
+      "schema": "C14_reconcileRequest",
+      "valid": true,
+      "input": {
+        "command": "C14.reconcile",
+        "expectedRevision": 1,
+        "evidenceRefs": []
+      }
+    },
+    {
+      "id": "C14_reconcile_reject_subject_injection",
+      "schema": "C14_reconcileRequest",
+      "valid": false,
+      "input": {
+        "command": "C14.reconcile",
+        "expectedRevision": 1,
+        "evidenceRefs": [],
+        "tenantId": "evil_tenant"
+      }
+    },
+    {
+      "id": "C14_reconcile_missing_command",
+      "schema": "C14_reconcileRequest",
+      "valid": false,
+      "input": {
+        "expectedRevision": 1,
+        "evidenceRefs": []
+      }
+    },
+    {
+      "id": "C15_read_valid",
+      "schema": "C15_readRequest",
+      "valid": true,
+      "input": {
+        "command": "C15.read",
+        "targetRef": {
+          "kind": "WORK",
+          "id": "demo",
+          "version": 1,
+          "digest": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        },
+        "expectedRevision": 1,
+        "reason": "demo"
+      }
+    },
+    {
+      "id": "C15_read_reject_subject_injection",
+      "schema": "C15_readRequest",
+      "valid": false,
+      "input": {
+        "command": "C15.read",
+        "targetRef": {
+          "kind": "WORK",
+          "id": "demo",
+          "version": 1,
+          "digest": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        },
+        "expectedRevision": 1,
+        "reason": "demo",
+        "tenantId": "evil_tenant"
+      }
+    },
+    {
+      "id": "C15_read_missing_command",
+      "schema": "C15_readRequest",
+      "valid": false,
+      "input": {
+        "targetRef": {
+          "kind": "WORK",
+          "id": "demo",
+          "version": 1,
+          "digest": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        },
+        "expectedRevision": 1,
+        "reason": "demo"
+      }
+    },
+    {
+      "id": "C15_remind_valid",
+      "schema": "C15_remindRequest",
+      "valid": true,
+      "input": {
+        "command": "C15.remind",
+        "targetRef": {
+          "kind": "WORK",
+          "id": "demo",
+          "version": 1,
+          "digest": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        },
+        "expectedRevision": 1,
+        "reason": "demo"
+      }
+    },
+    {
+      "id": "C15_remind_reject_subject_injection",
+      "schema": "C15_remindRequest",
+      "valid": false,
+      "input": {
+        "command": "C15.remind",
+        "targetRef": {
+          "kind": "WORK",
+          "id": "demo",
+          "version": 1,
+          "digest": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        },
+        "expectedRevision": 1,
+        "reason": "demo",
+        "tenantId": "evil_tenant"
+      }
+    },
+    {
+      "id": "C15_remind_missing_command",
+      "schema": "C15_remindRequest",
+      "valid": false,
+      "input": {
+        "targetRef": {
+          "kind": "WORK",
+          "id": "demo",
+          "version": 1,
+          "digest": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        },
+        "expectedRevision": 1,
+        "reason": "demo"
+      }
+    },
+    {
+      "id": "C15_withdraw_valid",
+      "schema": "C15_withdrawRequest",
+      "valid": true,
+      "input": {
+        "command": "C15.withdraw",
+        "targetRef": {
+          "kind": "WORK",
+          "id": "demo",
+          "version": 1,
+          "digest": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        },
+        "expectedRevision": 1,
+        "reason": "demo"
+      }
+    },
+    {
+      "id": "C15_withdraw_reject_subject_injection",
+      "schema": "C15_withdrawRequest",
+      "valid": false,
+      "input": {
+        "command": "C15.withdraw",
+        "targetRef": {
+          "kind": "WORK",
+          "id": "demo",
+          "version": 1,
+          "digest": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        },
+        "expectedRevision": 1,
+        "reason": "demo",
+        "tenantId": "evil_tenant"
+      }
+    },
+    {
+      "id": "C15_withdraw_missing_command",
+      "schema": "C15_withdrawRequest",
+      "valid": false,
+      "input": {
+        "targetRef": {
+          "kind": "WORK",
+          "id": "demo",
+          "version": 1,
+          "digest": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        },
+        "expectedRevision": 1,
+        "reason": "demo"
+      }
+    },
+    {
+      "id": "C15_appendWorkMessage_valid",
+      "schema": "C15_appendWorkMessageRequest",
+      "valid": true,
+      "input": {
+        "command": "C15.appendWorkMessage",
+        "expectedRevision": 1,
+        "responsibilityEpoch": 1,
+        "text": "demo",
+        "attachmentRefs": []
+      }
+    },
+    {
+      "id": "C15_appendWorkMessage_reject_subject_injection",
+      "schema": "C15_appendWorkMessageRequest",
+      "valid": false,
+      "input": {
+        "command": "C15.appendWorkMessage",
+        "expectedRevision": 1,
+        "responsibilityEpoch": 1,
+        "text": "demo",
+        "attachmentRefs": [],
+        "tenantId": "evil_tenant"
+      }
+    },
+    {
+      "id": "C15_appendWorkMessage_missing_command",
+      "schema": "C15_appendWorkMessageRequest",
+      "valid": false,
+      "input": {
+        "expectedRevision": 1,
+        "responsibilityEpoch": 1,
+        "text": "demo",
+        "attachmentRefs": []
+      }
+    },
+    {
+      "id": "C15_saveMessageDraft_valid",
+      "schema": "C15_saveMessageDraftRequest",
+      "valid": true,
+      "input": {
+        "command": "C15.saveMessageDraft",
+        "expectedRevision": 1,
+        "responsibilityEpoch": 1,
+        "text": "demo"
+      }
+    },
+    {
+      "id": "C15_saveMessageDraft_reject_subject_injection",
+      "schema": "C15_saveMessageDraftRequest",
+      "valid": false,
+      "input": {
+        "command": "C15.saveMessageDraft",
+        "expectedRevision": 1,
+        "responsibilityEpoch": 1,
+        "text": "demo",
+        "tenantId": "evil_tenant"
+      }
+    },
+    {
+      "id": "C15_saveMessageDraft_missing_command",
+      "schema": "C15_saveMessageDraftRequest",
+      "valid": false,
+      "input": {
+        "expectedRevision": 1,
+        "responsibilityEpoch": 1,
+        "text": "demo"
+      }
+    },
+    {
+      "id": "C16_propose_valid",
+      "schema": "C16_proposeRequest",
+      "valid": true,
+      "input": {
+        "command": "C16.propose",
+        "workId": "demo",
+        "expectedRevision": 1,
+        "responsibilityEpoch": 1,
+        "baselineRef": {
+          "kind": "WORK",
+          "id": "demo",
+          "version": 1,
+          "digest": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        },
+        "sourceRefs": [
+          {
+            "kind": "WORK",
+            "id": "demo",
+            "version": 1,
+            "digest": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+          }
+        ],
+        "facts": [
+          {
+            "fieldKey": "demo",
+            "type": "TEXT",
+            "value": "demo"
+          }
+        ]
+      }
+    },
+    {
+      "id": "C16_propose_reject_subject_injection",
+      "schema": "C16_proposeRequest",
+      "valid": false,
+      "input": {
+        "command": "C16.propose",
+        "workId": "demo",
+        "expectedRevision": 1,
+        "responsibilityEpoch": 1,
+        "baselineRef": {
+          "kind": "WORK",
+          "id": "demo",
+          "version": 1,
+          "digest": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        },
+        "sourceRefs": [
+          {
+            "kind": "WORK",
+            "id": "demo",
+            "version": 1,
+            "digest": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+          }
+        ],
+        "facts": [
+          {
+            "fieldKey": "demo",
+            "type": "TEXT",
+            "value": "demo"
+          }
+        ],
+        "tenantId": "evil_tenant"
+      }
+    },
+    {
+      "id": "C16_propose_missing_command",
+      "schema": "C16_proposeRequest",
+      "valid": false,
+      "input": {
+        "workId": "demo",
+        "expectedRevision": 1,
+        "responsibilityEpoch": 1,
+        "baselineRef": {
+          "kind": "WORK",
+          "id": "demo",
+          "version": 1,
+          "digest": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        },
+        "sourceRefs": [
+          {
+            "kind": "WORK",
+            "id": "demo",
+            "version": 1,
+            "digest": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+          }
+        ],
+        "facts": [
+          {
+            "fieldKey": "demo",
+            "type": "TEXT",
+            "value": "demo"
+          }
+        ]
+      }
+    },
+    {
+      "id": "C16_confirm_valid",
+      "schema": "C16_confirmRequest",
+      "valid": true,
+      "input": {
+        "command": "C16.confirm",
+        "workId": "demo",
+        "expectedRevision": 1,
+        "responsibilityEpoch": 1,
+        "baselineRef": {
+          "kind": "WORK",
+          "id": "demo",
+          "version": 1,
+          "digest": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        },
+        "sourceRefs": [
+          {
+            "kind": "WORK",
+            "id": "demo",
+            "version": 1,
+            "digest": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+          }
+        ],
+        "facts": [
+          {
+            "fieldKey": "demo",
+            "type": "TEXT",
+            "value": "demo"
+          }
+        ]
+      }
+    },
+    {
+      "id": "C16_confirm_reject_subject_injection",
+      "schema": "C16_confirmRequest",
+      "valid": false,
+      "input": {
+        "command": "C16.confirm",
+        "workId": "demo",
+        "expectedRevision": 1,
+        "responsibilityEpoch": 1,
+        "baselineRef": {
+          "kind": "WORK",
+          "id": "demo",
+          "version": 1,
+          "digest": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        },
+        "sourceRefs": [
+          {
+            "kind": "WORK",
+            "id": "demo",
+            "version": 1,
+            "digest": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+          }
+        ],
+        "facts": [
+          {
+            "fieldKey": "demo",
+            "type": "TEXT",
+            "value": "demo"
+          }
+        ],
+        "tenantId": "evil_tenant"
+      }
+    },
+    {
+      "id": "C16_confirm_missing_command",
+      "schema": "C16_confirmRequest",
+      "valid": false,
+      "input": {
+        "workId": "demo",
+        "expectedRevision": 1,
+        "responsibilityEpoch": 1,
+        "baselineRef": {
+          "kind": "WORK",
+          "id": "demo",
+          "version": 1,
+          "digest": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        },
+        "sourceRefs": [
+          {
+            "kind": "WORK",
+            "id": "demo",
+            "version": 1,
+            "digest": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+          }
+        ],
+        "facts": [
+          {
+            "fieldKey": "demo",
+            "type": "TEXT",
+            "value": "demo"
+          }
+        ]
+      }
+    },
+    {
+      "id": "C17_draft_valid",
+      "schema": "C17_draftRequest",
+      "valid": true,
+      "input": {
+        "command": "C17.draft",
+        "draft": {
+          "kind": "AGENT",
+          "name": "demo",
+          "description": "demo",
+          "inputSchemaRef": {
+            "kind": "WORK",
+            "id": "demo",
+            "version": 1,
+            "digest": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+          },
+          "outputSchemaRef": {
+            "kind": "WORK",
+            "id": "demo",
+            "version": 1,
+            "digest": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+          },
+          "instructions": "demo",
+          "dependencyRefs": [],
+          "capabilityRefs": [],
+          "budget": {
+            "maxTokens": 1,
+            "maxToolCalls": 0,
+            "timeoutSeconds": 1
+          }
+        }
+      }
+    },
+    {
+      "id": "C17_draft_reject_subject_injection",
+      "schema": "C17_draftRequest",
+      "valid": false,
+      "input": {
+        "command": "C17.draft",
+        "draft": {
+          "kind": "AGENT",
+          "name": "demo",
+          "description": "demo",
+          "inputSchemaRef": {
+            "kind": "WORK",
+            "id": "demo",
+            "version": 1,
+            "digest": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+          },
+          "outputSchemaRef": {
+            "kind": "WORK",
+            "id": "demo",
+            "version": 1,
+            "digest": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+          },
+          "instructions": "demo",
+          "dependencyRefs": [],
+          "capabilityRefs": [],
+          "budget": {
+            "maxTokens": 1,
+            "maxToolCalls": 0,
+            "timeoutSeconds": 1
+          }
+        },
+        "tenantId": "evil_tenant"
+      }
+    },
+    {
+      "id": "C17_draft_missing_command",
+      "schema": "C17_draftRequest",
+      "valid": false,
+      "input": {
+        "draft": {
+          "kind": "AGENT",
+          "name": "demo",
+          "description": "demo",
+          "inputSchemaRef": {
+            "kind": "WORK",
+            "id": "demo",
+            "version": 1,
+            "digest": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+          },
+          "outputSchemaRef": {
+            "kind": "WORK",
+            "id": "demo",
+            "version": 1,
+            "digest": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+          },
+          "instructions": "demo",
+          "dependencyRefs": [],
+          "capabilityRefs": [],
+          "budget": {
+            "maxTokens": 1,
+            "maxToolCalls": 0,
+            "timeoutSeconds": 1
+          }
+        }
+      }
+    },
+    {
+      "id": "C17_test_valid",
+      "schema": "C17_testRequest",
+      "valid": true,
+      "input": {
+        "command": "C17.test",
+        "targetRef": {
+          "kind": "WORK",
+          "id": "demo",
+          "version": 1,
+          "digest": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        },
+        "expectedRevision": 1,
+        "evidenceRefs": [
+          {
+            "kind": "WORK",
+            "id": "demo",
+            "version": 1,
+            "digest": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+          }
+        ]
+      }
+    },
+    {
+      "id": "C17_test_reject_subject_injection",
+      "schema": "C17_testRequest",
+      "valid": false,
+      "input": {
+        "command": "C17.test",
+        "targetRef": {
+          "kind": "WORK",
+          "id": "demo",
+          "version": 1,
+          "digest": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        },
+        "expectedRevision": 1,
+        "evidenceRefs": [
+          {
+            "kind": "WORK",
+            "id": "demo",
+            "version": 1,
+            "digest": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+          }
+        ],
+        "tenantId": "evil_tenant"
+      }
+    },
+    {
+      "id": "C17_test_missing_command",
+      "schema": "C17_testRequest",
+      "valid": false,
+      "input": {
+        "targetRef": {
+          "kind": "WORK",
+          "id": "demo",
+          "version": 1,
+          "digest": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        },
+        "expectedRevision": 1,
+        "evidenceRefs": [
+          {
+            "kind": "WORK",
+            "id": "demo",
+            "version": 1,
+            "digest": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+          }
+        ]
+      }
+    },
+    {
+      "id": "C17_publish_valid",
+      "schema": "C17_publishRequest",
+      "valid": true,
+      "input": {
+        "command": "C17.publish",
+        "targetRef": {
+          "kind": "WORK",
+          "id": "demo",
+          "version": 1,
+          "digest": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        },
+        "expectedRevision": 1,
+        "evidenceRefs": [
+          {
+            "kind": "WORK",
+            "id": "demo",
+            "version": 1,
+            "digest": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+          }
+        ]
+      }
+    },
+    {
+      "id": "C17_publish_reject_subject_injection",
+      "schema": "C17_publishRequest",
+      "valid": false,
+      "input": {
+        "command": "C17.publish",
+        "targetRef": {
+          "kind": "WORK",
+          "id": "demo",
+          "version": 1,
+          "digest": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        },
+        "expectedRevision": 1,
+        "evidenceRefs": [
+          {
+            "kind": "WORK",
+            "id": "demo",
+            "version": 1,
+            "digest": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+          }
+        ],
+        "tenantId": "evil_tenant"
+      }
+    },
+    {
+      "id": "C17_publish_missing_command",
+      "schema": "C17_publishRequest",
+      "valid": false,
+      "input": {
+        "targetRef": {
+          "kind": "WORK",
+          "id": "demo",
+          "version": 1,
+          "digest": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        },
+        "expectedRevision": 1,
+        "evidenceRefs": [
+          {
+            "kind": "WORK",
+            "id": "demo",
+            "version": 1,
+            "digest": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+          }
+        ]
+      }
+    },
+    {
+      "id": "C17_disable_valid",
+      "schema": "C17_disableRequest",
+      "valid": true,
+      "input": {
+        "command": "C17.disable",
+        "targetRef": {
+          "kind": "WORK",
+          "id": "demo",
+          "version": 1,
+          "digest": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        },
+        "expectedRevision": 1
+      }
+    },
+    {
+      "id": "C17_disable_reject_subject_injection",
+      "schema": "C17_disableRequest",
+      "valid": false,
+      "input": {
+        "command": "C17.disable",
+        "targetRef": {
+          "kind": "WORK",
+          "id": "demo",
+          "version": 1,
+          "digest": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        },
+        "expectedRevision": 1,
+        "tenantId": "evil_tenant"
+      }
+    },
+    {
+      "id": "C17_disable_missing_command",
+      "schema": "C17_disableRequest",
+      "valid": false,
+      "input": {
+        "targetRef": {
+          "kind": "WORK",
+          "id": "demo",
+          "version": 1,
+          "digest": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        },
+        "expectedRevision": 1
+      }
+    },
+    {
+      "id": "C17_import_valid",
+      "schema": "C17_importRequest",
+      "valid": true,
+      "input": {
+        "command": "C17.import",
+        "artifactRef": {
+          "kind": "WORK",
+          "id": "demo",
+          "version": 1,
+          "digest": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        },
+        "targetScopeRef": {
+          "kind": "WORK",
+          "id": "demo",
+          "version": 1,
+          "digest": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        }
+      }
+    },
+    {
+      "id": "C17_import_reject_subject_injection",
+      "schema": "C17_importRequest",
+      "valid": false,
+      "input": {
+        "command": "C17.import",
+        "artifactRef": {
+          "kind": "WORK",
+          "id": "demo",
+          "version": 1,
+          "digest": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        },
+        "targetScopeRef": {
+          "kind": "WORK",
+          "id": "demo",
+          "version": 1,
+          "digest": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        },
+        "tenantId": "evil_tenant"
+      }
+    },
+    {
+      "id": "C17_import_missing_command",
+      "schema": "C17_importRequest",
+      "valid": false,
+      "input": {
+        "artifactRef": {
+          "kind": "WORK",
+          "id": "demo",
+          "version": 1,
+          "digest": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        },
+        "targetScopeRef": {
+          "kind": "WORK",
+          "id": "demo",
+          "version": 1,
+          "digest": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        }
+      }
+    },
+    {
+      "id": "C17_export_valid",
+      "schema": "C17_exportRequest",
+      "valid": true,
+      "input": {
+        "command": "C17.export",
+        "targetRef": {
+          "kind": "WORK",
+          "id": "demo",
+          "version": 1,
+          "digest": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        },
+        "expectedRevision": 1
+      }
+    },
+    {
+      "id": "C17_export_reject_subject_injection",
+      "schema": "C17_exportRequest",
+      "valid": false,
+      "input": {
+        "command": "C17.export",
+        "targetRef": {
+          "kind": "WORK",
+          "id": "demo",
+          "version": 1,
+          "digest": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        },
+        "expectedRevision": 1,
+        "tenantId": "evil_tenant"
+      }
+    },
+    {
+      "id": "C17_export_missing_command",
+      "schema": "C17_exportRequest",
+      "valid": false,
+      "input": {
+        "targetRef": {
+          "kind": "WORK",
+          "id": "demo",
+          "version": 1,
+          "digest": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        },
+        "expectedRevision": 1
+      }
+    },
+    {
+      "id": "C17_diff_valid",
+      "schema": "C17_diffRequest",
+      "valid": true,
+      "input": {
+        "command": "C17.diff",
+        "targetRef": {
+          "kind": "WORK",
+          "id": "demo",
+          "version": 1,
+          "digest": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        },
+        "expectedRevision": 1,
+        "compareRef": {
+          "kind": "WORK",
+          "id": "demo",
+          "version": 1,
+          "digest": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        }
+      }
+    },
+    {
+      "id": "C17_diff_reject_subject_injection",
+      "schema": "C17_diffRequest",
+      "valid": false,
+      "input": {
+        "command": "C17.diff",
+        "targetRef": {
+          "kind": "WORK",
+          "id": "demo",
+          "version": 1,
+          "digest": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        },
+        "expectedRevision": 1,
+        "compareRef": {
+          "kind": "WORK",
+          "id": "demo",
+          "version": 1,
+          "digest": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        },
+        "tenantId": "evil_tenant"
+      }
+    },
+    {
+      "id": "C17_diff_missing_command",
+      "schema": "C17_diffRequest",
+      "valid": false,
+      "input": {
+        "targetRef": {
+          "kind": "WORK",
+          "id": "demo",
+          "version": 1,
+          "digest": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        },
+        "expectedRevision": 1,
+        "compareRef": {
+          "kind": "WORK",
+          "id": "demo",
+          "version": 1,
+          "digest": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        }
+      }
+    },
+    {
+      "id": "C17_promote_valid",
+      "schema": "C17_promoteRequest",
+      "valid": true,
+      "input": {
+        "command": "C17.promote",
+        "targetRef": {
+          "kind": "WORK",
+          "id": "demo",
+          "version": 1,
+          "digest": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        },
+        "expectedRevision": 1,
+        "evidenceRefs": [
+          {
+            "kind": "WORK",
+            "id": "demo",
+            "version": 1,
+            "digest": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+          }
+        ]
+      }
+    },
+    {
+      "id": "C17_promote_reject_subject_injection",
+      "schema": "C17_promoteRequest",
+      "valid": false,
+      "input": {
+        "command": "C17.promote",
+        "targetRef": {
+          "kind": "WORK",
+          "id": "demo",
+          "version": 1,
+          "digest": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        },
+        "expectedRevision": 1,
+        "evidenceRefs": [
+          {
+            "kind": "WORK",
+            "id": "demo",
+            "version": 1,
+            "digest": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+          }
+        ],
+        "tenantId": "evil_tenant"
+      }
+    },
+    {
+      "id": "C17_promote_missing_command",
+      "schema": "C17_promoteRequest",
+      "valid": false,
+      "input": {
+        "targetRef": {
+          "kind": "WORK",
+          "id": "demo",
+          "version": 1,
+          "digest": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        },
+        "expectedRevision": 1,
+        "evidenceRefs": [
+          {
+            "kind": "WORK",
+            "id": "demo",
+            "version": 1,
+            "digest": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+          }
+        ]
+      }
+    },
+    {
+      "id": "C18_discover_valid",
+      "schema": "C18_discoverRequest",
+      "valid": true,
+      "input": {
+        "command": "C18.discover",
+        "providerId": "demo"
+      }
+    },
+    {
+      "id": "C18_discover_reject_subject_injection",
+      "schema": "C18_discoverRequest",
+      "valid": false,
+      "input": {
+        "command": "C18.discover",
+        "providerId": "demo",
+        "tenantId": "evil_tenant"
+      }
+    },
+    {
+      "id": "C18_discover_missing_command",
+      "schema": "C18_discoverRequest",
+      "valid": false,
+      "input": {
+        "providerId": "demo"
+      }
+    },
+    {
+      "id": "C18_health_valid",
+      "schema": "C18_healthRequest",
+      "valid": true,
+      "input": {
+        "command": "C18.health",
+        "targetRef": {
+          "kind": "WORK",
+          "id": "demo",
+          "version": 1,
+          "digest": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        },
+        "expectedRevision": 1
+      }
+    },
+    {
+      "id": "C18_health_reject_subject_injection",
+      "schema": "C18_healthRequest",
+      "valid": false,
+      "input": {
+        "command": "C18.health",
+        "targetRef": {
+          "kind": "WORK",
+          "id": "demo",
+          "version": 1,
+          "digest": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        },
+        "expectedRevision": 1,
+        "tenantId": "evil_tenant"
+      }
+    },
+    {
+      "id": "C18_health_missing_command",
+      "schema": "C18_healthRequest",
+      "valid": false,
+      "input": {
+        "targetRef": {
+          "kind": "WORK",
+          "id": "demo",
+          "version": 1,
+          "digest": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        },
+        "expectedRevision": 1
+      }
+    },
+    {
+      "id": "C18_authorize_valid",
+      "schema": "C18_authorizeRequest",
+      "valid": true,
+      "input": {
+        "command": "C18.authorize",
+        "targetRef": {
+          "kind": "WORK",
+          "id": "demo",
+          "version": 1,
+          "digest": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        },
+        "expectedRevision": 1,
+        "requestedActionIds": [
+          "demo"
+        ],
+        "returnPath": "TOOLS"
+      }
+    },
+    {
+      "id": "C18_authorize_reject_subject_injection",
+      "schema": "C18_authorizeRequest",
+      "valid": false,
+      "input": {
+        "command": "C18.authorize",
+        "targetRef": {
+          "kind": "WORK",
+          "id": "demo",
+          "version": 1,
+          "digest": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        },
+        "expectedRevision": 1,
+        "requestedActionIds": [
+          "demo"
+        ],
+        "returnPath": "TOOLS",
+        "tenantId": "evil_tenant"
+      }
+    },
+    {
+      "id": "C18_authorize_missing_command",
+      "schema": "C18_authorizeRequest",
+      "valid": false,
+      "input": {
+        "targetRef": {
+          "kind": "WORK",
+          "id": "demo",
+          "version": 1,
+          "digest": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        },
+        "expectedRevision": 1,
+        "requestedActionIds": [
+          "demo"
+        ],
+        "returnPath": "TOOLS"
+      }
+    },
+    {
+      "id": "C18_revoke_valid",
+      "schema": "C18_revokeRequest",
+      "valid": true,
+      "input": {
+        "command": "C18.revoke",
+        "targetRef": {
+          "kind": "WORK",
+          "id": "demo",
+          "version": 1,
+          "digest": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        },
+        "expectedRevision": 1,
+        "reason": "demo"
+      }
+    },
+    {
+      "id": "C18_revoke_reject_subject_injection",
+      "schema": "C18_revokeRequest",
+      "valid": false,
+      "input": {
+        "command": "C18.revoke",
+        "targetRef": {
+          "kind": "WORK",
+          "id": "demo",
+          "version": 1,
+          "digest": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        },
+        "expectedRevision": 1,
+        "reason": "demo",
+        "tenantId": "evil_tenant"
+      }
+    },
+    {
+      "id": "C18_revoke_missing_command",
+      "schema": "C18_revokeRequest",
+      "valid": false,
+      "input": {
+        "targetRef": {
+          "kind": "WORK",
+          "id": "demo",
+          "version": 1,
+          "digest": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        },
+        "expectedRevision": 1,
+        "reason": "demo"
+      }
+    },
+    {
+      "id": "C19_ingest_valid",
+      "schema": "C19_ingestRequest",
+      "valid": true,
+      "input": {
+        "command": "C19.ingest",
+        "sourceArtifactRefs": [
+          {
+            "kind": "WORK",
+            "id": "demo",
+            "version": 1,
+            "digest": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+          }
+        ],
+        "purpose": "demo",
+        "scope": "PERSONAL"
+      }
+    },
+    {
+      "id": "C19_ingest_reject_subject_injection",
+      "schema": "C19_ingestRequest",
+      "valid": false,
+      "input": {
+        "command": "C19.ingest",
+        "sourceArtifactRefs": [
+          {
+            "kind": "WORK",
+            "id": "demo",
+            "version": 1,
+            "digest": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+          }
+        ],
+        "purpose": "demo",
+        "scope": "PERSONAL",
+        "tenantId": "evil_tenant"
+      }
+    },
+    {
+      "id": "C19_ingest_missing_command",
+      "schema": "C19_ingestRequest",
+      "valid": false,
+      "input": {
+        "sourceArtifactRefs": [
+          {
+            "kind": "WORK",
+            "id": "demo",
+            "version": 1,
+            "digest": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+          }
+        ],
+        "purpose": "demo",
+        "scope": "PERSONAL"
+      }
+    },
+    {
+      "id": "C19_process_valid",
+      "schema": "C19_processRequest",
+      "valid": true,
+      "input": {
+        "command": "C19.process",
+        "targetRef": {
+          "kind": "WORK",
+          "id": "demo",
+          "version": 1,
+          "digest": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        },
+        "expectedRevision": 1
+      }
+    },
+    {
+      "id": "C19_process_reject_subject_injection",
+      "schema": "C19_processRequest",
+      "valid": false,
+      "input": {
+        "command": "C19.process",
+        "targetRef": {
+          "kind": "WORK",
+          "id": "demo",
+          "version": 1,
+          "digest": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        },
+        "expectedRevision": 1,
+        "tenantId": "evil_tenant"
+      }
+    },
+    {
+      "id": "C19_process_missing_command",
+      "schema": "C19_processRequest",
+      "valid": false,
+      "input": {
+        "targetRef": {
+          "kind": "WORK",
+          "id": "demo",
+          "version": 1,
+          "digest": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        },
+        "expectedRevision": 1
+      }
+    },
+    {
+      "id": "C19_search_valid",
+      "schema": "C19_searchRequest",
+      "valid": true,
+      "input": {
+        "command": "C19.search",
+        "query": "demo",
+        "workId": "demo",
+        "sourceRefs": [],
+        "limit": 1
+      }
+    },
+    {
+      "id": "C19_search_reject_subject_injection",
+      "schema": "C19_searchRequest",
+      "valid": false,
+      "input": {
+        "command": "C19.search",
+        "query": "demo",
+        "workId": "demo",
+        "sourceRefs": [],
+        "limit": 1,
+        "tenantId": "evil_tenant"
+      }
+    },
+    {
+      "id": "C19_search_missing_command",
+      "schema": "C19_searchRequest",
+      "valid": false,
+      "input": {
+        "query": "demo",
+        "workId": "demo",
+        "sourceRefs": [],
+        "limit": 1
+      }
+    },
+    {
+      "id": "C19_publish_valid",
+      "schema": "C19_publishRequest",
+      "valid": true,
+      "input": {
+        "command": "C19.publish",
+        "targetRef": {
+          "kind": "WORK",
+          "id": "demo",
+          "version": 1,
+          "digest": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        },
+        "expectedRevision": 1,
+        "sourceRefs": [
+          {
+            "kind": "WORK",
+            "id": "demo",
+            "version": 1,
+            "digest": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+          }
+        ],
+        "evidenceRefs": [
+          {
+            "kind": "WORK",
+            "id": "demo",
+            "version": 1,
+            "digest": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+          }
+        ]
+      }
+    },
+    {
+      "id": "C19_publish_reject_subject_injection",
+      "schema": "C19_publishRequest",
+      "valid": false,
+      "input": {
+        "command": "C19.publish",
+        "targetRef": {
+          "kind": "WORK",
+          "id": "demo",
+          "version": 1,
+          "digest": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        },
+        "expectedRevision": 1,
+        "sourceRefs": [
+          {
+            "kind": "WORK",
+            "id": "demo",
+            "version": 1,
+            "digest": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+          }
+        ],
+        "evidenceRefs": [
+          {
+            "kind": "WORK",
+            "id": "demo",
+            "version": 1,
+            "digest": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+          }
+        ],
+        "tenantId": "evil_tenant"
+      }
+    },
+    {
+      "id": "C19_publish_missing_command",
+      "schema": "C19_publishRequest",
+      "valid": false,
+      "input": {
+        "targetRef": {
+          "kind": "WORK",
+          "id": "demo",
+          "version": 1,
+          "digest": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        },
+        "expectedRevision": 1,
+        "sourceRefs": [
+          {
+            "kind": "WORK",
+            "id": "demo",
+            "version": 1,
+            "digest": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+          }
+        ],
+        "evidenceRefs": [
+          {
+            "kind": "WORK",
+            "id": "demo",
+            "version": 1,
+            "digest": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+          }
+        ]
+      }
+    },
+    {
+      "id": "C19_reviseMemory_valid",
+      "schema": "C19_reviseMemoryRequest",
+      "valid": true,
+      "input": {
+        "command": "C19.reviseMemory",
+        "targetRef": {
+          "kind": "WORK",
+          "id": "demo",
+          "version": 1,
+          "digest": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        },
+        "expectedRevision": 1,
+        "sourceRefs": [
+          {
+            "kind": "WORK",
+            "id": "demo",
+            "version": 1,
+            "digest": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+          }
+        ],
+        "evidenceRefs": [
+          {
+            "kind": "WORK",
+            "id": "demo",
+            "version": 1,
+            "digest": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+          }
+        ]
+      }
+    },
+    {
+      "id": "C19_reviseMemory_reject_subject_injection",
+      "schema": "C19_reviseMemoryRequest",
+      "valid": false,
+      "input": {
+        "command": "C19.reviseMemory",
+        "targetRef": {
+          "kind": "WORK",
+          "id": "demo",
+          "version": 1,
+          "digest": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        },
+        "expectedRevision": 1,
+        "sourceRefs": [
+          {
+            "kind": "WORK",
+            "id": "demo",
+            "version": 1,
+            "digest": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+          }
+        ],
+        "evidenceRefs": [
+          {
+            "kind": "WORK",
+            "id": "demo",
+            "version": 1,
+            "digest": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+          }
+        ],
+        "tenantId": "evil_tenant"
+      }
+    },
+    {
+      "id": "C19_reviseMemory_missing_command",
+      "schema": "C19_reviseMemoryRequest",
+      "valid": false,
+      "input": {
+        "targetRef": {
+          "kind": "WORK",
+          "id": "demo",
+          "version": 1,
+          "digest": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        },
+        "expectedRevision": 1,
+        "sourceRefs": [
+          {
+            "kind": "WORK",
+            "id": "demo",
+            "version": 1,
+            "digest": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+          }
+        ],
+        "evidenceRefs": [
+          {
+            "kind": "WORK",
+            "id": "demo",
+            "version": 1,
+            "digest": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+          }
+        ]
+      }
+    },
+    {
+      "id": "C20_prepareUpload_valid",
+      "schema": "C20_prepareUploadRequest",
+      "valid": true,
+      "input": {
+        "command": "C20.prepareUpload",
+        "workId": "demo",
+        "expectedRevision": 1,
+        "responsibilityEpoch": 1,
+        "fileName": "demo",
+        "mediaType": "demo",
+        "sizeBytes": 1
+      }
+    },
+    {
+      "id": "C20_prepareUpload_reject_subject_injection",
+      "schema": "C20_prepareUploadRequest",
+      "valid": false,
+      "input": {
+        "command": "C20.prepareUpload",
+        "workId": "demo",
+        "expectedRevision": 1,
+        "responsibilityEpoch": 1,
+        "fileName": "demo",
+        "mediaType": "demo",
+        "sizeBytes": 1,
+        "tenantId": "evil_tenant"
+      }
+    },
+    {
+      "id": "C20_prepareUpload_missing_command",
+      "schema": "C20_prepareUploadRequest",
+      "valid": false,
+      "input": {
+        "workId": "demo",
+        "expectedRevision": 1,
+        "responsibilityEpoch": 1,
+        "fileName": "demo",
+        "mediaType": "demo",
+        "sizeBytes": 1
+      }
+    },
+    {
+      "id": "C20_uploadComplete_valid",
+      "schema": "C20_uploadCompleteRequest",
+      "valid": true,
+      "input": {
+        "command": "C20.uploadComplete",
+        "workId": "demo",
+        "expectedRevision": 1,
+        "responsibilityEpoch": 1,
+        "uploadId": "demo",
+        "digest": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+      }
+    },
+    {
+      "id": "C20_uploadComplete_reject_subject_injection",
+      "schema": "C20_uploadCompleteRequest",
+      "valid": false,
+      "input": {
+        "command": "C20.uploadComplete",
+        "workId": "demo",
+        "expectedRevision": 1,
+        "responsibilityEpoch": 1,
+        "uploadId": "demo",
+        "digest": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "tenantId": "evil_tenant"
+      }
+    },
+    {
+      "id": "C20_uploadComplete_missing_command",
+      "schema": "C20_uploadCompleteRequest",
+      "valid": false,
+      "input": {
+        "workId": "demo",
+        "expectedRevision": 1,
+        "responsibilityEpoch": 1,
+        "uploadId": "demo",
+        "digest": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+      }
+    },
+    {
+      "id": "C20_parse_valid",
+      "schema": "C20_parseRequest",
+      "valid": true,
+      "input": {
+        "command": "C20.parse",
+        "workId": "demo",
+        "expectedRevision": 1,
+        "responsibilityEpoch": 1,
+        "sourceRefs": [
+          {
+            "kind": "WORK",
+            "id": "demo",
+            "version": 1,
+            "digest": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+          }
+        ],
+        "outputContractRef": {
+          "kind": "WORK",
+          "id": "demo",
+          "version": 1,
+          "digest": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        }
+      }
+    },
+    {
+      "id": "C20_parse_reject_subject_injection",
+      "schema": "C20_parseRequest",
+      "valid": false,
+      "input": {
+        "command": "C20.parse",
+        "workId": "demo",
+        "expectedRevision": 1,
+        "responsibilityEpoch": 1,
+        "sourceRefs": [
+          {
+            "kind": "WORK",
+            "id": "demo",
+            "version": 1,
+            "digest": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+          }
+        ],
+        "outputContractRef": {
+          "kind": "WORK",
+          "id": "demo",
+          "version": 1,
+          "digest": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        },
+        "tenantId": "evil_tenant"
+      }
+    },
+    {
+      "id": "C20_parse_missing_command",
+      "schema": "C20_parseRequest",
+      "valid": false,
+      "input": {
+        "workId": "demo",
+        "expectedRevision": 1,
+        "responsibilityEpoch": 1,
+        "sourceRefs": [
+          {
+            "kind": "WORK",
+            "id": "demo",
+            "version": 1,
+            "digest": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+          }
+        ],
+        "outputContractRef": {
+          "kind": "WORK",
+          "id": "demo",
+          "version": 1,
+          "digest": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        }
+      }
+    },
+    {
+      "id": "C20_merge_valid",
+      "schema": "C20_mergeRequest",
+      "valid": true,
+      "input": {
+        "command": "C20.merge",
+        "workId": "demo",
+        "expectedRevision": 1,
+        "responsibilityEpoch": 1,
+        "sourceRefs": [
+          {
+            "kind": "WORK",
+            "id": "demo",
+            "version": 1,
+            "digest": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+          }
+        ],
+        "outputContractRef": {
+          "kind": "WORK",
+          "id": "demo",
+          "version": 1,
+          "digest": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        }
+      }
+    },
+    {
+      "id": "C20_merge_reject_subject_injection",
+      "schema": "C20_mergeRequest",
+      "valid": false,
+      "input": {
+        "command": "C20.merge",
+        "workId": "demo",
+        "expectedRevision": 1,
+        "responsibilityEpoch": 1,
+        "sourceRefs": [
+          {
+            "kind": "WORK",
+            "id": "demo",
+            "version": 1,
+            "digest": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+          }
+        ],
+        "outputContractRef": {
+          "kind": "WORK",
+          "id": "demo",
+          "version": 1,
+          "digest": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        },
+        "tenantId": "evil_tenant"
+      }
+    },
+    {
+      "id": "C20_merge_missing_command",
+      "schema": "C20_mergeRequest",
+      "valid": false,
+      "input": {
+        "workId": "demo",
+        "expectedRevision": 1,
+        "responsibilityEpoch": 1,
+        "sourceRefs": [
+          {
+            "kind": "WORK",
+            "id": "demo",
+            "version": 1,
+            "digest": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+          }
+        ],
+        "outputContractRef": {
+          "kind": "WORK",
+          "id": "demo",
+          "version": 1,
+          "digest": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        }
+      }
+    },
+    {
+      "id": "C21_configure_valid",
+      "schema": "C21_configureRequest",
+      "valid": true,
+      "input": {
+        "command": "C21.configure",
+        "workId": "demo",
+        "expectedRevision": 1,
+        "responsibilityEpoch": 1,
+        "teamRef": {
+          "kind": "WORK",
+          "id": "demo",
+          "version": 1,
+          "digest": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        },
+        "memberRefs": [
+          {
+            "kind": "WORK",
+            "id": "demo",
+            "version": 1,
+            "digest": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+          }
+        ],
+        "budget": {
+          "maxTokens": 1,
+          "maxToolCalls": 0,
+          "timeoutSeconds": 1
+        }
+      }
+    },
+    {
+      "id": "C21_configure_reject_subject_injection",
+      "schema": "C21_configureRequest",
+      "valid": false,
+      "input": {
+        "command": "C21.configure",
+        "workId": "demo",
+        "expectedRevision": 1,
+        "responsibilityEpoch": 1,
+        "teamRef": {
+          "kind": "WORK",
+          "id": "demo",
+          "version": 1,
+          "digest": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        },
+        "memberRefs": [
+          {
+            "kind": "WORK",
+            "id": "demo",
+            "version": 1,
+            "digest": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+          }
+        ],
+        "budget": {
+          "maxTokens": 1,
+          "maxToolCalls": 0,
+          "timeoutSeconds": 1
+        },
+        "tenantId": "evil_tenant"
+      }
+    },
+    {
+      "id": "C21_configure_missing_command",
+      "schema": "C21_configureRequest",
+      "valid": false,
+      "input": {
+        "workId": "demo",
+        "expectedRevision": 1,
+        "responsibilityEpoch": 1,
+        "teamRef": {
+          "kind": "WORK",
+          "id": "demo",
+          "version": 1,
+          "digest": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        },
+        "memberRefs": [
+          {
+            "kind": "WORK",
+            "id": "demo",
+            "version": 1,
+            "digest": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+          }
+        ],
+        "budget": {
+          "maxTokens": 1,
+          "maxToolCalls": 0,
+          "timeoutSeconds": 1
+        }
+      }
+    },
+    {
+      "id": "C21_execute_valid",
+      "schema": "C21_executeRequest",
+      "valid": true,
+      "input": {
+        "command": "C21.execute",
+        "workId": "demo",
+        "expectedRevision": 1,
+        "responsibilityEpoch": 1,
+        "teamRef": {
+          "kind": "WORK",
+          "id": "demo",
+          "version": 1,
+          "digest": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        },
+        "parentAttemptId": "demo"
+      }
+    },
+    {
+      "id": "C21_execute_reject_subject_injection",
+      "schema": "C21_executeRequest",
+      "valid": false,
+      "input": {
+        "command": "C21.execute",
+        "workId": "demo",
+        "expectedRevision": 1,
+        "responsibilityEpoch": 1,
+        "teamRef": {
+          "kind": "WORK",
+          "id": "demo",
+          "version": 1,
+          "digest": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        },
+        "parentAttemptId": "demo",
+        "tenantId": "evil_tenant"
+      }
+    },
+    {
+      "id": "C21_execute_missing_command",
+      "schema": "C21_executeRequest",
+      "valid": false,
+      "input": {
+        "workId": "demo",
+        "expectedRevision": 1,
+        "responsibilityEpoch": 1,
+        "teamRef": {
+          "kind": "WORK",
+          "id": "demo",
+          "version": 1,
+          "digest": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        },
+        "parentAttemptId": "demo"
+      }
+    },
+    {
+      "id": "C21_replace_valid",
+      "schema": "C21_replaceRequest",
+      "valid": true,
+      "input": {
+        "command": "C21.replace",
+        "workId": "demo",
+        "expectedRevision": 1,
+        "responsibilityEpoch": 1,
+        "teamRef": {
+          "kind": "WORK",
+          "id": "demo",
+          "version": 1,
+          "digest": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        },
+        "oldMemberRef": {
+          "kind": "WORK",
+          "id": "demo",
+          "version": 1,
+          "digest": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        },
+        "newMemberRef": {
+          "kind": "WORK",
+          "id": "demo",
+          "version": 1,
+          "digest": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        }
+      }
+    },
+    {
+      "id": "C21_replace_reject_subject_injection",
+      "schema": "C21_replaceRequest",
+      "valid": false,
+      "input": {
+        "command": "C21.replace",
+        "workId": "demo",
+        "expectedRevision": 1,
+        "responsibilityEpoch": 1,
+        "teamRef": {
+          "kind": "WORK",
+          "id": "demo",
+          "version": 1,
+          "digest": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        },
+        "oldMemberRef": {
+          "kind": "WORK",
+          "id": "demo",
+          "version": 1,
+          "digest": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        },
+        "newMemberRef": {
+          "kind": "WORK",
+          "id": "demo",
+          "version": 1,
+          "digest": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        },
+        "tenantId": "evil_tenant"
+      }
+    },
+    {
+      "id": "C21_replace_missing_command",
+      "schema": "C21_replaceRequest",
+      "valid": false,
+      "input": {
+        "workId": "demo",
+        "expectedRevision": 1,
+        "responsibilityEpoch": 1,
+        "teamRef": {
+          "kind": "WORK",
+          "id": "demo",
+          "version": 1,
+          "digest": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        },
+        "oldMemberRef": {
+          "kind": "WORK",
+          "id": "demo",
+          "version": 1,
+          "digest": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        },
+        "newMemberRef": {
+          "kind": "WORK",
+          "id": "demo",
+          "version": 1,
+          "digest": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        }
+      }
+    },
+    {
+      "id": "C21_control_valid",
+      "schema": "C21_controlRequest",
+      "valid": true,
+      "input": {
+        "command": "C21.control",
+        "workId": "demo",
+        "expectedRevision": 1,
+        "responsibilityEpoch": 1,
+        "teamRef": {
+          "kind": "WORK",
+          "id": "demo",
+          "version": 1,
+          "digest": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        },
+        "attemptId": "demo",
+        "control": "PAUSE"
+      }
+    },
+    {
+      "id": "C21_control_reject_subject_injection",
+      "schema": "C21_controlRequest",
+      "valid": false,
+      "input": {
+        "command": "C21.control",
+        "workId": "demo",
+        "expectedRevision": 1,
+        "responsibilityEpoch": 1,
+        "teamRef": {
+          "kind": "WORK",
+          "id": "demo",
+          "version": 1,
+          "digest": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        },
+        "attemptId": "demo",
+        "control": "PAUSE",
+        "tenantId": "evil_tenant"
+      }
+    },
+    {
+      "id": "C21_control_missing_command",
+      "schema": "C21_controlRequest",
+      "valid": false,
+      "input": {
+        "workId": "demo",
+        "expectedRevision": 1,
+        "responsibilityEpoch": 1,
+        "teamRef": {
+          "kind": "WORK",
+          "id": "demo",
+          "version": 1,
+          "digest": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        },
+        "attemptId": "demo",
+        "control": "PAUSE"
+      }
+    },
+    {
+      "id": "C22_create_valid",
+      "schema": "C22_createRequest",
+      "valid": true,
+      "input": {
+        "command": "C22.create",
+        "workId": "demo",
+        "definitionRef": {
+          "kind": "WORK",
+          "id": "demo",
+          "version": 1,
+          "digest": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        },
+        "schedule": {
+          "timezone": "demo",
+          "frequency": "DAILY",
+          "localTime": "09:00",
+          "weekdays": [],
+          "startsAt": "2026-09-11T12:00:00Z",
+          "endsAt": "2026-09-11T12:00:00Z",
+          "maxConcurrent": 1,
+          "misfire": "SKIP"
+        },
+        "budget": {
+          "maxTokens": 1,
+          "maxToolCalls": 0,
+          "timeoutSeconds": 1
+        }
+      }
+    },
+    {
+      "id": "C22_create_reject_subject_injection",
+      "schema": "C22_createRequest",
+      "valid": false,
+      "input": {
+        "command": "C22.create",
+        "workId": "demo",
+        "definitionRef": {
+          "kind": "WORK",
+          "id": "demo",
+          "version": 1,
+          "digest": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        },
+        "schedule": {
+          "timezone": "demo",
+          "frequency": "DAILY",
+          "localTime": "09:00",
+          "weekdays": [],
+          "startsAt": "2026-09-11T12:00:00Z",
+          "endsAt": "2026-09-11T12:00:00Z",
+          "maxConcurrent": 1,
+          "misfire": "SKIP"
+        },
+        "budget": {
+          "maxTokens": 1,
+          "maxToolCalls": 0,
+          "timeoutSeconds": 1
+        },
+        "tenantId": "evil_tenant"
+      }
+    },
+    {
+      "id": "C22_create_missing_command",
+      "schema": "C22_createRequest",
+      "valid": false,
+      "input": {
+        "workId": "demo",
+        "definitionRef": {
+          "kind": "WORK",
+          "id": "demo",
+          "version": 1,
+          "digest": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        },
+        "schedule": {
+          "timezone": "demo",
+          "frequency": "DAILY",
+          "localTime": "09:00",
+          "weekdays": [],
+          "startsAt": "2026-09-11T12:00:00Z",
+          "endsAt": "2026-09-11T12:00:00Z",
+          "maxConcurrent": 1,
+          "misfire": "SKIP"
+        },
+        "budget": {
+          "maxTokens": 1,
+          "maxToolCalls": 0,
+          "timeoutSeconds": 1
+        }
+      }
+    },
+    {
+      "id": "C22_preview_valid",
+      "schema": "C22_previewRequest",
+      "valid": true,
+      "input": {
+        "command": "C22.preview",
+        "targetRef": {
+          "kind": "WORK",
+          "id": "demo",
+          "version": 1,
+          "digest": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        },
+        "expectedRevision": 1
+      }
+    },
+    {
+      "id": "C22_preview_reject_subject_injection",
+      "schema": "C22_previewRequest",
+      "valid": false,
+      "input": {
+        "command": "C22.preview",
+        "targetRef": {
+          "kind": "WORK",
+          "id": "demo",
+          "version": 1,
+          "digest": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        },
+        "expectedRevision": 1,
+        "tenantId": "evil_tenant"
+      }
+    },
+    {
+      "id": "C22_preview_missing_command",
+      "schema": "C22_previewRequest",
+      "valid": false,
+      "input": {
+        "targetRef": {
+          "kind": "WORK",
+          "id": "demo",
+          "version": 1,
+          "digest": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        },
+        "expectedRevision": 1
+      }
+    },
+    {
+      "id": "C22_test_valid",
+      "schema": "C22_testRequest",
+      "valid": true,
+      "input": {
+        "command": "C22.test",
+        "targetRef": {
+          "kind": "WORK",
+          "id": "demo",
+          "version": 1,
+          "digest": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        },
+        "expectedRevision": 1
+      }
+    },
+    {
+      "id": "C22_test_reject_subject_injection",
+      "schema": "C22_testRequest",
+      "valid": false,
+      "input": {
+        "command": "C22.test",
+        "targetRef": {
+          "kind": "WORK",
+          "id": "demo",
+          "version": 1,
+          "digest": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        },
+        "expectedRevision": 1,
+        "tenantId": "evil_tenant"
+      }
+    },
+    {
+      "id": "C22_test_missing_command",
+      "schema": "C22_testRequest",
+      "valid": false,
+      "input": {
+        "targetRef": {
+          "kind": "WORK",
+          "id": "demo",
+          "version": 1,
+          "digest": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        },
+        "expectedRevision": 1
+      }
+    },
+    {
+      "id": "C22_pause_valid",
+      "schema": "C22_pauseRequest",
+      "valid": true,
+      "input": {
+        "command": "C22.pause",
+        "targetRef": {
+          "kind": "WORK",
+          "id": "demo",
+          "version": 1,
+          "digest": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        },
+        "expectedRevision": 1
+      }
+    },
+    {
+      "id": "C22_pause_reject_subject_injection",
+      "schema": "C22_pauseRequest",
+      "valid": false,
+      "input": {
+        "command": "C22.pause",
+        "targetRef": {
+          "kind": "WORK",
+          "id": "demo",
+          "version": 1,
+          "digest": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        },
+        "expectedRevision": 1,
+        "tenantId": "evil_tenant"
+      }
+    },
+    {
+      "id": "C22_pause_missing_command",
+      "schema": "C22_pauseRequest",
+      "valid": false,
+      "input": {
+        "targetRef": {
+          "kind": "WORK",
+          "id": "demo",
+          "version": 1,
+          "digest": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        },
+        "expectedRevision": 1
+      }
+    },
+    {
+      "id": "C22_resume_valid",
+      "schema": "C22_resumeRequest",
+      "valid": true,
+      "input": {
+        "command": "C22.resume",
+        "targetRef": {
+          "kind": "WORK",
+          "id": "demo",
+          "version": 1,
+          "digest": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        },
+        "expectedRevision": 1
+      }
+    },
+    {
+      "id": "C22_resume_reject_subject_injection",
+      "schema": "C22_resumeRequest",
+      "valid": false,
+      "input": {
+        "command": "C22.resume",
+        "targetRef": {
+          "kind": "WORK",
+          "id": "demo",
+          "version": 1,
+          "digest": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        },
+        "expectedRevision": 1,
+        "tenantId": "evil_tenant"
+      }
+    },
+    {
+      "id": "C22_resume_missing_command",
+      "schema": "C22_resumeRequest",
+      "valid": false,
+      "input": {
+        "targetRef": {
+          "kind": "WORK",
+          "id": "demo",
+          "version": 1,
+          "digest": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        },
+        "expectedRevision": 1
+      }
+    },
+    {
+      "id": "C22_trigger_valid",
+      "schema": "C22_triggerRequest",
+      "valid": true,
+      "input": {
+        "command": "C22.trigger",
+        "targetRef": {
+          "kind": "WORK",
+          "id": "demo",
+          "version": 1,
+          "digest": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        },
+        "expectedRevision": 1
+      }
+    },
+    {
+      "id": "C22_trigger_reject_subject_injection",
+      "schema": "C22_triggerRequest",
+      "valid": false,
+      "input": {
+        "command": "C22.trigger",
+        "targetRef": {
+          "kind": "WORK",
+          "id": "demo",
+          "version": 1,
+          "digest": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        },
+        "expectedRevision": 1,
+        "tenantId": "evil_tenant"
+      }
+    },
+    {
+      "id": "C22_trigger_missing_command",
+      "schema": "C22_triggerRequest",
+      "valid": false,
+      "input": {
+        "targetRef": {
+          "kind": "WORK",
+          "id": "demo",
+          "version": 1,
+          "digest": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        },
+        "expectedRevision": 1
+      }
+    },
+    {
+      "id": "C23_receiveEvent_valid",
+      "schema": "C23_receiveEventRequest",
+      "valid": true,
+      "input": {
+        "command": "C23.receiveEvent",
+        "sourceId": "demo",
+        "eventId": "demo",
+        "occurredAt": "2026-09-11T12:00:00Z",
+        "kind": "CHANNEL_MESSAGE",
+        "workRef": {
+          "kind": "WORK",
+          "id": "demo",
+          "version": 1,
+          "digest": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        },
+        "payloadArtifactRef": {
+          "kind": "WORK",
+          "id": "demo",
+          "version": 1,
+          "digest": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        }
+      }
+    },
+    {
+      "id": "C23_receiveEvent_reject_subject_injection",
+      "schema": "C23_receiveEventRequest",
+      "valid": false,
+      "input": {
+        "command": "C23.receiveEvent",
+        "sourceId": "demo",
+        "eventId": "demo",
+        "occurredAt": "2026-09-11T12:00:00Z",
+        "kind": "CHANNEL_MESSAGE",
+        "workRef": {
+          "kind": "WORK",
+          "id": "demo",
+          "version": 1,
+          "digest": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        },
+        "payloadArtifactRef": {
+          "kind": "WORK",
+          "id": "demo",
+          "version": 1,
+          "digest": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        },
+        "tenantId": "evil_tenant"
+      }
+    },
+    {
+      "id": "C23_receiveEvent_missing_command",
+      "schema": "C23_receiveEventRequest",
+      "valid": false,
+      "input": {
+        "sourceId": "demo",
+        "eventId": "demo",
+        "occurredAt": "2026-09-11T12:00:00Z",
+        "kind": "CHANNEL_MESSAGE",
+        "workRef": {
+          "kind": "WORK",
+          "id": "demo",
+          "version": 1,
+          "digest": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        },
+        "payloadArtifactRef": {
+          "kind": "WORK",
+          "id": "demo",
+          "version": 1,
+          "digest": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        }
+      }
+    },
+    {
+      "id": "C24_identity_valid",
+      "schema": "C24_identityRequest",
+      "valid": true,
+      "input": {
+        "command": "C24.identity",
+        "targetRef": {
+          "kind": "WORK",
+          "id": "demo",
+          "version": 1,
+          "digest": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        },
+        "expectedRevision": 1,
+        "purpose": "demo",
+        "memberState": "ACTIVE"
+      }
+    },
+    {
+      "id": "C24_identity_reject_subject_injection",
+      "schema": "C24_identityRequest",
+      "valid": false,
+      "input": {
+        "command": "C24.identity",
+        "targetRef": {
+          "kind": "WORK",
+          "id": "demo",
+          "version": 1,
+          "digest": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        },
+        "expectedRevision": 1,
+        "purpose": "demo",
+        "memberState": "ACTIVE",
+        "tenantId": "evil_tenant"
+      }
+    },
+    {
+      "id": "C24_identity_missing_command",
+      "schema": "C24_identityRequest",
+      "valid": false,
+      "input": {
+        "targetRef": {
+          "kind": "WORK",
+          "id": "demo",
+          "version": 1,
+          "digest": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        },
+        "expectedRevision": 1,
+        "purpose": "demo",
+        "memberState": "ACTIVE"
+      }
+    },
+    {
+      "id": "C24_grant_valid",
+      "schema": "C24_grantRequest",
+      "valid": true,
+      "input": {
+        "command": "C24.grant",
+        "targetRef": {
+          "kind": "WORK",
+          "id": "demo",
+          "version": 1,
+          "digest": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        },
+        "expectedRevision": 1,
+        "purpose": "demo",
+        "subjectRef": {
+          "kind": "WORK",
+          "id": "demo",
+          "version": 1,
+          "digest": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        },
+        "actions": [
+          "demo"
+        ],
+        "expiresAt": "2026-09-11T12:00:00Z",
+        "scopeRef": {
+          "kind": "WORK",
+          "id": "demo",
+          "version": 1,
+          "digest": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        }
+      }
+    },
+    {
+      "id": "C24_grant_reject_subject_injection",
+      "schema": "C24_grantRequest",
+      "valid": false,
+      "input": {
+        "command": "C24.grant",
+        "targetRef": {
+          "kind": "WORK",
+          "id": "demo",
+          "version": 1,
+          "digest": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        },
+        "expectedRevision": 1,
+        "purpose": "demo",
+        "subjectRef": {
+          "kind": "WORK",
+          "id": "demo",
+          "version": 1,
+          "digest": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        },
+        "actions": [
+          "demo"
+        ],
+        "expiresAt": "2026-09-11T12:00:00Z",
+        "scopeRef": {
+          "kind": "WORK",
+          "id": "demo",
+          "version": 1,
+          "digest": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        },
+        "tenantId": "evil_tenant"
+      }
+    },
+    {
+      "id": "C24_grant_missing_command",
+      "schema": "C24_grantRequest",
+      "valid": false,
+      "input": {
+        "targetRef": {
+          "kind": "WORK",
+          "id": "demo",
+          "version": 1,
+          "digest": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        },
+        "expectedRevision": 1,
+        "purpose": "demo",
+        "subjectRef": {
+          "kind": "WORK",
+          "id": "demo",
+          "version": 1,
+          "digest": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        },
+        "actions": [
+          "demo"
+        ],
+        "expiresAt": "2026-09-11T12:00:00Z",
+        "scopeRef": {
+          "kind": "WORK",
+          "id": "demo",
+          "version": 1,
+          "digest": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        }
+      }
+    },
+    {
+      "id": "C24_revoke_valid",
+      "schema": "C24_revokeRequest",
+      "valid": true,
+      "input": {
+        "command": "C24.revoke",
+        "targetRef": {
+          "kind": "WORK",
+          "id": "demo",
+          "version": 1,
+          "digest": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        },
+        "expectedRevision": 1,
+        "purpose": "demo"
+      }
+    },
+    {
+      "id": "C24_revoke_reject_subject_injection",
+      "schema": "C24_revokeRequest",
+      "valid": false,
+      "input": {
+        "command": "C24.revoke",
+        "targetRef": {
+          "kind": "WORK",
+          "id": "demo",
+          "version": 1,
+          "digest": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        },
+        "expectedRevision": 1,
+        "purpose": "demo",
+        "tenantId": "evil_tenant"
+      }
+    },
+    {
+      "id": "C24_revoke_missing_command",
+      "schema": "C24_revokeRequest",
+      "valid": false,
+      "input": {
+        "targetRef": {
+          "kind": "WORK",
+          "id": "demo",
+          "version": 1,
+          "digest": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        },
+        "expectedRevision": 1,
+        "purpose": "demo"
+      }
+    },
+    {
+      "id": "C24_transfer_valid",
+      "schema": "C24_transferRequest",
+      "valid": true,
+      "input": {
+        "command": "C24.transfer",
+        "targetRef": {
+          "kind": "WORK",
+          "id": "demo",
+          "version": 1,
+          "digest": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        },
+        "expectedRevision": 1,
+        "purpose": "demo",
+        "targetMemberId": "demo",
+        "workIds": [
+          "demo"
+        ]
+      }
+    },
+    {
+      "id": "C24_transfer_reject_subject_injection",
+      "schema": "C24_transferRequest",
+      "valid": false,
+      "input": {
+        "command": "C24.transfer",
+        "targetRef": {
+          "kind": "WORK",
+          "id": "demo",
+          "version": 1,
+          "digest": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        },
+        "expectedRevision": 1,
+        "purpose": "demo",
+        "targetMemberId": "demo",
+        "workIds": [
+          "demo"
+        ],
+        "tenantId": "evil_tenant"
+      }
+    },
+    {
+      "id": "C24_transfer_missing_command",
+      "schema": "C24_transferRequest",
+      "valid": false,
+      "input": {
+        "targetRef": {
+          "kind": "WORK",
+          "id": "demo",
+          "version": 1,
+          "digest": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        },
+        "expectedRevision": 1,
+        "purpose": "demo",
+        "targetMemberId": "demo",
+        "workIds": [
+          "demo"
+        ]
+      }
+    },
+    {
+      "id": "C24_privacy_valid",
+      "schema": "C24_privacyRequest",
+      "valid": true,
+      "input": {
+        "command": "C24.privacy",
+        "targetRef": {
+          "kind": "WORK",
+          "id": "demo",
+          "version": 1,
+          "digest": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        },
+        "expectedRevision": 1,
+        "purpose": "demo",
+        "requestKind": "EXPORT_OWN"
+      }
+    },
+    {
+      "id": "C24_privacy_reject_subject_injection",
+      "schema": "C24_privacyRequest",
+      "valid": false,
+      "input": {
+        "command": "C24.privacy",
+        "targetRef": {
+          "kind": "WORK",
+          "id": "demo",
+          "version": 1,
+          "digest": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        },
+        "expectedRevision": 1,
+        "purpose": "demo",
+        "requestKind": "EXPORT_OWN",
+        "tenantId": "evil_tenant"
+      }
+    },
+    {
+      "id": "C24_privacy_missing_command",
+      "schema": "C24_privacyRequest",
+      "valid": false,
+      "input": {
+        "targetRef": {
+          "kind": "WORK",
+          "id": "demo",
+          "version": 1,
+          "digest": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        },
+        "expectedRevision": 1,
+        "purpose": "demo",
+        "requestKind": "EXPORT_OWN"
+      }
+    },
+    {
+      "id": "C26_draft_valid",
+      "schema": "C26_draftRequest",
+      "valid": true,
+      "input": {
+        "command": "C26.draft",
+        "name": "demo",
+        "formRef": {
+          "kind": "WORK",
+          "id": "demo",
+          "version": 1,
+          "digest": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        },
+        "definitionArtifactRef": {
+          "kind": "WORK",
+          "id": "demo",
+          "version": 1,
+          "digest": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        },
+        "nodeContractRefs": [
+          {
+            "kind": "WORK",
+            "id": "demo",
+            "version": 1,
+            "digest": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+          }
+        ]
+      }
+    },
+    {
+      "id": "C26_draft_reject_subject_injection",
+      "schema": "C26_draftRequest",
+      "valid": false,
+      "input": {
+        "command": "C26.draft",
+        "name": "demo",
+        "formRef": {
+          "kind": "WORK",
+          "id": "demo",
+          "version": 1,
+          "digest": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        },
+        "definitionArtifactRef": {
+          "kind": "WORK",
+          "id": "demo",
+          "version": 1,
+          "digest": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        },
+        "nodeContractRefs": [
+          {
+            "kind": "WORK",
+            "id": "demo",
+            "version": 1,
+            "digest": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+          }
+        ],
+        "tenantId": "evil_tenant"
+      }
+    },
+    {
+      "id": "C26_draft_missing_command",
+      "schema": "C26_draftRequest",
+      "valid": false,
+      "input": {
+        "name": "demo",
+        "formRef": {
+          "kind": "WORK",
+          "id": "demo",
+          "version": 1,
+          "digest": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        },
+        "definitionArtifactRef": {
+          "kind": "WORK",
+          "id": "demo",
+          "version": 1,
+          "digest": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        },
+        "nodeContractRefs": [
+          {
+            "kind": "WORK",
+            "id": "demo",
+            "version": 1,
+            "digest": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+          }
+        ]
+      }
+    },
+    {
+      "id": "C26_check_valid",
+      "schema": "C26_checkRequest",
+      "valid": true,
+      "input": {
+        "command": "C26.check",
+        "targetRef": {
+          "kind": "WORK",
+          "id": "demo",
+          "version": 1,
+          "digest": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        },
+        "expectedRevision": 1
+      }
+    },
+    {
+      "id": "C26_check_reject_subject_injection",
+      "schema": "C26_checkRequest",
+      "valid": false,
+      "input": {
+        "command": "C26.check",
+        "targetRef": {
+          "kind": "WORK",
+          "id": "demo",
+          "version": 1,
+          "digest": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        },
+        "expectedRevision": 1,
+        "tenantId": "evil_tenant"
+      }
+    },
+    {
+      "id": "C26_check_missing_command",
+      "schema": "C26_checkRequest",
+      "valid": false,
+      "input": {
+        "targetRef": {
+          "kind": "WORK",
+          "id": "demo",
+          "version": 1,
+          "digest": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        },
+        "expectedRevision": 1
+      }
+    },
+    {
+      "id": "C26_preview_valid",
+      "schema": "C26_previewRequest",
+      "valid": true,
+      "input": {
+        "command": "C26.preview",
+        "targetRef": {
+          "kind": "WORK",
+          "id": "demo",
+          "version": 1,
+          "digest": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        },
+        "expectedRevision": 1
+      }
+    },
+    {
+      "id": "C26_preview_reject_subject_injection",
+      "schema": "C26_previewRequest",
+      "valid": false,
+      "input": {
+        "command": "C26.preview",
+        "targetRef": {
+          "kind": "WORK",
+          "id": "demo",
+          "version": 1,
+          "digest": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        },
+        "expectedRevision": 1,
+        "tenantId": "evil_tenant"
+      }
+    },
+    {
+      "id": "C26_preview_missing_command",
+      "schema": "C26_previewRequest",
+      "valid": false,
+      "input": {
+        "targetRef": {
+          "kind": "WORK",
+          "id": "demo",
+          "version": 1,
+          "digest": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        },
+        "expectedRevision": 1
+      }
+    },
+    {
+      "id": "C26_review_valid",
+      "schema": "C26_reviewRequest",
+      "valid": true,
+      "input": {
+        "command": "C26.review",
+        "targetRef": {
+          "kind": "WORK",
+          "id": "demo",
+          "version": 1,
+          "digest": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        },
+        "expectedRevision": 1,
+        "evidenceRefs": [
+          {
+            "kind": "WORK",
+            "id": "demo",
+            "version": 1,
+            "digest": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+          }
+        ]
+      }
+    },
+    {
+      "id": "C26_review_reject_subject_injection",
+      "schema": "C26_reviewRequest",
+      "valid": false,
+      "input": {
+        "command": "C26.review",
+        "targetRef": {
+          "kind": "WORK",
+          "id": "demo",
+          "version": 1,
+          "digest": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        },
+        "expectedRevision": 1,
+        "evidenceRefs": [
+          {
+            "kind": "WORK",
+            "id": "demo",
+            "version": 1,
+            "digest": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+          }
+        ],
+        "tenantId": "evil_tenant"
+      }
+    },
+    {
+      "id": "C26_review_missing_command",
+      "schema": "C26_reviewRequest",
+      "valid": false,
+      "input": {
+        "targetRef": {
+          "kind": "WORK",
+          "id": "demo",
+          "version": 1,
+          "digest": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        },
+        "expectedRevision": 1,
+        "evidenceRefs": [
+          {
+            "kind": "WORK",
+            "id": "demo",
+            "version": 1,
+            "digest": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+          }
+        ]
+      }
+    },
+    {
+      "id": "C26_publish_valid",
+      "schema": "C26_publishRequest",
+      "valid": true,
+      "input": {
+        "command": "C26.publish",
+        "targetRef": {
+          "kind": "WORK",
+          "id": "demo",
+          "version": 1,
+          "digest": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        },
+        "expectedRevision": 1,
+        "evidenceRefs": [
+          {
+            "kind": "WORK",
+            "id": "demo",
+            "version": 1,
+            "digest": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+          }
+        ]
+      }
+    },
+    {
+      "id": "C26_publish_reject_subject_injection",
+      "schema": "C26_publishRequest",
+      "valid": false,
+      "input": {
+        "command": "C26.publish",
+        "targetRef": {
+          "kind": "WORK",
+          "id": "demo",
+          "version": 1,
+          "digest": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        },
+        "expectedRevision": 1,
+        "evidenceRefs": [
+          {
+            "kind": "WORK",
+            "id": "demo",
+            "version": 1,
+            "digest": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+          }
+        ],
+        "tenantId": "evil_tenant"
+      }
+    },
+    {
+      "id": "C26_publish_missing_command",
+      "schema": "C26_publishRequest",
+      "valid": false,
+      "input": {
+        "targetRef": {
+          "kind": "WORK",
+          "id": "demo",
+          "version": 1,
+          "digest": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        },
+        "expectedRevision": 1,
+        "evidenceRefs": [
+          {
+            "kind": "WORK",
+            "id": "demo",
+            "version": 1,
+            "digest": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+          }
+        ]
+      }
+    },
+    {
+      "id": "C27_proposeConfig_valid",
+      "schema": "C27_proposeConfigRequest",
+      "valid": true,
+      "input": {
+        "command": "C27.proposeConfig",
+        "targetRef": {
+          "kind": "WORK",
+          "id": "demo",
+          "version": 1,
+          "digest": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        },
+        "expectedRevision": 1,
+        "scope": "CURRENT_WORK",
+        "goal": "demo"
+      }
+    },
+    {
+      "id": "C27_proposeConfig_reject_subject_injection",
+      "schema": "C27_proposeConfigRequest",
+      "valid": false,
+      "input": {
+        "command": "C27.proposeConfig",
+        "targetRef": {
+          "kind": "WORK",
+          "id": "demo",
+          "version": 1,
+          "digest": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        },
+        "expectedRevision": 1,
+        "scope": "CURRENT_WORK",
+        "goal": "demo",
+        "tenantId": "evil_tenant"
+      }
+    },
+    {
+      "id": "C27_proposeConfig_missing_command",
+      "schema": "C27_proposeConfigRequest",
+      "valid": false,
+      "input": {
+        "targetRef": {
+          "kind": "WORK",
+          "id": "demo",
+          "version": 1,
+          "digest": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        },
+        "expectedRevision": 1,
+        "scope": "CURRENT_WORK",
+        "goal": "demo"
+      }
+    },
+    {
+      "id": "C27_applyProposal_valid",
+      "schema": "C27_applyProposalRequest",
+      "valid": true,
+      "input": {
+        "command": "C27.applyProposal",
+        "targetRef": {
+          "kind": "WORK",
+          "id": "demo",
+          "version": 1,
+          "digest": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        },
+        "expectedRevision": 1,
+        "scope": "CURRENT_WORK",
+        "selectedChanges": [
+          {
+            "fieldPath": "outputFormat",
+            "value": "DOCUMENT"
+          }
+        ],
+        "baseRevision": 1
+      }
+    },
+    {
+      "id": "C27_applyProposal_reject_subject_injection",
+      "schema": "C27_applyProposalRequest",
+      "valid": false,
+      "input": {
+        "command": "C27.applyProposal",
+        "targetRef": {
+          "kind": "WORK",
+          "id": "demo",
+          "version": 1,
+          "digest": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        },
+        "expectedRevision": 1,
+        "scope": "CURRENT_WORK",
+        "selectedChanges": [
+          {
+            "fieldPath": "outputFormat",
+            "value": "DOCUMENT"
+          }
+        ],
+        "baseRevision": 1,
+        "tenantId": "evil_tenant"
+      }
+    },
+    {
+      "id": "C27_applyProposal_missing_command",
+      "schema": "C27_applyProposalRequest",
+      "valid": false,
+      "input": {
+        "targetRef": {
+          "kind": "WORK",
+          "id": "demo",
+          "version": 1,
+          "digest": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        },
+        "expectedRevision": 1,
+        "scope": "CURRENT_WORK",
+        "selectedChanges": [
+          {
+            "fieldPath": "outputFormat",
+            "value": "DOCUMENT"
+          }
+        ],
+        "baseRevision": 1
+      }
+    },
+    {
+      "id": "C27_undo_valid",
+      "schema": "C27_undoRequest",
+      "valid": true,
+      "input": {
+        "command": "C27.undo",
+        "targetRef": {
+          "kind": "WORK",
+          "id": "demo",
+          "version": 1,
+          "digest": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        },
+        "expectedRevision": 1,
+        "scope": "CURRENT_WORK",
+        "mutationId": "demo",
+        "baseRevision": 1
+      }
+    },
+    {
+      "id": "C27_undo_reject_subject_injection",
+      "schema": "C27_undoRequest",
+      "valid": false,
+      "input": {
+        "command": "C27.undo",
+        "targetRef": {
+          "kind": "WORK",
+          "id": "demo",
+          "version": 1,
+          "digest": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        },
+        "expectedRevision": 1,
+        "scope": "CURRENT_WORK",
+        "mutationId": "demo",
+        "baseRevision": 1,
+        "tenantId": "evil_tenant"
+      }
+    },
+    {
+      "id": "C27_undo_missing_command",
+      "schema": "C27_undoRequest",
+      "valid": false,
+      "input": {
+        "targetRef": {
+          "kind": "WORK",
+          "id": "demo",
+          "version": 1,
+          "digest": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        },
+        "expectedRevision": 1,
+        "scope": "CURRENT_WORK",
+        "mutationId": "demo",
+        "baseRevision": 1
+      }
+    },
+    {
+      "id": "C28_plan_valid",
+      "schema": "C28_planRequest",
+      "valid": true,
+      "input": {
+        "command": "C28.plan",
+        "query": {
+          "question": "demo",
+          "metricRef": {
+            "kind": "WORK",
+            "id": "demo",
+            "version": 1,
+            "digest": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+          },
+          "grain": "DAY",
+          "timeField": "demo",
+          "startAt": "2026-09-11T12:00:00Z",
+          "endAt": "2026-09-11T12:00:00Z",
+          "timezone": "demo",
+          "filters": [],
+          "limit": 1
+        }
+      }
+    },
+    {
+      "id": "C28_plan_reject_subject_injection",
+      "schema": "C28_planRequest",
+      "valid": false,
+      "input": {
+        "command": "C28.plan",
+        "query": {
+          "question": "demo",
+          "metricRef": {
+            "kind": "WORK",
+            "id": "demo",
+            "version": 1,
+            "digest": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+          },
+          "grain": "DAY",
+          "timeField": "demo",
+          "startAt": "2026-09-11T12:00:00Z",
+          "endAt": "2026-09-11T12:00:00Z",
+          "timezone": "demo",
+          "filters": [],
+          "limit": 1
+        },
+        "tenantId": "evil_tenant"
+      }
+    },
+    {
+      "id": "C28_plan_missing_command",
+      "schema": "C28_planRequest",
+      "valid": false,
+      "input": {
+        "query": {
+          "question": "demo",
+          "metricRef": {
+            "kind": "WORK",
+            "id": "demo",
+            "version": 1,
+            "digest": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+          },
+          "grain": "DAY",
+          "timeField": "demo",
+          "startAt": "2026-09-11T12:00:00Z",
+          "endAt": "2026-09-11T12:00:00Z",
+          "timezone": "demo",
+          "filters": [],
+          "limit": 1
+        }
+      }
+    },
+    {
+      "id": "C28_execute_valid",
+      "schema": "C28_executeRequest",
+      "valid": true,
+      "input": {
+        "command": "C28.execute",
+        "targetRef": {
+          "kind": "WORK",
+          "id": "demo",
+          "version": 1,
+          "digest": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        },
+        "expectedRevision": 1
+      }
+    },
+    {
+      "id": "C28_execute_reject_subject_injection",
+      "schema": "C28_executeRequest",
+      "valid": false,
+      "input": {
+        "command": "C28.execute",
+        "targetRef": {
+          "kind": "WORK",
+          "id": "demo",
+          "version": 1,
+          "digest": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        },
+        "expectedRevision": 1,
+        "tenantId": "evil_tenant"
+      }
+    },
+    {
+      "id": "C28_execute_missing_command",
+      "schema": "C28_executeRequest",
+      "valid": false,
+      "input": {
+        "targetRef": {
+          "kind": "WORK",
+          "id": "demo",
+          "version": 1,
+          "digest": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        },
+        "expectedRevision": 1
+      }
+    },
+    {
+      "id": "C28_readResult_valid",
+      "schema": "C28_readResultRequest",
+      "valid": true,
+      "input": {
+        "command": "C28.readResult",
+        "targetRef": {
+          "kind": "WORK",
+          "id": "demo",
+          "version": 1,
+          "digest": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        },
+        "expectedRevision": 1
+      }
+    },
+    {
+      "id": "C28_readResult_reject_subject_injection",
+      "schema": "C28_readResultRequest",
+      "valid": false,
+      "input": {
+        "command": "C28.readResult",
+        "targetRef": {
+          "kind": "WORK",
+          "id": "demo",
+          "version": 1,
+          "digest": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        },
+        "expectedRevision": 1,
+        "tenantId": "evil_tenant"
+      }
+    },
+    {
+      "id": "C28_readResult_missing_command",
+      "schema": "C28_readResultRequest",
+      "valid": false,
+      "input": {
+        "targetRef": {
+          "kind": "WORK",
+          "id": "demo",
+          "version": 1,
+          "digest": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        },
+        "expectedRevision": 1
+      }
+    },
+    {
+      "id": "C29_suggest_valid",
+      "schema": "C29_suggestRequest",
+      "valid": true,
+      "input": {
+        "command": "C29.suggest",
+        "sourceRefs": [
+          {
+            "kind": "WORK",
+            "id": "demo",
+            "version": 1,
+            "digest": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+          }
+        ],
+        "purpose": "demo"
+      }
+    },
+    {
+      "id": "C29_suggest_reject_subject_injection",
+      "schema": "C29_suggestRequest",
+      "valid": false,
+      "input": {
+        "command": "C29.suggest",
+        "sourceRefs": [
+          {
+            "kind": "WORK",
+            "id": "demo",
+            "version": 1,
+            "digest": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+          }
+        ],
+        "purpose": "demo",
+        "tenantId": "evil_tenant"
+      }
+    },
+    {
+      "id": "C29_suggest_missing_command",
+      "schema": "C29_suggestRequest",
+      "valid": false,
+      "input": {
+        "sourceRefs": [
+          {
+            "kind": "WORK",
+            "id": "demo",
+            "version": 1,
+            "digest": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+          }
+        ],
+        "purpose": "demo"
+      }
+    },
+    {
+      "id": "C29_confirm_valid",
+      "schema": "C29_confirmRequest",
+      "valid": true,
+      "input": {
+        "command": "C29.confirm",
+        "targetRef": {
+          "kind": "WORK",
+          "id": "demo",
+          "version": 1,
+          "digest": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        },
+        "expectedRevision": 1
+      }
+    },
+    {
+      "id": "C29_confirm_reject_subject_injection",
+      "schema": "C29_confirmRequest",
+      "valid": false,
+      "input": {
+        "command": "C29.confirm",
+        "targetRef": {
+          "kind": "WORK",
+          "id": "demo",
+          "version": 1,
+          "digest": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        },
+        "expectedRevision": 1,
+        "tenantId": "evil_tenant"
+      }
+    },
+    {
+      "id": "C29_confirm_missing_command",
+      "schema": "C29_confirmRequest",
+      "valid": false,
+      "input": {
+        "targetRef": {
+          "kind": "WORK",
+          "id": "demo",
+          "version": 1,
+          "digest": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        },
+        "expectedRevision": 1
+      }
+    },
+    {
+      "id": "C29_readRelated_valid",
+      "schema": "C29_readRelatedRequest",
+      "valid": true,
+      "input": {
+        "command": "C29.readRelated",
+        "targetRef": {
+          "kind": "WORK",
+          "id": "demo",
+          "version": 1,
+          "digest": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        },
+        "expectedRevision": 1
+      }
+    },
+    {
+      "id": "C29_readRelated_reject_subject_injection",
+      "schema": "C29_readRelatedRequest",
+      "valid": false,
+      "input": {
+        "command": "C29.readRelated",
+        "targetRef": {
+          "kind": "WORK",
+          "id": "demo",
+          "version": 1,
+          "digest": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        },
+        "expectedRevision": 1,
+        "tenantId": "evil_tenant"
+      }
+    },
+    {
+      "id": "C29_readRelated_missing_command",
+      "schema": "C29_readRelatedRequest",
+      "valid": false,
+      "input": {
+        "targetRef": {
+          "kind": "WORK",
+          "id": "demo",
+          "version": 1,
+          "digest": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        },
+        "expectedRevision": 1
+      }
+    },
+    {
+      "id": "C30_accept_valid",
+      "schema": "C30_acceptRequest",
+      "valid": true,
+      "input": {
+        "command": "C30.accept",
+        "targetRef": {
+          "kind": "WORK",
+          "id": "demo",
+          "version": 1,
+          "digest": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        },
+        "expectedRevision": 1,
+        "sourceVersion": 1
+      }
+    },
+    {
+      "id": "C30_accept_reject_subject_injection",
+      "schema": "C30_acceptRequest",
+      "valid": false,
+      "input": {
+        "command": "C30.accept",
+        "targetRef": {
+          "kind": "WORK",
+          "id": "demo",
+          "version": 1,
+          "digest": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        },
+        "expectedRevision": 1,
+        "sourceVersion": 1,
+        "tenantId": "evil_tenant"
+      }
+    },
+    {
+      "id": "C30_accept_missing_command",
+      "schema": "C30_acceptRequest",
+      "valid": false,
+      "input": {
+        "targetRef": {
+          "kind": "WORK",
+          "id": "demo",
+          "version": 1,
+          "digest": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        },
+        "expectedRevision": 1,
+        "sourceVersion": 1
+      }
+    },
+    {
+      "id": "C30_dismiss_valid",
+      "schema": "C30_dismissRequest",
+      "valid": true,
+      "input": {
+        "command": "C30.dismiss",
+        "targetRef": {
+          "kind": "WORK",
+          "id": "demo",
+          "version": 1,
+          "digest": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        },
+        "expectedRevision": 1,
+        "sourceVersion": 1
+      }
+    },
+    {
+      "id": "C30_dismiss_reject_subject_injection",
+      "schema": "C30_dismissRequest",
+      "valid": false,
+      "input": {
+        "command": "C30.dismiss",
+        "targetRef": {
+          "kind": "WORK",
+          "id": "demo",
+          "version": 1,
+          "digest": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        },
+        "expectedRevision": 1,
+        "sourceVersion": 1,
+        "tenantId": "evil_tenant"
+      }
+    },
+    {
+      "id": "C30_dismiss_missing_command",
+      "schema": "C30_dismissRequest",
+      "valid": false,
+      "input": {
+        "targetRef": {
+          "kind": "WORK",
+          "id": "demo",
+          "version": 1,
+          "digest": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        },
+        "expectedRevision": 1,
+        "sourceVersion": 1
+      }
+    },
+    {
+      "id": "C30_snooze_valid",
+      "schema": "C30_snoozeRequest",
+      "valid": true,
+      "input": {
+        "command": "C30.snooze",
+        "targetRef": {
+          "kind": "WORK",
+          "id": "demo",
+          "version": 1,
+          "digest": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        },
+        "expectedRevision": 1,
+        "sourceVersion": 1,
+        "until": "2026-09-11T12:00:00Z"
+      }
+    },
+    {
+      "id": "C30_snooze_reject_subject_injection",
+      "schema": "C30_snoozeRequest",
+      "valid": false,
+      "input": {
+        "command": "C30.snooze",
+        "targetRef": {
+          "kind": "WORK",
+          "id": "demo",
+          "version": 1,
+          "digest": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        },
+        "expectedRevision": 1,
+        "sourceVersion": 1,
+        "until": "2026-09-11T12:00:00Z",
+        "tenantId": "evil_tenant"
+      }
+    },
+    {
+      "id": "C30_snooze_missing_command",
+      "schema": "C30_snoozeRequest",
+      "valid": false,
+      "input": {
+        "targetRef": {
+          "kind": "WORK",
+          "id": "demo",
+          "version": 1,
+          "digest": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        },
+        "expectedRevision": 1,
+        "sourceVersion": 1,
+        "until": "2026-09-11T12:00:00Z"
+      }
+    },
+    {
+      "id": "C31_propose_valid",
+      "schema": "C31_proposeRequest",
+      "valid": true,
+      "input": {
+        "command": "C31.propose",
+        "targetRef": {
+          "kind": "WORK",
+          "id": "demo",
+          "version": 1,
+          "digest": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        },
+        "expectedRevision": 1,
+        "baselineRef": {
+          "kind": "WORK",
+          "id": "demo",
+          "version": 1,
+          "digest": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        },
+        "candidateRef": {
+          "kind": "WORK",
+          "id": "demo",
+          "version": 1,
+          "digest": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        }
+      }
+    },
+    {
+      "id": "C31_propose_reject_subject_injection",
+      "schema": "C31_proposeRequest",
+      "valid": false,
+      "input": {
+        "command": "C31.propose",
+        "targetRef": {
+          "kind": "WORK",
+          "id": "demo",
+          "version": 1,
+          "digest": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        },
+        "expectedRevision": 1,
+        "baselineRef": {
+          "kind": "WORK",
+          "id": "demo",
+          "version": 1,
+          "digest": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        },
+        "candidateRef": {
+          "kind": "WORK",
+          "id": "demo",
+          "version": 1,
+          "digest": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        },
+        "tenantId": "evil_tenant"
+      }
+    },
+    {
+      "id": "C31_propose_missing_command",
+      "schema": "C31_proposeRequest",
+      "valid": false,
+      "input": {
+        "targetRef": {
+          "kind": "WORK",
+          "id": "demo",
+          "version": 1,
+          "digest": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        },
+        "expectedRevision": 1,
+        "baselineRef": {
+          "kind": "WORK",
+          "id": "demo",
+          "version": 1,
+          "digest": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        },
+        "candidateRef": {
+          "kind": "WORK",
+          "id": "demo",
+          "version": 1,
+          "digest": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        }
+      }
+    },
+    {
+      "id": "C31_evaluate_valid",
+      "schema": "C31_evaluateRequest",
+      "valid": true,
+      "input": {
+        "command": "C31.evaluate",
+        "targetRef": {
+          "kind": "WORK",
+          "id": "demo",
+          "version": 1,
+          "digest": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        },
+        "expectedRevision": 1,
+        "baselineRef": {
+          "kind": "WORK",
+          "id": "demo",
+          "version": 1,
+          "digest": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        },
+        "candidateRef": {
+          "kind": "WORK",
+          "id": "demo",
+          "version": 1,
+          "digest": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        },
+        "evidenceRefs": [
+          {
+            "kind": "WORK",
+            "id": "demo",
+            "version": 1,
+            "digest": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+          }
+        ]
+      }
+    },
+    {
+      "id": "C31_evaluate_reject_subject_injection",
+      "schema": "C31_evaluateRequest",
+      "valid": false,
+      "input": {
+        "command": "C31.evaluate",
+        "targetRef": {
+          "kind": "WORK",
+          "id": "demo",
+          "version": 1,
+          "digest": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        },
+        "expectedRevision": 1,
+        "baselineRef": {
+          "kind": "WORK",
+          "id": "demo",
+          "version": 1,
+          "digest": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        },
+        "candidateRef": {
+          "kind": "WORK",
+          "id": "demo",
+          "version": 1,
+          "digest": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        },
+        "evidenceRefs": [
+          {
+            "kind": "WORK",
+            "id": "demo",
+            "version": 1,
+            "digest": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+          }
+        ],
+        "tenantId": "evil_tenant"
+      }
+    },
+    {
+      "id": "C31_evaluate_missing_command",
+      "schema": "C31_evaluateRequest",
+      "valid": false,
+      "input": {
+        "targetRef": {
+          "kind": "WORK",
+          "id": "demo",
+          "version": 1,
+          "digest": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        },
+        "expectedRevision": 1,
+        "baselineRef": {
+          "kind": "WORK",
+          "id": "demo",
+          "version": 1,
+          "digest": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        },
+        "candidateRef": {
+          "kind": "WORK",
+          "id": "demo",
+          "version": 1,
+          "digest": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        },
+        "evidenceRefs": [
+          {
+            "kind": "WORK",
+            "id": "demo",
+            "version": 1,
+            "digest": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+          }
+        ]
+      }
+    },
+    {
+      "id": "C31_trial_valid",
+      "schema": "C31_trialRequest",
+      "valid": true,
+      "input": {
+        "command": "C31.trial",
+        "targetRef": {
+          "kind": "WORK",
+          "id": "demo",
+          "version": 1,
+          "digest": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        },
+        "expectedRevision": 1,
+        "baselineRef": {
+          "kind": "WORK",
+          "id": "demo",
+          "version": 1,
+          "digest": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        },
+        "candidateRef": {
+          "kind": "WORK",
+          "id": "demo",
+          "version": 1,
+          "digest": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        },
+        "evidenceRefs": [
+          {
+            "kind": "WORK",
+            "id": "demo",
+            "version": 1,
+            "digest": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+          }
+        ],
+        "scopeRef": {
+          "kind": "WORK",
+          "id": "demo",
+          "version": 1,
+          "digest": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        },
+        "expiresAt": "2026-09-11T12:00:00Z",
+        "budget": {
+          "maxTokens": 1,
+          "maxToolCalls": 0,
+          "timeoutSeconds": 1
+        }
+      }
+    },
+    {
+      "id": "C31_trial_reject_subject_injection",
+      "schema": "C31_trialRequest",
+      "valid": false,
+      "input": {
+        "command": "C31.trial",
+        "targetRef": {
+          "kind": "WORK",
+          "id": "demo",
+          "version": 1,
+          "digest": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        },
+        "expectedRevision": 1,
+        "baselineRef": {
+          "kind": "WORK",
+          "id": "demo",
+          "version": 1,
+          "digest": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        },
+        "candidateRef": {
+          "kind": "WORK",
+          "id": "demo",
+          "version": 1,
+          "digest": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        },
+        "evidenceRefs": [
+          {
+            "kind": "WORK",
+            "id": "demo",
+            "version": 1,
+            "digest": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+          }
+        ],
+        "scopeRef": {
+          "kind": "WORK",
+          "id": "demo",
+          "version": 1,
+          "digest": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        },
+        "expiresAt": "2026-09-11T12:00:00Z",
+        "budget": {
+          "maxTokens": 1,
+          "maxToolCalls": 0,
+          "timeoutSeconds": 1
+        },
+        "tenantId": "evil_tenant"
+      }
+    },
+    {
+      "id": "C31_trial_missing_command",
+      "schema": "C31_trialRequest",
+      "valid": false,
+      "input": {
+        "targetRef": {
+          "kind": "WORK",
+          "id": "demo",
+          "version": 1,
+          "digest": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        },
+        "expectedRevision": 1,
+        "baselineRef": {
+          "kind": "WORK",
+          "id": "demo",
+          "version": 1,
+          "digest": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        },
+        "candidateRef": {
+          "kind": "WORK",
+          "id": "demo",
+          "version": 1,
+          "digest": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        },
+        "evidenceRefs": [
+          {
+            "kind": "WORK",
+            "id": "demo",
+            "version": 1,
+            "digest": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+          }
+        ],
+        "scopeRef": {
+          "kind": "WORK",
+          "id": "demo",
+          "version": 1,
+          "digest": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        },
+        "expiresAt": "2026-09-11T12:00:00Z",
+        "budget": {
+          "maxTokens": 1,
+          "maxToolCalls": 0,
+          "timeoutSeconds": 1
+        }
+      }
+    },
+    {
+      "id": "C31_publish_valid",
+      "schema": "C31_publishRequest",
+      "valid": true,
+      "input": {
+        "command": "C31.publish",
+        "targetRef": {
+          "kind": "WORK",
+          "id": "demo",
+          "version": 1,
+          "digest": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        },
+        "expectedRevision": 1,
+        "baselineRef": {
+          "kind": "WORK",
+          "id": "demo",
+          "version": 1,
+          "digest": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        },
+        "candidateRef": {
+          "kind": "WORK",
+          "id": "demo",
+          "version": 1,
+          "digest": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        },
+        "evidenceRefs": [
+          {
+            "kind": "WORK",
+            "id": "demo",
+            "version": 1,
+            "digest": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+          }
+        ]
+      }
+    },
+    {
+      "id": "C31_publish_reject_subject_injection",
+      "schema": "C31_publishRequest",
+      "valid": false,
+      "input": {
+        "command": "C31.publish",
+        "targetRef": {
+          "kind": "WORK",
+          "id": "demo",
+          "version": 1,
+          "digest": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        },
+        "expectedRevision": 1,
+        "baselineRef": {
+          "kind": "WORK",
+          "id": "demo",
+          "version": 1,
+          "digest": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        },
+        "candidateRef": {
+          "kind": "WORK",
+          "id": "demo",
+          "version": 1,
+          "digest": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        },
+        "evidenceRefs": [
+          {
+            "kind": "WORK",
+            "id": "demo",
+            "version": 1,
+            "digest": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+          }
+        ],
+        "tenantId": "evil_tenant"
+      }
+    },
+    {
+      "id": "C31_publish_missing_command",
+      "schema": "C31_publishRequest",
+      "valid": false,
+      "input": {
+        "targetRef": {
+          "kind": "WORK",
+          "id": "demo",
+          "version": 1,
+          "digest": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        },
+        "expectedRevision": 1,
+        "baselineRef": {
+          "kind": "WORK",
+          "id": "demo",
+          "version": 1,
+          "digest": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        },
+        "candidateRef": {
+          "kind": "WORK",
+          "id": "demo",
+          "version": 1,
+          "digest": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        },
+        "evidenceRefs": [
+          {
+            "kind": "WORK",
+            "id": "demo",
+            "version": 1,
+            "digest": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+          }
+        ]
+      }
+    },
+    {
+      "id": "C31_rollback_valid",
+      "schema": "C31_rollbackRequest",
+      "valid": true,
+      "input": {
+        "command": "C31.rollback",
+        "targetRef": {
+          "kind": "WORK",
+          "id": "demo",
+          "version": 1,
+          "digest": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        },
+        "expectedRevision": 1,
+        "baselineRef": {
+          "kind": "WORK",
+          "id": "demo",
+          "version": 1,
+          "digest": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        },
+        "candidateRef": {
+          "kind": "WORK",
+          "id": "demo",
+          "version": 1,
+          "digest": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        },
+        "evidenceRefs": [
+          {
+            "kind": "WORK",
+            "id": "demo",
+            "version": 1,
+            "digest": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+          }
+        ],
+        "publicationRef": {
+          "kind": "WORK",
+          "id": "demo",
+          "version": 1,
+          "digest": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        }
+      }
+    },
+    {
+      "id": "C31_rollback_reject_subject_injection",
+      "schema": "C31_rollbackRequest",
+      "valid": false,
+      "input": {
+        "command": "C31.rollback",
+        "targetRef": {
+          "kind": "WORK",
+          "id": "demo",
+          "version": 1,
+          "digest": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        },
+        "expectedRevision": 1,
+        "baselineRef": {
+          "kind": "WORK",
+          "id": "demo",
+          "version": 1,
+          "digest": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        },
+        "candidateRef": {
+          "kind": "WORK",
+          "id": "demo",
+          "version": 1,
+          "digest": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        },
+        "evidenceRefs": [
+          {
+            "kind": "WORK",
+            "id": "demo",
+            "version": 1,
+            "digest": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+          }
+        ],
+        "publicationRef": {
+          "kind": "WORK",
+          "id": "demo",
+          "version": 1,
+          "digest": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        },
+        "tenantId": "evil_tenant"
+      }
+    },
+    {
+      "id": "C31_rollback_missing_command",
+      "schema": "C31_rollbackRequest",
+      "valid": false,
+      "input": {
+        "targetRef": {
+          "kind": "WORK",
+          "id": "demo",
+          "version": 1,
+          "digest": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        },
+        "expectedRevision": 1,
+        "baselineRef": {
+          "kind": "WORK",
+          "id": "demo",
+          "version": 1,
+          "digest": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        },
+        "candidateRef": {
+          "kind": "WORK",
+          "id": "demo",
+          "version": 1,
+          "digest": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        },
+        "evidenceRefs": [
+          {
+            "kind": "WORK",
+            "id": "demo",
+            "version": 1,
+            "digest": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+          }
+        ],
+        "publicationRef": {
+          "kind": "WORK",
+          "id": "demo",
+          "version": 1,
+          "digest": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        }
+      }
+    }
+  ]
+}

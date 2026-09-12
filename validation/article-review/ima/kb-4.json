@@ -1,0 +1,240 @@
+{
+  "retrievedAt": "2026-09-11T23:53:52.011040+00:00",
+  "operation": "search_knowledge_base",
+  "request": {
+    "query": "",
+    "cursor": "CgUI6QcYAQoFCOoHGAEKBQjsBxgBCgcI7QcSAjcy",
+    "limit": 20
+  },
+  "exitCode": 0,
+  "response": {
+    "code": 0,
+    "msg": "success",
+    "data": {
+      "info_list": [
+        {
+          "kb_id": "gkyrulYaDqFk-qySSeNJpR1T_Ck-TGFdCJpEy7HTJAY=",
+          "kb_name": "智慧校园一卡通@EduDigital123",
+          "cover_url": "",
+          "member_count": "10",
+          "content_count": "66",
+          "description": "海贝达科技是一家智慧校园研究机构，海中寻贝、沙里淘金，要把最好的产品、服务、知识介绍给学校。\n网站：教育数字化知识图谱EduDigital123.COM\n公众号：智教说\n微信群：智慧校园知社群（联系微信hbd007x7加入）\n知识库：智慧校园一卡通、淋浴、开水、洗衣机、消费",
+          "creator": "教育数字化知识图谱",
+          "role_type": "普通成员",
+          "base_type": "我加入的订阅知识库"
+        },
+        {
+          "kb_id": "6WsF7IaDfup2TR4MwRcMyLHoaYC1Nc48H0jW6Gsej-Q=",
+          "kb_name": "AI Agent",
+          "cover_url": "",
+          "member_count": "41598",
+          "content_count": "2952",
+          "description": "智能体、智能助手、智能代理、Agentic AI、智能体应用、智能体工程、OpenClaw、养龙虾、QClaw、WorkBuddy、CoPaw",
+          "creator": "HuangWZ",
+          "role_type": "普通成员",
+          "base_type": "我加入的订阅知识库"
+        },
+        {
+          "kb_id": "nRzLmvrKo5iL9NCypUBPlfKiOgQ79uUA075iAalika4=",
+          "kb_name": "AI提示词、skill、智能体、氛围编程",
+          "cover_url": "",
+          "member_count": "29041",
+          "content_count": "1992",
+          "description": "本库含提示词、Hermes 、skills、Gene、小龙虾、上下文工程、工作流架构、agent智能体等精品内容，汇集了AI时代对话与氛围编程的全面指南，涵盖写作、绘画、视频、设计、编程、html、逆向工程、可视化等多场景应用及实战案",
+          "creator": "AI智能体、提示词与人工智能",
+          "role_type": "普通成员",
+          "base_type": "我加入的订阅知识库"
+        },
+        {
+          "kb_id": "ucK6vX3cSd5QYyfhB9M5rYSaPQo1h4k3MRg-rmcMCGU=",
+          "kb_name": "腾讯云智能体开发平台ADP（持续更新）",
+          "cover_url": "",
+          "member_count": "163",
+          "content_count": "225",
+          "description": "这里有关于腾讯云AI Agent智能体开发平台的一切教程及文档，快来提问吧～",
+          "creator": "照亮世界",
+          "role_type": "普通成员",
+          "base_type": "我加入的订阅知识库"
+        },
+        {
+          "kb_id": "f82Ipayg2p3weCU7qtRQ8tUQGDMHnrsUYLFdOWlZim0=",
+          "kb_name": "火山编程（安卓）",
+          "cover_url": "",
+          "member_count": "19",
+          "content_count": "141",
+          "description": "根据火山编程安卓官方文件生成",
+          "creator": "那可",
+          "role_type": "普通成员",
+          "base_type": "我加入的订阅知识库"
+        },
+        {
+          "kb_id": "8v8th5bD2tZYc6b_d87XAG4lbI0Sl4RWGnLOB9wzAOY=",
+          "kb_name": "AI应用案例精选",
+          "cover_url": "",
+          "member_count": "2024",
+          "content_count": "307",
+          "description": "精选各行业AI应用案例，开拓视野，拓展思维，缩小信息差，提升认知",
+          "creator": "momo",
+          "role_type": "普通成员",
+          "base_type": "我加入的订阅知识库"
+        },
+        {
+          "kb_id": "T7sB4mM-_vEUzJdnsf233wjFUrr9nozwLRaG_17WJN8=",
+          "kb_name": "国家标准",
+          "cover_url": "",
+          "member_count": "9438",
+          "content_count": "7112",
+          "description": "1、加入本知识库有更高级用法。\n2、温馨提示：使用国家标准分析系统，可以更迅速掌握标准！",
+          "creator": "Smile",
+          "role_type": "普通成员",
+          "base_type": "我加入的订阅知识库"
+        },
+        {
+          "kb_id": "cSKS6hdbxXsco0BmGZPXysa8rszvAF2m5Km6W-Mnmbc=",
+          "kb_name": "人月聊IT-数字化",
+          "cover_url": "",
+          "member_count": "4593",
+          "content_count": "2818",
+          "description": "协助个人和企业数字化转型，知识库覆盖数字化，云原生，企业架构，软件工程，思维框架和逻辑",
+          "creator": "数字化-云原生-思维",
+          "role_type": "普通成员",
+          "base_type": "我加入的订阅知识库"
+        },
+        {
+          "kb_id": "n0MwVp2eklMxS02bwq57AwEVut4kGOc8LcR1pE5iCLs=",
+          "kb_name": "AI知识库RAG & LLM（持续更新）",
+          "cover_url": "",
+          "member_count": "5129",
+          "content_count": "849",
+          "description": "生成式AI ，RAG 知识库，LLM 大语言模型，本地部署的知识分享，欢迎加入！👏👏👏",
+          "creator": "Pierre皮埃尔学习AI",
+          "role_type": "普通成员",
+          "base_type": "我加入的订阅知识库"
+        },
+        {
+          "kb_id": "bMLA8x5gaf1R3rLTnXNEG3YwrexmX1JWPLGDl1YP3Qw=",
+          "kb_name": "AI 知识库进化之旅【持续更新】",
+          "cover_url": "",
+          "member_count": "89",
+          "content_count": "98",
+          "description": "为你提供关于AI学习精选系统化资料",
+          "creator": "AI 人工智能进化之旅",
+          "role_type": "普通成员",
+          "base_type": "我加入的订阅知识库"
+        },
+        {
+          "kb_id": "XkU90jkIa9bc925KAnMvYDJY8dWQEzVilzTeyKtAUqs=",
+          "kb_name": "ComfyUI Flux AI智能体知识库",
+          "cover_url": "",
+          "member_count": "292",
+          "content_count": "1064",
+          "description": "基于 Flux 的 ComfyUI 工作流，个性化定制工作流，Lora 个性化定制工作流 AI agent， 每天更新强大的AI工具家族，包含最新最强最智能的自动化AI智能体，向AGI办公迈进。教你打造最强AI智能体。manus 扣子 智能体 coze agents 扣子空间 comfyUI MCP",
+          "creator": "陈建佳 Philip",
+          "role_type": "普通成员",
+          "base_type": "我加入的订阅知识库"
+        },
+        {
+          "kb_id": "7Lm0PkJ-SMOst2ewmz8_t-GfxiXwF-Y6Z0oM6MUW9II=",
+          "kb_name": "智慧园区解决方案",
+          "cover_url": "",
+          "member_count": "582",
+          "content_count": "171",
+          "description": "智慧园区解决方案是依托物联网、大数据、人工智能等技术，对传统园区进行全方位数字化升级的综合体系。\n可以留言提供相关文档，共建智慧园区解决方案知识库。",
+          "creator": "清影",
+          "role_type": "普通成员",
+          "base_type": "我加入的订阅知识库"
+        },
+        {
+          "kb_id": "TAx6cRZX5nq5ZWjeEUO4wiX--0Re7P1yYPZEHhxS2tk=",
+          "kb_name": "AI BI Agent 人工智能 商业智能 智能体",
+          "cover_url": "",
+          "member_count": "223",
+          "content_count": "229",
+          "description": "AI BI Agent Learning and Sharing",
+          "creator": "Tom Wang",
+          "role_type": "普通成员",
+          "base_type": "我加入的订阅知识库"
+        },
+        {
+          "kb_id": "gBs8bvmm4Qn9C_AjGXAfB2FpHW2kLlNgq5ZMb8muODM=",
+          "kb_name": "AI工具集",
+          "cover_url": "",
+          "member_count": "534",
+          "content_count": "5903",
+          "description": "",
+          "creator": "资源局",
+          "role_type": "普通成员",
+          "base_type": "我加入的订阅知识库"
+        },
+        {
+          "kb_id": "Zvu8Spmr-edWAcibFd_gRJTQonqGxjM3V5BoWD_uLW0=",
+          "kb_name": "AI精选知识库",
+          "cover_url": "",
+          "member_count": "10207",
+          "content_count": "1774",
+          "description": "最全AI 内容  应用精选 知识库 宇宙搜索引擎\n内容 可查看 可问答\n持续更新 欢迎分享留言，喜欢内容记得点心",
+          "creator": "褚龙",
+          "role_type": "普通成员",
+          "base_type": "我加入的订阅知识库"
+        },
+        {
+          "kb_id": "S2hTqpsJzxDgNsTGGC0HjmBcq61TsAgb-plG7UEGqnA=",
+          "kb_name": "IT技术知识库",
+          "cover_url": "",
+          "member_count": "2375",
+          "content_count": "4913",
+          "description": "linux云原生大数据IT技术与AIOps数据库实战指南，对运维、研发、测试、架构师、产品经理等人员，提供大模型、数据库、linux自动化、平台工程、可观测、信创运维、持续测试、云原生热门技术。",
+          "creator": "松哥聊职场AI",
+          "role_type": "普通成员",
+          "base_type": "我加入的订阅知识库"
+        },
+        {
+          "kb_id": "FhkSfvvI3FftKs_O5zFKOQVJpL6Mizqn8avEcOEDqoQ=",
+          "kb_name": "RAGFlow",
+          "cover_url": "",
+          "member_count": "136",
+          "content_count": "8",
+          "description": "关于RAGFlow 的一切",
+          "creator": "Ice#jiker.com",
+          "role_type": "普通成员",
+          "base_type": "我加入的订阅知识库"
+        },
+        {
+          "kb_id": "HjdLeBwSB-kE1E2YVEDnzBHIbKf8k054PFADJKiFJB8=",
+          "kb_name": "安卓开发资料",
+          "cover_url": "",
+          "member_count": "44",
+          "content_count": "29",
+          "description": "",
+          "creator": "别跟风",
+          "role_type": "普通成员",
+          "base_type": "我加入的订阅知识库"
+        },
+        {
+          "kb_id": "gF70iynO6K3rpI-QRcEuFa3zHVUeQsLv8upNyky_XRY=",
+          "kb_name": "AI编程知识库🔥",
+          "cover_url": "",
+          "member_count": "108",
+          "content_count": "74",
+          "description": "AI编程相关知识库，主要是网页端的编程，也有APP及小程序编程相关",
+          "creator": "老高知识号",
+          "role_type": "普通成员",
+          "base_type": "我加入的订阅知识库"
+        },
+        {
+          "kb_id": "CbuttFHGKHc1116D8AgKk56S5i_3IMJ4zVLX6Y6rgzs=",
+          "kb_name": "AI赋能办公",
+          "cover_url": "",
+          "member_count": "4989",
+          "content_count": "21",
+          "description": "这里分享各种AI提升办公效率的方法和技巧",
+          "creator": "AI转角",
+          "role_type": "普通成员",
+          "base_type": "我加入的订阅知识库"
+        }
+      ],
+      "is_end": false,
+      "next_cursor": "CgUI6QcYAQoFCOoHGAEKBQjsBxgBCgcI7QcSAjky"
+    }
+  }
+}

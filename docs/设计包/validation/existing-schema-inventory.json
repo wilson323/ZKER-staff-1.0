@@ -1,0 +1,326 @@
+{
+  "files": 64,
+  "fieldRows": 895,
+  "sources": [
+    {
+      "path": "/Users/mac/Documents/ChatGPT/ZKER- staff/contracts/jsonschema/access-request.schema.json",
+      "sha256": "712731a5eae5ee3afcbc3a2ef180da992e82aece32f5058ca3672a948c2e65e5",
+      "bytes": 4789
+    },
+    {
+      "path": "/Users/mac/Documents/ChatGPT/ZKER- staff/contracts/jsonschema/access-review-campaign.schema.json",
+      "sha256": "ab3a06b8ef55e1482ed1c9f2eac56ba758f906c8c63cdfe5e274e9c3a6db2a80",
+      "bytes": 5323
+    },
+    {
+      "path": "/Users/mac/Documents/ChatGPT/ZKER- staff/contracts/jsonschema/approval-receipt.schema.json",
+      "sha256": "3ee21d60bc1add89683dae2556e3012c669e7150bb6b46bae85fa9443b744c2a",
+      "bytes": 2467
+    },
+    {
+      "path": "/Users/mac/Documents/ChatGPT/ZKER- staff/contracts/jsonschema/authentication-session.schema.json",
+      "sha256": "51c7d4e417383c3dbef4f32d0d9b442bd6183953809e65cffa953293cb66880a",
+      "bytes": 3875
+    },
+    {
+      "path": "/Users/mac/Documents/ChatGPT/ZKER- staff/contracts/jsonschema/authorization-decision.schema.json",
+      "sha256": "e32ea99a626507caf0262f83a9bf46a2d902acf9e550f5bee6ff1fbc42499e28",
+      "bytes": 2444
+    },
+    {
+      "path": "/Users/mac/Documents/ChatGPT/ZKER- staff/contracts/jsonschema/authorization-grant.schema.json",
+      "sha256": "951c6b3af3f9fc6b3ffd4b51bc322b4addb61c389ce98f0f4de698fc6ddb0ab7",
+      "bytes": 2308
+    },
+    {
+      "path": "/Users/mac/Documents/ChatGPT/ZKER- staff/contracts/jsonschema/break-glass-session.schema.json",
+      "sha256": "91d028cf5fa6a037b9fcc8ed7c49c9bbd7a994c6d93e91a1df719676355f3997",
+      "bytes": 2819
+    },
+    {
+      "path": "/Users/mac/Documents/ChatGPT/ZKER- staff/contracts/jsonschema/budget-policy.schema.json",
+      "sha256": "83360a31567d5038d30307206cf9fdcc8bb6baddd6890e81d8c29b9963ae3ff7",
+      "bytes": 3082
+    },
+    {
+      "path": "/Users/mac/Documents/ChatGPT/ZKER- staff/contracts/jsonschema/capability-manifest.schema.json",
+      "sha256": "1029bce72d7895dc23ef0b63d622f23badd006ea0428516e5c861c05df681179",
+      "bytes": 2250
+    },
+    {
+      "path": "/Users/mac/Documents/ChatGPT/ZKER- staff/contracts/jsonschema/command-candidate.schema.json",
+      "sha256": "e34605887e89d04d8c71b1b40edf46a8ff6fe9516f50b0f41f443e6db1941e10",
+      "bytes": 2447
+    },
+    {
+      "path": "/Users/mac/Documents/ChatGPT/ZKER- staff/contracts/jsonschema/completion-check-result.schema.json",
+      "sha256": "351137f88f33feabe954f20445526df274b78286517fccf0428b8781f607b965",
+      "bytes": 3991
+    },
+    {
+      "path": "/Users/mac/Documents/ChatGPT/ZKER- staff/contracts/jsonschema/context-manifest.schema.json",
+      "sha256": "6f8b737a28a7abdcec52325eb559ed03c8ad3f3586567533ac71cacac6292573",
+      "bytes": 3478
+    },
+    {
+      "path": "/Users/mac/Documents/ChatGPT/ZKER- staff/contracts/jsonschema/data-deletion-request.schema.json",
+      "sha256": "a8e3ddcfc5915c9f3b380eddb79a61a77a3e58def141b8638588646f1d68d3e9",
+      "bytes": 4578
+    },
+    {
+      "path": "/Users/mac/Documents/ChatGPT/ZKER- staff/contracts/jsonschema/delegation.schema.json",
+      "sha256": "2e280d4303223c01b970d843784b6b0ec61e108622cdbe20ad9c7ad953e438ad",
+      "bytes": 3021
+    },
+    {
+      "path": "/Users/mac/Documents/ChatGPT/ZKER- staff/contracts/jsonschema/deletion-ledger-entry.schema.json",
+      "sha256": "db3711db9ebbc40a8720e62c89d38b8c22b068e51afb70052755469c42a45ad9",
+      "bytes": 2942
+    },
+    {
+      "path": "/Users/mac/Documents/ChatGPT/ZKER- staff/contracts/jsonschema/deletion-target.schema.json",
+      "sha256": "28e81308324ff4a582dae898a7054f323346bd37589f62af7668304a2cb5987b",
+      "bytes": 3129
+    },
+    {
+      "path": "/Users/mac/Documents/ChatGPT/ZKER- staff/contracts/jsonschema/duty-transfer-item.schema.json",
+      "sha256": "568f652e5f6422174aa88d8a1d7457ef4996b232a64553848414d0ca87ca7a3f",
+      "bytes": 2338
+    },
+    {
+      "path": "/Users/mac/Documents/ChatGPT/ZKER- staff/contracts/jsonschema/employment-assignment.schema.json",
+      "sha256": "fdfb5b69f1ca7f0d5d642bb6224d0e4cd041fead7465e07992581ed99df87762",
+      "bytes": 2600
+    },
+    {
+      "path": "/Users/mac/Documents/ChatGPT/ZKER- staff/contracts/jsonschema/evaluation-report.schema.json",
+      "sha256": "6d2422bb8780c256d2db7714617cd30cb28645c33489e6450918e31ae78262ea",
+      "bytes": 3211
+    },
+    {
+      "path": "/Users/mac/Documents/ChatGPT/ZKER- staff/contracts/jsonschema/evolution-proposal.schema.json",
+      "sha256": "af9e18dbf0bb758fd3f9f64093168fa01bf3b8ff447e445a7b9d8e14f3a672df",
+      "bytes": 2185
+    },
+    {
+      "path": "/Users/mac/Documents/ChatGPT/ZKER- staff/contracts/jsonschema/execution-envelope.schema.json",
+      "sha256": "88ce51ca9000b20572b15b3bc10565738ff1b89ac791ee36563d4782db888ed5",
+      "bytes": 2115
+    },
+    {
+      "path": "/Users/mac/Documents/ChatGPT/ZKER- staff/contracts/jsonschema/execution-snapshot.schema.json",
+      "sha256": "03c6f05db6833206370ef4b03f598ff4ff14190e7260f6afa71da9f90a9323e7",
+      "bytes": 2463
+    },
+    {
+      "path": "/Users/mac/Documents/ChatGPT/ZKER- staff/contracts/jsonschema/global-search.schema.json",
+      "sha256": "0ab565438e3a56b52c3a5bc40a3a1badf1fe0db21cfb9130c807a64db99c0729",
+      "bytes": 2172
+    },
+    {
+      "path": "/Users/mac/Documents/ChatGPT/ZKER- staff/contracts/jsonschema/group-membership.schema.json",
+      "sha256": "ab6ca8b6de27d968dadb94fa86794103ade53c5636dda4284375a56744f451c2",
+      "bytes": 2194
+    },
+    {
+      "path": "/Users/mac/Documents/ChatGPT/ZKER- staff/contracts/jsonschema/group.schema.json",
+      "sha256": "5b6b2c7144ab3e34aa29c906d2f2ca6ec4df7a065f62e424f9235e66fd34c46f",
+      "bytes": 1676
+    },
+    {
+      "path": "/Users/mac/Documents/ChatGPT/ZKER- staff/contracts/jsonschema/handoff-package.schema.json",
+      "sha256": "84aed1a6a935c87f471d81be2d37d256a9cc24ba44a503cb9333d3dadc082ba2",
+      "bytes": 5399
+    },
+    {
+      "path": "/Users/mac/Documents/ChatGPT/ZKER- staff/contracts/jsonschema/identity-provider.schema.json",
+      "sha256": "9440d80328e425ae70572413105d87873b1124b2af6a102d228cbb65b5b8c0bc",
+      "bytes": 2858
+    },
+    {
+      "path": "/Users/mac/Documents/ChatGPT/ZKER- staff/contracts/jsonschema/invitation.schema.json",
+      "sha256": "957af3d72b201df41491be4aa3e060d34e8294e029e5b6e5c74e6276dc29d202",
+      "bytes": 2269
+    },
+    {
+      "path": "/Users/mac/Documents/ChatGPT/ZKER- staff/contracts/jsonschema/legal-entity.schema.json",
+      "sha256": "459495d2fba77e347892ed7989e4b0a525c61ad94c5bd9fc83ac48a889bfe86d",
+      "bytes": 1994
+    },
+    {
+      "path": "/Users/mac/Documents/ChatGPT/ZKER- staff/contracts/jsonschema/legal-hold.schema.json",
+      "sha256": "0c4133250c61b2f08bf8a4982215d19174aee3f971e9cff9f4182b25fd7b6e71",
+      "bytes": 5991
+    },
+    {
+      "path": "/Users/mac/Documents/ChatGPT/ZKER- staff/contracts/jsonschema/lifecycle-audit-event.schema.json",
+      "sha256": "f3643830a533753f2555bffd5bd108abf8ba224b26e17e4bd4d36c23d48d91ce",
+      "bytes": 2959
+    },
+    {
+      "path": "/Users/mac/Documents/ChatGPT/ZKER- staff/contracts/jsonschema/node-contract.schema.json",
+      "sha256": "2e89e08a354b39e06b0b27faea41c5bf944801f31bd50353a74525107bb5fe5c",
+      "bytes": 2429
+    },
+    {
+      "path": "/Users/mac/Documents/ChatGPT/ZKER- staff/contracts/jsonschema/notification-preference.schema.json",
+      "sha256": "b4ef7b8c5022c08e05d14eba8894f7c55f041538be99672b5757df40a74ea02c",
+      "bytes": 1933
+    },
+    {
+      "path": "/Users/mac/Documents/ChatGPT/ZKER- staff/contracts/jsonschema/notification.schema.json",
+      "sha256": "11a182a1c76de41fccd3badbb5e12d40beb3d63fcb4eaff84907508798249482",
+      "bytes": 3687
+    },
+    {
+      "path": "/Users/mac/Documents/ChatGPT/ZKER- staff/contracts/jsonschema/offboarding-command.schema.json",
+      "sha256": "c73327f131d1fddce1d75f1c52e433f9dd4ce891a562c8a182ffa4d82a3ffd95",
+      "bytes": 1935
+    },
+    {
+      "path": "/Users/mac/Documents/ChatGPT/ZKER- staff/contracts/jsonschema/offboarding-plan.schema.json",
+      "sha256": "8bdaade6c15f1c6d6d67a0f92365270f855b7c2a19011d7e9b277f5446298207",
+      "bytes": 5001
+    },
+    {
+      "path": "/Users/mac/Documents/ChatGPT/ZKER- staff/contracts/jsonschema/organization-unit.schema.json",
+      "sha256": "2fc440f90486b3b2e02329de0dca965724e423870fb66177bcbc8d65aafa7ad6",
+      "bytes": 3960
+    },
+    {
+      "path": "/Users/mac/Documents/ChatGPT/ZKER- staff/contracts/jsonschema/ownership-transfer-item.schema.json",
+      "sha256": "d533aa4fd7cb5c1a44252799f286774311766408d84cfec2410e6ef4e822a337",
+      "bytes": 2494
+    },
+    {
+      "path": "/Users/mac/Documents/ChatGPT/ZKER- staff/contracts/jsonschema/platform-role.schema.json",
+      "sha256": "e5048898421d6678dbb56ea58b4cf0fcd115d943eb8d4794f89aad13e12ae174",
+      "bytes": 3083
+    },
+    {
+      "path": "/Users/mac/Documents/ChatGPT/ZKER- staff/contracts/jsonschema/position.schema.json",
+      "sha256": "c5afac28f6734f67a17aead3053e2a7596c995e387d9b5ca38dcb890a289fe70",
+      "bytes": 2592
+    },
+    {
+      "path": "/Users/mac/Documents/ChatGPT/ZKER- staff/contracts/jsonschema/provisioning-connection.schema.json",
+      "sha256": "c57f8dc53749fa5178e8bbecbad301a9a7cdb1040bb316438ba0afb82c7cb1d2",
+      "bytes": 2996
+    },
+    {
+      "path": "/Users/mac/Documents/ChatGPT/ZKER- staff/contracts/jsonschema/quota-increase-decision.schema.json",
+      "sha256": "e81f94c9a8ca97335c4bd82678e6ce927ae24e331e92dca9f87fff56ce77a9a6",
+      "bytes": 1808
+    },
+    {
+      "path": "/Users/mac/Documents/ChatGPT/ZKER- staff/contracts/jsonschema/quota-increase-request.schema.json",
+      "sha256": "41df3be6124be65d0a7526c4b5fcf4c6674464865892de1a507ec8cff09a4ef4",
+      "bytes": 2760
+    },
+    {
+      "path": "/Users/mac/Documents/ChatGPT/ZKER- staff/contracts/jsonschema/quota.schema.json",
+      "sha256": "0fcea0f6e209b62d8ae2558c7bfea85a270edcb787b141582f059272f0af754b",
+      "bytes": 2335
+    },
+    {
+      "path": "/Users/mac/Documents/ChatGPT/ZKER- staff/contracts/jsonschema/release-candidate.schema.json",
+      "sha256": "38f9d3681c6ea24f1d358f0bbbdfdd8393d0a79900b6be2ac0e755eeff95cde9",
+      "bytes": 2430
+    },
+    {
+      "path": "/Users/mac/Documents/ChatGPT/ZKER- staff/contracts/jsonschema/reorganization-plan.schema.json",
+      "sha256": "e09501082037e296e09a8515230084b6b3ca6a9bb8aad9530d4114ac265e4c51",
+      "bytes": 3383
+    },
+    {
+      "path": "/Users/mac/Documents/ChatGPT/ZKER- staff/contracts/jsonschema/restore-deletion-replay-receipt.schema.json",
+      "sha256": "2adeabdd39df512db741ad060376c49ccf1720234064a94c248a885313a13f74",
+      "bytes": 3687
+    },
+    {
+      "path": "/Users/mac/Documents/ChatGPT/ZKER- staff/contracts/jsonschema/retention-impact-preview.schema.json",
+      "sha256": "dd6b4c9c65f43653013999829ce3b10c39b194a0610fac35cfe195c67c35ce7d",
+      "bytes": 3380
+    },
+    {
+      "path": "/Users/mac/Documents/ChatGPT/ZKER- staff/contracts/jsonschema/retention-policy-revision.schema.json",
+      "sha256": "716e875a5086141c514cb99661c211306976c5c4c7d75bc487be865d6dbf25f7",
+      "bytes": 6792
+    },
+    {
+      "path": "/Users/mac/Documents/ChatGPT/ZKER- staff/contracts/jsonschema/role-binding.schema.json",
+      "sha256": "81100c5f734b68e52edc1f85f00485abb5d1ea1d0b170ed1a1cc04bd256a49f2",
+      "bytes": 3559
+    },
+    {
+      "path": "/Users/mac/Documents/ChatGPT/ZKER- staff/contracts/jsonschema/search-result.schema.json",
+      "sha256": "d090e0fa2be3c88ef3dad698ee9120e45a5dae74cbe4dfff0a3e2ccf82604aad",
+      "bytes": 2277
+    },
+    {
+      "path": "/Users/mac/Documents/ChatGPT/ZKER- staff/contracts/jsonschema/sop-ai-candidate.schema.json",
+      "sha256": "e4f5a7d06735edada914b3d917ec0c35a1e0d490caf5d294691d5ca7154245d3",
+      "bytes": 3272
+    },
+    {
+      "path": "/Users/mac/Documents/ChatGPT/ZKER- staff/contracts/jsonschema/sop-definition.schema.json",
+      "sha256": "751d9ca214d0147218d586fe52e111583a86f2bf73a29a60d90ff8022691e4a6",
+      "bytes": 2352
+    },
+    {
+      "path": "/Users/mac/Documents/ChatGPT/ZKER- staff/contracts/jsonschema/sop-version-history-item.schema.json",
+      "sha256": "93876a0f755915d2449a7a886af8a0b3b37e60839dd03df18966632cd4a6a2c1",
+      "bytes": 2644
+    },
+    {
+      "path": "/Users/mac/Documents/ChatGPT/ZKER- staff/contracts/jsonschema/staffdeck-agent-profile.schema.json",
+      "sha256": "88db9bf8b3159ac74f055e749df9902880aca550ce8de037a0d9ac527a92cddd",
+      "bytes": 14802
+    },
+    {
+      "path": "/Users/mac/Documents/ChatGPT/ZKER- staff/contracts/jsonschema/staffdeck-skill-card.schema.json",
+      "sha256": "d2d69e672a52645a94bb9ae75dcdf6eeb76bee1854da2097245053ab32e7b7c3",
+      "bytes": 4039
+    },
+    {
+      "path": "/Users/mac/Documents/ChatGPT/ZKER- staff/contracts/jsonschema/subject.schema.json",
+      "sha256": "2b41786ab85f3fc51523ff145637fce7320b8f8cf715feffb16fa211a50217cd",
+      "bytes": 1539
+    },
+    {
+      "path": "/Users/mac/Documents/ChatGPT/ZKER- staff/contracts/jsonschema/tenant-membership.schema.json",
+      "sha256": "f1d704b1a44cc5af070359315e912ea0d154111883ef96e817624e2395a1a25c",
+      "bytes": 2639
+    },
+    {
+      "path": "/Users/mac/Documents/ChatGPT/ZKER- staff/contracts/jsonschema/tenant.schema.json",
+      "sha256": "b748470ee929c5adfd555ec5edd9381b41f58c28752624aa3cae03bcc57d45d9",
+      "bytes": 2486
+    },
+    {
+      "path": "/Users/mac/Documents/ChatGPT/ZKER- staff/contracts/jsonschema/usage-record.schema.json",
+      "sha256": "1215080d72163d84e36bbb47226aea5624f70a5719a21161c9c288c23eb8503f",
+      "bytes": 2995
+    },
+    {
+      "path": "/Users/mac/Documents/ChatGPT/ZKER- staff/contracts/jsonschema/user.schema.json",
+      "sha256": "ce480a88f3d5f681078ecba1329c7aa08191e3f2c41460f6c665198289d2a0a9",
+      "bytes": 1800
+    },
+    {
+      "path": "/Users/mac/Documents/ChatGPT/ZKER- staff/contracts/jsonschema/work-execution-history-item.schema.json",
+      "sha256": "723e06f1779a5a656cf6976435654f9a4b09645cb85e1793b9290cc6a73ce5f4",
+      "bytes": 2999
+    },
+    {
+      "path": "/Users/mac/Documents/ChatGPT/ZKER- staff/contracts/jsonschema/work-thread-entry.schema.json",
+      "sha256": "6497467c2a57fd8072656c65ac5122c3ede4e5e0699aec0c713c552619a4660e",
+      "bytes": 3454
+    },
+    {
+      "path": "/Users/mac/Documents/ChatGPT/ZKER- staff/contracts/jsonschema/work-thread.schema.json",
+      "sha256": "7c48f7923fc9e86a36b68da9dc3f687cdc41b1d8ba31c802c8c9e8423075df87",
+      "bytes": 2224
+    }
+  ]
+}

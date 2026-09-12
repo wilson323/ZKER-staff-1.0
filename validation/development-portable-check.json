@@ -1,0 +1,131 @@
+{
+  "checkedAt": "2026-09-11T17:48:58.082205+00:00",
+  "scope": "PORTABLE_SKILL_STRUCTURE_SCRIPTS_AND_DISCOVERY_ONLY",
+  "status": "PASS",
+  "commands": [
+    {
+      "argv": [
+        "/usr/local/bin/python3",
+        "/Users/mac/.codex/skills/.system/skill-creator/scripts/quick_validate.py",
+        "/Users/mac/.agents/skills/ai-native-sdlc"
+      ],
+      "cwd": "/Users/mac/Documents/OA数字员工协作平台",
+      "exitCode": 0,
+      "stdout": "Skill is valid!\n",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "/usr/local/bin/python3",
+        "/Users/mac/.codex/skills/.system/skill-creator/scripts/quick_validate.py",
+        "/Users/mac/Documents/OA数字员工协作平台/.agents/skills/oa-development-system"
+      ],
+      "cwd": "/Users/mac/Documents/OA数字员工协作平台",
+      "exitCode": 0,
+      "stdout": "Skill is valid!\n",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "/usr/local/bin/python3",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "/Users/mac/.agents/skills/ai-native-sdlc/scripts",
+        "-p",
+        "test_*.py",
+        "-v"
+      ],
+      "cwd": "/Users/mac/Documents/OA数字员工协作平台",
+      "exitCode": 0,
+      "stdout": "",
+      "stderr": "test_bad_package_encoding (test_probe_project.ProbeTests.test_bad_package_encoding) ... ok\ntest_bad_package_shape (test_probe_project.ProbeTests.test_bad_package_shape) ... ok\ntest_changed_input_hash (test_probe_project.ProbeTests.test_changed_input_hash) ... ok\ntest_empty_not_ready (test_probe_project.ProbeTests.test_empty_not_ready) ... ok\ntest_file_root (test_probe_project.ProbeTests.test_file_root) ... ok\ntest_large_marker_skipped (test_probe_project.ProbeTests.test_large_marker_skipped) ... ok\ntest_missing_root (test_probe_project.ProbeTests.test_missing_root) ... ok\ntest_mixed_stacks (test_probe_project.ProbeTests.test_mixed_stacks) ... ok\ntest_no_parent_inference (test_probe_project.ProbeTests.test_no_parent_inference) ... ok\ntest_node_scripts_not_executed (test_probe_project.ProbeTests.test_node_scripts_not_executed) ... ok\ntest_preserves_workflow (test_probe_project.ProbeTests.test_preserves_workflow) ... ok\ntest_python_marker (test_probe_project.ProbeTests.test_python_marker) ... ok\ntest_requires_absolute_root (test_probe_project.ProbeTests.test_requires_absolute_root) ... ok\ntest_secrets_not_read_or_printed (test_probe_project.ProbeTests.test_secrets_not_read_or_printed) ... ok\ntest_symlink_directory_skipped (test_probe_project.ProbeTests.test_symlink_directory_skipped) ... ok\ntest_symlink_file_skipped (test_probe_project.ProbeTests.test_symlink_file_skipped) ... ok\n\n----------------------------------------------------------------------\nRan 16 tests in 0.010s\n\nOK\n"
+    },
+    {
+      "argv": [
+        "/usr/local/bin/python3",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "/Users/mac/.agents/skills/ai-native-sdlc/tests",
+        "-p",
+        "test_*.py",
+        "-v"
+      ],
+      "cwd": "/Users/mac/Documents/OA数字员工协作平台",
+      "exitCode": 0,
+      "stdout": "",
+      "stderr": "test_absolute_artifact_rejected (test_helpers.HelpersTests.test_absolute_artifact_rejected) ... ok\ntest_boolean_exit_code_rejected (test_helpers.HelpersTests.test_boolean_exit_code_rejected) ... ok\ntest_business_requires_runtime (test_helpers.HelpersTests.test_business_requires_runtime) ... ok\ntest_document_project_probe_does_not_create_files (test_helpers.HelpersTests.test_document_project_probe_does_not_create_files) ... ok\ntest_duplicate_checks_rejected (test_helpers.HelpersTests.test_duplicate_checks_rejected) ... ok\ntest_empty_artifact_rejected (test_helpers.HelpersTests.test_empty_artifact_rejected) ... ok\ntest_empty_log_with_matching_hash_rejected (test_helpers.HelpersTests.test_empty_log_with_matching_hash_rejected) ... ok\ntest_empty_source_input_is_valid (test_helpers.HelpersTests.test_empty_source_input_is_valid) ... ok\ntest_empty_source_later_change_invalidates (test_helpers.HelpersTests.test_empty_source_later_change_invalidates) ... ok\ntest_existing_governance_reported_without_replacement (test_helpers.HelpersTests.test_existing_governance_reported_without_replacement) ... ok\ntest_external_symlink_not_read (test_helpers.HelpersTests.test_external_symlink_not_read) ... ok\ntest_multi_stack_declarations_not_installation (test_helpers.HelpersTests.test_multi_stack_declarations_not_installation) ... ok\ntest_nonzero_command_rejected (test_helpers.HelpersTests.test_nonzero_command_rejected) ... ok\ntest_old_input_invalidates_record (test_helpers.HelpersTests.test_old_input_invalidates_record) ... ok\ntest_old_log_invalidates_record (test_helpers.HelpersTests.test_old_log_invalidates_record) ... ok\ntest_relative_probe_root_rejected (test_helpers.HelpersTests.test_relative_probe_root_rejected) ... ok\ntest_simulation_cannot_certify_business (test_helpers.HelpersTests.test_simulation_cannot_certify_business) ... ok\ntest_symlink_escape_rejected (test_helpers.HelpersTests.test_symlink_escape_rejected) ... ok\ntest_template_cannot_pass (test_helpers.HelpersTests.test_template_cannot_pass) ... ok\ntest_timestamp_order_rejected (test_helpers.HelpersTests.test_timestamp_order_rejected) ... ok\ntest_unzoned_timestamp_rejected (test_helpers.HelpersTests.test_unzoned_timestamp_rejected) ... ok\ntest_valid_record_integrity (test_helpers.HelpersTests.test_valid_record_integrity) ... ok\ntest_wrong_project_rejected (test_helpers.HelpersTests.test_wrong_project_rejected) ... ok\ntest_zero_assertions_rejected (test_helpers.HelpersTests.test_zero_assertions_rejected) ... ok\ntest_zero_checks_rejected (test_helpers.HelpersTests.test_zero_checks_rejected) ... ok\n\n----------------------------------------------------------------------\nRan 25 tests in 0.017s\n\nOK\n"
+    },
+    {
+      "argv": [
+        "make",
+        "eval"
+      ],
+      "cwd": "/Users/mac/Documents/OA数字员工协作平台",
+      "exitCode": 0,
+      "stdout": "python3 -m unittest discover -s validation -p 'test_development_workflow.py' -v\n",
+      "stderr": "test_behavior_evals_do_not_claim_unrun_success (test_development_workflow.IntegrationFilesTests.test_behavior_evals_do_not_claim_unrun_success) ... ok\ntest_claude_commands_reference_shared_script (test_development_workflow.IntegrationFilesTests.test_claude_commands_reference_shared_script) ... ok\ntest_skill_frontmatter_complete (test_development_workflow.IntegrationFilesTests.test_skill_frontmatter_complete) ... ok\ntest_skill_links_resolve_within_project (test_development_workflow.IntegrationFilesTests.test_skill_links_resolve_within_project) ... ok\ntest_duplicate_names_fail (test_development_workflow.SharedSkillTests.test_duplicate_names_fail) ... ok\ntest_empty_files_fail (test_development_workflow.SharedSkillTests.test_empty_files_fail) ... ok\ntest_escape_fails (test_development_workflow.SharedSkillTests.test_escape_fails) ... ok\ntest_external_change_invalidates_snapshot (test_development_workflow.SharedSkillTests.test_external_change_invalidates_snapshot) ... ok\ntest_internal_symlink_fails (test_development_workflow.SharedSkillTests.test_internal_symlink_fails) ... ok\ntest_missing_file_fails (test_development_workflow.SharedSkillTests.test_missing_file_fails) ... ok\ntest_secret_extension_fails (test_development_workflow.SharedSkillTests.test_secret_extension_fails) ... ok\ntest_absolute_path_rejected (test_development_workflow.WorkflowTests.test_absolute_path_rejected) ... ok\ntest_added_file_invalidates_report (test_development_workflow.WorkflowTests.test_added_file_invalidates_report) ... ok\ntest_artifact_escape_rejected (test_development_workflow.WorkflowTests.test_artifact_escape_rejected) ... ok\ntest_changed_file_invalidates_report (test_development_workflow.WorkflowTests.test_changed_file_invalidates_report) ... ok\ntest_command_failure_and_timeout_preserved (test_development_workflow.WorkflowTests.test_command_failure_and_timeout_preserved) ... ok\ntest_completed_projection_must_match (test_development_workflow.WorkflowTests.test_completed_projection_must_match) ... ok\ntest_current_report_is_fresh (test_development_workflow.WorkflowTests.test_current_report_is_fresh) ... ok\ntest_cycle_rejected (test_development_workflow.WorkflowTests.test_cycle_rejected) ... ok\ntest_different_project_manifest_rejected (test_development_workflow.WorkflowTests.test_different_project_manifest_rejected) ... ok\ntest_empty_acceptance_rejected (test_development_workflow.WorkflowTests.test_empty_acceptance_rejected) ... ok\ntest_empty_intent_rejected (test_development_workflow.WorkflowTests.test_empty_intent_rejected) ... ok\ntest_empty_product_profile_cannot_pass (test_development_workflow.WorkflowTests.test_empty_product_profile_cannot_pass) ... ok\ntest_executable_missing_not_success (test_development_workflow.WorkflowTests.test_executable_missing_not_success) ... ok\ntest_failed_or_wrong_scope_report_rejected (test_development_workflow.WorkflowTests.test_failed_or_wrong_scope_report_rejected) ... ok\ntest_false_final_success_rejected (test_development_workflow.WorkflowTests.test_false_final_success_rejected) ... ok\ntest_hook_rejects_different_project_cwd (test_development_workflow.WorkflowTests.test_hook_rejects_different_project_cwd) ... ok\ntest_missing_dependency_rejected (test_development_workflow.WorkflowTests.test_missing_dependency_rejected) ... ok\ntest_missing_evidence_rejected (test_development_workflow.WorkflowTests.test_missing_evidence_rejected) ... ok\ntest_missing_intent_rejected (test_development_workflow.WorkflowTests.test_missing_intent_rejected) ... ok\ntest_new_task_does_not_overwrite_unfinished_task (test_development_workflow.WorkflowTests.test_new_task_does_not_overwrite_unfinished_task) ... ok\ntest_new_task_rejects_path_injection (test_development_workflow.WorkflowTests.test_new_task_rejects_path_injection) ... ok\ntest_node_outside_final_path_rejected (test_development_workflow.WorkflowTests.test_node_outside_final_path_rejected) ... ok\ntest_premature_node_verification_rejected (test_development_workflow.WorkflowTests.test_premature_node_verification_rejected) ... ok\ntest_product_zero_exit_without_evidence_rejected (test_development_workflow.WorkflowTests.test_product_zero_exit_without_evidence_rejected) ... ok\ntest_receipt_write_does_not_self_invalidate (test_development_workflow.WorkflowTests.test_receipt_write_does_not_self_invalidate) ... ok\ntest_removed_file_invalidates_report (test_development_workflow.WorkflowTests.test_removed_file_invalidates_report) ... ok\ntest_start_hook_returns_shared_entry (test_development_workflow.WorkflowTests.test_start_hook_returns_shared_entry) ... ok\ntest_stop_hook_allows_current_receipt (test_development_workflow.WorkflowTests.test_stop_hook_allows_current_receipt) ... ok\ntest_stop_hook_blocks_missing_receipt (test_development_workflow.WorkflowTests.test_stop_hook_blocks_missing_receipt) ... ok\ntest_stop_hook_has_bounded_failure_path (test_development_workflow.WorkflowTests.test_stop_hook_has_bounded_failure_path) ... ok\ntest_successful_new_task_uses_canonical_template (test_development_workflow.WorkflowTests.test_successful_new_task_uses_canonical_template) ... ok\ntest_symlink_escape_rejected (test_development_workflow.WorkflowTests.test_symlink_escape_rejected) ... ok\ntest_symlink_output_is_not_overwritten (test_development_workflow.WorkflowTests.test_symlink_output_is_not_overwritten) ... ok\ntest_unknown_requirement_rejected (test_development_workflow.WorkflowTests.test_unknown_requirement_rejected) ... ok\ntest_valid_dependency_safe_task (test_development_workflow.WorkflowTests.test_valid_dependency_safe_task) ... ok\ntest_wrong_cwd_fails_real_cli (test_development_workflow.WorkflowTests.test_wrong_cwd_fails_real_cli) ... ok\n\n----------------------------------------------------------------------\nRan 47 tests in 0.157s\n\nOK\n"
+    },
+    {
+      "argv": [
+        "/usr/local/bin/python3",
+        "/Users/mac/.agents/skills/ai-native-sdlc/scripts/probe_project.py",
+        "--root",
+        "/Users/mac/Documents/OA数字员工协作平台"
+      ],
+      "cwd": "/Users/mac/Documents/OA数字员工协作平台",
+      "exitCode": 0,
+      "stdout": "{\n  \"scope\": \"READ_ONLY_PROJECT_HINTS\",\n  \"root\": \"/Users/mac/Documents/OA数字员工协作平台\",\n  \"status\": \"HINTS_ONLY\",\n  \"stackHints\": [],\n  \"markers\": [\n    {\n      \"path\": \"AGENTS.md\",\n      \"sha256\": \"b17ffc7126dd8c00d6f35b8a400c7a810964b533309b27cb93e3a2786684a163\"\n    },\n    {\n      \"path\": \"CLAUDE.md\",\n      \"sha256\": \"545d3d522e4f994d93920d93f25c264a2f05a11ca059b9023ada8f490fe4416d\"\n    },\n    {\n      \"path\": \"README.md\",\n      \"sha256\": \"2c7cc8d5f104c5e142763157c27871340e695fc272d146c343ec4f764f825e06\"\n    },\n    {\n      \"path\": \"CONTEXT.md\",\n      \"sha256\": \"1c8818682ba1fad935832717bbca44b7f08db8efdf6dfb1fd8cd772fae86927e\"\n    },\n    {\n      \"path\": \"REVIEW.md\",\n      \"sha256\": \"833683b8867a220e7e0acd53abdad844d3878247172042b00bbbdcb1c805411e\"\n    },\n    {\n      \"path\": \"Makefile\",\n      \"sha256\": \"d738c40183d2ea17e79bba5687911aeb96fb37b409350359cf22d267ddcb0cd2\"\n    },\n    {\n      \"path\": \"validation/development-workflow.json\",\n      \"sha256\": \"8539f0779741ee1aff60f868c6fe8d3e5cb02190807ad120895bec62f395475e\"\n    }\n  ],\n  \"skipped\": [],\n  \"workflowCandidates\": [\n    \"validation/development-workflow.json\"\n  ],\n  \"verificationCandidates\": [],\n  \"checksExecuted\": [],\n  \"productReady\": false,\n  \"limitations\": [\n    \"Markers are not verified commands or authoritative state.\",\n    \"No parent directory, source tree, secret or service scan.\",\n    \"Not a security sandbox; concurrent hostile filesystem changes are not contained.\"\n  ]\n}\n",
+      "stderr": ""
+    }
+  ],
+  "discovery": [
+    {
+      "path": "/Users/mac/.codex/skills/ai-native-sdlc",
+      "target": "/Users/mac/.agents/skills/ai-native-sdlc",
+      "readable": true,
+      "sameCanonical": true
+    },
+    {
+      "path": "/Users/mac/.claude/skills/ai-native-sdlc",
+      "target": "/Users/mac/.agents/skills/ai-native-sdlc",
+      "readable": true,
+      "sameCanonical": true
+    }
+  ],
+  "sourceCount": 20,
+  "referenceLinksExist": true,
+  "sharedSkillManifestComplete": true,
+  "skillHashes": {
+    "SKILL.md": "743508a73ab71722c71c91808d67ee8a0d7faa325badbfce97afdc046931a5a9",
+    "references/security-review.md": "4e2dc6d864c0d59d47c2de97a35754bfd9302b951def6ad447c90c492daf8f2e",
+    "references/sources.json": "4eb3038eac5bf36d14e9f28d7a1bba2249bd15177d71a133c43fa5e44ca87b7a",
+    "references/lifecycle.md": "aa1ff81c2ee0eb8146a3bacfa476b70dc33dd3b4a5cd08769c318dc516e58874",
+    "references/sources.md": "293469ca84e2d2306a79e4f5362a9312187d2ed9ba15e915e4563403dfa1afb2",
+    "references/workflow.md": "28376f4f23941cd95fe6eb053d7bf0ad4b3ff50302b02bf7b71e960abe4c167e",
+    "references/evidence-evals.md": "753ed4a4a5c14a5146c12127f31d730dec74135b7239aa6c799ee299088906f3",
+    "references/research.md": "71ccafa012fab34f60e1c9dfc78d5da851a0e1257dca7142e6efc6c10982fb1f",
+    "references/project-adapters.md": "8402b774721e638467267dcfc05a28e525f8ba0337e9035fac3cde61281d7b11",
+    "references/evaluation.md": "bd1c18e8ca6f797b4a8769a11a7c9c914b6a734f470a2c5f43b7d169062060b8",
+    "tests/test_helpers.py": "75b1fe3e659b5e57b287434a2e9392d7facf25fb4aa75a76de61dcac8609a3b9",
+    "agents/openai.yaml": "b3ec8634e7908e8fed230832a50faf6c4bc205e74229e8b87b8d946947e64887",
+    "scripts/test_probe_project.py": "11d7d503545608787d2c9ed13a130a27ead7697ed68bb0eb3285d464236c64a8",
+    "scripts/probe_project.py": "8f71cbe15e8c3a907ed3194118a3f1ef4c277d59a892096c9b77ca69c1471d30",
+    "scripts/verify_evidence.py": "fd33f86e2c3c68637080aefbbfff8dcad5e6506ed623f5e1c4234dc709871cf2",
+    "scripts/project_probe.py": "1fead852648fc49614ea7265c672c7abf9c673da8464c228352bb4bc702b571d",
+    "assets/eval-cases.json": "8ab303dfccbc451dc30cbd1297752275e43324870a9e8cdb6583061ee9378969",
+    "assets/task.md": "5b5368414ed8b9dc039bd26efd6ada306f56014e0a964ba9e67b9ce00cf6980b",
+    "assets/project-profile.template.json": "887496ea821781fe716f54fa9bb6f457b7deb34832c1d29cd44583648ee6ce28",
+    "assets/evidence-template.json": "6eb1de7ade109b3ca7e6516b5237ecce42c5cc31fdc2c085f986d54dc4f5fc0b"
+  },
+  "nativeAutoLoad": "NOT_VERIFIED",
+  "limits": [
+    "No new native Codex/Claude startup was tested.",
+    "No Linux/Windows runtime test.",
+    "Evidence scripts check records; they do not certify product truth."
+  ],
+  "reviewFixEvidence": "validation/development-portable-review-fix.json"
+}

@@ -1,0 +1,87 @@
+{
+  "goal": "依据本机QoderWake前端UI重设计现有协作原型",
+  "scope": [
+    "08原型",
+    "UI设计说明及导读",
+    "验证证据"
+  ],
+  "acceptance_criteria": [
+    "实际来源界面采集",
+    "任务看板/员工资源/市场形成统一UI",
+    "人员与上下文业务保留",
+    "桌面窄屏和原有交互回归"
+  ],
+  "current_node": null,
+  "completed_nodes": [
+    "source_capture",
+    "redesign",
+    "verify"
+  ],
+  "failed_nodes": [],
+  "artifacts": [
+    "/Users/mac/Documents/New project 2/08-人员数字员工协作交互原型.html",
+    "/Users/mac/Documents/New project 2/14-QoderWake界面参考与原型设计.md",
+    "/Users/mac/Documents/New project 2/05-UI与交互设计.md",
+    "/Users/mac/Documents/New project 2/00-开发设计包导读.md"
+  ],
+  "evidence": [
+    "5 saved live source UI references",
+    "3 browser suites exit 0: 204 layout checks, 57 interactions, 0 page errors",
+    "7 current screenshots manually reviewed",
+    "9 document checks passed, 389 local links resolve"
+  ],
+  "risks": [
+    "前端演示不接后端"
+  ],
+  "approvals": [
+    "用户要求结合QoderWake UI重新设计原型"
+  ],
+  "status": "VERIFIED",
+  "baselineHtmlSha256": "9338da9e20b51bb136759e8c1e239a433d3cf79c0ce25977810bf50650968366",
+  "nodes": [
+    {
+      "id": "source_capture",
+      "objective": "读取QoderWake UI",
+      "preconditions": [],
+      "action": "只读浏览页面与样式",
+      "tool_or_skill": "Playwright",
+      "expected_output": "来源截图与观测",
+      "validation": "实际页面DOM/截图",
+      "success_condition": "页面可达且UI可见",
+      "failure_path": "定位修正后有限重试",
+      "rollback_or_compensation": "恢复本轮改动前原型备份，产品仓库不变"
+    },
+    {
+      "id": "redesign",
+      "objective": "更新完整原型",
+      "preconditions": [
+        "source_capture"
+      ],
+      "action": "重设计壳层与页面",
+      "tool_or_skill": "HTML/CSS/JS",
+      "expected_output": "可交互原型",
+      "validation": "浏览器对照",
+      "success_condition": "保留原任务状态与市场规则",
+      "failure_path": "定位修正后有限重试",
+      "rollback_or_compensation": "恢复本轮改动前原型备份，产品仓库不变"
+    },
+    {
+      "id": "verify",
+      "objective": "验证与交付",
+      "preconditions": [
+        "redesign"
+      ],
+      "action": "回归、截图及文档校验",
+      "tool_or_skill": "Playwright/Python",
+      "expected_output": "真实检查结果",
+      "validation": "退出码与结果文件",
+      "success_condition": "无关键失败且边界声明完整",
+      "failure_path": "定位修正后有限重试",
+      "rollback_or_compensation": "恢复本轮改动前原型备份，产品仓库不变"
+    }
+  ],
+  "resolvedIssues": [
+    "Navigation CSS overrode hidden attribute; fixed and browser-verified",
+    "Old market text length heuristic rejected valid empty state; replaced with heading/description/layout checks and rerun"
+  ]
+}

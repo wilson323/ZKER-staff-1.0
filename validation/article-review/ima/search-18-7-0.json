@@ -1,0 +1,88 @@
+{
+  "retrievedAt": "2026-09-11T23:55:16.329106+00:00",
+  "operation": "search_knowledge",
+  "request": {
+    "knowledge_base_id": "tt7Hn9iH7TNPH-ip_qwndO33thfrfbK5FAo4_BUjUwg=",
+    "cursor": "",
+    "query": "评测"
+  },
+  "exitCode": 0,
+  "response": {
+    "code": 0,
+    "msg": "success",
+    "data": {
+      "info_list": [
+        {
+          "media_id": "wechatarticle_8063fdd1b44b6b1cc34019dc46a067c0_4688cc275f55a48adb453fbb1580927a7314120386811241",
+          "title": "自动化评测的九九归一——评测agent",
+          "parent_folder_id": "folder_7331591642682077",
+          "highlight_content": "",
+          "media_type": 6
+        },
+        {
+          "media_id": "wechatarticle_8063fdd1b44b6b1cc34019dc46a067c0_53d88958a246da9f260bd469960524987314120386811241",
+          "title": "Anthropic：如何评测 Agent？",
+          "parent_folder_id": "folder_7331591642682077",
+          "highlight_content": "",
+          "media_type": 6
+        },
+        {
+          "media_id": "wechatarticle_8063fdd1b44b6b1cc34019dc46a067c0_d0fcc52e9c91df08a2a17f9e10daef8f7314120386811241",
+          "title": "面向业务落地的AI产品评测体系设计与平台实现",
+          "parent_folder_id": "folder_7331591642682077",
+          "highlight_content": "",
+          "media_type": 6
+        },
+        {
+          "media_id": "wechatarticle_8063fdd1b44b6b1cc34019dc46a067c0_931f1d844299b4a50c45e2a017f203737314120386811241",
+          "title": "能上生产才是硬道理！Coding Agent 评测，终于开始关注过程了",
+          "parent_folder_id": "folder_7362289086766122",
+          "highlight_content": "",
+          "media_type": 6
+        },
+        {
+          "media_id": "wechatarticle_8063fdd1b44b6b1cc34019dc46a067c0_3b351c5f0326bf6b0bba4286a6640ade7314120386811241",
+          "title": "让AI评测AI：构建智能客服的自动化运营Agent体系",
+          "parent_folder_id": "folder_7331591642682077",
+          "highlight_content": "",
+          "media_type": 6
+        },
+        {
+          "media_id": "wechatarticle_8063fdd1b44b6b1cc34019dc46a067c0_292ede8d0eab3a16ed855b8c31d1514c7314120386811241",
+          "title": "基于顶级 Agent（Claude Code）的 Harness 工程搭建式业务 Agent 评测方案",
+          "parent_folder_id": "7314120386811241",
+          "highlight_content": "",
+          "media_type": 6
+        },
+        {
+          "media_id": "wechatarticle_8063fdd1b44b6b1cc34019dc46a067c0_0d1422fcc3d66164b0357aa5f4232c8f7314120386811241",
+          "title": "【智能体评测指南大全】构建可观察、可评估、可进化的Agent质量体系",
+          "parent_folder_id": "7314120386811241",
+          "highlight_content": "",
+          "media_type": 6
+        },
+        {
+          "media_id": "wechatarticle_8063fdd1b44b6b1cc34019dc46a067c0_3732853d20bd9767bfa79ca43282dd2f7314120386811241",
+          "title": "让 Agent 研究走向「系统化」：人大高瓴开源 AweAgent，统一 Harness 构建、评测与训练",
+          "parent_folder_id": "7314120386811241",
+          "highlight_content": "",
+          "media_type": 6
+        },
+        {
+          "media_id": "wechatarticle_8063fdd1b44b6b1cc34019dc46a067c0_617f382c720c92191915ea43ffdcf6877314120386811241",
+          "title": "小程序 AI Skill 上线前，用 wxa-skill-eval + 云开发 CloudBase跑一遍评测",
+          "parent_folder_id": "7314120386811241",
+          "highlight_content": "",
+          "media_type": 6
+        },
+        {
+          "media_id": "wechatarticle_8063fdd1b44b6b1cc34019dc46a067c0_5b5d9706e209c1f91536b0e09071f7407314120386811241",
+          "title": "Harness Engineering实践，做了一个平台让AI一晚上自动评测和优化你的系统",
+          "parent_folder_id": "7314120386811241",
+          "highlight_content": "",
+          "media_type": 6
+        }
+      ]
+    }
+  }
+}

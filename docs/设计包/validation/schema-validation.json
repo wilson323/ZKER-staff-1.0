@@ -1,0 +1,102 @@
+{
+  "command": "Draft202012Validator.check_schema + 5 valid / 13 invalid examples",
+  "checks": [
+    {
+      "kind": "valid",
+      "case": 1,
+      "passed": true,
+      "errors": []
+    },
+    {
+      "kind": "valid",
+      "case": 2,
+      "passed": true,
+      "errors": []
+    },
+    {
+      "kind": "valid",
+      "case": 3,
+      "passed": true,
+      "errors": []
+    },
+    {
+      "kind": "valid",
+      "case": 4,
+      "passed": true,
+      "errors": []
+    },
+    {
+      "kind": "valid",
+      "case": 5,
+      "passed": true,
+      "errors": []
+    },
+    {
+      "kind": "invalid",
+      "case": "child work required",
+      "passed": true
+    },
+    {
+      "kind": "invalid",
+      "case": "request state is not persisted link",
+      "passed": true
+    },
+    {
+      "kind": "invalid",
+      "case": "no shadow assignee",
+      "passed": true
+    },
+    {
+      "kind": "invalid",
+      "case": "submitted requires check",
+      "passed": true
+    },
+    {
+      "kind": "invalid",
+      "case": "accepted requires human decision",
+      "passed": true
+    },
+    {
+      "kind": "invalid",
+      "case": "artifact version required",
+      "passed": true
+    },
+    {
+      "kind": "invalid",
+      "case": "no unknown snapshot fields",
+      "passed": true
+    },
+    {
+      "kind": "invalid",
+      "case": "version positive",
+      "passed": true
+    },
+    {
+      "kind": "invalid",
+      "case": "loaded requires evidence",
+      "passed": true
+    },
+    {
+      "kind": "invalid",
+      "case": "loaded requires timestamp",
+      "passed": true
+    },
+    {
+      "kind": "invalid",
+      "case": "work target required",
+      "passed": true
+    },
+    {
+      "kind": "invalid",
+      "case": "target scope exclusive",
+      "passed": true
+    },
+    {
+      "kind": "invalid",
+      "case": "agent target must be resolved",
+      "passed": true
+    }
+  ],
+  "passed": true,
+  "limits": "Structural validation only. Cross-record authorization, state transitions, digests and runtime consumption are not proven."
+}

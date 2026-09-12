@@ -1,0 +1,149 @@
+{
+  "sha": "085a79c748be47111d2e1c1b65b3f82200998d5c",
+  "node_id": "C_kwDOJVxJutoAKDA4NWE3OWM3NDhiZTQ3MTExZDJlMWMxYjY1YjNmODIyMDA5OThkNWM",
+  "commit": {
+    "author": {
+      "name": "KingPointer",
+      "email": "160164373+MoonPointer-Byte@users.noreply.github.com",
+      "date": "2026-09-11T17:07:04Z"
+    },
+    "committer": {
+      "name": "GitHub",
+      "email": "noreply@github.com",
+      "date": "2026-09-11T17:07:04Z"
+    },
+    "message": "chore(models): add Mapped annotations to EndUser and ApiToken (#42146)\n\nCo-authored-by: autofix-ci[bot] <114827586+autofix-ci[bot]@users.noreply.github.com>",
+    "tree": {
+      "sha": "4308af477e787f1f895d4530435a1aa2004474da",
+      "url": "https://api.github.com/repos/langgenius/dify/git/trees/4308af477e787f1f895d4530435a1aa2004474da"
+    },
+    "url": "https://api.github.com/repos/langgenius/dify/git/commits/085a79c748be47111d2e1c1b65b3f82200998d5c",
+    "comment_count": 0,
+    "verification": {
+      "verified": true,
+      "reason": "valid",
+      "signature": "-----BEGIN PGP SIGNATURE-----\n\nwsFcBAABCAAQBQJqpDVHCRC1aQ7uu5UhlAAAiQsQAD5kdwKoIhRhAmW0oceYorUO\n3KOgl4nI8wHbrF5aL6YJFq6PPLpKM5ZOKhN4fg+xSWI4Em8arY2JQw6XyVWhMjdl\n3Q2u1WbCEL59dnRQ1EKC4HeJ3UbrA9/3L2BMGEWvNn4Oqb+/7o8CUETZD6bDTvq6\nNEd3+2C7K0MHkZKAFv+u35DIWicv5SrIM+qUK1P4EOzQrELcqc52ajh2J7uk5k99\n/UM/plSB6OEWhSNOP8G7a4n71SJWt46kfS0Ry6zMFa8bMtANl69ZuxXJIi9I0xlf\n2idnWpHaJ9cAYDUwpm+f6dbyGN+NQau7dEVcrLp42jemZNCek5k0h5FJjwylROK0\n+EnNZmEJZ0YlurKLRyVi1zuRNyiOf2QRTfZPXR97RVSntSfLaUAaenjzmtRDMhK7\nNJhmoejdJwxOKrJA1/8v/XvZGdhEwRojIq003bCZGNQ6TTdvzOw/a+oHhqdzRzf8\nSriL6LrzQ5Xm+GjZmPBvVSYc1++REkLsOEUrDfnX8ixuqFVxpBrLoW14vL2PiV7l\n7npPbsbVcvxmY5m5CUV3pwooVUyoce1i4llYNhjkHMX1vUx87z1uMYQoH+UyHDKM\n7AjRWUX/di6QBFHKu/I5Ufb8Eu62XLyCreetfi44MHgaEnlhhtwDCo8oW456AY1i\nWrWfgg7ZK+z3N+uuwen+\n=lDIR\n-----END PGP SIGNATURE-----\n",
+      "payload": "tree 4308af477e787f1f895d4530435a1aa2004474da\nparent e7981a6f19435d52ef4b92f71054739ebc2b593e\nauthor KingPointer <160164373+MoonPointer-Byte@users.noreply.github.com> 1789146424 +0000\ncommitter GitHub <noreply@github.com> 1789146424 +0000\n\nchore(models): add Mapped annotations to EndUser and ApiToken (#42146)\n\nCo-authored-by: autofix-ci[bot] <114827586+autofix-ci[bot]@users.noreply.github.com>",
+      "verified_at": "2026-09-11T17:07:20Z"
+    }
+  },
+  "url": "https://api.github.com/repos/langgenius/dify/commits/085a79c748be47111d2e1c1b65b3f82200998d5c",
+  "html_url": "https://github.com/langgenius/dify/commit/085a79c748be47111d2e1c1b65b3f82200998d5c",
+  "comments_url": "https://api.github.com/repos/langgenius/dify/commits/085a79c748be47111d2e1c1b65b3f82200998d5c/comments",
+  "author": {
+    "login": "MoonPointer-Byte",
+    "id": 160164373,
+    "node_id": "U_kgDOCYvqFQ",
+    "avatar_url": "https://avatars.githubusercontent.com/u/160164373?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/MoonPointer-Byte",
+    "html_url": "https://github.com/MoonPointer-Byte",
+    "followers_url": "https://api.github.com/users/MoonPointer-Byte/followers",
+    "following_url": "https://api.github.com/users/MoonPointer-Byte/following{/other_user}",
+    "gists_url": "https://api.github.com/users/MoonPointer-Byte/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/MoonPointer-Byte/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/MoonPointer-Byte/subscriptions",
+    "organizations_url": "https://api.github.com/users/MoonPointer-Byte/orgs",
+    "repos_url": "https://api.github.com/users/MoonPointer-Byte/repos",
+    "events_url": "https://api.github.com/users/MoonPointer-Byte/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/MoonPointer-Byte/received_events",
+    "type": "User",
+    "user_view_type": "public",
+    "site_admin": false
+  },
+  "committer": {
+    "login": "web-flow",
+    "id": 19864447,
+    "node_id": "MDQ6VXNlcjE5ODY0NDQ3",
+    "avatar_url": "https://avatars.githubusercontent.com/u/19864447?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/web-flow",
+    "html_url": "https://github.com/web-flow",
+    "followers_url": "https://api.github.com/users/web-flow/followers",
+    "following_url": "https://api.github.com/users/web-flow/following{/other_user}",
+    "gists_url": "https://api.github.com/users/web-flow/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/web-flow/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/web-flow/subscriptions",
+    "organizations_url": "https://api.github.com/users/web-flow/orgs",
+    "repos_url": "https://api.github.com/users/web-flow/repos",
+    "events_url": "https://api.github.com/users/web-flow/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/web-flow/received_events",
+    "type": "User",
+    "user_view_type": "public",
+    "site_admin": false
+  },
+  "parents": [
+    {
+      "sha": "e7981a6f19435d52ef4b92f71054739ebc2b593e",
+      "url": "https://api.github.com/repos/langgenius/dify/commits/e7981a6f19435d52ef4b92f71054739ebc2b593e",
+      "html_url": "https://github.com/langgenius/dify/commit/e7981a6f19435d52ef4b92f71054739ebc2b593e"
+    }
+  ],
+  "stats": {
+    "total": 61,
+    "additions": 41,
+    "deletions": 20
+  },
+  "files": [
+    {
+      "sha": "a28e731cd725556830ba3e551334ea7f7a71d539",
+      "filename": "api/controllers/service_api/wraps.py",
+      "status": "modified",
+      "additions": 18,
+      "deletions": 7,
+      "changes": 25,
+      "blob_url": "https://github.com/langgenius/dify/blob/085a79c748be47111d2e1c1b65b3f82200998d5c/api%2Fcontrollers%2Fservice_api%2Fwraps.py",
+      "raw_url": "https://github.com/langgenius/dify/raw/085a79c748be47111d2e1c1b65b3f82200998d5c/api%2Fcontrollers%2Fservice_api%2Fwraps.py",
+      "contents_url": "https://api.github.com/repos/langgenius/dify/contents/api%2Fcontrollers%2Fservice_api%2Fwraps.py?ref=085a79c748be47111d2e1c1b65b3f82200998d5c",
+      "patch": "@@ -197,10 +197,14 @@ def decorated(*args: P.args, **kwargs: P.kwargs):\n             if dify_config.DEPLOYMENT_EDITION != DeploymentEdition.CLOUD:\n                 return view(*args, **kwargs)\n \n+            tenant_id = api_token.tenant_id\n+            if tenant_id is None:\n+                raise Unauthorized(\"Tenant id is required for this token.\")\n+\n             if resource == \"vector_space\":\n-                vector_space = application_services().feature_queries.get_workspace_vector_space(api_token.tenant_id)\n+                vector_space = application_services().feature_queries.get_workspace_vector_space(tenant_id)\n                 if vector_space.usage_unknown:\n-                    features = FeatureService.get_features(api_token.tenant_id, exclude_vector_space=True)\n+                    features = FeatureService.get_features(tenant_id, exclude_vector_space=True)\n                     if features.billing.subscription.plan == CloudPlan.SANDBOX:\n                         raise ServiceUnavailable(\n                             \"Unable to verify vector space usage right now. Please try again later.\"\n@@ -209,7 +213,7 @@ def decorated(*args: P.args, **kwargs: P.kwargs):\n                     raise Forbidden(\"The capacity of the vector space has reached the limit of your subscription.\")\n                 return view(*args, **kwargs)\n \n-            features = FeatureService.get_features(api_token.tenant_id, exclude_vector_space=True)\n+            features = FeatureService.get_features(tenant_id, exclude_vector_space=True)\n \n             members = features.members\n             apps = features.apps\n@@ -244,7 +248,11 @@ def decorated(*args: P.args, **kwargs: P.kwargs):\n             if dify_config.DEPLOYMENT_EDITION != DeploymentEdition.CLOUD or resource != \"add_segment\":\n                 return view(*args, **kwargs)\n \n-            features = FeatureService.get_features(api_token.tenant_id, exclude_vector_space=True)\n+            tenant_id = api_token.tenant_id\n+            if tenant_id is None:\n+                raise Unauthorized(\"Tenant id is required for this token.\")\n+\n+            features = FeatureService.get_features(tenant_id, exclude_vector_space=True)\n             if features.billing.subscription.plan == CloudPlan.SANDBOX:\n                 raise Forbidden(\n                     \"To unlock this feature and elevate your Dify experience, please upgrade to a paid plan.\"\n@@ -267,10 +275,13 @@ def decorated(*args: P.args, **kwargs: P.kwargs):\n             api_token = validate_and_get_api_token(api_token_type)\n \n             if resource == \"knowledge\":\n-                knowledge_rate_limit = FeatureService.get_knowledge_rate_limit(api_token.tenant_id)\n+                tenant_id = api_token.tenant_id\n+                if tenant_id is None:\n+                    raise Unauthorized(\"Tenant id is required for this token.\")\n+                knowledge_rate_limit = FeatureService.get_knowledge_rate_limit(tenant_id)\n                 if knowledge_rate_limit.enabled:\n                     current_time = int(time.time() * 1000)\n-                    key = f\"rate_limit_{api_token.tenant_id}\"\n+                    key = f\"rate_limit_{tenant_id}\"\n \n                     redis_client.zadd(key, {current_time: current_time})\n \n@@ -281,7 +292,7 @@ def decorated(*args: P.args, **kwargs: P.kwargs):\n                     if request_count > knowledge_rate_limit.limit:\n                         # add ratelimit record\n                         rate_limit_log = RateLimitLog(\n-                            tenant_id=api_token.tenant_id,\n+                            tenant_id=tenant_id,\n                             subscription_plan=knowledge_rate_limit.subscription_plan,\n                             operation=\"knowledge\",\n                         )"
+    },
+    {
+      "sha": "1af4d50c163edf2316e1d1f1957a4aa4f12c05c4",
+      "filename": "api/models/model.py",
+      "status": "modified",
+      "additions": 10,
+      "deletions": 10,
+      "changes": 20,
+      "blob_url": "https://github.com/langgenius/dify/blob/085a79c748be47111d2e1c1b65b3f82200998d5c/api%2Fmodels%2Fmodel.py",
+      "raw_url": "https://github.com/langgenius/dify/raw/085a79c748be47111d2e1c1b65b3f82200998d5c/api%2Fmodels%2Fmodel.py",
+      "contents_url": "https://api.github.com/repos/langgenius/dify/contents/api%2Fmodels%2Fmodel.py?ref=085a79c748be47111d2e1c1b65b3f82200998d5c",
+      "patch": "@@ -2119,10 +2119,10 @@ class EndUser(Base, UserMixin):\n \n     id: Mapped[str] = mapped_column(StringUUID, default=lambda: str(uuid4()))\n     tenant_id: Mapped[str] = mapped_column(StringUUID, nullable=False)\n-    app_id = mapped_column(StringUUID, nullable=True)\n+    app_id: Mapped[str | None] = mapped_column(StringUUID, nullable=True)\n     type: Mapped[EndUserType] = mapped_column(EnumText(EndUserType, length=255), nullable=False)\n-    external_user_id = mapped_column(String(255), nullable=True)\n-    name = mapped_column(String(255))\n+    external_user_id: Mapped[str | None] = mapped_column(String(255), nullable=True)\n+    name: Mapped[str | None] = mapped_column(String(255), nullable=True)\n     _is_anonymous: Mapped[bool] = mapped_column(\"is_anonymous\", sa.Boolean, nullable=False, server_default=sa.true())\n \n     @property\n@@ -2136,8 +2136,8 @@ def is_anonymous(self, value: bool) -> None:\n         self._is_anonymous = value\n \n     session_id: Mapped[str] = mapped_column(String(255), nullable=False)\n-    created_at = mapped_column(sa.DateTime, nullable=False, server_default=func.current_timestamp())\n-    updated_at = mapped_column(\n+    created_at: Mapped[datetime] = mapped_column(sa.DateTime, nullable=False, server_default=func.current_timestamp())\n+    updated_at: Mapped[datetime] = mapped_column(\n         sa.DateTime, nullable=False, server_default=func.current_timestamp(), onupdate=func.current_timestamp()\n     )\n \n@@ -2298,13 +2298,13 @@ class ApiToken(Base):\n         sa.Index(\"api_token_tenant_idx\", \"tenant_id\", \"type\"),\n     )\n \n-    id = mapped_column(StringUUID, default=lambda: str(uuid4()))\n-    app_id = mapped_column(StringUUID, nullable=True)\n-    tenant_id = mapped_column(StringUUID, nullable=True)\n+    id: Mapped[str] = mapped_column(StringUUID, default=lambda: str(uuid4()))\n+    app_id: Mapped[str | None] = mapped_column(StringUUID, nullable=True)\n+    tenant_id: Mapped[str | None] = mapped_column(StringUUID, nullable=True)\n     type: Mapped[ApiTokenType] = mapped_column(EnumText(ApiTokenType, length=16), nullable=False)\n     token: Mapped[str] = mapped_column(String(255), nullable=False)\n-    last_used_at = mapped_column(sa.DateTime, nullable=True)\n-    created_at = mapped_column(sa.DateTime, nullable=False, server_default=func.current_timestamp())\n+    last_used_at: Mapped[datetime | None] = mapped_column(sa.DateTime, nullable=True)\n+    created_at: Mapped[datetime] = mapped_column(sa.DateTime, nullable=False, server_default=func.current_timestamp())\n \n     @staticmethod\n     def generate_api_key(prefix: str, n: int, *, session: Session) -> str:"
+    },
+    {
+      "sha": "cd55a3dba4138546a34290a481359a909938a66b",
+      "filename": "api/services/end_user_service.py",
+      "status": "modified",
+      "additions": 4,
+      "deletions": 0,
+      "changes": 4,
+      "blob_url": "https://github.com/langgenius/dify/blob/085a79c748be47111d2e1c1b65b3f82200998d5c/api%2Fservices%2Fend_user_service.py",
+      "raw_url": "https://github.com/langgenius/dify/raw/085a79c748be47111d2e1c1b65b3f82200998d5c/api%2Fservices%2Fend_user_service.py",
+      "contents_url": "https://api.github.com/repos/langgenius/dify/contents/api%2Fservices%2Fend_user_service.py?ref=085a79c748be47111d2e1c1b65b3f82200998d5c",
+      "patch": "@@ -154,6 +154,8 @@ def create_end_user_batch(\n             found_app_ids: set[str] = set()\n             for eu in existing_end_users:\n                 # If duplicates exist due to weak DB constraints, prefer the first\n+                if eu.app_id is None:\n+                    continue\n                 if eu.app_id not in result:\n                     result[eu.app_id] = eu\n                 found_app_ids.add(eu.app_id)\n@@ -179,6 +181,8 @@ def create_end_user_batch(\n                 session.add_all(new_end_users)\n \n                 for eu in new_end_users:\n+                    if eu.app_id is None:\n+                        continue\n                     result[eu.app_id] = eu\n \n         return result"
+    },
+    {
+      "sha": "be60f01c4692678fb5d3a9637ebd3d17d56b6a6e",
+      "filename": "api/tests/integration_tests/libs/test_api_token_cache_integration.py",
+      "status": "modified",
+      "additions": 6,
+      "deletions": 2,
+      "changes": 8,
+      "blob_url": "https://github.com/langgenius/dify/blob/085a79c748be47111d2e1c1b65b3f82200998d5c/api%2Ftests%2Fintegration_tests%2Flibs%2Ftest_api_token_cache_integration.py",
+      "raw_url": "https://github.com/langgenius/dify/raw/085a79c748be47111d2e1c1b65b3f82200998d5c/api%2Ftests%2Fintegration_tests%2Flibs%2Ftest_api_token_cache_integration.py",
+      "contents_url": "https://api.github.com/repos/langgenius/dify/contents/api%2Ftests%2Fintegration_tests%2Flibs%2Ftest_api_token_cache_integration.py?ref=085a79c748be47111d2e1c1b65b3f82200998d5c",
+      "patch": "@@ -303,7 +303,9 @@ def test_complete_flow_cache_miss_then_hit(self, db_session):\n             assert cached_token.token == test_token_value\n \n             # Step 3: Verify tenant index\n-            index_key = ApiTokenCache._make_tenant_index_key(test_token.tenant_id)\n+            tenant_id = test_token.tenant_id\n+            assert tenant_id is not None\n+            index_key = ApiTokenCache._make_tenant_index_key(tenant_id)\n             assert redis_client.exists(index_key) == 1\n             assert cache_key.encode() in redis_client.smembers(index_key)\n \n@@ -313,10 +315,12 @@ def test_complete_flow_cache_miss_then_hit(self, db_session):\n             assert cache_key.encode() not in redis_client.smembers(index_key)\n \n         finally:\n+            tenant_id = test_token.tenant_id\n             db_session.delete(test_token)\n             db_session.commit()\n             redis_client.delete(f\"api_token:{test_scope}:{test_token_value}\")\n-            redis_client.delete(ApiTokenCache._make_tenant_index_key(test_token.tenant_id))\n+            if tenant_id is not None:\n+                redis_client.delete(ApiTokenCache._make_tenant_index_key(tenant_id))\n \n     def test_high_concurrency_simulation(self):\n         \"\"\"Simulate high concurrency access to cache.\"\"\""
+    },
+    {
+      "sha": "795fce195d9eff111d1c9c9c37264ed5e801be59",
+      "filename": "api/tests/unit_tests/controllers/inner_api/app/test_file_grants.py",
+      "status": "modified",
+      "additions": 3,
+      "deletions": 1,
+      "changes": 4,
+      "blob_url": "https://github.com/langgenius/dify/blob/085a79c748be47111d2e1c1b65b3f82200998d5c/api%2Ftests%2Funit_tests%2Fcontrollers%2Finner_api%2Fapp%2Ftest_file_grants.py",
+      "raw_url": "https://github.com/langgenius/dify/raw/085a79c748be47111d2e1c1b65b3f82200998d5c/api%2Ftests%2Funit_tests%2Fcontrollers%2Finner_api%2Fapp%2Ftest_file_grants.py",
+      "contents_url": "https://api.github.com/repos/langgenius/dify/contents/api%2Ftests%2Funit_tests%2Fcontrollers%2Finner_api%2Fapp%2Ftest_file_grants.py?ref=085a79c748be47111d2e1c1b65b3f82200998d5c",
+      "patch": "@@ -326,7 +326,9 @@ def test_mint_folds_an_oversized_subject_into_one_identity(app: Flask, sqlite_se\n \n     end_users = sqlite_session.scalars(select(EndUser).order_by(EndUser.created_at)).all()\n     assert len(end_users) == 2\n-    assert all(len(end_user.external_user_id) == 255 for end_user in end_users)\n+    assert all(\n+        end_user.external_user_id is not None and len(end_user.external_user_id) == 255 for end_user in end_users\n+    )\n     assert _subject_of(first) == _subject_of(again) != _subject_of(other)\n \n "
+    }
+  ]
+}

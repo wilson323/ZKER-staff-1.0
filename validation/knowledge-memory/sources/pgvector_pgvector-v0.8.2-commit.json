@@ -1,0 +1,197 @@
+{
+  "sha": "cab9da72c04353f143bb06b42ab70a403daac64a",
+  "node_id": "C_kwDOFXRw2doAKGNhYjlkYTcyYzA0MzUzZjE0M2JiMDZiNDJhYjcwYTQwM2RhYWM2NGE",
+  "commit": {
+    "author": {
+      "name": "Andrew Kane",
+      "email": "andrew@ankane.org",
+      "date": "2026-02-25T18:46:57Z"
+    },
+    "committer": {
+      "name": "Andrew Kane",
+      "email": "andrew@ankane.org",
+      "date": "2026-02-25T18:46:57Z"
+    },
+    "message": "Version bump to 0.8.2 [skip ci]",
+    "tree": {
+      "sha": "d205ffef8ae87c030841d67d2a806c4c4b9d2609",
+      "url": "https://api.github.com/repos/pgvector/pgvector/git/trees/d205ffef8ae87c030841d67d2a806c4c4b9d2609"
+    },
+    "url": "https://api.github.com/repos/pgvector/pgvector/git/commits/cab9da72c04353f143bb06b42ab70a403daac64a",
+    "comment_count": 0,
+    "verification": {
+      "verified": false,
+      "reason": "unsigned",
+      "signature": null,
+      "payload": null,
+      "verified_at": null
+    }
+  },
+  "url": "https://api.github.com/repos/pgvector/pgvector/commits/cab9da72c04353f143bb06b42ab70a403daac64a",
+  "html_url": "https://github.com/pgvector/pgvector/commit/cab9da72c04353f143bb06b42ab70a403daac64a",
+  "comments_url": "https://api.github.com/repos/pgvector/pgvector/commits/cab9da72c04353f143bb06b42ab70a403daac64a/comments",
+  "author": {
+    "login": "ankane",
+    "id": 220358,
+    "node_id": "MDQ6VXNlcjIyMDM1OA==",
+    "avatar_url": "https://avatars.githubusercontent.com/u/220358?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/ankane",
+    "html_url": "https://github.com/ankane",
+    "followers_url": "https://api.github.com/users/ankane/followers",
+    "following_url": "https://api.github.com/users/ankane/following{/other_user}",
+    "gists_url": "https://api.github.com/users/ankane/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/ankane/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/ankane/subscriptions",
+    "organizations_url": "https://api.github.com/users/ankane/orgs",
+    "repos_url": "https://api.github.com/users/ankane/repos",
+    "events_url": "https://api.github.com/users/ankane/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/ankane/received_events",
+    "type": "User",
+    "user_view_type": "public",
+    "site_admin": false
+  },
+  "committer": {
+    "login": "ankane",
+    "id": 220358,
+    "node_id": "MDQ6VXNlcjIyMDM1OA==",
+    "avatar_url": "https://avatars.githubusercontent.com/u/220358?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/ankane",
+    "html_url": "https://github.com/ankane",
+    "followers_url": "https://api.github.com/users/ankane/followers",
+    "following_url": "https://api.github.com/users/ankane/following{/other_user}",
+    "gists_url": "https://api.github.com/users/ankane/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/ankane/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/ankane/subscriptions",
+    "organizations_url": "https://api.github.com/users/ankane/orgs",
+    "repos_url": "https://api.github.com/users/ankane/repos",
+    "events_url": "https://api.github.com/users/ankane/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/ankane/received_events",
+    "type": "User",
+    "user_view_type": "public",
+    "site_admin": false
+  },
+  "parents": [
+    {
+      "sha": "d702ee31f26a09000d107ea6ef0e7185600843d0",
+      "url": "https://api.github.com/repos/pgvector/pgvector/commits/d702ee31f26a09000d107ea6ef0e7185600843d0",
+      "html_url": "https://github.com/pgvector/pgvector/commit/d702ee31f26a09000d107ea6ef0e7185600843d0"
+    }
+  ],
+  "stats": {
+    "total": 48,
+    "additions": 25,
+    "deletions": 23
+  },
+  "files": [
+    {
+      "sha": "f05e43652aa92ff9b8e9d624760b46b63638a1a8",
+      "filename": "CHANGELOG.md",
+      "status": "modified",
+      "additions": 1,
+      "deletions": 1,
+      "changes": 2,
+      "blob_url": "https://github.com/pgvector/pgvector/blob/cab9da72c04353f143bb06b42ab70a403daac64a/CHANGELOG.md",
+      "raw_url": "https://github.com/pgvector/pgvector/raw/cab9da72c04353f143bb06b42ab70a403daac64a/CHANGELOG.md",
+      "contents_url": "https://api.github.com/repos/pgvector/pgvector/contents/CHANGELOG.md?ref=cab9da72c04353f143bb06b42ab70a403daac64a",
+      "patch": "@@ -1,4 +1,4 @@\n-## 0.8.2 (unreleased)\n+## 0.8.2 (2026-02-25)\n \n - Fixed buffer overflow with parallel HNSW index build\n - Improved `install` target on Windows"
+    },
+    {
+      "sha": "821fa23870da2dc9b54a3d7ed1924b4b23730691",
+      "filename": "Dockerfile",
+      "status": "modified",
+      "additions": 1,
+      "deletions": 1,
+      "changes": 2,
+      "blob_url": "https://github.com/pgvector/pgvector/blob/cab9da72c04353f143bb06b42ab70a403daac64a/Dockerfile",
+      "raw_url": "https://github.com/pgvector/pgvector/raw/cab9da72c04353f143bb06b42ab70a403daac64a/Dockerfile",
+      "contents_url": "https://api.github.com/repos/pgvector/pgvector/contents/Dockerfile?ref=cab9da72c04353f143bb06b42ab70a403daac64a",
+      "patch": "@@ -5,7 +5,7 @@ ARG DEBIAN_CODENAME=bookworm\n FROM postgres:$PG_MAJOR-$DEBIAN_CODENAME\n ARG PG_MAJOR\n \n-ADD https://github.com/pgvector/pgvector.git#v0.8.1 /tmp/pgvector\n+ADD https://github.com/pgvector/pgvector.git#v0.8.2 /tmp/pgvector\n \n RUN apt-get update && \\\n \t\tapt-mark hold locales && \\"
+    },
+    {
+      "sha": "55c7f38fd5681e85db42735244799ec5ae62bc53",
+      "filename": "META.json",
+      "status": "modified",
+      "additions": 2,
+      "deletions": 2,
+      "changes": 4,
+      "blob_url": "https://github.com/pgvector/pgvector/blob/cab9da72c04353f143bb06b42ab70a403daac64a/META.json",
+      "raw_url": "https://github.com/pgvector/pgvector/raw/cab9da72c04353f143bb06b42ab70a403daac64a/META.json",
+      "contents_url": "https://api.github.com/repos/pgvector/pgvector/contents/META.json?ref=cab9da72c04353f143bb06b42ab70a403daac64a",
+      "patch": "@@ -2,7 +2,7 @@\n \t\"name\": \"vector\",\n \t\"abstract\": \"Open-source vector similarity search for Postgres\",\n \t\"description\": \"Supports L2 distance, inner product, and cosine distance\",\n-\t\"version\": \"0.8.1\",\n+\t\"version\": \"0.8.2\",\n \t\"maintainer\": [\n \t\t\"Andrew Kane <andrew@ankane.org>\"\n \t],\n@@ -20,7 +20,7 @@\n \t\t\"vector\": {\n \t\t\t\"file\": \"sql/vector.sql\",\n \t\t\t\"docfile\": \"README.md\",\n-\t\t\t\"version\": \"0.8.1\",\n+\t\t\t\"version\": \"0.8.2\",\n \t\t\t\"abstract\": \"Open-source vector similarity search for Postgres\"\n \t\t}\n \t},"
+    },
+    {
+      "sha": "8bedb890ab193e665a8937591fd79b0a341049c4",
+      "filename": "Makefile",
+      "status": "modified",
+      "additions": 1,
+      "deletions": 1,
+      "changes": 2,
+      "blob_url": "https://github.com/pgvector/pgvector/blob/cab9da72c04353f143bb06b42ab70a403daac64a/Makefile",
+      "raw_url": "https://github.com/pgvector/pgvector/raw/cab9da72c04353f143bb06b42ab70a403daac64a/Makefile",
+      "contents_url": "https://api.github.com/repos/pgvector/pgvector/contents/Makefile?ref=cab9da72c04353f143bb06b42ab70a403daac64a",
+      "patch": "@@ -1,5 +1,5 @@\n EXTENSION = vector\n-EXTVERSION = 0.8.1\n+EXTVERSION = 0.8.2\n \n MODULE_big = vector\n DATA = $(wildcard sql/*--*--*.sql)"
+    },
+    {
+      "sha": "925692196df6f6883b868702102144247ecb9c8c",
+      "filename": "Makefile.win",
+      "status": "modified",
+      "additions": 1,
+      "deletions": 1,
+      "changes": 2,
+      "blob_url": "https://github.com/pgvector/pgvector/blob/cab9da72c04353f143bb06b42ab70a403daac64a/Makefile.win",
+      "raw_url": "https://github.com/pgvector/pgvector/raw/cab9da72c04353f143bb06b42ab70a403daac64a/Makefile.win",
+      "contents_url": "https://api.github.com/repos/pgvector/pgvector/contents/Makefile.win?ref=cab9da72c04353f143bb06b42ab70a403daac64a",
+      "patch": "@@ -1,5 +1,5 @@\n EXTENSION = vector\n-EXTVERSION = 0.8.1\n+EXTVERSION = 0.8.2\n \n DATA_built = sql\\$(EXTENSION)--$(EXTVERSION).sql\n OBJS = src\\bitutils.obj src\\bitvec.obj src\\halfutils.obj src\\halfvec.obj src\\hnsw.obj src\\hnswbuild.obj src\\hnswinsert.obj src\\hnswscan.obj src\\hnswutils.obj src\\hnswvacuum.obj src\\ivfbuild.obj src\\ivfflat.obj src\\ivfinsert.obj src\\ivfkmeans.obj src\\ivfscan.obj src\\ivfutils.obj src\\ivfvacuum.obj src\\sparsevec.obj src\\vector.obj"
+    },
+    {
+      "sha": "1a8de7e024462e1f9980ad9dadcb5ce93e0cdc9f",
+      "filename": "README.md",
+      "status": "modified",
+      "additions": 15,
+      "deletions": 15,
+      "changes": 30,
+      "blob_url": "https://github.com/pgvector/pgvector/blob/cab9da72c04353f143bb06b42ab70a403daac64a/README.md",
+      "raw_url": "https://github.com/pgvector/pgvector/raw/cab9da72c04353f143bb06b42ab70a403daac64a/README.md",
+      "contents_url": "https://api.github.com/repos/pgvector/pgvector/contents/README.md?ref=cab9da72c04353f143bb06b42ab70a403daac64a",
+      "patch": "@@ -21,7 +21,7 @@ Compile and install the extension (supports Postgres 13+)\n \n ```sh\n cd /tmp\n-git clone --branch v0.8.1 https://github.com/pgvector/pgvector.git\n+git clone --branch v0.8.2 https://github.com/pgvector/pgvector.git\n cd pgvector\n make\n make install # may need sudo\n@@ -38,7 +38,7 @@ Ensure [C++ support in Visual Studio](https://learn.microsoft.com/en-us/cpp/buil\n ```cmd\n set \"PGROOT=C:\\Program Files\\PostgreSQL\\18\"\n cd %TEMP%\n-git clone --branch v0.8.1 https://github.com/pgvector/pgvector.git\n+git clone --branch v0.8.2 https://github.com/pgvector/pgvector.git\n cd pgvector\n nmake /F Makefile.win\n nmake /F Makefile.win install\n@@ -1152,23 +1152,23 @@ This adds pgvector to the [Postgres image](https://hub.docker.com/_/postgres) (r\n \n Supported tags are:\n \n-- `pg18-trixie`, `0.8.1-pg18-trixie`\n-- `pg18-bookworm`, `0.8.1-pg18-bookworm`, `pg18`, `0.8.1-pg18`\n-- `pg17-trixie`, `0.8.1-pg17-trixie`\n-- `pg17-bookworm`, `0.8.1-pg17-bookworm`, `pg17`, `0.8.1-pg17`\n-- `pg16-trixie`, `0.8.1-pg16-trixie`\n-- `pg16-bookworm`, `0.8.1-pg16-bookworm`, `pg16`, `0.8.1-pg16`\n-- `pg15-trixie`, `0.8.1-pg15-trixie`\n-- `pg15-bookworm`, `0.8.1-pg15-bookworm`, `pg15`, `0.8.1-pg15`\n-- `pg14-trixie`, `0.8.1-pg14-trixie`\n-- `pg14-bookworm`, `0.8.1-pg14-bookworm`, `pg14`, `0.8.1-pg14`\n-- `pg13-trixie`, `0.8.1-pg13-trixie`\n-- `pg13-bookworm`, `0.8.1-pg13-bookworm`, `pg13`, `0.8.1-pg13`\n+- `pg18-trixie`, `0.8.2-pg18-trixie`\n+- `pg18-bookworm`, `0.8.2-pg18-bookworm`, `pg18`, `0.8.2-pg18`\n+- `pg17-trixie`, `0.8.2-pg17-trixie`\n+- `pg17-bookworm`, `0.8.2-pg17-bookworm`, `pg17`, `0.8.2-pg17`\n+- `pg16-trixie`, `0.8.2-pg16-trixie`\n+- `pg16-bookworm`, `0.8.2-pg16-bookworm`, `pg16`, `0.8.2-pg16`\n+- `pg15-trixie`, `0.8.2-pg15-trixie`\n+- `pg15-bookworm`, `0.8.2-pg15-bookworm`, `pg15`, `0.8.2-pg15`\n+- `pg14-trixie`, `0.8.2-pg14-trixie`\n+- `pg14-bookworm`, `0.8.2-pg14-bookworm`, `pg14`, `0.8.2-pg14`\n+- `pg13-trixie`, `0.8.2-pg13-trixie`\n+- `pg13-bookworm`, `0.8.2-pg13-bookworm`, `pg13`, `0.8.2-pg13`\n \n You can also build the image manually:\n \n ```sh\n-git clone --branch v0.8.1 https://github.com/pgvector/pgvector.git\n+git clone --branch v0.8.2 https://github.com/pgvector/pgvector.git\n cd pgvector\n docker build --pull --build-arg PG_MAJOR=18 -t myuser/pgvector .\n ```"
+    },
+    {
+      "sha": "f7730a18ae0b2c6b3ceca6aa7d3ccbde2366fce7",
+      "filename": "sql/vector--0.8.1--0.8.2.sql",
+      "status": "added",
+      "additions": 2,
+      "deletions": 0,
+      "changes": 2,
+      "blob_url": "https://github.com/pgvector/pgvector/blob/cab9da72c04353f143bb06b42ab70a403daac64a/sql%2Fvector--0.8.1--0.8.2.sql",
+      "raw_url": "https://github.com/pgvector/pgvector/raw/cab9da72c04353f143bb06b42ab70a403daac64a/sql%2Fvector--0.8.1--0.8.2.sql",
+      "contents_url": "https://api.github.com/repos/pgvector/pgvector/contents/sql%2Fvector--0.8.1--0.8.2.sql?ref=cab9da72c04353f143bb06b42ab70a403daac64a",
+      "patch": "@@ -0,0 +1,2 @@\n+-- complain if script is sourced in psql, rather than via CREATE EXTENSION\n+\\echo Use \"ALTER EXTENSION vector UPDATE TO '0.8.2'\" to load this file. \\quit"
+    },
+    {
+      "sha": "b8c295395e9dfcac4532a892c2abcb009d9d46ea",
+      "filename": "src/vector.c",
+      "status": "modified",
+      "additions": 1,
+      "deletions": 1,
+      "changes": 2,
+      "blob_url": "https://github.com/pgvector/pgvector/blob/cab9da72c04353f143bb06b42ab70a403daac64a/src%2Fvector.c",
+      "raw_url": "https://github.com/pgvector/pgvector/raw/cab9da72c04353f143bb06b42ab70a403daac64a/src%2Fvector.c",
+      "contents_url": "https://api.github.com/repos/pgvector/pgvector/contents/src%2Fvector.c?ref=cab9da72c04353f143bb06b42ab70a403daac64a",
+      "patch": "@@ -40,7 +40,7 @@\n #endif\n \n #if PG_VERSION_NUM >= 180000\n-PG_MODULE_MAGIC_EXT(.name = \"vector\",.version = \"0.8.1\");\n+PG_MODULE_MAGIC_EXT(.name = \"vector\",.version = \"0.8.2\");\n #else\n PG_MODULE_MAGIC;\n #endif"
+    },
+    {
+      "sha": "d2aea744deed2819999b6d104c0ef2c353de0569",
+      "filename": "vector.control",
+      "status": "modified",
+      "additions": 1,
+      "deletions": 1,
+      "changes": 2,
+      "blob_url": "https://github.com/pgvector/pgvector/blob/cab9da72c04353f143bb06b42ab70a403daac64a/vector.control",
+      "raw_url": "https://github.com/pgvector/pgvector/raw/cab9da72c04353f143bb06b42ab70a403daac64a/vector.control",
+      "contents_url": "https://api.github.com/repos/pgvector/pgvector/contents/vector.control?ref=cab9da72c04353f143bb06b42ab70a403daac64a",
+      "patch": "@@ -1,4 +1,4 @@\n comment = 'vector data type and ivfflat and hnsw access methods'\n-default_version = '0.8.1'\n+default_version = '0.8.2'\n module_pathname = '$libdir/vector'\n relocatable = true"
+    }
+  ]
+}

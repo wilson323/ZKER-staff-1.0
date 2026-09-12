@@ -1,0 +1,24 @@
+{
+  "base": "/private/var/folders/8l/6tnv8ssd2vs0h8463rnv66b00000gn/T/ai-sdlc-forward-sud9bya_",
+  "projects": [
+    {
+      "root": "/private/var/folders/8l/6tnv8ssd2vs0h8463rnv66b00000gn/T/ai-sdlc-forward-sud9bya_/python-project",
+      "before": {
+        "labels.py": "5a21a11d00c8e8dbd5abc356fc2331534d97977e3f6b31dc18107084ca0a142f",
+        "pyproject.toml": "5cd982b42c92a97f435f801ddf9db8bb0cec827888b02a374f7765b81f554577",
+        "README.md": "fec411d0d886930264b2e3b1b3fa096a37c4492231b799ff432256a7c413f01a",
+        "TASKS.md": "9fe6e709b36e3c37e0368a717c75f6f7d2bd92489e264a61720fc703e356516c",
+        "AGENTS.md": "1f239120d4b4105ff7adc482209eec9cbcc396b12d37ecc7dedc9e627b3b8c33",
+        "tests/test_labels.py": "458150891e53cfd1da792061a5875dff9ceaab2542f9402198c6082459fda297"
+      }
+    },
+    {
+      "root": "/private/var/folders/8l/6tnv8ssd2vs0h8463rnv66b00000gn/T/ai-sdlc-forward-sud9bya_/documents-project",
+      "before": {
+        "README.md": "f92c22cb728e66dccffe11c84d597633cc3415d54fcac9ef98fdb2b31260eec8",
+        "AGENTS.md": "d21b3876d70b29619f42ff82c3704418c027783a2e9a85703f28d207e333b618",
+        "docs/design-v2.md": "febee917c17c148ae36108e8fc40bfcfa52cbd58cc69f9eb363dc7b184c6f49f"
+      }
+    }
+  ]
+}

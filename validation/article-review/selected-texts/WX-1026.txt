@@ -1,0 +1,496 @@
+#  2026多智能体框架选型 · AgentScope 2.0 vs DeepAgents
+
+原创  老罗  老罗  老罗拆AI智能体
+
+_2026年07月10日 17:35_ __ _ _ _ _ _ 四川  _
+
+在小说阅读器读本章
+
+去阅读
+
+本文把阿里巴巴通义的  AgentScope 2.0  （当前 2.0.4）和 LangChain 的  DeepAgents
+放在一起，从架构、工具、权限、多智能体协作到部署逐项对照。资料来自两边官方文档。
+
+* * *
+
+##  先搞清各自想解决什么问题
+
+框架  |  定位  |  维护方  |  语言  
+---|---|---|---  
+** AgentScope 2.0  ** |  安全、高效、灵活、完整的多智能体框架，自带生产级 Agent Service（多租户、多会话 HTTP
+服务）  |  阿里巴巴 / 通义  |  Python / TS / Java  
+** DeepAgents  ** |  一个"智能体框架（agent
+harness）"，在通用工具调用循环之上预装了规划、文件系统、子智能体、记忆等开箱即用的能力  |  LangChain  |  Python（另有 TS
+版）  
+  
+两者的分歧点其实很明确：AgentScope 2.0
+想把"如何把智能体跑成一个多租户服务"做成框架本身的能力（Redis、消息总线、会话调度都是一等概念）；DeepAgents
+则把"如何让单个智能体可靠地完成复杂任务"作为核心，至于上线部署，交给 LangGraph/LangSmith 生态。这决定了后面几乎每一处的取舍。
+
+* * *
+
+##  AgentScope 2.0 的底子
+
+AgentScope 是阿里巴巴通义实验室开源的多智能体框架。2.0.4 首页就四个词：  ** Secure, efficient, flexible,
+and complete  ** ——"安全"排在第一位，这其实是个信号，后面会看到权限系统被提到了多高的位置。
+
+它的 Agent Service 被定义为：
+
+"FastAPI-based hosting layer that turns AgentScope agents into a multi-tenant,
+multi-session HTTP service."（一个基于 FastAPI 的托管层，把 AgentScope 智能体变成多租户、多会话的 HTTP
+服务。）
+
+###  这是一次不向下兼容的重写
+
+2.0 不是平滑升级。变更日志里写得很直白——智能体被重构为：
+
+"一个  ** 无状态的  ** 推理-行动循环引擎（stateless reasoning-acting loop
+engine），将模型、工具、权限系统、人在回路、上下文管理、中间件、状态管理和事件系统整合到一个统一接口中。"
+
+1.0 时代的  ` ReActAgent  ` 、  ` Pipeline  ` 、  ` MsgHub  ` 、  ` state_dict  ` /
+` load_state_dict  ` 、hook 机制全部被移除或重构，状态被剥离到独立的  ` AgentState  ` 。FAQ
+也说得很实在：建议用于新项目，老项目留着 1.0 文档。
+
+###  六个新东西
+
+变更日志里带  ` <Badge>New</Badge> ` 标记的能力：
+
+  1. 事件系统  ——前端集成和人在回路的基础。 
+  2. 权限系统  ——每次工具调用都会被拦截，返回 allow / deny / ask。 
+  3. 技能系统  ——Markdown 指令集，从文件系统/沙箱/Web 加载。 
+  4. 工作空间  ——执行环境，统一提供工具、技能、上下文卸载三类资源；后端可选 Local / Docker / E2B。 
+  5. 中间件系统  ——取代旧的 hook 机制，6 个钩子位置 + 1 个工具来源钩子。 
+  6. Agent Service  ——FastAPI 托管层，  ` create_app  ` 工厂、生命周期管理器、AG-UI 协议中间件、Redis 存储。 
+
+###  几个贯穿全局的设计取向
+
+  * ** 无状态引擎 + 显式状态  ** ：Agent 本身不存状态，状态住在  ` AgentState  ` 。 
+  * ** 声明式 / Schema 驱动  ** ：工具、凭据、模型都通过 JSON Schema 和  ` ModelCard  ` YAML 自描述，前端不用为每个 provider 单独写代码。 
+  * ** 边界尽量可替换  ** ：Parser、Chunker、Embedding、VectorStore、Workspace 后端、Storage 后端、Auth 都是基类 + 可替换。 
+  * ** 安全优先  ** ："Secure" 是首页标语的第一词，权限系统是独立模块而不是附属功能。  ![](https://mmbiz.qpic.cn/mmbiz_png/MqIydKd3zO2VpUK23c2J2IuyZcQFtZ1RcI1tMb3tawicKiaevEkQ9qr4W21M6Q0GPhzOIMzPW4ATuXIfvPfxdK4vhm3Gud4Ds5OEwaSABPzIM/640?wx_fmt=png&from=appmsg) 图 1 · AgentScope 2.0：无状态推理引擎 + Agent Service 全栈架构 
+
+* * *
+
+##  DeepAgents 的底子
+
+DeepAgents 来自 LangChain 团队，定义很直接：
+
+"Deep Agents is the easiest way to start building agents and applications that
+are powered by LLMs—with built-in capabilities for task planning, file systems
+for context management, subagent-spawning, and long-term memory."
+
+（Deep Agents 是构建 LLM 驱动智能体和应用的最简单方式——内置任务规划、用于上下文管理的文件系统、子智能体派生和长期记忆能力。）
+
+它把自己叫做  "agent harness"（智能体外壳）  ：
+
+"Deep Agents is an 'agent harness'. It is the same core tool calling loop as
+other agent frameworks, but with built-in capabilities that make agents
+reliable for real tasks."
+
+（一个"智能体外壳"。它与其他智能体框架有相同的工具调用循环核心，但内置了让智能体在真实任务中可靠运行的能力。）
+
+"harness"
+这个词很关键——它不强调自己是个"平台"或"服务"，而是强调"帮你把同一个工具调用循环包装得更可靠"。它要内置的能力一共六类：执行动作（工具/文件/代码执行）、连接数据（记忆/技能/领域知识）、管理上下文（摘要/卸载）、并行化（子智能体）、人在回路（人工审批）、自我改进（更新记忆/技能/提示词）。
+
+###  和 LangChain 是什么关系
+
+"LangChain is the framework that provides the core building blocks for your
+agents."
+
+DeepAgents 建在 LangChain 的  ` create_agent  ` 之上，跑在 LangGraph 运行时上。它本质上是  ** 在
+` create_agent  ` 之上预装的一个中间件堆栈（middleware stack）  ** 。如果你不需要这些内置能力，直接用  `
+create_agent  ` 或自定义 LangGraph 工作流就行。
+
+![](https://mmbiz.qpic.cn/mmbiz_png/MqIydKd3zO3z5ctDrDoMyPicSjygoic2maic0QcWQ3nHesgxeWZxIXbfzkWl2lBOFUKUn3iaOOYFyEgHOajmwnAfezGF1V0MtMzIbux4BtzVjkQ/640?wx_fmt=png&from=appmsg)
+
+图 2 · DeepAgents：Agent Harness + 中间件堆栈 + LangGraph 运行时
+
+* * *
+
+##  几个关键维度上的取向
+
+把两边的设计取向摊开对照，后面的差异基本都能从这张表里找到根：
+
+维度  |  AgentScope 2.0  |  DeepAgents  
+---|---|---  
+** 核心隐喻  ** |  无状态引擎 + 显式状态 + 全栈服务  |  智能体外壳（harness）+ 中间件堆栈  
+** 状态观  ** |  Agent 完全无状态；状态分离到  ` AgentState  ` ；可序列化、可恢复  |  Agent 是
+LangGraph 图；状态在 checkpointer 中；可通过 LangGraph 持久化  
+** 抽象层级  ** |  从单 Agent 到分布式多租户服务，覆盖全栈  |  聚焦"构建一个可靠的智能体"，部署交给
+LangGraph/LangSmith 生态  
+** 安全观  ** |  独立的权限系统、5 种模式、bypass 免疫的安全 ASK  |  文件系统权限规则 + 沙箱隔离，文档明确警告上下文注入风险  
+** 可替换性  ** |  每个边界都是基类 + 可替换（Parser/Chunker/VectorStore/Backend/Storage/Auth）
+|  后端可插拔（StateBackend/FilesystemBackend/StoreBackend/CompositeBackend/沙箱后端）  
+** 异步/流式  ** |  异步原生（asyncio），流式端到端，事件系统驱动前端  |  异步支持（async subagents
+beta），流式事件流，基于 LangGraph 流式  
+** 目标受众  ** |  想要一个完整生产级多智能体服务的团队  |  想要快速搭建一个"能干活"的智能体的开发者  
+  
+安全观这一行尤其值得留意：AgentScope 把权限做成独立模块、还专门设计了"bypass 也拦不住"的 ASK，DeepAgents
+则在文档里反复提醒"沙箱挡不住上下文注入"。这其实是两种不同的安全姿态，下面会展开。
+
+* * *
+
+##  架构：一个走"无状态引擎 + 服务层"，一个走"中间件堆栈"
+
+###  AgentScope 2.0：ReAct 循环 + Agent Service
+
+单 Agent 的执行流就是一个标准的 ReAct 循环，但工具调用前后插了权限检查：
+
+    
+    
+    输入(msg/event) → 是否在等待外部事件? → 添加消息到上下文  
+     → 检查下一步动作:  
+       - exit → 返回(等待外部交互)  
+       - reasoning → 必要时压缩上下文 → LLM 调用  
+           - 无工具调用 → 返回最终消息  
+           - 工具调用 → Acting: 批量(顺序/并发) → 权限检查  
+                ALLOW → 执行 → 结果  
+                ASK/External → 暂停 & 发出 RequireUserConfirmEvent  
+                DENY → 错误结果给 LLM  
+     → 循环
+
+每次喂给模型的输入分三层组装：System Prompt（base + skill 指令 + on_system_prompt 中间件变换）→
+Summary（压缩历史）→ Context（近期未压缩消息）。
+
+真正让它和 DeepAgents 拉开差距的是外层的 Agent Service——一个基于 FastAPI 的托管层：FastAPI app → ASGI
+中间件（AGUIProtocolMiddleware、OpenTelemetry 等）→ API Routers →
+一堆生命周期绑定的资源管理器（MessageBus、WakeupDispatcher、BackgroundTaskManager、ChatRunRegistry、SchedulerManager、WorkspaceManager、ChatService、SessionService）→
+Agent 级中间件（InboxMiddleware、ToolOffloadMiddleware、StateChangeMiddleware）→ Agent
+实例。所有共享状态都在 Redis 里，天然支持多进程/分布式。
+
+###  DeepAgents：一个预装好的中间件堆栈
+
+DeepAgents 的核心是  ` create_deep_agent  ` 预装的中间件栈，主 Agent 从先到后是这样：
+
+序号  |  中间件  |  职责  
+---|---|---  
+①  |  ` TodoListMiddleware  ` |  任务规划  
+②  |  ` SkillsMiddleware  ` |  技能注入（仅当传入 skills 时）  
+③  |  ` FilesystemMiddleware  ` |  文件操作 + 权限执行  
+④  |  ` SubAgentMiddleware  ` |  派生/协调子智能体；暴露  ` task  ` 工具  
+⑤  |  ` SummarizationMiddleware  ` |  在上下文极限时压缩消息历史  
+⑥  |  ` PatchToolCallsMiddleware  ` |  中断后修复悬空的工具调用  
+⑦  |  ` AsyncSubAgentMiddleware  ` |  异步子智能体（beta，仅当配置时）  
+⑧  |  你的自定义  ` middleware=  ` |  追加自定义  
+⑨  |  Harness Profile 附加项  |  provider 专属中间件  
+⑩  |  排除工具过滤  |  隐藏工具  
+⑪  |  ` AnthropicPromptCachingMiddleware  ` |  始终注册；非 Anthropic 时 no-op  
+⑫  |  ` MemoryMiddleware  ` |  记忆（仅当传入 memory 时）  
+⑬  |  ` HumanInTheLoopMiddleware  ` |  HITL（仅当传入 interrupt_on 时）  
+  
+这个栈最终拼出 9 段系统提示词：自定义 system_prompt、base agent prompt、to-do list prompt、memory
+prompt、skills prompt、虚拟文件系统 prompt、subagent prompt、用户中间件 prompt、人在回路 prompt。
+
+由于跑在 LangGraph 上，每一步都会 checkpoint，失败/超时/HITL 暂停后能从上次 checkpoint
+恢复，还支持无限期中断、时间旅行和审计轨迹。
+
+###  这里要注意一个容易混淆的点
+
+两边都叫"中间件"，但不是一回事。AgentScope 的中间件是  ** Agent 执行管线上的钩子  ** （on_reply /
+on_compress_context / on_system_prompt / on_reasoning / on_model_call /
+on_acting），更接近 AOP 切面；DeepAgents 的中间件是  ** LangChain agent middleware  **
+，组合成一个栈，每块负责一块能力。更关键的是，AgentScope 自带完整的 HTTP 服务层，DeepAgents 的部署则是另一回事——交给
+LangGraph/LangSmith。
+
+* * *
+
+##  多智能体协作：这里差异最大
+
+多智能体是两边分叉最明显的地方，值得展开讲。
+
+###  AgentScope 2.0：Agent Team
+
+2.0 把 v1 的  ` Pipeline  ` /  ` MsgHub  ` 抽象砍掉了，多智能体编排改由  ** Agent Team  **
+承担（建立在 Agent Service 之上）。这里的 Team 是个持久化群体：创建它的会话就是 Leader（只有 leader
+能增删成员或解散）；Worker 是独立的会话，各有自己的 ReAct 循环、状态、工作空间、事件流，继承 leader 的 chat model
+和工作空间上下文。
+
+成员之间的通信走消息总线，消息以  ` HintBlock  ` 的形式包裹在  ` <team-message from="…"> `
+标签里投递。Leader 拥有全部团队工具——  ` TeamCreate  ` 、  ` AgentCreate  ` （派生
+worker，立刻开始执行）、  ` TeamSay  ` （发送/广播）、  ` TeamDelete  ` （解散，会删掉创建的 worker
+但不删被邀请的 agent）、  ` AgentInvite  ` （邀请已有 agent）；Worker 只看得到  ` TeamSay  ` 。
+
+值得一提的是  ` SubAgentTemplate  ` ，可以给不同 worker 角色配不同能力（比如  ` explorer  ` 用  `
+PermissionMode.EXPLORE  ` ，  ` coder  ` 不用），占位符支持  ` {team_name}  ` 、  `
+{team_description}  ` 、  ` {member_name}  ` 、  ` {member_description}  ` 、  `
+{leader_name}  ` 。
+
+关键在于协调模型：worker 在同一服务上  ** 并发  ** 运行，不是嵌套在 leader 下面；leader 通过读会话流或  ` TeamSay
+` 来观察进度。因为有 Redis 消息总线，  ** 默认就是分布式的  ** 。多智能体消息用  ` MultiAgentFormatter  `
+（对比默认的  ` ChatFormatter  ` ），把连续 agent 消息分组在  ` <history> ` 标签里并标注发送者名。
+
+###  DeepAgents：Subagents
+
+DeepAgents 的思路完全不同。文档原文：
+
+"A deep agent can create subagents to delegate work. You can specify custom
+subagents (with their own tools, prompts, and limits) or let the agent create
+ad-hoc subagents. The subagent you pass is treated as a template."
+
+它的工作模式是：主 Agent 用  ` task  ` 工具委派 → 子智能体拿  ** 全新上下文  ** 跑 → 自主执行到完成 → 返回  **
+一份最终报告  ** 给主 Agent → 主 Agent 的上下文保持干净。这是一种很纯粹的"委派-汇报"。
+
+子智能体还支持一些特性：结构化输出（  ` response_format  ` ，  ` deepagents>=0.5.3  ` ）、每子智能体单独配
+model、上下文按命名空间 key 传播（如  ` researcher:max_depth  ` ）、技能隔离、用  ` lc_agent_name
+` 元数据区分是谁调了共享工具。默认同时只跑 1 个子智能体（可配置），另有 beta 的  ` AsyncSubAgentMiddleware  `
+支持异步长跑委派。
+
+###  为什么说差异最大
+
+DeepAgents 的子智能体是  ** 嵌套、短暂、单次交接  ** 的——父调一次 task，子用全新上下文跑完返回一份报告就结束；而且子智能体栈里
+** 没有  ** ` SubAgentMiddleware  ` ，不能再往下嵌套派生。
+
+AgentScope 2.0 的 Agent Team 则是  ** 分布式、持久、对等协作  ** ——worker 是独立会话，靠消息总线和 inbox
+异步通信，能并发、能邀请已有 agent、能解散。更根本的是，AgentScope 的 worker 本身就是个完整
+Agent，理论上有完整的团队协作能力。
+
+一边是"派活-收报告"，一边是"组队干活"
+
+如果你的场景是"一个主智能体调度若干专家完成任务"，DeepAgents
+够用也更好上手；如果你需要多个智能体长期协作、共享状态、横向沟通，AgentScope 的模型更贴近。
+
+* * *
+
+##  安全与权限系统
+
+###  AgentScope 2.0：权限是独立模块
+
+前面提到"安全"排在首页第一个词，对应的实体就是这个权限系统——它拦截每次工具调用，返回三种决策：  ** allow / deny / ask  ** 。
+
+权限有 5 种模式：  ` DEFAULT  ` /  ` ACCEPT_EDITS  ` /  ` EXPLORE  ` /  ` BYPASS  ` /
+` DONT_ASK  ` ，通过  ` PermissionContext  ` （设在  ` AgentState.permission_context
+` ）配置，含  ` mode  ` 、  ` allow_rules  ` 、  ` deny_rules  ` 、  `
+working_directories  ` ，  ** 运行时可更新  ** 。
+
+内置工具各自实现了很细的权限逻辑：
+
+  * ` Bash  ` ：注入风险检测、只读命令检测、危险命令模式、sed 约束检查、危险路径保护、危险删除检测。 
+  * 文件工具：强制 read-before-write；危险路径保护返回  ** bypass 免疫  ** 的 ASK——也就是说即使切到 BYPASS 模式，这类操作还是会问一下。 
+  * ` generate_suggestions  ` ：比如  ` Bash  ` 会提取命令前缀（前两个 token）作为建议规则，供 HITL 确认时用。 
+
+人在回路（HITL）有两种暂停触发：权限 ASK → 发出  ` RequireUserConfirmEvent  ` （每个工具调用带  `
+suggested_rules  ` ），用  ` UserConfirmResultEvent  ` 恢复——确认时可顺手把规则加入
+allow/deny；  ` is_external_tool=True  ` → 发出  ` RequireExternalExecutionEvent
+` ，用  ` ExternalExecutionResultEvent  ` 恢复。
+
+###  DeepAgents：文件系统权限，但把责任讲在前头
+
+** 文件系统权限（  ` FilesystemPermission  ` ）  ** ：声明式 allow/deny 规则，字段：  `
+operations  ` （  ` read  ` 和/或  ` write  ` ）、  ` paths  ` （glob 模式）、  ` mode
+` （  ` allow  ` 或  ` deny  ` ）。  ** 首个匹配获胜；无匹配 = 允许  ** 。
+
+    
+    
+    permissions=[FilesystemPermission(  
+        operations=["write"],  
+        paths=["/policies/**"],  
+        mode="deny"  
+    )]
+
+人在回路用  ` interrupt_on  ` 把工具名映射到中断配置，需要  ` checkpointer  ` ：
+
+    
+    
+    interrupt_on={"remove_file": True,  
+        "notify_email": {"allowed_decisions": ["approve", "reject"]}}
+
+🔒  ** 上下文注入风险  ** ：沙箱隔离代码但  ** 不  ** 防上下文注入。"Never put secrets inside a
+sandbox."（绝不要把密钥放进沙箱。）足够有创意的上下文注入攻击可绕过输出过滤和 HITL 审查。
+
+🌐  ** 网络外泄  ** ：除非阻断网络，否则被上下文注入的 Agent 可把数据送出沙箱。
+
+📁  ` FilesystemBackend  ` /  ` LocalShellBackend  ` ：直接宿主访问；"Don't use them in
+deployed agents."（不要在部署的 Agent 中使用它们。）
+
+两边权限的精细程度差着档次
+
+AgentScope 2.0 有 5 种模式、bypass 免疫的 ASK、read-before-
+write、危险命令/路径检测、建议规则流，是一套独立的安全体系；DeepAgents 主要是文件系统路径的 allow/deny glob
+规则，相对轻量，而且文档很坦率地把这定位为"责任共担"——它反复提醒你上下文注入靠沙箱解决不了。如果你的应用对工具调用安全要求高，AgentScope
+这块明显更硬。
+
+* * *
+
+##  部署与可观测性
+
+###  AgentScope 2.0：自带的 Agent Service
+
+这是两边拉开差距的地方。AgentScope 2.0 把一个基于 FastAPI 的托管层做进了框架，开箱就带：多租户（by
+construction）、Redis 支持的分布式状态、会话重放（SSE 缓冲）、后台任务卸载、Cron
+调度（APScheduler）、HITL、协议适配（AG-UI、A2A）、预算控制（  ` ReplyBudgetControlMiddleware  `
+按回复封顶加权 token 成本）、TTS（  ` TTSMiddleware  ` ）。
+
+可观测性用 OpenTelemetry，通过  ` TracingMiddleware  ` （为 reply、model call、tool
+execution 生成 span）。存储用  ` RedisStorage  ` ，管理
+AgentRecord、SessionRecord、CredentialRecord（凭据加密）等记录。注意：无内置用户认证——只有占位的  `
+X-User-ID  ` header，需自备 auth。
+
+###  DeepAgents：交给 LangGraph/LangSmith 生态
+
+DeepAgents 自己不带服务层，部署走 LangGraph 那套：每步 checkpoint 持久化执行、  ` langgraph.json  `
+部署文件、LangSmith Deployments（自动 provision threads/runs/store/checkpointer，提供
+auth/webhooks/cron/可观测性）、Managed Deep Agents（LangSmith 托管运行时，私有预览
+waitlist）、LangSmith tracing/Engine。
+
+差别在于"服务层在框架里"还是"在生态里"
+
+AgentScope 2.0 把多租户 HTTP 服务都做进了框架，开箱即用，但绑了 Redis；DeepAgents 把部署留给 LangGraph +
+LangSmith，框架本身更轻，但要凑齐这些能力得组合 LangSmith Deployments 或 Managed Deep Agents。不想绑定
+LangSmith、想自控全栈的话，AgentScope 2.0 更直接；已经在 LangChain 生态里，DeepAgents 顺一些。
+
+* * *
+
+##  快速上手对比
+
+###  AgentScope 2.0（Python 3.11+，异步）
+
+    
+    
+    # 安装  
+    uv pip install agentscope        # 或 agentscope[full] / [rag]  
+      
+    from agentscope.agent import Agent  
+    from agentscope.model import DashScopeChatModel, DashScopeCredential  
+    from agentscope.tool import Toolkit  
+    from agentscope.tool.builtins import Bash, Read, Write, Edit  
+      
+    model = DashScopeChatModel(  
+        credential=DashScopeCredential(api_key="..."),  
+        model="qwen-plus",  
+    )  
+    toolkit = Toolkit(tools=[Bash(), Read(), Write(), Edit()])  
+    agent = Agent(  
+        name="assistant",  
+        system_prompt="You are a helpful assistant.",  
+        model=model,  
+        toolkit=toolkit,  
+    )  
+      
+    # 同步最终结果 / 或流式事件  
+    final_msg = await agent.reply(user_msg)  
+    async for event in agent.reply_stream(user_msg):  
+        ...
+
+###  DeepAgents（同步，极简）
+
+    
+    
+    # 安装  
+    pip install deepagents tavily-python  
+      
+    from deepagents import create_deep_agent  
+      
+    def get_weather(city: str) -> str:  
+        """Get weather for a given city."""  
+        return f"It's always sunny in {city}!"  
+      
+    agent = create_deep_agent(  
+        model="google_genai:gemini-3.5-flash",  
+        tools=[get_weather],  
+        system_prompt="You are a helpful assistant",  
+    )  
+    result = agent.invoke({"messages": [  
+        {"role": "user", "content": "what is the weather in sf"}  
+    ]})  
+    print(result["messages"][-1].content)
+
+上手体验差很多
+
+DeepAgents 一个函数、一个模型字符串、一个工具列表就能跑，还是同步的  ` invoke  ` ；AgentScope 2.0 得显式组装
+Credential/Model/Toolkit/Agent，而且一上来就是异步（  ` await reply  ` /  ` async for  `
+）。想五分钟跑起来一个能干活的 Agent，DeepAgents 明显更快；但 AgentScope 这套样板代码换来的是每个对象都可配置、可替换。
+
+* * *
+
+##  怎么选
+
+###  倾向 AgentScope 2.0 的场景
+
+  * 你要的是  ** 从单 Agent 到多租户分布式服务的完整栈  ** ，而且不想绑定 LangSmith 生态。 
+  * ** 工具调用的安全控制是硬需求  ** （5 种权限模式、read-before-write、危险命令检测、bypass 免疫的确认）。 
+  * 需要  ** 多个智能体长期协作  ** （Agent Team：leader/worker + 消息总线 + 并发 + 分布式）。 
+  * 要走  ** 多模态全链路  ** （多模态 Embedding、多模态 RAG、TTS、Realtime）。 
+  * 需要  ** 开箱即用的可观测性  ** （OpenTelemetry 中间件）和  ** schema 驱动的前端  ** 。 
+  * 希望每个边界（Parser/Chunker/VectorStore/Workspace/Storage/Auth）都能替换。 
+  * 能接受 Redis 依赖和 Python 3.11+。 
+
+###  倾向 DeepAgents 的场景
+
+  * 想用最短时间跑起来一个能干活的智能体——一个函数、几行代码。 
+  * 已经在  ** LangChain/LangGraph 生态  ** 里，想复用那套工具/中间件/可观测性。 
+  * 你的多智能体模式就是  ** 派活-收报告  ** （委派式、单次交接、上下文隔离），不需要持久团队。 
+  * 需要  ** 多样的云沙箱  ** （7 个沙箱提供方 + QuickJS Interpreter）。 
+  * 看重  ** LangGraph 的持久化执行  ** （checkpoint、时间旅行、无限期中断、审计轨迹）。 
+  * 想直接用上  ** Anthropic/Bedrock 自动 prompt caching  ** 。 
+  * 能接受把部署交给 LangSmith Deployments / Managed Deep Agents。 
+
+###  决策矩阵
+
+你的优先级  |  推荐  
+---|---  
+5 分钟跑起来一个 Agent  |  ** DeepAgents  **  
+生产级多租户服务，自控全栈  |  ** AgentScope 2.0  **  
+精细的工具权限与安全控制  |  ** AgentScope 2.0  **  
+持久化、分布式多智能体团队  |  ** AgentScope 2.0  **  
+委派-汇报式子智能体  |  ** DeepAgents  **  
+已深度使用 LangChain 生态  |  ** DeepAgents  **  
+多模态 RAG / TTS / Realtime  |  ** AgentScope 2.0  **  
+云沙箱多样性  |  ** DeepAgents  **  
+每个模块都要可替换  |  ** AgentScope 2.0  **  
+Anthropic prompt caching 自动化  |  ** DeepAgents  **  
+  
+* * *
+
+##  写在最后
+
+这两种框架根本上是两种取舍。AgentScope 2.0 选了"全栈、安全优先、分布式原生"这条路——从一个无状态推理引擎出发，把权限、工作空间、Agent
+Service、Agent Team、RAG、可观测性都做成了框架的一等公民，代价是学习曲线更陡、样板代码更多、绑了 Redis，而且 1.0 到 2.0
+是一次不向下兼容的重写。它面向的是"要从零搭一个完整、可控、可扩展的多智能体服务平台"这种需求。
+
+DeepAgents 选了"开箱即用的智能体外壳、生态融合"这条路——用预装的中间件堆栈把规划、文件系统、子智能体、记忆、上下文管理、HITL
+一次封装好，几行代码就能跑，部署和可观测性交给成熟的 LangGraph/LangSmith
+生态。它面向的是"想快速验证和上线单个或少量委派式智能体"这种需求。
+
+* * *
+
+真正影响选型的，是那几个根本差异
+
+它们并不互斥。在一个大型组织里，完全可以用 DeepAgents 快速做原型和跑轻量生产 Agent，同时用 AgentScope 2.0
+来搭需要强安全治理和多租户协作的平台底座。真正影响选型的是那几个根本差异——服务层放在框架里还是生态里、多智能体是组队还是派活、权限是独立体系还是辅助规则——想清楚这几条，选型基本就清楚了。
+
+  
+
+预览时标签不可点
+
+微信扫一扫  
+关注该公众号
+
+知道了
+
+微信扫一扫  
+使用小程序
+
+****
+
+取消  允许
+
+****
+
+取消  允许
+
+****
+
+取消  允许
+
+×  分析
+
+__
+
+![作者头像](http://mmbiz.qpic.cn/mmbiz_png/MqIydKd3zO0jAE9FKAhTicLZIIeZlIar2hBibicjVDmm41NuBhibwoKEV9Dk8IUTId2ZYPh6zskKNjn4tbdDN3WblsYgBdIDicU3PDmicwqelbe3A/0?wx_fmt=png)
+
+微信扫一扫可打开此内容，  
+使用完整服务
+
+：  ，  ，  ，  ，  ，  ，  ，  ，  ，  ，  ，  ，  。  视频  小程序  赞  ，轻点两下取消赞  在看  ，轻点两下取消在看
+分享  留言  收藏  听过
+

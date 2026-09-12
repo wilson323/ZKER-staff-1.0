@@ -1,0 +1,4019 @@
+{
+  "revision": "v2.4",
+  "status": "DESIGN_ROLE_OWNERSHIP_NOT_FEATURE_IMPLEMENTATION",
+  "requirementCount": 153,
+  "domainCount": 21,
+  "pageGroupCount": 22,
+  "sourceRequirementSha256": "f462eedd02e8b0168cacfcf5d2e7cc9a2135b710021e4598e2c8e73ca7c0c002",
+  "requirements": [
+    {
+      "requirementId": "WD-01",
+      "storyId": "US-WD-01",
+      "domain": "WD",
+      "roleProfiles": [
+        "member",
+        "main",
+        "collab",
+        "writer",
+        "initiator"
+      ],
+      "pageGroups": [
+        "P01",
+        "P02"
+      ],
+      "acceptance": "typecheck 通过；普通员工从首页进入自己的节点，按钮触发真实动作，刷新可恢复",
+      "coverageKind": "DESIGN_ROLE_OWNERSHIP_NOT_FEATURE_IMPLEMENTATION"
+    },
+    {
+      "requirementId": "WD-02",
+      "storyId": "US-WD-02",
+      "domain": "WD",
+      "roleProfiles": [
+        "member",
+        "main",
+        "collab",
+        "writer",
+        "initiator"
+      ],
+      "pageGroups": [
+        "P01",
+        "P02",
+        "P22"
+      ],
+      "acceptance": "从任务卡可完成配置、执行、检查和提交；全程保持同一业务任务关联",
+      "coverageKind": "DESIGN_ROLE_OWNERSHIP_NOT_FEATURE_IMPLEMENTATION"
+    },
+    {
+      "requirementId": "WD-03",
+      "storyId": "US-WD-03",
+      "domain": "WD",
+      "roleProfiles": [
+        "member",
+        "main",
+        "collab",
+        "writer",
+        "initiator"
+      ],
+      "pageGroups": [
+        "P01",
+        "P02"
+      ],
+      "acceptance": "每个状态对应权威记录；同一任务在切换视图后状态一致，无重复计数",
+      "coverageKind": "DESIGN_ROLE_OWNERSHIP_NOT_FEATURE_IMPLEMENTATION"
+    },
+    {
+      "requirementId": "WD-04",
+      "storyId": "US-WD-04",
+      "domain": "WD",
+      "roleProfiles": [
+        "member",
+        "main",
+        "collab",
+        "writer",
+        "initiator"
+      ],
+      "pageGroups": [
+        "P01",
+        "P02"
+      ],
+      "acceptance": "用户无需打开流程后台即可回答“做什么、为什么是我、交给谁”",
+      "coverageKind": "DESIGN_ROLE_OWNERSHIP_NOT_FEATURE_IMPLEMENTATION"
+    },
+    {
+      "requirementId": "WD-05",
+      "storyId": "US-WD-05",
+      "domain": "WD",
+      "roleProfiles": [
+        "member",
+        "main",
+        "collab",
+        "writer",
+        "initiator"
+      ],
+      "pageGroups": [
+        "P01",
+        "P02"
+      ],
+      "acceptance": "普通员工仅查询可见集合；筛选与返回导航保留，不暴露全租户总数",
+      "coverageKind": "DESIGN_ROLE_OWNERSHIP_NOT_FEATURE_IMPLEMENTATION"
+    },
+    {
+      "requirementId": "WD-06",
+      "storyId": "US-WD-06",
+      "domain": "WD",
+      "roleProfiles": [
+        "member",
+        "main",
+        "collab",
+        "writer",
+        "initiator"
+      ],
+      "pageGroups": [
+        "P01",
+        "P02"
+      ],
+      "acceptance": "通知能直接定位任务内待处理项；已解决项自动消失并保留处理历史",
+      "coverageKind": "DESIGN_ROLE_OWNERSHIP_NOT_FEATURE_IMPLEMENTATION"
+    },
+    {
+      "requirementId": "HR-01",
+      "storyId": "US-HR-01",
+      "domain": "HR",
+      "roleProfiles": [
+        "responsible",
+        "hr",
+        "org",
+        "assignment",
+        "receiver"
+      ],
+      "pageGroups": [
+        "P02",
+        "P03",
+        "P18"
+      ],
+      "acceptance": "同一实例能查到各角色与解析来源；模板岗位变更不覆写已发生责任记录",
+      "coverageKind": "DESIGN_ROLE_OWNERSHIP_NOT_FEATURE_IMPLEMENTATION"
+    },
+    {
+      "requirementId": "HR-02",
+      "storyId": "US-HR-02",
+      "domain": "HR",
+      "roleProfiles": [
+        "responsible",
+        "hr",
+        "org",
+        "assignment",
+        "receiver"
+      ],
+      "pageGroups": [
+        "P02",
+        "P03",
+        "P18"
+      ],
+      "acceptance": "两人同时领取只有一人成功；失败者看到最新归属；转派后旧执行权失效",
+      "coverageKind": "DESIGN_ROLE_OWNERSHIP_NOT_FEATURE_IMPLEMENTATION"
+    },
+    {
+      "requirementId": "HR-03",
+      "storyId": "US-HR-03",
+      "domain": "HR",
+      "roleProfiles": [
+        "responsible",
+        "hr",
+        "org",
+        "assignment",
+        "receiver"
+      ],
+      "pageGroups": [
+        "P02",
+        "P03",
+        "P18"
+      ],
+      "acceptance": "无合格人员时产生明确异常任务；不悄悄分给无权限人员",
+      "coverageKind": "DESIGN_ROLE_OWNERSHIP_NOT_FEATURE_IMPLEMENTATION"
+    },
+    {
+      "requirementId": "HR-04",
+      "storyId": "US-HR-04",
+      "domain": "HR",
+      "roleProfiles": [
+        "responsible",
+        "hr",
+        "org",
+        "assignment",
+        "receiver"
+      ],
+      "pageGroups": [
+        "P02",
+        "P03",
+        "P18"
+      ],
+      "acceptance": "专家给意见不自动批准；节点执行人不能借“确认完成”替代独立审批",
+      "coverageKind": "DESIGN_ROLE_OWNERSHIP_NOT_FEATURE_IMPLEMENTATION"
+    },
+    {
+      "requirementId": "HR-05",
+      "storyId": "US-HR-05",
+      "domain": "HR",
+      "roleProfiles": [
+        "responsible",
+        "hr",
+        "org",
+        "assignment",
+        "receiver"
+      ],
+      "pageGroups": [
+        "P02",
+        "P03",
+        "P18"
+      ],
+      "acceptance": "每次处理保留理由、接收人、期限与结果；返回原节点继续而非丢失上下文",
+      "coverageKind": "DESIGN_ROLE_OWNERSHIP_NOT_FEATURE_IMPLEMENTATION"
+    },
+    {
+      "requirementId": "HR-06",
+      "storyId": "US-HR-06",
+      "domain": "HR",
+      "roleProfiles": [
+        "responsible",
+        "hr",
+        "org",
+        "assignment",
+        "receiver"
+      ],
+      "pageGroups": [
+        "P02",
+        "P03",
+        "P18"
+      ],
+      "acceptance": "未完成任务有接收人；旧会话/授权不能继续写；个人私有材料按范围处理",
+      "coverageKind": "DESIGN_ROLE_OWNERSHIP_NOT_FEATURE_IMPLEMENTATION"
+    },
+    {
+      "requirementId": "NC-01",
+      "storyId": "US-NC-01",
+      "domain": "NC",
+      "roleProfiles": [
+        "main",
+        "tech",
+        "collab",
+        "writer",
+        "receiver",
+        "interactor"
+      ],
+      "pageGroups": [
+        "P04"
+      ],
+      "acceptance": "保存后重开节点配置仍在；真实执行读取相同版本，不只显示摘要",
+      "coverageKind": "DESIGN_ROLE_OWNERSHIP_NOT_FEATURE_IMPLEMENTATION"
+    },
+    {
+      "requirementId": "NC-02",
+      "storyId": "US-NC-02",
+      "domain": "NC",
+      "roleProfiles": [
+        "main",
+        "tech",
+        "collab",
+        "writer",
+        "receiver",
+        "interactor"
+      ],
+      "pageGroups": [
+        "P04",
+        "P22"
+      ],
+      "acceptance": "可搜索可见候选，显示名称/用途/可用状态；普通用户无需知道内部 ID",
+      "coverageKind": "DESIGN_ROLE_OWNERSHIP_NOT_FEATURE_IMPLEMENTATION"
+    },
+    {
+      "requirementId": "NC-03",
+      "storyId": "US-NC-03",
+      "domain": "NC",
+      "roleProfiles": [
+        "main",
+        "tech",
+        "collab",
+        "writer",
+        "receiver",
+        "interactor"
+      ],
+      "pageGroups": [
+        "P04",
+        "P22"
+      ],
+      "acceptance": "选择自己的 Agent 可完成任务；所有候选均通过节点资格和当前用户权限校验",
+      "coverageKind": "DESIGN_ROLE_OWNERSHIP_NOT_FEATURE_IMPLEMENTATION"
+    },
+    {
+      "requirementId": "NC-04",
+      "storyId": "US-NC-04",
+      "domain": "NC",
+      "roleProfiles": [
+        "main",
+        "tech",
+        "collab",
+        "writer",
+        "receiver",
+        "interactor"
+      ],
+      "pageGroups": [
+        "P04",
+        "P22"
+      ],
+      "acceptance": "已授权替换可直接执行；不满足要求时显示可理解的缺项与下一步",
+      "coverageKind": "DESIGN_ROLE_OWNERSHIP_NOT_FEATURE_IMPLEMENTATION"
+    },
+    {
+      "requirementId": "NC-05",
+      "storyId": "US-NC-05",
+      "domain": "NC",
+      "roleProfiles": [
+        "main",
+        "tech",
+        "collab",
+        "writer",
+        "receiver",
+        "interactor"
+      ],
+      "pageGroups": [
+        "P04"
+      ],
+      "acceptance": "本次替换不改变别人或其他节点；个人偏好重用时重新做资格校验",
+      "coverageKind": "DESIGN_ROLE_OWNERSHIP_NOT_FEATURE_IMPLEMENTATION"
+    },
+    {
+      "requirementId": "NC-06",
+      "storyId": "US-NC-06",
+      "domain": "NC",
+      "roleProfiles": [
+        "main",
+        "tech",
+        "collab",
+        "writer",
+        "receiver",
+        "interactor"
+      ],
+      "pageGroups": [
+        "P04"
+      ],
+      "acceptance": "人工模式仍能提交交付物；协助模式由人确认；自动模式遵守既定风险合同",
+      "coverageKind": "DESIGN_ROLE_OWNERSHIP_NOT_FEATURE_IMPLEMENTATION"
+    },
+    {
+      "requirementId": "NC-07",
+      "storyId": "US-NC-07",
+      "domain": "NC",
+      "roleProfiles": [
+        "main",
+        "tech",
+        "collab",
+        "writer",
+        "receiver",
+        "interactor"
+      ],
+      "pageGroups": [
+        "P04",
+        "P22"
+      ],
+      "acceptance": "数据库关联可回读；重启仍有效；执行证据能证明实际使用的 Agent/技能/连接器版本",
+      "coverageKind": "DESIGN_ROLE_OWNERSHIP_NOT_FEATURE_IMPLEMENTATION"
+    },
+    {
+      "requirementId": "NC-08",
+      "storyId": "US-NC-08",
+      "domain": "NC",
+      "roleProfiles": [
+        "main",
+        "tech",
+        "collab",
+        "writer",
+        "receiver",
+        "interactor"
+      ],
+      "pageGroups": [
+        "P04",
+        "P22"
+      ],
+      "acceptance": "已运行结果可追溯旧配置；替换后旧尝试不可提交，新尝试从明确输入继续",
+      "coverageKind": "DESIGN_ROLE_OWNERSHIP_NOT_FEATURE_IMPLEMENTATION"
+    },
+    {
+      "requirementId": "AG-01",
+      "storyId": "US-AG-01",
+      "domain": "AG",
+      "roleProfiles": [
+        "resource",
+        "publisher",
+        "workforce",
+        "interactor",
+        "member"
+      ],
+      "pageGroups": [
+        "P05"
+      ],
+      "acceptance": "修改配置产生对应版本差异和摘要；版本读取、发布、执行所用内容一致",
+      "coverageKind": "DESIGN_ROLE_OWNERSHIP_NOT_FEATURE_IMPLEMENTATION"
+    },
+    {
+      "requirementId": "AG-02",
+      "storyId": "US-AG-02",
+      "domain": "AG",
+      "roleProfiles": [
+        "resource",
+        "publisher",
+        "workforce",
+        "interactor",
+        "member"
+      ],
+      "pageGroups": [
+        "P05",
+        "P22"
+      ],
+      "acceptance": "可选择授权对象/范围并预览影响；只有已有权限允许的动作出现，服务端同样拒绝越权",
+      "coverageKind": "DESIGN_ROLE_OWNERSHIP_NOT_FEATURE_IMPLEMENTATION"
+    },
+    {
+      "requirementId": "AG-03",
+      "storyId": "US-AG-03",
+      "domain": "AG",
+      "roleProfiles": [
+        "resource",
+        "publisher",
+        "workforce",
+        "interactor",
+        "member"
+      ],
+      "pageGroups": [
+        "P05"
+      ],
+      "acceptance": "能完成名称、职责、输入、交付、风格、边界配置，并试运行后保存",
+      "coverageKind": "DESIGN_ROLE_OWNERSHIP_NOT_FEATURE_IMPLEMENTATION"
+    },
+    {
+      "requirementId": "AG-04",
+      "storyId": "US-AG-04",
+      "domain": "AG",
+      "roleProfiles": [
+        "resource",
+        "publisher",
+        "workforce",
+        "interactor",
+        "member"
+      ],
+      "pageGroups": [
+        "P05",
+        "P22"
+      ],
+      "acceptance": "每个标签来自同一 Agent；资源变化、版本与任务历史可以互相定位",
+      "coverageKind": "DESIGN_ROLE_OWNERSHIP_NOT_FEATURE_IMPLEMENTATION"
+    },
+    {
+      "requirementId": "AG-05",
+      "storyId": "US-AG-05",
+      "domain": "AG",
+      "roleProfiles": [
+        "resource",
+        "publisher",
+        "workforce",
+        "interactor",
+        "member"
+      ],
+      "pageGroups": [
+        "P05",
+        "P22"
+      ],
+      "acceptance": "相同 Agent 不因多种关系重复；可用权限清楚，私有资产不被其他用户枚举",
+      "coverageKind": "DESIGN_ROLE_OWNERSHIP_NOT_FEATURE_IMPLEMENTATION"
+    },
+    {
+      "requirementId": "AG-06",
+      "storyId": "US-AG-06",
+      "domain": "AG",
+      "roleProfiles": [
+        "resource",
+        "publisher",
+        "workforce",
+        "interactor",
+        "member"
+      ],
+      "pageGroups": [
+        "P05",
+        "P22"
+      ],
+      "acceptance": "草稿作者能回到草稿继续；停用有依赖影响，历史仍能还原原版本",
+      "coverageKind": "DESIGN_ROLE_OWNERSHIP_NOT_FEATURE_IMPLEMENTATION"
+    },
+    {
+      "requirementId": "AG-07",
+      "storyId": "US-AG-07",
+      "domain": "AG",
+      "roleProfiles": [
+        "resource",
+        "publisher",
+        "workforce",
+        "interactor",
+        "member"
+      ],
+      "pageGroups": [
+        "P05",
+        "P22"
+      ],
+      "acceptance": "包不含个人凭据/隐私；导入先预览，缺依赖明确提示，升级不修改在途实例",
+      "coverageKind": "DESIGN_ROLE_OWNERSHIP_NOT_FEATURE_IMPLEMENTATION"
+    },
+    {
+      "requirementId": "SK-01",
+      "storyId": "US-SK-01",
+      "domain": "SK",
+      "roleProfiles": [
+        "skill",
+        "tool",
+        "evolution",
+        "main",
+        "writer"
+      ],
+      "pageGroups": [
+        "P06",
+        "P04",
+        "P22"
+      ],
+      "acceptance": "新建后可返回继续编辑；已发布版本能在合格节点被发现和选用",
+      "coverageKind": "DESIGN_ROLE_OWNERSHIP_NOT_FEATURE_IMPLEMENTATION"
+    },
+    {
+      "requirementId": "SK-02",
+      "storyId": "US-SK-02",
+      "domain": "SK",
+      "roleProfiles": [
+        "skill",
+        "tool",
+        "evolution",
+        "main",
+        "writer"
+      ],
+      "pageGroups": [
+        "P06",
+        "P04"
+      ],
+      "acceptance": "员工能据业务说明判断是否适用；不依赖阅读脚本或 Manifest",
+      "coverageKind": "DESIGN_ROLE_OWNERSHIP_NOT_FEATURE_IMPLEMENTATION"
+    },
+    {
+      "requirementId": "SK-03",
+      "storyId": "US-SK-03",
+      "domain": "SK",
+      "roleProfiles": [
+        "skill",
+        "tool",
+        "evolution",
+        "main",
+        "writer"
+      ],
+      "pageGroups": [
+        "P06",
+        "P04",
+        "P22"
+      ],
+      "acceptance": "缺依赖/参数错误在执行前发现；有效参数实际传到技能调用",
+      "coverageKind": "DESIGN_ROLE_OWNERSHIP_NOT_FEATURE_IMPLEMENTATION"
+    },
+    {
+      "requirementId": "SK-04",
+      "storyId": "US-SK-04",
+      "domain": "SK",
+      "roleProfiles": [
+        "skill",
+        "tool",
+        "evolution",
+        "main",
+        "writer"
+      ],
+      "pageGroups": [
+        "P06",
+        "P04",
+        "P22"
+      ],
+      "acceptance": "解析错误可定位；导入不立即执行；发布版本有对应测试和内容摘要",
+      "coverageKind": "DESIGN_ROLE_OWNERSHIP_NOT_FEATURE_IMPLEMENTATION"
+    },
+    {
+      "requirementId": "SK-05",
+      "storyId": "US-SK-05",
+      "domain": "SK",
+      "roleProfiles": [
+        "skill",
+        "tool",
+        "evolution",
+        "main",
+        "writer"
+      ],
+      "pageGroups": [
+        "P06",
+        "P04"
+      ],
+      "acceptance": "试用输入与真实业务隔离；员工能比较结果，试用不擅自产生正式副作用",
+      "coverageKind": "DESIGN_ROLE_OWNERSHIP_NOT_FEATURE_IMPLEMENTATION"
+    },
+    {
+      "requirementId": "SK-06",
+      "storyId": "US-SK-06",
+      "domain": "SK",
+      "roleProfiles": [
+        "skill",
+        "tool",
+        "evolution",
+        "main",
+        "writer"
+      ],
+      "pageGroups": [
+        "P06",
+        "P04",
+        "P22"
+      ],
+      "acceptance": "受影响对象可定位；历史运行仍引用旧版；失效不被报告为已生效",
+      "coverageKind": "DESIGN_ROLE_OWNERSHIP_NOT_FEATURE_IMPLEMENTATION"
+    },
+    {
+      "requirementId": "SK-07",
+      "storyId": "US-SK-07",
+      "domain": "SK",
+      "roleProfiles": [
+        "skill",
+        "tool",
+        "evolution",
+        "main",
+        "writer"
+      ],
+      "pageGroups": [
+        "P06",
+        "P04"
+      ],
+      "acceptance": "指标能回溯到任务；安装量不冒充成功率；不因推荐扩大授权",
+      "coverageKind": "DESIGN_ROLE_OWNERSHIP_NOT_FEATURE_IMPLEMENTATION"
+    },
+    {
+      "requirementId": "CN-01",
+      "storyId": "US-CN-01",
+      "domain": "CN",
+      "roleProfiles": [
+        "tool",
+        "api",
+        "apiadmin",
+        "main",
+        "collab"
+      ],
+      "pageGroups": [
+        "P07",
+        "P04"
+      ],
+      "acceptance": "绑定后查询可见且 Runtime 实际可用；解绑后未来调用被拒绝；重启保持一致",
+      "coverageKind": "DESIGN_ROLE_OWNERSHIP_NOT_FEATURE_IMPLEMENTATION"
+    },
+    {
+      "requirementId": "CN-02",
+      "storyId": "US-CN-02",
+      "domain": "CN",
+      "roleProfiles": [
+        "tool",
+        "api",
+        "apiadmin",
+        "main",
+        "collab"
+      ],
+      "pageGroups": [
+        "P07",
+        "P04",
+        "P22"
+      ],
+      "acceptance": "每一状态有真实来源；“允许启用”不被展示成“已连接”；异常能定位到对应阶段",
+      "coverageKind": "DESIGN_ROLE_OWNERSHIP_NOT_FEATURE_IMPLEMENTATION"
+    },
+    {
+      "requirementId": "CN-03",
+      "storyId": "US-CN-03",
+      "domain": "CN",
+      "roleProfiles": [
+        "tool",
+        "api",
+        "apiadmin",
+        "main",
+        "collab"
+      ],
+      "pageGroups": [
+        "P07",
+        "P04",
+        "P22"
+      ],
+      "acceptance": "完成一次授权范围内查询无需填写标识或协议字段；技术调试仍从管理端可达",
+      "coverageKind": "DESIGN_ROLE_OWNERSHIP_NOT_FEATURE_IMPLEMENTATION"
+    },
+    {
+      "requirementId": "CN-04",
+      "storyId": "US-CN-04",
+      "domain": "CN",
+      "roleProfiles": [
+        "tool",
+        "api",
+        "apiadmin",
+        "main",
+        "collab"
+      ],
+      "pageGroups": [
+        "P07",
+        "P04",
+        "P22"
+      ],
+      "acceptance": "员工明确知道“以谁的账号执行”；分享 Agent 不附带分享原作者外部账号",
+      "coverageKind": "DESIGN_ROLE_OWNERSHIP_NOT_FEATURE_IMPLEMENTATION"
+    },
+    {
+      "requirementId": "CN-05",
+      "storyId": "US-CN-05",
+      "domain": "CN",
+      "roleProfiles": [
+        "tool",
+        "api",
+        "apiadmin",
+        "main",
+        "collab"
+      ],
+      "pageGroups": [
+        "P07",
+        "P04",
+        "P22"
+      ],
+      "acceptance": "失效可修复后回到原任务；密钥不进入对话、导出或前端普通字段",
+      "coverageKind": "DESIGN_ROLE_OWNERSHIP_NOT_FEATURE_IMPLEMENTATION"
+    },
+    {
+      "requirementId": "CN-06",
+      "storyId": "US-CN-06",
+      "domain": "CN",
+      "roleProfiles": [
+        "tool",
+        "api",
+        "apiadmin",
+        "main",
+        "collab"
+      ],
+      "pageGroups": [
+        "P07",
+        "P04"
+      ],
+      "acceptance": "显示实际发现的工具及参数；服务不可达/零工具/版本不兼容有不同处理",
+      "coverageKind": "DESIGN_ROLE_OWNERSHIP_NOT_FEATURE_IMPLEMENTATION"
+    },
+    {
+      "requirementId": "CN-07",
+      "storyId": "US-CN-07",
+      "domain": "CN",
+      "roleProfiles": [
+        "tool",
+        "api",
+        "apiadmin",
+        "main",
+        "collab"
+      ],
+      "pageGroups": [
+        "P07",
+        "P04"
+      ],
+      "acceptance": "员工能确认目标网页/设备/目录；读写边界、当前任务和实际执行对象一致",
+      "coverageKind": "DESIGN_ROLE_OWNERSHIP_NOT_FEATURE_IMPLEMENTATION"
+    },
+    {
+      "requirementId": "CN-08",
+      "storyId": "US-CN-08",
+      "domain": "CN",
+      "roleProfiles": [
+        "tool",
+        "api",
+        "apiadmin",
+        "main",
+        "collab"
+      ],
+      "pageGroups": [
+        "P07",
+        "P04",
+        "P22"
+      ],
+      "acceptance": "同一提交重试不重复创建外部对象；超时显示待确认，确认后可恢复任务",
+      "coverageKind": "DESIGN_ROLE_OWNERSHIP_NOT_FEATURE_IMPLEMENTATION"
+    },
+    {
+      "requirementId": "CN-09",
+      "storyId": "US-CN-09",
+      "domain": "CN",
+      "roleProfiles": [
+        "tool",
+        "api",
+        "apiadmin",
+        "main",
+        "collab"
+      ],
+      "pageGroups": [
+        "P07",
+        "P04",
+        "P22"
+      ],
+      "acceptance": "每个宣称可用的连接器有独立实例调用证据；停止维护/撤回后依赖任务有替代方案",
+      "coverageKind": "DESIGN_ROLE_OWNERSHIP_NOT_FEATURE_IMPLEMENTATION"
+    },
+    {
+      "requirementId": "KB-01",
+      "storyId": "US-KB-01",
+      "domain": "KB",
+      "roleProfiles": [
+        "knowledge",
+        "knowledgeadmin",
+        "main",
+        "writer"
+      ],
+      "pageGroups": [
+        "P08",
+        "P20"
+      ],
+      "acceptance": "作者可找到草稿；使用者只见被授权的可用知识；绑定 Agent 与共享给人分别生效",
+      "coverageKind": "DESIGN_ROLE_OWNERSHIP_NOT_FEATURE_IMPLEMENTATION"
+    },
+    {
+      "requirementId": "KB-02",
+      "storyId": "US-KB-02",
+      "domain": "KB",
+      "roleProfiles": [
+        "knowledge",
+        "knowledgeadmin",
+        "main",
+        "writer"
+      ],
+      "pageGroups": [
+        "P08",
+        "P20"
+      ],
+      "acceptance": "上传成功与可检索分开显示；错误页/空页/失败文档不能显示可用于回答",
+      "coverageKind": "DESIGN_ROLE_OWNERSHIP_NOT_FEATURE_IMPLEMENTATION"
+    },
+    {
+      "requirementId": "KB-03",
+      "storyId": "US-KB-03",
+      "domain": "KB",
+      "roleProfiles": [
+        "knowledge",
+        "knowledgeadmin",
+        "main",
+        "writer"
+      ],
+      "pageGroups": [
+        "P08",
+        "P20"
+      ],
+      "acceptance": "加工条目能回到原文；更新产生可追溯版本，失败可重试且不重复导入",
+      "coverageKind": "DESIGN_ROLE_OWNERSHIP_NOT_FEATURE_IMPLEMENTATION"
+    },
+    {
+      "requirementId": "KB-04",
+      "storyId": "US-KB-04",
+      "domain": "KB",
+      "roleProfiles": [
+        "knowledge",
+        "knowledgeadmin",
+        "main",
+        "writer"
+      ],
+      "pageGroups": [
+        "P08",
+        "P20"
+      ],
+      "acceptance": "同义问题、无答案问题、更新后问题有固定评测集；报告真实召回与引用结果",
+      "coverageKind": "DESIGN_ROLE_OWNERSHIP_NOT_FEATURE_IMPLEMENTATION"
+    },
+    {
+      "requirementId": "KB-05",
+      "storyId": "US-KB-05",
+      "domain": "KB",
+      "roleProfiles": [
+        "knowledge",
+        "knowledgeadmin",
+        "main",
+        "writer"
+      ],
+      "pageGroups": [
+        "P08",
+        "P20"
+      ],
+      "acceptance": "引用确实支持结论；用户失去原文权限后不能借引用继续读取",
+      "coverageKind": "DESIGN_ROLE_OWNERSHIP_NOT_FEATURE_IMPLEMENTATION"
+    },
+    {
+      "requirementId": "KB-06",
+      "storyId": "US-KB-06",
+      "domain": "KB",
+      "roleProfiles": [
+        "knowledge",
+        "knowledgeadmin",
+        "main",
+        "writer"
+      ],
+      "pageGroups": [
+        "P08",
+        "P20"
+      ],
+      "acceptance": "必需版本无法误删；资料互相矛盾时提示来源与有效期，不静默混用",
+      "coverageKind": "DESIGN_ROLE_OWNERSHIP_NOT_FEATURE_IMPLEMENTATION"
+    },
+    {
+      "requirementId": "KB-07",
+      "storyId": "US-KB-07",
+      "domain": "KB",
+      "roleProfiles": [
+        "knowledge",
+        "knowledgeadmin",
+        "main",
+        "writer"
+      ],
+      "pageGroups": [
+        "P08",
+        "P20"
+      ],
+      "acceptance": "能预览受影响范围；历史交付保留原引用事实，未来使用遵守当前授权",
+      "coverageKind": "DESIGN_ROLE_OWNERSHIP_NOT_FEATURE_IMPLEMENTATION"
+    },
+    {
+      "requirementId": "MM-01",
+      "storyId": "US-MM-01",
+      "domain": "MM",
+      "roleProfiles": [
+        "datasubject",
+        "evolution",
+        "interactor",
+        "privacy"
+      ],
+      "pageGroups": [
+        "P09",
+        "P20",
+        "P22"
+      ],
+      "acceptance": "相同 Agent 服务不同员工时，私人记忆不会进入他人的任务或群聊",
+      "coverageKind": "DESIGN_ROLE_OWNERSHIP_NOT_FEATURE_IMPLEMENTATION"
+    },
+    {
+      "requirementId": "MM-02",
+      "storyId": "US-MM-02",
+      "domain": "MM",
+      "roleProfiles": [
+        "datasubject",
+        "evolution",
+        "interactor",
+        "privacy"
+      ],
+      "pageGroups": [
+        "P09",
+        "P20"
+      ],
+      "acceptance": "用户能回答一条记忆从哪来、在哪里生效；修改和失效有回读结果",
+      "coverageKind": "DESIGN_ROLE_OWNERSHIP_NOT_FEATURE_IMPLEMENTATION"
+    },
+    {
+      "requirementId": "MM-03",
+      "storyId": "US-MM-03",
+      "domain": "MM",
+      "roleProfiles": [
+        "datasubject",
+        "evolution",
+        "interactor",
+        "privacy"
+      ],
+      "pageGroups": [
+        "P09",
+        "P20"
+      ],
+      "acceptance": "本节点禁用的记忆不进入执行上下文；更正不被旧缓存再次带回",
+      "coverageKind": "DESIGN_ROLE_OWNERSHIP_NOT_FEATURE_IMPLEMENTATION"
+    },
+    {
+      "requirementId": "MM-04",
+      "storyId": "US-MM-04",
+      "domain": "MM",
+      "roleProfiles": [
+        "datasubject",
+        "evolution",
+        "interactor",
+        "privacy"
+      ],
+      "pageGroups": [
+        "P09",
+        "P20"
+      ],
+      "acceptance": "只有可复用且有依据的内容进入长期经验；未验收结果不自动变成规则",
+      "coverageKind": "DESIGN_ROLE_OWNERSHIP_NOT_FEATURE_IMPLEMENTATION"
+    },
+    {
+      "requirementId": "MM-05",
+      "storyId": "US-MM-05",
+      "domain": "MM",
+      "roleProfiles": [
+        "datasubject",
+        "evolution",
+        "interactor",
+        "privacy"
+      ],
+      "pageGroups": [
+        "P09",
+        "P20"
+      ],
+      "acceptance": "新方法能通过不同输入的相似任务；不能仅复制一次聊天就标为成熟技能",
+      "coverageKind": "DESIGN_ROLE_OWNERSHIP_NOT_FEATURE_IMPLEMENTATION"
+    },
+    {
+      "requirementId": "MM-06",
+      "storyId": "US-MM-06",
+      "domain": "MM",
+      "roleProfiles": [
+        "datasubject",
+        "evolution",
+        "interactor",
+        "privacy"
+      ],
+      "pageGroups": [
+        "P09",
+        "P20"
+      ],
+      "acceptance": "回滚目标与范围明确；回滚内容不声称撤销已发生外部操作",
+      "coverageKind": "DESIGN_ROLE_OWNERSHIP_NOT_FEATURE_IMPLEMENTATION"
+    },
+    {
+      "requirementId": "MM-07",
+      "storyId": "US-MM-07",
+      "domain": "MM",
+      "roleProfiles": [
+        "datasubject",
+        "evolution",
+        "interactor",
+        "privacy"
+      ],
+      "pageGroups": [
+        "P09",
+        "P20"
+      ],
+      "acceptance": "私人偏好不会自动变团队知识；删除/保留动作满足既定策略并可验证",
+      "coverageKind": "DESIGN_ROLE_OWNERSHIP_NOT_FEATURE_IMPLEMENTATION"
+    },
+    {
+      "requirementId": "WS-01",
+      "storyId": "US-WS-01",
+      "domain": "WS",
+      "roleProfiles": [
+        "main",
+        "tech",
+        "collab",
+        "writer",
+        "receiver"
+      ],
+      "pageGroups": [
+        "P10",
+        "P02"
+      ],
+      "acceptance": "打开任务就知道实际工作位置；同名项目不能造成跨租户/跨客户混用",
+      "coverageKind": "DESIGN_ROLE_OWNERSHIP_NOT_FEATURE_IMPLEMENTATION"
+    },
+    {
+      "requirementId": "WS-02",
+      "storyId": "US-WS-02",
+      "domain": "WS",
+      "roleProfiles": [
+        "main",
+        "tech",
+        "collab",
+        "writer",
+        "receiver"
+      ],
+      "pageGroups": [
+        "P10",
+        "P02"
+      ],
+      "acceptance": "文件上传完成、已解析、可用于执行分别明确；引用在刷新后仍指向原文件版本",
+      "coverageKind": "DESIGN_ROLE_OWNERSHIP_NOT_FEATURE_IMPLEMENTATION"
+    },
+    {
+      "requirementId": "WS-03",
+      "storyId": "US-WS-03",
+      "domain": "WS",
+      "roleProfiles": [
+        "main",
+        "tech",
+        "collab",
+        "writer",
+        "receiver"
+      ],
+      "pageGroups": [
+        "P10",
+        "P02"
+      ],
+      "acceptance": "用户先授权具体设备与范围；设备离线能识别；不假设网页服务器能读用户本机路径",
+      "coverageKind": "DESIGN_ROLE_OWNERSHIP_NOT_FEATURE_IMPLEMENTATION"
+    },
+    {
+      "requirementId": "WS-04",
+      "storyId": "US-WS-04",
+      "domain": "WS",
+      "roleProfiles": [
+        "main",
+        "tech",
+        "collab",
+        "writer",
+        "receiver"
+      ],
+      "pageGroups": [
+        "P10",
+        "P02"
+      ],
+      "acceptance": "测试越界文件访问被真实阻止；路径预览与实际访问位置一致",
+      "coverageKind": "DESIGN_ROLE_OWNERSHIP_NOT_FEATURE_IMPLEMENTATION"
+    },
+    {
+      "requirementId": "WS-05",
+      "storyId": "US-WS-05",
+      "domain": "WS",
+      "roleProfiles": [
+        "main",
+        "tech",
+        "collab",
+        "writer",
+        "receiver"
+      ],
+      "pageGroups": [
+        "P10",
+        "P02"
+      ],
+      "acceptance": "报告、表格、图片或代码在约定位置真实存在；查看权限与任务一致",
+      "coverageKind": "DESIGN_ROLE_OWNERSHIP_NOT_FEATURE_IMPLEMENTATION"
+    },
+    {
+      "requirementId": "WS-06",
+      "storyId": "US-WS-06",
+      "domain": "WS",
+      "roleProfiles": [
+        "main",
+        "tech",
+        "collab",
+        "writer",
+        "receiver"
+      ],
+      "pageGroups": [
+        "P10",
+        "P02"
+      ],
+      "acceptance": "并行工作不覆盖他人产物；合并有明确结果；归档后历史仍可定位",
+      "coverageKind": "DESIGN_ROLE_OWNERSHIP_NOT_FEATURE_IMPLEMENTATION"
+    },
+    {
+      "requirementId": "CV-01",
+      "storyId": "US-CV-01",
+      "domain": "CV",
+      "roleProfiles": [
+        "main",
+        "writer",
+        "collab",
+        "interactor",
+        "channel"
+      ],
+      "pageGroups": [
+        "P11",
+        "P02"
+      ],
+      "acceptance": "Runtime 接收内容与节点一致；缺业务输入时明确拒绝，不以 attempt ID 充当任务",
+      "coverageKind": "DESIGN_ROLE_OWNERSHIP_NOT_FEATURE_IMPLEMENTATION"
+    },
+    {
+      "requirementId": "CV-02",
+      "storyId": "US-CV-02",
+      "domain": "CV",
+      "roleProfiles": [
+        "main",
+        "writer",
+        "collab",
+        "interactor",
+        "channel"
+      ],
+      "pageGroups": [
+        "P11",
+        "P02"
+      ],
+      "acceptance": "第一条进度在任务结束前可见；断线重连不丢消息、不重复回复、不重跑业务",
+      "coverageKind": "DESIGN_ROLE_OWNERSHIP_NOT_FEATURE_IMPLEMENTATION"
+    },
+    {
+      "requirementId": "CV-03",
+      "storyId": "US-CV-03",
+      "domain": "CV",
+      "roleProfiles": [
+        "main",
+        "writer",
+        "collab",
+        "interactor",
+        "channel"
+      ],
+      "pageGroups": [
+        "P11",
+        "P02"
+      ],
+      "acceptance": "不支持的 Runtime 操作不显示为成功；支持时对实际任务生效并能查到恢复点",
+      "coverageKind": "DESIGN_ROLE_OWNERSHIP_NOT_FEATURE_IMPLEMENTATION"
+    },
+    {
+      "requirementId": "CV-04",
+      "storyId": "US-CV-04",
+      "domain": "CV",
+      "roleProfiles": [
+        "main",
+        "writer",
+        "collab",
+        "interactor",
+        "channel"
+      ],
+      "pageGroups": [
+        "P11",
+        "P02"
+      ],
+      "acceptance": "返工与原结果有关联；新目标/项目切换有明确新任务或新尝试边界",
+      "coverageKind": "DESIGN_ROLE_OWNERSHIP_NOT_FEATURE_IMPLEMENTATION"
+    },
+    {
+      "requirementId": "CV-05",
+      "storyId": "US-CV-05",
+      "domain": "CV",
+      "roleProfiles": [
+        "main",
+        "writer",
+        "collab",
+        "interactor",
+        "channel"
+      ],
+      "pageGroups": [
+        "P11",
+        "P02"
+      ],
+      "acceptance": "用户能看到操作对象、所需决定和结果；协议字段在诊断中展开",
+      "coverageKind": "DESIGN_ROLE_OWNERSHIP_NOT_FEATURE_IMPLEMENTATION"
+    },
+    {
+      "requirementId": "CV-06",
+      "storyId": "US-CV-06",
+      "domain": "CV",
+      "roleProfiles": [
+        "main",
+        "writer",
+        "collab",
+        "interactor",
+        "channel"
+      ],
+      "pageGroups": [
+        "P11",
+        "P02"
+      ],
+      "acceptance": "转换保留授权上下文及来源；不重复创建业务实例，不自动判定节点完成",
+      "coverageKind": "DESIGN_ROLE_OWNERSHIP_NOT_FEATURE_IMPLEMENTATION"
+    },
+    {
+      "requirementId": "CV-07",
+      "storyId": "US-CV-07",
+      "domain": "CV",
+      "roleProfiles": [
+        "main",
+        "writer",
+        "collab",
+        "interactor",
+        "channel"
+      ],
+      "pageGroups": [
+        "P11",
+        "P02"
+      ],
+      "acceptance": "模型额度不足、网络中断、连接器失效均有不同恢复方法；重试不复制副作用",
+      "coverageKind": "DESIGN_ROLE_OWNERSHIP_NOT_FEATURE_IMPLEMENTATION"
+    },
+    {
+      "requirementId": "TM-01",
+      "storyId": "US-TM-01",
+      "domain": "TM",
+      "roleProfiles": [
+        "team",
+        "main",
+        "workforce"
+      ],
+      "pageGroups": [
+        "P12",
+        "P02"
+      ],
+      "acceptance": "团队资格按成员能力、权限及整体需求核验；仍有明确人类责任人",
+      "coverageKind": "DESIGN_ROLE_OWNERSHIP_NOT_FEATURE_IMPLEMENTATION"
+    },
+    {
+      "requirementId": "TM-02",
+      "storyId": "US-TM-02",
+      "domain": "TM",
+      "roleProfiles": [
+        "team",
+        "main",
+        "workforce"
+      ],
+      "pageGroups": [
+        "P12",
+        "P02"
+      ],
+      "acceptance": "每个子任务有目标与输出；员工从一个节点工作区找到成员产物及最终结论",
+      "coverageKind": "DESIGN_ROLE_OWNERSHIP_NOT_FEATURE_IMPLEMENTATION"
+    },
+    {
+      "requirementId": "TM-03",
+      "storyId": "US-TM-03",
+      "domain": "TM",
+      "roleProfiles": [
+        "team",
+        "main",
+        "workforce"
+      ],
+      "pageGroups": [
+        "P12",
+        "P02"
+      ],
+      "acceptance": "共享配置不能扩大成员数据权限；团队输出不会泄漏其他成员私人上下文",
+      "coverageKind": "DESIGN_ROLE_OWNERSHIP_NOT_FEATURE_IMPLEMENTATION"
+    },
+    {
+      "requirementId": "TM-04",
+      "storyId": "US-TM-04",
+      "domain": "TM",
+      "roleProfiles": [
+        "team",
+        "main",
+        "workforce"
+      ],
+      "pageGroups": [
+        "P12",
+        "P02"
+      ],
+      "acceptance": "单个成员失败不会无说明地将团队标为成功；替代成员有记录",
+      "coverageKind": "DESIGN_ROLE_OWNERSHIP_NOT_FEATURE_IMPLEMENTATION"
+    },
+    {
+      "requirementId": "TM-05",
+      "storyId": "US-TM-05",
+      "domain": "TM",
+      "roleProfiles": [
+        "team",
+        "main",
+        "workforce"
+      ],
+      "pageGroups": [
+        "P12",
+        "P02"
+      ],
+      "acceptance": "无无限相互委派；额度与子任务可对账；停止后无新的下游副作用",
+      "coverageKind": "DESIGN_ROLE_OWNERSHIP_NOT_FEATURE_IMPLEMENTATION"
+    },
+    {
+      "requirementId": "TM-06",
+      "storyId": "US-TM-06",
+      "domain": "TM",
+      "roleProfiles": [
+        "team",
+        "main",
+        "workforce"
+      ],
+      "pageGroups": [
+        "P12",
+        "P02"
+      ],
+      "acceptance": "子任务结束不直接推动企业下一节点；汇总结果通过同一业务完成标准",
+      "coverageKind": "DESIGN_ROLE_OWNERSHIP_NOT_FEATURE_IMPLEMENTATION"
+    },
+    {
+      "requirementId": "FL-01",
+      "storyId": "US-FL-01",
+      "domain": "FL",
+      "roleProfiles": [
+        "designer",
+        "skill",
+        "main"
+      ],
+      "pageGroups": [
+        "P13",
+        "P04"
+      ],
+      "acceptance": "方案能解释用途、所需输入、资源和交付；选择后准确绑定节点实例",
+      "coverageKind": "DESIGN_ROLE_OWNERSHIP_NOT_FEATURE_IMPLEMENTATION"
+    },
+    {
+      "requirementId": "FL-02",
+      "storyId": "US-FL-02",
+      "domain": "FL",
+      "roleProfiles": [
+        "designer",
+        "skill",
+        "main"
+      ],
+      "pageGroups": [
+        "P13",
+        "P04"
+      ],
+      "acceptance": "三种视图从同一有效定义生成；修改可预览，不能把画布显示当执行定义",
+      "coverageKind": "DESIGN_ROLE_OWNERSHIP_NOT_FEATURE_IMPLEMENTATION"
+    },
+    {
+      "requirementId": "FL-03",
+      "storyId": "US-FL-03",
+      "domain": "FL",
+      "roleProfiles": [
+        "designer",
+        "skill",
+        "main"
+      ],
+      "pageGroups": [
+        "P13",
+        "P04"
+      ],
+      "acceptance": "缺输入和无出口分支在运行前报错；分支选择有可追溯依据",
+      "coverageKind": "DESIGN_ROLE_OWNERSHIP_NOT_FEATURE_IMPLEMENTATION"
+    },
+    {
+      "requirementId": "FL-04",
+      "storyId": "US-FL-04",
+      "domain": "FL",
+      "roleProfiles": [
+        "designer",
+        "skill",
+        "main"
+      ],
+      "pageGroups": [
+        "P13",
+        "P04"
+      ],
+      "acceptance": "已运行节点仍指向原版本；输入变化能定位受影响 SOP 和自动化",
+      "coverageKind": "DESIGN_ROLE_OWNERSHIP_NOT_FEATURE_IMPLEMENTATION"
+    },
+    {
+      "requirementId": "FL-05",
+      "storyId": "US-FL-05",
+      "domain": "FL",
+      "roleProfiles": [
+        "designer",
+        "skill",
+        "main"
+      ],
+      "pageGroups": [
+        "P13",
+        "P04"
+      ],
+      "acceptance": "捕获异常后返回的业务失败仍显示失败/待处理；跳过阶段有原因",
+      "coverageKind": "DESIGN_ROLE_OWNERSHIP_NOT_FEATURE_IMPLEMENTATION"
+    },
+    {
+      "requirementId": "FL-06",
+      "storyId": "US-FL-06",
+      "domain": "FL",
+      "roleProfiles": [
+        "designer",
+        "skill",
+        "main"
+      ],
+      "pageGroups": [
+        "P13",
+        "P04"
+      ],
+      "acceptance": "无平行 Agent Loop；方案完成只生成结果候选，交由业务层校验与推进",
+      "coverageKind": "DESIGN_ROLE_OWNERSHIP_NOT_FEATURE_IMPLEMENTATION"
+    },
+    {
+      "requirementId": "AT-01",
+      "storyId": "US-AT-01",
+      "domain": "AT",
+      "roleProfiles": [
+        "automation",
+        "initiator",
+        "runtime"
+      ],
+      "pageGroups": [
+        "P14"
+      ],
+      "acceptance": "不同入口编辑同一对象；明确创建的是新任务、当前节点步骤还是新业务实例",
+      "coverageKind": "DESIGN_ROLE_OWNERSHIP_NOT_FEATURE_IMPLEMENTATION"
+    },
+    {
+      "requirementId": "AT-02",
+      "storyId": "US-AT-02",
+      "domain": "AT",
+      "roleProfiles": [
+        "automation",
+        "initiator",
+        "runtime"
+      ],
+      "pageGroups": [
+        "P14"
+      ],
+      "acceptance": "每种宣布支持的触发方式都有独立真实触发证据，不能只靠手动运行验收",
+      "coverageKind": "DESIGN_ROLE_OWNERSHIP_NOT_FEATURE_IMPLEMENTATION"
+    },
+    {
+      "requirementId": "AT-03",
+      "storyId": "US-AT-03",
+      "domain": "AT",
+      "roleProfiles": [
+        "automation",
+        "initiator",
+        "runtime"
+      ],
+      "pageGroups": [
+        "P14"
+      ],
+      "acceptance": "跨时区与夏令时行为明确；过期/暂停不再自动启动",
+      "coverageKind": "DESIGN_ROLE_OWNERSHIP_NOT_FEATURE_IMPLEMENTATION"
+    },
+    {
+      "requirementId": "AT-04",
+      "storyId": "US-AT-04",
+      "domain": "AT",
+      "roleProfiles": [
+        "automation",
+        "initiator",
+        "runtime"
+      ],
+      "pageGroups": [
+        "P14"
+      ],
+      "acceptance": "同一事件重复投递不重复办事；补跑有明确策略和记录",
+      "coverageKind": "DESIGN_ROLE_OWNERSHIP_NOT_FEATURE_IMPLEMENTATION"
+    },
+    {
+      "requirementId": "AT-05",
+      "storyId": "US-AT-05",
+      "domain": "AT",
+      "roleProfiles": [
+        "automation",
+        "initiator",
+        "runtime"
+      ],
+      "pageGroups": [
+        "P14"
+      ],
+      "acceptance": "节点已交付后不继续生成无归属结果；身份失效时停止受影响动作",
+      "coverageKind": "DESIGN_ROLE_OWNERSHIP_NOT_FEATURE_IMPLEMENTATION"
+    },
+    {
+      "requirementId": "AT-06",
+      "storyId": "US-AT-06",
+      "domain": "AT",
+      "roleProfiles": [
+        "automation",
+        "initiator",
+        "runtime"
+      ],
+      "pageGroups": [
+        "P14"
+      ],
+      "acceptance": "用户知道“为何触发/为何未触发”；可用测试对象验证且不污染正式统计",
+      "coverageKind": "DESIGN_ROLE_OWNERSHIP_NOT_FEATURE_IMPLEMENTATION"
+    },
+    {
+      "requirementId": "IM-01",
+      "storyId": "US-IM-01",
+      "domain": "IM",
+      "roleProfiles": [
+        "channel",
+        "team",
+        "member"
+      ],
+      "pageGroups": [
+        "P15",
+        "P21"
+      ],
+      "acceptance": "未绑定身份/未授权群无法使用任务能力；已绑定者消息定位到正确租户和人员",
+      "coverageKind": "DESIGN_ROLE_OWNERSHIP_NOT_FEATURE_IMPLEMENTATION"
+    },
+    {
+      "requirementId": "IM-02",
+      "storyId": "US-IM-02",
+      "domain": "IM",
+      "roleProfiles": [
+        "channel",
+        "team",
+        "member"
+      ],
+      "pageGroups": [
+        "P15",
+        "P21"
+      ],
+      "acceptance": "Web 与 IM 显示同一任务状态；引用继续原任务不产生重复节点",
+      "coverageKind": "DESIGN_ROLE_OWNERSHIP_NOT_FEATURE_IMPLEMENTATION"
+    },
+    {
+      "requirementId": "IM-03",
+      "storyId": "US-IM-03",
+      "domain": "IM",
+      "roleProfiles": [
+        "channel",
+        "team",
+        "member"
+      ],
+      "pageGroups": [
+        "P15",
+        "P21"
+      ],
+      "acceptance": "明确任务路由正确；歧义进入澄清；不因群内发话获得新资源权限",
+      "coverageKind": "DESIGN_ROLE_OWNERSHIP_NOT_FEATURE_IMPLEMENTATION"
+    },
+    {
+      "requirementId": "IM-04",
+      "storyId": "US-IM-04",
+      "domain": "IM",
+      "roleProfiles": [
+        "channel",
+        "team",
+        "member"
+      ],
+      "pageGroups": [
+        "P15",
+        "P21"
+      ],
+      "acceptance": "专家能看到被授权的必要背景，意见返回原节点；咨询不替代审批回执",
+      "coverageKind": "DESIGN_ROLE_OWNERSHIP_NOT_FEATURE_IMPLEMENTATION"
+    },
+    {
+      "requirementId": "IM-05",
+      "storyId": "US-IM-05",
+      "domain": "IM",
+      "roleProfiles": [
+        "channel",
+        "team",
+        "member"
+      ],
+      "pageGroups": [
+        "P15",
+        "P21"
+      ],
+      "acceptance": "群规则只在配置范围生效；防重复响应；群/成员/单聊记忆分别隔离",
+      "coverageKind": "DESIGN_ROLE_OWNERSHIP_NOT_FEATURE_IMPLEMENTATION"
+    },
+    {
+      "requirementId": "IM-06",
+      "storyId": "US-IM-06",
+      "domain": "IM",
+      "roleProfiles": [
+        "channel",
+        "team",
+        "member"
+      ],
+      "pageGroups": [
+        "P15",
+        "P21"
+      ],
+      "acceptance": "停用立即停止新接入；失败消息可查证/重投；不重复发送已确认内容",
+      "coverageKind": "DESIGN_ROLE_OWNERSHIP_NOT_FEATURE_IMPLEMENTATION"
+    },
+    {
+      "requirementId": "RS-01",
+      "storyId": "US-RS-01",
+      "domain": "RS",
+      "roleProfiles": [
+        "main",
+        "review",
+        "approver",
+        "receiver",
+        "responsible"
+      ],
+      "pageGroups": [
+        "P16",
+        "P02"
+      ],
+      "acceptance": "产物可打开；业务条件、必要审批和当前执行权全部成立才接受提交",
+      "coverageKind": "DESIGN_ROLE_OWNERSHIP_NOT_FEATURE_IMPLEMENTATION"
+    },
+    {
+      "requirementId": "RS-02",
+      "storyId": "US-RS-02",
+      "domain": "RS",
+      "roleProfiles": [
+        "main",
+        "review",
+        "approver",
+        "receiver",
+        "responsible"
+      ],
+      "pageGroups": [
+        "P16",
+        "P02"
+      ],
+      "acceptance": "运行成功无产物/检查不通过不能显示业务完成；计数与详情一致",
+      "coverageKind": "DESIGN_ROLE_OWNERSHIP_NOT_FEATURE_IMPLEMENTATION"
+    },
+    {
+      "requirementId": "RS-03",
+      "storyId": "US-RS-03",
+      "domain": "RS",
+      "roleProfiles": [
+        "main",
+        "review",
+        "approver",
+        "receiver",
+        "responsible"
+      ],
+      "pageGroups": [
+        "P16",
+        "P02"
+      ],
+      "acceptance": "接收人无需复制上游聊天即可继续；只收到其被授权的业务上下文",
+      "coverageKind": "DESIGN_ROLE_OWNERSHIP_NOT_FEATURE_IMPLEMENTATION"
+    },
+    {
+      "requirementId": "RS-04",
+      "storyId": "US-RS-04",
+      "domain": "RS",
+      "roleProfiles": [
+        "main",
+        "review",
+        "approver",
+        "receiver",
+        "responsible"
+      ],
+      "pageGroups": [
+        "P16",
+        "P02"
+      ],
+      "acceptance": "重复提交/服务重启只激活一次下一节点；中间失败可定位并调和",
+      "coverageKind": "DESIGN_ROLE_OWNERSHIP_NOT_FEATURE_IMPLEMENTATION"
+    },
+    {
+      "requirementId": "RS-05",
+      "storyId": "US-RS-05",
+      "domain": "RS",
+      "roleProfiles": [
+        "main",
+        "review",
+        "approver",
+        "receiver",
+        "responsible"
+      ],
+      "pageGroups": [
+        "P16",
+        "P02"
+      ],
+      "acceptance": "退回理由绑定交付项；原执行人收到明确返工任务，历史版本保留",
+      "coverageKind": "DESIGN_ROLE_OWNERSHIP_NOT_FEATURE_IMPLEMENTATION"
+    },
+    {
+      "requirementId": "RS-06",
+      "storyId": "US-RS-06",
+      "domain": "RS",
+      "roleProfiles": [
+        "main",
+        "review",
+        "approver",
+        "receiver",
+        "responsible"
+      ],
+      "pageGroups": [
+        "P16",
+        "P02"
+      ],
+      "acceptance": "回执指向真实外部对象及当前状态；失败/不确定/部分成功均可表达",
+      "coverageKind": "DESIGN_ROLE_OWNERSHIP_NOT_FEATURE_IMPLEMENTATION"
+    },
+    {
+      "requirementId": "RS-07",
+      "storyId": "US-RS-07",
+      "domain": "RS",
+      "roleProfiles": [
+        "main",
+        "review",
+        "approver",
+        "receiver",
+        "responsible"
+      ],
+      "pageGroups": [
+        "P16",
+        "P02"
+      ],
+      "acceptance": "下游无法读取交付物时不静默继续；取消/补偿有责任人和可追踪结果",
+      "coverageKind": "DESIGN_ROLE_OWNERSHIP_NOT_FEATURE_IMPLEMENTATION"
+    },
+    {
+      "requirementId": "SD-01",
+      "storyId": "US-SD-01",
+      "domain": "SD",
+      "roleProfiles": [
+        "designer",
+        "publisher",
+        "workflow",
+        "initiator"
+      ],
+      "pageGroups": [
+        "P17"
+      ],
+      "acceptance": "画布保存、版本读取、员工待办和 Runtime 有相同节点配置；不维护两套脱节表单",
+      "coverageKind": "DESIGN_ROLE_OWNERSHIP_NOT_FEATURE_IMPLEMENTATION"
+    },
+    {
+      "requirementId": "SD-02",
+      "storyId": "US-SD-02",
+      "domain": "SD",
+      "roleProfiles": [
+        "designer",
+        "publisher",
+        "workflow",
+        "initiator"
+      ],
+      "pageGroups": [
+        "P17"
+      ],
+      "acceptance": "设计者能完成一个业务节点而无需手写角色/能力字符串",
+      "coverageKind": "DESIGN_ROLE_OWNERSHIP_NOT_FEATURE_IMPLEMENTATION"
+    },
+    {
+      "requirementId": "SD-03",
+      "storyId": "US-SD-03",
+      "domain": "SD",
+      "roleProfiles": [
+        "designer",
+        "publisher",
+        "workflow",
+        "initiator"
+      ],
+      "pageGroups": [
+        "P17"
+      ],
+      "acceptance": "设计预览和员工实际可选集合一致；更严格节点要求不可被个人默认覆盖",
+      "coverageKind": "DESIGN_ROLE_OWNERSHIP_NOT_FEATURE_IMPLEMENTATION"
+    },
+    {
+      "requirementId": "SD-04",
+      "storyId": "US-SD-04",
+      "domain": "SD",
+      "roleProfiles": [
+        "designer",
+        "publisher",
+        "workflow",
+        "initiator"
+      ],
+      "pageGroups": [
+        "P17"
+      ],
+      "acceptance": "发布前能看到每种责任人的待办内容；空候选、缺资料、无输出映射被发现",
+      "coverageKind": "DESIGN_ROLE_OWNERSHIP_NOT_FEATURE_IMPLEMENTATION"
+    },
+    {
+      "requirementId": "SD-05",
+      "storyId": "US-SD-05",
+      "domain": "SD",
+      "roleProfiles": [
+        "designer",
+        "publisher",
+        "workflow",
+        "initiator"
+      ],
+      "pageGroups": [
+        "P17"
+      ],
+      "acceptance": "发布检查可定位断路/无出口/循环无停止条件；异常有明确接手者",
+      "coverageKind": "DESIGN_ROLE_OWNERSHIP_NOT_FEATURE_IMPLEMENTATION"
+    },
+    {
+      "requirementId": "SD-06",
+      "storyId": "US-SD-06",
+      "domain": "SD",
+      "roleProfiles": [
+        "designer",
+        "publisher",
+        "workflow",
+        "initiator"
+      ],
+      "pageGroups": [
+        "P17"
+      ],
+      "acceptance": "旧实例不被静默改写；新版本清楚影响哪些岗位、资源和调用方",
+      "coverageKind": "DESIGN_ROLE_OWNERSHIP_NOT_FEATURE_IMPLEMENTATION"
+    },
+    {
+      "requirementId": "AD-01",
+      "storyId": "US-AD-01",
+      "domain": "AD",
+      "roleProfiles": [
+        "org",
+        "hr",
+        "identity",
+        "access",
+        "policy",
+        "auditor",
+        "auditgeneral",
+        "tenant",
+        "security",
+        "securityadmin",
+        "apiadmin"
+      ],
+      "pageGroups": [
+        "P18",
+        "P07",
+        "P22"
+      ],
+      "acceptance": "七类 canonical 登录夹具逐项验证；HR、身份、流程、审计、权限管理面互不误开放/误隐藏",
+      "coverageKind": "DESIGN_ROLE_OWNERSHIP_NOT_FEATURE_IMPLEMENTATION"
+    },
+    {
+      "requirementId": "AD-02",
+      "storyId": "US-AD-02",
+      "domain": "AD",
+      "roleProfiles": [
+        "org",
+        "hr",
+        "identity",
+        "access",
+        "policy",
+        "auditor",
+        "auditgeneral",
+        "tenant",
+        "security",
+        "securityadmin",
+        "apiadmin"
+      ],
+      "pageGroups": [
+        "P18",
+        "P07"
+      ],
+      "acceptance": "被指定的普通业务审批人可完成自己的审批；其他请求仍不可见，自批仍拒绝",
+      "coverageKind": "DESIGN_ROLE_OWNERSHIP_NOT_FEATURE_IMPLEMENTATION"
+    },
+    {
+      "requirementId": "AD-03",
+      "storyId": "US-AD-03",
+      "domain": "AD",
+      "roleProfiles": [
+        "org",
+        "hr",
+        "identity",
+        "access",
+        "policy",
+        "auditor",
+        "auditgeneral",
+        "tenant",
+        "security",
+        "securityadmin",
+        "apiadmin"
+      ],
+      "pageGroups": [
+        "P18",
+        "P07"
+      ],
+      "acceptance": "调岗不会自动自授高权；每个授权可说明来源、用途、到期与撤销影响",
+      "coverageKind": "DESIGN_ROLE_OWNERSHIP_NOT_FEATURE_IMPLEMENTATION"
+    },
+    {
+      "requirementId": "AD-04",
+      "storyId": "US-AD-04",
+      "domain": "AD",
+      "roleProfiles": [
+        "org",
+        "hr",
+        "identity",
+        "access",
+        "policy",
+        "auditor",
+        "auditgeneral",
+        "tenant",
+        "security",
+        "securityadmin",
+        "apiadmin"
+      ],
+      "pageGroups": [
+        "P18",
+        "P07",
+        "P22"
+      ],
+      "acceptance": "已批准资源用户能自助选用；超范围申请精确到资源/动作，不默认要求全租户权限",
+      "coverageKind": "DESIGN_ROLE_OWNERSHIP_NOT_FEATURE_IMPLEMENTATION"
+    },
+    {
+      "requirementId": "AD-05",
+      "storyId": "US-AD-05",
+      "domain": "AD",
+      "roleProfiles": [
+        "org",
+        "hr",
+        "identity",
+        "access",
+        "policy",
+        "auditor",
+        "auditgeneral",
+        "tenant",
+        "security",
+        "securityadmin",
+        "apiadmin"
+      ],
+      "pageGroups": [
+        "P18",
+        "P07"
+      ],
+      "acceptance": "员工能看实际继承配置及不可更改原因；管理员变更不覆写历史执行证据",
+      "coverageKind": "DESIGN_ROLE_OWNERSHIP_NOT_FEATURE_IMPLEMENTATION"
+    },
+    {
+      "requirementId": "AD-06",
+      "storyId": "US-AD-06",
+      "domain": "AD",
+      "roleProfiles": [
+        "org",
+        "hr",
+        "identity",
+        "access",
+        "policy",
+        "auditor",
+        "auditgeneral",
+        "tenant",
+        "security",
+        "securityadmin",
+        "apiadmin"
+      ],
+      "pageGroups": [
+        "P18",
+        "P07"
+      ],
+      "acceptance": "管理员看状态、范围、到期和引用；私人凭据及聊天内容不因管理员身份直接可见",
+      "coverageKind": "DESIGN_ROLE_OWNERSHIP_NOT_FEATURE_IMPLEMENTATION"
+    },
+    {
+      "requirementId": "AD-07",
+      "storyId": "US-AD-07",
+      "domain": "AD",
+      "roleProfiles": [
+        "org",
+        "hr",
+        "identity",
+        "access",
+        "policy",
+        "auditor",
+        "auditgeneral",
+        "tenant",
+        "security",
+        "securityadmin",
+        "apiadmin"
+      ],
+      "pageGroups": [
+        "P18",
+        "P07"
+      ],
+      "acceptance": "能列出受影响任务和资源；执行后授权与运行中动作及时复判",
+      "coverageKind": "DESIGN_ROLE_OWNERSHIP_NOT_FEATURE_IMPLEMENTATION"
+    },
+    {
+      "requirementId": "AD-08",
+      "storyId": "US-AD-08",
+      "domain": "AD",
+      "roleProfiles": [
+        "org",
+        "hr",
+        "identity",
+        "access",
+        "policy",
+        "auditor",
+        "auditgeneral",
+        "tenant",
+        "security",
+        "securityadmin",
+        "apiadmin"
+      ],
+      "pageGroups": [
+        "P18",
+        "P07",
+        "P22"
+      ],
+      "acceptance": "批量操作有预览和分批结果；失败可恢复，不改在途快照，不把未验证资源标可用",
+      "coverageKind": "DESIGN_ROLE_OWNERSHIP_NOT_FEATURE_IMPLEMENTATION"
+    },
+    {
+      "requirementId": "OP-01",
+      "storyId": "US-OP-01",
+      "domain": "OP",
+      "roleProfiles": [
+        "runtime",
+        "release",
+        "auditor",
+        "privacy",
+        "securityadmin",
+        "api"
+      ],
+      "pageGroups": [
+        "P19",
+        "P21"
+      ],
+      "acceptance": "指定 8765 页面可访问；版本可对应；真实租户、人、Agent、依赖共同完成首条链",
+      "coverageKind": "DESIGN_ROLE_OWNERSHIP_NOT_FEATURE_IMPLEMENTATION"
+    },
+    {
+      "requirementId": "OP-02",
+      "storyId": "US-OP-02",
+      "domain": "OP",
+      "roleProfiles": [
+        "runtime",
+        "release",
+        "auditor",
+        "privacy",
+        "securityadmin",
+        "api"
+      ],
+      "pageGroups": [
+        "P19",
+        "P21",
+        "P22"
+      ],
+      "acceptance": "能从一条业务任务逐级追到原始记录；不以接口 200 或单测通过替代运行完成",
+      "coverageKind": "DESIGN_ROLE_OWNERSHIP_NOT_FEATURE_IMPLEMENTATION"
+    },
+    {
+      "requirementId": "OP-03",
+      "storyId": "US-OP-03",
+      "domain": "OP",
+      "roleProfiles": [
+        "runtime",
+        "release",
+        "auditor",
+        "privacy",
+        "securityadmin",
+        "api"
+      ],
+      "pageGroups": [
+        "P19",
+        "P21"
+      ],
+      "acceptance": "相同异常两种视图关联；普通页面没有 Cookie、UUID、实现状态等探测文案",
+      "coverageKind": "DESIGN_ROLE_OWNERSHIP_NOT_FEATURE_IMPLEMENTATION"
+    },
+    {
+      "requirementId": "OP-04",
+      "storyId": "US-OP-04",
+      "domain": "OP",
+      "roleProfiles": [
+        "runtime",
+        "release",
+        "auditor",
+        "privacy",
+        "securityadmin",
+        "api"
+      ],
+      "pageGroups": [
+        "P19",
+        "P21"
+      ],
+      "acceptance": "费用/指标可对账；空数据明确无数据；不把 AI 运行数冒充岗位工作成果",
+      "coverageKind": "DESIGN_ROLE_OWNERSHIP_NOT_FEATURE_IMPLEMENTATION"
+    },
+    {
+      "requirementId": "OP-05",
+      "storyId": "US-OP-05",
+      "domain": "OP",
+      "roleProfiles": [
+        "runtime",
+        "release",
+        "auditor",
+        "privacy",
+        "securityadmin",
+        "api"
+      ],
+      "pageGroups": [
+        "P19",
+        "P21"
+      ],
+      "acceptance": "中文长文本、键盘/读屏、窄屏、加载/空/错/权限态均按实际覆盖矩阵验收",
+      "coverageKind": "DESIGN_ROLE_OWNERSHIP_NOT_FEATURE_IMPLEMENTATION"
+    },
+    {
+      "requirementId": "OP-06",
+      "storyId": "US-OP-06",
+      "domain": "OP",
+      "roleProfiles": [
+        "runtime",
+        "release",
+        "auditor",
+        "privacy",
+        "securityadmin",
+        "api"
+      ],
+      "pageGroups": [
+        "P19",
+        "P21"
+      ],
+      "acceptance": "本地任务不依赖浏览器持续在线；不可用环境明确排队/失败，恢复无重复执行",
+      "coverageKind": "DESIGN_ROLE_OWNERSHIP_NOT_FEATURE_IMPLEMENTATION"
+    },
+    {
+      "requirementId": "OP-07",
+      "storyId": "US-OP-07",
+      "domain": "OP",
+      "roleProfiles": [
+        "runtime",
+        "release",
+        "auditor",
+        "privacy",
+        "securityadmin",
+        "api"
+      ],
+      "pageGroups": [
+        "P19",
+        "P21"
+      ],
+      "acceptance": "同一变更各入口一致；扩展事件有来源和去重；导出默认脱敏且可支持排错",
+      "coverageKind": "DESIGN_ROLE_OWNERSHIP_NOT_FEATURE_IMPLEMENTATION"
+    },
+    {
+      "requirementId": "OP-08",
+      "storyId": "US-OP-08",
+      "domain": "OP",
+      "roleProfiles": [
+        "runtime",
+        "release",
+        "auditor",
+        "privacy",
+        "securityadmin",
+        "api"
+      ],
+      "pageGroups": [
+        "P19",
+        "P21"
+      ],
+      "acceptance": "升级后关键任务回归通过；备份恢复后的任务、版本、产物关联完整；业务收益由实际试点测量",
+      "coverageKind": "DESIGN_ROLE_OWNERSHIP_NOT_FEATURE_IMPLEMENTATION"
+    },
+    {
+      "requirementId": "HC-01",
+      "storyId": "US-HC-01",
+      "domain": "HC",
+      "roleProfiles": [
+        "main",
+        "tech",
+        "collab",
+        "writer",
+        "responsible",
+        "receiver",
+        "assignment"
+      ],
+      "pageGroups": [
+        "P03",
+        "P02"
+      ],
+      "acceptance": "同一共享 Agent 被 A/B 使用时，可追溯每次调用由谁发起、为哪项分工服务、谁负责结果；不误转移资产归属",
+      "coverageKind": "DESIGN_ROLE_OWNERSHIP_NOT_FEATURE_IMPLEMENTATION"
+    },
+    {
+      "requirementId": "HC-02",
+      "storyId": "US-HC-02",
+      "domain": "HC",
+      "roleProfiles": [
+        "main",
+        "tech",
+        "collab",
+        "writer",
+        "responsible",
+        "receiver",
+        "assignment"
+      ],
+      "pageGroups": [
+        "P03",
+        "P02"
+      ],
+      "acceptance": "A/B 同时选择不同 Agent 不竞争覆盖主任务 current_assignment_id；每项贡献能回到唯一主任务",
+      "coverageKind": "DESIGN_ROLE_OWNERSHIP_NOT_FEATURE_IMPLEMENTATION"
+    },
+    {
+      "requirementId": "HC-03",
+      "storyId": "US-HC-03",
+      "domain": "HC",
+      "roleProfiles": [
+        "main",
+        "tech",
+        "collab",
+        "writer",
+        "responsible",
+        "receiver",
+        "assignment"
+      ],
+      "pageGroups": [
+        "P03",
+        "P02",
+        "P22"
+      ],
+      "acceptance": "发送共享消息不能获得修改他人 Agent、运行私人连接器或代替对方审批的权力",
+      "coverageKind": "DESIGN_ROLE_OWNERSHIP_NOT_FEATURE_IMPLEMENTATION"
+    },
+    {
+      "requirementId": "HC-04",
+      "storyId": "US-HC-04",
+      "domain": "HC",
+      "roleProfiles": [
+        "main",
+        "tech",
+        "collab",
+        "writer",
+        "responsible",
+        "receiver",
+        "assignment"
+      ],
+      "pageGroups": [
+        "P03",
+        "P02"
+      ],
+      "acceptance": "人能知道接下什么；拒绝/超时有回路；自动分派有已存在的合法依据",
+      "coverageKind": "DESIGN_ROLE_OWNERSHIP_NOT_FEATURE_IMPLEMENTATION"
+    },
+    {
+      "requirementId": "HC-05",
+      "storyId": "US-HC-05",
+      "domain": "HC",
+      "roleProfiles": [
+        "main",
+        "tech",
+        "collab",
+        "writer",
+        "responsible",
+        "receiver",
+        "assignment"
+      ],
+      "pageGroups": [
+        "P03",
+        "P02"
+      ],
+      "acceptance": "新成员得到当前允许的上下文；退出者不能继续提交；在途贡献有清楚接收人",
+      "coverageKind": "DESIGN_ROLE_OWNERSHIP_NOT_FEATURE_IMPLEMENTATION"
+    },
+    {
+      "requirementId": "HC-06",
+      "storyId": "US-HC-06",
+      "domain": "HC",
+      "roleProfiles": [
+        "main",
+        "tech",
+        "collab",
+        "writer",
+        "responsible",
+        "receiver",
+        "assignment"
+      ],
+      "pageGroups": [
+        "P03",
+        "P02"
+      ],
+      "acceptance": "协作人确认专业贡献、主执行人汇总、责任人/审核者履职均可追溯；子任务完成不自动关闭主节点",
+      "coverageKind": "DESIGN_ROLE_OWNERSHIP_NOT_FEATURE_IMPLEMENTATION"
+    },
+    {
+      "requirementId": "HC-07",
+      "storyId": "US-HC-07",
+      "domain": "HC",
+      "roleProfiles": [
+        "main",
+        "tech",
+        "collab",
+        "writer",
+        "responsible",
+        "receiver",
+        "assignment"
+      ],
+      "pageGroups": [
+        "P03",
+        "P02"
+      ],
+      "acceptance": "回复返回正确协作工作；不能借自由消息生成无责任归属的任务或无限跨人委派",
+      "coverageKind": "DESIGN_ROLE_OWNERSHIP_NOT_FEATURE_IMPLEMENTATION"
+    },
+    {
+      "requirementId": "HC-08",
+      "storyId": "US-HC-08",
+      "domain": "HC",
+      "roleProfiles": [
+        "main",
+        "tech",
+        "collab",
+        "writer",
+        "responsible",
+        "receiver",
+        "assignment"
+      ],
+      "pageGroups": [
+        "P03",
+        "P02",
+        "P22"
+      ],
+      "acceptance": "A 看得到 B 的协作进度与可见 Agent 信息，但不能浏览 B 私人记忆/凭据；B 能独立配置自己的执行组合",
+      "coverageKind": "DESIGN_ROLE_OWNERSHIP_NOT_FEATURE_IMPLEMENTATION"
+    },
+    {
+      "requirementId": "CX-01",
+      "storyId": "US-CX-01",
+      "domain": "CX",
+      "roleProfiles": [
+        "main",
+        "tech",
+        "collab",
+        "writer",
+        "knowledge",
+        "knowledgeadmin"
+      ],
+      "pageGroups": [
+        "P20",
+        "P04"
+      ],
+      "acceptance": "A/B 的共同事实指向相同有效版本；不是分别由两个 Agent 从聊天猜测任务要求",
+      "coverageKind": "DESIGN_ROLE_OWNERSHIP_NOT_FEATURE_IMPLEMENTATION"
+    },
+    {
+      "requirementId": "CX-02",
+      "storyId": "US-CX-02",
+      "domain": "CX",
+      "roleProfiles": [
+        "main",
+        "tech",
+        "collab",
+        "writer",
+        "knowledge",
+        "knowledgeadmin"
+      ],
+      "pageGroups": [
+        "P20",
+        "P04"
+      ],
+      "acceptance": "每项内容可追溯作者、序列、来源、用途和可见范围；读写/重连是可运行链路",
+      "coverageKind": "DESIGN_ROLE_OWNERSHIP_NOT_FEATURE_IMPLEMENTATION"
+    },
+    {
+      "requirementId": "CX-03",
+      "storyId": "US-CX-03",
+      "domain": "CX",
+      "roleProfiles": [
+        "main",
+        "tech",
+        "collab",
+        "writer",
+        "knowledge",
+        "knowledgeadmin"
+      ],
+      "pageGroups": [
+        "P20",
+        "P04"
+      ],
+      "acceptance": "相同任务可有不同授权投影，必要共同约束一致；投影不足时明确缺项",
+      "coverageKind": "DESIGN_ROLE_OWNERSHIP_NOT_FEATURE_IMPLEMENTATION"
+    },
+    {
+      "requirementId": "CX-04",
+      "storyId": "US-CX-04",
+      "domain": "CX",
+      "roleProfiles": [
+        "main",
+        "tech",
+        "collab",
+        "writer",
+        "knowledge",
+        "knowledgeadmin"
+      ],
+      "pageGroups": [
+        "P20",
+        "P04"
+      ],
+      "acceptance": "关键规则在第 8 条消息以前或正文第 512 字符之后仍能影响后续执行；摘要可回查原文",
+      "coverageKind": "DESIGN_ROLE_OWNERSHIP_NOT_FEATURE_IMPLEMENTATION"
+    },
+    {
+      "requirementId": "CX-05",
+      "storyId": "US-CX-05",
+      "domain": "CX",
+      "roleProfiles": [
+        "main",
+        "tech",
+        "collab",
+        "writer",
+        "knowledge",
+        "knowledgeadmin"
+      ],
+      "pageGroups": [
+        "P20",
+        "P04"
+      ],
+      "acceptance": "自由咨询可明确降级；节点缺必需资料时拒绝相关执行或请求补齐，并在用户界面显示原因",
+      "coverageKind": "DESIGN_ROLE_OWNERSHIP_NOT_FEATURE_IMPLEMENTATION"
+    },
+    {
+      "requirementId": "CX-06",
+      "storyId": "US-CX-06",
+      "domain": "CX",
+      "roleProfiles": [
+        "main",
+        "tech",
+        "collab",
+        "writer",
+        "knowledge",
+        "knowledgeadmin"
+      ],
+      "pageGroups": [
+        "P20",
+        "P04"
+      ],
+      "acceptance": "不能仅凭 written=true 验收；受控真实任务能依照仅在授权上下文中的条件行动并提供可核验证据",
+      "coverageKind": "DESIGN_ROLE_OWNERSHIP_NOT_FEATURE_IMPLEMENTATION"
+    },
+    {
+      "requirementId": "CX-07",
+      "storyId": "US-CX-07",
+      "domain": "CX",
+      "roleProfiles": [
+        "main",
+        "tech",
+        "collab",
+        "writer",
+        "knowledge",
+        "knowledgeadmin"
+      ],
+      "pageGroups": [
+        "P20",
+        "P04",
+        "P22"
+      ],
+      "acceptance": "共用 Agent 不串上下文；私人偏好不覆盖业务硬条件；只把明确发布的贡献共享给其他人",
+      "coverageKind": "DESIGN_ROLE_OWNERSHIP_NOT_FEATURE_IMPLEMENTATION"
+    },
+    {
+      "requirementId": "CX-08",
+      "storyId": "US-CX-08",
+      "domain": "CX",
+      "roleProfiles": [
+        "main",
+        "tech",
+        "collab",
+        "writer",
+        "knowledge",
+        "knowledgeadmin"
+      ],
+      "pageGroups": [
+        "P20",
+        "P04"
+      ],
+      "acceptance": "同名文件被替换后可发现变化；所有必需引用能按接收者权限解析，不能只有无内容的 digest",
+      "coverageKind": "DESIGN_ROLE_OWNERSHIP_NOT_FEATURE_IMPLEMENTATION"
+    },
+    {
+      "requirementId": "CX-09",
+      "storyId": "US-CX-09",
+      "domain": "CX",
+      "roleProfiles": [
+        "main",
+        "tech",
+        "collab",
+        "writer",
+        "knowledge",
+        "knowledgeadmin"
+      ],
+      "pageGroups": [
+        "P20",
+        "P04"
+      ],
+      "acceptance": "能定位遗漏或误解；模型自述“理解”不独立通过验收，不要求保存模型内部思维过程",
+      "coverageKind": "DESIGN_ROLE_OWNERSHIP_NOT_FEATURE_IMPLEMENTATION"
+    },
+    {
+      "requirementId": "CX-10",
+      "storyId": "US-CX-10",
+      "domain": "CX",
+      "roleProfiles": [
+        "main",
+        "tech",
+        "collab",
+        "writer",
+        "knowledge",
+        "knowledgeadmin"
+      ],
+      "pageGroups": [
+        "P20",
+        "P04"
+      ],
+      "acceptance": "版本标识不是简单按字典序判断新旧；撤权/过期后不继续读写，最低版本来自可信服务端事实",
+      "coverageKind": "DESIGN_ROLE_OWNERSHIP_NOT_FEATURE_IMPLEMENTATION"
+    },
+    {
+      "requirementId": "CX-11",
+      "storyId": "US-CX-11",
+      "domain": "CX",
+      "roleProfiles": [
+        "main",
+        "tech",
+        "collab",
+        "writer",
+        "knowledge",
+        "knowledgeadmin"
+      ],
+      "pageGroups": [
+        "P20",
+        "P04"
+      ],
+      "acceptance": "用当前 Schema/消费者校验整组引用；不添加未声明字段，不重复发明事实源",
+      "coverageKind": "DESIGN_ROLE_OWNERSHIP_NOT_FEATURE_IMPLEMENTATION"
+    },
+    {
+      "requirementId": "CX-12",
+      "storyId": "US-CX-12",
+      "domain": "CX",
+      "roleProfiles": [
+        "main",
+        "tech",
+        "collab",
+        "writer",
+        "knowledge",
+        "knowledgeadmin"
+      ],
+      "pageGroups": [
+        "P20",
+        "P04"
+      ],
+      "acceptance": "已读通知不被显示成 Agent 已应用新版；状态能对应真实服务端记录与恢复动作",
+      "coverageKind": "DESIGN_ROLE_OWNERSHIP_NOT_FEATURE_IMPLEMENTATION"
+    },
+    {
+      "requirementId": "SY-01",
+      "storyId": "US-SY-01",
+      "domain": "SY",
+      "roleProfiles": [
+        "main",
+        "tech",
+        "collab",
+        "writer",
+        "responsible",
+        "receiver",
+        "review"
+      ],
+      "pageGroups": [
+        "P20",
+        "P02",
+        "P16"
+      ],
+      "acceptance": "重复/乱序/离线后各方收敛到同一可见业务版本，不漏决定、不重复执行",
+      "coverageKind": "DESIGN_ROLE_OWNERSHIP_NOT_FEATURE_IMPLEMENTATION"
+    },
+    {
+      "requirementId": "SY-02",
+      "storyId": "US-SY-02",
+      "domain": "SY",
+      "roleProfiles": [
+        "main",
+        "tech",
+        "collab",
+        "writer",
+        "responsible",
+        "receiver",
+        "review"
+      ],
+      "pageGroups": [
+        "P20",
+        "P02",
+        "P16"
+      ],
+      "acceptance": "一般聊天不全局停工；关键输入变化使相关贡献待重核；撤权在下一使用点阻止动作",
+      "coverageKind": "DESIGN_ROLE_OWNERSHIP_NOT_FEATURE_IMPLEMENTATION"
+    },
+    {
+      "requirementId": "SY-03",
+      "storyId": "US-SY-03",
+      "domain": "SY",
+      "roleProfiles": [
+        "main",
+        "tech",
+        "collab",
+        "writer",
+        "responsible",
+        "receiver",
+        "review"
+      ],
+      "pageGroups": [
+        "P20",
+        "P02",
+        "P16",
+        "P22"
+      ],
+      "acceptance": "旧预算不能在设备清单更新后作为最新结果提交；重复或旧 Agent 尝试不能抢占终态",
+      "coverageKind": "DESIGN_ROLE_OWNERSHIP_NOT_FEATURE_IMPLEMENTATION"
+    },
+    {
+      "requirementId": "SY-04",
+      "storyId": "US-SY-04",
+      "domain": "SY",
+      "roleProfiles": [
+        "main",
+        "tech",
+        "collab",
+        "writer",
+        "responsible",
+        "receiver",
+        "review"
+      ],
+      "pageGroups": [
+        "P20",
+        "P02",
+        "P16"
+      ],
+      "acceptance": "不用最后写入静默覆盖；有权维护事实的人接受变更，文件合并可审阅",
+      "coverageKind": "DESIGN_ROLE_OWNERSHIP_NOT_FEATURE_IMPLEMENTATION"
+    },
+    {
+      "requirementId": "SY-05",
+      "storyId": "US-SY-05",
+      "domain": "SY",
+      "roleProfiles": [
+        "main",
+        "tech",
+        "collab",
+        "writer",
+        "responsible",
+        "receiver",
+        "review"
+      ],
+      "pageGroups": [
+        "P20",
+        "P02",
+        "P16"
+      ],
+      "acceptance": "UI、通知、统计的状态含义一致；单个 Agent/协作人的完成不冒充全节点完成",
+      "coverageKind": "DESIGN_ROLE_OWNERSHIP_NOT_FEATURE_IMPLEMENTATION"
+    },
+    {
+      "requirementId": "SY-06",
+      "storyId": "US-SY-06",
+      "domain": "SY",
+      "roleProfiles": [
+        "main",
+        "tech",
+        "collab",
+        "writer",
+        "responsible",
+        "receiver",
+        "review"
+      ],
+      "pageGroups": [
+        "P20",
+        "P02",
+        "P16"
+      ],
+      "acceptance": "纠正已采纳事实后，旧摘要/旧缓存不能继续把错误结论当有效依据",
+      "coverageKind": "DESIGN_ROLE_OWNERSHIP_NOT_FEATURE_IMPLEMENTATION"
+    },
+    {
+      "requirementId": "SY-07",
+      "storyId": "US-SY-07",
+      "domain": "SY",
+      "roleProfiles": [
+        "main",
+        "tech",
+        "collab",
+        "writer",
+        "responsible",
+        "receiver",
+        "review"
+      ],
+      "pageGroups": [
+        "P20",
+        "P02",
+        "P16"
+      ],
+      "acceptance": "恢复时知道已完成/未完成/待查证部分；不重复外部操作，不假装热注入不支持的输入",
+      "coverageKind": "DESIGN_ROLE_OWNERSHIP_NOT_FEATURE_IMPLEMENTATION"
+    },
+    {
+      "requirementId": "SY-08",
+      "storyId": "US-SY-08",
+      "domain": "SY",
+      "roleProfiles": [
+        "main",
+        "tech",
+        "collab",
+        "writer",
+        "responsible",
+        "receiver",
+        "review"
+      ],
+      "pageGroups": [
+        "P20",
+        "P02",
+        "P16"
+      ],
+      "acceptance": "历史交接包不可静默改写；通过新版本、返工或补充流程处理，并通知实际受影响方",
+      "coverageKind": "DESIGN_ROLE_OWNERSHIP_NOT_FEATURE_IMPLEMENTATION"
+    },
+    {
+      "requirementId": "SY-09",
+      "storyId": "US-SY-09",
+      "domain": "SY",
+      "roleProfiles": [
+        "main",
+        "tech",
+        "collab",
+        "writer",
+        "responsible",
+        "receiver",
+        "review"
+      ],
+      "pageGroups": [
+        "P20",
+        "P02",
+        "P16"
+      ],
+      "acceptance": "收到包不等于可执行；无法解析必需资料时明确阻塞原因并保持可恢复状态",
+      "coverageKind": "DESIGN_ROLE_OWNERSHIP_NOT_FEATURE_IMPLEMENTATION"
+    },
+    {
+      "requirementId": "SY-10",
+      "storyId": "US-SY-10",
+      "domain": "SY",
+      "roleProfiles": [
+        "main",
+        "tech",
+        "collab",
+        "writer",
+        "responsible",
+        "receiver",
+        "review"
+      ],
+      "pageGroups": [
+        "P20",
+        "P02",
+        "P16"
+      ],
+      "acceptance": "指标有真实分母与事件来源；不以消息数、token 数或同步次数宣称协作质量提升",
+      "coverageKind": "DESIGN_ROLE_OWNERSHIP_NOT_FEATURE_IMPLEMENTATION"
+    }
+  ],
+  "profiles": [
+    {
+      "profileId": "member",
+      "pageGroups": [
+        "P01",
+        "P04",
+        "P21",
+        "P22"
+      ],
+      "journey": "领取合格待办 → 选择本人数字员工 → 保存本人配置",
+      "negative": "未领取工作不能配置；无权资源不出现在目录或计数",
+      "canonicalRoles": [
+        "MEMBER"
+      ]
+    },
+    {
+      "profileId": "main",
+      "pageGroups": [
+        "P02",
+        "P03",
+        "P04",
+        "P16",
+        "P20"
+      ],
+      "journey": "接受技术/预算/写作贡献 → 指定审核 → 提交节点交付",
+      "negative": "缺必需贡献、依据过期或未审核均不可提交",
+      "canonicalRoles": [
+        "MEMBER",
+        "HUMAN_EXECUTOR"
+      ]
+    },
+    {
+      "profileId": "tech",
+      "pageGroups": [
+        "P02",
+        "P03",
+        "P04",
+        "P20"
+      ],
+      "journey": "准备清单候选 → 确认新版 → 使依赖旧清单的预算与写作待重核",
+      "negative": "草稿不改变共同事实；不能编辑他人数字员工",
+      "canonicalRoles": [
+        "MEMBER",
+        "HUMAN_EXECUTOR"
+      ]
+    },
+    {
+      "profileId": "collab",
+      "pageGroups": [
+        "P02",
+        "P03",
+        "P04",
+        "P16",
+        "P20"
+      ],
+      "journey": "重核预算 → 提交专业贡献 → 等主执行人接受",
+      "negative": "旧依据不可提交；贡献成功不完成主节点",
+      "canonicalRoles": [
+        "MEMBER",
+        "HUMAN_EXECUTOR"
+      ]
+    },
+    {
+      "profileId": "writer",
+      "pageGroups": [
+        "P02",
+        "P03",
+        "P04",
+        "P16",
+        "P20"
+      ],
+      "journey": "配置本人数字员工 → 应用已确认清单与预算 → 保存并提交写作贡献",
+      "negative": "写作贡献过期不能提交；接受后仍需独立审核和节点提交",
+      "canonicalRoles": [
+        "MEMBER",
+        "HUMAN_EXECUTOR"
+      ]
+    },
+    {
+      "profileId": "responsible",
+      "pageGroups": [
+        "P02",
+        "P03",
+        "P16",
+        "P18"
+      ],
+      "journey": "查看责任链与阻塞 → 提出改派或要求返工 → 等接收人确认",
+      "negative": "不得代专业人确认；接收前责任仍归原承担人",
+      "canonicalRoles": [
+        "MEMBER",
+        "NODE_RESPONSIBLE",
+        "BUSINESS_OWNER"
+      ]
+    },
+    {
+      "profileId": "review",
+      "pageGroups": [
+        "P02",
+        "P16",
+        "P20"
+      ],
+      "journey": "查看指定交付和依据 → 填写退回理由或审核 → 等执行人提交",
+      "negative": "不得修改执行人配置；意见和审核不自动构成业务完成",
+      "canonicalRoles": [
+        "MEMBER",
+        "REVIEWER"
+      ]
+    },
+    {
+      "profileId": "approver",
+      "pageGroups": [
+        "P16",
+        "P18"
+      ],
+      "journey": "查看精确请求 → 确认范围期限和职责分离 → 批准或拒绝",
+      "negative": "不可代请求人申请；审批不直接履行授权",
+      "canonicalRoles": [
+        "MEMBER",
+        "APPROVER",
+        "ACCESS_REVIEWER"
+      ]
+    },
+    {
+      "profileId": "receiver",
+      "pageGroups": [
+        "P02",
+        "P03",
+        "P04",
+        "P16",
+        "P20"
+      ],
+      "journey": "核验上游交付、版本和可读性 → 确认接手 → 配置本人数字员工",
+      "negative": "上游未提交或资料未核验不能接手；凭据不随交接转移",
+      "canonicalRoles": [
+        "MEMBER",
+        "HUMAN_EXECUTOR"
+      ]
+    },
+    {
+      "profileId": "designer",
+      "pageGroups": [
+        "P13",
+        "P17"
+      ],
+      "journey": "定义岗位、输入输出与候选能力 → 保存 → 预检 → 提交评审",
+      "negative": "草稿不覆盖在途实例；设计者不能发布自身流程",
+      "canonicalRoles": [
+        "MEMBER",
+        "SOP_DESIGNER"
+      ]
+    },
+    {
+      "profileId": "publisher",
+      "pageGroups": [
+        "P05",
+        "P17"
+      ],
+      "journey": "查看数字员工或SOP待发布版本 → 核对独立评审 → 发布新版本",
+      "negative": "仅含 AGENT_PUBLISHER 和 SOP_PUBLISHER；不得发布知识、技能、工具、角色策略",
+      "canonicalRoles": [
+        "MEMBER",
+        "SOP_PUBLISHER",
+        "AGENT_PUBLISHER"
+      ]
+    },
+    {
+      "profileId": "resource",
+      "pageGroups": [
+        "P05",
+        "P22"
+      ],
+      "journey": "维护职责和能力依赖 → 保存草稿 → 演示检查 → 提交独立评审",
+      "negative": "不能自批或自行发布；看不到使用者私有对话与凭据",
+      "canonicalRoles": [
+        "MEMBER",
+        "AGENT_OWNER"
+      ]
+    },
+    {
+      "profileId": "knowledge",
+      "pageGroups": [
+        "P08",
+        "P20"
+      ],
+      "journey": "维护来源与引用版本 → 加工检查 → 提交独立评审",
+      "negative": "拥有知识资源不绕过源ACL；本作者不得发布自己版本",
+      "canonicalRoles": [
+        "MEMBER",
+        "KNOWLEDGE_OWNER"
+      ]
+    },
+    {
+      "profileId": "skill",
+      "pageGroups": [
+        "P06",
+        "P13",
+        "P22"
+      ],
+      "journey": "维护输入输出与依赖 → 检查 → 独立评审 → 发布批准版本",
+      "negative": "创建者不得担任独立复核人；未批准不得正式使用",
+      "canonicalRoles": [
+        "MEMBER",
+        "CAPABILITY_OWNER"
+      ]
+    },
+    {
+      "profileId": "tool",
+      "pageGroups": [
+        "P07",
+        "P22"
+      ],
+      "journey": "维护精确动作与连接条件 → 检查 → 独立评审 → 启用批准工具",
+      "negative": "工具定义不包含使用者授权；不能复制秘密或代办连接许可",
+      "canonicalRoles": [
+        "MEMBER",
+        "CAPABILITY_ADMIN",
+        "INTEGRATION_ADMIN"
+      ]
+    },
+    {
+      "profileId": "org",
+      "pageGroups": [
+        "P18"
+      ],
+      "journey": "预览组织岗位调整影响 → 确认本地变更",
+      "negative": "任职变更不自动授予平台高权，不代替身份管理",
+      "canonicalRoles": [
+        "MEMBER",
+        "ORGANIZATION_ADMIN"
+      ]
+    },
+    {
+      "profileId": "hr",
+      "pageGroups": [
+        "P18"
+      ],
+      "journey": "发起任职交接 → 接收人逐项确认 → 完成人事交接",
+      "negative": "FULL_EMPLOYMENT；无认证因素、秘密或权限管理入口",
+      "canonicalRoles": [
+        "MEMBER",
+        "HR_OPS"
+      ]
+    },
+    {
+      "profileId": "identity",
+      "pageGroups": [
+        "P18",
+        "P21"
+      ],
+      "journey": "查身份/供应/会话元数据 → 撤销指定示例会话",
+      "negative": "FULL_NO_SECRET；撤销不改任职，不能查看Token、MFA载荷",
+      "canonicalRoles": [
+        "MEMBER",
+        "IDENTITY_ADMIN"
+      ]
+    },
+    {
+      "profileId": "access",
+      "pageGroups": [
+        "P18",
+        "P16"
+      ],
+      "journey": "精确权限申请 → 独立审批 → 按批准范围履约；发布已复核角色策略",
+      "negative": "不能自批或扩大批准范围；拒绝、过期与无权不可履约",
+      "canonicalRoles": [
+        "MEMBER",
+        "ROLE_ADMIN"
+      ]
+    },
+    {
+      "profileId": "auditor",
+      "pageGroups": [
+        "P18",
+        "P19"
+      ],
+      "journey": "查脱敏人员/权限事件 → 预览最小审计包",
+      "negative": "MASKED；没有姓名/联系信息/业务正文/认证材料及写操作",
+      "canonicalRoles": [
+        "MEMBER",
+        "SECURITY_AUDITOR"
+      ]
+    },
+    {
+      "profileId": "security",
+      "pageGroups": [
+        "P06",
+        "P07",
+        "P18",
+        "P19"
+      ],
+      "journey": "核对指派的候选、提出人与证据 → 独立通过或退回",
+      "negative": "本人提出的候选不能自审；安全复核不替代资源发布权",
+      "canonicalRoles": [
+        "MEMBER",
+        "SECURITY_REVIEWER"
+      ]
+    },
+    {
+      "profileId": "privacy",
+      "pageGroups": [
+        "P09",
+        "P18",
+        "P19"
+      ],
+      "journey": "核对保留状态 → 保留解除后记录处理决定",
+      "negative": "有法律保留不可批准处理；演示不删除或导出真实数据",
+      "canonicalRoles": [
+        "MEMBER",
+        "PRIVACY_OFFICER"
+      ]
+    },
+    {
+      "profileId": "runtime",
+      "pageGroups": [
+        "P19"
+      ],
+      "journey": "未知效果 → 查询回执 → 已完成禁止重试 / 确认未执行才准备恢复",
+      "negative": "未知不能盲目重跑；运维不代业务提交",
+      "canonicalRoles": [
+        "MEMBER",
+        "RUNTIME_OPERATOR"
+      ]
+    },
+    {
+      "profileId": "release",
+      "pageGroups": [
+        "P19"
+      ],
+      "journey": "核对版本证据 → 生成回退计划",
+      "negative": "无证据不能生成计划；原型不部署真实服务",
+      "canonicalRoles": [
+        "MEMBER",
+        "RELEASE_MANAGER"
+      ]
+    },
+    {
+      "profileId": "tenant",
+      "pageGroups": [
+        "P18"
+      ],
+      "journey": "查看租户元数据 → 预览暂停与恢复影响",
+      "negative": "TENANT_OWNER 无隐含人员/权限/审计管理能力",
+      "canonicalRoles": [
+        "MEMBER",
+        "TENANT_OWNER"
+      ]
+    },
+    {
+      "profileId": "workflow",
+      "pageGroups": [
+        "P17",
+        "P19"
+      ],
+      "journey": "查看SOP目录 → 运行实例 → 节点证据与版本影响",
+      "negative": "流程管理员不能冒充节点执行人，草稿不改变在途固定版本",
+      "canonicalRoles": [
+        "MEMBER",
+        "WORKFLOW_ADMIN"
+      ]
+    },
+    {
+      "profileId": "policy",
+      "pageGroups": [
+        "P18"
+      ],
+      "journey": "编写策略约束 → 正负例检查 → 提交独立复核",
+      "negative": "策略作者不能自审；生产授权仍由已有合同决定",
+      "canonicalRoles": [
+        "MEMBER",
+        "POLICY_OWNER"
+      ]
+    },
+    {
+      "profileId": "automation",
+      "pageGroups": [
+        "P14"
+      ],
+      "journey": "配置时区与时间 → 保存 → 暂停/恢复计划",
+      "negative": "无效时间拒绝；未保存不能恢复；不产生真实定时任务",
+      "canonicalRoles": [
+        "MEMBER",
+        "SCHEDULE_OWNER"
+      ]
+    },
+    {
+      "profileId": "channel",
+      "pageGroups": [
+        "P15",
+        "P21"
+      ],
+      "journey": "绑定范围内提出咨询 → 收到来源明确的专家意见",
+      "negative": "群成员不等于工作授权；咨询不是审批，不发送外部消息",
+      "canonicalRoles": [
+        "MEMBER",
+        "CHANNEL_BINDING_OWNER",
+        "CHANNEL_USER"
+      ]
+    },
+    {
+      "profileId": "team",
+      "pageGroups": [
+        "P12",
+        "P02"
+      ],
+      "journey": "查看团队成员分工 → 检查候选及依赖 → 汇总阻塞",
+      "negative": "成员成功不等于业务完成；成员不互相扩大权限",
+      "canonicalRoles": [
+        "MEMBER",
+        "TEAM_LEADER",
+        "TEAM_MEMBER"
+      ]
+    },
+    {
+      "profileId": "api",
+      "pageGroups": [
+        "P07",
+        "P19"
+      ],
+      "journey": "核对本人应用、资源动作和期限 → 预览调用合同",
+      "negative": "应用调用不得代自然人审批，无凭据明文",
+      "canonicalRoles": [
+        "MEMBER",
+        "API_CLIENT_OWNER",
+        "API_CALLER"
+      ]
+    },
+    {
+      "profileId": "interactor",
+      "pageGroups": [
+        "P05",
+        "P11",
+        "P22"
+      ],
+      "journey": "检查获授权助手就绪 → 准备本地执行候选 → 任务对话",
+      "negative": "未检查不能准备；对话不自动建立任务完成事实",
+      "canonicalRoles": [
+        "MEMBER",
+        "AGENT_INTERACTOR"
+      ]
+    },
+    {
+      "profileId": "apiadmin",
+      "pageGroups": [
+        "P07",
+        "P18"
+      ],
+      "journey": "预览指定应用停用影响 → 确认本地停用",
+      "negative": "不授予自然人平台高权，不改变真实凭据",
+      "canonicalRoles": [
+        "MEMBER",
+        "API_CLIENT_ADMIN"
+      ]
+    },
+    {
+      "profileId": "assignment",
+      "pageGroups": [
+        "P03",
+        "P18"
+      ],
+      "journey": "核对任务和合格接替人 → 提出改派 → 接收人确认",
+      "negative": "提案不立即覆盖承担人，不能代接收人确认",
+      "canonicalRoles": [
+        "MEMBER",
+        "ASSIGNMENT_MANAGER"
+      ]
+    },
+    {
+      "profileId": "auditgeneral",
+      "pageGroups": [
+        "P18",
+        "P19"
+      ],
+      "journey": "查看指定对象的授权解释 → 核对裁剪与有效期",
+      "negative": "AUDITOR 不等于 SECURITY_AUDITOR，不自动获得审计库或人事目录",
+      "canonicalRoles": [
+        "MEMBER",
+        "AUDITOR"
+      ]
+    },
+    {
+      "profileId": "datasubject",
+      "pageGroups": [
+        "P09",
+        "P21"
+      ],
+      "journey": "选择本人导出/删除请求 → 登记 → 等待处理或保留复核",
+      "negative": "只能本人；请求成功不代表数据已被删除或导出",
+      "canonicalRoles": [
+        "MEMBER",
+        "DATA_SUBJECT"
+      ]
+    },
+    {
+      "profileId": "evolution",
+      "pageGroups": [
+        "P09",
+        "P06"
+      ],
+      "journey": "核对候选反馈与评估 → 独立通过或退回 → 等正式发布",
+      "negative": "提出人不能自审，复核成功不自动升级发布版本",
+      "canonicalRoles": [
+        "MEMBER",
+        "EVOLUTION_REVIEWER"
+      ]
+    },
+    {
+      "profileId": "knowledgeadmin",
+      "pageGroups": [
+        "P08",
+        "P20"
+      ],
+      "journey": "核对他人知识候选、加工与独立复核 → 发布新版本",
+      "negative": "发布者不同于作者；源ACL和在途引用不静默变更",
+      "canonicalRoles": [
+        "MEMBER",
+        "KNOWLEDGE_ADMIN"
+      ]
+    },
+    {
+      "profileId": "initiator",
+      "pageGroups": [
+        "P01",
+        "P17"
+      ],
+      "journey": "选择已发布SOP → 填写输入 → 责任岗位检查 → 发起实例",
+      "negative": "缺名称或未检查拒绝；重复发起被阻止；不自动启动数字员工",
+      "canonicalRoles": [
+        "MEMBER",
+        "PROCESS_INITIATOR"
+      ]
+    },
+    {
+      "profileId": "securityadmin",
+      "pageGroups": [
+        "P18",
+        "P19"
+      ],
+      "journey": "限定安全事件、目的和时效 → 提交紧急访问申请",
+      "negative": "禁止自行激活或自批；时效必须在示例约束内",
+      "canonicalRoles": [
+        "MEMBER",
+        "SECURITY_ADMIN"
+      ]
+    },
+    {
+      "profileId": "workforce",
+      "pageGroups": [
+        "P05",
+        "P18"
+      ],
+      "journey": "查看授权数字员工目录、归属和版本 → 检查就绪差异",
+      "negative": "管理者无隐含发布权，不获得使用者私人内容或连接授权",
+      "canonicalRoles": [
+        "MEMBER",
+        "WORKFORCE_ADMIN"
+      ]
+    }
+  ],
+  "roleStories": [
+    {
+      "id": "ROLE-MEMBER",
+      "persona": "普通员工",
+      "goal": "本人资料、合格待办与获授权资源",
+      "given": "本人有效身份、所列现有角色及本次对象关系和资源范围均已核验",
+      "when": "领取合格待办 → 选择本人数字员工 → 保存本人配置",
+      "then": "界面分别呈现该路径的各步骤状态和责任归属；未领取工作不能配置；无权资源不出现在目录或计数",
+      "visibleScope": "本人及授权资源",
+      "primaryAction": "领取合格任务",
+      "pageGroups": [
+        "P01",
+        "P04",
+        "P21",
+        "P22"
+      ],
+      "evidenceKind": "LOCAL_PROTOTYPE_SCENARIO_NOT_SERVER_ACCEPTANCE"
+    },
+    {
+      "id": "ROLE-MAIN",
+      "persona": "主执行人 · 甲",
+      "goal": "汇总协作贡献、核对依据、提交节点交付",
+      "given": "本人有效身份、所列现有角色及本次对象关系和资源范围均已核验",
+      "when": "接受技术/预算/写作贡献 → 指定审核 → 提交节点交付",
+      "then": "界面分别呈现该路径的各步骤状态和责任归属；缺必需贡献、依据过期或未审核均不可提交",
+      "visibleScope": "本人节点及授权贡献",
+      "primaryAction": "提交节点交付",
+      "pageGroups": [
+        "P02",
+        "P03",
+        "P04",
+        "P16",
+        "P20"
+      ],
+      "evidenceKind": "LOCAL_PROTOTYPE_SCENARIO_NOT_SERVER_ACCEPTANCE"
+    },
+    {
+      "id": "ROLE-TECH",
+      "persona": "技术协作人 · 乙",
+      "goal": "对设备型号、数量和技术约束负责",
+      "given": "本人有效身份、所列现有角色及本次对象关系和资源范围均已核验",
+      "when": "准备清单候选 → 确认新版 → 使依赖旧清单的预算与写作待重核",
+      "then": "界面分别呈现该路径的各步骤状态和责任归属；草稿不改变共同事实；不能编辑他人数字员工",
+      "visibleScope": "本人分工及共同技术依据",
+      "primaryAction": "确认新版清单",
+      "pageGroups": [
+        "P02",
+        "P03",
+        "P04",
+        "P20"
+      ],
+      "evidenceKind": "LOCAL_PROTOTYPE_SCENARIO_NOT_SERVER_ACCEPTANCE"
+    },
+    {
+      "id": "ROLE-COLLAB",
+      "persona": "预算协作人 · 丙",
+      "goal": "对报价、数量和含税预算负责",
+      "given": "本人有效身份、所列现有角色及本次对象关系和资源范围均已核验",
+      "when": "重核预算 → 提交专业贡献 → 等主执行人接受",
+      "then": "界面分别呈现该路径的各步骤状态和责任归属；旧依据不可提交；贡献成功不完成主节点",
+      "visibleScope": "本人分工及授权报价",
+      "primaryAction": "提交预算贡献",
+      "pageGroups": [
+        "P02",
+        "P03",
+        "P04",
+        "P16",
+        "P20"
+      ],
+      "evidenceKind": "LOCAL_PROTOTYPE_SCENARIO_NOT_SERVER_ACCEPTANCE"
+    },
+    {
+      "id": "ROLE-WRITER",
+      "persona": "写作协作人 · 戊",
+      "goal": "以已确认清单和预算为依据编写方案，逐项引用",
+      "given": "本人有效身份、所列现有角色及本次对象关系和资源范围均已核验",
+      "when": "配置本人数字员工 → 应用已确认清单与预算 → 保存并提交写作贡献",
+      "then": "界面分别呈现该路径的各步骤状态和责任归属；写作贡献过期不能提交；接受后仍需独立审核和节点提交",
+      "visibleScope": "授权事实及本人写作草稿",
+      "primaryAction": "提交写作贡献",
+      "pageGroups": [
+        "P02",
+        "P03",
+        "P04",
+        "P16",
+        "P20"
+      ],
+      "evidenceKind": "LOCAL_PROTOTYPE_SCENARIO_NOT_SERVER_ACCEPTANCE"
+    },
+    {
+      "id": "ROLE-RESPONSIBLE",
+      "persona": "节点责任人",
+      "goal": "明确分工、跟踪阻塞和协调返工，不代替专业确认",
+      "given": "本人有效身份、所列现有角色及本次对象关系和资源范围均已核验",
+      "when": "查看责任链与阻塞 → 提出改派或要求返工 → 等接收人确认",
+      "then": "界面分别呈现该路径的各步骤状态和责任归属；不得代专业人确认；接收前责任仍归原承担人",
+      "visibleScope": "本流程责任范围",
+      "primaryAction": "提出改派方案",
+      "pageGroups": [
+        "P02",
+        "P03",
+        "P16",
+        "P18"
+      ],
+      "evidenceKind": "LOCAL_PROTOTYPE_SCENARIO_NOT_SERVER_ACCEPTANCE"
+    },
+    {
+      "id": "ROLE-REVIEW",
+      "persona": "专业审核人 · 丁",
+      "goal": "审核当前交付版本，明确退回原因",
+      "given": "本人有效身份、所列现有角色及本次对象关系和资源范围均已核验",
+      "when": "查看指定交付和依据 → 填写退回理由或审核 → 等执行人提交",
+      "then": "界面分别呈现该路径的各步骤状态和责任归属；不得修改执行人配置；意见和审核不自动构成业务完成",
+      "visibleScope": "被指定交付与证据",
+      "primaryAction": "作出专业审核决定",
+      "pageGroups": [
+        "P02",
+        "P16",
+        "P20"
+      ],
+      "evidenceKind": "LOCAL_PROTOTYPE_SCENARIO_NOT_SERVER_ACCEPTANCE"
+    },
+    {
+      "id": "ROLE-APPROVER",
+      "persona": "访问审批人",
+      "goal": "按精确资源、动作、期限和职责分离决定授权请求",
+      "given": "本人有效身份、所列现有角色及本次对象关系和资源范围均已核验",
+      "when": "查看精确请求 → 确认范围期限和职责分离 → 批准或拒绝",
+      "then": "界面分别呈现该路径的各步骤状态和责任归属；不可代请求人申请；审批不直接履行授权",
+      "visibleScope": "当前指派的审批请求",
+      "primaryAction": "批准或拒绝请求",
+      "pageGroups": [
+        "P16",
+        "P18"
+      ],
+      "evidenceKind": "LOCAL_PROTOTYPE_SCENARIO_NOT_SERVER_ACCEPTANCE"
+    },
+    {
+      "id": "ROLE-RECEIVER",
+      "persona": "下游接收人",
+      "goal": "核验必需资料、版本与可读性后接手工作",
+      "given": "本人有效身份、所列现有角色及本次对象关系和资源范围均已核验",
+      "when": "核验上游交付、版本和可读性 → 确认接手 → 配置本人数字员工",
+      "then": "界面分别呈现该路径的各步骤状态和责任归属；上游未提交或资料未核验不能接手；凭据不随交接转移",
+      "visibleScope": "已获授权的交接包",
+      "primaryAction": "确认接手",
+      "pageGroups": [
+        "P02",
+        "P03",
+        "P04",
+        "P16",
+        "P20"
+      ],
+      "evidenceKind": "LOCAL_PROTOTYPE_SCENARIO_NOT_SERVER_ACCEPTANCE"
+    },
+    {
+      "id": "ROLE-DESIGNER",
+      "persona": "流程设计者",
+      "goal": "定义岗位、输入输出、可选数字员工及异常处理",
+      "given": "本人有效身份、所列现有角色及本次对象关系和资源范围均已核验",
+      "when": "定义岗位、输入输出与候选能力 → 保存 → 预检 → 提交评审",
+      "then": "界面分别呈现该路径的各步骤状态和责任归属；草稿不覆盖在途实例；设计者不能发布自身流程",
+      "visibleScope": "本人维护的流程草稿",
+      "primaryAction": "提交流程评审",
+      "pageGroups": [
+        "P13",
+        "P17"
+      ],
+      "evidenceKind": "LOCAL_PROTOTYPE_SCENARIO_NOT_SERVER_ACCEPTANCE"
+    },
+    {
+      "id": "ROLE-PUBLISHER",
+      "persona": "流程与资源发布人",
+      "goal": "核对独立评审、版本差异及在途影响后发布",
+      "given": "本人有效身份、所列现有角色及本次对象关系和资源范围均已核验",
+      "when": "查看数字员工或SOP待发布版本 → 核对独立评审 → 发布新版本",
+      "then": "界面分别呈现该路径的各步骤状态和责任归属；仅含 AGENT_PUBLISHER 和 SOP_PUBLISHER；不得发布知识、技能、工具、角色策略",
+      "visibleScope": "被授权发布的版本",
+      "primaryAction": "发布已批准版本",
+      "pageGroups": [
+        "P05",
+        "P17"
+      ],
+      "evidenceKind": "LOCAL_PROTOTYPE_SCENARIO_NOT_SERVER_ACCEPTANCE"
+    },
+    {
+      "id": "ROLE-RESOURCE",
+      "persona": "数字员工维护者",
+      "goal": "管理职责、技能和依赖，测试并提交独立评审",
+      "given": "本人有效身份、所列现有角色及本次对象关系和资源范围均已核验",
+      "when": "维护职责和能力依赖 → 保存草稿 → 演示检查 → 提交独立评审",
+      "then": "界面分别呈现该路径的各步骤状态和责任归属；不能自批或自行发布；看不到使用者私有对话与凭据",
+      "visibleScope": "本人负责的数字员工",
+      "primaryAction": "提交数字员工版本",
+      "pageGroups": [
+        "P05",
+        "P22"
+      ],
+      "evidenceKind": "LOCAL_PROTOTYPE_SCENARIO_NOT_SERVER_ACCEPTANCE"
+    },
+    {
+      "id": "ROLE-KNOWLEDGE",
+      "persona": "知识维护者",
+      "goal": "维护知识来源、加工状态、访问范围和引用版本",
+      "given": "本人有效身份、所列现有角色及本次对象关系和资源范围均已核验",
+      "when": "维护来源与引用版本 → 加工检查 → 提交独立评审",
+      "then": "界面分别呈现该路径的各步骤状态和责任归属；拥有知识资源不绕过源ACL；本作者不得发布自己版本",
+      "visibleScope": "本人负责的知识源",
+      "primaryAction": "提交知识版本",
+      "pageGroups": [
+        "P08",
+        "P20"
+      ],
+      "evidenceKind": "LOCAL_PROTOTYPE_SCENARIO_NOT_SERVER_ACCEPTANCE"
+    },
+    {
+      "id": "ROLE-SKILL",
+      "persona": "技能作者",
+      "goal": "定义输入输出和依赖，隔离测试后提交评审",
+      "given": "本人有效身份、所列现有角色及本次对象关系和资源范围均已核验",
+      "when": "维护输入输出与依赖 → 检查 → 独立评审 → 发布批准版本",
+      "then": "界面分别呈现该路径的各步骤状态和责任归属；创建者不得担任独立复核人；未批准不得正式使用",
+      "visibleScope": "本人负责的技能",
+      "primaryAction": "提交技能版本",
+      "pageGroups": [
+        "P06",
+        "P13",
+        "P22"
+      ],
+      "evidenceKind": "LOCAL_PROTOTYPE_SCENARIO_NOT_SERVER_ACCEPTANCE"
+    },
+    {
+      "id": "ROLE-TOOL",
+      "persona": "工具与连接维护者",
+      "goal": "定义动作、连接身份范围、健康及失效恢复",
+      "given": "本人有效身份、所列现有角色及本次对象关系和资源范围均已核验",
+      "when": "维护精确动作与连接条件 → 检查 → 独立评审 → 启用批准工具",
+      "then": "界面分别呈现该路径的各步骤状态和责任归属；工具定义不包含使用者授权；不能复制秘密或代办连接许可",
+      "visibleScope": "被授权集成与动作定义",
+      "primaryAction": "提交工具版本",
+      "pageGroups": [
+        "P07",
+        "P22"
+      ],
+      "evidenceKind": "LOCAL_PROTOTYPE_SCENARIO_NOT_SERVER_ACCEPTANCE"
+    },
+    {
+      "id": "ROLE-ORG",
+      "persona": "组织与岗位管理员",
+      "goal": "维护组织、岗位及任职关系，调岗不自动授予高权",
+      "given": "本人有效身份、所列现有角色及本次对象关系和资源范围均已核验",
+      "when": "预览组织岗位调整影响 → 确认本地变更",
+      "then": "界面分别呈现该路径的各步骤状态和责任归属；任职变更不自动授予平台高权，不代替身份管理",
+      "visibleScope": "获授权组织范围",
+      "primaryAction": "预览岗位调整",
+      "pageGroups": [
+        "P18"
+      ],
+      "evidenceKind": "LOCAL_PROTOTYPE_SCENARIO_NOT_SERVER_ACCEPTANCE"
+    },
+    {
+      "id": "ROLE-HR",
+      "persona": "人事运营",
+      "goal": "处理入转调离和逐项工作交接",
+      "given": "本人有效身份、所列现有角色及本次对象关系和资源范围均已核验",
+      "when": "发起任职交接 → 接收人逐项确认 → 完成人事交接",
+      "then": "界面分别呈现该路径的各步骤状态和责任归属；FULL_EMPLOYMENT；无认证因素、秘密或权限管理入口",
+      "visibleScope": "FULL_EMPLOYMENT",
+      "primaryAction": "推进任职交接",
+      "pageGroups": [
+        "P18"
+      ],
+      "evidenceKind": "LOCAL_PROTOTYPE_SCENARIO_NOT_SERVER_ACCEPTANCE"
+    },
+    {
+      "id": "ROLE-IDENTITY",
+      "persona": "身份管理员",
+      "goal": "核对身份供应、状态和会话元数据，处理撤销",
+      "given": "本人有效身份、所列现有角色及本次对象关系和资源范围均已核验",
+      "when": "查身份/供应/会话元数据 → 撤销指定示例会话",
+      "then": "界面分别呈现该路径的各步骤状态和责任归属；FULL_NO_SECRET；撤销不改任职，不能查看Token、MFA载荷",
+      "visibleScope": "FULL_NO_SECRET",
+      "primaryAction": "撤销指定会话",
+      "pageGroups": [
+        "P18",
+        "P21"
+      ],
+      "evidenceKind": "LOCAL_PROTOTYPE_SCENARIO_NOT_SERVER_ACCEPTANCE"
+    },
+    {
+      "id": "ROLE-ACCESS",
+      "persona": "权限管理员",
+      "goal": "维护精确授权范围，检查影响并提交审批",
+      "given": "本人有效身份、所列现有角色及本次对象关系和资源范围均已核验",
+      "when": "精确权限申请 → 独立审批 → 按批准范围履约；发布已复核角色策略",
+      "then": "界面分别呈现该路径的各步骤状态和责任归属；不能自批或扩大批准范围；拒绝、过期与无权不可履约",
+      "visibleScope": "角色与绑定元数据",
+      "primaryAction": "提交权限变更",
+      "pageGroups": [
+        "P18",
+        "P16"
+      ],
+      "evidenceKind": "LOCAL_PROTOTYPE_SCENARIO_NOT_SERVER_ACCEPTANCE"
+    },
+    {
+      "id": "ROLE-AUDITOR",
+      "persona": "安全审计员",
+      "goal": "按范围查询脱敏事件与证据，不改变业务结果",
+      "given": "本人有效身份、所列现有角色及本次对象关系和资源范围均已核验",
+      "when": "查脱敏人员/权限事件 → 预览最小审计包",
+      "then": "界面分别呈现该路径的各步骤状态和责任归属；MASKED；没有姓名/联系信息/业务正文/认证材料及写操作",
+      "visibleScope": "MASKED",
+      "primaryAction": "预览脱敏审计包",
+      "pageGroups": [
+        "P18",
+        "P19"
+      ],
+      "evidenceKind": "LOCAL_PROTOTYPE_SCENARIO_NOT_SERVER_ACCEPTANCE"
+    },
+    {
+      "id": "ROLE-SECURITY",
+      "persona": "安全复核人",
+      "goal": "复核被指派的能力或策略变更，验证职责分离",
+      "given": "本人有效身份、所列现有角色及本次对象关系和资源范围均已核验",
+      "when": "核对指派的候选、提出人与证据 → 独立通过或退回",
+      "then": "界面分别呈现该路径的各步骤状态和责任归属；本人提出的候选不能自审；安全复核不替代资源发布权",
+      "visibleScope": "风险与必要证据",
+      "primaryAction": "批准或拒绝待审版本",
+      "pageGroups": [
+        "P06",
+        "P07",
+        "P18",
+        "P19"
+      ],
+      "evidenceKind": "LOCAL_PROTOTYPE_SCENARIO_NOT_SERVER_ACCEPTANCE"
+    },
+    {
+      "id": "ROLE-PRIVACY",
+      "persona": "隐私负责人",
+      "goal": "核验保留范围、法律保留和删除请求的冲突",
+      "given": "本人有效身份、所列现有角色及本次对象关系和资源范围均已核验",
+      "when": "核对保留状态 → 保留解除后记录处理决定",
+      "then": "界面分别呈现该路径的各步骤状态和责任归属；有法律保留不可批准处理；演示不删除或导出真实数据",
+      "visibleScope": "脱敏请求与保留元数据",
+      "primaryAction": "记录隐私处理决定",
+      "pageGroups": [
+        "P09",
+        "P18",
+        "P19"
+      ],
+      "evidenceKind": "LOCAL_PROTOTYPE_SCENARIO_NOT_SERVER_ACCEPTANCE"
+    },
+    {
+      "id": "ROLE-RUNTIME",
+      "persona": "运行维护者",
+      "goal": "核对执行、回执和未知外部效果后决定恢复",
+      "given": "本人有效身份、所列现有角色及本次对象关系和资源范围均已核验",
+      "when": "未知效果 → 查询回执 → 已完成禁止重试 / 确认未执行才准备恢复",
+      "then": "界面分别呈现该路径的各步骤状态和责任归属；未知不能盲目重跑；运维不代业务提交",
+      "visibleScope": "运行关联与健康元数据",
+      "primaryAction": "查询未知效果",
+      "pageGroups": [
+        "P19"
+      ],
+      "evidenceKind": "LOCAL_PROTOTYPE_SCENARIO_NOT_SERVER_ACCEPTANCE"
+    },
+    {
+      "id": "ROLE-RELEASE",
+      "persona": "发布运维负责人",
+      "goal": "核对兼容性证据和回退方案，不绕过业务批准",
+      "given": "本人有效身份、所列现有角色及本次对象关系和资源范围均已核验",
+      "when": "核对版本证据 → 生成回退计划",
+      "then": "界面分别呈现该路径的各步骤状态和责任归属；无证据不能生成计划；原型不部署真实服务",
+      "visibleScope": "被授权运行版本元数据",
+      "primaryAction": "预览回退计划",
+      "pageGroups": [
+        "P19"
+      ],
+      "evidenceKind": "LOCAL_PROTOTYPE_SCENARIO_NOT_SERVER_ACCEPTANCE"
+    },
+    {
+      "id": "ROLE-TENANT",
+      "persona": "租户所有者",
+      "goal": "查看本租户生命周期和配置边界，不自动获得其他管理域",
+      "given": "本人有效身份、所列现有角色及本次对象关系和资源范围均已核验",
+      "when": "查看租户元数据 → 预览暂停与恢复影响",
+      "then": "界面分别呈现该路径的各步骤状态和责任归属；TENANT_OWNER 无隐含人员/权限/审计管理能力",
+      "visibleScope": "本租户元数据",
+      "primaryAction": "预览生命周期变更",
+      "pageGroups": [
+        "P18"
+      ],
+      "evidenceKind": "LOCAL_PROTOTYPE_SCENARIO_NOT_SERVER_ACCEPTANCE"
+    },
+    {
+      "id": "ROLE-WORKFLOW",
+      "persona": "工作流管理员",
+      "goal": "查看授权流程实例、阻塞节点和责任链",
+      "given": "本人有效身份、所列现有角色及本次对象关系和资源范围均已核验",
+      "when": "查看SOP目录 → 运行实例 → 节点证据与版本影响",
+      "then": "界面分别呈现该路径的各步骤状态和责任归属；流程管理员不能冒充节点执行人，草稿不改变在途固定版本",
+      "visibleScope": "获授权工作流",
+      "primaryAction": "查看实例与版本影响",
+      "pageGroups": [
+        "P17",
+        "P19"
+      ],
+      "evidenceKind": "LOCAL_PROTOTYPE_SCENARIO_NOT_SERVER_ACCEPTANCE"
+    },
+    {
+      "id": "ROLE-POLICY",
+      "persona": "策略维护者",
+      "goal": "定义字段与动作约束，执行正负例后提交独立复核",
+      "given": "本人有效身份、所列现有角色及本次对象关系和资源范围均已核验",
+      "when": "编写策略约束 → 正负例检查 → 提交独立复核",
+      "then": "界面分别呈现该路径的各步骤状态和责任归属；策略作者不能自审；生产授权仍由已有合同决定",
+      "visibleScope": "本人维护的策略元数据",
+      "primaryAction": "提交策略评审",
+      "pageGroups": [
+        "P18"
+      ],
+      "evidenceKind": "LOCAL_PROTOTYPE_SCENARIO_NOT_SERVER_ACCEPTANCE"
+    },
+    {
+      "id": "ROLE-AUTOMATION",
+      "persona": "自动化维护者",
+      "goal": "配置时区、触发、并发、去重和失败处理",
+      "given": "本人有效身份、所列现有角色及本次对象关系和资源范围均已核验",
+      "when": "配置时区与时间 → 保存 → 暂停/恢复计划",
+      "then": "界面分别呈现该路径的各步骤状态和责任归属；无效时间拒绝；未保存不能恢复；不产生真实定时任务",
+      "visibleScope": "本人计划与运行摘要",
+      "primaryAction": "保存或暂停计划",
+      "pageGroups": [
+        "P14"
+      ],
+      "evidenceKind": "LOCAL_PROTOTYPE_SCENARIO_NOT_SERVER_ACCEPTANCE"
+    },
+    {
+      "id": "ROLE-CHANNEL",
+      "persona": "渠道与专家协作人",
+      "goal": "在授权会话内发起咨询并区分意见与审批",
+      "given": "本人有效身份、所列现有角色及本次对象关系和资源范围均已核验",
+      "when": "绑定范围内提出咨询 → 收到来源明确的专家意见",
+      "then": "界面分别呈现该路径的各步骤状态和责任归属；群成员不等于工作授权；咨询不是审批，不发送外部消息",
+      "visibleScope": "绑定会话及最小必要背景",
+      "primaryAction": "发起专业咨询",
+      "pageGroups": [
+        "P15",
+        "P21"
+      ],
+      "evidenceKind": "LOCAL_PROTOTYPE_SCENARIO_NOT_SERVER_ACCEPTANCE"
+    },
+    {
+      "id": "ROLE-TEAM",
+      "persona": "数字团队协调者",
+      "goal": "查看成员职责与贡献，处理失败和汇总阻塞",
+      "given": "本人有效身份、所列现有角色及本次对象关系和资源范围均已核验",
+      "when": "查看团队成员分工 → 检查候选及依赖 → 汇总阻塞",
+      "then": "界面分别呈现该路径的各步骤状态和责任归属；成员成功不等于业务完成；成员不互相扩大权限",
+      "visibleScope": "获授权团队及贡献摘要",
+      "primaryAction": "检查团队交付",
+      "pageGroups": [
+        "P12",
+        "P02"
+      ],
+      "evidenceKind": "LOCAL_PROTOTYPE_SCENARIO_NOT_SERVER_ACCEPTANCE"
+    },
+    {
+      "id": "ROLE-API",
+      "persona": "应用集成负责人",
+      "goal": "检查应用身份、精确动作、期限及回调回执",
+      "given": "本人有效身份、所列现有角色及本次对象关系和资源范围均已核验",
+      "when": "核对本人应用、资源动作和期限 → 预览调用合同",
+      "then": "界面分别呈现该路径的各步骤状态和责任归属；应用调用不得代自然人审批，无凭据明文",
+      "visibleScope": "本人应用与授权元数据",
+      "primaryAction": "预览调用合同",
+      "pageGroups": [
+        "P07",
+        "P19"
+      ],
+      "evidenceKind": "LOCAL_PROTOTYPE_SCENARIO_NOT_SERVER_ACCEPTANCE"
+    },
+    {
+      "id": "ROLE-INTERACTOR",
+      "persona": "数字员工使用者",
+      "goal": "检查本人获授权助手的能力和依赖，确认后准备执行",
+      "given": "本人有效身份、所列现有角色及本次对象关系和资源范围均已核验",
+      "when": "检查获授权助手就绪 → 准备本地执行候选 → 任务对话",
+      "then": "界面分别呈现该路径的各步骤状态和责任归属；未检查不能准备；对话不自动建立任务完成事实",
+      "visibleScope": "本人获授权数字员工",
+      "primaryAction": "检查使用条件",
+      "pageGroups": [
+        "P05",
+        "P11",
+        "P22"
+      ],
+      "evidenceKind": "LOCAL_PROTOTYPE_SCENARIO_NOT_SERVER_ACCEPTANCE"
+    },
+    {
+      "id": "ROLE-APIADMIN",
+      "persona": "应用接入管理员",
+      "goal": "预览停用应用的影响并记录管理决定",
+      "given": "本人有效身份、所列现有角色及本次对象关系和资源范围均已核验",
+      "when": "预览指定应用停用影响 → 确认本地停用",
+      "then": "界面分别呈现该路径的各步骤状态和责任归属；不授予自然人平台高权，不改变真实凭据",
+      "visibleScope": "获授权应用元数据",
+      "primaryAction": "预览应用停用",
+      "pageGroups": [
+        "P07",
+        "P18"
+      ],
+      "evidenceKind": "LOCAL_PROTOTYPE_SCENARIO_NOT_SERVER_ACCEPTANCE"
+    },
+    {
+      "id": "ROLE-ASSIGNMENT",
+      "persona": "派工管理员",
+      "goal": "核验任职和任务范围后提出改派，等待接收人确认",
+      "given": "本人有效身份、所列现有角色及本次对象关系和资源范围均已核验",
+      "when": "核对任务和合格接替人 → 提出改派 → 接收人确认",
+      "then": "界面分别呈现该路径的各步骤状态和责任归属；提案不立即覆盖承担人，不能代接收人确认",
+      "visibleScope": "获授权工作与合格候选人",
+      "primaryAction": "提出任务改派",
+      "pageGroups": [
+        "P03",
+        "P18"
+      ],
+      "evidenceKind": "LOCAL_PROTOTYPE_SCENARIO_NOT_SERVER_ACCEPTANCE"
+    },
+    {
+      "id": "ROLE-AUDITGENERAL",
+      "persona": "授权解释审阅者",
+      "goal": "核对指定资源的授权理由和字段裁剪，不扩大数据范围",
+      "given": "本人有效身份、所列现有角色及本次对象关系和资源范围均已核验",
+      "when": "查看指定对象的授权解释 → 核对裁剪与有效期",
+      "then": "界面分别呈现该路径的各步骤状态和责任归属；AUDITOR 不等于 SECURITY_AUDITOR，不自动获得审计库或人事目录",
+      "visibleScope": "获授权对象的决策摘要",
+      "primaryAction": "查看授权解释",
+      "pageGroups": [
+        "P18",
+        "P19"
+      ],
+      "evidenceKind": "LOCAL_PROTOTYPE_SCENARIO_NOT_SERVER_ACCEPTANCE"
+    },
+    {
+      "id": "ROLE-DATASUBJECT",
+      "persona": "个人数据主体",
+      "goal": "管理本人数据请求，区分请求、复核和实际处理",
+      "given": "本人有效身份、所列现有角色及本次对象关系和资源范围均已核验",
+      "when": "选择本人导出/删除请求 → 登记 → 等待处理或保留复核",
+      "then": "界面分别呈现该路径的各步骤状态和责任归属；只能本人；请求成功不代表数据已被删除或导出",
+      "visibleScope": "仅本人数据与同意范围",
+      "primaryAction": "提交本人数据请求",
+      "pageGroups": [
+        "P09",
+        "P21"
+      ],
+      "evidenceKind": "LOCAL_PROTOTYPE_SCENARIO_NOT_SERVER_ACCEPTANCE"
+    },
+    {
+      "id": "ROLE-EVOLUTION",
+      "persona": "能力改进复核人",
+      "goal": "核对反馈来源、评估差异和提出人，记录独立复核",
+      "given": "本人有效身份、所列现有角色及本次对象关系和资源范围均已核验",
+      "when": "核对候选反馈与评估 → 独立通过或退回 → 等正式发布",
+      "then": "界面分别呈现该路径的各步骤状态和责任归属；提出人不能自审，复核成功不自动升级发布版本",
+      "visibleScope": "被指派改进与评估证据",
+      "primaryAction": "复核改进建议",
+      "pageGroups": [
+        "P09",
+        "P06"
+      ],
+      "evidenceKind": "LOCAL_PROTOTYPE_SCENARIO_NOT_SERVER_ACCEPTANCE"
+    },
+    {
+      "id": "ROLE-KNOWLEDGEADMIN",
+      "persona": "知识管理员",
+      "goal": "核对加工、独立批准和访问范围后发布他人编写的知识版本",
+      "given": "本人有效身份、所列现有角色及本次对象关系和资源范围均已核验",
+      "when": "核对他人知识候选、加工与独立复核 → 发布新版本",
+      "then": "界面分别呈现该路径的各步骤状态和责任归属；发布者不同于作者；源ACL和在途引用不静默变更",
+      "visibleScope": "获授权知识版本与加工状态",
+      "primaryAction": "发布已批准知识版本",
+      "pageGroups": [
+        "P08",
+        "P20"
+      ],
+      "evidenceKind": "LOCAL_PROTOTYPE_SCENARIO_NOT_SERVER_ACCEPTANCE"
+    },
+    {
+      "id": "ROLE-INITIATOR",
+      "persona": "流程发起人",
+      "goal": "从已发布流程发起工作，明确输入及责任岗位",
+      "given": "本人有效身份、所列现有角色及本次对象关系和资源范围均已核验",
+      "when": "选择已发布SOP → 填写输入 → 责任岗位检查 → 发起实例",
+      "then": "界面分别呈现该路径的各步骤状态和责任归属；缺名称或未检查拒绝；重复发起被阻止；不自动启动数字员工",
+      "visibleScope": "可发起流程与本人实例",
+      "primaryAction": "发起已验证流程",
+      "pageGroups": [
+        "P01",
+        "P17"
+      ],
+      "evidenceKind": "LOCAL_PROTOTYPE_SCENARIO_NOT_SERVER_ACCEPTANCE"
+    },
+    {
+      "id": "ROLE-SECURITYADMIN",
+      "persona": "安全管理员",
+      "goal": "限定事件、目的和时效提出紧急访问申请，不自行批准",
+      "given": "本人有效身份、所列现有角色及本次对象关系和资源范围均已核验",
+      "when": "限定安全事件、目的和时效 → 提交紧急访问申请",
+      "then": "界面分别呈现该路径的各步骤状态和责任归属；禁止自行激活或自批；时效必须在示例约束内",
+      "visibleScope": "被指派事件与最小必要范围",
+      "primaryAction": "提交紧急访问请求",
+      "pageGroups": [
+        "P18",
+        "P19"
+      ],
+      "evidenceKind": "LOCAL_PROTOTYPE_SCENARIO_NOT_SERVER_ACCEPTANCE"
+    },
+    {
+      "id": "ROLE-WORKFORCE",
+      "persona": "数字员工管理员",
+      "goal": "核对获授权数字员工的版本、归属及就绪状态",
+      "given": "本人有效身份、所列现有角色及本次对象关系和资源范围均已核验",
+      "when": "查看授权数字员工目录、归属和版本 → 检查就绪差异",
+      "then": "界面分别呈现该路径的各步骤状态和责任归属；管理者无隐含发布权，不获得使用者私人内容或连接授权",
+      "visibleScope": "获授权数字员工目录及绑定元数据",
+      "primaryAction": "检查数字员工就绪",
+      "pageGroups": [
+        "P05",
+        "P18"
+      ],
+      "evidenceKind": "LOCAL_PROTOTYPE_SCENARIO_NOT_SERVER_ACCEPTANCE"
+    }
+  ]
+}

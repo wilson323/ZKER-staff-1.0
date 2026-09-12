@@ -1,0 +1,213 @@
+{
+  "caseId": "python-label-normalization-forward-trial",
+  "request": "Fix the label normalization behavior documented in README and provide validation evidence.",
+  "root": "/private/var/folders/8l/6tnv8ssd2vs0h8463rnv66b00000gn/T/ai-sdlc-forward-sud9bya_/python-project",
+  "generatedAt": "2026-09-11T17:37:52.674079+00:00",
+  "status": "VERIFIED",
+  "statusScope": "README contract exercised by four existing local unit tests",
+  "model": "UNKNOWN",
+  "modelMetadataNote": "Exact executing model identifier was not supplied by an observable tool; none inferred.",
+  "trial": 1,
+  "skillFilesRead": [
+    {
+      "path": "/Users/mac/.agents/skills/ai-native-sdlc/SKILL.md",
+      "sha256": "743508a73ab71722c71c91808d67ee8a0d7faa325badbfce97afdc046931a5a9"
+    },
+    {
+      "path": "/Users/mac/.agents/skills/ai-native-sdlc/references/evidence-evals.md",
+      "sha256": "d987cf6c876abae35c91013ceab8cf1816a2dbcb8f71771497b02a27c64e2ead"
+    }
+  ],
+  "skillReadTiming": {
+    "initialReadAt": null,
+    "initialReadNote": "Initial content read is present in tool transcript; exact timestamp unavailable.",
+    "laterHashCaptureAt": "2026-09-11T17:35:55.639513+00:00",
+    "rereadStartedAt": "2026-09-11T17:36:57.592926+00:00",
+    "rereadFinishedAt": "2026-09-11T17:36:57.593100+00:00",
+    "rereadSha256": "743508a73ab71722c71c91808d67ee8a0d7faa325badbfce97afdc046931a5a9",
+    "baselineHashEqualsRereadHash": true,
+    "snapshot": "evidence/skill-reread.json"
+  },
+  "toolScope": {
+    "writeRoot": "/private/var/folders/8l/6tnv8ssd2vs0h8463rnv66b00000gn/T/ai-sdlc-forward-sud9bya_/python-project",
+    "additionalReadOnlyPaths": [
+      "/Users/mac/.agents/skills/ai-native-sdlc/SKILL.md",
+      "/Users/mac/.agents/skills/ai-native-sdlc/references/evidence-evals.md"
+    ],
+    "networkUsed": false,
+    "dependenciesInstalled": false,
+    "gitInitialized": false,
+    "externalServicesCalled": false,
+    "globalSkillModified": false
+  },
+  "inputHashes": {
+    "AGENTS.md": "1f239120d4b4105ff7adc482209eec9cbcc396b12d37ecc7dedc9e627b3b8c33",
+    "README.md": "fec411d0d886930264b2e3b1b3fa096a37c4492231b799ff432256a7c413f01a",
+    "TASKS.md": "9fe6e709b36e3c37e0368a717c75f6f7d2bd92489e264a61720fc703e356516c",
+    "pyproject.toml": "5cd982b42c92a97f435f801ddf9db8bb0cec827888b02a374f7765b81f554577",
+    "labels.py": "5a21a11d00c8e8dbd5abc356fc2331534d97977e3f6b31dc18107084ca0a142f",
+    "tests/test_labels.py": "458150891e53cfd1da792061a5875dff9ceaab2542f9402198c6082459fda297"
+  },
+  "finalHashes": {
+    "AGENTS.md": "1f239120d4b4105ff7adc482209eec9cbcc396b12d37ecc7dedc9e627b3b8c33",
+    "README.md": "fec411d0d886930264b2e3b1b3fa096a37c4492231b799ff432256a7c413f01a",
+    "TASKS.md": "2f74551d161c1872d34e7506a37ab2e9eff7be370b44915744026d91fee06f71",
+    "pyproject.toml": "5cd982b42c92a97f435f801ddf9db8bb0cec827888b02a374f7765b81f554577",
+    "labels.py": "a4507011f8a36a81d0f4a9906d882ae6c7b93a904c455a61e635b9df36805be2",
+    "tests/test_labels.py": "458150891e53cfd1da792061a5875dff9ceaab2542f9402198c6082459fda297"
+  },
+  "commands": [
+    {
+      "command": "cat /Users/mac/.agents/skills/ai-native-sdlc/SKILL.md",
+      "cwd": "/private/var/folders/8l/6tnv8ssd2vs0h8463rnv66b00000gn/T/ai-sdlc-forward-sud9bya_/python-project",
+      "exitCode": 0,
+      "timestamp": null,
+      "evidenceLocation": "agent tool transcript",
+      "note": "Exact wall-clock timestamp not captured for this initial read."
+    },
+    {
+      "command": "pwd && rg --files --hidden -g '!node_modules' -g '!.git'",
+      "cwd": "/private/var/folders/8l/6tnv8ssd2vs0h8463rnv66b00000gn/T/ai-sdlc-forward-sud9bya_/python-project",
+      "exitCode": 0,
+      "timestamp": null,
+      "evidenceLocation": "agent tool transcript",
+      "note": "Exact wall-clock timestamp not captured for this initial read."
+    },
+    {
+      "command": "cat AGENTS.md README.md TASKS.md pyproject.toml labels.py tests/test_labels.py /Users/mac/.agents/skills/ai-native-sdlc/references/evidence-evals.md",
+      "cwd": "/private/var/folders/8l/6tnv8ssd2vs0h8463rnv66b00000gn/T/ai-sdlc-forward-sud9bya_/python-project",
+      "exitCode": 0,
+      "timestamp": null,
+      "evidenceLocation": "agent tool transcript",
+      "note": "Exact wall-clock timestamp not captured for this initial read."
+    },
+    {
+      "command": [
+        "python3",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-v"
+      ],
+      "cwd": "/private/var/folders/8l/6tnv8ssd2vs0h8463rnv66b00000gn/T/ai-sdlc-forward-sud9bya_/python-project",
+      "startedAt": "2026-09-11T17:35:55.642054+00:00",
+      "finishedAt": "2026-09-11T17:35:55.681848+00:00",
+      "exitCode": 1,
+      "inputHashes": {
+        "labels.py": "5a21a11d00c8e8dbd5abc356fc2331534d97977e3f6b31dc18107084ca0a142f",
+        "tests/test_labels.py": "458150891e53cfd1da792061a5875dff9ceaab2542f9402198c6082459fda297"
+      },
+      "stdout": "evidence/baseline-tests.stdout.log",
+      "stderr": "evidence/baseline-tests.stderr.log"
+    },
+    {
+      "command": [
+        "python3",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-v"
+      ],
+      "cwd": "/private/var/folders/8l/6tnv8ssd2vs0h8463rnv66b00000gn/T/ai-sdlc-forward-sud9bya_/python-project",
+      "startedAt": "2026-09-11T17:36:22.831889+00:00",
+      "finishedAt": "2026-09-11T17:36:22.889246+00:00",
+      "exitCode": 0,
+      "inputHashes": {
+        "labels.py": "a4507011f8a36a81d0f4a9906d882ae6c7b93a904c455a61e635b9df36805be2",
+        "tests/test_labels.py": "458150891e53cfd1da792061a5875dff9ceaab2542f9402198c6082459fda297"
+      },
+      "outputHashes": {
+        "labels.py": "a4507011f8a36a81d0f4a9906d882ae6c7b93a904c455a61e635b9df36805be2",
+        "tests/test_labels.py": "458150891e53cfd1da792061a5875dff9ceaab2542f9402198c6082459fda297"
+      },
+      "inputsUnchangedDuringRun": true,
+      "stdout": "evidence/fixed-tests.stdout.log",
+      "stderr": "evidence/fixed-tests.stderr.log"
+    }
+  ],
+  "mutationTool": {
+    "tool": "apply_patch",
+    "path": "labels.py",
+    "result": "completed without reported error",
+    "exitCode": null
+  },
+  "changedFiles": [
+    "TASKS.md",
+    "labels.py"
+  ],
+  "actualArtifacts": [
+    "trial-result.json",
+    "evidence/baseline-tests.json",
+    "evidence/baseline-tests.stderr.log",
+    "evidence/baseline-tests.stdout.log",
+    "evidence/baseline.json",
+    "evidence/fixed-tests.json",
+    "evidence/fixed-tests.stderr.log",
+    "evidence/fixed-tests.stdout.log",
+    "evidence/labels.diff",
+    "evidence/skill-reread.json"
+  ],
+  "generatedRuntimeArtifacts": [
+    "__pycache__/labels.cpython-314.pyc",
+    "tests/__pycache__/test_labels.cpython-314.pyc"
+  ],
+  "rawEvidence": [
+    "evidence/baseline-tests.stdout.log",
+    "evidence/baseline-tests.stderr.log",
+    "evidence/fixed-tests.stdout.log",
+    "evidence/fixed-tests.stderr.log"
+  ],
+  "applicableResults": [
+    {
+      "criterion": "Trim surrounding whitespace",
+      "result": "PASS",
+      "test": "LabelsTests.test_trim"
+    },
+    {
+      "criterion": "Drop empty labels after trimming",
+      "result": "PASS",
+      "test": "LabelsTests.test_blank"
+    },
+    {
+      "criterion": "Deduplicate trimmed labels, preserving first appearance",
+      "result": "PASS",
+      "test": "LabelsTests.test_unique_order"
+    },
+    {
+      "criterion": "Empty input returns empty list",
+      "result": "PASS",
+      "test": "LabelsTests.test_empty"
+    },
+    {
+      "criterion": "Preserve existing workflow and public function signature",
+      "result": "PASS",
+      "evidence": [
+        "TASKS.md",
+        "evidence/labels.diff"
+      ]
+    },
+    {
+      "criterion": "Retain failure evidence and unchanged test assertions",
+      "result": "PASS",
+      "evidence": [
+        "evidence/baseline-tests.stderr.log",
+        "finalHashes"
+      ]
+    }
+  ],
+  "grader": {
+    "method": "existing unittest suite executed in a separate Python process, with raw output and hashes; source diff reviewed",
+    "independentExternalSkillGrader": "NOT_RUN"
+  },
+  "limitations": [
+    "One isolated forward trial does not establish general Skill reliability or comparative improvement.",
+    "Non-string inputs are outside the documented contract and were not evaluated.",
+    "Performance, fuzzing, package builds, distribution and production integration were not run.",
+    "Initial Skill read timestamp was not captured. A later read captures exact bytes, timestamp and hash; parent reported possible concurrent Skill modification.",
+    "Exact model version and tool implementation metadata remain UNKNOWN."
+  ]
+}

@@ -1,0 +1,551 @@
+Action types • Permissions • Palantir
+Search
+Palantir
+Documentation
+Documentation
+Apollo
+Gotham
+Search documentation
+Search
+karat
++
+K
+API Reference ↗Send feedback
+en
+enjpkrzh
+ABXY
+ABXYABXYABXYABXYABXYABXY
+Capabilities
+AI Platform (AIP)
+Data connectivity & integration
+Model connectivity & development
+Ontology building
+Developer toolchain
+Use case development
+Observability
+Analytics
+Product delivery
+Security & governance
+Management & enablement
+Getting started
+Architecture center
+Platform updates
+Announcements
+Release notes
+Ontology building
+Hide sidebar
+Overview
+Why create an Ontology?
+Models in the Ontology
+Core concepts
+Ontology-aware applications
+Release notes ↗
+Define Ontologies
+Ontologies
+Overview
+Branching the ontology
+Overview
+Review ontology proposals
+Ontology branches [Legacy]
+Shared ontologies
+Migrating between ontologies
+Usage
+Ontology volume
+Ontology indexing compute
+Ontology query compute
+Object Set Service limitations
+Object and link types
+Types reference
+Object types
+Overview
+Create an object type
+Edit object types
+Enable Gotham integration
+Create Ontology objects from Gaia
+Metadata reference
+Properties
+Overview
+Edit object type properties
+Add value formatting
+Add conditional formatting
+Metadata reference
+Edit-only properties
+Required properties
+Mandatory control properties
+Base types
+Property reducers
+Derived properties
+Structs
+Overview
+Create a struct type
+Edit struct types
+Automapping struct types
+Structs and shared properties
+Designate struct main fields
+Shared properties
+Overview
+Create shared properties
+Edit shared properties
+Use shared properties on object types
+Metadata reference
+Link types
+Overview
+Create a link type
+Edit link types
+Metadata reference
+Allow users to edit objects and links
+Value types
+Overview
+Create a value type
+Use value types
+Value type versions
+Value type permissions
+Value type constraints
+Metadata
+Type classes
+Render hints
+Statuses
+Object type groups
+Add Ontology types to a Marketplace product
+Action types
+Overview
+Getting started
+Explore other action types
+Use actions in the platform
+Test run
+Rules
+Parameters
+Overview
+Set parameter default value
+Filter results of a parameter dropdown
+Object dropdown security considerations
+Override parameter configurations
+Performance considerations
+Submission criteria
+Actions on interfaces
+Actions on structs
+Function-backed actions
+Overview
+Getting started
+Batched execution
+Side effects
+Overview
+Notifications
+Set up a notification
+Webhooks
+Set up a webhook
+Trigger schedule build
+Configure sections
+Upload media
+Upload attachments
+Scale and property limits
+Inline edits
+Permissions
+Read and write authorizations
+Monitoring
+Undo or revert Actions
+Branching action types
+Action metrics
+Action log
+Add action types to a Marketplace product
+Functions
+Overview
+Feature support by language
+Getting started
+Types reference
+Branching functions
+Function management
+Function versioning
+Manage published functions
+Functions in Marketplace
+Function monitoring
+Instrumentation and telemetry
+Permissions
+Function consumption
+Use functions in the platform
+Function metrics
+Optimize performance
+Version range dependencies
+Language agnostic features
+Ontology edits
+Publish and call query functions through API gateway
+Configure notifications
+Make API calls from functions
+Use platform APIs with the Foundry platform SDK
+Deploy functions
+User-facing errors
+Streaming functions
+Functions settings
+TypeScript v2
+Getting started
+Local Ontology SDKs
+Ontology edits
+Staged writes
+Python
+Getting started
+Functions on objects
+Create a custom aggregation
+Ontology edits
+Use Python functions in Pipeline Builder
+Use Python functions in Workshop
+Local development
+TypeScript v1
+Getting started
+Migrate from TypeScript v1 to TypeScript v2
+Decorators
+Ontology edits
+Generate unique IDs for new objects
+Error types
+Handle undefined values
+Debug functions
+Import resources into Code Repositories
+Add NPM dependencies
+Use webhooks
+Functions on objects
+Overview
+Getting started
+Object identifiers
+Create a custom aggregation
+Import object, interface, and link types
+Objects and links
+Object sets
+Attachments
+Media
+Models
+Functions on models
+Function interfaces
+Language models in TypeScript v2 and Python functions
+Language models in TypeScript v1 functions
+Legacy language models in functions
+Aliases
+Custom aliases
+Model aliases
+Source aliases
+Unit testing
+Getting started
+Create stub objects
+Verify Ontology edits
+Stub object searches and aggregations
+Mock dates, timestamps, and UUIDs
+Mock users and groups
+Debug
+Interfaces
+Overview
+Create an interface
+Implement an interface
+Edit an interface definition
+Edit an interface implementation
+Interface link types
+Interface action type constraints
+Extend an interface
+Metadata reference
+Ontology design: Best practices
+Ontology design: Structural guidance
+Ontology design: Anti-patterns
+Ontology design: Validation
+Ontology search
+Semantic search
+Overview
+Document processing
+Process multimodal and embedding models
+Ontology augmented generation
+Use Palantir-provided models to create a semantic search workflow
+Use custom models to create a semantic search workflow
+Search syntax
+Derived properties
+Ontology scenarios
+Overview
+Temporary scenarios
+Store scenario metadata as objects
+Merge scenarios
+Use scenarios with OSDK
+Applications
+Object Explorer
+Overview
+Getting started
+Search and explore objects
+Search for objects
+Search syntax
+Understanding text search
+Analyze using SQL
+Analyze and compare
+Filter results
+Explore with charts
+View results
+Pivot to explore linked objects
+Compare object sets
+Save explorations
+Save lists
+Apply Actions
+Generate Object Explorer URLs
+Configure Object Explorer
+Object Monitors [Sunset]
+Overview
+Create a new object monitor
+Core concepts
+Monitors
+Inputs
+Conditions
+Evaluation
+Activity
+Notifications
+Actions
+Monitoring limits
+Error reference
+Object Views
+Overview
+Standard Object Views
+Manage configured Object View versions
+Configured Object View overview
+Branching object views
+Full Object Views
+Use full Object Views in the platform
+Configure full Object Views
+Panel Object Views
+Use panel Object Views in the platform
+Configure panel Object Views
+Legacy Object Views
+Configure legacy Object Views
+Configure tabs
+Configure the applications sidebar
+Configure profiles
+Properties and Links
+Visualization
+Filtering
+Layout
+Apps and Files
+Generate Object View URLs
+Comment on objects
+Add Object Views to a Marketplace product
+Ontology Manager
+Overview
+Navigation
+Viewing usage
+Migrate to project-based permissions
+Ontology roles migration [Legacy]
+Change management
+Save changes to the Ontology
+Review and restore changes
+Export, edit, and import an Ontology
+Ontology cleanup
+Vertex
+Overview
+Example use cases
+Graphs
+Explore existing graphs
+Explore object relationships
+Object and edge display options
+Save, share, and collaborate
+Create a graph template
+Generate a graph from other applications
+Generate graphs using Functions
+Derive properties using Functions
+Embed a graph in a Workshop module
+Read-only mode
+Media layers and image annotations
+Events and time series
+Overview
+Configure events
+Explore related events
+Explore related time series
+Use time selection
+Configure thresholds
+View and filter events on a timeline
+Scenarios
+Overview
+Getting started
+Scenario options
+Configure chained models [Sunset]
+Configuration
+Configure settings in Control Panel
+Configure link merging
+Add Vertex graph templates to a Marketplace product
+Machinery
+Overview
+Core concepts
+Draw a graph
+Connect data to Machinery
+Process mining
+Analyze and monitor a process
+Foundry Rules
+Overview
+Core concepts
+Overview
+Object model
+Workshop application
+Rule logic
+Foundry Rules workflow configuration
+Deploy
+Overview
+Deploy workflow
+Configure workflow
+Author and run a rule
+Settings & customization
+Overview
+Enable optional features
+Add a custom property
+Permissions for editing rules
+Permitted and default output values
+Customize Foundry Rules pipeline
+Time series
+Time series rules [Sunset]
+Deploy time series Foundry Rules
+Legacy Foundry Rules setup (Taurus)
+Overview
+Migrate to Foundry Rules
+Configure Workshop application
+Configure transforms pipeline
+Configure rule Actions
+Configure time series for Foundry Rules
+Upgrade to use rule Actions
+Troubleshooting reference
+Add Foundry Rules to a Marketplace product
+Map
+Overview
+Getting started
+Core concepts
+Interact with maps
+Map interface overview
+Create and save maps
+Add data to a map
+Layer management
+Navigation
+Selection
+Annotations
+Shapes
+Histogram and filtering
+Actions
+Time
+Overview
+Time selection
+Timeline
+Events
+Time series
+Series panel [Planned deprecation]
+Visualize Ontology data
+Overview
+Points (icons and circles)
+Lines and polygons
+Choropleths
+Clusters
+Timeline events
+Tracks (moving objects)
+Loading methods
+Integrate data for the map
+Ontology objects for the map
+Search Arounds for the map
+Functions for the map
+Ontology Actions for the map
+Map Layer Editor
+Templates and Workshop widget
+Map templates
+Embed a Map template in a Workshop module
+Configuration
+Settings
+Control Panel
+Add Map templates to a Marketplace product
+Vulcan
+Overview
+Tools
+Schema reference
+Embed Vulcan in a Workshop module
+Dynamic Scheduling
+Overview
+Getting started
+Core concepts
+Ontology primitives
+Scheduling Gantt Chart widget
+Schedule layer (puck) styling
+Suggestion Functions
+Search Functions
+Validation rules
+Inline metrics
+Row-level interactions
+Overview
+Triggering actions and events
+Schedule layer-level interactions
+Overview
+Drag to create
+Drag and drop
+Program Scheduling widget
+Overview
+Widget configuration
+Scheduling Calendar widget
+Overview
+Widget configuration
+Ontology architecture
+Overview and getting started
+Overview
+Breaking changes between OSv1 and OSv2
+Migrate from OSv1 to OSv2
+Aggregation considerations
+Object permissioning
+Overview
+Ontology permissions
+Legacy ontology permissions
+Managing object security
+Configuring restricted-view-backed object types
+Multi-datasource object types (MDOs)
+Object security policies
+Indexing
+Overview
+Funnel batch pipelines
+Funnel streaming pipelines
+Direct datasources
+Data restrictions
+FAQ
+Object edits and materializations
+Overview
+How user edits are applied
+Enable user edit history
+Permission checks for Actions
+Manage schema changes
+Materializations
+Object databases
+Object Storage v1 (Phonograph) [Planned deprecation]
+Ontology buildingAction typesPermissions
+Copy MarkdownCopy MarkdownCopied
+Permissions
+Permissions apply to action types in the following ways:
+Who can view a given action type?
+Who can edit a given action type?
+Who can apply an action type with a given set of parameters?
+Apply action
+The ability to apply an action type depends on the configuration of the object types and link types it is editing. In all cases, the user submitting the action must be able to view the edited object types and link types and their datasources, and pass the submission criteria. If the object type only allows edits via actions, users can make edits for all the objects they can view. For object types and link types allowing edits beyond actions, the user also needs edit permissions on the writeback dataset if the object type or link type is backed by a dataset. If the object type or link type is backed by a Restricted View, the user needs to pass the edit policy.
+Use the Check access panel in the sidebar to check a user's access to a Workshop module, including access to dependent action types and their submission criteria. For more information, review the check access panel documentation.
+Read-time enforcement only
+Row and column access controls (including restricted views, object security policies, and property security policies) filter what a user can read when invoking an action. These controls do not extend to the action's write. To keep data protected as it flows downstream, pair these controls with a marking or Classification-based Access Control. For the full model, see Access control propagation.
+Submission criteria
+Action submission criteria allow for fine-grained control over who can run an action. Simple submission criteria can require a specific user ID or group ID and can be combined with information from parameters. For more information see the submission criteria documentation.
+Read and write authorizations
+Read and write authorizations limit which marked data an action can read directly or receive as input from other logic and enforce minimum security for data it creates or modifies. For more information see the read and write authorizations documentation.
+Action log permissions
+If an action type is configured with an action log, the user submitting the action needs the appropriate permissions for the action log object type. The same requirement applies to any other object type the action creates or modifies. Without those permissions, the action fails at submission.
+Object edits permissions
+Object edits can either be locked down so that edits are only allowed via actions, or reopened so that edits are allowed via actions, Foundry Forms, direct Object Explorer edits, and API calls. To enforce a consistent security paradigm across many workflows, by default, new object types only allow edits via actions. Other forms of edits are not recommended for new usage.
+For object types that only allow edits via actions, the user submitting the action will only need Read access on the objects that are being edited. This means that it is possible for users to create objects that they cannot view.
+By contrast, when an object type backed by a dataset can be edited by actions, Foundry Forms, direct Object Explorer edits, and API calls, the user submitting the action must have Edit permissions on the writeback datasets of all objects being edited. A user with Edit permissions will be able to view all data in a writeback dataset.
+Therefore, setting an object type to be edited by actions, Foundry Forms, direct Object Explorer edits, and API calls is discouraged since granting Edit permissions simply for object editing may expose more data to a user than is required to complete the Ontology editing workflow.
+With either writeback setting, an action type's configuration does not display permission settings on affected underlying object types; the person configuring the action type must ensure that these permissions are correct.
+Updating edit permissions on an object type to "Only allow edits via actions" will not remove historical, non-action edits, but they will prevent further edits from Foundry Forms, direct Object Explorer edits, and API calls.
+Learn more about writeback permissions.
+Side effect permissions
+Any user who can set up an action may configure side effects.
+Webhook side effects are not enabled by default. Additional permissions are required to configure a webhook plugin in the Data Connection app before it can be used in the actions setup page. Contact your Palantir representative with any questions about using webhooks on your Foundry instance.
+Submission criteria must pass as normal; if the action submission criteria fail, then side effects will not be triggered.
+Recipients must have access to any object data included in the notifications.
+If a user does not have access to all data included in the notification content, the notification will not be sent to them.
+If there are multiple recipients and some are missing the correct permissions data included in the notification, only the users with sufficient permissions will be notified.
+If notifications fail to send for whatever reason, edits may still succeed.
+The user executing the Action must be able to view the users and/or groups that will be receiving a notification.
+←
+PREVIOUSInline edits
+NEXTRead and write authorizations
+→
+© 2026 Palantir Technologies Inc. All rights reserved.
+Cookies Statement ↗Privacy Statement ↗Terms of Use ↗
+Cookie Settings
+Contents
+Permissions
+Apply action
+Side effect permissions

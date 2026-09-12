@@ -1,0 +1,2651 @@
+{
+  "scope": "KNOWLEDGE_MEMORY_RESEARCH_DOCUMENTS_ONLY",
+  "checkedAt": "2026-09-11T22:50:30.577366+00:00",
+  "status": "PASS",
+  "checkCount": 463,
+  "checksPassed": 463,
+  "failures": [],
+  "checks": [
+    {
+      "name": "original unchanged: docs/设计包/30-产品设计追踪数据.json",
+      "pass": true
+    },
+    {
+      "name": "original unchanged: docs/设计包/31-完整产品交互原型.html",
+      "pass": true
+    },
+    {
+      "name": "173 requirements retained",
+      "pass": true
+    },
+    {
+      "name": "22 pages retained",
+      "pass": true
+    },
+    {
+      "name": "72 original product cases unrun",
+      "pass": true
+    },
+    {
+      "name": "stack remains unconfigured",
+      "pass": true
+    },
+    {
+      "name": "memory snapshot located: https://raw.githubusercontent.com/mem0ai/mem0/c7ee362aff94a369af70f13f2b4f853f6793ff4c/LICENSE",
+      "pass": true
+    },
+    {
+      "name": "memory snapshot located: https://raw.githubusercontent.com/mem0ai/mem0/c7ee362aff94a369af70f13f2b4f853f6793ff4c/pyproject.toml",
+      "pass": true
+    },
+    {
+      "name": "memory snapshot located: https://raw.githubusercontent.com/mem0ai/mem0/c7ee362aff94a369af70f13f2b4f853f6793ff4c/mem0/memory/main.py",
+      "pass": true
+    },
+    {
+      "name": "memory snapshot located: https://raw.githubusercontent.com/mem0ai/mem0/c7ee362aff94a369af70f13f2b4f853f6793ff4c/mem0/memory/storage.py",
+      "pass": true
+    },
+    {
+      "name": "memory snapshot located: https://raw.githubusercontent.com/mem0ai/mem0/c7ee362aff94a369af70f13f2b4f853f6793ff4c/server/auth.py",
+      "pass": true
+    },
+    {
+      "name": "memory snapshot located: https://raw.githubusercontent.com/mem0ai/mem0/c7ee362aff94a369af70f13f2b4f853f6793ff4c/server/README.md",
+      "pass": true
+    },
+    {
+      "name": "memory snapshot located: https://raw.githubusercontent.com/mem0ai/mem0/c7ee362aff94a369af70f13f2b4f853f6793ff4c/tests/test_server_auth.py",
+      "pass": true
+    },
+    {
+      "name": "memory snapshot located: https://raw.githubusercontent.com/mem0ai/mem0/c7ee362aff94a369af70f13f2b4f853f6793ff4c/mem0/vector_stores/pgvector.py",
+      "pass": true
+    },
+    {
+      "name": "memory snapshot located: https://raw.githubusercontent.com/volcengine/OpenViking/0f77ab5625a5e2ead4f286d4e58ea77e05fcfdee/LICENSE",
+      "pass": true
+    },
+    {
+      "name": "memory snapshot located: https://raw.githubusercontent.com/volcengine/OpenViking/0f77ab5625a5e2ead4f286d4e58ea77e05fcfdee/README.md",
+      "pass": true
+    },
+    {
+      "name": "memory snapshot located: https://raw.githubusercontent.com/volcengine/OpenViking/0f77ab5625a5e2ead4f286d4e58ea77e05fcfdee/pyproject.toml",
+      "pass": true
+    },
+    {
+      "name": "memory snapshot located: https://raw.githubusercontent.com/volcengine/OpenViking/0f77ab5625a5e2ead4f286d4e58ea77e05fcfdee/docs/en/concepts/11-multi-tenant.md",
+      "pass": true
+    },
+    {
+      "name": "memory failed fetch not credited: volcengine/OpenViking/docs/en/concepts/08-memory.md",
+      "pass": true
+    },
+    {
+      "name": "memory snapshot located: https://raw.githubusercontent.com/volcengine/OpenViking/0f77ab5625a5e2ead4f286d4e58ea77e05fcfdee/SECURITY.md",
+      "pass": true
+    },
+    {
+      "name": "memory snapshot located: https://raw.githubusercontent.com/getzep/graphiti/c035afb7990b6077331a81e98b04efcfd9bf8184/LICENSE",
+      "pass": true
+    },
+    {
+      "name": "memory snapshot located: https://raw.githubusercontent.com/getzep/graphiti/c035afb7990b6077331a81e98b04efcfd9bf8184/README.md",
+      "pass": true
+    },
+    {
+      "name": "memory snapshot located: https://raw.githubusercontent.com/getzep/graphiti/c035afb7990b6077331a81e98b04efcfd9bf8184/pyproject.toml",
+      "pass": true
+    },
+    {
+      "name": "memory snapshot located: https://raw.githubusercontent.com/getzep/graphiti/c035afb7990b6077331a81e98b04efcfd9bf8184/graphiti_core/graphiti.py",
+      "pass": true
+    },
+    {
+      "name": "memory snapshot located: https://raw.githubusercontent.com/getzep/graphiti/c035afb7990b6077331a81e98b04efcfd9bf8184/graphiti_core/utils/maintenance/graph_data_operations.py",
+      "pass": true
+    },
+    {
+      "name": "memory snapshot located: https://raw.githubusercontent.com/getzep/graphiti/c035afb7990b6077331a81e98b04efcfd9bf8184/tests/test_handle_multiple_group_ids.py",
+      "pass": true
+    },
+    {
+      "name": "memory snapshot located: https://raw.githubusercontent.com/getzep/graphiti/c035afb7990b6077331a81e98b04efcfd9bf8184/graphiti_core/edges.py",
+      "pass": true
+    },
+    {
+      "name": "memory snapshot located: https://raw.githubusercontent.com/getzep/graphiti/c035afb7990b6077331a81e98b04efcfd9bf8184/graphiti_core/nodes.py",
+      "pass": true
+    },
+    {
+      "name": "memory snapshot located: https://raw.githubusercontent.com/langchain4j/langchain4j/0028928eab6d3b0c11d9be13c6a06e9f0abd9512/LICENSE",
+      "pass": true
+    },
+    {
+      "name": "memory snapshot located: https://raw.githubusercontent.com/langchain4j/langchain4j/0028928eab6d3b0c11d9be13c6a06e9f0abd9512/langchain4j-core/src/main/java/dev/langchain4j/store/memory/chat/ChatMemoryStore.java",
+      "pass": true
+    },
+    {
+      "name": "memory snapshot located: https://raw.githubusercontent.com/langchain4j/langchain4j/0028928eab6d3b0c11d9be13c6a06e9f0abd9512/langchain4j/src/main/java/dev/langchain4j/memory/chat/MessageWindowChatMemory.java",
+      "pass": true
+    },
+    {
+      "name": "memory snapshot located: https://raw.githubusercontent.com/langchain4j/langchain4j/0028928eab6d3b0c11d9be13c6a06e9f0abd9512/docs/docs/tutorials/chat-memory.md",
+      "pass": true
+    },
+    {
+      "name": "memory snapshot located: https://raw.githubusercontent.com/langchain4j/langchain4j/0028928eab6d3b0c11d9be13c6a06e9f0abd9512/docs/docs/tutorials/ai-services.md",
+      "pass": true
+    },
+    {
+      "name": "memory snapshot located: https://raw.githubusercontent.com/volcengine/OpenViking/0f77ab5625a5e2ead4f286d4e58ea77e05fcfdee/docs/en/concepts/06-extraction.md",
+      "pass": true
+    },
+    {
+      "name": "memory snapshot located: https://raw.githubusercontent.com/volcengine/OpenViking/0f77ab5625a5e2ead4f286d4e58ea77e05fcfdee/docs/en/concepts/08-session.md",
+      "pass": true
+    },
+    {
+      "name": "memory snapshot located: https://raw.githubusercontent.com/volcengine/OpenViking/0f77ab5625a5e2ead4f286d4e58ea77e05fcfdee/docs/en/concepts/15-acl.md",
+      "pass": true
+    },
+    {
+      "name": "memory snapshot located: https://raw.githubusercontent.com/volcengine/OpenViking/0f77ab5625a5e2ead4f286d4e58ea77e05fcfdee/tests/api_test/scenarios/sessions/test_session_delete_cleanup.py",
+      "pass": true
+    },
+    {
+      "name": "memory snapshot located: https://raw.githubusercontent.com/volcengine/OpenViking/0f77ab5625a5e2ead4f286d4e58ea77e05fcfdee/openviking/session/memory_policy.py",
+      "pass": true
+    },
+    {
+      "name": "memory snapshot located: https://raw.githubusercontent.com/mem0ai/mem0/c7ee362aff94a369af70f13f2b4f853f6793ff4c/mem0/memory/telemetry.py",
+      "pass": true
+    },
+    {
+      "name": "memory snapshot located: https://raw.githubusercontent.com/mem0ai/mem0/c7ee362aff94a369af70f13f2b4f853f6793ff4c/server/main.py",
+      "pass": true
+    },
+    {
+      "name": "memory snapshot located: https://raw.githubusercontent.com/mem0ai/mem0/c7ee362aff94a369af70f13f2b4f853f6793ff4c/tests/test_memory.py",
+      "pass": true
+    },
+    {
+      "name": "memory snapshot located: https://raw.githubusercontent.com/langchain4j/langchain4j/80b747681106494d57d767cb66ef2c4999d20cb1/LICENSE",
+      "pass": true
+    },
+    {
+      "name": "memory snapshot located: https://raw.githubusercontent.com/langchain4j/langchain4j/80b747681106494d57d767cb66ef2c4999d20cb1/langchain4j-core/src/main/java/dev/langchain4j/store/memory/chat/ChatMemoryStore.java",
+      "pass": true
+    },
+    {
+      "name": "memory snapshot located: https://raw.githubusercontent.com/langchain4j/langchain4j/80b747681106494d57d767cb66ef2c4999d20cb1/langchain4j/src/main/java/dev/langchain4j/memory/chat/MessageWindowChatMemory.java",
+      "pass": true
+    },
+    {
+      "name": "memory snapshot located: https://raw.githubusercontent.com/qdrant/qdrant/6ab21cac18ebb6f4ae29102c7f8f5cc11affd5de/LICENSE",
+      "pass": true
+    },
+    {
+      "name": "memory snapshot located: https://raw.githubusercontent.com/pgvector/pgvector/efa08fda9ec485d80292d0487a77939c087dedcc/LICENSE",
+      "pass": true
+    },
+    {
+      "name": "memory snapshot located: https://raw.githubusercontent.com/neo4j/neo4j/f213380f812b820a1b312e2ea52cb3d8f1931ccc/LICENSE.txt",
+      "pass": true
+    },
+    {
+      "name": "memory failed fetch not credited: FalkorDB/FalkorDB/LICENSE.txt",
+      "pass": true
+    },
+    {
+      "name": "memory snapshot located: https://raw.githubusercontent.com/FalkorDB/FalkorDB/ed5b31553987c44ed516829631a9379b4589bc74/LICENSE",
+      "pass": true
+    },
+    {
+      "name": "memory snapshot located: https://raw.githubusercontent.com/mem0ai/mem0/c7ee362aff94a369af70f13f2b4f853f6793ff4c/server/server_state.py",
+      "pass": true
+    },
+    {
+      "name": "source SHA-256: validation/knowledge-memory/sources/ageerle_ruoyi-ai--LICENSE",
+      "pass": true
+    },
+    {
+      "name": "fixed commit: https://raw.githubusercontent.com/ageerle/ruoyi-ai/cca30905778357e3aeb42b6adb65ef2384e75e60/LICENSE",
+      "pass": true
+    },
+    {
+      "name": "source SHA-256: validation/knowledge-memory/sources/ageerle_ruoyi-ai--ruoyi-modules__ruoyi-chat__pom.xml",
+      "pass": true
+    },
+    {
+      "name": "fixed commit: https://raw.githubusercontent.com/ageerle/ruoyi-ai/cca30905778357e3aeb42b6adb65ef2384e75e60/ruoyi-modules/ruoyi-chat/pom.xml",
+      "pass": true
+    },
+    {
+      "name": "source SHA-256: validation/knowledge-memory/sources/ageerle_ruoyi-ai--pom.xml",
+      "pass": true
+    },
+    {
+      "name": "fixed commit: https://raw.githubusercontent.com/ageerle/ruoyi-ai/cca30905778357e3aeb42b6adb65ef2384e75e60/pom.xml",
+      "pass": true
+    },
+    {
+      "name": "source SHA-256: validation/knowledge-memory/sources/langchain4j_langchain4j--LICENSE",
+      "pass": true
+    },
+    {
+      "name": "fixed commit: https://raw.githubusercontent.com/langchain4j/langchain4j/0028928eab6d3b0c11d9be13c6a06e9f0abd9512/LICENSE",
+      "pass": true
+    },
+    {
+      "name": "source SHA-256: validation/knowledge-memory/sources/qdrant_qdrant--LICENSE",
+      "pass": true
+    },
+    {
+      "name": "fixed commit: https://raw.githubusercontent.com/qdrant/qdrant/6ab21cac18ebb6f4ae29102c7f8f5cc11affd5de/LICENSE",
+      "pass": true
+    },
+    {
+      "name": "source SHA-256: validation/knowledge-memory/sources/qdrant_qdrant--README.md",
+      "pass": true
+    },
+    {
+      "name": "fixed commit: https://raw.githubusercontent.com/qdrant/qdrant/6ab21cac18ebb6f4ae29102c7f8f5cc11affd5de/README.md",
+      "pass": true
+    },
+    {
+      "name": "source SHA-256: validation/knowledge-memory/sources/qdrant_qdrant--Cargo.toml",
+      "pass": true
+    },
+    {
+      "name": "fixed commit: https://raw.githubusercontent.com/qdrant/qdrant/6ab21cac18ebb6f4ae29102c7f8f5cc11affd5de/Cargo.toml",
+      "pass": true
+    },
+    {
+      "name": "source SHA-256: validation/knowledge-memory/sources/pgvector_pgvector--LICENSE",
+      "pass": true
+    },
+    {
+      "name": "fixed commit: https://raw.githubusercontent.com/pgvector/pgvector/efa08fda9ec485d80292d0487a77939c087dedcc/LICENSE",
+      "pass": true
+    },
+    {
+      "name": "source SHA-256: validation/knowledge-memory/sources/pgvector_pgvector--README.md",
+      "pass": true
+    },
+    {
+      "name": "fixed commit: https://raw.githubusercontent.com/pgvector/pgvector/efa08fda9ec485d80292d0487a77939c087dedcc/README.md",
+      "pass": true
+    },
+    {
+      "name": "source SHA-256: validation/knowledge-memory/sources/pgvector_pgvector--CHANGELOG.md",
+      "pass": true
+    },
+    {
+      "name": "fixed commit: https://raw.githubusercontent.com/pgvector/pgvector/efa08fda9ec485d80292d0487a77939c087dedcc/CHANGELOG.md",
+      "pass": true
+    },
+    {
+      "name": "source SHA-256: validation/knowledge-memory/sources/docling-project_docling--LICENSE",
+      "pass": true
+    },
+    {
+      "name": "fixed commit: https://raw.githubusercontent.com/docling-project/docling/5ea6490ffdc57b2fd7de5cc436f2d0a22f2214d4/LICENSE",
+      "pass": true
+    },
+    {
+      "name": "source SHA-256: validation/knowledge-memory/sources/docling-project_docling--pyproject.toml",
+      "pass": true
+    },
+    {
+      "name": "fixed commit: https://raw.githubusercontent.com/docling-project/docling/5ea6490ffdc57b2fd7de5cc436f2d0a22f2214d4/pyproject.toml",
+      "pass": true
+    },
+    {
+      "name": "source SHA-256: validation/knowledge-memory/sources/docling-project_docling--README.md",
+      "pass": true
+    },
+    {
+      "name": "fixed commit: https://raw.githubusercontent.com/docling-project/docling/5ea6490ffdc57b2fd7de5cc436f2d0a22f2214d4/README.md",
+      "pass": true
+    },
+    {
+      "name": "source SHA-256: validation/knowledge-memory/sources/apache_tika--LICENSE.txt",
+      "pass": true
+    },
+    {
+      "name": "fixed commit: https://raw.githubusercontent.com/apache/tika/dccc702fca054c47f43fa3c7ce73cc328ace1ebf/LICENSE.txt",
+      "pass": true
+    },
+    {
+      "name": "source SHA-256: validation/knowledge-memory/sources/apache_tika--README.md",
+      "pass": true
+    },
+    {
+      "name": "fixed commit: https://raw.githubusercontent.com/apache/tika/dccc702fca054c47f43fa3c7ce73cc328ace1ebf/README.md",
+      "pass": true
+    },
+    {
+      "name": "source SHA-256: validation/knowledge-memory/sources/apache_tika--pom.xml",
+      "pass": true
+    },
+    {
+      "name": "fixed commit: https://raw.githubusercontent.com/apache/tika/dccc702fca054c47f43fa3c7ce73cc328ace1ebf/pom.xml",
+      "pass": true
+    },
+    {
+      "name": "source SHA-256: validation/knowledge-memory/sources/infiniflow_ragflow--LICENSE",
+      "pass": true
+    },
+    {
+      "name": "fixed commit: https://raw.githubusercontent.com/infiniflow/ragflow/1f5d33333a3ff67fda2aa302c843699e994453e3/LICENSE",
+      "pass": true
+    },
+    {
+      "name": "source SHA-256: validation/knowledge-memory/sources/infiniflow_ragflow--README.md",
+      "pass": true
+    },
+    {
+      "name": "fixed commit: https://raw.githubusercontent.com/infiniflow/ragflow/1f5d33333a3ff67fda2aa302c843699e994453e3/README.md",
+      "pass": true
+    },
+    {
+      "name": "source SHA-256: validation/knowledge-memory/sources/infiniflow_ragflow--docker__docker-compose-base.yml",
+      "pass": true
+    },
+    {
+      "name": "fixed commit: https://raw.githubusercontent.com/infiniflow/ragflow/1f5d33333a3ff67fda2aa302c843699e994453e3/docker/docker-compose-base.yml",
+      "pass": true
+    },
+    {
+      "name": "source SHA-256: validation/knowledge-memory/sources/infiniflow_ragflow--pyproject.toml",
+      "pass": true
+    },
+    {
+      "name": "fixed commit: https://raw.githubusercontent.com/infiniflow/ragflow/1f5d33333a3ff67fda2aa302c843699e994453e3/pyproject.toml",
+      "pass": true
+    },
+    {
+      "name": "source SHA-256: validation/knowledge-memory/sources/langgenius_dify--LICENSE",
+      "pass": true
+    },
+    {
+      "name": "fixed commit: https://raw.githubusercontent.com/langgenius/dify/085a79c748be47111d2e1c1b65b3f82200998d5c/LICENSE",
+      "pass": true
+    },
+    {
+      "name": "source SHA-256: validation/knowledge-memory/sources/labring_FastGPT--LICENSE",
+      "pass": true
+    },
+    {
+      "name": "fixed commit: https://raw.githubusercontent.com/labring/FastGPT/a9025a40802384fc274eb2704b30541c9d64c034/LICENSE",
+      "pass": true
+    },
+    {
+      "name": "source SHA-256: validation/knowledge-memory/sources/milvus-io_milvus--LICENSE",
+      "pass": true
+    },
+    {
+      "name": "fixed commit: https://raw.githubusercontent.com/milvus-io/milvus/82bcce8867c92e7d55f669e034a00dcb0f37d2bc/LICENSE",
+      "pass": true
+    },
+    {
+      "name": "source SHA-256: validation/knowledge-memory/sources/milvus-io_milvus--README.md",
+      "pass": true
+    },
+    {
+      "name": "fixed commit: https://raw.githubusercontent.com/milvus-io/milvus/82bcce8867c92e7d55f669e034a00dcb0f37d2bc/README.md",
+      "pass": true
+    },
+    {
+      "name": "source SHA-256: validation/knowledge-memory/sources/ageerle_ruoyi-ai--TREE",
+      "pass": true
+    },
+    {
+      "name": "fixed commit: https://api.github.com/repos/ageerle/ruoyi-ai/git/trees/cca30905778357e3aeb42b6adb65ef2384e75e60?recursive=1",
+      "pass": true
+    },
+    {
+      "name": "source SHA-256: validation/knowledge-memory/sources/langchain4j_langchain4j--TREE",
+      "pass": true
+    },
+    {
+      "name": "fixed commit: https://api.github.com/repos/langchain4j/langchain4j/git/trees/0028928eab6d3b0c11d9be13c6a06e9f0abd9512?recursive=1",
+      "pass": true
+    },
+    {
+      "name": "source SHA-256: validation/knowledge-memory/sources/ageerle_ruoyi-ai--ruoyi-admin__src__main__resources__application-dev.yml",
+      "pass": true
+    },
+    {
+      "name": "fixed commit: https://raw.githubusercontent.com/ageerle/ruoyi-ai/cca30905778357e3aeb42b6adb65ef2384e75e60/ruoyi-admin/src/main/resources/application-dev.yml",
+      "pass": true
+    },
+    {
+      "name": "source SHA-256: validation/knowledge-memory/sources/ageerle_ruoyi-ai--ruoyi-extend__ruoyi-snailjob-server__src__main__resources__application-dev.yml",
+      "pass": true
+    },
+    {
+      "name": "fixed commit: https://raw.githubusercontent.com/ageerle/ruoyi-ai/cca30905778357e3aeb42b6adb65ef2384e75e60/ruoyi-extend/ruoyi-snailjob-server/src/main/resources/application-dev.yml",
+      "pass": true
+    },
+    {
+      "name": "source SHA-256: validation/knowledge-memory/sources/ageerle_ruoyi-ai--ruoyi-modules__ruoyi-chat__src__main__java__org__ruoyi__config__VectorStoreProperties.java",
+      "pass": true
+    },
+    {
+      "name": "fixed commit: https://raw.githubusercontent.com/ageerle/ruoyi-ai/cca30905778357e3aeb42b6adb65ef2384e75e60/ruoyi-modules/ruoyi-chat/src/main/java/org/ruoyi/config/VectorStoreProperties.java",
+      "pass": true
+    },
+    {
+      "name": "source SHA-256: validation/knowledge-memory/sources/ageerle_ruoyi-ai--ruoyi-modules__ruoyi-chat__src__main__java__org__ruoyi__domain__bo__vector__QueryVectorBo.java",
+      "pass": true
+    },
+    {
+      "name": "fixed commit: https://raw.githubusercontent.com/ageerle/ruoyi-ai/cca30905778357e3aeb42b6adb65ef2384e75e60/ruoyi-modules/ruoyi-chat/src/main/java/org/ruoyi/domain/bo/vector/QueryVectorBo.java",
+      "pass": true
+    },
+    {
+      "name": "source SHA-256: validation/knowledge-memory/sources/ageerle_ruoyi-ai--ruoyi-modules__ruoyi-chat__src__main__java__org__ruoyi__domain__bo__vector__StoreEmbeddingBo.java",
+      "pass": true
+    },
+    {
+      "name": "fixed commit: https://raw.githubusercontent.com/ageerle/ruoyi-ai/cca30905778357e3aeb42b6adb65ef2384e75e60/ruoyi-modules/ruoyi-chat/src/main/java/org/ruoyi/domain/bo/vector/StoreEmbeddingBo.java",
+      "pass": true
+    },
+    {
+      "name": "source SHA-256: validation/knowledge-memory/sources/ageerle_ruoyi-ai--ruoyi-modules__ruoyi-chat__src__main__java__org__ruoyi__domain__entity__knowledge__KnowledgeFragment.java",
+      "pass": true
+    },
+    {
+      "name": "fixed commit: https://raw.githubusercontent.com/ageerle/ruoyi-ai/cca30905778357e3aeb42b6adb65ef2384e75e60/ruoyi-modules/ruoyi-chat/src/main/java/org/ruoyi/domain/entity/knowledge/KnowledgeFragment.java",
+      "pass": true
+    },
+    {
+      "name": "source SHA-256: validation/knowledge-memory/sources/ageerle_ruoyi-ai--ruoyi-modules__ruoyi-chat__src__main__java__org__ruoyi__domain__entity__knowledge__KnowledgeInfo.java",
+      "pass": true
+    },
+    {
+      "name": "fixed commit: https://raw.githubusercontent.com/ageerle/ruoyi-ai/cca30905778357e3aeb42b6adb65ef2384e75e60/ruoyi-modules/ruoyi-chat/src/main/java/org/ruoyi/domain/entity/knowledge/KnowledgeInfo.java",
+      "pass": true
+    },
+    {
+      "name": "source SHA-256: validation/knowledge-memory/sources/ageerle_ruoyi-ai--ruoyi-modules__ruoyi-chat__src__main__java__org__ruoyi__factory__VectorStoreStrategyFactory.java",
+      "pass": true
+    },
+    {
+      "name": "fixed commit: https://raw.githubusercontent.com/ageerle/ruoyi-ai/cca30905778357e3aeb42b6adb65ef2384e75e60/ruoyi-modules/ruoyi-chat/src/main/java/org/ruoyi/factory/VectorStoreStrategyFactory.java",
+      "pass": true
+    },
+    {
+      "name": "source SHA-256: validation/knowledge-memory/sources/ageerle_ruoyi-ai--ruoyi-modules__ruoyi-chat__src__main__java__org__ruoyi__service__chat__impl__memory__PersistentChatMemoryStore.java",
+      "pass": true
+    },
+    {
+      "name": "fixed commit: https://raw.githubusercontent.com/ageerle/ruoyi-ai/cca30905778357e3aeb42b6adb65ef2384e75e60/ruoyi-modules/ruoyi-chat/src/main/java/org/ruoyi/service/chat/impl/memory/PersistentChatMemoryStore.java",
+      "pass": true
+    },
+    {
+      "name": "source SHA-256: validation/knowledge-memory/sources/ageerle_ruoyi-ai--ruoyi-modules__ruoyi-chat__src__main__java__org__ruoyi__service__knowledge__impl__KnowledgeAttachServiceImpl.java",
+      "pass": true
+    },
+    {
+      "name": "fixed commit: https://raw.githubusercontent.com/ageerle/ruoyi-ai/cca30905778357e3aeb42b6adb65ef2384e75e60/ruoyi-modules/ruoyi-chat/src/main/java/org/ruoyi/service/knowledge/impl/KnowledgeAttachServiceImpl.java",
+      "pass": true
+    },
+    {
+      "name": "source SHA-256: validation/knowledge-memory/sources/ageerle_ruoyi-ai--ruoyi-modules__ruoyi-chat__src__main__java__org__ruoyi__service__knowledge__impl__KnowledgeFragmentServiceImpl.java",
+      "pass": true
+    },
+    {
+      "name": "fixed commit: https://raw.githubusercontent.com/ageerle/ruoyi-ai/cca30905778357e3aeb42b6adb65ef2384e75e60/ruoyi-modules/ruoyi-chat/src/main/java/org/ruoyi/service/knowledge/impl/KnowledgeFragmentServiceImpl.java",
+      "pass": true
+    },
+    {
+      "name": "source SHA-256: validation/knowledge-memory/sources/ageerle_ruoyi-ai--ruoyi-modules__ruoyi-chat__src__main__java__org__ruoyi__service__knowledge__impl__loader__PdfFileLoader.java",
+      "pass": true
+    },
+    {
+      "name": "fixed commit: https://raw.githubusercontent.com/ageerle/ruoyi-ai/cca30905778357e3aeb42b6adb65ef2384e75e60/ruoyi-modules/ruoyi-chat/src/main/java/org/ruoyi/service/knowledge/impl/loader/PdfFileLoader.java",
+      "pass": true
+    },
+    {
+      "name": "source SHA-256: validation/knowledge-memory/sources/ageerle_ruoyi-ai--ruoyi-modules__ruoyi-chat__src__main__java__org__ruoyi__service__knowledge__impl__loader__WordLoader.java",
+      "pass": true
+    },
+    {
+      "name": "fixed commit: https://raw.githubusercontent.com/ageerle/ruoyi-ai/cca30905778357e3aeb42b6adb65ef2384e75e60/ruoyi-modules/ruoyi-chat/src/main/java/org/ruoyi/service/knowledge/impl/loader/WordLoader.java",
+      "pass": true
+    },
+    {
+      "name": "source SHA-256: validation/knowledge-memory/sources/ageerle_ruoyi-ai--ruoyi-modules__ruoyi-chat__src__main__java__org__ruoyi__service__retrieval__impl__KnowledgeRetrievalServiceImpl.java",
+      "pass": true
+    },
+    {
+      "name": "fixed commit: https://raw.githubusercontent.com/ageerle/ruoyi-ai/cca30905778357e3aeb42b6adb65ef2384e75e60/ruoyi-modules/ruoyi-chat/src/main/java/org/ruoyi/service/retrieval/impl/KnowledgeRetrievalServiceImpl.java",
+      "pass": true
+    },
+    {
+      "name": "source SHA-256: validation/knowledge-memory/sources/ageerle_ruoyi-ai--ruoyi-modules__ruoyi-chat__src__main__java__org__ruoyi__service__vector__impl__AbstractVectorStoreStrategy.java",
+      "pass": true
+    },
+    {
+      "name": "fixed commit: https://raw.githubusercontent.com/ageerle/ruoyi-ai/cca30905778357e3aeb42b6adb65ef2384e75e60/ruoyi-modules/ruoyi-chat/src/main/java/org/ruoyi/service/vector/impl/AbstractVectorStoreStrategy.java",
+      "pass": true
+    },
+    {
+      "name": "source SHA-256: validation/knowledge-memory/sources/ageerle_ruoyi-ai--ruoyi-modules__ruoyi-chat__src__main__java__org__ruoyi__service__vector__impl__QdrantVectorStoreStrategy.java",
+      "pass": true
+    },
+    {
+      "name": "fixed commit: https://raw.githubusercontent.com/ageerle/ruoyi-ai/cca30905778357e3aeb42b6adb65ef2384e75e60/ruoyi-modules/ruoyi-chat/src/main/java/org/ruoyi/service/vector/impl/QdrantVectorStoreStrategy.java",
+      "pass": true
+    },
+    {
+      "name": "source SHA-256: validation/knowledge-memory/sources/ageerle_ruoyi-ai--ruoyi-modules__ruoyi-chat__src__main__java__org__ruoyi__service__vector__impl__VectorStoreServiceImpl.java",
+      "pass": true
+    },
+    {
+      "name": "fixed commit: https://raw.githubusercontent.com/ageerle/ruoyi-ai/cca30905778357e3aeb42b6adb65ef2384e75e60/ruoyi-modules/ruoyi-chat/src/main/java/org/ruoyi/service/vector/impl/VectorStoreServiceImpl.java",
+      "pass": true
+    },
+    {
+      "name": "source SHA-256: validation/knowledge-memory/sources/ageerle_ruoyi-ai--ruoyi-modules__ruoyi-chat__src__test__java__org__ruoyi__service__retrieval__impl__KnowledgeRetrievalServiceRegressionTest.java",
+      "pass": true
+    },
+    {
+      "name": "fixed commit: https://raw.githubusercontent.com/ageerle/ruoyi-ai/cca30905778357e3aeb42b6adb65ef2384e75e60/ruoyi-modules/ruoyi-chat/src/test/java/org/ruoyi/service/retrieval/impl/KnowledgeRetrievalServiceRegressionTest.java",
+      "pass": true
+    },
+    {
+      "name": "source SHA-256: validation/knowledge-memory/sources/ageerle_ruoyi-ai--ruoyi-modules__ruoyi-chat__src__test__java__org__ruoyi__service__vector__impl__QdrantVectorStoreStrategyTest.java",
+      "pass": true
+    },
+    {
+      "name": "fixed commit: https://raw.githubusercontent.com/ageerle/ruoyi-ai/cca30905778357e3aeb42b6adb65ef2384e75e60/ruoyi-modules/ruoyi-chat/src/test/java/org/ruoyi/service/vector/impl/QdrantVectorStoreStrategyTest.java",
+      "pass": true
+    },
+    {
+      "name": "source SHA-256: validation/knowledge-memory/sources/ageerle_ruoyi-ai--ruoyi-modules__ruoyi-chat__src__test__java__org__ruoyi__service__vector__impl__ThreeVectorStoresDockerIT.java",
+      "pass": true
+    },
+    {
+      "name": "fixed commit: https://raw.githubusercontent.com/ageerle/ruoyi-ai/cca30905778357e3aeb42b6adb65ef2384e75e60/ruoyi-modules/ruoyi-chat/src/test/java/org/ruoyi/service/vector/impl/ThreeVectorStoresDockerIT.java",
+      "pass": true
+    },
+    {
+      "name": "source SHA-256: validation/knowledge-memory/sources/ageerle_ruoyi-ai--docs__docker__qdrant__docker-compose.yml",
+      "pass": true
+    },
+    {
+      "name": "fixed commit: https://raw.githubusercontent.com/ageerle/ruoyi-ai/cca30905778357e3aeb42b6adb65ef2384e75e60/docs/docker/qdrant/docker-compose.yml",
+      "pass": true
+    },
+    {
+      "name": "source SHA-256: validation/knowledge-memory/sources/ageerle_ruoyi-ai--docs__docker__milvus__docker-compose.yml",
+      "pass": true
+    },
+    {
+      "name": "fixed commit: https://raw.githubusercontent.com/ageerle/ruoyi-ai/cca30905778357e3aeb42b6adb65ef2384e75e60/docs/docker/milvus/docker-compose.yml",
+      "pass": true
+    },
+    {
+      "name": "failed fetch not credited: https://raw.githubusercontent.com/langchain4j/langchain4j/80b747681106494d57d767cb66ef2c4999d20cb1/langchain4j-document-parser-apache-tika/pom.xml",
+      "pass": true
+    },
+    {
+      "name": "source SHA-256: validation/knowledge-memory/sources/langchain4j_langchain4j--langchain4j-qdrant__pom.xml",
+      "pass": true
+    },
+    {
+      "name": "fixed commit: https://raw.githubusercontent.com/langchain4j/langchain4j/80b747681106494d57d767cb66ef2c4999d20cb1/langchain4j-qdrant/pom.xml",
+      "pass": true
+    },
+    {
+      "name": "source SHA-256: validation/knowledge-memory/sources/langchain4j_langchain4j--langchain4j-qdrant__src__main__java__dev__langchain4j__store__embedding__qdrant__QdrantEmbeddingStore.java",
+      "pass": true
+    },
+    {
+      "name": "fixed commit: https://raw.githubusercontent.com/langchain4j/langchain4j/80b747681106494d57d767cb66ef2c4999d20cb1/langchain4j-qdrant/src/main/java/dev/langchain4j/store/embedding/qdrant/QdrantEmbeddingStore.java",
+      "pass": true
+    },
+    {
+      "name": "failed fetch not credited: https://raw.githubusercontent.com/langchain4j/langchain4j/80b747681106494d57d767cb66ef2c4999d20cb1/langchain4j-qdrant/src/main/java/dev/langchain4j/store/embedding/qdrant/QdrantFilterMapper.java",
+      "pass": true
+    },
+    {
+      "name": "source SHA-256: validation/knowledge-memory/sources/langchain4j_langchain4j--document-parsers__langchain4j-document-parser-apache-tika__pom.xml",
+      "pass": true
+    },
+    {
+      "name": "fixed commit: https://raw.githubusercontent.com/langchain4j/langchain4j/80b747681106494d57d767cb66ef2c4999d20cb1/document-parsers/langchain4j-document-parser-apache-tika/pom.xml",
+      "pass": true
+    },
+    {
+      "name": "source SHA-256: validation/knowledge-memory/sources/langchain4j_langchain4j--langchain4j-qdrant__src__main__java__dev__langchain4j__store__embedding__qdrant__QdrantFilterConverter.java",
+      "pass": true
+    },
+    {
+      "name": "fixed commit: https://raw.githubusercontent.com/langchain4j/langchain4j/80b747681106494d57d767cb66ef2c4999d20cb1/langchain4j-qdrant/src/main/java/dev/langchain4j/store/embedding/qdrant/QdrantFilterConverter.java",
+      "pass": true
+    },
+    {
+      "name": "source SHA-256: validation/knowledge-memory/sources/qoder-knowledge.source",
+      "pass": true
+    },
+    {
+      "name": "source SHA-256: validation/knowledge-memory/sources/qoder-memory.source",
+      "pass": true
+    },
+    {
+      "name": "source SHA-256: validation/knowledge-memory/sources/qoder-projects.source",
+      "pass": true
+    },
+    {
+      "name": "source SHA-256: validation/knowledge-memory/sources/qoder-wakers.source",
+      "pass": true
+    },
+    {
+      "name": "source SHA-256: validation/knowledge-memory/sources/claude-memory.source",
+      "pass": true
+    },
+    {
+      "name": "source SHA-256: validation/knowledge-memory/sources/claude-dreams.source",
+      "pass": true
+    },
+    {
+      "name": "source SHA-256: validation/knowledge-memory/sources/anthropic-context.source",
+      "pass": true
+    },
+    {
+      "name": "source SHA-256: validation/knowledge-memory/sources/ms-document-acl.source",
+      "pass": true
+    },
+    {
+      "name": "source SHA-256: validation/knowledge-memory/sources/owasp-rag.source",
+      "pass": true
+    },
+    {
+      "name": "source SHA-256: validation/knowledge-memory/sources/tika-download.source",
+      "pass": true
+    },
+    {
+      "name": "source SHA-256: validation/knowledge-memory/sources/pgvector-tags.source",
+      "pass": true
+    },
+    {
+      "name": "source SHA-256: validation/knowledge-memory/sources/weaviate-release.source",
+      "pass": true
+    },
+    {
+      "name": "source SHA-256: validation/knowledge-memory/sources/pageindex-release.source",
+      "pass": true
+    },
+    {
+      "name": "source SHA-256: validation/knowledge-memory/sources/pageindex-readme.source",
+      "pass": true
+    },
+    {
+      "name": "source SHA-256: validation/knowledge-memory/sources/pageindex-license.source",
+      "pass": true
+    },
+    {
+      "name": "source SHA-256: validation/knowledge-memory/sources/weaviate-license.source",
+      "pass": true
+    },
+    {
+      "name": "source SHA-256: validation/knowledge-memory/sources/docling-release-license.source",
+      "pass": true
+    },
+    {
+      "name": "source SHA-256: validation/knowledge-memory/sources/docling-release-pyproject.source",
+      "pass": true
+    },
+    {
+      "name": "source SHA-256: validation/knowledge-memory/sources/bge-m3-model.source",
+      "pass": true
+    },
+    {
+      "name": "source SHA-256: validation/knowledge-memory/sources/bge-reranker-model.source",
+      "pass": true
+    },
+    {
+      "name": "source SHA-256: validation/knowledge-memory/sources/docling-models.source",
+      "pass": true
+    },
+    {
+      "name": "source SHA-256: validation/knowledge-memory/sources/pgvector-latest-pin.source",
+      "pass": true
+    },
+    {
+      "name": "failed fetch not credited: https://huggingface.co/api/models/Qwen/Qwen3-Embedding-0.6B",
+      "pass": true
+    },
+    {
+      "name": "failed fetch not credited: https://huggingface.co/api/models/Qwen/Qwen3-Reranker-0.6B",
+      "pass": true
+    },
+    {
+      "name": "source SHA-256: validation/knowledge-memory/sources/weaviate-wl-license.source",
+      "pass": true
+    },
+    {
+      "name": "source SHA-256: validation/knowledge-memory/sources/weaviate-bsd-license.source",
+      "pass": true
+    },
+    {
+      "name": "source SHA-256: validation/knowledge-memory/memory-sources/mem0/LICENSE",
+      "pass": true
+    },
+    {
+      "name": "fixed commit: https://raw.githubusercontent.com/mem0ai/mem0/c7ee362aff94a369af70f13f2b4f853f6793ff4c/LICENSE",
+      "pass": true
+    },
+    {
+      "name": "source SHA-256: validation/knowledge-memory/memory-sources/mem0/pyproject.toml",
+      "pass": true
+    },
+    {
+      "name": "fixed commit: https://raw.githubusercontent.com/mem0ai/mem0/c7ee362aff94a369af70f13f2b4f853f6793ff4c/pyproject.toml",
+      "pass": true
+    },
+    {
+      "name": "source SHA-256: validation/knowledge-memory/memory-sources/mem0/mem0/memory/main.py",
+      "pass": true
+    },
+    {
+      "name": "fixed commit: https://raw.githubusercontent.com/mem0ai/mem0/c7ee362aff94a369af70f13f2b4f853f6793ff4c/mem0/memory/main.py",
+      "pass": true
+    },
+    {
+      "name": "source SHA-256: validation/knowledge-memory/memory-sources/mem0/mem0/memory/storage.py",
+      "pass": true
+    },
+    {
+      "name": "fixed commit: https://raw.githubusercontent.com/mem0ai/mem0/c7ee362aff94a369af70f13f2b4f853f6793ff4c/mem0/memory/storage.py",
+      "pass": true
+    },
+    {
+      "name": "source SHA-256: validation/knowledge-memory/memory-sources/mem0/server/auth.py",
+      "pass": true
+    },
+    {
+      "name": "fixed commit: https://raw.githubusercontent.com/mem0ai/mem0/c7ee362aff94a369af70f13f2b4f853f6793ff4c/server/auth.py",
+      "pass": true
+    },
+    {
+      "name": "source SHA-256: validation/knowledge-memory/memory-sources/mem0/server/README.md",
+      "pass": true
+    },
+    {
+      "name": "fixed commit: https://raw.githubusercontent.com/mem0ai/mem0/c7ee362aff94a369af70f13f2b4f853f6793ff4c/server/README.md",
+      "pass": true
+    },
+    {
+      "name": "source SHA-256: validation/knowledge-memory/memory-sources/mem0/tests/test_server_auth.py",
+      "pass": true
+    },
+    {
+      "name": "fixed commit: https://raw.githubusercontent.com/mem0ai/mem0/c7ee362aff94a369af70f13f2b4f853f6793ff4c/tests/test_server_auth.py",
+      "pass": true
+    },
+    {
+      "name": "source SHA-256: validation/knowledge-memory/memory-sources/mem0/mem0/vector_stores/pgvector.py",
+      "pass": true
+    },
+    {
+      "name": "fixed commit: https://raw.githubusercontent.com/mem0ai/mem0/c7ee362aff94a369af70f13f2b4f853f6793ff4c/mem0/vector_stores/pgvector.py",
+      "pass": true
+    },
+    {
+      "name": "source SHA-256: validation/knowledge-memory/memory-sources/openviking/LICENSE",
+      "pass": true
+    },
+    {
+      "name": "fixed commit: https://raw.githubusercontent.com/volcengine/OpenViking/0f77ab5625a5e2ead4f286d4e58ea77e05fcfdee/LICENSE",
+      "pass": true
+    },
+    {
+      "name": "source SHA-256: validation/knowledge-memory/memory-sources/openviking/README.md",
+      "pass": true
+    },
+    {
+      "name": "fixed commit: https://raw.githubusercontent.com/volcengine/OpenViking/0f77ab5625a5e2ead4f286d4e58ea77e05fcfdee/README.md",
+      "pass": true
+    },
+    {
+      "name": "source SHA-256: validation/knowledge-memory/memory-sources/openviking/pyproject.toml",
+      "pass": true
+    },
+    {
+      "name": "fixed commit: https://raw.githubusercontent.com/volcengine/OpenViking/0f77ab5625a5e2ead4f286d4e58ea77e05fcfdee/pyproject.toml",
+      "pass": true
+    },
+    {
+      "name": "source SHA-256: validation/knowledge-memory/memory-sources/openviking/docs/en/concepts/11-multi-tenant.md",
+      "pass": true
+    },
+    {
+      "name": "fixed commit: https://raw.githubusercontent.com/volcengine/OpenViking/0f77ab5625a5e2ead4f286d4e58ea77e05fcfdee/docs/en/concepts/11-multi-tenant.md",
+      "pass": true
+    },
+    {
+      "name": "source SHA-256: validation/knowledge-memory/memory-sources/openviking/SECURITY.md",
+      "pass": true
+    },
+    {
+      "name": "fixed commit: https://raw.githubusercontent.com/volcengine/OpenViking/0f77ab5625a5e2ead4f286d4e58ea77e05fcfdee/SECURITY.md",
+      "pass": true
+    },
+    {
+      "name": "source SHA-256: validation/knowledge-memory/memory-sources/graphiti/LICENSE",
+      "pass": true
+    },
+    {
+      "name": "fixed commit: https://raw.githubusercontent.com/getzep/graphiti/c035afb7990b6077331a81e98b04efcfd9bf8184/LICENSE",
+      "pass": true
+    },
+    {
+      "name": "source SHA-256: validation/knowledge-memory/memory-sources/graphiti/README.md",
+      "pass": true
+    },
+    {
+      "name": "fixed commit: https://raw.githubusercontent.com/getzep/graphiti/c035afb7990b6077331a81e98b04efcfd9bf8184/README.md",
+      "pass": true
+    },
+    {
+      "name": "source SHA-256: validation/knowledge-memory/memory-sources/graphiti/pyproject.toml",
+      "pass": true
+    },
+    {
+      "name": "fixed commit: https://raw.githubusercontent.com/getzep/graphiti/c035afb7990b6077331a81e98b04efcfd9bf8184/pyproject.toml",
+      "pass": true
+    },
+    {
+      "name": "source SHA-256: validation/knowledge-memory/memory-sources/graphiti/graphiti_core/graphiti.py",
+      "pass": true
+    },
+    {
+      "name": "fixed commit: https://raw.githubusercontent.com/getzep/graphiti/c035afb7990b6077331a81e98b04efcfd9bf8184/graphiti_core/graphiti.py",
+      "pass": true
+    },
+    {
+      "name": "source SHA-256: validation/knowledge-memory/memory-sources/graphiti/graphiti_core/utils/maintenance/graph_data_operations.py",
+      "pass": true
+    },
+    {
+      "name": "fixed commit: https://raw.githubusercontent.com/getzep/graphiti/c035afb7990b6077331a81e98b04efcfd9bf8184/graphiti_core/utils/maintenance/graph_data_operations.py",
+      "pass": true
+    },
+    {
+      "name": "source SHA-256: validation/knowledge-memory/memory-sources/graphiti/tests/test_handle_multiple_group_ids.py",
+      "pass": true
+    },
+    {
+      "name": "fixed commit: https://raw.githubusercontent.com/getzep/graphiti/c035afb7990b6077331a81e98b04efcfd9bf8184/tests/test_handle_multiple_group_ids.py",
+      "pass": true
+    },
+    {
+      "name": "source SHA-256: validation/knowledge-memory/memory-sources/graphiti/graphiti_core/edges.py",
+      "pass": true
+    },
+    {
+      "name": "fixed commit: https://raw.githubusercontent.com/getzep/graphiti/c035afb7990b6077331a81e98b04efcfd9bf8184/graphiti_core/edges.py",
+      "pass": true
+    },
+    {
+      "name": "source SHA-256: validation/knowledge-memory/memory-sources/graphiti/graphiti_core/nodes.py",
+      "pass": true
+    },
+    {
+      "name": "fixed commit: https://raw.githubusercontent.com/getzep/graphiti/c035afb7990b6077331a81e98b04efcfd9bf8184/graphiti_core/nodes.py",
+      "pass": true
+    },
+    {
+      "name": "source SHA-256: validation/knowledge-memory/memory-sources/langchain4j-1.17.2/LICENSE",
+      "pass": true
+    },
+    {
+      "name": "fixed commit: https://raw.githubusercontent.com/langchain4j/langchain4j/0028928eab6d3b0c11d9be13c6a06e9f0abd9512/LICENSE",
+      "pass": true
+    },
+    {
+      "name": "source SHA-256: validation/knowledge-memory/memory-sources/langchain4j/langchain4j-core/src/main/java/dev/langchain4j/store/memory/chat/ChatMemoryStore.java",
+      "pass": true
+    },
+    {
+      "name": "fixed commit: https://raw.githubusercontent.com/langchain4j/langchain4j/0028928eab6d3b0c11d9be13c6a06e9f0abd9512/langchain4j-core/src/main/java/dev/langchain4j/store/memory/chat/ChatMemoryStore.java",
+      "pass": true
+    },
+    {
+      "name": "source SHA-256: validation/knowledge-memory/memory-sources/langchain4j/langchain4j/src/main/java/dev/langchain4j/memory/chat/MessageWindowChatMemory.java",
+      "pass": true
+    },
+    {
+      "name": "fixed commit: https://raw.githubusercontent.com/langchain4j/langchain4j/0028928eab6d3b0c11d9be13c6a06e9f0abd9512/langchain4j/src/main/java/dev/langchain4j/memory/chat/MessageWindowChatMemory.java",
+      "pass": true
+    },
+    {
+      "name": "source SHA-256: validation/knowledge-memory/memory-sources/langchain4j/docs/docs/tutorials/chat-memory.md",
+      "pass": true
+    },
+    {
+      "name": "fixed commit: https://raw.githubusercontent.com/langchain4j/langchain4j/0028928eab6d3b0c11d9be13c6a06e9f0abd9512/docs/docs/tutorials/chat-memory.md",
+      "pass": true
+    },
+    {
+      "name": "source SHA-256: validation/knowledge-memory/memory-sources/langchain4j/docs/docs/tutorials/ai-services.md",
+      "pass": true
+    },
+    {
+      "name": "fixed commit: https://raw.githubusercontent.com/langchain4j/langchain4j/0028928eab6d3b0c11d9be13c6a06e9f0abd9512/docs/docs/tutorials/ai-services.md",
+      "pass": true
+    },
+    {
+      "name": "source SHA-256: validation/knowledge-memory/memory-sources/openviking/docs/en/concepts/06-extraction.md",
+      "pass": true
+    },
+    {
+      "name": "fixed commit: https://raw.githubusercontent.com/volcengine/OpenViking/0f77ab5625a5e2ead4f286d4e58ea77e05fcfdee/docs/en/concepts/06-extraction.md",
+      "pass": true
+    },
+    {
+      "name": "source SHA-256: validation/knowledge-memory/memory-sources/openviking/docs/en/concepts/08-session.md",
+      "pass": true
+    },
+    {
+      "name": "fixed commit: https://raw.githubusercontent.com/volcengine/OpenViking/0f77ab5625a5e2ead4f286d4e58ea77e05fcfdee/docs/en/concepts/08-session.md",
+      "pass": true
+    },
+    {
+      "name": "source SHA-256: validation/knowledge-memory/memory-sources/openviking/docs/en/concepts/15-acl.md",
+      "pass": true
+    },
+    {
+      "name": "fixed commit: https://raw.githubusercontent.com/volcengine/OpenViking/0f77ab5625a5e2ead4f286d4e58ea77e05fcfdee/docs/en/concepts/15-acl.md",
+      "pass": true
+    },
+    {
+      "name": "source SHA-256: validation/knowledge-memory/memory-sources/openviking/tests/api_test/scenarios/sessions/test_session_delete_cleanup.py",
+      "pass": true
+    },
+    {
+      "name": "fixed commit: https://raw.githubusercontent.com/volcengine/OpenViking/0f77ab5625a5e2ead4f286d4e58ea77e05fcfdee/tests/api_test/scenarios/sessions/test_session_delete_cleanup.py",
+      "pass": true
+    },
+    {
+      "name": "source SHA-256: validation/knowledge-memory/memory-sources/openviking/openviking/session/memory_policy.py",
+      "pass": true
+    },
+    {
+      "name": "fixed commit: https://raw.githubusercontent.com/volcengine/OpenViking/0f77ab5625a5e2ead4f286d4e58ea77e05fcfdee/openviking/session/memory_policy.py",
+      "pass": true
+    },
+    {
+      "name": "source SHA-256: validation/knowledge-memory/memory-sources/mem0/mem0/memory/telemetry.py",
+      "pass": true
+    },
+    {
+      "name": "fixed commit: https://raw.githubusercontent.com/mem0ai/mem0/c7ee362aff94a369af70f13f2b4f853f6793ff4c/mem0/memory/telemetry.py",
+      "pass": true
+    },
+    {
+      "name": "source SHA-256: validation/knowledge-memory/memory-sources/mem0/server/main.py",
+      "pass": true
+    },
+    {
+      "name": "fixed commit: https://raw.githubusercontent.com/mem0ai/mem0/c7ee362aff94a369af70f13f2b4f853f6793ff4c/server/main.py",
+      "pass": true
+    },
+    {
+      "name": "source SHA-256: validation/knowledge-memory/memory-sources/mem0/tests/test_memory.py",
+      "pass": true
+    },
+    {
+      "name": "fixed commit: https://raw.githubusercontent.com/mem0ai/mem0/c7ee362aff94a369af70f13f2b4f853f6793ff4c/tests/test_memory.py",
+      "pass": true
+    },
+    {
+      "name": "source SHA-256: validation/knowledge-memory/memory-sources/langchain4j-1.17.2/LICENSE",
+      "pass": true
+    },
+    {
+      "name": "fixed commit: https://raw.githubusercontent.com/langchain4j/langchain4j/80b747681106494d57d767cb66ef2c4999d20cb1/LICENSE",
+      "pass": true
+    },
+    {
+      "name": "source SHA-256: validation/knowledge-memory/memory-sources/langchain4j-1.17.2/langchain4j-core/src/main/java/dev/langchain4j/store/memory/chat/ChatMemoryStore.java",
+      "pass": true
+    },
+    {
+      "name": "fixed commit: https://raw.githubusercontent.com/langchain4j/langchain4j/80b747681106494d57d767cb66ef2c4999d20cb1/langchain4j-core/src/main/java/dev/langchain4j/store/memory/chat/ChatMemoryStore.java",
+      "pass": true
+    },
+    {
+      "name": "source SHA-256: validation/knowledge-memory/memory-sources/langchain4j-1.17.2/langchain4j/src/main/java/dev/langchain4j/memory/chat/MessageWindowChatMemory.java",
+      "pass": true
+    },
+    {
+      "name": "fixed commit: https://raw.githubusercontent.com/langchain4j/langchain4j/80b747681106494d57d767cb66ef2c4999d20cb1/langchain4j/src/main/java/dev/langchain4j/memory/chat/MessageWindowChatMemory.java",
+      "pass": true
+    },
+    {
+      "name": "source SHA-256: validation/knowledge-memory/memory-sources/qdrant/LICENSE",
+      "pass": true
+    },
+    {
+      "name": "fixed commit: https://raw.githubusercontent.com/qdrant/qdrant/6ab21cac18ebb6f4ae29102c7f8f5cc11affd5de/LICENSE",
+      "pass": true
+    },
+    {
+      "name": "source SHA-256: validation/knowledge-memory/memory-sources/pgvector/LICENSE",
+      "pass": true
+    },
+    {
+      "name": "fixed commit: https://raw.githubusercontent.com/pgvector/pgvector/efa08fda9ec485d80292d0487a77939c087dedcc/LICENSE",
+      "pass": true
+    },
+    {
+      "name": "source SHA-256: validation/knowledge-memory/memory-sources/neo4j/LICENSE.txt",
+      "pass": true
+    },
+    {
+      "name": "fixed commit: https://raw.githubusercontent.com/neo4j/neo4j/f213380f812b820a1b312e2ea52cb3d8f1931ccc/LICENSE.txt",
+      "pass": true
+    },
+    {
+      "name": "source SHA-256: validation/knowledge-memory/memory-sources/falkordb/LICENSE",
+      "pass": true
+    },
+    {
+      "name": "fixed commit: https://raw.githubusercontent.com/FalkorDB/FalkorDB/ed5b31553987c44ed516829631a9379b4589bc74/LICENSE",
+      "pass": true
+    },
+    {
+      "name": "source SHA-256: validation/knowledge-memory/memory-sources/mem0/server/server_state.py",
+      "pass": true
+    },
+    {
+      "name": "fixed commit: https://raw.githubusercontent.com/mem0ai/mem0/c7ee362aff94a369af70f13f2b4f853f6793ff4c/server/server_state.py",
+      "pass": true
+    },
+    {
+      "name": "balanced fences: 41-AI运行知识分析与安全设计.md",
+      "pass": true
+    },
+    {
+      "name": "local target: 41-AI运行知识分析与安全设计.md:34-任务执行工作台与权限分层设计.md",
+      "pass": true
+    },
+    {
+      "name": "local target: 41-AI运行知识分析与安全设计.md:35-全产品AI体验复核与改进.md",
+      "pass": true
+    },
+    {
+      "name": "local target: 41-AI运行知识分析与安全设计.md:55-知识库与记忆开源方案深度研究.md",
+      "pass": true
+    },
+    {
+      "name": "local target: 41-AI运行知识分析与安全设计.md:56-知识记忆技术栈与实施决策.md",
+      "pass": true
+    },
+    {
+      "name": "balanced fences: 46-开发基线与低代码插件化决策.md",
+      "pass": true
+    },
+    {
+      "name": "local target: 46-开发基线与低代码插件化决策.md:45-AI编程文档就绪审查与补齐清单.md",
+      "pass": true
+    },
+    {
+      "name": "local target: 46-开发基线与低代码插件化决策.md:54-开源二开与完整商用准入.md",
+      "pass": true
+    },
+    {
+      "name": "local target: 46-开发基线与低代码插件化决策.md:47-全产品实施切片与首期开发规格.md",
+      "pass": true
+    },
+    {
+      "name": "local target: 46-开发基线与低代码插件化决策.md:48-接口事件与插件合同.md",
+      "pass": true
+    },
+    {
+      "name": "local target: 46-开发基线与低代码插件化决策.md:49-字段级数据模型与迁移规范.md",
+      "pass": true
+    },
+    {
+      "name": "local target: 46-开发基线与低代码插件化决策.md:50-业务不变量权限与验收夹具.md",
+      "pass": true
+    },
+    {
+      "name": "local target: 46-开发基线与低代码插件化决策.md:51-开发启动测试与故障恢复手册.md",
+      "pass": true
+    },
+    {
+      "name": "local target: 46-开发基线与低代码插件化决策.md:52-UI实现与页面状态规格.md",
+      "pass": true
+    },
+    {
+      "name": "local target: 46-开发基线与低代码插件化决策.md:53-AI运行工具与效果评测规范.md",
+      "pass": true
+    },
+    {
+      "name": "local target: 46-开发基线与低代码插件化决策.md:36-开源底座源码研究与技术选型.md",
+      "pass": true
+    },
+    {
+      "name": "local target: 46-开发基线与低代码插件化决策.md:55-知识库与记忆开源方案深度研究.md",
+      "pass": true
+    },
+    {
+      "name": "local target: 46-开发基线与低代码插件化决策.md:56-知识记忆技术栈与实施决策.md",
+      "pass": true
+    },
+    {
+      "name": "local target: 46-开发基线与低代码插件化决策.md:../../contracts/storage-reuse-plan.json",
+      "pass": true
+    },
+    {
+      "name": "local target: 46-开发基线与低代码插件化决策.md:../../contracts/plugin-manifest.schema.json",
+      "pass": true
+    },
+    {
+      "name": "balanced fences: 53-AI运行工具与效果评测规范.md",
+      "pass": true
+    },
+    {
+      "name": "local target: 53-AI运行工具与效果评测规范.md:56-知识记忆技术栈与实施决策.md",
+      "pass": true
+    },
+    {
+      "name": "local target: 53-AI运行工具与效果评测规范.md:55-知识库与记忆开源方案深度研究.md",
+      "pass": true
+    },
+    {
+      "name": "local target: 53-AI运行工具与效果评测规范.md:../../contracts/fixtures/ai-evals.json",
+      "pass": true
+    },
+    {
+      "name": "balanced fences: 54-开源二开与完整商用准入.md",
+      "pass": true
+    },
+    {
+      "name": "local target: 54-开源二开与完整商用准入.md:36-开源底座源码研究与技术选型.md",
+      "pass": true
+    },
+    {
+      "name": "local target: 54-开源二开与完整商用准入.md:55-知识库与记忆开源方案深度研究.md",
+      "pass": true
+    },
+    {
+      "name": "local target: 54-开源二开与完整商用准入.md:../../contracts/commercial-component-register.json",
+      "pass": true
+    },
+    {
+      "name": "balanced fences: 55-知识库与记忆开源方案深度研究.md",
+      "pass": true
+    },
+    {
+      "name": "reference defined: 55-知识库与记忆开源方案深度研究.md:ra-factory",
+      "pass": true
+    },
+    {
+      "name": "reference defined: 55-知识库与记忆开源方案深度研究.md:ra-qdrant",
+      "pass": true
+    },
+    {
+      "name": "reference defined: 55-知识库与记忆开源方案深度研究.md:ra-retrieve",
+      "pass": true
+    },
+    {
+      "name": "reference defined: 55-知识库与记忆开源方案深度研究.md:ra-memory",
+      "pass": true
+    },
+    {
+      "name": "reference defined: 55-知识库与记忆开源方案深度研究.md:ra-pdf",
+      "pass": true
+    },
+    {
+      "name": "reference defined: 55-知识库与记忆开源方案深度研究.md:ra-word",
+      "pass": true
+    },
+    {
+      "name": "reference defined: 55-知识库与记忆开源方案深度研究.md:ra-qtest",
+      "pass": true
+    },
+    {
+      "name": "reference defined: 55-知识库与记忆开源方案深度研究.md:ra-it",
+      "pass": true
+    },
+    {
+      "name": "reference defined: 55-知识库与记忆开源方案深度研究.md:ra-qcompose",
+      "pass": true
+    },
+    {
+      "name": "reference defined: 55-知识库与记忆开源方案深度研究.md:lc-qpom",
+      "pass": true
+    },
+    {
+      "name": "reference defined: 55-知识库与记忆开源方案深度研究.md:lc-filter",
+      "pass": true
+    },
+    {
+      "name": "reference defined: 55-知识库与记忆开源方案深度研究.md:lc-license",
+      "pass": true
+    },
+    {
+      "name": "reference defined: 55-知识库与记忆开源方案深度研究.md:q-license",
+      "pass": true
+    },
+    {
+      "name": "reference defined: 55-知识库与记忆开源方案深度研究.md:w-license",
+      "pass": true
+    },
+    {
+      "name": "reference defined: 55-知识库与记忆开源方案深度研究.md:m-license",
+      "pass": true
+    },
+    {
+      "name": "reference defined: 55-知识库与记忆开源方案深度研究.md:ra-mcompose",
+      "pass": true
+    },
+    {
+      "name": "reference defined: 55-知识库与记忆开源方案深度研究.md:pg-changes",
+      "pass": true
+    },
+    {
+      "name": "reference defined: 55-知识库与记忆开源方案深度研究.md:pg-license",
+      "pass": true
+    },
+    {
+      "name": "reference defined: 55-知识库与记忆开源方案深度研究.md:tika-license",
+      "pass": true
+    },
+    {
+      "name": "reference defined: 55-知识库与记忆开源方案深度研究.md:lc-tika",
+      "pass": true
+    },
+    {
+      "name": "reference defined: 55-知识库与记忆开源方案深度研究.md:d-license",
+      "pass": true
+    },
+    {
+      "name": "reference defined: 55-知识库与记忆开源方案深度研究.md:r-license",
+      "pass": true
+    },
+    {
+      "name": "reference defined: 55-知识库与记忆开源方案深度研究.md:r-compose",
+      "pass": true
+    },
+    {
+      "name": "reference defined: 55-知识库与记忆开源方案深度研究.md:ov-license",
+      "pass": true
+    },
+    {
+      "name": "reference defined: 55-知识库与记忆开源方案深度研究.md:dify-license",
+      "pass": true
+    },
+    {
+      "name": "reference defined: 55-知识库与记忆开源方案深度研究.md:fg-license",
+      "pass": true
+    },
+    {
+      "name": "reference defined: 55-知识库与记忆开源方案深度研究.md:pi-readme",
+      "pass": true
+    },
+    {
+      "name": "reference defined: 55-知识库与记忆开源方案深度研究.md:pi-license",
+      "pass": true
+    },
+    {
+      "name": "reference defined: 55-知识库与记忆开源方案深度研究.md:w-license",
+      "pass": true
+    },
+    {
+      "name": "reference defined: 55-知识库与记忆开源方案深度研究.md:r-readme",
+      "pass": true
+    },
+    {
+      "name": "reference defined: 55-知识库与记忆开源方案深度研究.md:r-compose",
+      "pass": true
+    },
+    {
+      "name": "reference defined: 55-知识库与记忆开源方案深度研究.md:pi-readme",
+      "pass": true
+    },
+    {
+      "name": "reference defined: 55-知识库与记忆开源方案深度研究.md:ra-pom",
+      "pass": true
+    },
+    {
+      "name": "reference defined: 55-知识库与记忆开源方案深度研究.md:ra-mcompose",
+      "pass": true
+    },
+    {
+      "name": "local target: 55-知识库与记忆开源方案深度研究.md:56-知识记忆技术栈与实施决策.md",
+      "pass": true
+    },
+    {
+      "name": "local target: 55-知识库与记忆开源方案深度研究.md:../../validation/knowledge-memory/sources/",
+      "pass": true
+    },
+    {
+      "name": "local target: 55-知识库与记忆开源方案深度研究.md:../../validation/knowledge-memory/memory-candidates-research.md",
+      "pass": true
+    },
+    {
+      "name": "local target: 55-知识库与记忆开源方案深度研究.md:../../validation/knowledge-memory/memory-candidates-research.md",
+      "pass": true
+    },
+    {
+      "name": "local target: 55-知识库与记忆开源方案深度研究.md:../../validation/knowledge-memory/memory-candidates-research.md",
+      "pass": true
+    },
+    {
+      "name": "balanced fences: 56-知识记忆技术栈与实施决策.md",
+      "pass": true
+    },
+    {
+      "name": "local target: 56-知识记忆技术栈与实施决策.md:55-知识库与记忆开源方案深度研究.md",
+      "pass": true
+    },
+    {
+      "name": "balanced fences: README.md",
+      "pass": true
+    },
+    {
+      "name": "local target: README.md:docs/设计包/34-任务执行工作台与权限分层设计.md",
+      "pass": true
+    },
+    {
+      "name": "local target: README.md:docs/设计包/37-技术架构总设计与决策.md",
+      "pass": true
+    },
+    {
+      "name": "local target: README.md:docs/设计包/46-开发基线与低代码插件化决策.md",
+      "pass": true
+    },
+    {
+      "name": "local target: README.md:docs/设计包/55-知识库与记忆开源方案深度研究.md",
+      "pass": true
+    },
+    {
+      "name": "local target: README.md:docs/设计包/56-知识记忆技术栈与实施决策.md",
+      "pass": true
+    },
+    {
+      "name": "local target: README.md:CONTEXT.md",
+      "pass": true
+    },
+    {
+      "name": "local target: README.md:history/用户需求原文.md",
+      "pass": true
+    },
+    {
+      "name": "local target: README.md:history/会话全文.md",
+      "pass": true
+    },
+    {
+      "name": "local target: README.md:history/会话消息.json",
+      "pass": true
+    },
+    {
+      "name": "local target: README.md:docs/设计包/26-完整产品设计文档.md",
+      "pass": true
+    },
+    {
+      "name": "local target: README.md:docs/设计包/31-完整产品交互原型.html",
+      "pass": true
+    },
+    {
+      "name": "local target: README.md:docs/设计包/32-业务流程图原型图与断点闭环审查.md",
+      "pass": true
+    },
+    {
+      "name": "local target: README.md:history/本轮产品设计需求补充-2026-09-11.md",
+      "pass": true
+    },
+    {
+      "name": "local target: README.md:docs/设计包/33-QoderWake与StaffDeck融合及AI体验研究.md",
+      "pass": true
+    },
+    {
+      "name": "local target: README.md:docs/设计包/27-逻辑数据模型与接口契约.md",
+      "pass": true
+    },
+    {
+      "name": "local target: README.md:docs/设计包/29-全量需求与角色追踪.md",
+      "pass": true
+    },
+    {
+      "name": "local target: README.md:docs/设计包/28-开发分期与验收用例.md",
+      "pass": true
+    },
+    {
+      "name": "local target: README.md:validation/product-design-document-check.json",
+      "pass": true
+    },
+    {
+      "name": "local target: README.md:validation/product-design-prototype-check.json",
+      "pass": true
+    },
+    {
+      "name": "local target: README.md:docs/设计包/36-开源底座源码研究与技术选型.md",
+      "pass": true
+    },
+    {
+      "name": "local target: README.md:docs/设计包/37-技术架构总设计与决策.md",
+      "pass": true
+    },
+    {
+      "name": "local target: README.md:docs/设计包/45-AI编程文档就绪审查与补齐清单.md",
+      "pass": true
+    },
+    {
+      "name": "local target: README.md:docs/设计包/25-从零开发最小工作量开源选型.md",
+      "pass": true
+    },
+    {
+      "name": "local target: README.md:项目接续提示词.md",
+      "pass": true
+    },
+    {
+      "name": "local target: README.md:validation/项目创建与迁移记录.json",
+      "pass": true
+    },
+    {
+      "name": "local target: README.md:<docs/设计包/00-开发设计包导读.md>",
+      "pass": true
+    },
+    {
+      "name": "local target: README.md:<docs/设计包/01-产品需求与业务规则.md>",
+      "pass": true
+    },
+    {
+      "name": "local target: README.md:<docs/设计包/02-数据模型与ER设计.md>",
+      "pass": true
+    },
+    {
+      "name": "local target: README.md:<docs/设计包/03-业务流程与状态机.md>",
+      "pass": true
+    },
+    {
+      "name": "local target: README.md:<docs/设计包/04-接口与契约变更设计.md>",
+      "pass": true
+    },
+    {
+      "name": "local target: README.md:<docs/设计包/05-UI与交互设计.md>",
+      "pass": true
+    },
+    {
+      "name": "local target: README.md:<docs/设计包/06-用户故事与153项追踪矩阵.md>",
+      "pass": true
+    },
+    {
+      "name": "local target: README.md:<docs/设计包/07-开发分解与验收方案.md>",
+      "pass": true
+    },
+    {
+      "name": "local target: README.md:<docs/设计包/08-人员数字员工协作交互原型.html>",
+      "pass": true
+    },
+    {
+      "name": "local target: README.md:<docs/设计包/09-协作扩展候选.schema.json>",
+      "pass": true
+    },
+    {
+      "name": "local target: README.md:<docs/设计包/10-需求追踪数据.json>",
+      "pass": true
+    },
+    {
+      "name": "local target: README.md:<docs/设计包/11-存量合同字段字典.md>",
+      "pass": true
+    },
+    {
+      "name": "local target: README.md:<docs/设计包/12-员工市场复制与使用设计.md>",
+      "pass": true
+    },
+    {
+      "name": "local target: README.md:<docs/设计包/13-市场采用候选.schema.json>",
+      "pass": true
+    },
+    {
+      "name": "local target: README.md:<docs/设计包/14-QoderWake界面参考与原型设计.md>",
+      "pass": true
+    },
+    {
+      "name": "local target: README.md:<docs/设计包/15-全角色界面与操作覆盖矩阵.md>",
+      "pass": true
+    },
+    {
+      "name": "local target: README.md:<docs/设计包/16-角色视角与权限演示数据.json>",
+      "pass": true
+    },
+    {
+      "name": "local target: README.md:<docs/设计包/17-角色需求与验收追踪.json>",
+      "pass": true
+    },
+    {
+      "name": "local target: README.md:<docs/设计包/18-OA多流程多实例产品设计.md>",
+      "pass": true
+    },
+    {
+      "name": "local target: README.md:<docs/设计包/19-OA多实例演示数据.json>",
+      "pass": true
+    },
+    {
+      "name": "local target: README.md:<docs/设计包/20-OA统一待办候选.schema.json>",
+      "pass": true
+    },
+    {
+      "name": "local target: README.md:<docs/设计包/21-OA需求细化与验收追踪.json>",
+      "pass": true
+    },
+    {
+      "name": "local target: README.md:<docs/设计包/22-开源工作流与成熟前端复用选型.md>",
+      "pass": true
+    },
+    {
+      "name": "local target: README.md:<docs/设计包/23-OA主旨与BS字段一致性核查.md>",
+      "pass": true
+    },
+    {
+      "name": "local target: README.md:<docs/设计包/24-业务模板字段候选.json>",
+      "pass": true
+    },
+    {
+      "name": "local target: README.md:<docs/设计包/25-从零开发最小工作量开源选型.md>",
+      "pass": true
+    },
+    {
+      "name": "local target: README.md:<docs/设计包/26-完整产品设计文档.md>",
+      "pass": true
+    },
+    {
+      "name": "local target: README.md:<docs/设计包/27-逻辑数据模型与接口契约.md>",
+      "pass": true
+    },
+    {
+      "name": "local target: README.md:<docs/设计包/28-开发分期与验收用例.md>",
+      "pass": true
+    },
+    {
+      "name": "local target: README.md:<docs/设计包/29-全量需求与角色追踪.md>",
+      "pass": true
+    },
+    {
+      "name": "local target: README.md:<docs/设计包/30-产品设计追踪数据.json>",
+      "pass": true
+    },
+    {
+      "name": "local target: README.md:<docs/设计包/31-完整产品交互原型.html>",
+      "pass": true
+    },
+    {
+      "name": "local target: README.md:<docs/设计包/32-业务流程图原型图与断点闭环审查.md>",
+      "pass": true
+    },
+    {
+      "name": "local target: README.md:<docs/设计包/33-QoderWake与StaffDeck融合及AI体验研究.md>",
+      "pass": true
+    },
+    {
+      "name": "local target: README.md:<docs/设计包/34-任务执行工作台与权限分层设计.md>",
+      "pass": true
+    },
+    {
+      "name": "local target: README.md:<docs/设计包/ZKER-staff-v2-evidence.json>",
+      "pass": true
+    },
+    {
+      "name": "local target: README.md:<docs/设计包/ZKER-staff-完整优化清单-v2-人员数字员工与上下文对齐.md>",
+      "pass": true
+    },
+    {
+      "name": "local target: README.md:<docs/设计包/附录-QoderWake竞品分析-初版快照.md>",
+      "pass": true
+    },
+    {
+      "name": "local target: README.md:.agents/skills/oa-development-system/SKILL.md",
+      "pass": true
+    },
+    {
+      "name": "local target: README.md:docs/开发体系.md",
+      "pass": true
+    },
+    {
+      "name": "local target: README.md:docs/设计包/35-全产品AI体验复核与改进.md",
+      "pass": true
+    },
+    {
+      "name": "local target: README.md:docs/设计包/46-开发基线与低代码插件化决策.md",
+      "pass": true
+    },
+    {
+      "name": "local target: README.md:docs/设计包/54-开源二开与完整商用准入.md",
+      "pass": true
+    },
+    {
+      "name": "local target: README.md:docs/设计包/47-全产品实施切片与首期开发规格.md",
+      "pass": true
+    },
+    {
+      "name": "local target: README.md:docs/设计包/48-接口事件与插件合同.md",
+      "pass": true
+    },
+    {
+      "name": "local target: README.md:docs/设计包/49-字段级数据模型与迁移规范.md",
+      "pass": true
+    },
+    {
+      "name": "local target: README.md:docs/设计包/50-业务不变量权限与验收夹具.md",
+      "pass": true
+    },
+    {
+      "name": "local target: README.md:docs/设计包/51-开发启动测试与故障恢复手册.md",
+      "pass": true
+    },
+    {
+      "name": "local target: README.md:docs/设计包/52-UI实现与页面状态规格.md",
+      "pass": true
+    },
+    {
+      "name": "local target: README.md:docs/设计包/53-AI运行工具与效果评测规范.md",
+      "pass": true
+    },
+    {
+      "name": "local target: README.md:contracts/openapi.json",
+      "pass": true
+    },
+    {
+      "name": "local target: README.md:contracts/data-dictionary.md",
+      "pass": true
+    },
+    {
+      "name": "local target: README.md:contracts/implementation-map.json",
+      "pass": true
+    },
+    {
+      "name": "local target: README.md:validation/implementation-contract-check.json",
+      "pass": true
+    },
+    {
+      "name": "balanced fences: CONTEXT.md",
+      "pass": true
+    },
+    {
+      "name": "local target: CONTEXT.md:docs/设计包/37-技术架构总设计与决策.md",
+      "pass": true
+    },
+    {
+      "name": "local target: CONTEXT.md:docs/设计包/46-开发基线与低代码插件化决策.md",
+      "pass": true
+    },
+    {
+      "name": "local target: CONTEXT.md:history/本轮产品设计需求补充-2026-09-11.md",
+      "pass": true
+    },
+    {
+      "name": "local target: CONTEXT.md:docs/设计包/55-知识库与记忆开源方案深度研究.md",
+      "pass": true
+    },
+    {
+      "name": "local target: CONTEXT.md:docs/设计包/56-知识记忆技术栈与实施决策.md",
+      "pass": true
+    },
+    {
+      "name": "local target: CONTEXT.md:docs/设计包/34-任务执行工作台与权限分层设计.md",
+      "pass": true
+    },
+    {
+      "name": "local target: CONTEXT.md:.agents/skills/oa-development-system/SKILL.md",
+      "pass": true
+    },
+    {
+      "name": "local target: CONTEXT.md:docs/开发体系.md",
+      "pass": true
+    },
+    {
+      "name": "local target: CONTEXT.md:docs/设计包/35-全产品AI体验复核与改进.md",
+      "pass": true
+    },
+    {
+      "name": "30 distinct POC cases",
+      "pass": true
+    },
+    {
+      "name": "POC is explicitly unrun",
+      "pass": true
+    },
+    {
+      "name": "candidate covered: QoderWake",
+      "pass": true
+    },
+    {
+      "name": "candidate covered: LangChain4j",
+      "pass": true
+    },
+    {
+      "name": "candidate covered: Qdrant",
+      "pass": true
+    },
+    {
+      "name": "candidate covered: Weaviate",
+      "pass": true
+    },
+    {
+      "name": "candidate covered: Milvus",
+      "pass": true
+    },
+    {
+      "name": "candidate covered: pgvector",
+      "pass": true
+    },
+    {
+      "name": "candidate covered: Apache Tika",
+      "pass": true
+    },
+    {
+      "name": "candidate covered: Docling",
+      "pass": true
+    },
+    {
+      "name": "candidate covered: RAGFlow",
+      "pass": true
+    },
+    {
+      "name": "candidate covered: Mem0",
+      "pass": true
+    },
+    {
+      "name": "candidate covered: Graphiti",
+      "pass": true
+    },
+    {
+      "name": "candidate covered: OpenViking",
+      "pass": true
+    },
+    {
+      "name": "candidate covered: Dify",
+      "pass": true
+    },
+    {
+      "name": "candidate covered: FastGPT",
+      "pass": true
+    },
+    {
+      "name": "candidate covered: PageIndex",
+      "pass": true
+    },
+    {
+      "name": "design topic present (not runtime proof): 责任轮次",
+      "pass": true
+    },
+    {
+      "name": "design topic present (not runtime proof): 不可变",
+      "pass": true
+    },
+    {
+      "name": "design topic present (not runtime proof): 正式交付",
+      "pass": true
+    },
+    {
+      "name": "design topic present (not runtime proof): 来源版本",
+      "pass": true
+    },
+    {
+      "name": "design topic present (not runtime proof): CAS",
+      "pass": true
+    },
+    {
+      "name": "design topic present (not runtime proof): Outbox",
+      "pass": true
+    },
+    {
+      "name": "design topic present (not runtime proof): 墓碑",
+      "pass": true
+    },
+    {
+      "name": "design topic present (not runtime proof): policyRevision",
+      "pass": true
+    },
+    {
+      "name": "design topic present (not runtime proof): default",
+      "pass": true
+    },
+    {
+      "name": "design topic present (not runtime proof): 接收人权限",
+      "pass": true
+    },
+    {
+      "name": "design topic present (not runtime proof): 有限试用",
+      "pass": true
+    },
+    {
+      "name": "design topic present (not runtime proof): 恢复备份",
+      "pass": true
+    },
+    {
+      "name": "two design flowcharts",
+      "pass": true
+    },
+    {
+      "name": "implementation boundary: 55-知识库与记忆开源方案深度研究.md",
+      "pass": true
+    },
+    {
+      "name": "implementation boundary: 56-知识记忆技术栈与实施决策.md",
+      "pass": true
+    },
+    {
+      "name": "Weaviate actual partition marker",
+      "pass": true
+    },
+    {
+      "name": "Weaviate restricted file verified",
+      "pass": true
+    },
+    {
+      "name": "Weaviate mixed license disclosed",
+      "pass": true
+    },
+    {
+      "name": "OpenViking actual AGPL marker",
+      "pass": true
+    },
+    {
+      "name": "OpenViking commercial limitation disclosed",
+      "pass": true
+    }
+  ],
+  "sourceFilesVerified": 118,
+  "sources": [
+    {
+      "path": "validation/knowledge-memory/sources/ageerle_ruoyi-ai--LICENSE",
+      "url": "https://raw.githubusercontent.com/ageerle/ruoyi-ai/cca30905778357e3aeb42b6adb65ef2384e75e60/LICENSE",
+      "sha256": "00fcb99d17bf06a9ce9bd901cdb5cb2cb326fc4937ee13e458071f49cc2de233"
+    },
+    {
+      "path": "validation/knowledge-memory/sources/ageerle_ruoyi-ai--ruoyi-modules__ruoyi-chat__pom.xml",
+      "url": "https://raw.githubusercontent.com/ageerle/ruoyi-ai/cca30905778357e3aeb42b6adb65ef2384e75e60/ruoyi-modules/ruoyi-chat/pom.xml",
+      "sha256": "68ab188cc135242b1105523e599fcec548573e7184bd7b3a053159e4d924ecfc"
+    },
+    {
+      "path": "validation/knowledge-memory/sources/ageerle_ruoyi-ai--pom.xml",
+      "url": "https://raw.githubusercontent.com/ageerle/ruoyi-ai/cca30905778357e3aeb42b6adb65ef2384e75e60/pom.xml",
+      "sha256": "22ce4d492abe3faaf4484848300ac22af5a264f77f1a857d8b3e1421ce0bf5ab"
+    },
+    {
+      "path": "validation/knowledge-memory/sources/langchain4j_langchain4j--LICENSE",
+      "url": "https://raw.githubusercontent.com/langchain4j/langchain4j/0028928eab6d3b0c11d9be13c6a06e9f0abd9512/LICENSE",
+      "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4"
+    },
+    {
+      "path": "validation/knowledge-memory/sources/qdrant_qdrant--LICENSE",
+      "url": "https://raw.githubusercontent.com/qdrant/qdrant/6ab21cac18ebb6f4ae29102c7f8f5cc11affd5de/LICENSE",
+      "sha256": "210b508429e913d9de5301f90508bc2cbf5b2281de5b45e607c04d58f0f3bd8f"
+    },
+    {
+      "path": "validation/knowledge-memory/sources/qdrant_qdrant--README.md",
+      "url": "https://raw.githubusercontent.com/qdrant/qdrant/6ab21cac18ebb6f4ae29102c7f8f5cc11affd5de/README.md",
+      "sha256": "f1455d12252bf40235ad0128d8e98b2cd6d42583e441ac832b01f4daf08df2e4"
+    },
+    {
+      "path": "validation/knowledge-memory/sources/qdrant_qdrant--Cargo.toml",
+      "url": "https://raw.githubusercontent.com/qdrant/qdrant/6ab21cac18ebb6f4ae29102c7f8f5cc11affd5de/Cargo.toml",
+      "sha256": "400b52abe55c22c7c59c8fb44ff2434b89fdbb06a5c307fcdfed102167d76d50"
+    },
+    {
+      "path": "validation/knowledge-memory/sources/pgvector_pgvector--LICENSE",
+      "url": "https://raw.githubusercontent.com/pgvector/pgvector/efa08fda9ec485d80292d0487a77939c087dedcc/LICENSE",
+      "sha256": "6bba9ebeb73e27477463b05e5ef1bf303bccbddb3db9bbc95905d351604d6a87"
+    },
+    {
+      "path": "validation/knowledge-memory/sources/pgvector_pgvector--README.md",
+      "url": "https://raw.githubusercontent.com/pgvector/pgvector/efa08fda9ec485d80292d0487a77939c087dedcc/README.md",
+      "sha256": "54cb3a5f4344308476cb2378469ac77d10fbff415d1b5be66608bb386ce8f527"
+    },
+    {
+      "path": "validation/knowledge-memory/sources/pgvector_pgvector--CHANGELOG.md",
+      "url": "https://raw.githubusercontent.com/pgvector/pgvector/efa08fda9ec485d80292d0487a77939c087dedcc/CHANGELOG.md",
+      "sha256": "245d62d189c6dff20735d13e8feea605ac460373a8158d578a15aa1166019e8a"
+    },
+    {
+      "path": "validation/knowledge-memory/sources/docling-project_docling--LICENSE",
+      "url": "https://raw.githubusercontent.com/docling-project/docling/5ea6490ffdc57b2fd7de5cc436f2d0a22f2214d4/LICENSE",
+      "sha256": "edb765d1e3e60d0c7a7d5fba5f2bb2c3c29f7465cecb5c22cf1185c884954e4c"
+    },
+    {
+      "path": "validation/knowledge-memory/sources/docling-project_docling--pyproject.toml",
+      "url": "https://raw.githubusercontent.com/docling-project/docling/5ea6490ffdc57b2fd7de5cc436f2d0a22f2214d4/pyproject.toml",
+      "sha256": "41134d271ddc52662608911a6b2059f232ae55cef1ef71df672c27a8155e9c4b"
+    },
+    {
+      "path": "validation/knowledge-memory/sources/docling-project_docling--README.md",
+      "url": "https://raw.githubusercontent.com/docling-project/docling/5ea6490ffdc57b2fd7de5cc436f2d0a22f2214d4/README.md",
+      "sha256": "64e3e937b3cebc5f0da738f79a1546c6004eed448ee7b356325b19ebfc2fddf3"
+    },
+    {
+      "path": "validation/knowledge-memory/sources/apache_tika--LICENSE.txt",
+      "url": "https://raw.githubusercontent.com/apache/tika/dccc702fca054c47f43fa3c7ce73cc328ace1ebf/LICENSE.txt",
+      "sha256": "ad5f4c4d0d4a04ac264ee55539191e1d36eb5d43ff63bbfc2cf97d541dc7ce8c"
+    },
+    {
+      "path": "validation/knowledge-memory/sources/apache_tika--README.md",
+      "url": "https://raw.githubusercontent.com/apache/tika/dccc702fca054c47f43fa3c7ce73cc328ace1ebf/README.md",
+      "sha256": "4d960b82f0f6521dd1a98d3bcb676d8aa596ddce841e520253738617538db4f3"
+    },
+    {
+      "path": "validation/knowledge-memory/sources/apache_tika--pom.xml",
+      "url": "https://raw.githubusercontent.com/apache/tika/dccc702fca054c47f43fa3c7ce73cc328ace1ebf/pom.xml",
+      "sha256": "b5ecc2145fcac3c51737bc24590737b48905a5a308b079eb7c059522b60904fa"
+    },
+    {
+      "path": "validation/knowledge-memory/sources/infiniflow_ragflow--LICENSE",
+      "url": "https://raw.githubusercontent.com/infiniflow/ragflow/1f5d33333a3ff67fda2aa302c843699e994453e3/LICENSE",
+      "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4"
+    },
+    {
+      "path": "validation/knowledge-memory/sources/infiniflow_ragflow--README.md",
+      "url": "https://raw.githubusercontent.com/infiniflow/ragflow/1f5d33333a3ff67fda2aa302c843699e994453e3/README.md",
+      "sha256": "e321e3b65b92b34121e96d147fe9145e1e428ec1453e3cbbf4426fab09d701ad"
+    },
+    {
+      "path": "validation/knowledge-memory/sources/infiniflow_ragflow--docker__docker-compose-base.yml",
+      "url": "https://raw.githubusercontent.com/infiniflow/ragflow/1f5d33333a3ff67fda2aa302c843699e994453e3/docker/docker-compose-base.yml",
+      "sha256": "fc5ee822d3073d8837444a0b69864e476f3f9659fad424d63bb15b9ad5869414"
+    },
+    {
+      "path": "validation/knowledge-memory/sources/infiniflow_ragflow--pyproject.toml",
+      "url": "https://raw.githubusercontent.com/infiniflow/ragflow/1f5d33333a3ff67fda2aa302c843699e994453e3/pyproject.toml",
+      "sha256": "7354a392255d1143719e8c0d8ccaa9900e7c09564f0284515784c6540ffbaa27"
+    },
+    {
+      "path": "validation/knowledge-memory/sources/langgenius_dify--LICENSE",
+      "url": "https://raw.githubusercontent.com/langgenius/dify/085a79c748be47111d2e1c1b65b3f82200998d5c/LICENSE",
+      "sha256": "232cf91474932d5110ed304e53b6b742a58463857c571fae803fdf2ac36d7bb3"
+    },
+    {
+      "path": "validation/knowledge-memory/sources/labring_FastGPT--LICENSE",
+      "url": "https://raw.githubusercontent.com/labring/FastGPT/a9025a40802384fc274eb2704b30541c9d64c034/LICENSE",
+      "sha256": "84569a7a2a79f9f97093019ae12d914b975db773ed17443fb726a0b6f585bc24"
+    },
+    {
+      "path": "validation/knowledge-memory/sources/milvus-io_milvus--LICENSE",
+      "url": "https://raw.githubusercontent.com/milvus-io/milvus/82bcce8867c92e7d55f669e034a00dcb0f37d2bc/LICENSE",
+      "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4"
+    },
+    {
+      "path": "validation/knowledge-memory/sources/milvus-io_milvus--README.md",
+      "url": "https://raw.githubusercontent.com/milvus-io/milvus/82bcce8867c92e7d55f669e034a00dcb0f37d2bc/README.md",
+      "sha256": "8fedcdc9023fcd061a54405bf0d83afb4516c7ec053b2efd22476473ce10153f"
+    },
+    {
+      "path": "validation/knowledge-memory/sources/ageerle_ruoyi-ai--TREE",
+      "url": "https://api.github.com/repos/ageerle/ruoyi-ai/git/trees/cca30905778357e3aeb42b6adb65ef2384e75e60?recursive=1",
+      "sha256": "cc569191571d0fd10183a703eb5688abbc7b5816ca7c2e89f3865bf152779a7d"
+    },
+    {
+      "path": "validation/knowledge-memory/sources/langchain4j_langchain4j--TREE",
+      "url": "https://api.github.com/repos/langchain4j/langchain4j/git/trees/0028928eab6d3b0c11d9be13c6a06e9f0abd9512?recursive=1",
+      "sha256": "b37bfc52de521deaf97f8fef4b4eb621ee510ad41165da664f309b561eadb367"
+    },
+    {
+      "path": "validation/knowledge-memory/sources/ageerle_ruoyi-ai--ruoyi-admin__src__main__resources__application-dev.yml",
+      "url": "https://raw.githubusercontent.com/ageerle/ruoyi-ai/cca30905778357e3aeb42b6adb65ef2384e75e60/ruoyi-admin/src/main/resources/application-dev.yml",
+      "sha256": "1cb0ef492929466ef288b5e29cf655a880cc4c64ee5de7c681cd3d242cd41f41"
+    },
+    {
+      "path": "validation/knowledge-memory/sources/ageerle_ruoyi-ai--ruoyi-extend__ruoyi-snailjob-server__src__main__resources__application-dev.yml",
+      "url": "https://raw.githubusercontent.com/ageerle/ruoyi-ai/cca30905778357e3aeb42b6adb65ef2384e75e60/ruoyi-extend/ruoyi-snailjob-server/src/main/resources/application-dev.yml",
+      "sha256": "ff900a07c16dead2076082ab64474f5fb54c0515e68f9a48dc3a3b0a0eba0ec3"
+    },
+    {
+      "path": "validation/knowledge-memory/sources/ageerle_ruoyi-ai--ruoyi-modules__ruoyi-chat__src__main__java__org__ruoyi__config__VectorStoreProperties.java",
+      "url": "https://raw.githubusercontent.com/ageerle/ruoyi-ai/cca30905778357e3aeb42b6adb65ef2384e75e60/ruoyi-modules/ruoyi-chat/src/main/java/org/ruoyi/config/VectorStoreProperties.java",
+      "sha256": "92604f9044ac8c23353cc7098a6d1e2aa9e4aa9104f80fff9f7be6c307a5e402"
+    },
+    {
+      "path": "validation/knowledge-memory/sources/ageerle_ruoyi-ai--ruoyi-modules__ruoyi-chat__src__main__java__org__ruoyi__domain__bo__vector__QueryVectorBo.java",
+      "url": "https://raw.githubusercontent.com/ageerle/ruoyi-ai/cca30905778357e3aeb42b6adb65ef2384e75e60/ruoyi-modules/ruoyi-chat/src/main/java/org/ruoyi/domain/bo/vector/QueryVectorBo.java",
+      "sha256": "8042f17d91dc6f205103275db477f3ea882e52a557c2f9a13a46810ac3473ae9"
+    },
+    {
+      "path": "validation/knowledge-memory/sources/ageerle_ruoyi-ai--ruoyi-modules__ruoyi-chat__src__main__java__org__ruoyi__domain__bo__vector__StoreEmbeddingBo.java",
+      "url": "https://raw.githubusercontent.com/ageerle/ruoyi-ai/cca30905778357e3aeb42b6adb65ef2384e75e60/ruoyi-modules/ruoyi-chat/src/main/java/org/ruoyi/domain/bo/vector/StoreEmbeddingBo.java",
+      "sha256": "00a7eab5cb7e7391b785071cf1682136119d39e9e1c940ad087898f582add8cd"
+    },
+    {
+      "path": "validation/knowledge-memory/sources/ageerle_ruoyi-ai--ruoyi-modules__ruoyi-chat__src__main__java__org__ruoyi__domain__entity__knowledge__KnowledgeFragment.java",
+      "url": "https://raw.githubusercontent.com/ageerle/ruoyi-ai/cca30905778357e3aeb42b6adb65ef2384e75e60/ruoyi-modules/ruoyi-chat/src/main/java/org/ruoyi/domain/entity/knowledge/KnowledgeFragment.java",
+      "sha256": "7f7b3d6707e5555704b6a28b642cce066b8660f74d64e0f49d2887f0c93d20cf"
+    },
+    {
+      "path": "validation/knowledge-memory/sources/ageerle_ruoyi-ai--ruoyi-modules__ruoyi-chat__src__main__java__org__ruoyi__domain__entity__knowledge__KnowledgeInfo.java",
+      "url": "https://raw.githubusercontent.com/ageerle/ruoyi-ai/cca30905778357e3aeb42b6adb65ef2384e75e60/ruoyi-modules/ruoyi-chat/src/main/java/org/ruoyi/domain/entity/knowledge/KnowledgeInfo.java",
+      "sha256": "79afdaaeb4078f68d54623617a240286a859c4f25fd588aa81113745bf832809"
+    },
+    {
+      "path": "validation/knowledge-memory/sources/ageerle_ruoyi-ai--ruoyi-modules__ruoyi-chat__src__main__java__org__ruoyi__factory__VectorStoreStrategyFactory.java",
+      "url": "https://raw.githubusercontent.com/ageerle/ruoyi-ai/cca30905778357e3aeb42b6adb65ef2384e75e60/ruoyi-modules/ruoyi-chat/src/main/java/org/ruoyi/factory/VectorStoreStrategyFactory.java",
+      "sha256": "aaca5d651569679e8d12e91dc13cceb51196c1c931fe12a61a443e675681ec0d"
+    },
+    {
+      "path": "validation/knowledge-memory/sources/ageerle_ruoyi-ai--ruoyi-modules__ruoyi-chat__src__main__java__org__ruoyi__service__chat__impl__memory__PersistentChatMemoryStore.java",
+      "url": "https://raw.githubusercontent.com/ageerle/ruoyi-ai/cca30905778357e3aeb42b6adb65ef2384e75e60/ruoyi-modules/ruoyi-chat/src/main/java/org/ruoyi/service/chat/impl/memory/PersistentChatMemoryStore.java",
+      "sha256": "7f7c6eb131284583d72f7867cc55408c9d16598e15ee42bc84dcec48f8328f16"
+    },
+    {
+      "path": "validation/knowledge-memory/sources/ageerle_ruoyi-ai--ruoyi-modules__ruoyi-chat__src__main__java__org__ruoyi__service__knowledge__impl__KnowledgeAttachServiceImpl.java",
+      "url": "https://raw.githubusercontent.com/ageerle/ruoyi-ai/cca30905778357e3aeb42b6adb65ef2384e75e60/ruoyi-modules/ruoyi-chat/src/main/java/org/ruoyi/service/knowledge/impl/KnowledgeAttachServiceImpl.java",
+      "sha256": "8863fb9a1f0937f0e8fb5c348e5e1bad3e3794376edfbf979bdb4b25a5692db7"
+    },
+    {
+      "path": "validation/knowledge-memory/sources/ageerle_ruoyi-ai--ruoyi-modules__ruoyi-chat__src__main__java__org__ruoyi__service__knowledge__impl__KnowledgeFragmentServiceImpl.java",
+      "url": "https://raw.githubusercontent.com/ageerle/ruoyi-ai/cca30905778357e3aeb42b6adb65ef2384e75e60/ruoyi-modules/ruoyi-chat/src/main/java/org/ruoyi/service/knowledge/impl/KnowledgeFragmentServiceImpl.java",
+      "sha256": "b19f0cd4ef015424fda87ebd781800e435628ca491a346eec62a3dd8954bb795"
+    },
+    {
+      "path": "validation/knowledge-memory/sources/ageerle_ruoyi-ai--ruoyi-modules__ruoyi-chat__src__main__java__org__ruoyi__service__knowledge__impl__loader__PdfFileLoader.java",
+      "url": "https://raw.githubusercontent.com/ageerle/ruoyi-ai/cca30905778357e3aeb42b6adb65ef2384e75e60/ruoyi-modules/ruoyi-chat/src/main/java/org/ruoyi/service/knowledge/impl/loader/PdfFileLoader.java",
+      "sha256": "fba699d9d634729cfe54f54670248c41b7c1542d6b4acf330b25fafd91f22ae4"
+    },
+    {
+      "path": "validation/knowledge-memory/sources/ageerle_ruoyi-ai--ruoyi-modules__ruoyi-chat__src__main__java__org__ruoyi__service__knowledge__impl__loader__WordLoader.java",
+      "url": "https://raw.githubusercontent.com/ageerle/ruoyi-ai/cca30905778357e3aeb42b6adb65ef2384e75e60/ruoyi-modules/ruoyi-chat/src/main/java/org/ruoyi/service/knowledge/impl/loader/WordLoader.java",
+      "sha256": "39b05534d5dd418a5b2d89297a25d48e2caf4158ed3e300a2d92ab7518d11055"
+    },
+    {
+      "path": "validation/knowledge-memory/sources/ageerle_ruoyi-ai--ruoyi-modules__ruoyi-chat__src__main__java__org__ruoyi__service__retrieval__impl__KnowledgeRetrievalServiceImpl.java",
+      "url": "https://raw.githubusercontent.com/ageerle/ruoyi-ai/cca30905778357e3aeb42b6adb65ef2384e75e60/ruoyi-modules/ruoyi-chat/src/main/java/org/ruoyi/service/retrieval/impl/KnowledgeRetrievalServiceImpl.java",
+      "sha256": "504f0c25896c721d0d95ce4d46cef808f56eb00eaca70500bd3220ffeb095bd5"
+    },
+    {
+      "path": "validation/knowledge-memory/sources/ageerle_ruoyi-ai--ruoyi-modules__ruoyi-chat__src__main__java__org__ruoyi__service__vector__impl__AbstractVectorStoreStrategy.java",
+      "url": "https://raw.githubusercontent.com/ageerle/ruoyi-ai/cca30905778357e3aeb42b6adb65ef2384e75e60/ruoyi-modules/ruoyi-chat/src/main/java/org/ruoyi/service/vector/impl/AbstractVectorStoreStrategy.java",
+      "sha256": "0719ac258e2c591e0f5e1fbecbd57f73914928bed7bbad574fda3cd7f3eee67c"
+    },
+    {
+      "path": "validation/knowledge-memory/sources/ageerle_ruoyi-ai--ruoyi-modules__ruoyi-chat__src__main__java__org__ruoyi__service__vector__impl__QdrantVectorStoreStrategy.java",
+      "url": "https://raw.githubusercontent.com/ageerle/ruoyi-ai/cca30905778357e3aeb42b6adb65ef2384e75e60/ruoyi-modules/ruoyi-chat/src/main/java/org/ruoyi/service/vector/impl/QdrantVectorStoreStrategy.java",
+      "sha256": "0426860cd515bd3a689441d9b216853ef251e812c107aa5986a8e1f00adfe543"
+    },
+    {
+      "path": "validation/knowledge-memory/sources/ageerle_ruoyi-ai--ruoyi-modules__ruoyi-chat__src__main__java__org__ruoyi__service__vector__impl__VectorStoreServiceImpl.java",
+      "url": "https://raw.githubusercontent.com/ageerle/ruoyi-ai/cca30905778357e3aeb42b6adb65ef2384e75e60/ruoyi-modules/ruoyi-chat/src/main/java/org/ruoyi/service/vector/impl/VectorStoreServiceImpl.java",
+      "sha256": "2bf686905614a151719fc0cd403c3fcac3555dc8de34087090b424c588551f79"
+    },
+    {
+      "path": "validation/knowledge-memory/sources/ageerle_ruoyi-ai--ruoyi-modules__ruoyi-chat__src__test__java__org__ruoyi__service__retrieval__impl__KnowledgeRetrievalServiceRegressionTest.java",
+      "url": "https://raw.githubusercontent.com/ageerle/ruoyi-ai/cca30905778357e3aeb42b6adb65ef2384e75e60/ruoyi-modules/ruoyi-chat/src/test/java/org/ruoyi/service/retrieval/impl/KnowledgeRetrievalServiceRegressionTest.java",
+      "sha256": "3a48c464ce239779f2122dced1da6d3d626691f9f13db466eeae7691e04f4dd7"
+    },
+    {
+      "path": "validation/knowledge-memory/sources/ageerle_ruoyi-ai--ruoyi-modules__ruoyi-chat__src__test__java__org__ruoyi__service__vector__impl__QdrantVectorStoreStrategyTest.java",
+      "url": "https://raw.githubusercontent.com/ageerle/ruoyi-ai/cca30905778357e3aeb42b6adb65ef2384e75e60/ruoyi-modules/ruoyi-chat/src/test/java/org/ruoyi/service/vector/impl/QdrantVectorStoreStrategyTest.java",
+      "sha256": "96012e58e1f54bb731c23acffcea016116d5347ad14dc2e0ec7e73249d62c986"
+    },
+    {
+      "path": "validation/knowledge-memory/sources/ageerle_ruoyi-ai--ruoyi-modules__ruoyi-chat__src__test__java__org__ruoyi__service__vector__impl__ThreeVectorStoresDockerIT.java",
+      "url": "https://raw.githubusercontent.com/ageerle/ruoyi-ai/cca30905778357e3aeb42b6adb65ef2384e75e60/ruoyi-modules/ruoyi-chat/src/test/java/org/ruoyi/service/vector/impl/ThreeVectorStoresDockerIT.java",
+      "sha256": "80f86f3d31910e5caeacff7ca6c69a0a0c2e4af1daa4cdffa58bfb49cf41d7d6"
+    },
+    {
+      "path": "validation/knowledge-memory/sources/ageerle_ruoyi-ai--docs__docker__qdrant__docker-compose.yml",
+      "url": "https://raw.githubusercontent.com/ageerle/ruoyi-ai/cca30905778357e3aeb42b6adb65ef2384e75e60/docs/docker/qdrant/docker-compose.yml",
+      "sha256": "600ee28bca3f285310adde1b0aae937d8b94fa94d5d9e8e712e307b1715249b7"
+    },
+    {
+      "path": "validation/knowledge-memory/sources/ageerle_ruoyi-ai--docs__docker__milvus__docker-compose.yml",
+      "url": "https://raw.githubusercontent.com/ageerle/ruoyi-ai/cca30905778357e3aeb42b6adb65ef2384e75e60/docs/docker/milvus/docker-compose.yml",
+      "sha256": "7288473e5bc9f87ffbf0430ea26d523ee4e1d51e293c83a9621d80e783223422"
+    },
+    {
+      "path": "validation/knowledge-memory/sources/langchain4j_langchain4j--langchain4j-qdrant__pom.xml",
+      "url": "https://raw.githubusercontent.com/langchain4j/langchain4j/80b747681106494d57d767cb66ef2c4999d20cb1/langchain4j-qdrant/pom.xml",
+      "sha256": "fe84f1c3f3316c4f8ba0135689042073d4017220f134411b480b23fadb3fc577"
+    },
+    {
+      "path": "validation/knowledge-memory/sources/langchain4j_langchain4j--langchain4j-qdrant__src__main__java__dev__langchain4j__store__embedding__qdrant__QdrantEmbeddingStore.java",
+      "url": "https://raw.githubusercontent.com/langchain4j/langchain4j/80b747681106494d57d767cb66ef2c4999d20cb1/langchain4j-qdrant/src/main/java/dev/langchain4j/store/embedding/qdrant/QdrantEmbeddingStore.java",
+      "sha256": "f82be8a03edbe6f9ec8dd08008e4a8e8fe52f6f06e0d18259f51311f675cb7dc"
+    },
+    {
+      "path": "validation/knowledge-memory/sources/langchain4j_langchain4j--document-parsers__langchain4j-document-parser-apache-tika__pom.xml",
+      "url": "https://raw.githubusercontent.com/langchain4j/langchain4j/80b747681106494d57d767cb66ef2c4999d20cb1/document-parsers/langchain4j-document-parser-apache-tika/pom.xml",
+      "sha256": "21f97d66d873da650f711ca92e54fd69e54db28c5bf66154e54030a859105e52"
+    },
+    {
+      "path": "validation/knowledge-memory/sources/langchain4j_langchain4j--langchain4j-qdrant__src__main__java__dev__langchain4j__store__embedding__qdrant__QdrantFilterConverter.java",
+      "url": "https://raw.githubusercontent.com/langchain4j/langchain4j/80b747681106494d57d767cb66ef2c4999d20cb1/langchain4j-qdrant/src/main/java/dev/langchain4j/store/embedding/qdrant/QdrantFilterConverter.java",
+      "sha256": "f477706f7ecde438d5149da62d96ce8ddbf3a43a8516dc50efca442079e5eb29"
+    },
+    {
+      "path": "validation/knowledge-memory/sources/qoder-knowledge.source",
+      "url": "https://docs.qoder.cn/qoderwake/knowledge-base",
+      "sha256": "ee7b1ef3b338f50db27111eca7a1722fe06064f0068659cf3fab16299db75867"
+    },
+    {
+      "path": "validation/knowledge-memory/sources/qoder-memory.source",
+      "url": "https://docs.qoder.cn/qoderwake/memory",
+      "sha256": "530e4640c0f0bcd5cda940233bb1a3811ad0e0a0db3f4bd63240c1869c7c487c"
+    },
+    {
+      "path": "validation/knowledge-memory/sources/qoder-projects.source",
+      "url": "https://docs.qoder.cn/qoderwake/projects",
+      "sha256": "21c6e71ba36a0d195b851c3534ebea3f08e5e9951a3c4635d412224367bf4dcc"
+    },
+    {
+      "path": "validation/knowledge-memory/sources/qoder-wakers.source",
+      "url": "https://docs.qoder.cn/qoderwake/manage-wakers",
+      "sha256": "8b7aa3c1f8b23a434d77005058a08c9b55d9888b6777c2a34f0a72f6b99470c4"
+    },
+    {
+      "path": "validation/knowledge-memory/sources/claude-memory.source",
+      "url": "https://platform.claude.com/docs/en/managed-agents/memory",
+      "sha256": "3d3a5cc302715cea9ba2dc7097a50d80fd07c373476bdb62bf434fdb013373cd"
+    },
+    {
+      "path": "validation/knowledge-memory/sources/claude-dreams.source",
+      "url": "https://platform.claude.com/docs/en/managed-agents/dreams",
+      "sha256": "b037eaaa79e6dc098dcffb9c912fc18fc94b7acce33b6707f184b257a240e1a7"
+    },
+    {
+      "path": "validation/knowledge-memory/sources/anthropic-context.source",
+      "url": "https://www.anthropic.com/engineering/effective-context-engineering-for-ai-agents",
+      "sha256": "a562ee707ace260e029d38c739aac3e50062260ee94708cc13dc2258f8fd8f3c"
+    },
+    {
+      "path": "validation/knowledge-memory/sources/ms-document-acl.source",
+      "url": "https://devblogs.microsoft.com/ise/sharepoint-doc-level-access/",
+      "sha256": "ec8243a3984635598bd30abb432addf0a966aa0a7d8803576a25ad7e077347f8"
+    },
+    {
+      "path": "validation/knowledge-memory/sources/owasp-rag.source",
+      "url": "https://cheatsheetseries.owasp.org/cheatsheets/RAG_Security_Cheat_Sheet.html",
+      "sha256": "5950627751b21ba37ef5cb112cec7491c8dc67033dbda679bc47f7c836ecb838"
+    },
+    {
+      "path": "validation/knowledge-memory/sources/tika-download.source",
+      "url": "https://tika.apache.org/download",
+      "sha256": "2d2a7728dfc15ce313a633efa21b8382db3cf8f9ec4d01e74c7d360efea8ea6f"
+    },
+    {
+      "path": "validation/knowledge-memory/sources/pgvector-tags.source",
+      "url": "https://api.github.com/repos/pgvector/pgvector/tags?per_page=5",
+      "sha256": "840fc414be8c1ee503e490c1c8384ca9b690b73215dafe45f11cd25d9259fe51"
+    },
+    {
+      "path": "validation/knowledge-memory/sources/weaviate-release.source",
+      "url": "https://api.github.com/repos/weaviate/weaviate/releases/latest",
+      "sha256": "7cd5ac18436d77a3a5bd0c55655b7d872715b6d87aa6b3b3545053b73c0adb06"
+    },
+    {
+      "path": "validation/knowledge-memory/sources/pageindex-release.source",
+      "url": "https://api.github.com/repos/VectifyAI/PageIndex/releases/latest",
+      "sha256": "222ad5ff4b40b54e03ae57acdd192da1d2be1ed21e1c620398979d66fa5559d1"
+    },
+    {
+      "path": "validation/knowledge-memory/sources/pageindex-readme.source",
+      "url": "https://raw.githubusercontent.com/VectifyAI/PageIndex/c75800506c43c6d0b147d3032e291867f190e159/README.md",
+      "sha256": "e16813d9d846355eddf71bfa4566209d8f93b3820b2d21e4ab07f1464d1a353b"
+    },
+    {
+      "path": "validation/knowledge-memory/sources/pageindex-license.source",
+      "url": "https://raw.githubusercontent.com/VectifyAI/PageIndex/c75800506c43c6d0b147d3032e291867f190e159/LICENSE",
+      "sha256": "bca9c3d401fdfd0965a2a2224f7dcf9945b512eaf5802b91d312ba739dbe9584"
+    },
+    {
+      "path": "validation/knowledge-memory/sources/weaviate-license.source",
+      "url": "https://raw.githubusercontent.com/weaviate/weaviate/77063adc7497182f688a0bcefa099c9232f6e6e8/LICENSE",
+      "sha256": "f36c21d76a28113b9b4d20393e229fa7f21ef7fd0ceaffabcf3310c644611ede"
+    },
+    {
+      "path": "validation/knowledge-memory/sources/docling-release-license.source",
+      "url": "https://raw.githubusercontent.com/docling-project/docling/8071466f2c9f844d630dac879b3988dfb66e4277/LICENSE",
+      "sha256": "edb765d1e3e60d0c7a7d5fba5f2bb2c3c29f7465cecb5c22cf1185c884954e4c"
+    },
+    {
+      "path": "validation/knowledge-memory/sources/docling-release-pyproject.source",
+      "url": "https://raw.githubusercontent.com/docling-project/docling/8071466f2c9f844d630dac879b3988dfb66e4277/pyproject.toml",
+      "sha256": "bb7b6762bb20271045988c4ad76a7f7988bf16e2aa9e36bdc9697fd994fa06ca"
+    },
+    {
+      "path": "validation/knowledge-memory/sources/bge-m3-model.source",
+      "url": "https://huggingface.co/api/models/BAAI/bge-m3",
+      "sha256": "e07fe032de8a42d33b17b0d73dee45215dd3b1c0f67e6ae5b2eceb22fe1a875e"
+    },
+    {
+      "path": "validation/knowledge-memory/sources/bge-reranker-model.source",
+      "url": "https://huggingface.co/api/models/BAAI/bge-reranker-v2-m3",
+      "sha256": "9d00fe9c2b8d335a039ca333cf71f5c0bd604b96c04dcefcb024bc0b47477e84"
+    },
+    {
+      "path": "validation/knowledge-memory/sources/docling-models.source",
+      "url": "https://huggingface.co/api/models/docling-project/docling-models",
+      "sha256": "c9a42b12a5b6381669ca726676ef6f0577029489acb1785fea59a42e899c9981"
+    },
+    {
+      "path": "validation/knowledge-memory/sources/pgvector-latest-pin.source",
+      "url": "https://api.github.com/repos/pgvector/pgvector/commits/v0.8.6",
+      "sha256": "18863da9da704be5d0ceae3364fdf73ea16dc9dd9a79111342513a125099dd0c"
+    },
+    {
+      "path": "validation/knowledge-memory/sources/weaviate-wl-license.source",
+      "url": "https://raw.githubusercontent.com/weaviate/weaviate/77063adc7497182f688a0bcefa099c9232f6e6e8/wl/LICENSE-WEAVIATE",
+      "sha256": "18869aeacef6d70cf654d71dcba998ddc6c5d5a87049b2946d48ab03fa12fd30"
+    },
+    {
+      "path": "validation/knowledge-memory/sources/weaviate-bsd-license.source",
+      "url": "https://raw.githubusercontent.com/weaviate/weaviate/77063adc7497182f688a0bcefa099c9232f6e6e8/LICENSE-BSD",
+      "sha256": "18feb4da4d786a6a5201afa09b0d6cee2ec4dca5b34b11d7c2e24eca3e9c09eb"
+    },
+    {
+      "path": "validation/knowledge-memory/memory-sources/mem0/LICENSE",
+      "url": "https://raw.githubusercontent.com/mem0ai/mem0/c7ee362aff94a369af70f13f2b4f853f6793ff4c/LICENSE",
+      "sha256": "0bbcbe931c353293a2fafce08326181dfeea0e568c566afd4ce8337a70f5e219"
+    },
+    {
+      "path": "validation/knowledge-memory/memory-sources/mem0/pyproject.toml",
+      "url": "https://raw.githubusercontent.com/mem0ai/mem0/c7ee362aff94a369af70f13f2b4f853f6793ff4c/pyproject.toml",
+      "sha256": "0b63d72960057d1c86d6c9e59417688fe75485384e1a08f0257a2e0b38b61fa3"
+    },
+    {
+      "path": "validation/knowledge-memory/memory-sources/mem0/mem0/memory/main.py",
+      "url": "https://raw.githubusercontent.com/mem0ai/mem0/c7ee362aff94a369af70f13f2b4f853f6793ff4c/mem0/memory/main.py",
+      "sha256": "5b1b75e2f00aca7bd368a6e9cd5905145d60fd05a0e36d6b1ef3e2f1b4f28ca1"
+    },
+    {
+      "path": "validation/knowledge-memory/memory-sources/mem0/mem0/memory/storage.py",
+      "url": "https://raw.githubusercontent.com/mem0ai/mem0/c7ee362aff94a369af70f13f2b4f853f6793ff4c/mem0/memory/storage.py",
+      "sha256": "5f5ecdadd2b260fd14f36a0f338336eb760275465dd1056a99a47e1ef07702bd"
+    },
+    {
+      "path": "validation/knowledge-memory/memory-sources/mem0/server/auth.py",
+      "url": "https://raw.githubusercontent.com/mem0ai/mem0/c7ee362aff94a369af70f13f2b4f853f6793ff4c/server/auth.py",
+      "sha256": "9674f67f520945b9bea2fc6e6c0d49cd46c4b32ec8e5609ec9325b43c6e5cea0"
+    },
+    {
+      "path": "validation/knowledge-memory/memory-sources/mem0/server/README.md",
+      "url": "https://raw.githubusercontent.com/mem0ai/mem0/c7ee362aff94a369af70f13f2b4f853f6793ff4c/server/README.md",
+      "sha256": "ac1f98f647c67e042cae05aac4187be791b0012a3d95866a55d3d6470ae13a44"
+    },
+    {
+      "path": "validation/knowledge-memory/memory-sources/mem0/tests/test_server_auth.py",
+      "url": "https://raw.githubusercontent.com/mem0ai/mem0/c7ee362aff94a369af70f13f2b4f853f6793ff4c/tests/test_server_auth.py",
+      "sha256": "46a49b0c08a4b342c733f312d0d150dbd1e38f3e4ce97694f50b4a4d4c5d794c"
+    },
+    {
+      "path": "validation/knowledge-memory/memory-sources/mem0/mem0/vector_stores/pgvector.py",
+      "url": "https://raw.githubusercontent.com/mem0ai/mem0/c7ee362aff94a369af70f13f2b4f853f6793ff4c/mem0/vector_stores/pgvector.py",
+      "sha256": "4cbc53362155bc05156f2c0641871afdab9b047445d668b2730ea9c2fa8a280f"
+    },
+    {
+      "path": "validation/knowledge-memory/memory-sources/openviking/LICENSE",
+      "url": "https://raw.githubusercontent.com/volcengine/OpenViking/0f77ab5625a5e2ead4f286d4e58ea77e05fcfdee/LICENSE",
+      "sha256": "1bd87fa6d9a5c79daf0c2af042b6725c9773bf095cc3d1bdf3656e66d1c3e5b1"
+    },
+    {
+      "path": "validation/knowledge-memory/memory-sources/openviking/README.md",
+      "url": "https://raw.githubusercontent.com/volcengine/OpenViking/0f77ab5625a5e2ead4f286d4e58ea77e05fcfdee/README.md",
+      "sha256": "123b7076dbebe3222ec7e06e9949fdedbbd517ca424bc2d865cdbbb5ceaee0c8"
+    },
+    {
+      "path": "validation/knowledge-memory/memory-sources/openviking/pyproject.toml",
+      "url": "https://raw.githubusercontent.com/volcengine/OpenViking/0f77ab5625a5e2ead4f286d4e58ea77e05fcfdee/pyproject.toml",
+      "sha256": "0d48dc0858b4f066a962fb1863775e0e409fee86085270b8b32f1e5fd506ed27"
+    },
+    {
+      "path": "validation/knowledge-memory/memory-sources/openviking/docs/en/concepts/11-multi-tenant.md",
+      "url": "https://raw.githubusercontent.com/volcengine/OpenViking/0f77ab5625a5e2ead4f286d4e58ea77e05fcfdee/docs/en/concepts/11-multi-tenant.md",
+      "sha256": "777bc051ca856440edba33ab62f35e22d4af306d84e6a43092dfa40081ca3872"
+    },
+    {
+      "path": "validation/knowledge-memory/memory-sources/openviking/SECURITY.md",
+      "url": "https://raw.githubusercontent.com/volcengine/OpenViking/0f77ab5625a5e2ead4f286d4e58ea77e05fcfdee/SECURITY.md",
+      "sha256": "4a0f6b042cd05ad52eb34c21891ff52dec9a5e947c2b3714a0fbd64e98f58d28"
+    },
+    {
+      "path": "validation/knowledge-memory/memory-sources/graphiti/LICENSE",
+      "url": "https://raw.githubusercontent.com/getzep/graphiti/c035afb7990b6077331a81e98b04efcfd9bf8184/LICENSE",
+      "sha256": "2825300b20d7b951209835a4a331f29e24725a39d65168e4b831df53aa372650"
+    },
+    {
+      "path": "validation/knowledge-memory/memory-sources/graphiti/README.md",
+      "url": "https://raw.githubusercontent.com/getzep/graphiti/c035afb7990b6077331a81e98b04efcfd9bf8184/README.md",
+      "sha256": "ce1628c02b3c6fd5b59e3e48dc61c958f07824033b4d0b989bb8d433932b6b3f"
+    },
+    {
+      "path": "validation/knowledge-memory/memory-sources/graphiti/pyproject.toml",
+      "url": "https://raw.githubusercontent.com/getzep/graphiti/c035afb7990b6077331a81e98b04efcfd9bf8184/pyproject.toml",
+      "sha256": "69850169b5e14ac356ce750602099ea42d306db48d0b4efd9f5629227ea7527f"
+    },
+    {
+      "path": "validation/knowledge-memory/memory-sources/graphiti/graphiti_core/graphiti.py",
+      "url": "https://raw.githubusercontent.com/getzep/graphiti/c035afb7990b6077331a81e98b04efcfd9bf8184/graphiti_core/graphiti.py",
+      "sha256": "2d0ffbb8b6de59787269326a9255d875f74da63ed66fd4f4fad3f159538d0fdd"
+    },
+    {
+      "path": "validation/knowledge-memory/memory-sources/graphiti/graphiti_core/utils/maintenance/graph_data_operations.py",
+      "url": "https://raw.githubusercontent.com/getzep/graphiti/c035afb7990b6077331a81e98b04efcfd9bf8184/graphiti_core/utils/maintenance/graph_data_operations.py",
+      "sha256": "f8e0e3c8ca504f1c05136e6ebc646f981bca23bcda0fa3f91ef5a5cd2b58e68b"
+    },
+    {
+      "path": "validation/knowledge-memory/memory-sources/graphiti/tests/test_handle_multiple_group_ids.py",
+      "url": "https://raw.githubusercontent.com/getzep/graphiti/c035afb7990b6077331a81e98b04efcfd9bf8184/tests/test_handle_multiple_group_ids.py",
+      "sha256": "c7ed2b96d84fc702fbe6e09c99877b0f5c89fb3e4c57411aa446cdb2de431c1d"
+    },
+    {
+      "path": "validation/knowledge-memory/memory-sources/graphiti/graphiti_core/edges.py",
+      "url": "https://raw.githubusercontent.com/getzep/graphiti/c035afb7990b6077331a81e98b04efcfd9bf8184/graphiti_core/edges.py",
+      "sha256": "0151d72ebfb057033c6d52a163e22f252f67b915722e14315b685c7831b3b1c6"
+    },
+    {
+      "path": "validation/knowledge-memory/memory-sources/graphiti/graphiti_core/nodes.py",
+      "url": "https://raw.githubusercontent.com/getzep/graphiti/c035afb7990b6077331a81e98b04efcfd9bf8184/graphiti_core/nodes.py",
+      "sha256": "529eb74b7c93e7551f6287b1a7bf6818d31fd045623b3260967dad573e4d801c"
+    },
+    {
+      "path": "validation/knowledge-memory/memory-sources/langchain4j-1.17.2/LICENSE",
+      "url": "https://raw.githubusercontent.com/langchain4j/langchain4j/0028928eab6d3b0c11d9be13c6a06e9f0abd9512/LICENSE",
+      "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4"
+    },
+    {
+      "path": "validation/knowledge-memory/memory-sources/langchain4j/langchain4j-core/src/main/java/dev/langchain4j/store/memory/chat/ChatMemoryStore.java",
+      "url": "https://raw.githubusercontent.com/langchain4j/langchain4j/0028928eab6d3b0c11d9be13c6a06e9f0abd9512/langchain4j-core/src/main/java/dev/langchain4j/store/memory/chat/ChatMemoryStore.java",
+      "sha256": "56d7b2343a46d6acc04246462ee5c5bac9801733392e6015326ebab82a9f17fc"
+    },
+    {
+      "path": "validation/knowledge-memory/memory-sources/langchain4j/langchain4j/src/main/java/dev/langchain4j/memory/chat/MessageWindowChatMemory.java",
+      "url": "https://raw.githubusercontent.com/langchain4j/langchain4j/0028928eab6d3b0c11d9be13c6a06e9f0abd9512/langchain4j/src/main/java/dev/langchain4j/memory/chat/MessageWindowChatMemory.java",
+      "sha256": "33b0dfead0402f3875b236629284ec8025b9529f28863ab0978124fd5d7039c9"
+    },
+    {
+      "path": "validation/knowledge-memory/memory-sources/langchain4j/docs/docs/tutorials/chat-memory.md",
+      "url": "https://raw.githubusercontent.com/langchain4j/langchain4j/0028928eab6d3b0c11d9be13c6a06e9f0abd9512/docs/docs/tutorials/chat-memory.md",
+      "sha256": "55e719276dbe1aa55dbf952eb315790d063c6a8bf7d661d21008aa0aba22a5bb"
+    },
+    {
+      "path": "validation/knowledge-memory/memory-sources/langchain4j/docs/docs/tutorials/ai-services.md",
+      "url": "https://raw.githubusercontent.com/langchain4j/langchain4j/0028928eab6d3b0c11d9be13c6a06e9f0abd9512/docs/docs/tutorials/ai-services.md",
+      "sha256": "273555a7a0d58fb23368304e52214c079ef8ccbb1eda92414a91b7ff78f94144"
+    },
+    {
+      "path": "validation/knowledge-memory/memory-sources/openviking/docs/en/concepts/06-extraction.md",
+      "url": "https://raw.githubusercontent.com/volcengine/OpenViking/0f77ab5625a5e2ead4f286d4e58ea77e05fcfdee/docs/en/concepts/06-extraction.md",
+      "sha256": "21241ca583ece362c9e070d24a359778d0869c20a95fec427b0a0461acecea1a"
+    },
+    {
+      "path": "validation/knowledge-memory/memory-sources/openviking/docs/en/concepts/08-session.md",
+      "url": "https://raw.githubusercontent.com/volcengine/OpenViking/0f77ab5625a5e2ead4f286d4e58ea77e05fcfdee/docs/en/concepts/08-session.md",
+      "sha256": "122b4b0db5f0e682b222f77549e00372d32829c349396c8a6e0ff37a4812b7a0"
+    },
+    {
+      "path": "validation/knowledge-memory/memory-sources/openviking/docs/en/concepts/15-acl.md",
+      "url": "https://raw.githubusercontent.com/volcengine/OpenViking/0f77ab5625a5e2ead4f286d4e58ea77e05fcfdee/docs/en/concepts/15-acl.md",
+      "sha256": "4a6f4007992d235a5eaf9b1ceb088307d4a739e856bf6fcd08ad6c1e4b8ed11c"
+    },
+    {
+      "path": "validation/knowledge-memory/memory-sources/openviking/tests/api_test/scenarios/sessions/test_session_delete_cleanup.py",
+      "url": "https://raw.githubusercontent.com/volcengine/OpenViking/0f77ab5625a5e2ead4f286d4e58ea77e05fcfdee/tests/api_test/scenarios/sessions/test_session_delete_cleanup.py",
+      "sha256": "9c6be368f1657aa9a6c133404fd0e76769205373aa9d614260ae7f025fd8fae7"
+    },
+    {
+      "path": "validation/knowledge-memory/memory-sources/openviking/openviking/session/memory_policy.py",
+      "url": "https://raw.githubusercontent.com/volcengine/OpenViking/0f77ab5625a5e2ead4f286d4e58ea77e05fcfdee/openviking/session/memory_policy.py",
+      "sha256": "9495a5c9006a0818a08365af71340d3b7a2c665687c8e3fccc7e77ec0cdfa9eb"
+    },
+    {
+      "path": "validation/knowledge-memory/memory-sources/mem0/mem0/memory/telemetry.py",
+      "url": "https://raw.githubusercontent.com/mem0ai/mem0/c7ee362aff94a369af70f13f2b4f853f6793ff4c/mem0/memory/telemetry.py",
+      "sha256": "89f36bd0b87059fa0710adcccfbd9639ab4d5c4a762d875a1caceaf688aca687"
+    },
+    {
+      "path": "validation/knowledge-memory/memory-sources/mem0/server/main.py",
+      "url": "https://raw.githubusercontent.com/mem0ai/mem0/c7ee362aff94a369af70f13f2b4f853f6793ff4c/server/main.py",
+      "sha256": "320af32a959fcb6bed8b4420757714e8824fb1e98e9869a2475e1a03eddf3158"
+    },
+    {
+      "path": "validation/knowledge-memory/memory-sources/mem0/tests/test_memory.py",
+      "url": "https://raw.githubusercontent.com/mem0ai/mem0/c7ee362aff94a369af70f13f2b4f853f6793ff4c/tests/test_memory.py",
+      "sha256": "dde62e6277c23a7f0f0f9c1eab93bd6f36c7ee788ac2c520f11b6e2bc756eb44"
+    },
+    {
+      "path": "validation/knowledge-memory/memory-sources/langchain4j-1.17.2/LICENSE",
+      "url": "https://raw.githubusercontent.com/langchain4j/langchain4j/80b747681106494d57d767cb66ef2c4999d20cb1/LICENSE",
+      "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4"
+    },
+    {
+      "path": "validation/knowledge-memory/memory-sources/langchain4j-1.17.2/langchain4j-core/src/main/java/dev/langchain4j/store/memory/chat/ChatMemoryStore.java",
+      "url": "https://raw.githubusercontent.com/langchain4j/langchain4j/80b747681106494d57d767cb66ef2c4999d20cb1/langchain4j-core/src/main/java/dev/langchain4j/store/memory/chat/ChatMemoryStore.java",
+      "sha256": "6696088ac2f46aba26699854b35eb12338089a8a2d561625dcef2d588050789f"
+    },
+    {
+      "path": "validation/knowledge-memory/memory-sources/langchain4j-1.17.2/langchain4j/src/main/java/dev/langchain4j/memory/chat/MessageWindowChatMemory.java",
+      "url": "https://raw.githubusercontent.com/langchain4j/langchain4j/80b747681106494d57d767cb66ef2c4999d20cb1/langchain4j/src/main/java/dev/langchain4j/memory/chat/MessageWindowChatMemory.java",
+      "sha256": "c032e1b5bff14e4558c86630504e62a47dffafc007a7f807e11bcfd6df198df5"
+    },
+    {
+      "path": "validation/knowledge-memory/memory-sources/qdrant/LICENSE",
+      "url": "https://raw.githubusercontent.com/qdrant/qdrant/6ab21cac18ebb6f4ae29102c7f8f5cc11affd5de/LICENSE",
+      "sha256": "210b508429e913d9de5301f90508bc2cbf5b2281de5b45e607c04d58f0f3bd8f"
+    },
+    {
+      "path": "validation/knowledge-memory/memory-sources/pgvector/LICENSE",
+      "url": "https://raw.githubusercontent.com/pgvector/pgvector/efa08fda9ec485d80292d0487a77939c087dedcc/LICENSE",
+      "sha256": "6bba9ebeb73e27477463b05e5ef1bf303bccbddb3db9bbc95905d351604d6a87"
+    },
+    {
+      "path": "validation/knowledge-memory/memory-sources/neo4j/LICENSE.txt",
+      "url": "https://raw.githubusercontent.com/neo4j/neo4j/f213380f812b820a1b312e2ea52cb3d8f1931ccc/LICENSE.txt",
+      "sha256": "8e1bb72dd89711d9612ea2749c906e4b17760245f4ffdfcc237219f4df48e440"
+    },
+    {
+      "path": "validation/knowledge-memory/memory-sources/falkordb/LICENSE",
+      "url": "https://raw.githubusercontent.com/FalkorDB/FalkorDB/ed5b31553987c44ed516829631a9379b4589bc74/LICENSE",
+      "sha256": "0e8f0497016466a84975d296ae768e4adb16a7267b4a6ed373157be96d127dfc"
+    },
+    {
+      "path": "validation/knowledge-memory/memory-sources/mem0/server/server_state.py",
+      "url": "https://raw.githubusercontent.com/mem0ai/mem0/c7ee362aff94a369af70f13f2b4f853f6793ff4c/server/server_state.py",
+      "sha256": "259d3413faf6fd04fc2b4613279cd54b6c2da032be42b8559b09b2e5bec33852"
+    }
+  ],
+  "failedFetches": [
+    {
+      "repo": "volcengine/OpenViking",
+      "path": "docs/en/concepts/08-memory.md",
+      "error": "curl: (56) The requested URL returned error: 404\n"
+    },
+    {
+      "repo": "FalkorDB/FalkorDB",
+      "path": "LICENSE.txt",
+      "error": "curl: (56) The requested URL returned error: 404\n"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/langchain4j/langchain4j/80b747681106494d57d767cb66ef2c4999d20cb1/langchain4j-document-parser-apache-tika/pom.xml",
+      "exit": 56,
+      "error": "curl: (56) The requested URL returned error: 404\n"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/langchain4j/langchain4j/80b747681106494d57d767cb66ef2c4999d20cb1/langchain4j-qdrant/src/main/java/dev/langchain4j/store/embedding/qdrant/QdrantFilterMapper.java",
+      "exit": 56,
+      "error": "curl: (56) The requested URL returned error: 404\n"
+    },
+    {
+      "url": "https://huggingface.co/api/models/Qwen/Qwen3-Embedding-0.6B",
+      "exit": 35,
+      "error": "curl: (35) LibreSSL SSL_connect: SSL_ERROR_SYSCALL in connection to huggingface.co:443 \n"
+    },
+    {
+      "url": "https://huggingface.co/api/models/Qwen/Qwen3-Reranker-0.6B",
+      "exit": 35,
+      "error": "curl: (35) LibreSSL SSL_connect: SSL_ERROR_SYSCALL in connection to huggingface.co:443 \n"
+    }
+  ],
+  "documents": [
+    {
+      "path": "docs/设计包/41-AI运行知识分析与安全设计.md",
+      "sha256": "1e3ffefd229d118ae7b8f9c5fe9a6388a5c9d01d29a523398d1adbe4548d6398"
+    },
+    {
+      "path": "docs/设计包/46-开发基线与低代码插件化决策.md",
+      "sha256": "48160413b7eedd785ca1557646597616105b995e678337df9cbdc7666ab7aa3a"
+    },
+    {
+      "path": "docs/设计包/53-AI运行工具与效果评测规范.md",
+      "sha256": "5d2579157f0241e0cb36288670dc32d020f7f1f2e437bc6030af7e66fbd57bde"
+    },
+    {
+      "path": "docs/设计包/54-开源二开与完整商用准入.md",
+      "sha256": "334168c445aad9327c820bf4a45e0b8ef6d2dea083cc501681079cfc66541a45"
+    },
+    {
+      "path": "docs/设计包/55-知识库与记忆开源方案深度研究.md",
+      "sha256": "cf6946d6d50de169d3acf89bc735a996148d09360b28788d360d86b7e2e88e31"
+    },
+    {
+      "path": "docs/设计包/56-知识记忆技术栈与实施决策.md",
+      "sha256": "fe5ef5404652ae9e1f60ce150d61bce9d0d85e7a48a454b0624a967e69e93cc6"
+    },
+    {
+      "path": "README.md",
+      "sha256": "d9eb49514e1e1ea4918f82d0b303d31afa25952b3b5f605bac4b2c8579a77025"
+    },
+    {
+      "path": "CONTEXT.md",
+      "sha256": "269d2e00600883015561ff84382fdf1fd3fef9fb7142c00993510eacda6f9a47"
+    }
+  ],
+  "pocCases": [
+    {
+      "id": "KM-P01",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "KM-P02",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "KM-P03",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "KM-P04",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "KM-P05",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "KM-P06",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "KM-P07",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "KM-P08",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "KM-P09",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "KM-P10",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "KM-P11",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "KM-P12",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "KM-P13",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "KM-P14",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "KM-P15",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "KM-P16",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "KM-P17",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "KM-P18",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "KM-P19",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "KM-P20",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "KM-P21",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "KM-P22",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "KM-P23",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "KM-P24",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "KM-P25",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "KM-P26",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "KM-P27",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "KM-P28",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "KM-P29",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "KM-P30",
+      "status": "NOT_RUN"
+    }
+  ],
+  "productTestsRun": false,
+  "commercialReleaseCleared": false,
+  "limitations": [
+    "SHA checks prove saved-source integrity, not dependency compatibility or legal clearance.",
+    "Text/topic checks prove document structure only; source interpretation was reviewed separately.",
+    "No candidate installation, build, real model, database, permission runtime or product acceptance.",
+    "Mermaid blocks are checked structurally; these new diagrams have not been browser-rendered."
+  ]
+}

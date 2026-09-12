@@ -1,0 +1,167 @@
+你有没有经历过这种崩溃？
+花了 2 小时让 Claude Code 做一个 Django 迁移，50+ 工具调用后上下文窗口炸了。/clear 一敲，Agent 一脸茫然问你："请问您要做什么？"
+这不是 bug，这是所有 AI 编程 Agent 的结构性缺陷：上下文窗口 = RAM，关机就清零。Manus AI 在被 Meta 收购前想明白了这件事——用文件系统当持久记忆，而不是把所有东西塞进上下文。
+Planning-with-Files 就是这个思路的标准化实现：3 个 Markdown 文件 + Hook 自动注入，让 Agent 的"工作记忆"写在磁盘上，/clear 崩溃、上下文压缩、Session 断裂全不怕。26k Star、96.7% 断言通过率、3/3 盲测 A/B 全胜——这是目前持久化规划领域数据最硬的 Skill。
+---
+工作原理：三文件 + Hook 注入循环
+核心模型Context Window = RAM（易失、有限） Filesystem    = Disk（持久、无限）  → 任何重要东西都写到磁盘上
+三个文件各管什么
+文件
+职责
+更新时机task_plan.md
+阶段划分 + 进度追踪 + 决策记录
+每完成一个阶段findings.md
+研究笔记 + 发现 + 决策依据
+任何新发现progress.md
+Session 日志 + 测试结果
+全程持续记录
+Hook 注入循环（5 个生命周期钩子）Agent 工作 → 写决策/发现/错误到文件      ↓ Hook 每轮开始时重新注入文件内容到上下文      ↓ /clear 或崩溃 → 文件还在 → 新 Session 读文件恢复      ↓ 所有阶段完成 → Stop Hook 检查 → 释放完成信号
+5 个 Hook 分别是：
+UserPromptSubmit
+ — 每轮用户输入前注入计划
+PreToolUse
+ — 每次工具调用前注入计划
+PostToolUse
+ — Write/Edit 后提醒更新 progress.md
+Stop
+ — 完成检查门控（gated 模式下阻止提前退出）
+PreCompact
+ — 压缩前提醒刷盘
+与 Manus AI 的关系
+2025 年 12 月 Meta 以 20 亿美元收购 Manus。Manus 的核心秘密就是上下文工程：用 Markdown 文件当"磁盘上的工作记忆"。Planning-with-Files 把这个模式打包成了标准化 Skill，装到任何 Agent 上就能用。
+---
+功能拆解：五大模块逐个分析
+1. 三文件模板系统
+一句话：标准化的 task_plan.md、findings.md、progress.md 模板，带完整注释说明每个字段的用途。
+核心能力：
+
+模板自带 Goal / Next Step / Current Phase / Phases / Decisions / Errors 结构
+
+Phase 支持 pending → in_progress → complete 状态流转
+
+决策表和错误表结构化记录，避免重复犯错
+适用场景：任何 3+ 步骤或 5+ 工具调用的复杂任务。
+2. Hook 自动注入引擎
+一句话：5 个生命周期 Hook 让计划文件每轮自动注入上下文，Agent 不需要"记得去读"。
+核心能力：
+
+UserPromptSubmit / PreToolUse 双保险注入
+
+PostToolUse 提醒更新进度
+
+Stop Hook 门控完成（gated 模式）
+
+PreCompact 压缩前刷盘提醒
+适用场景：长任务（50+ 工具调用），防止目标漂移。
+3. Session 恢复系统
+一句话：/clear 或崩溃后，自动从 IDE Session Store 读取历史对话 + 从文件恢复计划状态。
+核心能力：
+session-catchup.py
+ 自动发现历史 Session
+
+提取上下文丢失后的对话片段
+
+生成恢复报告，帮助 Agent 快速补回状态
+实测数据：恢复平均 5.0 turns（裸 Agent 13.3 turns），提速 62%。
+适用场景：上下文窗口不够用、需要多次 /clear 的超长任务。
+4. 并行任务隔离
+一句话：v2.36.0+ 支持 .planning/YYYY-MM-DD-slug/ 目录隔离，多个并行任务互不干扰。
+核心能力：
+.active_plan
+ 文件指向当前激活的计划目录
+resolve-plan-dir.sh
+ 智能解析计划路径
+
+防止共享父目录的线程注入无关计划
+适用场景：多 Agent 并行、多任务交叉执行。
+5. v3 长任务增强
+一句话：Autonomous 模式 + Gated 完成门控 + Attestation 计划防篡改 + JSONL 运行日志。
+核心能力：
+--autonomous
+：去掉逐轮计划复述，保留注入
+--gated
+：所有阶段完成前阻止 Agent 退出
+
+SHA-256 Attestation：计划被篡改时 Hook 拒绝注入
+
+JSONL Ledger： append-only 运行日志，可审计
+适用场景：数小时级自主运行、需要保证完成质量的无人值守任务。
+---
+实测数据：有 Skill vs 没 Skill
+Benchmark 总览（v2.21.0，claude-sonnet-4-6，2026-03-06）
+测试项
+有 Skill
+无 Skill
+差距
+断言通过率（30 项）96.7%
+（29/30）
+6.7%（2/30）
++90.0 pp
+三文件模式遵循5/5
+0/5
++100%
+盲测 A/B 胜率3/3（100%）
+0/3
+全胜
+平均评分（10 分制）10.0
+6.8
++3.2
+Token 成本对比
+维度
+有 Skill
+无 Skill
+差距
+平均 Token
+19,926
+11,899
++68%
+平均耗时
+115s
+98s
++17%
+结论：多花 68% Token 换 96.7% 结构化输出——这是一笔划算的交易。额外 Token 花在创建 3 个文件、填充决策表和错误表上，不是浪费。
+Session 恢复实测（v3.4.0 内部基准，2026-07-06）
+恢复方式
+恢复所需 Turn 数
+正确性
+Planning-with-Files5.0
+77/77 pytest 全绿
+裸 Agent（无规划）
+13.3
+77/77 pytest 全绿
+恢复提速 62%，零正确性惩罚。两者最终都能完成任务，但有 Skill 的快了将近 3 倍。
+盲测 A/B 评语摘录
+"Output B（有 Skill）满足所有四项结构化工作流期望……Output A（无 Skill）交付了真实可运行的代码，但不符合结构化多阶段规划格式。" — Eval 1 评审
+"Output B 还包含了 pytz/zoneinfo 迁移（4.2 特有问题，Output A 完全遗漏）以及 django-upgrade 工具推荐……18,727 字符 vs 12,847，信息密度更高。" — Eval 4 评审
+---
+安装方式 + 适用场景 + 结语
+安装（一行命令）# Claude Code（插件路由，含 Hook + 斜杠命令） /plugin marketplace add OthmanAdi/planning-with-files /plugin install planning-with-files@planning-with-files  # 60+ Agent 通用（Agent Skills 标准） npx skills add OthmanAdi/planning-with-files --skill planning-with-files -g  # npm 锁版本到项目 npm install planning-with-files
+安装后输入 /plan 或让 Agent "plan this task" 即可触发。
+最适合谁
+角色
+为什么需要
+独立开发者
+一个人做复杂项目，需要跨 Session 记住进度
+长任务工程师
+数小时级 Agent 运行，目标漂移是最大敌人
+多 Agent 协作
+并行任务隔离 + 计划防篡改
+AI 编程初学者
+结构化输出强制养成好习惯
+不太适合谁
+简单 CRUD / 一次性脚本
+：3 步以内的任务不需要三文件，反而增加摩擦
+已有 ECC 等系统级方案的团队
+：ECC 的 Agent Harness 已经覆盖了规划功能，重复叠加意义不大
+Token 预算极紧的场景
+：多花 68% Token 不是所有人都能接受
+一句话结语
+Planning-with-Files 解决的是 AI 编程中最痛的结构性问题——上下文易失。它的数据足够硬（96.7% 通过率、3/3 A/B 全胜），架构足够通用（60+ Agent、18+ IDE），代价也足够清晰（+68% Token）。如果你的 Agent 经常在长任务中失忆，这是目前最成熟的解法。
+---
+数据来源：GitHub OthmanAdi/planning-with-files README + docs/evals.md，截至 2026-08-27。
+相关阅读：
+
+ECC 实测：242k Star 的 Agent Harness 操作系统，68 个 Agent 帮你从设计到上线
+
+Andrej Karpathy Guidelines 实测：207k Star 的四条铁律，终结 AI 编程四大顽疾
+⚠️ 本文为技术评测，非付费推广。Planning-with-Files 为 MIT 开源项目。

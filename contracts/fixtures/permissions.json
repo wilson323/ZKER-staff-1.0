@@ -1,0 +1,341 @@
+{
+  "scope": "REFERENCE_TRUTH_TABLE_NOT_PRODUCT_POLICY_IMPLEMENTATION",
+  "cases": [
+    {
+      "id": "PERM-01",
+      "action": "READ",
+      "facts": {
+        "tenantMatch": true,
+        "discover": true,
+        "contentRead": true,
+        "pathDiscover": true,
+        "purposeMatch": true,
+        "currentEpoch": true,
+        "grantActive": true,
+        "destinationAllowed": true,
+        "executionGrant": true,
+        "releaseAllowed": true,
+        "policyAvailable": true,
+        "sameWork": true
+      },
+      "expected": "ALLOW",
+      "reason": "有效人员来源读权",
+      "executionStatus": "NOT_RUN_AGAINST_PRODUCT"
+    },
+    {
+      "id": "PERM-02",
+      "action": "READ",
+      "facts": {
+        "tenantMatch": false,
+        "discover": true,
+        "contentRead": true,
+        "pathDiscover": true,
+        "purposeMatch": true,
+        "currentEpoch": true,
+        "grantActive": true,
+        "destinationAllowed": true,
+        "executionGrant": true,
+        "releaseAllowed": true,
+        "policyAvailable": true,
+        "sameWork": true
+      },
+      "expected": "NOT_FOUND",
+      "reason": "跨租户不能发现",
+      "executionStatus": "NOT_RUN_AGAINST_PRODUCT"
+    },
+    {
+      "id": "PERM-03",
+      "action": "READ",
+      "facts": {
+        "tenantMatch": true,
+        "discover": false,
+        "contentRead": true,
+        "pathDiscover": true,
+        "purposeMatch": true,
+        "currentEpoch": true,
+        "grantActive": true,
+        "destinationAllowed": true,
+        "executionGrant": true,
+        "releaseAllowed": true,
+        "policyAvailable": true,
+        "sameWork": true
+      },
+      "expected": "NOT_FOUND",
+      "reason": "无对象发现权",
+      "executionStatus": "NOT_RUN_AGAINST_PRODUCT"
+    },
+    {
+      "id": "PERM-04",
+      "action": "PATH",
+      "facts": {
+        "tenantMatch": true,
+        "discover": true,
+        "contentRead": false,
+        "pathDiscover": true,
+        "purposeMatch": true,
+        "currentEpoch": true,
+        "grantActive": true,
+        "destinationAllowed": true,
+        "executionGrant": true,
+        "releaseAllowed": true,
+        "policyAvailable": true,
+        "sameWork": true
+      },
+      "expected": "PATH_ONLY",
+      "reason": "只能看被授予路径",
+      "executionStatus": "NOT_RUN_AGAINST_PRODUCT"
+    },
+    {
+      "id": "PERM-05",
+      "action": "READ",
+      "facts": {
+        "tenantMatch": true,
+        "discover": true,
+        "contentRead": false,
+        "pathDiscover": true,
+        "purposeMatch": true,
+        "currentEpoch": true,
+        "grantActive": true,
+        "destinationAllowed": true,
+        "executionGrant": true,
+        "releaseAllowed": true,
+        "policyAvailable": true,
+        "sameWork": true
+      },
+      "expected": "DENY",
+      "reason": "路径权不能读正文",
+      "executionStatus": "NOT_RUN_AGAINST_PRODUCT"
+    },
+    {
+      "id": "PERM-06",
+      "action": "EXECUTE",
+      "facts": {
+        "tenantMatch": true,
+        "discover": true,
+        "contentRead": false,
+        "pathDiscover": true,
+        "purposeMatch": true,
+        "currentEpoch": true,
+        "grantActive": true,
+        "destinationAllowed": true,
+        "executionGrant": true,
+        "releaseAllowed": true,
+        "policyAvailable": true,
+        "sameWork": true
+      },
+      "expected": "BACKEND_ONLY",
+      "reason": "独立来源授权且目的/目标匹配",
+      "executionStatus": "NOT_RUN_AGAINST_PRODUCT"
+    },
+    {
+      "id": "PERM-07",
+      "action": "RELEASE",
+      "facts": {
+        "tenantMatch": true,
+        "discover": true,
+        "contentRead": false,
+        "pathDiscover": true,
+        "purposeMatch": true,
+        "currentEpoch": true,
+        "grantActive": true,
+        "destinationAllowed": true,
+        "executionGrant": true,
+        "releaseAllowed": false,
+        "policyAvailable": true,
+        "sameWork": true
+      },
+      "expected": "DENY",
+      "reason": "执行成功仍需发布决定",
+      "executionStatus": "NOT_RUN_AGAINST_PRODUCT"
+    },
+    {
+      "id": "PERM-08",
+      "action": "EXECUTE",
+      "facts": {
+        "tenantMatch": true,
+        "discover": true,
+        "contentRead": true,
+        "pathDiscover": true,
+        "purposeMatch": false,
+        "currentEpoch": true,
+        "grantActive": true,
+        "destinationAllowed": true,
+        "executionGrant": true,
+        "releaseAllowed": true,
+        "policyAvailable": true,
+        "sameWork": true
+      },
+      "expected": "DENY",
+      "reason": "用途中断",
+      "executionStatus": "NOT_RUN_AGAINST_PRODUCT"
+    },
+    {
+      "id": "PERM-09",
+      "action": "EXECUTE",
+      "facts": {
+        "tenantMatch": true,
+        "discover": true,
+        "contentRead": true,
+        "pathDiscover": true,
+        "purposeMatch": true,
+        "currentEpoch": true,
+        "grantActive": true,
+        "destinationAllowed": false,
+        "executionGrant": true,
+        "releaseAllowed": true,
+        "policyAvailable": true,
+        "sameWork": true
+      },
+      "expected": "DENY",
+      "reason": "不允许向该模型或工具发送",
+      "executionStatus": "NOT_RUN_AGAINST_PRODUCT"
+    },
+    {
+      "id": "PERM-10",
+      "action": "EXECUTE",
+      "facts": {
+        "tenantMatch": true,
+        "discover": true,
+        "contentRead": true,
+        "pathDiscover": true,
+        "purposeMatch": true,
+        "currentEpoch": false,
+        "grantActive": true,
+        "destinationAllowed": true,
+        "executionGrant": true,
+        "releaseAllowed": true,
+        "policyAvailable": true,
+        "sameWork": true
+      },
+      "expected": "DENY",
+      "reason": "旧轮次不可运行",
+      "executionStatus": "NOT_RUN_AGAINST_PRODUCT"
+    },
+    {
+      "id": "PERM-11",
+      "action": "READ",
+      "facts": {
+        "tenantMatch": true,
+        "discover": true,
+        "contentRead": true,
+        "pathDiscover": true,
+        "purposeMatch": true,
+        "currentEpoch": true,
+        "grantActive": false,
+        "destinationAllowed": true,
+        "executionGrant": true,
+        "releaseAllowed": true,
+        "policyAvailable": true,
+        "sameWork": true
+      },
+      "expected": "DENY",
+      "reason": "撤权立即失效",
+      "executionStatus": "NOT_RUN_AGAINST_PRODUCT"
+    },
+    {
+      "id": "PERM-12",
+      "action": "PATH",
+      "facts": {
+        "tenantMatch": true,
+        "discover": true,
+        "contentRead": true,
+        "pathDiscover": false,
+        "purposeMatch": true,
+        "currentEpoch": true,
+        "grantActive": true,
+        "destinationAllowed": true,
+        "executionGrant": true,
+        "releaseAllowed": true,
+        "policyAvailable": true,
+        "sameWork": true
+      },
+      "expected": "DENY",
+      "reason": "没有路径发现权",
+      "executionStatus": "NOT_RUN_AGAINST_PRODUCT"
+    },
+    {
+      "id": "PERM-13",
+      "action": "READ",
+      "facts": {
+        "tenantMatch": true,
+        "discover": true,
+        "contentRead": true,
+        "pathDiscover": true,
+        "purposeMatch": true,
+        "currentEpoch": true,
+        "grantActive": true,
+        "destinationAllowed": true,
+        "executionGrant": true,
+        "releaseAllowed": true,
+        "policyAvailable": true,
+        "sameWork": false
+      },
+      "expected": "DENY",
+      "reason": "工作实例隔离",
+      "executionStatus": "NOT_RUN_AGAINST_PRODUCT"
+    },
+    {
+      "id": "PERM-14",
+      "action": "READ",
+      "facts": {
+        "tenantMatch": true,
+        "discover": true,
+        "contentRead": true,
+        "pathDiscover": true,
+        "purposeMatch": true,
+        "currentEpoch": true,
+        "grantActive": true,
+        "destinationAllowed": true,
+        "executionGrant": true,
+        "releaseAllowed": true,
+        "policyAvailable": false,
+        "sameWork": true
+      },
+      "expected": "UNAVAILABLE",
+      "reason": "不能鉴权时不伪造空态",
+      "executionStatus": "NOT_RUN_AGAINST_PRODUCT"
+    },
+    {
+      "id": "PERM-15",
+      "action": "EXECUTE",
+      "facts": {
+        "tenantMatch": true,
+        "discover": true,
+        "contentRead": true,
+        "pathDiscover": true,
+        "purposeMatch": true,
+        "currentEpoch": true,
+        "grantActive": true,
+        "destinationAllowed": true,
+        "executionGrant": false,
+        "releaseAllowed": true,
+        "policyAvailable": true,
+        "sameWork": true
+      },
+      "expected": "DENY",
+      "reason": "本人可读不自动允许后台用",
+      "executionStatus": "NOT_RUN_AGAINST_PRODUCT"
+    },
+    {
+      "id": "PERM-16",
+      "action": "RELEASE",
+      "facts": {
+        "tenantMatch": true,
+        "discover": true,
+        "contentRead": false,
+        "pathDiscover": true,
+        "purposeMatch": true,
+        "currentEpoch": true,
+        "grantActive": true,
+        "destinationAllowed": true,
+        "executionGrant": true,
+        "releaseAllowed": true,
+        "policyAvailable": true,
+        "sameWork": true
+      },
+      "expected": "ALLOW",
+      "reason": "来源有权发布者已产生经审查的受众投影，不允许返回原文",
+      "executionStatus": "NOT_RUN_AGAINST_PRODUCT"
+    }
+  ]
+}

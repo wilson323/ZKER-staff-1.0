@@ -1,0 +1,91 @@
+{
+  "goal": "完整体现文档中的业务与管理角色",
+  "scope": [
+    "New project 2原型、角色矩阵、UI说明和验证记录"
+  ],
+  "acceptance_criteria": [
+    "七类canonical夹具精确保留",
+    "业务/维护/治理角色均有独立目标导航字段和操作",
+    "各角色权限正负例和交付责任边界可交互",
+    "原协作及市场流程回归",
+    "与现有153项需求追踪"
+  ],
+  "current_node": "complete",
+  "completed_nodes": [
+    "source_inventory",
+    "implement",
+    "verify"
+  ],
+  "failed_nodes": [],
+  "artifacts": [
+    "/Users/mac/Documents/New project 2/08-人员数字员工协作交互原型.html",
+    "/Users/mac/Documents/New project 2/15-全角色界面与操作覆盖矩阵.md",
+    "/Users/mac/Documents/New project 2/16-角色视角与权限演示数据.json",
+    "/Users/mac/Documents/New project 2/17-角色需求与验收追踪.json"
+  ],
+  "evidence": [
+    "/Users/mac/Documents/New project 2/validation/v24-role-validation.json",
+    "/Users/mac/Documents/New project 2/validation/v24-market-validation.json",
+    "/Users/mac/Documents/New project 2/validation/v24-document-validation.json"
+  ],
+  "risks": [
+    "Local fixtures do not implement authentication"
+  ],
+  "approvals": [
+    "User requested complete role representation"
+  ],
+  "status": "VERIFIED",
+  "nodes": [
+    {
+      "id": "source_inventory",
+      "objective": "Inventory role contracts",
+      "preconditions": [],
+      "action": "Read current role sources",
+      "tool_or_skill": "Local browser and file tools",
+      "expected_output": "Role matrix",
+      "validation": "Current files and hashes",
+      "success_condition": "No fabricated canonical roles",
+      "failure_path": "Inspect and repair within the design scope",
+      "rollback_or_compensation": "Restore local pre-change prototype backup"
+    },
+    {
+      "id": "implement",
+      "objective": "Add distinct role views",
+      "preconditions": [
+        "source_inventory"
+      ],
+      "action": "Update prototype and role design",
+      "tool_or_skill": "Local browser and file tools",
+      "expected_output": "Interactive role views",
+      "validation": "Browser interaction and source mapping",
+      "success_condition": "All catalog roles have workflows",
+      "failure_path": "Inspect and repair within the design scope",
+      "rollback_or_compensation": "Restore local pre-change prototype backup"
+    },
+    {
+      "id": "verify",
+      "objective": "Validate complete role coverage",
+      "preconditions": [
+        "implement"
+      ],
+      "action": "Run role and regression suites",
+      "tool_or_skill": "Local browser and file tools",
+      "expected_output": "Reports and screenshots",
+      "validation": "Actual execution outputs",
+      "success_condition": "No outstanding critical failures",
+      "failure_path": "Inspect and repair within the design scope",
+      "rollback_or_compensation": "Restore local pre-change prototype backup"
+    }
+  ],
+  "acceptanceResult": {
+    "profiles": 41,
+    "humanRoleKeys": 44,
+    "serviceRoleKeys": 1,
+    "requirements": 153,
+    "domains": 21,
+    "pageGroups": 22,
+    "layoutChecks": 882,
+    "interactionChecks": 373,
+    "screenshots": 85
+  }
+}

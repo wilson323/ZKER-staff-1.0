@@ -1,0 +1,3516 @@
+{
+  "schemaVersion": 1,
+  "projectName": "OA数字员工协作平台",
+  "createdAt": "2026-09-11T14:26:09.106330+00:00",
+  "goal": "将以上全部会话与交付资料建立为独立本地项目",
+  "scope": [
+    "本地项目目录",
+    "原始与分支可见会话",
+    "全部设计包资料",
+    "接续说明和迁移验证"
+  ],
+  "acceptanceCriteria": [
+    "父子会话关系已核验",
+    "可见用户需求完整纳入",
+    "397个资料文件纳入工作副本与原始归档",
+    "来源文件未修改",
+    "原型无需旧目录资源即可打开",
+    "应用登记限制准确披露"
+  ],
+  "currentNode": "DELIVER",
+  "completedNodes": [
+    "READ_SOURCE",
+    "EXPORT_CONVERSATION",
+    "COPY_AND_ARCHIVE",
+    "CREATE_PROJECT_CONTEXT",
+    "VALIDATE"
+  ],
+  "failedNodes": [],
+  "status": "VERIFIED_LOCAL_PROJECT_APP_REGISTRATION_PENDING",
+  "sourceDirectory": "/Users/mac/Documents/New project 2",
+  "destinationDirectory": "/Users/mac/Documents/OA数字员工协作平台",
+  "sourceSessions": [
+    {
+      "id": "01a08f35-b9ee-7aa0-a8b8-96db2faad927",
+      "forkedFrom": null,
+      "sourceFile": "rollout-2026-09-10T23-44-18-01a08f35-b9ee-7aa0-a8b8-96db2faad927.jsonl",
+      "createdAt": "2026-09-11T06:44:18.058Z"
+    },
+    {
+      "id": "01a090b0-8772-7b13-bf15-318ad99bbc7a",
+      "forkedFrom": "01a08f35-b9ee-7aa0-a8b8-96db2faad927",
+      "sourceFile": "rollout-2026-09-11T06-38-03-01a090b0-8772-7b13-bf15-318ad99bbc7a.jsonl",
+      "createdAt": "2026-09-11T13:38:03.272Z"
+    }
+  ],
+  "archiveCutoff": "2026-09-11T14:20:50.157Z",
+  "messageCounts": {
+    "user": 18,
+    "assistant": 72
+  },
+  "messageTotal": 90,
+  "copiedFiles": 397,
+  "sourceBytes": 39254296,
+  "normalizedMarkdownLines": 122,
+  "assets": [
+    {
+      "sourceRelativePath": "00-开发设计包导读.md",
+      "destination": "docs/设计包/00-开发设计包导读.md",
+      "bytes": 15010,
+      "sourceSha256": "7cdb9a5890e800b2f8a8cce16baecc9e285a7b91d93f4f229093c145090983b6",
+      "destinationSha256": "cc3929cccd97b15026dab2e7c2b5b8d815eb08e43430199966757a21ca52f155",
+      "linkNormalizedLines": 35
+    },
+    {
+      "sourceRelativePath": "01-产品需求与业务规则.md",
+      "destination": "docs/设计包/01-产品需求与业务规则.md",
+      "bytes": 17063,
+      "sourceSha256": "0c19e6ed498728632a902cfd4da58efcf7e86eee704ebcbc2dabe90f4fd963d4",
+      "destinationSha256": "70e831df05834202f9ee1da06eb0deee509d540c3bee1086ea4e5ad616374242",
+      "linkNormalizedLines": 7
+    },
+    {
+      "sourceRelativePath": "02-数据模型与ER设计.md",
+      "destination": "docs/设计包/02-数据模型与ER设计.md",
+      "bytes": 22691,
+      "sourceSha256": "7904fb1b884f93e12d56b300a8c193859c6364da8d3400d53585c1f50c96ee76",
+      "destinationSha256": "b37782f8eaf0af730dea956e701dbc2a19cbcf7db7cb9769118bd554d62ea505",
+      "linkNormalizedLines": 3
+    },
+    {
+      "sourceRelativePath": "03-业务流程与状态机.md",
+      "destination": "docs/设计包/03-业务流程与状态机.md",
+      "bytes": 15847,
+      "sourceSha256": "fa715497a3744c1a4b909fb8c3918c408af02f770cb5d3a61dd5c9d471b9ea6d",
+      "destinationSha256": "9cf5f2dadca47f1094ec2c4abeabf1439f42f5d0aae707763c0fb6ef2274ab50",
+      "linkNormalizedLines": 2
+    },
+    {
+      "sourceRelativePath": "04-接口与契约变更设计.md",
+      "destination": "docs/设计包/04-接口与契约变更设计.md",
+      "bytes": 16411,
+      "sourceSha256": "995af0b031e655c7089e3b6d2ddee303e469b0077ca3828f7fae20cf413b9c7c",
+      "destinationSha256": "28c8d9ce81a3ddd6c87dbd2948d4ed5690506931cdc349a2405e16c4a5176b47",
+      "linkNormalizedLines": 1
+    },
+    {
+      "sourceRelativePath": "05-UI与交互设计.md",
+      "destination": "docs/设计包/05-UI与交互设计.md",
+      "bytes": 22171,
+      "sourceSha256": "a42937763311969660aa97eaa44af21534b0a80e35b48b56c4894047c7346a0c",
+      "destinationSha256": "a8cdb664ce33731b6b6e7778d12c8ff0e47540faa1a7c72cfbcae97b355b5d15",
+      "linkNormalizedLines": 6
+    },
+    {
+      "sourceRelativePath": "06-用户故事与153项追踪矩阵.md",
+      "destination": "docs/设计包/06-用户故事与153项追踪矩阵.md",
+      "bytes": 178577,
+      "sourceSha256": "9460c1123c9851c2e6e8e37585d42e82cfe6eb07958443f7da88db0edb8db6be",
+      "destinationSha256": "9a42b4707fea6468a10a3c45b33858fb570e5609725fd9b0be97f800ee01374b",
+      "linkNormalizedLines": 33
+    },
+    {
+      "sourceRelativePath": "07-开发分解与验收方案.md",
+      "destination": "docs/设计包/07-开发分解与验收方案.md",
+      "bytes": 13800,
+      "sourceSha256": "7cd9fd70dd1a4482a7f55bca957c18ff05d950b3fcd2ed1bdee1265d953e85e9",
+      "destinationSha256": "02b275525e83dda8e41070345e6d780e47831d67d8940244ab5b12f19bf0624e",
+      "linkNormalizedLines": 5
+    },
+    {
+      "sourceRelativePath": "08-人员数字员工协作交互原型.html",
+      "destination": "docs/设计包/08-人员数字员工协作交互原型.html",
+      "bytes": 188977,
+      "sourceSha256": "97b8bb8b61b3ff1da1f1f59426a24e33d41bd01e3d2c3ee24efeb996dfd1fc73",
+      "destinationSha256": "97b8bb8b61b3ff1da1f1f59426a24e33d41bd01e3d2c3ee24efeb996dfd1fc73",
+      "linkNormalizedLines": 0
+    },
+    {
+      "sourceRelativePath": "09-协作扩展候选.schema.json",
+      "destination": "docs/设计包/09-协作扩展候选.schema.json",
+      "bytes": 32651,
+      "sourceSha256": "1febdcd56897f76aaf29087ab7919710397f1c87a6b859fd14fc96e92fe48f45",
+      "destinationSha256": "1febdcd56897f76aaf29087ab7919710397f1c87a6b859fd14fc96e92fe48f45",
+      "linkNormalizedLines": 0
+    },
+    {
+      "sourceRelativePath": "10-需求追踪数据.json",
+      "destination": "docs/设计包/10-需求追踪数据.json",
+      "bytes": 178782,
+      "sourceSha256": "f462eedd02e8b0168cacfcf5d2e7cc9a2135b710021e4598e2c8e73ca7c0c002",
+      "destinationSha256": "f462eedd02e8b0168cacfcf5d2e7cc9a2135b710021e4598e2c8e73ca7c0c002",
+      "linkNormalizedLines": 0
+    },
+    {
+      "sourceRelativePath": "11-存量合同字段字典.md",
+      "destination": "docs/设计包/11-存量合同字段字典.md",
+      "bytes": 87499,
+      "sourceSha256": "2027f594acf10075a62f802b50a7addb33992318a050755563b0da40bc67dea9",
+      "destinationSha256": "2027f594acf10075a62f802b50a7addb33992318a050755563b0da40bc67dea9",
+      "linkNormalizedLines": 0
+    },
+    {
+      "sourceRelativePath": "12-员工市场复制与使用设计.md",
+      "destination": "docs/设计包/12-员工市场复制与使用设计.md",
+      "bytes": 15519,
+      "sourceSha256": "3dd288d28b31cf43629ef9878916742078c3f893b99a9862bf7bd5eeca43ef8d",
+      "destinationSha256": "3dd288d28b31cf43629ef9878916742078c3f893b99a9862bf7bd5eeca43ef8d",
+      "linkNormalizedLines": 0
+    },
+    {
+      "sourceRelativePath": "13-市场采用候选.schema.json",
+      "destination": "docs/设计包/13-市场采用候选.schema.json",
+      "bytes": 17569,
+      "sourceSha256": "3297a6a8f331f54b368a561148ec48a2bc27fe2b482033dffbadcfb684738ffd",
+      "destinationSha256": "3297a6a8f331f54b368a561148ec48a2bc27fe2b482033dffbadcfb684738ffd",
+      "linkNormalizedLines": 0
+    },
+    {
+      "sourceRelativePath": "14-QoderWake界面参考与原型设计.md",
+      "destination": "docs/设计包/14-QoderWake界面参考与原型设计.md",
+      "bytes": 9114,
+      "sourceSha256": "e833433ef8d4896e049d3c997a869a97eb91177a05b0580e8b97376b7bdd825b",
+      "destinationSha256": "eb95c72c10dd37ce83df6fe72137d4bb3229d540e8808298d5e1c4aafbc3cd84",
+      "linkNormalizedLines": 3
+    },
+    {
+      "sourceRelativePath": "15-全角色界面与操作覆盖矩阵.md",
+      "destination": "docs/设计包/15-全角色界面与操作覆盖矩阵.md",
+      "bytes": 29502,
+      "sourceSha256": "21dacf497a98c408ab3c9d0e51af64ee71c9e67421bab2115a8534c43dcb3b3e",
+      "destinationSha256": "d98271682ac632922236d92c4b60a950df635b7f3d4d5761bfc4a44dad20dd8f",
+      "linkNormalizedLines": 6
+    },
+    {
+      "sourceRelativePath": "16-角色视角与权限演示数据.json",
+      "destination": "docs/设计包/16-角色视角与权限演示数据.json",
+      "bytes": 20158,
+      "sourceSha256": "fd3ac843ab53c5ce94f5f70214e735ff85501cc3f34f1bb9d52f36fbdfa35791",
+      "destinationSha256": "fd3ac843ab53c5ce94f5f70214e735ff85501cc3f34f1bb9d52f36fbdfa35791",
+      "linkNormalizedLines": 0
+    },
+    {
+      "sourceRelativePath": "17-角色需求与验收追踪.json",
+      "destination": "docs/设计包/17-角色需求与验收追踪.json",
+      "bytes": 119518,
+      "sourceSha256": "72913aac3eb6dce0e7047fa51f56460d717d51d8eccc04ecb986549a5eddbbb8",
+      "destinationSha256": "72913aac3eb6dce0e7047fa51f56460d717d51d8eccc04ecb986549a5eddbbb8",
+      "linkNormalizedLines": 0
+    },
+    {
+      "sourceRelativePath": "18-OA多流程多实例产品设计.md",
+      "destination": "docs/设计包/18-OA多流程多实例产品设计.md",
+      "bytes": 27263,
+      "sourceSha256": "83ef58d49fa929db945c30db0320768eb9bef394e210757089fabbd888a67c33",
+      "destinationSha256": "f219ba8d206db7fc0b1a5b03b869dcb2ed4acd0bb1b4f1ed09ce1292543bf25e",
+      "linkNormalizedLines": 7
+    },
+    {
+      "sourceRelativePath": "19-OA多实例演示数据.json",
+      "destination": "docs/设计包/19-OA多实例演示数据.json",
+      "bytes": 297224,
+      "sourceSha256": "93e9933bd4abe8292b8b9f543d6a726cfb8e768b9197dada644e209619842914",
+      "destinationSha256": "93e9933bd4abe8292b8b9f543d6a726cfb8e768b9197dada644e209619842914",
+      "linkNormalizedLines": 0
+    },
+    {
+      "sourceRelativePath": "20-OA统一待办候选.schema.json",
+      "destination": "docs/设计包/20-OA统一待办候选.schema.json",
+      "bytes": 18701,
+      "sourceSha256": "532fa95aaddf6dac1d25a54c83b37737f583fd1a1cf6551c44b510b2bb415968",
+      "destinationSha256": "532fa95aaddf6dac1d25a54c83b37737f583fd1a1cf6551c44b510b2bb415968",
+      "linkNormalizedLines": 0
+    },
+    {
+      "sourceRelativePath": "21-OA需求细化与验收追踪.json",
+      "destination": "docs/设计包/21-OA需求细化与验收追踪.json",
+      "bytes": 20918,
+      "sourceSha256": "b20bcd521123667dfc4c12f7da8d9f4f408d231b9241d3651cf425cb190ea12b",
+      "destinationSha256": "b20bcd521123667dfc4c12f7da8d9f4f408d231b9241d3651cf425cb190ea12b",
+      "linkNormalizedLines": 0
+    },
+    {
+      "sourceRelativePath": "22-开源工作流与成熟前端复用选型.md",
+      "destination": "docs/设计包/22-开源工作流与成熟前端复用选型.md",
+      "bytes": 19470,
+      "sourceSha256": "78b850ab30ffbc1efd5f3e01e57c547508a81b174f0c0013d9d93b4b8664db3a",
+      "destinationSha256": "e31b625d6df8bb065920e4b863d080eddba00457fc6b4f845e55ab56a0b752aa",
+      "linkNormalizedLines": 1
+    },
+    {
+      "sourceRelativePath": "23-OA主旨与BS字段一致性核查.md",
+      "destination": "docs/设计包/23-OA主旨与BS字段一致性核查.md",
+      "bytes": 13119,
+      "sourceSha256": "3e2a8a5bbe5f79070a281be48bd34a56b85934ed472bad6bae3b9c5927882f59",
+      "destinationSha256": "5ae3ac28a4863338f9687edee25314f64d2a1eb91ceba3ae4972cd7cf27463d4",
+      "linkNormalizedLines": 11
+    },
+    {
+      "sourceRelativePath": "24-业务模板字段候选.json",
+      "destination": "docs/设计包/24-业务模板字段候选.json",
+      "bytes": 3918,
+      "sourceSha256": "608a25ef9961f917d82801399d5520369874357dd58ec7045f757faff3a65851",
+      "destinationSha256": "608a25ef9961f917d82801399d5520369874357dd58ec7045f757faff3a65851",
+      "linkNormalizedLines": 0
+    },
+    {
+      "sourceRelativePath": "25-从零开发最小工作量开源选型.md",
+      "destination": "docs/设计包/25-从零开发最小工作量开源选型.md",
+      "bytes": 35211,
+      "sourceSha256": "abb035e1b89ab5f8be72d28da16a2f88c45e5da1a0b16fe7e0419b715bf27f38",
+      "destinationSha256": "abb035e1b89ab5f8be72d28da16a2f88c45e5da1a0b16fe7e0419b715bf27f38",
+      "linkNormalizedLines": 0
+    },
+    {
+      "sourceRelativePath": "ZKER-staff-v2-evidence.json",
+      "destination": "docs/设计包/ZKER-staff-v2-evidence.json",
+      "bytes": 197748,
+      "sourceSha256": "ae6d179bbccd1dd477c5dd877c648ec233c155a9d3813339c15275ee2dfe51b7",
+      "destinationSha256": "ae6d179bbccd1dd477c5dd877c648ec233c155a9d3813339c15275ee2dfe51b7",
+      "linkNormalizedLines": 0
+    },
+    {
+      "sourceRelativePath": "ZKER-staff-完整优化清单-v2-人员数字员工与上下文对齐.md",
+      "destination": "docs/设计包/ZKER-staff-完整优化清单-v2-人员数字员工与上下文对齐.md",
+      "bytes": 106983,
+      "sourceSha256": "698183a16c0ee189d21ca9b18de8e73a5394b0358e5b9d94abac3a5f66b91874",
+      "destinationSha256": "c00b18a8fe0cb1f28d62b799dc11545666dc11dc792af2105be15db4e145a14f",
+      "linkNormalizedLines": 2
+    },
+    {
+      "sourceRelativePath": "validation/browser-validation.json",
+      "destination": "docs/设计包/validation/browser-validation.json",
+      "bytes": 15051,
+      "sourceSha256": "43f01931cf42d25fd3bb8ddc8370a80aa296e1a4f9a2efc4ecfebc25cdc02b34",
+      "destinationSha256": "43f01931cf42d25fd3bb8ddc8370a80aa296e1a4f9a2efc4ecfebc25cdc02b34",
+      "linkNormalizedLines": 0
+    },
+    {
+      "sourceRelativePath": "validation/existing-schema-inventory.json",
+      "destination": "docs/设计包/validation/existing-schema-inventory.json",
+      "bytes": 14507,
+      "sourceSha256": "af76eb9a7217270ff700d5c4cd74d42175cf874ac1b576060d8874219041df96",
+      "destinationSha256": "af76eb9a7217270ff700d5c4cd74d42175cf874ac1b576060d8874219041df96",
+      "linkNormalizedLines": 0
+    },
+    {
+      "sourceRelativePath": "validation/field-consistency-task-state.json",
+      "destination": "docs/设计包/validation/field-consistency-task-state.json",
+      "bytes": 5945,
+      "sourceSha256": "9c5226d9ea30d5d4480c97c9e6c57f14690a56c4ec66568988238bfa389fc4a2",
+      "destinationSha256": "9c5226d9ea30d5d4480c97c9e6c57f14690a56c4ec66568988238bfa389fc4a2",
+      "linkNormalizedLines": 0
+    },
+    {
+      "sourceRelativePath": "validation/market-1024.png",
+      "destination": "docs/设计包/validation/market-1024.png",
+      "bytes": 249910,
+      "sourceSha256": "f82b4597f1ce255962201ddf2ab1dd8aadc45fbdc763e3866990e327ea1167fc",
+      "destinationSha256": "f82b4597f1ce255962201ddf2ab1dd8aadc45fbdc763e3866990e327ea1167fc",
+      "linkNormalizedLines": 0
+    },
+    {
+      "sourceRelativePath": "validation/market-1440.png",
+      "destination": "docs/设计包/validation/market-1440.png",
+      "bytes": 254401,
+      "sourceSha256": "fcd0d7d67a7e72deceeddb7414abdde3717515ee3aaa5fdfa4b05c65a670e5b4",
+      "destinationSha256": "fcd0d7d67a7e72deceeddb7414abdde3717515ee3aaa5fdfa4b05c65a670e5b4",
+      "linkNormalizedLines": 0
+    },
+    {
+      "sourceRelativePath": "validation/market-390.png",
+      "destination": "docs/设计包/validation/market-390.png",
+      "bytes": 239713,
+      "sourceSha256": "3ef85cd9bc625a1ce5fd0106666c09e031c2f5ac5bf7a093351e08ef53319c24",
+      "destinationSha256": "3ef85cd9bc625a1ce5fd0106666c09e031c2f5ac5bf7a093351e08ef53319c24",
+      "linkNormalizedLines": 0
+    },
+    {
+      "sourceRelativePath": "validation/market-baseline.json",
+      "destination": "docs/设计包/validation/market-baseline.json",
+      "bytes": 156956,
+      "sourceSha256": "e692299aa8bc0a9b743c4734756a6459491f02c4fe6ef63a63f144ab8252943d",
+      "destinationSha256": "e692299aa8bc0a9b743c4734756a6459491f02c4fe6ef63a63f144ab8252943d",
+      "linkNormalizedLines": 0
+    },
+    {
+      "sourceRelativePath": "validation/market-browser-validation.json",
+      "destination": "docs/设计包/validation/market-browser-validation.json",
+      "bytes": 18839,
+      "sourceSha256": "ed8a2ad29b5d21e233cfe59326c8d1aac55093ea90c00c6675707afa634d3b87",
+      "destinationSha256": "ed8a2ad29b5d21e233cfe59326c8d1aac55093ea90c00c6675707afa634d3b87",
+      "linkNormalizedLines": 0
+    },
+    {
+      "sourceRelativePath": "validation/market-document-validation.json",
+      "destination": "docs/设计包/validation/market-document-validation.json",
+      "bytes": 4740,
+      "sourceSha256": "be0b564add2920a850eef28eefb09d6a6d57c1fddfbba162acadba2ad24477e3",
+      "destinationSha256": "be0b564add2920a850eef28eefb09d6a6d57c1fddfbba162acadba2ad24477e3",
+      "linkNormalizedLines": 0
+    },
+    {
+      "sourceRelativePath": "validation/market-schema-validation.json",
+      "destination": "docs/设计包/validation/market-schema-validation.json",
+      "bytes": 1409,
+      "sourceSha256": "3b3e5fb461da135560a78b3bf1fe7732a136917f15d2b186911bae4d08f90d17",
+      "destinationSha256": "3b3e5fb461da135560a78b3bf1fe7732a136917f15d2b186911bae4d08f90d17",
+      "linkNormalizedLines": 0
+    },
+    {
+      "sourceRelativePath": "validation/oa-task-state.json",
+      "destination": "docs/设计包/validation/oa-task-state.json",
+      "bytes": 4310,
+      "sourceSha256": "519a513c664d96b8edb6ee74a02699b2e61f6ffb7a2664fcb9ef4802e32266ad",
+      "destinationSha256": "519a513c664d96b8edb6ee74a02699b2e61f6ffb7a2664fcb9ef4802e32266ad",
+      "linkNormalizedLines": 0
+    },
+    {
+      "sourceRelativePath": "validation/prototype-1024.png",
+      "destination": "docs/设计包/validation/prototype-1024.png",
+      "bytes": 204865,
+      "sourceSha256": "dcea5bf1c8e3e105dcc9cba216fbb71ac5f0f47d55b7c3d73198a038224b0ed9",
+      "destinationSha256": "dcea5bf1c8e3e105dcc9cba216fbb71ac5f0f47d55b7c3d73198a038224b0ed9",
+      "linkNormalizedLines": 0
+    },
+    {
+      "sourceRelativePath": "validation/prototype-1440.png",
+      "destination": "docs/设计包/validation/prototype-1440.png",
+      "bytes": 204809,
+      "sourceSha256": "5904c6ceda05358e1827b23155a01e08d808d412d883212ce337050053d85413",
+      "destinationSha256": "5904c6ceda05358e1827b23155a01e08d808d412d883212ce337050053d85413",
+      "linkNormalizedLines": 0
+    },
+    {
+      "sourceRelativePath": "validation/prototype-390.png",
+      "destination": "docs/设计包/validation/prototype-390.png",
+      "bytes": 165900,
+      "sourceSha256": "e7cbc93f25d1e45056bb7bfa8178647dab9f45377f9cde0d8bcaadd8073f1a2c",
+      "destinationSha256": "e7cbc93f25d1e45056bb7bfa8178647dab9f45377f9cde0d8bcaadd8073f1a2c",
+      "linkNormalizedLines": 0
+    },
+    {
+      "sourceRelativePath": "validation/qoder-agents-1024.png",
+      "destination": "docs/设计包/validation/qoder-agents-1024.png",
+      "bytes": 99444,
+      "sourceSha256": "c693b16edcbad6e5e1d37988635d8011121cbe9198a977123f48959df01a3479",
+      "destinationSha256": "c693b16edcbad6e5e1d37988635d8011121cbe9198a977123f48959df01a3479",
+      "linkNormalizedLines": 0
+    },
+    {
+      "sourceRelativePath": "validation/qoder-agents-1440.png",
+      "destination": "docs/设计包/validation/qoder-agents-1440.png",
+      "bytes": 107955,
+      "sourceSha256": "9dd1b641cedc9020b822cb07f8efaaf8f659e5459c8068ca70acf43110a3201e",
+      "destinationSha256": "9dd1b641cedc9020b822cb07f8efaaf8f659e5459c8068ca70acf43110a3201e",
+      "linkNormalizedLines": 0
+    },
+    {
+      "sourceRelativePath": "validation/qoder-agents-390.png",
+      "destination": "docs/设计包/validation/qoder-agents-390.png",
+      "bytes": 52756,
+      "sourceSha256": "c0a4dbd3337154af1e681bd12871386f599c93028643a342d319acc37db84c4d",
+      "destinationSha256": "c0a4dbd3337154af1e681bd12871386f599c93028643a342d319acc37db84c4d",
+      "linkNormalizedLines": 0
+    },
+    {
+      "sourceRelativePath": "validation/qoder-conversation-1024.png",
+      "destination": "docs/设计包/validation/qoder-conversation-1024.png",
+      "bytes": 131305,
+      "sourceSha256": "cc2b05a912a8753391c3334381535d78f9a9b7e721d6d62e95eb45641eb9c305",
+      "destinationSha256": "cc2b05a912a8753391c3334381535d78f9a9b7e721d6d62e95eb45641eb9c305",
+      "linkNormalizedLines": 0
+    },
+    {
+      "sourceRelativePath": "validation/qoder-conversation-1440.png",
+      "destination": "docs/设计包/validation/qoder-conversation-1440.png",
+      "bytes": 139699,
+      "sourceSha256": "793560b7a8a14b6edf236f7f776230fb3ada262f2fa749fd6564ceb4641d90fe",
+      "destinationSha256": "793560b7a8a14b6edf236f7f776230fb3ada262f2fa749fd6564ceb4641d90fe",
+      "linkNormalizedLines": 0
+    },
+    {
+      "sourceRelativePath": "validation/qoder-conversation-390.png",
+      "destination": "docs/设计包/validation/qoder-conversation-390.png",
+      "bytes": 84240,
+      "sourceSha256": "6ad4d913b4ac4fc7b8bc7cd4aa2c9d87922c32d4682cab4ebb5724955dffa928",
+      "destinationSha256": "6ad4d913b4ac4fc7b8bc7cd4aa2c9d87922c32d4682cab4ebb5724955dffa928",
+      "linkNormalizedLines": 0
+    },
+    {
+      "sourceRelativePath": "validation/qoder-dashboard-1024.png",
+      "destination": "docs/设计包/validation/qoder-dashboard-1024.png",
+      "bytes": 130382,
+      "sourceSha256": "c0d537c44f41b0dfb9f4277164b510a848848f1089ff6d2050b41de4b7b2bffe",
+      "destinationSha256": "c0d537c44f41b0dfb9f4277164b510a848848f1089ff6d2050b41de4b7b2bffe",
+      "linkNormalizedLines": 0
+    },
+    {
+      "sourceRelativePath": "validation/qoder-dashboard-1440.png",
+      "destination": "docs/设计包/validation/qoder-dashboard-1440.png",
+      "bytes": 147388,
+      "sourceSha256": "ddd2ac4be289e5822b8937c9b581f6a77d324fb3ffbc50b70afc5b62d6bcbd84",
+      "destinationSha256": "ddd2ac4be289e5822b8937c9b581f6a77d324fb3ffbc50b70afc5b62d6bcbd84",
+      "linkNormalizedLines": 0
+    },
+    {
+      "sourceRelativePath": "validation/qoder-dashboard-390.png",
+      "destination": "docs/设计包/validation/qoder-dashboard-390.png",
+      "bytes": 81844,
+      "sourceSha256": "6dbb454d4c5fa6405125ee4f396c3dec394e2a84fd5e39197e002c46b0858b91",
+      "destinationSha256": "6dbb454d4c5fa6405125ee4f396c3dec394e2a84fd5e39197e002c46b0858b91",
+      "linkNormalizedLines": 0
+    },
+    {
+      "sourceRelativePath": "validation/qoder-document-validation.json",
+      "destination": "docs/设计包/validation/qoder-document-validation.json",
+      "bytes": 1371,
+      "sourceSha256": "4512e51a9185a6dfe64b38b7ba88cdcefd2d89b4cb59ef22fd654759b4e080be",
+      "destinationSha256": "4512e51a9185a6dfe64b38b7ba88cdcefd2d89b4cb59ef22fd654759b4e080be",
+      "linkNormalizedLines": 0
+    },
+    {
+      "sourceRelativePath": "validation/qoder-market-1024.png",
+      "destination": "docs/设计包/validation/qoder-market-1024.png",
+      "bytes": 189343,
+      "sourceSha256": "726caf1ebc2ec45a8a0242b848a0e5a7f5835e772136275b4104b712d15d529e",
+      "destinationSha256": "726caf1ebc2ec45a8a0242b848a0e5a7f5835e772136275b4104b712d15d529e",
+      "linkNormalizedLines": 0
+    },
+    {
+      "sourceRelativePath": "validation/qoder-market-1440.png",
+      "destination": "docs/设计包/validation/qoder-market-1440.png",
+      "bytes": 183769,
+      "sourceSha256": "6868411f34710039fc061178209c10e6dea97a19996327aec40a6ff666a97c3e",
+      "destinationSha256": "6868411f34710039fc061178209c10e6dea97a19996327aec40a6ff666a97c3e",
+      "linkNormalizedLines": 0
+    },
+    {
+      "sourceRelativePath": "validation/qoder-market-390.png",
+      "destination": "docs/设计包/validation/qoder-market-390.png",
+      "bytes": 141021,
+      "sourceSha256": "31f379e023f94934395d6e83df9a92ba1660b3dafbfdb28b2672c31100a2e862",
+      "destinationSha256": "31f379e023f94934395d6e83df9a92ba1660b3dafbfdb28b2672c31100a2e862",
+      "linkNormalizedLines": 0
+    },
+    {
+      "sourceRelativePath": "validation/qoder-market-initial-validation.json",
+      "destination": "docs/设计包/validation/qoder-market-initial-validation.json",
+      "bytes": 18873,
+      "sourceSha256": "471520b4d88d4e34b8d72a1967e7025f85f3aa3557968eb88b4e8c7723cd711b",
+      "destinationSha256": "471520b4d88d4e34b8d72a1967e7025f85f3aa3557968eb88b4e8c7723cd711b",
+      "linkNormalizedLines": 0
+    },
+    {
+      "sourceRelativePath": "validation/qoder-market-validation.json",
+      "destination": "docs/设计包/validation/qoder-market-validation.json",
+      "bytes": 23357,
+      "sourceSha256": "9f0f45763cecc8e7a1e61fbac5d69f8eb5f75c8fd049554df73a93b30242e88f",
+      "destinationSha256": "9f0f45763cecc8e7a1e61fbac5d69f8eb5f75c8fd049554df73a93b30242e88f",
+      "linkNormalizedLines": 0
+    },
+    {
+      "sourceRelativePath": "validation/qoder-node-1024.png",
+      "destination": "docs/设计包/validation/qoder-node-1024.png",
+      "bytes": 174702,
+      "sourceSha256": "2d8f4e60577b2696f7da0a62868fb292eeb8a3fe7a3fe79eae74fd1b51bd9b53",
+      "destinationSha256": "2d8f4e60577b2696f7da0a62868fb292eeb8a3fe7a3fe79eae74fd1b51bd9b53",
+      "linkNormalizedLines": 0
+    },
+    {
+      "sourceRelativePath": "validation/qoder-node-1440.png",
+      "destination": "docs/设计包/validation/qoder-node-1440.png",
+      "bytes": 179103,
+      "sourceSha256": "b3a99789a64e01a82ad900b2299d66ff2880c1ab1f96e1a6a37222a3ccfbde50",
+      "destinationSha256": "b3a99789a64e01a82ad900b2299d66ff2880c1ab1f96e1a6a37222a3ccfbde50",
+      "linkNormalizedLines": 0
+    },
+    {
+      "sourceRelativePath": "validation/qoder-node-390.png",
+      "destination": "docs/设计包/validation/qoder-node-390.png",
+      "bytes": 121825,
+      "sourceSha256": "35997121e7b0e285d04eeac1caed7c1f11d94f0613208474c2e540dacb630781",
+      "destinationSha256": "35997121e7b0e285d04eeac1caed7c1f11d94f0613208474c2e540dacb630781",
+      "linkNormalizedLines": 0
+    },
+    {
+      "sourceRelativePath": "validation/qoder-node-validation.json",
+      "destination": "docs/设计包/validation/qoder-node-validation.json",
+      "bytes": 15064,
+      "sourceSha256": "f231e772b915bd333416c7e0c186543d584d4a100b1798658034367c4634a8c3",
+      "destinationSha256": "f231e772b915bd333416c7e0c186543d584d4a100b1798658034367c4634a8c3",
+      "linkNormalizedLines": 0
+    },
+    {
+      "sourceRelativePath": "validation/qoder-shell-validation.json",
+      "destination": "docs/设计包/validation/qoder-shell-validation.json",
+      "bytes": 24085,
+      "sourceSha256": "ef1557e94272a3449b3ab6837dee892fb337f35f264844bca0bf657a9f06c6aa",
+      "destinationSha256": "ef1557e94272a3449b3ab6837dee892fb337f35f264844bca0bf657a9f06c6aa",
+      "linkNormalizedLines": 0
+    },
+    {
+      "sourceRelativePath": "validation/qoder-ui-task-state.json",
+      "destination": "docs/设计包/validation/qoder-ui-task-state.json",
+      "bytes": 3069,
+      "sourceSha256": "e63708ad907c08acb08e53778d7da2ef7c0cebf461583b6a6c0ca8ed581eae43",
+      "destinationSha256": "e63708ad907c08acb08e53778d7da2ef7c0cebf461583b6a6c0ca8ed581eae43",
+      "linkNormalizedLines": 0
+    },
+    {
+      "sourceRelativePath": "validation/qoderwake-reference/agent-management-header.png",
+      "destination": "docs/设计包/validation/qoderwake-reference/agent-management-header.png",
+      "bytes": 27868,
+      "sourceSha256": "c09882e70d51696854a512c3c79bf0476d080cc308f582bea4feceb13c9da9f1",
+      "destinationSha256": "c09882e70d51696854a512c3c79bf0476d080cc308f582bea4feceb13c9da9f1",
+      "linkNormalizedLines": 0
+    },
+    {
+      "sourceRelativePath": "validation/qoderwake-reference/capture.json",
+      "destination": "docs/设计包/validation/qoderwake-reference/capture.json",
+      "bytes": 1685,
+      "sourceSha256": "f3ad0508c39cd3b532e86417edc569ce1a522b8de5c0a739571dfa1b39381e51",
+      "destinationSha256": "f3ad0508c39cd3b532e86417edc569ce1a522b8de5c0a739571dfa1b39381e51",
+      "linkNormalizedLines": 0
+    },
+    {
+      "sourceRelativePath": "validation/qoderwake-reference/connector-market.png",
+      "destination": "docs/设计包/validation/qoderwake-reference/connector-market.png",
+      "bytes": 154902,
+      "sourceSha256": "d28310eec5ab7b2e9802910dcd44f8ebb64a1e5ad50e59d208b487bb51c322ea",
+      "destinationSha256": "d28310eec5ab7b2e9802910dcd44f8ebb64a1e5ad50e59d208b487bb51c322ea",
+      "linkNormalizedLines": 0
+    },
+    {
+      "sourceRelativePath": "validation/qoderwake-reference/skill-market-mobile.png",
+      "destination": "docs/设计包/validation/qoderwake-reference/skill-market-mobile.png",
+      "bytes": 86958,
+      "sourceSha256": "4b0d35d6832f6a9765ee7f706b1316db02d55cdcb336fba9943e159bd22ba6c8",
+      "destinationSha256": "4b0d35d6832f6a9765ee7f706b1316db02d55cdcb336fba9943e159bd22ba6c8",
+      "linkNormalizedLines": 0
+    },
+    {
+      "sourceRelativePath": "validation/qoderwake-reference/skill-market.png",
+      "destination": "docs/设计包/validation/qoderwake-reference/skill-market.png",
+      "bytes": 227488,
+      "sourceSha256": "e026db61a56dfd451867063cd76a3cf663e10197a918d2cbae78b27ea91837ac",
+      "destinationSha256": "e026db61a56dfd451867063cd76a3cf663e10197a918d2cbae78b27ea91837ac",
+      "linkNormalizedLines": 0
+    },
+    {
+      "sourceRelativePath": "validation/qoderwake-reference/task-board-header.png",
+      "destination": "docs/设计包/validation/qoderwake-reference/task-board-header.png",
+      "bytes": 40172,
+      "sourceSha256": "bf12014747248bc830974f82ee816347bd17d87cef4dff07a4ad8c4ebe35d2a4",
+      "destinationSha256": "bf12014747248bc830974f82ee816347bd17d87cef4dff07a4ad8c4ebe35d2a4",
+      "linkNormalizedLines": 0
+    },
+    {
+      "sourceRelativePath": "validation/role-access-1440.png",
+      "destination": "docs/设计包/validation/role-access-1440.png",
+      "bytes": 111133,
+      "sourceSha256": "516c8c835963879220c3f111ec32990c067ed1287ca6e85d4250a5919185cb98",
+      "destinationSha256": "516c8c835963879220c3f111ec32990c067ed1287ca6e85d4250a5919185cb98",
+      "linkNormalizedLines": 0
+    },
+    {
+      "sourceRelativePath": "validation/role-access-390.png",
+      "destination": "docs/设计包/validation/role-access-390.png",
+      "bytes": 70849,
+      "sourceSha256": "f369e3826e2ecb7e6db23d033bbf3f9c865be548d70283f0d38335f78a65679c",
+      "destinationSha256": "f369e3826e2ecb7e6db23d033bbf3f9c865be548d70283f0d38335f78a65679c",
+      "linkNormalizedLines": 0
+    },
+    {
+      "sourceRelativePath": "validation/role-api-1440.png",
+      "destination": "docs/设计包/validation/role-api-1440.png",
+      "bytes": 100924,
+      "sourceSha256": "cd51d5d682d788d6e551645a5c54287d43188b638fa573a70117cced07c6b2e1",
+      "destinationSha256": "cd51d5d682d788d6e551645a5c54287d43188b638fa573a70117cced07c6b2e1",
+      "linkNormalizedLines": 0
+    },
+    {
+      "sourceRelativePath": "validation/role-api-390.png",
+      "destination": "docs/设计包/validation/role-api-390.png",
+      "bytes": 58901,
+      "sourceSha256": "6be84ff59e899087292a0f855921b54c587edd471a231fcdac8df6f848132556",
+      "destinationSha256": "6be84ff59e899087292a0f855921b54c587edd471a231fcdac8df6f848132556",
+      "linkNormalizedLines": 0
+    },
+    {
+      "sourceRelativePath": "validation/role-apiadmin-1440.png",
+      "destination": "docs/设计包/validation/role-apiadmin-1440.png",
+      "bytes": 94254,
+      "sourceSha256": "6bc116a3f0b36f8908f422203404771f8421cf2f8eb7a2238ddbd590d49aa52b",
+      "destinationSha256": "6bc116a3f0b36f8908f422203404771f8421cf2f8eb7a2238ddbd590d49aa52b",
+      "linkNormalizedLines": 0
+    },
+    {
+      "sourceRelativePath": "validation/role-apiadmin-390.png",
+      "destination": "docs/设计包/validation/role-apiadmin-390.png",
+      "bytes": 55112,
+      "sourceSha256": "5af8604384ce3f94d0a441e83996e020d705c31d102f74b1fdb95c7a6af98e34",
+      "destinationSha256": "5af8604384ce3f94d0a441e83996e020d705c31d102f74b1fdb95c7a6af98e34",
+      "linkNormalizedLines": 0
+    },
+    {
+      "sourceRelativePath": "validation/role-approver-1440.png",
+      "destination": "docs/设计包/validation/role-approver-1440.png",
+      "bytes": 102757,
+      "sourceSha256": "feea81928eb0bc82f29b077231f8c5c0679951b676fcb2fe4b12314fb66422e8",
+      "destinationSha256": "feea81928eb0bc82f29b077231f8c5c0679951b676fcb2fe4b12314fb66422e8",
+      "linkNormalizedLines": 0
+    },
+    {
+      "sourceRelativePath": "validation/role-approver-390.png",
+      "destination": "docs/设计包/validation/role-approver-390.png",
+      "bytes": 62173,
+      "sourceSha256": "651b9bc5d864cfef226cd7e1c47cf4636f00fd0d352b1d045316985fd09c0143",
+      "destinationSha256": "651b9bc5d864cfef226cd7e1c47cf4636f00fd0d352b1d045316985fd09c0143",
+      "linkNormalizedLines": 0
+    },
+    {
+      "sourceRelativePath": "validation/role-assignment-1440.png",
+      "destination": "docs/设计包/validation/role-assignment-1440.png",
+      "bytes": 97182,
+      "sourceSha256": "63ddd83ff6a2b98b055f378db33371fb27a3f6b72799d4cbee36b7df249023cd",
+      "destinationSha256": "63ddd83ff6a2b98b055f378db33371fb27a3f6b72799d4cbee36b7df249023cd",
+      "linkNormalizedLines": 0
+    },
+    {
+      "sourceRelativePath": "validation/role-assignment-390.png",
+      "destination": "docs/设计包/validation/role-assignment-390.png",
+      "bytes": 56328,
+      "sourceSha256": "1f991209e972ef0379a750e7e516e2189a27d0b0833a01373eaa91e566be38a0",
+      "destinationSha256": "1f991209e972ef0379a750e7e516e2189a27d0b0833a01373eaa91e566be38a0",
+      "linkNormalizedLines": 0
+    },
+    {
+      "sourceRelativePath": "validation/role-auditgeneral-1440.png",
+      "destination": "docs/设计包/validation/role-auditgeneral-1440.png",
+      "bytes": 100854,
+      "sourceSha256": "0f7237b4eac9b8f36dcdb3db3a977bf349c10b8eae380e7e321a4e656e903476",
+      "destinationSha256": "0f7237b4eac9b8f36dcdb3db3a977bf349c10b8eae380e7e321a4e656e903476",
+      "linkNormalizedLines": 0
+    },
+    {
+      "sourceRelativePath": "validation/role-auditgeneral-390.png",
+      "destination": "docs/设计包/validation/role-auditgeneral-390.png",
+      "bytes": 57006,
+      "sourceSha256": "5ddeb3ad925b937862c675434a0c68ea5780d7b0c79c6ea453acbef9b15fd313",
+      "destinationSha256": "5ddeb3ad925b937862c675434a0c68ea5780d7b0c79c6ea453acbef9b15fd313",
+      "linkNormalizedLines": 0
+    },
+    {
+      "sourceRelativePath": "validation/role-auditor-1440.png",
+      "destination": "docs/设计包/validation/role-auditor-1440.png",
+      "bytes": 95899,
+      "sourceSha256": "8253629beed987e1c93904c19747045e0bb163f3e73a44e500924daa4840b111",
+      "destinationSha256": "8253629beed987e1c93904c19747045e0bb163f3e73a44e500924daa4840b111",
+      "linkNormalizedLines": 0
+    },
+    {
+      "sourceRelativePath": "validation/role-auditor-390.png",
+      "destination": "docs/设计包/validation/role-auditor-390.png",
+      "bytes": 55281,
+      "sourceSha256": "55bf6a1a1e0d8a1d488e1788303782a93a26c9aa7566e4bf5c60922b42eaa807",
+      "destinationSha256": "55bf6a1a1e0d8a1d488e1788303782a93a26c9aa7566e4bf5c60922b42eaa807",
+      "linkNormalizedLines": 0
+    },
+    {
+      "sourceRelativePath": "validation/role-automation-1440.png",
+      "destination": "docs/设计包/validation/role-automation-1440.png",
+      "bytes": 103573,
+      "sourceSha256": "cfc0bc65b0328f9b7402cc7f06c24a2fd7dfe16fbaf8f4d2c94cbaefeaec644f",
+      "destinationSha256": "cfc0bc65b0328f9b7402cc7f06c24a2fd7dfe16fbaf8f4d2c94cbaefeaec644f",
+      "linkNormalizedLines": 0
+    },
+    {
+      "sourceRelativePath": "validation/role-automation-390.png",
+      "destination": "docs/设计包/validation/role-automation-390.png",
+      "bytes": 58155,
+      "sourceSha256": "379bb60ae60f3d271d9b18e1fe798a9d7ff81f7d3f25122b2e6ffb7f21090449",
+      "destinationSha256": "379bb60ae60f3d271d9b18e1fe798a9d7ff81f7d3f25122b2e6ffb7f21090449",
+      "linkNormalizedLines": 0
+    },
+    {
+      "sourceRelativePath": "validation/role-channel-1440.png",
+      "destination": "docs/设计包/validation/role-channel-1440.png",
+      "bytes": 120106,
+      "sourceSha256": "ae7ea5725786993e1badf8891bbc6df6a3a232d58a1414ba8807910ba7b491c1",
+      "destinationSha256": "ae7ea5725786993e1badf8891bbc6df6a3a232d58a1414ba8807910ba7b491c1",
+      "linkNormalizedLines": 0
+    },
+    {
+      "sourceRelativePath": "validation/role-channel-390.png",
+      "destination": "docs/设计包/validation/role-channel-390.png",
+      "bytes": 70102,
+      "sourceSha256": "eb2ea71a72da86e3e4b174d7557a3e706bf6c2d6baa47456d458b866af241cf3",
+      "destinationSha256": "eb2ea71a72da86e3e4b174d7557a3e706bf6c2d6baa47456d458b866af241cf3",
+      "linkNormalizedLines": 0
+    },
+    {
+      "sourceRelativePath": "validation/role-collab-1440.png",
+      "destination": "docs/设计包/validation/role-collab-1440.png",
+      "bytes": 180129,
+      "sourceSha256": "cdb2d1e0c0b1a39b8286dbbe930c8ffc6f2a148861e12d8d3eabee176ff64f3d",
+      "destinationSha256": "cdb2d1e0c0b1a39b8286dbbe930c8ffc6f2a148861e12d8d3eabee176ff64f3d",
+      "linkNormalizedLines": 0
+    },
+    {
+      "sourceRelativePath": "validation/role-collab-390.png",
+      "destination": "docs/设计包/validation/role-collab-390.png",
+      "bytes": 131563,
+      "sourceSha256": "5dd03dbd174b08fdc54beddb1f90a424388dd5c5e3445d28158fc1ba023421ea",
+      "destinationSha256": "5dd03dbd174b08fdc54beddb1f90a424388dd5c5e3445d28158fc1ba023421ea",
+      "linkNormalizedLines": 0
+    },
+    {
+      "sourceRelativePath": "validation/role-datasubject-1440.png",
+      "destination": "docs/设计包/validation/role-datasubject-1440.png",
+      "bytes": 99867,
+      "sourceSha256": "711e2282ed582cc9d2880e451e5c8c175f5c77f8279f3255e932a9c48daf4db7",
+      "destinationSha256": "711e2282ed582cc9d2880e451e5c8c175f5c77f8279f3255e932a9c48daf4db7",
+      "linkNormalizedLines": 0
+    },
+    {
+      "sourceRelativePath": "validation/role-datasubject-390.png",
+      "destination": "docs/设计包/validation/role-datasubject-390.png",
+      "bytes": 58598,
+      "sourceSha256": "1f6c9f4e1c211fb9149f33a3fb5edfdc3638a709965dbe38f1cccb5e74c3c2d9",
+      "destinationSha256": "1f6c9f4e1c211fb9149f33a3fb5edfdc3638a709965dbe38f1cccb5e74c3c2d9",
+      "linkNormalizedLines": 0
+    },
+    {
+      "sourceRelativePath": "validation/role-designer-1440.png",
+      "destination": "docs/设计包/validation/role-designer-1440.png",
+      "bytes": 157758,
+      "sourceSha256": "8d1eb5fbf4e0dcfdfb5f69bb0d0ce38a0a2a485ed536ec81b31dc5ae9699c33a",
+      "destinationSha256": "8d1eb5fbf4e0dcfdfb5f69bb0d0ce38a0a2a485ed536ec81b31dc5ae9699c33a",
+      "linkNormalizedLines": 0
+    },
+    {
+      "sourceRelativePath": "validation/role-designer-390.png",
+      "destination": "docs/设计包/validation/role-designer-390.png",
+      "bytes": 100770,
+      "sourceSha256": "bf4fe37611e97da77fada688a67920e794568ada833d38bd007878e5eaf1f77d",
+      "destinationSha256": "bf4fe37611e97da77fada688a67920e794568ada833d38bd007878e5eaf1f77d",
+      "linkNormalizedLines": 0
+    },
+    {
+      "sourceRelativePath": "validation/role-evolution-1440.png",
+      "destination": "docs/设计包/validation/role-evolution-1440.png",
+      "bytes": 101946,
+      "sourceSha256": "81c70d26964c011dfbe5a9b5016d48791f72ecfe00df2d38dbe8181ad2f42542",
+      "destinationSha256": "81c70d26964c011dfbe5a9b5016d48791f72ecfe00df2d38dbe8181ad2f42542",
+      "linkNormalizedLines": 0
+    },
+    {
+      "sourceRelativePath": "validation/role-evolution-390.png",
+      "destination": "docs/设计包/validation/role-evolution-390.png",
+      "bytes": 59036,
+      "sourceSha256": "e78176596bfb65732c8d5f7856476fede698953419a3c93b2319f86887008c67",
+      "destinationSha256": "e78176596bfb65732c8d5f7856476fede698953419a3c93b2319f86887008c67",
+      "linkNormalizedLines": 0
+    },
+    {
+      "sourceRelativePath": "validation/role-hr-1440.png",
+      "destination": "docs/设计包/validation/role-hr-1440.png",
+      "bytes": 97723,
+      "sourceSha256": "972f81f6c06594b41257e79ae6fa3d811cb6c36f52a452bf5b2712785f175034",
+      "destinationSha256": "972f81f6c06594b41257e79ae6fa3d811cb6c36f52a452bf5b2712785f175034",
+      "linkNormalizedLines": 0
+    },
+    {
+      "sourceRelativePath": "validation/role-hr-390.png",
+      "destination": "docs/设计包/validation/role-hr-390.png",
+      "bytes": 59032,
+      "sourceSha256": "10007003b784ba341b3a3006b5417993fb7f7a60a131ee8534207b5c68cdd07d",
+      "destinationSha256": "10007003b784ba341b3a3006b5417993fb7f7a60a131ee8534207b5c68cdd07d",
+      "linkNormalizedLines": 0
+    },
+    {
+      "sourceRelativePath": "validation/role-identity-1440.png",
+      "destination": "docs/设计包/validation/role-identity-1440.png",
+      "bytes": 105297,
+      "sourceSha256": "661634c90b16c016e05e72b10e7149c565e258d14fec306254ad20b5699ccf01",
+      "destinationSha256": "661634c90b16c016e05e72b10e7149c565e258d14fec306254ad20b5699ccf01",
+      "linkNormalizedLines": 0
+    },
+    {
+      "sourceRelativePath": "validation/role-identity-390.png",
+      "destination": "docs/设计包/validation/role-identity-390.png",
+      "bytes": 63970,
+      "sourceSha256": "29fb886fd6c14b3be92b94a6845dc577afe035924e5077bb5156714130c8a74c",
+      "destinationSha256": "29fb886fd6c14b3be92b94a6845dc577afe035924e5077bb5156714130c8a74c",
+      "linkNormalizedLines": 0
+    },
+    {
+      "sourceRelativePath": "validation/role-initiator-1440.png",
+      "destination": "docs/设计包/validation/role-initiator-1440.png",
+      "bytes": 107337,
+      "sourceSha256": "a1f19290a2308e32644fbd0319cb827e2299acaa50040cb8bcf4b969f6dadfa9",
+      "destinationSha256": "a1f19290a2308e32644fbd0319cb827e2299acaa50040cb8bcf4b969f6dadfa9",
+      "linkNormalizedLines": 0
+    },
+    {
+      "sourceRelativePath": "validation/role-initiator-390.png",
+      "destination": "docs/设计包/validation/role-initiator-390.png",
+      "bytes": 59719,
+      "sourceSha256": "e0b44a9894f920c137888529d56870729d52e5677b0c7b059af534810e48b590",
+      "destinationSha256": "e0b44a9894f920c137888529d56870729d52e5677b0c7b059af534810e48b590",
+      "linkNormalizedLines": 0
+    },
+    {
+      "sourceRelativePath": "validation/role-interactor-1440.png",
+      "destination": "docs/设计包/validation/role-interactor-1440.png",
+      "bytes": 105481,
+      "sourceSha256": "b08a7b1d3f9a2010ba42d541e17f10e57941d4a0050bf7d05c8464bf60efa2ee",
+      "destinationSha256": "b08a7b1d3f9a2010ba42d541e17f10e57941d4a0050bf7d05c8464bf60efa2ee",
+      "linkNormalizedLines": 0
+    },
+    {
+      "sourceRelativePath": "validation/role-interactor-390.png",
+      "destination": "docs/设计包/validation/role-interactor-390.png",
+      "bytes": 55273,
+      "sourceSha256": "71bd209df0132b5321dff8fa7cfd4242813233166397fe443a41a36bef981223",
+      "destinationSha256": "71bd209df0132b5321dff8fa7cfd4242813233166397fe443a41a36bef981223",
+      "linkNormalizedLines": 0
+    },
+    {
+      "sourceRelativePath": "validation/role-knowledge-1440.png",
+      "destination": "docs/设计包/validation/role-knowledge-1440.png",
+      "bytes": 130790,
+      "sourceSha256": "685fe4d006c62729e3b1628f61100b6712486f59e7c468fb164dd72a3aa253fa",
+      "destinationSha256": "685fe4d006c62729e3b1628f61100b6712486f59e7c468fb164dd72a3aa253fa",
+      "linkNormalizedLines": 0
+    },
+    {
+      "sourceRelativePath": "validation/role-knowledge-390.png",
+      "destination": "docs/设计包/validation/role-knowledge-390.png",
+      "bytes": 82718,
+      "sourceSha256": "e4e597f7135bdff1ac6884aaa354f0e36dced1ef977a26456a107a5d837e6919",
+      "destinationSha256": "e4e597f7135bdff1ac6884aaa354f0e36dced1ef977a26456a107a5d837e6919",
+      "linkNormalizedLines": 0
+    },
+    {
+      "sourceRelativePath": "validation/role-knowledgeadmin-1440.png",
+      "destination": "docs/设计包/validation/role-knowledgeadmin-1440.png",
+      "bytes": 107292,
+      "sourceSha256": "d35a8a64c0345c812591e548ab674dc22139ed1b5d3a53a07bcbcdd880e53a31",
+      "destinationSha256": "d35a8a64c0345c812591e548ab674dc22139ed1b5d3a53a07bcbcdd880e53a31",
+      "linkNormalizedLines": 0
+    },
+    {
+      "sourceRelativePath": "validation/role-knowledgeadmin-390.png",
+      "destination": "docs/设计包/validation/role-knowledgeadmin-390.png",
+      "bytes": 57263,
+      "sourceSha256": "0fe54fd0d74d3e3fd74123fae6abc20489fe4171526be3a75894a1ac9cb6b164",
+      "destinationSha256": "0fe54fd0d74d3e3fd74123fae6abc20489fe4171526be3a75894a1ac9cb6b164",
+      "linkNormalizedLines": 0
+    },
+    {
+      "sourceRelativePath": "validation/role-main-1440.png",
+      "destination": "docs/设计包/validation/role-main-1440.png",
+      "bytes": 199398,
+      "sourceSha256": "3841a2b099e9f402e9a704bd1d563f77ed46bcdca31205f619e8293e1b169366",
+      "destinationSha256": "3841a2b099e9f402e9a704bd1d563f77ed46bcdca31205f619e8293e1b169366",
+      "linkNormalizedLines": 0
+    },
+    {
+      "sourceRelativePath": "validation/role-main-390.png",
+      "destination": "docs/设计包/validation/role-main-390.png",
+      "bytes": 146656,
+      "sourceSha256": "9e5bd45b13e0507c635ab6e065c66bc88d692c44b92c7e728db815c6714e36b8",
+      "destinationSha256": "9e5bd45b13e0507c635ab6e065c66bc88d692c44b92c7e728db815c6714e36b8",
+      "linkNormalizedLines": 0
+    },
+    {
+      "sourceRelativePath": "validation/role-member-1440.png",
+      "destination": "docs/设计包/validation/role-member-1440.png",
+      "bytes": 107576,
+      "sourceSha256": "ce9ccdc5e21cddfa1c2ef8df61e6a6e89ee695dfe9d3d4fc01576954a1fa1bc0",
+      "destinationSha256": "ce9ccdc5e21cddfa1c2ef8df61e6a6e89ee695dfe9d3d4fc01576954a1fa1bc0",
+      "linkNormalizedLines": 0
+    },
+    {
+      "sourceRelativePath": "validation/role-member-390.png",
+      "destination": "docs/设计包/validation/role-member-390.png",
+      "bytes": 60813,
+      "sourceSha256": "15b549a239fc0575592ac0f3629f5419a7d7cd5acbe76ca217a9916874a66c0f",
+      "destinationSha256": "15b549a239fc0575592ac0f3629f5419a7d7cd5acbe76ca217a9916874a66c0f",
+      "linkNormalizedLines": 0
+    },
+    {
+      "sourceRelativePath": "validation/role-org-1440.png",
+      "destination": "docs/设计包/validation/role-org-1440.png",
+      "bytes": 99409,
+      "sourceSha256": "6fa9506bc4790d605582b24af106c9344c41291740831b8771721775ac75dbfd",
+      "destinationSha256": "6fa9506bc4790d605582b24af106c9344c41291740831b8771721775ac75dbfd",
+      "linkNormalizedLines": 0
+    },
+    {
+      "sourceRelativePath": "validation/role-org-390.png",
+      "destination": "docs/设计包/validation/role-org-390.png",
+      "bytes": 58993,
+      "sourceSha256": "b7a18cbd02e343251a56500ebab09a20dc64a7091f3b753b8ad8367144ef694b",
+      "destinationSha256": "b7a18cbd02e343251a56500ebab09a20dc64a7091f3b753b8ad8367144ef694b",
+      "linkNormalizedLines": 0
+    },
+    {
+      "sourceRelativePath": "validation/role-policy-1440.png",
+      "destination": "docs/设计包/validation/role-policy-1440.png",
+      "bytes": 125913,
+      "sourceSha256": "786675571560bf721edd0f10b6022113db75d83f617c25ef5b1504c158761311",
+      "destinationSha256": "786675571560bf721edd0f10b6022113db75d83f617c25ef5b1504c158761311",
+      "linkNormalizedLines": 0
+    },
+    {
+      "sourceRelativePath": "validation/role-policy-390.png",
+      "destination": "docs/设计包/validation/role-policy-390.png",
+      "bytes": 83912,
+      "sourceSha256": "a29f7cbbe981410c02d70ce1b959b2d54cfa6cdcdfa3d361fab827954a889353",
+      "destinationSha256": "a29f7cbbe981410c02d70ce1b959b2d54cfa6cdcdfa3d361fab827954a889353",
+      "linkNormalizedLines": 0
+    },
+    {
+      "sourceRelativePath": "validation/role-privacy-1440.png",
+      "destination": "docs/设计包/validation/role-privacy-1440.png",
+      "bytes": 102365,
+      "sourceSha256": "9565eef95b8876373dafef824f9dd74b65b5c2df9e6468e89c4e680e8f24c420",
+      "destinationSha256": "9565eef95b8876373dafef824f9dd74b65b5c2df9e6468e89c4e680e8f24c420",
+      "linkNormalizedLines": 0
+    },
+    {
+      "sourceRelativePath": "validation/role-privacy-390.png",
+      "destination": "docs/设计包/validation/role-privacy-390.png",
+      "bytes": 61272,
+      "sourceSha256": "e1264421845b12c26bf8b60cd5a97cf8dc78e50c44b3786968d80b095959fd1e",
+      "destinationSha256": "e1264421845b12c26bf8b60cd5a97cf8dc78e50c44b3786968d80b095959fd1e",
+      "linkNormalizedLines": 0
+    },
+    {
+      "sourceRelativePath": "validation/role-publisher-1440.png",
+      "destination": "docs/设计包/validation/role-publisher-1440.png",
+      "bytes": 99398,
+      "sourceSha256": "519b242fe5c417c9ec8bd24f76e775b74b7a56263edcfadf7850ec02350cccd2",
+      "destinationSha256": "519b242fe5c417c9ec8bd24f76e775b74b7a56263edcfadf7850ec02350cccd2",
+      "linkNormalizedLines": 0
+    },
+    {
+      "sourceRelativePath": "validation/role-publisher-390.png",
+      "destination": "docs/设计包/validation/role-publisher-390.png",
+      "bytes": 59542,
+      "sourceSha256": "e0931ed67c30b87247d409ec6dea446e22640b496b58f19d949d122a84b54302",
+      "destinationSha256": "e0931ed67c30b87247d409ec6dea446e22640b496b58f19d949d122a84b54302",
+      "linkNormalizedLines": 0
+    },
+    {
+      "sourceRelativePath": "validation/role-receiver-1440.png",
+      "destination": "docs/设计包/validation/role-receiver-1440.png",
+      "bytes": 122927,
+      "sourceSha256": "f0cb4439181742199a4af2072248289e8a6aab7c494a5c0c3f12eba0a2ab02f8",
+      "destinationSha256": "f0cb4439181742199a4af2072248289e8a6aab7c494a5c0c3f12eba0a2ab02f8",
+      "linkNormalizedLines": 0
+    },
+    {
+      "sourceRelativePath": "validation/role-receiver-390.png",
+      "destination": "docs/设计包/validation/role-receiver-390.png",
+      "bytes": 73436,
+      "sourceSha256": "2ccabafc071caf96a8d921d2fe9f1303c989b60db9773e91cded0c8bc817b14b",
+      "destinationSha256": "2ccabafc071caf96a8d921d2fe9f1303c989b60db9773e91cded0c8bc817b14b",
+      "linkNormalizedLines": 0
+    },
+    {
+      "sourceRelativePath": "validation/role-release-1440.png",
+      "destination": "docs/设计包/validation/role-release-1440.png",
+      "bytes": 93573,
+      "sourceSha256": "52c7bfd0b36be51221c5fa3a2f13af72666b484e3d90f4cdc7571cf7b26ef4bc",
+      "destinationSha256": "52c7bfd0b36be51221c5fa3a2f13af72666b484e3d90f4cdc7571cf7b26ef4bc",
+      "linkNormalizedLines": 0
+    },
+    {
+      "sourceRelativePath": "validation/role-release-390.png",
+      "destination": "docs/设计包/validation/role-release-390.png",
+      "bytes": 53251,
+      "sourceSha256": "221bac8c92822051748f587a4085cd461c246b163bb262ab310fa93f588642ca",
+      "destinationSha256": "221bac8c92822051748f587a4085cd461c246b163bb262ab310fa93f588642ca",
+      "linkNormalizedLines": 0
+    },
+    {
+      "sourceRelativePath": "validation/role-resource-1440.png",
+      "destination": "docs/设计包/validation/role-resource-1440.png",
+      "bytes": 134570,
+      "sourceSha256": "e877100bce2bb559fb98aeedc9b13af70cb52786abe36c22d854420e99b6374d",
+      "destinationSha256": "e877100bce2bb559fb98aeedc9b13af70cb52786abe36c22d854420e99b6374d",
+      "linkNormalizedLines": 0
+    },
+    {
+      "sourceRelativePath": "validation/role-resource-390.png",
+      "destination": "docs/设计包/validation/role-resource-390.png",
+      "bytes": 85046,
+      "sourceSha256": "237b2a8b76adb8153cfeae17f4d56da9c4fbe6e38e25813e43705cc066657c88",
+      "destinationSha256": "237b2a8b76adb8153cfeae17f4d56da9c4fbe6e38e25813e43705cc066657c88",
+      "linkNormalizedLines": 0
+    },
+    {
+      "sourceRelativePath": "validation/role-responsible-1440.png",
+      "destination": "docs/设计包/validation/role-responsible-1440.png",
+      "bytes": 115752,
+      "sourceSha256": "97320b34988e3ec0a0a6491b3021955c48d0046e8ba87d3949acdb6671d7682c",
+      "destinationSha256": "97320b34988e3ec0a0a6491b3021955c48d0046e8ba87d3949acdb6671d7682c",
+      "linkNormalizedLines": 0
+    },
+    {
+      "sourceRelativePath": "validation/role-responsible-390.png",
+      "destination": "docs/设计包/validation/role-responsible-390.png",
+      "bytes": 67917,
+      "sourceSha256": "bf830480d1f0958d2b7b9431584a2182b215a75f56ce9b97ed2f2eefb6e551f1",
+      "destinationSha256": "bf830480d1f0958d2b7b9431584a2182b215a75f56ce9b97ed2f2eefb6e551f1",
+      "linkNormalizedLines": 0
+    },
+    {
+      "sourceRelativePath": "validation/role-review-1440.png",
+      "destination": "docs/设计包/validation/role-review-1440.png",
+      "bytes": 179558,
+      "sourceSha256": "b1e69161069ca27882637502f199315ee357048be3c90f9e829d6a11ceaac2ed",
+      "destinationSha256": "b1e69161069ca27882637502f199315ee357048be3c90f9e829d6a11ceaac2ed",
+      "linkNormalizedLines": 0
+    },
+    {
+      "sourceRelativePath": "validation/role-review-390.png",
+      "destination": "docs/设计包/validation/role-review-390.png",
+      "bytes": 131817,
+      "sourceSha256": "6a3dccaa8ec7a5ea48e655f5bb845d26589877e6b4af1f00f24ce78dc60aa6f2",
+      "destinationSha256": "6a3dccaa8ec7a5ea48e655f5bb845d26589877e6b4af1f00f24ce78dc60aa6f2",
+      "linkNormalizedLines": 0
+    },
+    {
+      "sourceRelativePath": "validation/role-runtime-1440.png",
+      "destination": "docs/设计包/validation/role-runtime-1440.png",
+      "bytes": 109325,
+      "sourceSha256": "65144bf543b288cf96a78824df990c40568dbd6e565c93531152fcba24bf069f",
+      "destinationSha256": "65144bf543b288cf96a78824df990c40568dbd6e565c93531152fcba24bf069f",
+      "linkNormalizedLines": 0
+    },
+    {
+      "sourceRelativePath": "validation/role-runtime-390.png",
+      "destination": "docs/设计包/validation/role-runtime-390.png",
+      "bytes": 68806,
+      "sourceSha256": "07bada4acd3e707e8b51a3f00cc8f2e69fd411d71ababb576a24ad09dd41ed0f",
+      "destinationSha256": "07bada4acd3e707e8b51a3f00cc8f2e69fd411d71ababb576a24ad09dd41ed0f",
+      "linkNormalizedLines": 0
+    },
+    {
+      "sourceRelativePath": "validation/role-security-1440.png",
+      "destination": "docs/设计包/validation/role-security-1440.png",
+      "bytes": 104594,
+      "sourceSha256": "18b4a8d2769239b7458abf5b4d11e52e8eddb6028b95d3c1a24b472be4043efb",
+      "destinationSha256": "18b4a8d2769239b7458abf5b4d11e52e8eddb6028b95d3c1a24b472be4043efb",
+      "linkNormalizedLines": 0
+    },
+    {
+      "sourceRelativePath": "validation/role-security-390.png",
+      "destination": "docs/设计包/validation/role-security-390.png",
+      "bytes": 63276,
+      "sourceSha256": "b184426ac6611e1612bff3e7722a736b9f7d7c893aece18b6276bdf98299b8d7",
+      "destinationSha256": "b184426ac6611e1612bff3e7722a736b9f7d7c893aece18b6276bdf98299b8d7",
+      "linkNormalizedLines": 0
+    },
+    {
+      "sourceRelativePath": "validation/role-securityadmin-1440.png",
+      "destination": "docs/设计包/validation/role-securityadmin-1440.png",
+      "bytes": 103212,
+      "sourceSha256": "9726a62a49ea1e924e49c6faacdefc75549faea79c3b413d322d7b2c6048a783",
+      "destinationSha256": "9726a62a49ea1e924e49c6faacdefc75549faea79c3b413d322d7b2c6048a783",
+      "linkNormalizedLines": 0
+    },
+    {
+      "sourceRelativePath": "validation/role-securityadmin-390.png",
+      "destination": "docs/设计包/validation/role-securityadmin-390.png",
+      "bytes": 60556,
+      "sourceSha256": "834c9f4d70b011d00d5b1241e402e04b44ade159f1fcf7c5bb08c72e504c1b33",
+      "destinationSha256": "834c9f4d70b011d00d5b1241e402e04b44ade159f1fcf7c5bb08c72e504c1b33",
+      "linkNormalizedLines": 0
+    },
+    {
+      "sourceRelativePath": "validation/role-skill-1440.png",
+      "destination": "docs/设计包/validation/role-skill-1440.png",
+      "bytes": 136231,
+      "sourceSha256": "788f5fbd675eef8939f5247bb32c05aea40b034d12ede7a42bca2aac54e807f0",
+      "destinationSha256": "788f5fbd675eef8939f5247bb32c05aea40b034d12ede7a42bca2aac54e807f0",
+      "linkNormalizedLines": 0
+    },
+    {
+      "sourceRelativePath": "validation/role-skill-390.png",
+      "destination": "docs/设计包/validation/role-skill-390.png",
+      "bytes": 87348,
+      "sourceSha256": "23e60638944b8ae2e6b661341f5842b0f6257dde7f619db80f348c67da0d50de",
+      "destinationSha256": "23e60638944b8ae2e6b661341f5842b0f6257dde7f619db80f348c67da0d50de",
+      "linkNormalizedLines": 0
+    },
+    {
+      "sourceRelativePath": "validation/role-task-state.json",
+      "destination": "docs/设计包/validation/role-task-state.json",
+      "bytes": 3247,
+      "sourceSha256": "e7a2a52017e60bc52ef4a818493d1a79b7e1006ea94b3d23d083af6bdbbf5330",
+      "destinationSha256": "e7a2a52017e60bc52ef4a818493d1a79b7e1006ea94b3d23d083af6bdbbf5330",
+      "linkNormalizedLines": 0
+    },
+    {
+      "sourceRelativePath": "validation/role-team-1440.png",
+      "destination": "docs/设计包/validation/role-team-1440.png",
+      "bytes": 109919,
+      "sourceSha256": "f4d19370977951f0a3235081dc5e85ddf815fd3073e4403600824843207e204e",
+      "destinationSha256": "f4d19370977951f0a3235081dc5e85ddf815fd3073e4403600824843207e204e",
+      "linkNormalizedLines": 0
+    },
+    {
+      "sourceRelativePath": "validation/role-team-390.png",
+      "destination": "docs/设计包/validation/role-team-390.png",
+      "bytes": 59692,
+      "sourceSha256": "542cdca2edc27257e6ff7f05e0730ea39f474ab0de49fad386f055efc2a4cb05",
+      "destinationSha256": "542cdca2edc27257e6ff7f05e0730ea39f474ab0de49fad386f055efc2a4cb05",
+      "linkNormalizedLines": 0
+    },
+    {
+      "sourceRelativePath": "validation/role-tech-1440.png",
+      "destination": "docs/设计包/validation/role-tech-1440.png",
+      "bytes": 133334,
+      "sourceSha256": "17c25ad569b9748d8ab41e4c99471a6771d995ffa7ccf5edd7942cefbe2458a0",
+      "destinationSha256": "17c25ad569b9748d8ab41e4c99471a6771d995ffa7ccf5edd7942cefbe2458a0",
+      "linkNormalizedLines": 0
+    },
+    {
+      "sourceRelativePath": "validation/role-tech-390.png",
+      "destination": "docs/设计包/validation/role-tech-390.png",
+      "bytes": 85114,
+      "sourceSha256": "31629e23081cdfe7542e48752f40fd7ea8324b7aede74e0680f93ce1b58f54c6",
+      "destinationSha256": "31629e23081cdfe7542e48752f40fd7ea8324b7aede74e0680f93ce1b58f54c6",
+      "linkNormalizedLines": 0
+    },
+    {
+      "sourceRelativePath": "validation/role-tenant-1440.png",
+      "destination": "docs/设计包/validation/role-tenant-1440.png",
+      "bytes": 95049,
+      "sourceSha256": "12aff6a238abd3cc5e5548f46edfb3bd0069a65568428557409e4a9906bfa039",
+      "destinationSha256": "12aff6a238abd3cc5e5548f46edfb3bd0069a65568428557409e4a9906bfa039",
+      "linkNormalizedLines": 0
+    },
+    {
+      "sourceRelativePath": "validation/role-tenant-390.png",
+      "destination": "docs/设计包/validation/role-tenant-390.png",
+      "bytes": 55304,
+      "sourceSha256": "ae43af5f6410f4bf7e3e9bc048aa276fed1d5b6d197700887d618f80c106ac24",
+      "destinationSha256": "ae43af5f6410f4bf7e3e9bc048aa276fed1d5b6d197700887d618f80c106ac24",
+      "linkNormalizedLines": 0
+    },
+    {
+      "sourceRelativePath": "validation/role-tool-1440.png",
+      "destination": "docs/设计包/validation/role-tool-1440.png",
+      "bytes": 141629,
+      "sourceSha256": "71c6156b120378373deaa3b7928a46cd3067753f9d63b65211cf3ed75cb5f875",
+      "destinationSha256": "71c6156b120378373deaa3b7928a46cd3067753f9d63b65211cf3ed75cb5f875",
+      "linkNormalizedLines": 0
+    },
+    {
+      "sourceRelativePath": "validation/role-tool-390.png",
+      "destination": "docs/设计包/validation/role-tool-390.png",
+      "bytes": 91026,
+      "sourceSha256": "19fc4655a2d85714b7e6fc3819c3878a34865ccbdc4f39fb832ca725e2e0ddc2",
+      "destinationSha256": "19fc4655a2d85714b7e6fc3819c3878a34865ccbdc4f39fb832ca725e2e0ddc2",
+      "linkNormalizedLines": 0
+    },
+    {
+      "sourceRelativePath": "validation/role-workflow-1440.png",
+      "destination": "docs/设计包/validation/role-workflow-1440.png",
+      "bytes": 112663,
+      "sourceSha256": "513d27a72e99cf799ef1a4710af3fc6a4414fc726843bd617a700d843743ffdb",
+      "destinationSha256": "513d27a72e99cf799ef1a4710af3fc6a4414fc726843bd617a700d843743ffdb",
+      "linkNormalizedLines": 0
+    },
+    {
+      "sourceRelativePath": "validation/role-workflow-390.png",
+      "destination": "docs/设计包/validation/role-workflow-390.png",
+      "bytes": 60831,
+      "sourceSha256": "7e65f6fe7cec5300d66ca65d19bc74d5f450b87da9b7b6f33cc531a9e01563dc",
+      "destinationSha256": "7e65f6fe7cec5300d66ca65d19bc74d5f450b87da9b7b6f33cc531a9e01563dc",
+      "linkNormalizedLines": 0
+    },
+    {
+      "sourceRelativePath": "validation/role-workforce-1440.png",
+      "destination": "docs/设计包/validation/role-workforce-1440.png",
+      "bytes": 109294,
+      "sourceSha256": "71df002a7ad870af21f0ea8360ca8e0c708a1e289ec9c9faa22cefeaddf2afa2",
+      "destinationSha256": "71df002a7ad870af21f0ea8360ca8e0c708a1e289ec9c9faa22cefeaddf2afa2",
+      "linkNormalizedLines": 0
+    },
+    {
+      "sourceRelativePath": "validation/role-workforce-390.png",
+      "destination": "docs/设计包/validation/role-workforce-390.png",
+      "bytes": 58270,
+      "sourceSha256": "3d1ececa8a6da33426bd8a7d0e5719b50246b325f48e0f6e5c73cb56845bfdbd",
+      "destinationSha256": "3d1ececa8a6da33426bd8a7d0e5719b50246b325f48e0f6e5c73cb56845bfdbd",
+      "linkNormalizedLines": 0
+    },
+    {
+      "sourceRelativePath": "validation/role-writer-1440.png",
+      "destination": "docs/设计包/validation/role-writer-1440.png",
+      "bytes": 146472,
+      "sourceSha256": "8bcbf4cbffb8c8e543e1f6dd39f9fc98a2d82d3f7adce848d4a9bd8c678a1966",
+      "destinationSha256": "8bcbf4cbffb8c8e543e1f6dd39f9fc98a2d82d3f7adce848d4a9bd8c678a1966",
+      "linkNormalizedLines": 0
+    },
+    {
+      "sourceRelativePath": "validation/role-writer-390.png",
+      "destination": "docs/设计包/validation/role-writer-390.png",
+      "bytes": 94333,
+      "sourceSha256": "8ee9ad1c974a4d356cf87d4329b05c806e7ebd980cb0893a43a86c3bfad44113",
+      "destinationSha256": "8ee9ad1c974a4d356cf87d4329b05c806e7ebd980cb0893a43a86c3bfad44113",
+      "linkNormalizedLines": 0
+    },
+    {
+      "sourceRelativePath": "validation/schema-validation.json",
+      "destination": "docs/设计包/validation/schema-validation.json",
+      "bytes": 2044,
+      "sourceSha256": "931c034e8e78aed631e90fa6ca94314a984d5955f92a6574c1fe6175f2502b16",
+      "destinationSha256": "931c034e8e78aed631e90fa6ca94314a984d5955f92a6574c1fe6175f2502b16",
+      "linkNormalizedLines": 0
+    },
+    {
+      "sourceRelativePath": "validation/v24-document-validation.json",
+      "destination": "docs/设计包/validation/v24-document-validation.json",
+      "bytes": 5138,
+      "sourceSha256": "d9fce0f3f2dcd04ff09ba195e58020ec2370047f3725e5981fbed17461bf9baf",
+      "destinationSha256": "d9fce0f3f2dcd04ff09ba195e58020ec2370047f3725e5981fbed17461bf9baf",
+      "linkNormalizedLines": 0
+    },
+    {
+      "sourceRelativePath": "validation/v24-market-1024.png",
+      "destination": "docs/设计包/validation/v24-market-1024.png",
+      "bytes": 182875,
+      "sourceSha256": "8e8e13685629edf84a0dcb878799a8178f4454d13a1ab7b8e5f442f1e7b196a1",
+      "destinationSha256": "8e8e13685629edf84a0dcb878799a8178f4454d13a1ab7b8e5f442f1e7b196a1",
+      "linkNormalizedLines": 0
+    },
+    {
+      "sourceRelativePath": "validation/v24-market-1440.png",
+      "destination": "docs/设计包/validation/v24-market-1440.png",
+      "bytes": 176299,
+      "sourceSha256": "3bdf5fa106e5df9c3cb6edc5d0fe716598d8c9611c7a6c24b370ba048c3c2110",
+      "destinationSha256": "3bdf5fa106e5df9c3cb6edc5d0fe716598d8c9611c7a6c24b370ba048c3c2110",
+      "linkNormalizedLines": 0
+    },
+    {
+      "sourceRelativePath": "validation/v24-market-390.png",
+      "destination": "docs/设计包/validation/v24-market-390.png",
+      "bytes": 143189,
+      "sourceSha256": "da1305cc0bb7035d68b80a3fb8bde11dc559a185f3a19c7a179501234d7848c3",
+      "destinationSha256": "da1305cc0bb7035d68b80a3fb8bde11dc559a185f3a19c7a179501234d7848c3",
+      "linkNormalizedLines": 0
+    },
+    {
+      "sourceRelativePath": "validation/v24-market-validation.json",
+      "destination": "docs/设计包/validation/v24-market-validation.json",
+      "bytes": 36226,
+      "sourceSha256": "4b2bb83d2039746422f0cdccaa351950282c43c0e15d7f3ee3e11e15a2d9e5ab",
+      "destinationSha256": "4b2bb83d2039746422f0cdccaa351950282c43c0e15d7f3ee3e11e15a2d9e5ab",
+      "linkNormalizedLines": 0
+    },
+    {
+      "sourceRelativePath": "validation/v24-role-validation.json",
+      "destination": "docs/设计包/validation/v24-role-validation.json",
+      "bytes": 239572,
+      "sourceSha256": "538e8e94bbe559e3ca9722aafe2d3189881c0f957138306904ee1f854b6ff9df",
+      "destinationSha256": "538e8e94bbe559e3ca9722aafe2d3189881c0f957138306904ee1f854b6ff9df",
+      "linkNormalizedLines": 0
+    },
+    {
+      "sourceRelativePath": "validation/v25-document-validation.json",
+      "destination": "docs/设计包/validation/v25-document-validation.json",
+      "bytes": 4081,
+      "sourceSha256": "eb04f58ef0473374b5c3628b29a4fa9cf5a97c5b952a22d58b16a5dc1594322a",
+      "destinationSha256": "eb04f58ef0473374b5c3628b29a4fa9cf5a97c5b952a22d58b16a5dc1594322a",
+      "linkNormalizedLines": 0
+    },
+    {
+      "sourceRelativePath": "validation/v25-market-1024.png",
+      "destination": "docs/设计包/validation/v25-market-1024.png",
+      "bytes": 187740,
+      "sourceSha256": "ff709b71f1c6275f70d9daa6d66b275d13af4e7baa6966fdc579f2bc2dc654fc",
+      "destinationSha256": "ff709b71f1c6275f70d9daa6d66b275d13af4e7baa6966fdc579f2bc2dc654fc",
+      "linkNormalizedLines": 0
+    },
+    {
+      "sourceRelativePath": "validation/v25-market-1440.png",
+      "destination": "docs/设计包/validation/v25-market-1440.png",
+      "bytes": 182175,
+      "sourceSha256": "a22d3fd401d6a4021d5513b60e8bd793942469c29fb9112800e8bb282b91a09e",
+      "destinationSha256": "a22d3fd401d6a4021d5513b60e8bd793942469c29fb9112800e8bb282b91a09e",
+      "linkNormalizedLines": 0
+    },
+    {
+      "sourceRelativePath": "validation/v25-market-390.png",
+      "destination": "docs/设计包/validation/v25-market-390.png",
+      "bytes": 147197,
+      "sourceSha256": "bb1c48194446e49afc5b16c56c762c623b8454cf067daae6650542a41f8c1ed1",
+      "destinationSha256": "bb1c48194446e49afc5b16c56c762c623b8454cf067daae6650542a41f8c1ed1",
+      "linkNormalizedLines": 0
+    },
+    {
+      "sourceRelativePath": "validation/v25-market-regression.json",
+      "destination": "docs/设计包/validation/v25-market-regression.json",
+      "bytes": 36226,
+      "sourceSha256": "5b0c2b0baceba327fe41b434993f3e91a3b4054c24580c387a278dce3f77e512",
+      "destinationSha256": "5b0c2b0baceba327fe41b434993f3e91a3b4054c24580c387a278dce3f77e512",
+      "linkNormalizedLines": 0
+    },
+    {
+      "sourceRelativePath": "validation/v25-oa-identity-inbox-1024.png",
+      "destination": "docs/设计包/validation/v25-oa-identity-inbox-1024.png",
+      "bytes": 193741,
+      "sourceSha256": "0efd15c38be60d86dcba87a753cb8e7a083503f889f1212fdb0ae21391a0cdc2",
+      "destinationSha256": "0efd15c38be60d86dcba87a753cb8e7a083503f889f1212fdb0ae21391a0cdc2",
+      "linkNormalizedLines": 0
+    },
+    {
+      "sourceRelativePath": "validation/v25-oa-identity-inbox-1440.png",
+      "destination": "docs/设计包/validation/v25-oa-identity-inbox-1440.png",
+      "bytes": 209428,
+      "sourceSha256": "9fbb74018b4b92ac30f248b4bb8f4cbd284992b28a38f58f800940e9e3f7ab47",
+      "destinationSha256": "9fbb74018b4b92ac30f248b4bb8f4cbd284992b28a38f58f800940e9e3f7ab47",
+      "linkNormalizedLines": 0
+    },
+    {
+      "sourceRelativePath": "validation/v25-oa-identity-inbox-390.png",
+      "destination": "docs/设计包/validation/v25-oa-identity-inbox-390.png",
+      "bytes": 146864,
+      "sourceSha256": "dc65f2f8e29937e6bc5b11a8df701d2c65b0996cca34d616befaaba5cbcd6b9d",
+      "destinationSha256": "dc65f2f8e29937e6bc5b11a8df701d2c65b0996cca34d616befaaba5cbcd6b9d",
+      "linkNormalizedLines": 0
+    },
+    {
+      "sourceRelativePath": "validation/v25-oa-interactions.json",
+      "destination": "docs/设计包/validation/v25-oa-interactions.json",
+      "bytes": 14445,
+      "sourceSha256": "9a68a71b89ee17d25ae550a236e2189e064af218f875e90d54862e3e3bbc308a",
+      "destinationSha256": "9a68a71b89ee17d25ae550a236e2189e064af218f875e90d54862e3e3bbc308a",
+      "linkNormalizedLines": 0
+    },
+    {
+      "sourceRelativePath": "validation/v25-oa-main-inbox-1024.png",
+      "destination": "docs/设计包/validation/v25-oa-main-inbox-1024.png",
+      "bytes": 194977,
+      "sourceSha256": "a7eaa32214f6dbb82a6537605073afbf3a7cb267c680fd288f2691ab67f9f41d",
+      "destinationSha256": "a7eaa32214f6dbb82a6537605073afbf3a7cb267c680fd288f2691ab67f9f41d",
+      "linkNormalizedLines": 0
+    },
+    {
+      "sourceRelativePath": "validation/v25-oa-main-inbox-1440.png",
+      "destination": "docs/设计包/validation/v25-oa-main-inbox-1440.png",
+      "bytes": 210612,
+      "sourceSha256": "a51d81fe84334b63976198728dc9ed25fc3e245e61ead6a07affda378d69e1e6",
+      "destinationSha256": "a51d81fe84334b63976198728dc9ed25fc3e245e61ead6a07affda378d69e1e6",
+      "linkNormalizedLines": 0
+    },
+    {
+      "sourceRelativePath": "validation/v25-oa-main-inbox-390.png",
+      "destination": "docs/设计包/validation/v25-oa-main-inbox-390.png",
+      "bytes": 145449,
+      "sourceSha256": "36b954d0772d0f249c641ce46d5790ff28a833dfc56f12a8583308c7326aad81",
+      "destinationSha256": "36b954d0772d0f249c641ce46d5790ff28a833dfc56f12a8583308c7326aad81",
+      "linkNormalizedLines": 0
+    },
+    {
+      "sourceRelativePath": "validation/v25-oa-main-task-1024.png",
+      "destination": "docs/设计包/validation/v25-oa-main-task-1024.png",
+      "bytes": 173562,
+      "sourceSha256": "5842fd007b4154bd8005877856496f72eab6ab313e0929800ca73d8f0fd04c4c",
+      "destinationSha256": "5842fd007b4154bd8005877856496f72eab6ab313e0929800ca73d8f0fd04c4c",
+      "linkNormalizedLines": 0
+    },
+    {
+      "sourceRelativePath": "validation/v25-oa-main-task-1440.png",
+      "destination": "docs/设计包/validation/v25-oa-main-task-1440.png",
+      "bytes": 181474,
+      "sourceSha256": "4f17b838da63ff131058d77ed89dc3c4bdff438971173ba7efc8b37887214237",
+      "destinationSha256": "4f17b838da63ff131058d77ed89dc3c4bdff438971173ba7efc8b37887214237",
+      "linkNormalizedLines": 0
+    },
+    {
+      "sourceRelativePath": "validation/v25-oa-main-task-390.png",
+      "destination": "docs/设计包/validation/v25-oa-main-task-390.png",
+      "bytes": 129969,
+      "sourceSha256": "f32b4661b16d29ce909b222ea9edfb079a6b5354af9c9a82d46dd8494b889f70",
+      "destinationSha256": "f32b4661b16d29ce909b222ea9edfb079a6b5354af9c9a82d46dd8494b889f70",
+      "linkNormalizedLines": 0
+    },
+    {
+      "sourceRelativePath": "validation/v25-oa-review-task-1024.png",
+      "destination": "docs/设计包/validation/v25-oa-review-task-1024.png",
+      "bytes": 166954,
+      "sourceSha256": "30a0b49386f3465b22fed80ad3853edac10ea6868338ca615f9bf08edee6f80b",
+      "destinationSha256": "30a0b49386f3465b22fed80ad3853edac10ea6868338ca615f9bf08edee6f80b",
+      "linkNormalizedLines": 0
+    },
+    {
+      "sourceRelativePath": "validation/v25-oa-review-task-1440.png",
+      "destination": "docs/设计包/validation/v25-oa-review-task-1440.png",
+      "bytes": 174367,
+      "sourceSha256": "49239795488370ac3a8ab331822a05cda06b538b3d6289c38be3984bc2e56ac4",
+      "destinationSha256": "49239795488370ac3a8ab331822a05cda06b538b3d6289c38be3984bc2e56ac4",
+      "linkNormalizedLines": 0
+    },
+    {
+      "sourceRelativePath": "validation/v25-oa-review-task-390.png",
+      "destination": "docs/设计包/validation/v25-oa-review-task-390.png",
+      "bytes": 123916,
+      "sourceSha256": "29bcd8b399eb27238e45fd987866492a236d865b84761e16683ebe61fb24ae9b",
+      "destinationSha256": "29bcd8b399eb27238e45fd987866492a236d865b84761e16683ebe61fb24ae9b",
+      "linkNormalizedLines": 0
+    },
+    {
+      "sourceRelativePath": "validation/v25-oa-schema-validation.json",
+      "destination": "docs/设计包/validation/v25-oa-schema-validation.json",
+      "bytes": 2308,
+      "sourceSha256": "2f3b4756a45c0c6fa31deb08e62430d13a4fea82ffe01e1f2efb979d51952488",
+      "destinationSha256": "2f3b4756a45c0c6fa31deb08e62430d13a4fea82ffe01e1f2efb979d51952488",
+      "linkNormalizedLines": 0
+    },
+    {
+      "sourceRelativePath": "validation/v25-oa-validation.json",
+      "destination": "docs/设计包/validation/v25-oa-validation.json",
+      "bytes": 122523,
+      "sourceSha256": "4d3c394e526777eef528765f3696fce9c32e0370ae8fb891206fb7575a1f538f",
+      "destinationSha256": "4d3c394e526777eef528765f3696fce9c32e0370ae8fb891206fb7575a1f538f",
+      "linkNormalizedLines": 0
+    },
+    {
+      "sourceRelativePath": "validation/v25-role-access-1440.png",
+      "destination": "docs/设计包/validation/v25-role-access-1440.png",
+      "bytes": 112316,
+      "sourceSha256": "3fb9726af598c8ef57071977070b5f206b8855d2b7c7895b8c214e9ed4f3a616",
+      "destinationSha256": "3fb9726af598c8ef57071977070b5f206b8855d2b7c7895b8c214e9ed4f3a616",
+      "linkNormalizedLines": 0
+    },
+    {
+      "sourceRelativePath": "validation/v25-role-access-390.png",
+      "destination": "docs/设计包/validation/v25-role-access-390.png",
+      "bytes": 70849,
+      "sourceSha256": "f369e3826e2ecb7e6db23d033bbf3f9c865be548d70283f0d38335f78a65679c",
+      "destinationSha256": "f369e3826e2ecb7e6db23d033bbf3f9c865be548d70283f0d38335f78a65679c",
+      "linkNormalizedLines": 0
+    },
+    {
+      "sourceRelativePath": "validation/v25-role-api-1440.png",
+      "destination": "docs/设计包/validation/v25-role-api-1440.png",
+      "bytes": 102087,
+      "sourceSha256": "9b1292646ec1a21acc1d9df12d4da358a0eccb886649064adada256c8383aa5c",
+      "destinationSha256": "9b1292646ec1a21acc1d9df12d4da358a0eccb886649064adada256c8383aa5c",
+      "linkNormalizedLines": 0
+    },
+    {
+      "sourceRelativePath": "validation/v25-role-api-390.png",
+      "destination": "docs/设计包/validation/v25-role-api-390.png",
+      "bytes": 58901,
+      "sourceSha256": "6be84ff59e899087292a0f855921b54c587edd471a231fcdac8df6f848132556",
+      "destinationSha256": "6be84ff59e899087292a0f855921b54c587edd471a231fcdac8df6f848132556",
+      "linkNormalizedLines": 0
+    },
+    {
+      "sourceRelativePath": "validation/v25-role-apiadmin-1440.png",
+      "destination": "docs/设计包/validation/v25-role-apiadmin-1440.png",
+      "bytes": 95416,
+      "sourceSha256": "d3beaf37f7243a1f19cb26ee6acc0e5ac35d23cfaf48a607391e451575bc5f19",
+      "destinationSha256": "d3beaf37f7243a1f19cb26ee6acc0e5ac35d23cfaf48a607391e451575bc5f19",
+      "linkNormalizedLines": 0
+    },
+    {
+      "sourceRelativePath": "validation/v25-role-apiadmin-390.png",
+      "destination": "docs/设计包/validation/v25-role-apiadmin-390.png",
+      "bytes": 55112,
+      "sourceSha256": "5af8604384ce3f94d0a441e83996e020d705c31d102f74b1fdb95c7a6af98e34",
+      "destinationSha256": "5af8604384ce3f94d0a441e83996e020d705c31d102f74b1fdb95c7a6af98e34",
+      "linkNormalizedLines": 0
+    },
+    {
+      "sourceRelativePath": "validation/v25-role-approver-1440.png",
+      "destination": "docs/设计包/validation/v25-role-approver-1440.png",
+      "bytes": 103913,
+      "sourceSha256": "b624101360362b97a82e68d22edb21fe75383883f8d6958142d4e45cefac9b52",
+      "destinationSha256": "b624101360362b97a82e68d22edb21fe75383883f8d6958142d4e45cefac9b52",
+      "linkNormalizedLines": 0
+    },
+    {
+      "sourceRelativePath": "validation/v25-role-approver-390.png",
+      "destination": "docs/设计包/validation/v25-role-approver-390.png",
+      "bytes": 62173,
+      "sourceSha256": "651b9bc5d864cfef226cd7e1c47cf4636f00fd0d352b1d045316985fd09c0143",
+      "destinationSha256": "651b9bc5d864cfef226cd7e1c47cf4636f00fd0d352b1d045316985fd09c0143",
+      "linkNormalizedLines": 0
+    },
+    {
+      "sourceRelativePath": "validation/v25-role-assignment-1440.png",
+      "destination": "docs/设计包/validation/v25-role-assignment-1440.png",
+      "bytes": 98343,
+      "sourceSha256": "003f64e58857701df4691ddeb72c56eeecbcb9f2aff98de36b493b43257f406a",
+      "destinationSha256": "003f64e58857701df4691ddeb72c56eeecbcb9f2aff98de36b493b43257f406a",
+      "linkNormalizedLines": 0
+    },
+    {
+      "sourceRelativePath": "validation/v25-role-assignment-390.png",
+      "destination": "docs/设计包/validation/v25-role-assignment-390.png",
+      "bytes": 56328,
+      "sourceSha256": "1f991209e972ef0379a750e7e516e2189a27d0b0833a01373eaa91e566be38a0",
+      "destinationSha256": "1f991209e972ef0379a750e7e516e2189a27d0b0833a01373eaa91e566be38a0",
+      "linkNormalizedLines": 0
+    },
+    {
+      "sourceRelativePath": "validation/v25-role-auditgeneral-1440.png",
+      "destination": "docs/设计包/validation/v25-role-auditgeneral-1440.png",
+      "bytes": 102069,
+      "sourceSha256": "0b5f9afc6bc3762d9164220aa772dbe77f273ac525dcb112dba5374a2539e46a",
+      "destinationSha256": "0b5f9afc6bc3762d9164220aa772dbe77f273ac525dcb112dba5374a2539e46a",
+      "linkNormalizedLines": 0
+    },
+    {
+      "sourceRelativePath": "validation/v25-role-auditgeneral-390.png",
+      "destination": "docs/设计包/validation/v25-role-auditgeneral-390.png",
+      "bytes": 57006,
+      "sourceSha256": "5ddeb3ad925b937862c675434a0c68ea5780d7b0c79c6ea453acbef9b15fd313",
+      "destinationSha256": "5ddeb3ad925b937862c675434a0c68ea5780d7b0c79c6ea453acbef9b15fd313",
+      "linkNormalizedLines": 0
+    },
+    {
+      "sourceRelativePath": "validation/v25-role-auditor-1440.png",
+      "destination": "docs/设计包/validation/v25-role-auditor-1440.png",
+      "bytes": 97123,
+      "sourceSha256": "57744b9442444da09c3649e46c76e6b55fb6aa0a9bedaf8c825c00ce96fa09c3",
+      "destinationSha256": "57744b9442444da09c3649e46c76e6b55fb6aa0a9bedaf8c825c00ce96fa09c3",
+      "linkNormalizedLines": 0
+    },
+    {
+      "sourceRelativePath": "validation/v25-role-auditor-390.png",
+      "destination": "docs/设计包/validation/v25-role-auditor-390.png",
+      "bytes": 55281,
+      "sourceSha256": "55bf6a1a1e0d8a1d488e1788303782a93a26c9aa7566e4bf5c60922b42eaa807",
+      "destinationSha256": "55bf6a1a1e0d8a1d488e1788303782a93a26c9aa7566e4bf5c60922b42eaa807",
+      "linkNormalizedLines": 0
+    },
+    {
+      "sourceRelativePath": "validation/v25-role-automation-1440.png",
+      "destination": "docs/设计包/validation/v25-role-automation-1440.png",
+      "bytes": 104675,
+      "sourceSha256": "a34cf33f97ebfa8ea67b1d60ee29ddde70fbd6f55f09fc1273e49cd5561a831a",
+      "destinationSha256": "a34cf33f97ebfa8ea67b1d60ee29ddde70fbd6f55f09fc1273e49cd5561a831a",
+      "linkNormalizedLines": 0
+    },
+    {
+      "sourceRelativePath": "validation/v25-role-automation-390.png",
+      "destination": "docs/设计包/validation/v25-role-automation-390.png",
+      "bytes": 58155,
+      "sourceSha256": "379bb60ae60f3d271d9b18e1fe798a9d7ff81f7d3f25122b2e6ffb7f21090449",
+      "destinationSha256": "379bb60ae60f3d271d9b18e1fe798a9d7ff81f7d3f25122b2e6ffb7f21090449",
+      "linkNormalizedLines": 0
+    },
+    {
+      "sourceRelativePath": "validation/v25-role-channel-1440.png",
+      "destination": "docs/设计包/validation/v25-role-channel-1440.png",
+      "bytes": 121275,
+      "sourceSha256": "779ff34f30f2ea09a7a0cb302ea784e18f73a65442698ec251d955b172364206",
+      "destinationSha256": "779ff34f30f2ea09a7a0cb302ea784e18f73a65442698ec251d955b172364206",
+      "linkNormalizedLines": 0
+    },
+    {
+      "sourceRelativePath": "validation/v25-role-channel-390.png",
+      "destination": "docs/设计包/validation/v25-role-channel-390.png",
+      "bytes": 70102,
+      "sourceSha256": "eb2ea71a72da86e3e4b174d7557a3e706bf6c2d6baa47456d458b866af241cf3",
+      "destinationSha256": "eb2ea71a72da86e3e4b174d7557a3e706bf6c2d6baa47456d458b866af241cf3",
+      "linkNormalizedLines": 0
+    },
+    {
+      "sourceRelativePath": "validation/v25-role-collab-1440.png",
+      "destination": "docs/设计包/validation/v25-role-collab-1440.png",
+      "bytes": 194065,
+      "sourceSha256": "779ac9e18432f462dce037f3f32ecc878a946278f2e10d0db5358766fca26ac2",
+      "destinationSha256": "779ac9e18432f462dce037f3f32ecc878a946278f2e10d0db5358766fca26ac2",
+      "linkNormalizedLines": 0
+    },
+    {
+      "sourceRelativePath": "validation/v25-role-collab-390.png",
+      "destination": "docs/设计包/validation/v25-role-collab-390.png",
+      "bytes": 143148,
+      "sourceSha256": "91b02356613680d693bb95795ee562ea5571605850117c472d9d57c3865d9a2b",
+      "destinationSha256": "91b02356613680d693bb95795ee562ea5571605850117c472d9d57c3865d9a2b",
+      "linkNormalizedLines": 0
+    },
+    {
+      "sourceRelativePath": "validation/v25-role-datasubject-1440.png",
+      "destination": "docs/设计包/validation/v25-role-datasubject-1440.png",
+      "bytes": 101023,
+      "sourceSha256": "f9e51f84d315fd02c96bec766dbc89350dea13b7d9c9a316553f4fd79568e094",
+      "destinationSha256": "f9e51f84d315fd02c96bec766dbc89350dea13b7d9c9a316553f4fd79568e094",
+      "linkNormalizedLines": 0
+    },
+    {
+      "sourceRelativePath": "validation/v25-role-datasubject-390.png",
+      "destination": "docs/设计包/validation/v25-role-datasubject-390.png",
+      "bytes": 58598,
+      "sourceSha256": "1f6c9f4e1c211fb9149f33a3fb5edfdc3638a709965dbe38f1cccb5e74c3c2d9",
+      "destinationSha256": "1f6c9f4e1c211fb9149f33a3fb5edfdc3638a709965dbe38f1cccb5e74c3c2d9",
+      "linkNormalizedLines": 0
+    },
+    {
+      "sourceRelativePath": "validation/v25-role-designer-1440.png",
+      "destination": "docs/设计包/validation/v25-role-designer-1440.png",
+      "bytes": 158841,
+      "sourceSha256": "1610e88efda4b28e29082173924e8bd8568189f22bb3839e1d7707a0bab6933e",
+      "destinationSha256": "1610e88efda4b28e29082173924e8bd8568189f22bb3839e1d7707a0bab6933e",
+      "linkNormalizedLines": 0
+    },
+    {
+      "sourceRelativePath": "validation/v25-role-designer-390.png",
+      "destination": "docs/设计包/validation/v25-role-designer-390.png",
+      "bytes": 100770,
+      "sourceSha256": "bf4fe37611e97da77fada688a67920e794568ada833d38bd007878e5eaf1f77d",
+      "destinationSha256": "bf4fe37611e97da77fada688a67920e794568ada833d38bd007878e5eaf1f77d",
+      "linkNormalizedLines": 0
+    },
+    {
+      "sourceRelativePath": "validation/v25-role-evolution-1440.png",
+      "destination": "docs/设计包/validation/v25-role-evolution-1440.png",
+      "bytes": 103149,
+      "sourceSha256": "c083ab968a7ea7d21f650b1d349c7723f93848900663cd85ed62fda2ac36ae21",
+      "destinationSha256": "c083ab968a7ea7d21f650b1d349c7723f93848900663cd85ed62fda2ac36ae21",
+      "linkNormalizedLines": 0
+    },
+    {
+      "sourceRelativePath": "validation/v25-role-evolution-390.png",
+      "destination": "docs/设计包/validation/v25-role-evolution-390.png",
+      "bytes": 59036,
+      "sourceSha256": "e78176596bfb65732c8d5f7856476fede698953419a3c93b2319f86887008c67",
+      "destinationSha256": "e78176596bfb65732c8d5f7856476fede698953419a3c93b2319f86887008c67",
+      "linkNormalizedLines": 0
+    },
+    {
+      "sourceRelativePath": "validation/v25-role-hr-1440.png",
+      "destination": "docs/设计包/validation/v25-role-hr-1440.png",
+      "bytes": 98960,
+      "sourceSha256": "a7b1887a22ecd83313abdbaf6b2efc66c6269564324e00a93c854c90a5ed8328",
+      "destinationSha256": "a7b1887a22ecd83313abdbaf6b2efc66c6269564324e00a93c854c90a5ed8328",
+      "linkNormalizedLines": 0
+    },
+    {
+      "sourceRelativePath": "validation/v25-role-hr-390.png",
+      "destination": "docs/设计包/validation/v25-role-hr-390.png",
+      "bytes": 59032,
+      "sourceSha256": "10007003b784ba341b3a3006b5417993fb7f7a60a131ee8534207b5c68cdd07d",
+      "destinationSha256": "10007003b784ba341b3a3006b5417993fb7f7a60a131ee8534207b5c68cdd07d",
+      "linkNormalizedLines": 0
+    },
+    {
+      "sourceRelativePath": "validation/v25-role-identity-1440.png",
+      "destination": "docs/设计包/validation/v25-role-identity-1440.png",
+      "bytes": 106437,
+      "sourceSha256": "5d5dd1ae8ff02008fe0c75de50af67b0c83a2928013284447b9c5d6ca7d05535",
+      "destinationSha256": "5d5dd1ae8ff02008fe0c75de50af67b0c83a2928013284447b9c5d6ca7d05535",
+      "linkNormalizedLines": 0
+    },
+    {
+      "sourceRelativePath": "validation/v25-role-identity-390.png",
+      "destination": "docs/设计包/validation/v25-role-identity-390.png",
+      "bytes": 63970,
+      "sourceSha256": "29fb886fd6c14b3be92b94a6845dc577afe035924e5077bb5156714130c8a74c",
+      "destinationSha256": "29fb886fd6c14b3be92b94a6845dc577afe035924e5077bb5156714130c8a74c",
+      "linkNormalizedLines": 0
+    },
+    {
+      "sourceRelativePath": "validation/v25-role-initiator-1440.png",
+      "destination": "docs/设计包/validation/v25-role-initiator-1440.png",
+      "bytes": 108458,
+      "sourceSha256": "2e35a604969dd356875451487ea32f7b42f7ada940c8b459d0154e0354f485b0",
+      "destinationSha256": "2e35a604969dd356875451487ea32f7b42f7ada940c8b459d0154e0354f485b0",
+      "linkNormalizedLines": 0
+    },
+    {
+      "sourceRelativePath": "validation/v25-role-initiator-390.png",
+      "destination": "docs/设计包/validation/v25-role-initiator-390.png",
+      "bytes": 59719,
+      "sourceSha256": "e0b44a9894f920c137888529d56870729d52e5677b0c7b059af534810e48b590",
+      "destinationSha256": "e0b44a9894f920c137888529d56870729d52e5677b0c7b059af534810e48b590",
+      "linkNormalizedLines": 0
+    },
+    {
+      "sourceRelativePath": "validation/v25-role-interactor-1440.png",
+      "destination": "docs/设计包/validation/v25-role-interactor-1440.png",
+      "bytes": 106579,
+      "sourceSha256": "3612f0692ea550b5f26991f5a99ca8e111c2655e890e8c0b1d81eb5c2de205e6",
+      "destinationSha256": "3612f0692ea550b5f26991f5a99ca8e111c2655e890e8c0b1d81eb5c2de205e6",
+      "linkNormalizedLines": 0
+    },
+    {
+      "sourceRelativePath": "validation/v25-role-interactor-390.png",
+      "destination": "docs/设计包/validation/v25-role-interactor-390.png",
+      "bytes": 55273,
+      "sourceSha256": "71bd209df0132b5321dff8fa7cfd4242813233166397fe443a41a36bef981223",
+      "destinationSha256": "71bd209df0132b5321dff8fa7cfd4242813233166397fe443a41a36bef981223",
+      "linkNormalizedLines": 0
+    },
+    {
+      "sourceRelativePath": "validation/v25-role-knowledge-1440.png",
+      "destination": "docs/设计包/validation/v25-role-knowledge-1440.png",
+      "bytes": 132014,
+      "sourceSha256": "8a78ecfa821469fd4967466de20a4d36e997feca1bb52a47ed7c00d18b0ac9b3",
+      "destinationSha256": "8a78ecfa821469fd4967466de20a4d36e997feca1bb52a47ed7c00d18b0ac9b3",
+      "linkNormalizedLines": 0
+    },
+    {
+      "sourceRelativePath": "validation/v25-role-knowledge-390.png",
+      "destination": "docs/设计包/validation/v25-role-knowledge-390.png",
+      "bytes": 82718,
+      "sourceSha256": "e4e597f7135bdff1ac6884aaa354f0e36dced1ef977a26456a107a5d837e6919",
+      "destinationSha256": "e4e597f7135bdff1ac6884aaa354f0e36dced1ef977a26456a107a5d837e6919",
+      "linkNormalizedLines": 0
+    },
+    {
+      "sourceRelativePath": "validation/v25-role-knowledgeadmin-1440.png",
+      "destination": "docs/设计包/validation/v25-role-knowledgeadmin-1440.png",
+      "bytes": 108441,
+      "sourceSha256": "f5d6dca048043f8653249c4bdc28633f43af02e648371c1ca99af3b8cbc84387",
+      "destinationSha256": "f5d6dca048043f8653249c4bdc28633f43af02e648371c1ca99af3b8cbc84387",
+      "linkNormalizedLines": 0
+    },
+    {
+      "sourceRelativePath": "validation/v25-role-knowledgeadmin-390.png",
+      "destination": "docs/设计包/validation/v25-role-knowledgeadmin-390.png",
+      "bytes": 57263,
+      "sourceSha256": "0fe54fd0d74d3e3fd74123fae6abc20489fe4171526be3a75894a1ac9cb6b164",
+      "destinationSha256": "0fe54fd0d74d3e3fd74123fae6abc20489fe4171526be3a75894a1ac9cb6b164",
+      "linkNormalizedLines": 0
+    },
+    {
+      "sourceRelativePath": "validation/v25-role-main-1440.png",
+      "destination": "docs/设计包/validation/v25-role-main-1440.png",
+      "bytes": 213234,
+      "sourceSha256": "10d93123b3e0a71d987f7d59ebb84c473d60b7d250d374a43dd9732d3205a7c8",
+      "destinationSha256": "10d93123b3e0a71d987f7d59ebb84c473d60b7d250d374a43dd9732d3205a7c8",
+      "linkNormalizedLines": 0
+    },
+    {
+      "sourceRelativePath": "validation/v25-role-main-390.png",
+      "destination": "docs/设计包/validation/v25-role-main-390.png",
+      "bytes": 158765,
+      "sourceSha256": "94311204db6a8debaac001df7de012fabe83ea78128e1d4647b1612d02387ae3",
+      "destinationSha256": "94311204db6a8debaac001df7de012fabe83ea78128e1d4647b1612d02387ae3",
+      "linkNormalizedLines": 0
+    },
+    {
+      "sourceRelativePath": "validation/v25-role-member-1440.png",
+      "destination": "docs/设计包/validation/v25-role-member-1440.png",
+      "bytes": 108699,
+      "sourceSha256": "9cd8e92ba78252a0ab01295a6ec8c9c37feaf46b0d01e154a287fbbe8a2c8729",
+      "destinationSha256": "9cd8e92ba78252a0ab01295a6ec8c9c37feaf46b0d01e154a287fbbe8a2c8729",
+      "linkNormalizedLines": 0
+    },
+    {
+      "sourceRelativePath": "validation/v25-role-member-390.png",
+      "destination": "docs/设计包/validation/v25-role-member-390.png",
+      "bytes": 60813,
+      "sourceSha256": "15b549a239fc0575592ac0f3629f5419a7d7cd5acbe76ca217a9916874a66c0f",
+      "destinationSha256": "15b549a239fc0575592ac0f3629f5419a7d7cd5acbe76ca217a9916874a66c0f",
+      "linkNormalizedLines": 0
+    },
+    {
+      "sourceRelativePath": "validation/v25-role-org-1440.png",
+      "destination": "docs/设计包/validation/v25-role-org-1440.png",
+      "bytes": 100527,
+      "sourceSha256": "5549ae70b913fa09f0496c9a63112e41c10dcbc5aa63d32550aab6057a6458cf",
+      "destinationSha256": "5549ae70b913fa09f0496c9a63112e41c10dcbc5aa63d32550aab6057a6458cf",
+      "linkNormalizedLines": 0
+    },
+    {
+      "sourceRelativePath": "validation/v25-role-org-390.png",
+      "destination": "docs/设计包/validation/v25-role-org-390.png",
+      "bytes": 58993,
+      "sourceSha256": "b7a18cbd02e343251a56500ebab09a20dc64a7091f3b753b8ad8367144ef694b",
+      "destinationSha256": "b7a18cbd02e343251a56500ebab09a20dc64a7091f3b753b8ad8367144ef694b",
+      "linkNormalizedLines": 0
+    },
+    {
+      "sourceRelativePath": "validation/v25-role-policy-1440.png",
+      "destination": "docs/设计包/validation/v25-role-policy-1440.png",
+      "bytes": 127048,
+      "sourceSha256": "f28468bd6062312a1a3e790bccdcbe8c85a7a78c324c4b86f93ec9e1203936e6",
+      "destinationSha256": "f28468bd6062312a1a3e790bccdcbe8c85a7a78c324c4b86f93ec9e1203936e6",
+      "linkNormalizedLines": 0
+    },
+    {
+      "sourceRelativePath": "validation/v25-role-policy-390.png",
+      "destination": "docs/设计包/validation/v25-role-policy-390.png",
+      "bytes": 83912,
+      "sourceSha256": "a29f7cbbe981410c02d70ce1b959b2d54cfa6cdcdfa3d361fab827954a889353",
+      "destinationSha256": "a29f7cbbe981410c02d70ce1b959b2d54cfa6cdcdfa3d361fab827954a889353",
+      "linkNormalizedLines": 0
+    },
+    {
+      "sourceRelativePath": "validation/v25-role-privacy-1440.png",
+      "destination": "docs/设计包/validation/v25-role-privacy-1440.png",
+      "bytes": 103546,
+      "sourceSha256": "12e2fb818a208444790e03f715ff1bcc7a01334675f6d5825c2ddfe6bf94ef18",
+      "destinationSha256": "12e2fb818a208444790e03f715ff1bcc7a01334675f6d5825c2ddfe6bf94ef18",
+      "linkNormalizedLines": 0
+    },
+    {
+      "sourceRelativePath": "validation/v25-role-privacy-390.png",
+      "destination": "docs/设计包/validation/v25-role-privacy-390.png",
+      "bytes": 61272,
+      "sourceSha256": "e1264421845b12c26bf8b60cd5a97cf8dc78e50c44b3786968d80b095959fd1e",
+      "destinationSha256": "e1264421845b12c26bf8b60cd5a97cf8dc78e50c44b3786968d80b095959fd1e",
+      "linkNormalizedLines": 0
+    },
+    {
+      "sourceRelativePath": "validation/v25-role-publisher-1440.png",
+      "destination": "docs/设计包/validation/v25-role-publisher-1440.png",
+      "bytes": 100555,
+      "sourceSha256": "9fc60f83ce278806d4807f642d8c99a6057cf0a7c3aeb8d126e9715ed7afe7f2",
+      "destinationSha256": "9fc60f83ce278806d4807f642d8c99a6057cf0a7c3aeb8d126e9715ed7afe7f2",
+      "linkNormalizedLines": 0
+    },
+    {
+      "sourceRelativePath": "validation/v25-role-publisher-390.png",
+      "destination": "docs/设计包/validation/v25-role-publisher-390.png",
+      "bytes": 59542,
+      "sourceSha256": "e0931ed67c30b87247d409ec6dea446e22640b496b58f19d949d122a84b54302",
+      "destinationSha256": "e0931ed67c30b87247d409ec6dea446e22640b496b58f19d949d122a84b54302",
+      "linkNormalizedLines": 0
+    },
+    {
+      "sourceRelativePath": "validation/v25-role-receiver-1440.png",
+      "destination": "docs/设计包/validation/v25-role-receiver-1440.png",
+      "bytes": 137142,
+      "sourceSha256": "0b453d75facc651b6419381909e266410fb4d5b6faca1e6842aa32d60fa963dc",
+      "destinationSha256": "0b453d75facc651b6419381909e266410fb4d5b6faca1e6842aa32d60fa963dc",
+      "linkNormalizedLines": 0
+    },
+    {
+      "sourceRelativePath": "validation/v25-role-receiver-390.png",
+      "destination": "docs/设计包/validation/v25-role-receiver-390.png",
+      "bytes": 85180,
+      "sourceSha256": "dc7801358dc0bb0968364e27d71e7042a129fafb80a23810886823b802973084",
+      "destinationSha256": "dc7801358dc0bb0968364e27d71e7042a129fafb80a23810886823b802973084",
+      "linkNormalizedLines": 0
+    },
+    {
+      "sourceRelativePath": "validation/v25-role-regression.json",
+      "destination": "docs/设计包/validation/v25-role-regression.json",
+      "bytes": 239297,
+      "sourceSha256": "89400743f21c51dbed384bfdc758d6c6d6d97a9fb7f4406b252d9afffa8cd1d3",
+      "destinationSha256": "89400743f21c51dbed384bfdc758d6c6d6d97a9fb7f4406b252d9afffa8cd1d3",
+      "linkNormalizedLines": 0
+    },
+    {
+      "sourceRelativePath": "validation/v25-role-release-1440.png",
+      "destination": "docs/设计包/validation/v25-role-release-1440.png",
+      "bytes": 94746,
+      "sourceSha256": "b75f4729a2a356099005123930058c52e283820151b4f18623a2d0ef73e0e4be",
+      "destinationSha256": "b75f4729a2a356099005123930058c52e283820151b4f18623a2d0ef73e0e4be",
+      "linkNormalizedLines": 0
+    },
+    {
+      "sourceRelativePath": "validation/v25-role-release-390.png",
+      "destination": "docs/设计包/validation/v25-role-release-390.png",
+      "bytes": 53251,
+      "sourceSha256": "221bac8c92822051748f587a4085cd461c246b163bb262ab310fa93f588642ca",
+      "destinationSha256": "221bac8c92822051748f587a4085cd461c246b163bb262ab310fa93f588642ca",
+      "linkNormalizedLines": 0
+    },
+    {
+      "sourceRelativePath": "validation/v25-role-resource-1440.png",
+      "destination": "docs/设计包/validation/v25-role-resource-1440.png",
+      "bytes": 135757,
+      "sourceSha256": "6d9782e6ca2a3ddbdab2df598938c1866ab3fccfd64982ffa0adcb0551e9c043",
+      "destinationSha256": "6d9782e6ca2a3ddbdab2df598938c1866ab3fccfd64982ffa0adcb0551e9c043",
+      "linkNormalizedLines": 0
+    },
+    {
+      "sourceRelativePath": "validation/v25-role-resource-390.png",
+      "destination": "docs/设计包/validation/v25-role-resource-390.png",
+      "bytes": 85046,
+      "sourceSha256": "237b2a8b76adb8153cfeae17f4d56da9c4fbe6e38e25813e43705cc066657c88",
+      "destinationSha256": "237b2a8b76adb8153cfeae17f4d56da9c4fbe6e38e25813e43705cc066657c88",
+      "linkNormalizedLines": 0
+    },
+    {
+      "sourceRelativePath": "validation/v25-role-responsible-1440.png",
+      "destination": "docs/设计包/validation/v25-role-responsible-1440.png",
+      "bytes": 130731,
+      "sourceSha256": "8b8a0180e58b2eb0f86b0fe0bb2aee88ca7ec5ca4465f3345b460c92d65c3d31",
+      "destinationSha256": "8b8a0180e58b2eb0f86b0fe0bb2aee88ca7ec5ca4465f3345b460c92d65c3d31",
+      "linkNormalizedLines": 0
+    },
+    {
+      "sourceRelativePath": "validation/v25-role-responsible-390.png",
+      "destination": "docs/设计包/validation/v25-role-responsible-390.png",
+      "bytes": 80218,
+      "sourceSha256": "6527f5f78f5736104231dd107b9e7205dc87df0f9b53fe412b77146c3cdc4169",
+      "destinationSha256": "6527f5f78f5736104231dd107b9e7205dc87df0f9b53fe412b77146c3cdc4169",
+      "linkNormalizedLines": 0
+    },
+    {
+      "sourceRelativePath": "validation/v25-role-review-1440.png",
+      "destination": "docs/设计包/validation/v25-role-review-1440.png",
+      "bytes": 193746,
+      "sourceSha256": "e48a8306fe36ebda6ba1b771a7bee8518dfed83709de39d519de9d41f54b1ea1",
+      "destinationSha256": "e48a8306fe36ebda6ba1b771a7bee8518dfed83709de39d519de9d41f54b1ea1",
+      "linkNormalizedLines": 0
+    },
+    {
+      "sourceRelativePath": "validation/v25-role-review-390.png",
+      "destination": "docs/设计包/validation/v25-role-review-390.png",
+      "bytes": 143353,
+      "sourceSha256": "4a9967562e017fa85429ed69de5568b6fefcda9e0d4efbef34011a8f8e091a0f",
+      "destinationSha256": "4a9967562e017fa85429ed69de5568b6fefcda9e0d4efbef34011a8f8e091a0f",
+      "linkNormalizedLines": 0
+    },
+    {
+      "sourceRelativePath": "validation/v25-role-runtime-1440.png",
+      "destination": "docs/设计包/validation/v25-role-runtime-1440.png",
+      "bytes": 110526,
+      "sourceSha256": "56d4b22799825bd831eb8d1b346144a871b37c9879dba81d7420c8415c2df5eb",
+      "destinationSha256": "56d4b22799825bd831eb8d1b346144a871b37c9879dba81d7420c8415c2df5eb",
+      "linkNormalizedLines": 0
+    },
+    {
+      "sourceRelativePath": "validation/v25-role-runtime-390.png",
+      "destination": "docs/设计包/validation/v25-role-runtime-390.png",
+      "bytes": 68806,
+      "sourceSha256": "07bada4acd3e707e8b51a3f00cc8f2e69fd411d71ababb576a24ad09dd41ed0f",
+      "destinationSha256": "07bada4acd3e707e8b51a3f00cc8f2e69fd411d71ababb576a24ad09dd41ed0f",
+      "linkNormalizedLines": 0
+    },
+    {
+      "sourceRelativePath": "validation/v25-role-security-1440.png",
+      "destination": "docs/设计包/validation/v25-role-security-1440.png",
+      "bytes": 105802,
+      "sourceSha256": "4a26484e5b33dd946e638c1cc09c71de67119fd36188e2fa16b0cb91a409b269",
+      "destinationSha256": "4a26484e5b33dd946e638c1cc09c71de67119fd36188e2fa16b0cb91a409b269",
+      "linkNormalizedLines": 0
+    },
+    {
+      "sourceRelativePath": "validation/v25-role-security-390.png",
+      "destination": "docs/设计包/validation/v25-role-security-390.png",
+      "bytes": 63276,
+      "sourceSha256": "b184426ac6611e1612bff3e7722a736b9f7d7c893aece18b6276bdf98299b8d7",
+      "destinationSha256": "b184426ac6611e1612bff3e7722a736b9f7d7c893aece18b6276bdf98299b8d7",
+      "linkNormalizedLines": 0
+    },
+    {
+      "sourceRelativePath": "validation/v25-role-securityadmin-1440.png",
+      "destination": "docs/设计包/validation/v25-role-securityadmin-1440.png",
+      "bytes": 104380,
+      "sourceSha256": "25d34920a526fb3008caa1a7f07e38d80480190c5c4f514054fc8c5e2c3b2a2f",
+      "destinationSha256": "25d34920a526fb3008caa1a7f07e38d80480190c5c4f514054fc8c5e2c3b2a2f",
+      "linkNormalizedLines": 0
+    },
+    {
+      "sourceRelativePath": "validation/v25-role-securityadmin-390.png",
+      "destination": "docs/设计包/validation/v25-role-securityadmin-390.png",
+      "bytes": 60556,
+      "sourceSha256": "834c9f4d70b011d00d5b1241e402e04b44ade159f1fcf7c5bb08c72e504c1b33",
+      "destinationSha256": "834c9f4d70b011d00d5b1241e402e04b44ade159f1fcf7c5bb08c72e504c1b33",
+      "linkNormalizedLines": 0
+    },
+    {
+      "sourceRelativePath": "validation/v25-role-skill-1440.png",
+      "destination": "docs/设计包/validation/v25-role-skill-1440.png",
+      "bytes": 137397,
+      "sourceSha256": "a98ca735aa52ed84847df53fa98da0861e5e13d91b608dbbf6aee8067e1e1050",
+      "destinationSha256": "a98ca735aa52ed84847df53fa98da0861e5e13d91b608dbbf6aee8067e1e1050",
+      "linkNormalizedLines": 0
+    },
+    {
+      "sourceRelativePath": "validation/v25-role-skill-390.png",
+      "destination": "docs/设计包/validation/v25-role-skill-390.png",
+      "bytes": 87348,
+      "sourceSha256": "23e60638944b8ae2e6b661341f5842b0f6257dde7f619db80f348c67da0d50de",
+      "destinationSha256": "23e60638944b8ae2e6b661341f5842b0f6257dde7f619db80f348c67da0d50de",
+      "linkNormalizedLines": 0
+    },
+    {
+      "sourceRelativePath": "validation/v25-role-team-1440.png",
+      "destination": "docs/设计包/validation/v25-role-team-1440.png",
+      "bytes": 111041,
+      "sourceSha256": "b57be5487b825fc0844393dfd997c84c0b01436449fa9900b6f0548e47732ee1",
+      "destinationSha256": "b57be5487b825fc0844393dfd997c84c0b01436449fa9900b6f0548e47732ee1",
+      "linkNormalizedLines": 0
+    },
+    {
+      "sourceRelativePath": "validation/v25-role-team-390.png",
+      "destination": "docs/设计包/validation/v25-role-team-390.png",
+      "bytes": 59692,
+      "sourceSha256": "542cdca2edc27257e6ff7f05e0730ea39f474ab0de49fad386f055efc2a4cb05",
+      "destinationSha256": "542cdca2edc27257e6ff7f05e0730ea39f474ab0de49fad386f055efc2a4cb05",
+      "linkNormalizedLines": 0
+    },
+    {
+      "sourceRelativePath": "validation/v25-role-tech-1440.png",
+      "destination": "docs/设计包/validation/v25-role-tech-1440.png",
+      "bytes": 149608,
+      "sourceSha256": "3f2142ffbcd333b38cdf3dfd1d0006c371eae4781d3d5fd9747cda9cd9215afc",
+      "destinationSha256": "3f2142ffbcd333b38cdf3dfd1d0006c371eae4781d3d5fd9747cda9cd9215afc",
+      "linkNormalizedLines": 0
+    },
+    {
+      "sourceRelativePath": "validation/v25-role-tech-390.png",
+      "destination": "docs/设计包/validation/v25-role-tech-390.png",
+      "bytes": 97276,
+      "sourceSha256": "296c961ccb28bca3e1fb65b8ee777bc5ab22eb5168e1289bef049edbff35269b",
+      "destinationSha256": "296c961ccb28bca3e1fb65b8ee777bc5ab22eb5168e1289bef049edbff35269b",
+      "linkNormalizedLines": 0
+    },
+    {
+      "sourceRelativePath": "validation/v25-role-tenant-1440.png",
+      "destination": "docs/设计包/validation/v25-role-tenant-1440.png",
+      "bytes": 96241,
+      "sourceSha256": "6e29ea8f907968b114a32ab6e7a50e143190486e9d31c01fc24f3b15fe98e391",
+      "destinationSha256": "6e29ea8f907968b114a32ab6e7a50e143190486e9d31c01fc24f3b15fe98e391",
+      "linkNormalizedLines": 0
+    },
+    {
+      "sourceRelativePath": "validation/v25-role-tenant-390.png",
+      "destination": "docs/设计包/validation/v25-role-tenant-390.png",
+      "bytes": 55304,
+      "sourceSha256": "ae43af5f6410f4bf7e3e9bc048aa276fed1d5b6d197700887d618f80c106ac24",
+      "destinationSha256": "ae43af5f6410f4bf7e3e9bc048aa276fed1d5b6d197700887d618f80c106ac24",
+      "linkNormalizedLines": 0
+    },
+    {
+      "sourceRelativePath": "validation/v25-role-tool-1440.png",
+      "destination": "docs/设计包/validation/v25-role-tool-1440.png",
+      "bytes": 142828,
+      "sourceSha256": "e6a8c58f754f9e23e04e4a27b0e6dee5df231a2d31d10ed62fe97fdd4905480b",
+      "destinationSha256": "e6a8c58f754f9e23e04e4a27b0e6dee5df231a2d31d10ed62fe97fdd4905480b",
+      "linkNormalizedLines": 0
+    },
+    {
+      "sourceRelativePath": "validation/v25-role-tool-390.png",
+      "destination": "docs/设计包/validation/v25-role-tool-390.png",
+      "bytes": 91026,
+      "sourceSha256": "19fc4655a2d85714b7e6fc3819c3878a34865ccbdc4f39fb832ca725e2e0ddc2",
+      "destinationSha256": "19fc4655a2d85714b7e6fc3819c3878a34865ccbdc4f39fb832ca725e2e0ddc2",
+      "linkNormalizedLines": 0
+    },
+    {
+      "sourceRelativePath": "validation/v25-role-workflow-1440.png",
+      "destination": "docs/设计包/validation/v25-role-workflow-1440.png",
+      "bytes": 113807,
+      "sourceSha256": "623bf1863311d652d24bcf76ad6dcb984ad3f630842de34a4eb098929eb6f4b8",
+      "destinationSha256": "623bf1863311d652d24bcf76ad6dcb984ad3f630842de34a4eb098929eb6f4b8",
+      "linkNormalizedLines": 0
+    },
+    {
+      "sourceRelativePath": "validation/v25-role-workflow-390.png",
+      "destination": "docs/设计包/validation/v25-role-workflow-390.png",
+      "bytes": 60831,
+      "sourceSha256": "7e65f6fe7cec5300d66ca65d19bc74d5f450b87da9b7b6f33cc531a9e01563dc",
+      "destinationSha256": "7e65f6fe7cec5300d66ca65d19bc74d5f450b87da9b7b6f33cc531a9e01563dc",
+      "linkNormalizedLines": 0
+    },
+    {
+      "sourceRelativePath": "validation/v25-role-workforce-1440.png",
+      "destination": "docs/设计包/validation/v25-role-workforce-1440.png",
+      "bytes": 110393,
+      "sourceSha256": "984d4a524f10a3e34439c18440d72e18bc596ef0991b57d8099b5c1b4f72e896",
+      "destinationSha256": "984d4a524f10a3e34439c18440d72e18bc596ef0991b57d8099b5c1b4f72e896",
+      "linkNormalizedLines": 0
+    },
+    {
+      "sourceRelativePath": "validation/v25-role-workforce-390.png",
+      "destination": "docs/设计包/validation/v25-role-workforce-390.png",
+      "bytes": 58270,
+      "sourceSha256": "3d1ececa8a6da33426bd8a7d0e5719b50246b325f48e0f6e5c73cb56845bfdbd",
+      "destinationSha256": "3d1ececa8a6da33426bd8a7d0e5719b50246b325f48e0f6e5c73cb56845bfdbd",
+      "linkNormalizedLines": 0
+    },
+    {
+      "sourceRelativePath": "validation/v25-role-writer-1440.png",
+      "destination": "docs/设计包/validation/v25-role-writer-1440.png",
+      "bytes": 162157,
+      "sourceSha256": "3202153107f70c8123f4f198dbfd413e81b0f8f40c0e0b2a0516eed3ffab563d",
+      "destinationSha256": "3202153107f70c8123f4f198dbfd413e81b0f8f40c0e0b2a0516eed3ffab563d",
+      "linkNormalizedLines": 0
+    },
+    {
+      "sourceRelativePath": "validation/v25-role-writer-390.png",
+      "destination": "docs/设计包/validation/v25-role-writer-390.png",
+      "bytes": 106672,
+      "sourceSha256": "70d6162718102bafbe6c697526cc29f01fd9e50a0846c0bf033ff6a320af2639",
+      "destinationSha256": "70d6162718102bafbe6c697526cc29f01fd9e50a0846c0bf033ff6a320af2639",
+      "linkNormalizedLines": 0
+    },
+    {
+      "sourceRelativePath": "validation/v26-contract-field-source-audit.json",
+      "destination": "docs/设计包/validation/v26-contract-field-source-audit.json",
+      "bytes": 265,
+      "sourceSha256": "0c2d15761a3fed092fb7645e0307860965cdc24a9cc8aebb514ff6aef989c763",
+      "destinationSha256": "0c2d15761a3fed092fb7645e0307860965cdc24a9cc8aebb514ff6aef989c763",
+      "linkNormalizedLines": 0
+    },
+    {
+      "sourceRelativePath": "validation/v26-document-validation.json",
+      "destination": "docs/设计包/validation/v26-document-validation.json",
+      "bytes": 4530,
+      "sourceSha256": "65f6a3e2e3e5165c527587f9b40d6b63cf3cb025981fa4277e8ad4e19c6c7032",
+      "destinationSha256": "65f6a3e2e3e5165c527587f9b40d6b63cf3cb025981fa4277e8ad4e19c6c7032",
+      "linkNormalizedLines": 0
+    },
+    {
+      "sourceRelativePath": "validation/v26-field-audit.json",
+      "destination": "docs/设计包/validation/v26-field-audit.json",
+      "bytes": 235717,
+      "sourceSha256": "990cf0fb64ee0023a03bb76e786498927e5c0f8d6caebf045bd94bf8e5eaa689",
+      "destinationSha256": "990cf0fb64ee0023a03bb76e786498927e5c0f8d6caebf045bd94bf8e5eaa689",
+      "linkNormalizedLines": 0
+    },
+    {
+      "sourceRelativePath": "validation/v26-fields-contract-1024.png",
+      "destination": "docs/设计包/validation/v26-fields-contract-1024.png",
+      "bytes": 195039,
+      "sourceSha256": "436149f1efcb56613e0756c904e8821fc607426adcfbb77abf910b0ef9774593",
+      "destinationSha256": "436149f1efcb56613e0756c904e8821fc607426adcfbb77abf910b0ef9774593",
+      "linkNormalizedLines": 0
+    },
+    {
+      "sourceRelativePath": "validation/v26-fields-contract-1440.png",
+      "destination": "docs/设计包/validation/v26-fields-contract-1440.png",
+      "bytes": 203757,
+      "sourceSha256": "006c23c9bcb1b2fdede44d0c27b49aaf839ab25aaeb60c5266d3b1079ed64149",
+      "destinationSha256": "006c23c9bcb1b2fdede44d0c27b49aaf839ab25aaeb60c5266d3b1079ed64149",
+      "linkNormalizedLines": 0
+    },
+    {
+      "sourceRelativePath": "validation/v26-fields-contract-390.png",
+      "destination": "docs/设计包/validation/v26-fields-contract-390.png",
+      "bytes": 148658,
+      "sourceSha256": "f6697a4e8cfadf2b330bd03af267fc04754ff25fbd0c6b7bdbdd5c070639faab",
+      "destinationSha256": "f6697a4e8cfadf2b330bd03af267fc04754ff25fbd0c6b7bdbdd5c070639faab",
+      "linkNormalizedLines": 0
+    },
+    {
+      "sourceRelativePath": "validation/v26-fields-expense-1024.png",
+      "destination": "docs/设计包/validation/v26-fields-expense-1024.png",
+      "bytes": 193694,
+      "sourceSha256": "875318b514e62014bec8dc196df6131192f93dc28563c3ae0b18623e6a8f29e2",
+      "destinationSha256": "875318b514e62014bec8dc196df6131192f93dc28563c3ae0b18623e6a8f29e2",
+      "linkNormalizedLines": 0
+    },
+    {
+      "sourceRelativePath": "validation/v26-fields-expense-1440.png",
+      "destination": "docs/设计包/validation/v26-fields-expense-1440.png",
+      "bytes": 202053,
+      "sourceSha256": "3b7f1b83504e7349061df74df56ec0005bbd58a3b352776a8a8e4a8c9e1098c3",
+      "destinationSha256": "3b7f1b83504e7349061df74df56ec0005bbd58a3b352776a8a8e4a8c9e1098c3",
+      "linkNormalizedLines": 0
+    },
+    {
+      "sourceRelativePath": "validation/v26-fields-expense-390.png",
+      "destination": "docs/设计包/validation/v26-fields-expense-390.png",
+      "bytes": 147463,
+      "sourceSha256": "fe7c17b814a88b95e482a3d84c474e02a0dfedc10c6145bcd087ab90be35787c",
+      "destinationSha256": "fe7c17b814a88b95e482a3d84c474e02a0dfedc10c6145bcd087ab90be35787c",
+      "linkNormalizedLines": 0
+    },
+    {
+      "sourceRelativePath": "validation/v26-fields-people-1024.png",
+      "destination": "docs/设计包/validation/v26-fields-people-1024.png",
+      "bytes": 189952,
+      "sourceSha256": "5f1ba339f3ba80460911cdff058f101f80f753dc82e0a465441fe9d32739ba0c",
+      "destinationSha256": "5f1ba339f3ba80460911cdff058f101f80f753dc82e0a465441fe9d32739ba0c",
+      "linkNormalizedLines": 0
+    },
+    {
+      "sourceRelativePath": "validation/v26-fields-people-1440.png",
+      "destination": "docs/设计包/validation/v26-fields-people-1440.png",
+      "bytes": 198360,
+      "sourceSha256": "812c55e476d9a74c96e9809b68d477e9b8b1fc8d430b225c43f2f46b799d5efb",
+      "destinationSha256": "812c55e476d9a74c96e9809b68d477e9b8b1fc8d430b225c43f2f46b799d5efb",
+      "linkNormalizedLines": 0
+    },
+    {
+      "sourceRelativePath": "validation/v26-fields-people-390.png",
+      "destination": "docs/设计包/validation/v26-fields-people-390.png",
+      "bytes": 144520,
+      "sourceSha256": "e25e1091d0f970eb42d63bf0c0c00e82ca0d528ef874435f92aaffa8f37ce3e3",
+      "destinationSha256": "e25e1091d0f970eb42d63bf0c0c00e82ca0d528ef874435f92aaffa8f37ce3e3",
+      "linkNormalizedLines": 0
+    },
+    {
+      "sourceRelativePath": "validation/v26-fields-purchase-1024.png",
+      "destination": "docs/设计包/validation/v26-fields-purchase-1024.png",
+      "bytes": 191069,
+      "sourceSha256": "afec021863465e9067ea7724cc104ba1f2d92af3ffc33ab28d10a592ec4cb330",
+      "destinationSha256": "afec021863465e9067ea7724cc104ba1f2d92af3ffc33ab28d10a592ec4cb330",
+      "linkNormalizedLines": 0
+    },
+    {
+      "sourceRelativePath": "validation/v26-fields-purchase-1440.png",
+      "destination": "docs/设计包/validation/v26-fields-purchase-1440.png",
+      "bytes": 199664,
+      "sourceSha256": "aee8cedabbb3092bcf6f05370e633df541c4ec6063ac62e6cc5486be989f60fe",
+      "destinationSha256": "aee8cedabbb3092bcf6f05370e633df541c4ec6063ac62e6cc5486be989f60fe",
+      "linkNormalizedLines": 0
+    },
+    {
+      "sourceRelativePath": "validation/v26-fields-purchase-390.png",
+      "destination": "docs/设计包/validation/v26-fields-purchase-390.png",
+      "bytes": 145486,
+      "sourceSha256": "f58629c7b3e761f43585411d9e5b23eaa30db6d2e966bc5d8b8470bd49272311",
+      "destinationSha256": "f58629c7b3e761f43585411d9e5b23eaa30db6d2e966bc5d8b8470bd49272311",
+      "linkNormalizedLines": 0
+    },
+    {
+      "sourceRelativePath": "validation/v26-market-1024.png",
+      "destination": "docs/设计包/validation/v26-market-1024.png",
+      "bytes": 187918,
+      "sourceSha256": "0ee1cd7e16df9ee1bc8b392808fbd29d38e64e58799a5df358bb02f3ce54ef6a",
+      "destinationSha256": "0ee1cd7e16df9ee1bc8b392808fbd29d38e64e58799a5df358bb02f3ce54ef6a",
+      "linkNormalizedLines": 0
+    },
+    {
+      "sourceRelativePath": "validation/v26-market-1440.png",
+      "destination": "docs/设计包/validation/v26-market-1440.png",
+      "bytes": 182147,
+      "sourceSha256": "c7b09773d1c64e70644eae22985591235a7785670e737f0c7b7c3daed9981d4e",
+      "destinationSha256": "c7b09773d1c64e70644eae22985591235a7785670e737f0c7b7c3daed9981d4e",
+      "linkNormalizedLines": 0
+    },
+    {
+      "sourceRelativePath": "validation/v26-market-390.png",
+      "destination": "docs/设计包/validation/v26-market-390.png",
+      "bytes": 147197,
+      "sourceSha256": "bb1c48194446e49afc5b16c56c762c623b8454cf067daae6650542a41f8c1ed1",
+      "destinationSha256": "bb1c48194446e49afc5b16c56c762c623b8454cf067daae6650542a41f8c1ed1",
+      "linkNormalizedLines": 0
+    },
+    {
+      "sourceRelativePath": "validation/v26-market-regression.json",
+      "destination": "docs/设计包/validation/v26-market-regression.json",
+      "bytes": 36226,
+      "sourceSha256": "c2553ae26c4ea34a8beb211797ddae154c102d9a7e741be246bbb9fb851afc79",
+      "destinationSha256": "c2553ae26c4ea34a8beb211797ddae154c102d9a7e741be246bbb9fb851afc79",
+      "linkNormalizedLines": 0
+    },
+    {
+      "sourceRelativePath": "validation/v26-oa-identity-inbox-1024.png",
+      "destination": "docs/设计包/validation/v26-oa-identity-inbox-1024.png",
+      "bytes": 214914,
+      "sourceSha256": "818e1e9c31a7d6daa88d177261db730fb2455f9674744bc190305c622ecc69ff",
+      "destinationSha256": "818e1e9c31a7d6daa88d177261db730fb2455f9674744bc190305c622ecc69ff",
+      "linkNormalizedLines": 0
+    },
+    {
+      "sourceRelativePath": "validation/v26-oa-identity-inbox-1440.png",
+      "destination": "docs/设计包/validation/v26-oa-identity-inbox-1440.png",
+      "bytes": 232296,
+      "sourceSha256": "5ca51ff3af0567626a0ae141c63ba413ff2a8153a81e64853f0e072267b15edb",
+      "destinationSha256": "5ca51ff3af0567626a0ae141c63ba413ff2a8153a81e64853f0e072267b15edb",
+      "linkNormalizedLines": 0
+    },
+    {
+      "sourceRelativePath": "validation/v26-oa-identity-inbox-390.png",
+      "destination": "docs/设计包/validation/v26-oa-identity-inbox-390.png",
+      "bytes": 168086,
+      "sourceSha256": "be1ff2a25c8e8a51524a6594e144e71343d7a1c47c92fcc0b0dce673af54fd81",
+      "destinationSha256": "be1ff2a25c8e8a51524a6594e144e71343d7a1c47c92fcc0b0dce673af54fd81",
+      "linkNormalizedLines": 0
+    },
+    {
+      "sourceRelativePath": "validation/v26-oa-main-inbox-1024.png",
+      "destination": "docs/设计包/validation/v26-oa-main-inbox-1024.png",
+      "bytes": 216414,
+      "sourceSha256": "a48a11ca69ddbfa36d44f62d39ce2ed6a48e7a63f950665dfa6a25cca8679b65",
+      "destinationSha256": "a48a11ca69ddbfa36d44f62d39ce2ed6a48e7a63f950665dfa6a25cca8679b65",
+      "linkNormalizedLines": 0
+    },
+    {
+      "sourceRelativePath": "validation/v26-oa-main-inbox-1440.png",
+      "destination": "docs/设计包/validation/v26-oa-main-inbox-1440.png",
+      "bytes": 233752,
+      "sourceSha256": "4dc4137d3be67409b0a9fb78f16a0ac6115e12459ace75f0081ca68c7a368cdd",
+      "destinationSha256": "4dc4137d3be67409b0a9fb78f16a0ac6115e12459ace75f0081ca68c7a368cdd",
+      "linkNormalizedLines": 0
+    },
+    {
+      "sourceRelativePath": "validation/v26-oa-main-inbox-390.png",
+      "destination": "docs/设计包/validation/v26-oa-main-inbox-390.png",
+      "bytes": 166610,
+      "sourceSha256": "caf2f249f747aee9a8c6f86982a8ff08d3f431f981480656bd34028703399b6e",
+      "destinationSha256": "caf2f249f747aee9a8c6f86982a8ff08d3f431f981480656bd34028703399b6e",
+      "linkNormalizedLines": 0
+    },
+    {
+      "sourceRelativePath": "validation/v26-oa-main-task-1024.png",
+      "destination": "docs/设计包/validation/v26-oa-main-task-1024.png",
+      "bytes": 191193,
+      "sourceSha256": "9b97af4d647751bd38f8b865e128610fa7d075908d944c079ab44744f2c34387",
+      "destinationSha256": "9b97af4d647751bd38f8b865e128610fa7d075908d944c079ab44744f2c34387",
+      "linkNormalizedLines": 0
+    },
+    {
+      "sourceRelativePath": "validation/v26-oa-main-task-1440.png",
+      "destination": "docs/设计包/validation/v26-oa-main-task-1440.png",
+      "bytes": 199664,
+      "sourceSha256": "aee8cedabbb3092bcf6f05370e633df541c4ec6063ac62e6cc5486be989f60fe",
+      "destinationSha256": "aee8cedabbb3092bcf6f05370e633df541c4ec6063ac62e6cc5486be989f60fe",
+      "linkNormalizedLines": 0
+    },
+    {
+      "sourceRelativePath": "validation/v26-oa-main-task-390.png",
+      "destination": "docs/设计包/validation/v26-oa-main-task-390.png",
+      "bytes": 145486,
+      "sourceSha256": "f58629c7b3e761f43585411d9e5b23eaa30db6d2e966bc5d8b8470bd49272311",
+      "destinationSha256": "f58629c7b3e761f43585411d9e5b23eaa30db6d2e966bc5d8b8470bd49272311",
+      "linkNormalizedLines": 0
+    },
+    {
+      "sourceRelativePath": "validation/v26-oa-review-task-1024.png",
+      "destination": "docs/设计包/validation/v26-oa-review-task-1024.png",
+      "bytes": 194031,
+      "sourceSha256": "1fed44e71879db78abe5096684dfe67313c4ae8e34c568baa931f767ed123ac4",
+      "destinationSha256": "1fed44e71879db78abe5096684dfe67313c4ae8e34c568baa931f767ed123ac4",
+      "linkNormalizedLines": 0
+    },
+    {
+      "sourceRelativePath": "validation/v26-oa-review-task-1440.png",
+      "destination": "docs/设计包/validation/v26-oa-review-task-1440.png",
+      "bytes": 202653,
+      "sourceSha256": "f33740cf722b84f62c790fa54ee0b77008b069d735bf48c6fe7c6377ff998376",
+      "destinationSha256": "f33740cf722b84f62c790fa54ee0b77008b069d735bf48c6fe7c6377ff998376",
+      "linkNormalizedLines": 0
+    },
+    {
+      "sourceRelativePath": "validation/v26-oa-review-task-390.png",
+      "destination": "docs/设计包/validation/v26-oa-review-task-390.png",
+      "bytes": 147522,
+      "sourceSha256": "aaa042eae92405bfba956f5f489f4abac5d5a68ccdf235d4ebfe15b091f91f91",
+      "destinationSha256": "aaa042eae92405bfba956f5f489f4abac5d5a68ccdf235d4ebfe15b091f91f91",
+      "linkNormalizedLines": 0
+    },
+    {
+      "sourceRelativePath": "validation/v26-oa-validation.json",
+      "destination": "docs/设计包/validation/v26-oa-validation.json",
+      "bytes": 122523,
+      "sourceSha256": "3128d833734eecd361000283953a2837855c8033236a79d0a8e223032961b216",
+      "destinationSha256": "3128d833734eecd361000283953a2837855c8033236a79d0a8e223032961b216",
+      "linkNormalizedLines": 0
+    },
+    {
+      "sourceRelativePath": "validation/v26-preservation-baseline.json",
+      "destination": "docs/设计包/validation/v26-preservation-baseline.json",
+      "bytes": 2090,
+      "sourceSha256": "a4a015897a5a7c316209d2e1e2625052dd0cd7fd013fbe90296766b9d316e05f",
+      "destinationSha256": "a4a015897a5a7c316209d2e1e2625052dd0cd7fd013fbe90296766b9d316e05f",
+      "linkNormalizedLines": 0
+    },
+    {
+      "sourceRelativePath": "validation/v26-role-access-1440.png",
+      "destination": "docs/设计包/validation/v26-role-access-1440.png",
+      "bytes": 112326,
+      "sourceSha256": "25d3863eb65a41b06846d8b27f32a14c2ae3b95607ae32d9bbc03ec8902f4df2",
+      "destinationSha256": "25d3863eb65a41b06846d8b27f32a14c2ae3b95607ae32d9bbc03ec8902f4df2",
+      "linkNormalizedLines": 0
+    },
+    {
+      "sourceRelativePath": "validation/v26-role-access-390.png",
+      "destination": "docs/设计包/validation/v26-role-access-390.png",
+      "bytes": 70849,
+      "sourceSha256": "f369e3826e2ecb7e6db23d033bbf3f9c865be548d70283f0d38335f78a65679c",
+      "destinationSha256": "f369e3826e2ecb7e6db23d033bbf3f9c865be548d70283f0d38335f78a65679c",
+      "linkNormalizedLines": 0
+    },
+    {
+      "sourceRelativePath": "validation/v26-role-api-1440.png",
+      "destination": "docs/设计包/validation/v26-role-api-1440.png",
+      "bytes": 102102,
+      "sourceSha256": "ac8c687ba93cb540069e5c8ffba1f7ba8d4a3a9d9f9cb73ca3e55568ac7d69c0",
+      "destinationSha256": "ac8c687ba93cb540069e5c8ffba1f7ba8d4a3a9d9f9cb73ca3e55568ac7d69c0",
+      "linkNormalizedLines": 0
+    },
+    {
+      "sourceRelativePath": "validation/v26-role-api-390.png",
+      "destination": "docs/设计包/validation/v26-role-api-390.png",
+      "bytes": 58901,
+      "sourceSha256": "6be84ff59e899087292a0f855921b54c587edd471a231fcdac8df6f848132556",
+      "destinationSha256": "6be84ff59e899087292a0f855921b54c587edd471a231fcdac8df6f848132556",
+      "linkNormalizedLines": 0
+    },
+    {
+      "sourceRelativePath": "validation/v26-role-apiadmin-1440.png",
+      "destination": "docs/设计包/validation/v26-role-apiadmin-1440.png",
+      "bytes": 95407,
+      "sourceSha256": "0f59bd2137d35aff82f6fbbcdd7a00ed6e7414358da9eca9e92411e14aa19b32",
+      "destinationSha256": "0f59bd2137d35aff82f6fbbcdd7a00ed6e7414358da9eca9e92411e14aa19b32",
+      "linkNormalizedLines": 0
+    },
+    {
+      "sourceRelativePath": "validation/v26-role-apiadmin-390.png",
+      "destination": "docs/设计包/validation/v26-role-apiadmin-390.png",
+      "bytes": 55112,
+      "sourceSha256": "5af8604384ce3f94d0a441e83996e020d705c31d102f74b1fdb95c7a6af98e34",
+      "destinationSha256": "5af8604384ce3f94d0a441e83996e020d705c31d102f74b1fdb95c7a6af98e34",
+      "linkNormalizedLines": 0
+    },
+    {
+      "sourceRelativePath": "validation/v26-role-approver-1440.png",
+      "destination": "docs/设计包/validation/v26-role-approver-1440.png",
+      "bytes": 104203,
+      "sourceSha256": "1210f6de69a8164c006d98dd024848b0d8033e88a257ece1d5a5427a6cacfb18",
+      "destinationSha256": "1210f6de69a8164c006d98dd024848b0d8033e88a257ece1d5a5427a6cacfb18",
+      "linkNormalizedLines": 0
+    },
+    {
+      "sourceRelativePath": "validation/v26-role-approver-390.png",
+      "destination": "docs/设计包/validation/v26-role-approver-390.png",
+      "bytes": 62392,
+      "sourceSha256": "43da9b22213132648ad4017f360865860e87139ecf80c114ca55a94936fddf38",
+      "destinationSha256": "43da9b22213132648ad4017f360865860e87139ecf80c114ca55a94936fddf38",
+      "linkNormalizedLines": 0
+    },
+    {
+      "sourceRelativePath": "validation/v26-role-assignment-1440.png",
+      "destination": "docs/设计包/validation/v26-role-assignment-1440.png",
+      "bytes": 98365,
+      "sourceSha256": "a6c40f954450cbeb57d615104011964c11c3b1908aad2de2416f781b612c757b",
+      "destinationSha256": "a6c40f954450cbeb57d615104011964c11c3b1908aad2de2416f781b612c757b",
+      "linkNormalizedLines": 0
+    },
+    {
+      "sourceRelativePath": "validation/v26-role-assignment-390.png",
+      "destination": "docs/设计包/validation/v26-role-assignment-390.png",
+      "bytes": 56328,
+      "sourceSha256": "1f991209e972ef0379a750e7e516e2189a27d0b0833a01373eaa91e566be38a0",
+      "destinationSha256": "1f991209e972ef0379a750e7e516e2189a27d0b0833a01373eaa91e566be38a0",
+      "linkNormalizedLines": 0
+    },
+    {
+      "sourceRelativePath": "validation/v26-role-auditgeneral-1440.png",
+      "destination": "docs/设计包/validation/v26-role-auditgeneral-1440.png",
+      "bytes": 102094,
+      "sourceSha256": "0d995d1d10506ae9bf21b9849b2aa25b292a0b85080ebebca35fb2cc542c9863",
+      "destinationSha256": "0d995d1d10506ae9bf21b9849b2aa25b292a0b85080ebebca35fb2cc542c9863",
+      "linkNormalizedLines": 0
+    },
+    {
+      "sourceRelativePath": "validation/v26-role-auditgeneral-390.png",
+      "destination": "docs/设计包/validation/v26-role-auditgeneral-390.png",
+      "bytes": 57006,
+      "sourceSha256": "5ddeb3ad925b937862c675434a0c68ea5780d7b0c79c6ea453acbef9b15fd313",
+      "destinationSha256": "5ddeb3ad925b937862c675434a0c68ea5780d7b0c79c6ea453acbef9b15fd313",
+      "linkNormalizedLines": 0
+    },
+    {
+      "sourceRelativePath": "validation/v26-role-auditor-1440.png",
+      "destination": "docs/设计包/validation/v26-role-auditor-1440.png",
+      "bytes": 97115,
+      "sourceSha256": "9d9ce9b184b70ff2f4f5ecf0cbf4a7a67e34d9137dd13f6ced1d0b89f44f0853",
+      "destinationSha256": "9d9ce9b184b70ff2f4f5ecf0cbf4a7a67e34d9137dd13f6ced1d0b89f44f0853",
+      "linkNormalizedLines": 0
+    },
+    {
+      "sourceRelativePath": "validation/v26-role-auditor-390.png",
+      "destination": "docs/设计包/validation/v26-role-auditor-390.png",
+      "bytes": 55281,
+      "sourceSha256": "55bf6a1a1e0d8a1d488e1788303782a93a26c9aa7566e4bf5c60922b42eaa807",
+      "destinationSha256": "55bf6a1a1e0d8a1d488e1788303782a93a26c9aa7566e4bf5c60922b42eaa807",
+      "linkNormalizedLines": 0
+    },
+    {
+      "sourceRelativePath": "validation/v26-role-automation-1440.png",
+      "destination": "docs/设计包/validation/v26-role-automation-1440.png",
+      "bytes": 107215,
+      "sourceSha256": "f2bdda7ba26f093bfc57417696c7e43cba6591c5d0b39e9598ef5ea21b142c32",
+      "destinationSha256": "f2bdda7ba26f093bfc57417696c7e43cba6591c5d0b39e9598ef5ea21b142c32",
+      "linkNormalizedLines": 0
+    },
+    {
+      "sourceRelativePath": "validation/v26-role-automation-390.png",
+      "destination": "docs/设计包/validation/v26-role-automation-390.png",
+      "bytes": 60755,
+      "sourceSha256": "f07153928494bad31df8466b419f8176842a046fc6cd313cedac4efd20b953df",
+      "destinationSha256": "f07153928494bad31df8466b419f8176842a046fc6cd313cedac4efd20b953df",
+      "linkNormalizedLines": 0
+    },
+    {
+      "sourceRelativePath": "validation/v26-role-channel-1440.png",
+      "destination": "docs/设计包/validation/v26-role-channel-1440.png",
+      "bytes": 121290,
+      "sourceSha256": "79f3c16aae0be00ed5d9b454f1aae3f8ac327b4b4060d2d6c2b1efc8085641cf",
+      "destinationSha256": "79f3c16aae0be00ed5d9b454f1aae3f8ac327b4b4060d2d6c2b1efc8085641cf",
+      "linkNormalizedLines": 0
+    },
+    {
+      "sourceRelativePath": "validation/v26-role-channel-390.png",
+      "destination": "docs/设计包/validation/v26-role-channel-390.png",
+      "bytes": 70102,
+      "sourceSha256": "eb2ea71a72da86e3e4b174d7557a3e706bf6c2d6baa47456d458b866af241cf3",
+      "destinationSha256": "eb2ea71a72da86e3e4b174d7557a3e706bf6c2d6baa47456d458b866af241cf3",
+      "linkNormalizedLines": 0
+    },
+    {
+      "sourceRelativePath": "validation/v26-role-collab-1440.png",
+      "destination": "docs/设计包/validation/v26-role-collab-1440.png",
+      "bytes": 194026,
+      "sourceSha256": "363bbd82bd9e19cd5503d6fb57ec425b16a39db42207cf5c6f238b3894aaf81a",
+      "destinationSha256": "363bbd82bd9e19cd5503d6fb57ec425b16a39db42207cf5c6f238b3894aaf81a",
+      "linkNormalizedLines": 0
+    },
+    {
+      "sourceRelativePath": "validation/v26-role-collab-390.png",
+      "destination": "docs/设计包/validation/v26-role-collab-390.png",
+      "bytes": 143148,
+      "sourceSha256": "91b02356613680d693bb95795ee562ea5571605850117c472d9d57c3865d9a2b",
+      "destinationSha256": "91b02356613680d693bb95795ee562ea5571605850117c472d9d57c3865d9a2b",
+      "linkNormalizedLines": 0
+    },
+    {
+      "sourceRelativePath": "validation/v26-role-datasubject-1440.png",
+      "destination": "docs/设计包/validation/v26-role-datasubject-1440.png",
+      "bytes": 101027,
+      "sourceSha256": "4904290c984fddc1d26b930ee20d4ac3017920a69eb0d3ab46ff89599310e887",
+      "destinationSha256": "4904290c984fddc1d26b930ee20d4ac3017920a69eb0d3ab46ff89599310e887",
+      "linkNormalizedLines": 0
+    },
+    {
+      "sourceRelativePath": "validation/v26-role-datasubject-390.png",
+      "destination": "docs/设计包/validation/v26-role-datasubject-390.png",
+      "bytes": 58598,
+      "sourceSha256": "1f6c9f4e1c211fb9149f33a3fb5edfdc3638a709965dbe38f1cccb5e74c3c2d9",
+      "destinationSha256": "1f6c9f4e1c211fb9149f33a3fb5edfdc3638a709965dbe38f1cccb5e74c3c2d9",
+      "linkNormalizedLines": 0
+    },
+    {
+      "sourceRelativePath": "validation/v26-role-designer-1440.png",
+      "destination": "docs/设计包/validation/v26-role-designer-1440.png",
+      "bytes": 158829,
+      "sourceSha256": "eba995c093403b889a10cbc61fcef2dbfb6498f54853ee7601074b4ed89508b8",
+      "destinationSha256": "eba995c093403b889a10cbc61fcef2dbfb6498f54853ee7601074b4ed89508b8",
+      "linkNormalizedLines": 0
+    },
+    {
+      "sourceRelativePath": "validation/v26-role-designer-390.png",
+      "destination": "docs/设计包/validation/v26-role-designer-390.png",
+      "bytes": 100770,
+      "sourceSha256": "bf4fe37611e97da77fada688a67920e794568ada833d38bd007878e5eaf1f77d",
+      "destinationSha256": "bf4fe37611e97da77fada688a67920e794568ada833d38bd007878e5eaf1f77d",
+      "linkNormalizedLines": 0
+    },
+    {
+      "sourceRelativePath": "validation/v26-role-evolution-1440.png",
+      "destination": "docs/设计包/validation/v26-role-evolution-1440.png",
+      "bytes": 103143,
+      "sourceSha256": "624e6c88866a4bc3d4144af32ffdd9e5a4babb8ae5cc7611a5eead1102e40a47",
+      "destinationSha256": "624e6c88866a4bc3d4144af32ffdd9e5a4babb8ae5cc7611a5eead1102e40a47",
+      "linkNormalizedLines": 0
+    },
+    {
+      "sourceRelativePath": "validation/v26-role-evolution-390.png",
+      "destination": "docs/设计包/validation/v26-role-evolution-390.png",
+      "bytes": 59036,
+      "sourceSha256": "e78176596bfb65732c8d5f7856476fede698953419a3c93b2319f86887008c67",
+      "destinationSha256": "e78176596bfb65732c8d5f7856476fede698953419a3c93b2319f86887008c67",
+      "linkNormalizedLines": 0
+    },
+    {
+      "sourceRelativePath": "validation/v26-role-hr-1440.png",
+      "destination": "docs/设计包/validation/v26-role-hr-1440.png",
+      "bytes": 98948,
+      "sourceSha256": "7237af0c4e2e68790d323cc4ae3cd5fc746259f68cced31fefa24bef3080ad2c",
+      "destinationSha256": "7237af0c4e2e68790d323cc4ae3cd5fc746259f68cced31fefa24bef3080ad2c",
+      "linkNormalizedLines": 0
+    },
+    {
+      "sourceRelativePath": "validation/v26-role-hr-390.png",
+      "destination": "docs/设计包/validation/v26-role-hr-390.png",
+      "bytes": 59032,
+      "sourceSha256": "10007003b784ba341b3a3006b5417993fb7f7a60a131ee8534207b5c68cdd07d",
+      "destinationSha256": "10007003b784ba341b3a3006b5417993fb7f7a60a131ee8534207b5c68cdd07d",
+      "linkNormalizedLines": 0
+    },
+    {
+      "sourceRelativePath": "validation/v26-role-identity-1440.png",
+      "destination": "docs/设计包/validation/v26-role-identity-1440.png",
+      "bytes": 106441,
+      "sourceSha256": "e96f1d6390b3890947ca747bdcf17bcc05cf90aeb9432e3681b1f29e994e766b",
+      "destinationSha256": "e96f1d6390b3890947ca747bdcf17bcc05cf90aeb9432e3681b1f29e994e766b",
+      "linkNormalizedLines": 0
+    },
+    {
+      "sourceRelativePath": "validation/v26-role-identity-390.png",
+      "destination": "docs/设计包/validation/v26-role-identity-390.png",
+      "bytes": 63970,
+      "sourceSha256": "29fb886fd6c14b3be92b94a6845dc577afe035924e5077bb5156714130c8a74c",
+      "destinationSha256": "29fb886fd6c14b3be92b94a6845dc577afe035924e5077bb5156714130c8a74c",
+      "linkNormalizedLines": 0
+    },
+    {
+      "sourceRelativePath": "validation/v26-role-initiator-1440.png",
+      "destination": "docs/设计包/validation/v26-role-initiator-1440.png",
+      "bytes": 108449,
+      "sourceSha256": "cbab353df691ab65822cfe3993b3bc1c8f6b0e13bd3c1d99471f8323cf218d6b",
+      "destinationSha256": "cbab353df691ab65822cfe3993b3bc1c8f6b0e13bd3c1d99471f8323cf218d6b",
+      "linkNormalizedLines": 0
+    },
+    {
+      "sourceRelativePath": "validation/v26-role-initiator-390.png",
+      "destination": "docs/设计包/validation/v26-role-initiator-390.png",
+      "bytes": 59719,
+      "sourceSha256": "e0b44a9894f920c137888529d56870729d52e5677b0c7b059af534810e48b590",
+      "destinationSha256": "e0b44a9894f920c137888529d56870729d52e5677b0c7b059af534810e48b590",
+      "linkNormalizedLines": 0
+    },
+    {
+      "sourceRelativePath": "validation/v26-role-interactor-1440.png",
+      "destination": "docs/设计包/validation/v26-role-interactor-1440.png",
+      "bytes": 106584,
+      "sourceSha256": "1fdc95d1c4f9026d794de786a0a1b57dc791df79c163bf64e122135b8a26f953",
+      "destinationSha256": "1fdc95d1c4f9026d794de786a0a1b57dc791df79c163bf64e122135b8a26f953",
+      "linkNormalizedLines": 0
+    },
+    {
+      "sourceRelativePath": "validation/v26-role-interactor-390.png",
+      "destination": "docs/设计包/validation/v26-role-interactor-390.png",
+      "bytes": 55273,
+      "sourceSha256": "71bd209df0132b5321dff8fa7cfd4242813233166397fe443a41a36bef981223",
+      "destinationSha256": "71bd209df0132b5321dff8fa7cfd4242813233166397fe443a41a36bef981223",
+      "linkNormalizedLines": 0
+    },
+    {
+      "sourceRelativePath": "validation/v26-role-knowledge-1440.png",
+      "destination": "docs/设计包/validation/v26-role-knowledge-1440.png",
+      "bytes": 131997,
+      "sourceSha256": "9b21d01320f5cf4efc68f98793339b7c2ed21e758dbc4d41da030ce1720fa259",
+      "destinationSha256": "9b21d01320f5cf4efc68f98793339b7c2ed21e758dbc4d41da030ce1720fa259",
+      "linkNormalizedLines": 0
+    },
+    {
+      "sourceRelativePath": "validation/v26-role-knowledge-390.png",
+      "destination": "docs/设计包/validation/v26-role-knowledge-390.png",
+      "bytes": 82718,
+      "sourceSha256": "e4e597f7135bdff1ac6884aaa354f0e36dced1ef977a26456a107a5d837e6919",
+      "destinationSha256": "e4e597f7135bdff1ac6884aaa354f0e36dced1ef977a26456a107a5d837e6919",
+      "linkNormalizedLines": 0
+    },
+    {
+      "sourceRelativePath": "validation/v26-role-knowledgeadmin-1440.png",
+      "destination": "docs/设计包/validation/v26-role-knowledgeadmin-1440.png",
+      "bytes": 108457,
+      "sourceSha256": "c81181068bdf0ddf6c19a1a0ab4388062e76b57ef4036389ac98f829e747a6dd",
+      "destinationSha256": "c81181068bdf0ddf6c19a1a0ab4388062e76b57ef4036389ac98f829e747a6dd",
+      "linkNormalizedLines": 0
+    },
+    {
+      "sourceRelativePath": "validation/v26-role-knowledgeadmin-390.png",
+      "destination": "docs/设计包/validation/v26-role-knowledgeadmin-390.png",
+      "bytes": 57263,
+      "sourceSha256": "0fe54fd0d74d3e3fd74123fae6abc20489fe4171526be3a75894a1ac9cb6b164",
+      "destinationSha256": "0fe54fd0d74d3e3fd74123fae6abc20489fe4171526be3a75894a1ac9cb6b164",
+      "linkNormalizedLines": 0
+    },
+    {
+      "sourceRelativePath": "validation/v26-role-main-1440.png",
+      "destination": "docs/设计包/validation/v26-role-main-1440.png",
+      "bytes": 213188,
+      "sourceSha256": "dc342aa930f41ecbccf95c9bbaf7131abf9f7200d9cdee86a0859413c95ca30d",
+      "destinationSha256": "dc342aa930f41ecbccf95c9bbaf7131abf9f7200d9cdee86a0859413c95ca30d",
+      "linkNormalizedLines": 0
+    },
+    {
+      "sourceRelativePath": "validation/v26-role-main-390.png",
+      "destination": "docs/设计包/validation/v26-role-main-390.png",
+      "bytes": 158765,
+      "sourceSha256": "94311204db6a8debaac001df7de012fabe83ea78128e1d4647b1612d02387ae3",
+      "destinationSha256": "94311204db6a8debaac001df7de012fabe83ea78128e1d4647b1612d02387ae3",
+      "linkNormalizedLines": 0
+    },
+    {
+      "sourceRelativePath": "validation/v26-role-member-1440.png",
+      "destination": "docs/设计包/validation/v26-role-member-1440.png",
+      "bytes": 108706,
+      "sourceSha256": "cf8c101edb459d8b7bce292d4199c7e06ad6f631689c1ddd388599e99af0e6a6",
+      "destinationSha256": "cf8c101edb459d8b7bce292d4199c7e06ad6f631689c1ddd388599e99af0e6a6",
+      "linkNormalizedLines": 0
+    },
+    {
+      "sourceRelativePath": "validation/v26-role-member-390.png",
+      "destination": "docs/设计包/validation/v26-role-member-390.png",
+      "bytes": 60813,
+      "sourceSha256": "15b549a239fc0575592ac0f3629f5419a7d7cd5acbe76ca217a9916874a66c0f",
+      "destinationSha256": "15b549a239fc0575592ac0f3629f5419a7d7cd5acbe76ca217a9916874a66c0f",
+      "linkNormalizedLines": 0
+    },
+    {
+      "sourceRelativePath": "validation/v26-role-org-1440.png",
+      "destination": "docs/设计包/validation/v26-role-org-1440.png",
+      "bytes": 100536,
+      "sourceSha256": "06c37fdd4c6198bfe1074425ca1af74c1f4dd054787c6088dd6adcfd1187d38b",
+      "destinationSha256": "06c37fdd4c6198bfe1074425ca1af74c1f4dd054787c6088dd6adcfd1187d38b",
+      "linkNormalizedLines": 0
+    },
+    {
+      "sourceRelativePath": "validation/v26-role-org-390.png",
+      "destination": "docs/设计包/validation/v26-role-org-390.png",
+      "bytes": 58993,
+      "sourceSha256": "b7a18cbd02e343251a56500ebab09a20dc64a7091f3b753b8ad8367144ef694b",
+      "destinationSha256": "b7a18cbd02e343251a56500ebab09a20dc64a7091f3b753b8ad8367144ef694b",
+      "linkNormalizedLines": 0
+    },
+    {
+      "sourceRelativePath": "validation/v26-role-policy-1440.png",
+      "destination": "docs/设计包/validation/v26-role-policy-1440.png",
+      "bytes": 127066,
+      "sourceSha256": "2210f4cf9d5bb28c5351ecf4f221911b27aacf6adfb38c7136ab5c878e1d12af",
+      "destinationSha256": "2210f4cf9d5bb28c5351ecf4f221911b27aacf6adfb38c7136ab5c878e1d12af",
+      "linkNormalizedLines": 0
+    },
+    {
+      "sourceRelativePath": "validation/v26-role-policy-390.png",
+      "destination": "docs/设计包/validation/v26-role-policy-390.png",
+      "bytes": 83912,
+      "sourceSha256": "a29f7cbbe981410c02d70ce1b959b2d54cfa6cdcdfa3d361fab827954a889353",
+      "destinationSha256": "a29f7cbbe981410c02d70ce1b959b2d54cfa6cdcdfa3d361fab827954a889353",
+      "linkNormalizedLines": 0
+    },
+    {
+      "sourceRelativePath": "validation/v26-role-privacy-1440.png",
+      "destination": "docs/设计包/validation/v26-role-privacy-1440.png",
+      "bytes": 103565,
+      "sourceSha256": "e8fa9482c48a31046d40042a55b7c312592c7d362bdb004d57e9c8c94d32f5f2",
+      "destinationSha256": "e8fa9482c48a31046d40042a55b7c312592c7d362bdb004d57e9c8c94d32f5f2",
+      "linkNormalizedLines": 0
+    },
+    {
+      "sourceRelativePath": "validation/v26-role-privacy-390.png",
+      "destination": "docs/设计包/validation/v26-role-privacy-390.png",
+      "bytes": 61272,
+      "sourceSha256": "e1264421845b12c26bf8b60cd5a97cf8dc78e50c44b3786968d80b095959fd1e",
+      "destinationSha256": "e1264421845b12c26bf8b60cd5a97cf8dc78e50c44b3786968d80b095959fd1e",
+      "linkNormalizedLines": 0
+    },
+    {
+      "sourceRelativePath": "validation/v26-role-publisher-1440.png",
+      "destination": "docs/设计包/validation/v26-role-publisher-1440.png",
+      "bytes": 100555,
+      "sourceSha256": "d550a4dd4357bb525cfe1f3a2a9a64eca7b1cb58a5b76a092d81787b19f5373b",
+      "destinationSha256": "d550a4dd4357bb525cfe1f3a2a9a64eca7b1cb58a5b76a092d81787b19f5373b",
+      "linkNormalizedLines": 0
+    },
+    {
+      "sourceRelativePath": "validation/v26-role-publisher-390.png",
+      "destination": "docs/设计包/validation/v26-role-publisher-390.png",
+      "bytes": 59542,
+      "sourceSha256": "e0931ed67c30b87247d409ec6dea446e22640b496b58f19d949d122a84b54302",
+      "destinationSha256": "e0931ed67c30b87247d409ec6dea446e22640b496b58f19d949d122a84b54302",
+      "linkNormalizedLines": 0
+    },
+    {
+      "sourceRelativePath": "validation/v26-role-receiver-1440.png",
+      "destination": "docs/设计包/validation/v26-role-receiver-1440.png",
+      "bytes": 137105,
+      "sourceSha256": "e35d8b290b45860e440d063f142d79cfcf8956e13501c2305ba50d6e07444fbc",
+      "destinationSha256": "e35d8b290b45860e440d063f142d79cfcf8956e13501c2305ba50d6e07444fbc",
+      "linkNormalizedLines": 0
+    },
+    {
+      "sourceRelativePath": "validation/v26-role-receiver-390.png",
+      "destination": "docs/设计包/validation/v26-role-receiver-390.png",
+      "bytes": 85180,
+      "sourceSha256": "dc7801358dc0bb0968364e27d71e7042a129fafb80a23810886823b802973084",
+      "destinationSha256": "dc7801358dc0bb0968364e27d71e7042a129fafb80a23810886823b802973084",
+      "linkNormalizedLines": 0
+    },
+    {
+      "sourceRelativePath": "validation/v26-role-regression.json",
+      "destination": "docs/设计包/validation/v26-role-regression.json",
+      "bytes": 239420,
+      "sourceSha256": "4617e0e81ec24da7901a9301d4bf1c3176aff50e3d2f90183e6c44204177f6f1",
+      "destinationSha256": "4617e0e81ec24da7901a9301d4bf1c3176aff50e3d2f90183e6c44204177f6f1",
+      "linkNormalizedLines": 0
+    },
+    {
+      "sourceRelativePath": "validation/v26-role-release-1440.png",
+      "destination": "docs/设计包/validation/v26-role-release-1440.png",
+      "bytes": 94746,
+      "sourceSha256": "ad5099f26a8e4ac1a9af823416ee3726976be4e8aaab4f7f695ec523b86a82e0",
+      "destinationSha256": "ad5099f26a8e4ac1a9af823416ee3726976be4e8aaab4f7f695ec523b86a82e0",
+      "linkNormalizedLines": 0
+    },
+    {
+      "sourceRelativePath": "validation/v26-role-release-390.png",
+      "destination": "docs/设计包/validation/v26-role-release-390.png",
+      "bytes": 53251,
+      "sourceSha256": "221bac8c92822051748f587a4085cd461c246b163bb262ab310fa93f588642ca",
+      "destinationSha256": "221bac8c92822051748f587a4085cd461c246b163bb262ab310fa93f588642ca",
+      "linkNormalizedLines": 0
+    },
+    {
+      "sourceRelativePath": "validation/v26-role-resource-1440.png",
+      "destination": "docs/设计包/validation/v26-role-resource-1440.png",
+      "bytes": 135748,
+      "sourceSha256": "bbd415d0947092499b31b0cb2fcaf09904962189d9b54ad5442cef3809951bdb",
+      "destinationSha256": "bbd415d0947092499b31b0cb2fcaf09904962189d9b54ad5442cef3809951bdb",
+      "linkNormalizedLines": 0
+    },
+    {
+      "sourceRelativePath": "validation/v26-role-resource-390.png",
+      "destination": "docs/设计包/validation/v26-role-resource-390.png",
+      "bytes": 85046,
+      "sourceSha256": "237b2a8b76adb8153cfeae17f4d56da9c4fbe6e38e25813e43705cc066657c88",
+      "destinationSha256": "237b2a8b76adb8153cfeae17f4d56da9c4fbe6e38e25813e43705cc066657c88",
+      "linkNormalizedLines": 0
+    },
+    {
+      "sourceRelativePath": "validation/v26-role-responsible-1440.png",
+      "destination": "docs/设计包/validation/v26-role-responsible-1440.png",
+      "bytes": 130677,
+      "sourceSha256": "a1aac0f56ae86c961ed05af1975bb6a2cc47625dcca9585fe09e673e658ea43b",
+      "destinationSha256": "a1aac0f56ae86c961ed05af1975bb6a2cc47625dcca9585fe09e673e658ea43b",
+      "linkNormalizedLines": 0
+    },
+    {
+      "sourceRelativePath": "validation/v26-role-responsible-390.png",
+      "destination": "docs/设计包/validation/v26-role-responsible-390.png",
+      "bytes": 80218,
+      "sourceSha256": "6527f5f78f5736104231dd107b9e7205dc87df0f9b53fe412b77146c3cdc4169",
+      "destinationSha256": "6527f5f78f5736104231dd107b9e7205dc87df0f9b53fe412b77146c3cdc4169",
+      "linkNormalizedLines": 0
+    },
+    {
+      "sourceRelativePath": "validation/v26-role-review-1440.png",
+      "destination": "docs/设计包/validation/v26-role-review-1440.png",
+      "bytes": 193692,
+      "sourceSha256": "0f47a392c6bbd8cd89768c1386a3cd77603808f74bd9cfc5a1633bb56ac89985",
+      "destinationSha256": "0f47a392c6bbd8cd89768c1386a3cd77603808f74bd9cfc5a1633bb56ac89985",
+      "linkNormalizedLines": 0
+    },
+    {
+      "sourceRelativePath": "validation/v26-role-review-390.png",
+      "destination": "docs/设计包/validation/v26-role-review-390.png",
+      "bytes": 143353,
+      "sourceSha256": "4a9967562e017fa85429ed69de5568b6fefcda9e0d4efbef34011a8f8e091a0f",
+      "destinationSha256": "4a9967562e017fa85429ed69de5568b6fefcda9e0d4efbef34011a8f8e091a0f",
+      "linkNormalizedLines": 0
+    },
+    {
+      "sourceRelativePath": "validation/v26-role-runtime-1440.png",
+      "destination": "docs/设计包/validation/v26-role-runtime-1440.png",
+      "bytes": 110533,
+      "sourceSha256": "6a416c05f2135f3343503bbf87db84b0f13450b98ebd84414e1ddebc744efe62",
+      "destinationSha256": "6a416c05f2135f3343503bbf87db84b0f13450b98ebd84414e1ddebc744efe62",
+      "linkNormalizedLines": 0
+    },
+    {
+      "sourceRelativePath": "validation/v26-role-runtime-390.png",
+      "destination": "docs/设计包/validation/v26-role-runtime-390.png",
+      "bytes": 68806,
+      "sourceSha256": "07bada4acd3e707e8b51a3f00cc8f2e69fd411d71ababb576a24ad09dd41ed0f",
+      "destinationSha256": "07bada4acd3e707e8b51a3f00cc8f2e69fd411d71ababb576a24ad09dd41ed0f",
+      "linkNormalizedLines": 0
+    },
+    {
+      "sourceRelativePath": "validation/v26-role-security-1440.png",
+      "destination": "docs/设计包/validation/v26-role-security-1440.png",
+      "bytes": 105825,
+      "sourceSha256": "7d90f902d57faae847732a3c08c52d0ad4ea3e746e633eb25b2adcb5d8e4b545",
+      "destinationSha256": "7d90f902d57faae847732a3c08c52d0ad4ea3e746e633eb25b2adcb5d8e4b545",
+      "linkNormalizedLines": 0
+    },
+    {
+      "sourceRelativePath": "validation/v26-role-security-390.png",
+      "destination": "docs/设计包/validation/v26-role-security-390.png",
+      "bytes": 63276,
+      "sourceSha256": "b184426ac6611e1612bff3e7722a736b9f7d7c893aece18b6276bdf98299b8d7",
+      "destinationSha256": "b184426ac6611e1612bff3e7722a736b9f7d7c893aece18b6276bdf98299b8d7",
+      "linkNormalizedLines": 0
+    },
+    {
+      "sourceRelativePath": "validation/v26-role-securityadmin-1440.png",
+      "destination": "docs/设计包/validation/v26-role-securityadmin-1440.png",
+      "bytes": 104388,
+      "sourceSha256": "9b77f371889c4a027af758704dee67931badbdcd9a577df7c9e587849339161c",
+      "destinationSha256": "9b77f371889c4a027af758704dee67931badbdcd9a577df7c9e587849339161c",
+      "linkNormalizedLines": 0
+    },
+    {
+      "sourceRelativePath": "validation/v26-role-securityadmin-390.png",
+      "destination": "docs/设计包/validation/v26-role-securityadmin-390.png",
+      "bytes": 60556,
+      "sourceSha256": "834c9f4d70b011d00d5b1241e402e04b44ade159f1fcf7c5bb08c72e504c1b33",
+      "destinationSha256": "834c9f4d70b011d00d5b1241e402e04b44ade159f1fcf7c5bb08c72e504c1b33",
+      "linkNormalizedLines": 0
+    },
+    {
+      "sourceRelativePath": "validation/v26-role-skill-1440.png",
+      "destination": "docs/设计包/validation/v26-role-skill-1440.png",
+      "bytes": 137415,
+      "sourceSha256": "d7af297d0efd29ae41f9e810f4032dcf7fd289397a7036f07cb94957296ddfdb",
+      "destinationSha256": "d7af297d0efd29ae41f9e810f4032dcf7fd289397a7036f07cb94957296ddfdb",
+      "linkNormalizedLines": 0
+    },
+    {
+      "sourceRelativePath": "validation/v26-role-skill-390.png",
+      "destination": "docs/设计包/validation/v26-role-skill-390.png",
+      "bytes": 87348,
+      "sourceSha256": "23e60638944b8ae2e6b661341f5842b0f6257dde7f619db80f348c67da0d50de",
+      "destinationSha256": "23e60638944b8ae2e6b661341f5842b0f6257dde7f619db80f348c67da0d50de",
+      "linkNormalizedLines": 0
+    },
+    {
+      "sourceRelativePath": "validation/v26-role-team-1440.png",
+      "destination": "docs/设计包/validation/v26-role-team-1440.png",
+      "bytes": 111045,
+      "sourceSha256": "3cc2421609b7f8a83803844a1452b567e7fcefe2c9ad8fe11d1b468084ed4d15",
+      "destinationSha256": "3cc2421609b7f8a83803844a1452b567e7fcefe2c9ad8fe11d1b468084ed4d15",
+      "linkNormalizedLines": 0
+    },
+    {
+      "sourceRelativePath": "validation/v26-role-team-390.png",
+      "destination": "docs/设计包/validation/v26-role-team-390.png",
+      "bytes": 59692,
+      "sourceSha256": "542cdca2edc27257e6ff7f05e0730ea39f474ab0de49fad386f055efc2a4cb05",
+      "destinationSha256": "542cdca2edc27257e6ff7f05e0730ea39f474ab0de49fad386f055efc2a4cb05",
+      "linkNormalizedLines": 0
+    },
+    {
+      "sourceRelativePath": "validation/v26-role-tech-1440.png",
+      "destination": "docs/设计包/validation/v26-role-tech-1440.png",
+      "bytes": 149575,
+      "sourceSha256": "2c6487204f18c881c672a3de6a1831f0935afd7870988572edf6a89e6b6143ec",
+      "destinationSha256": "2c6487204f18c881c672a3de6a1831f0935afd7870988572edf6a89e6b6143ec",
+      "linkNormalizedLines": 0
+    },
+    {
+      "sourceRelativePath": "validation/v26-role-tech-390.png",
+      "destination": "docs/设计包/validation/v26-role-tech-390.png",
+      "bytes": 97276,
+      "sourceSha256": "296c961ccb28bca3e1fb65b8ee777bc5ab22eb5168e1289bef049edbff35269b",
+      "destinationSha256": "296c961ccb28bca3e1fb65b8ee777bc5ab22eb5168e1289bef049edbff35269b",
+      "linkNormalizedLines": 0
+    },
+    {
+      "sourceRelativePath": "validation/v26-role-tenant-1440.png",
+      "destination": "docs/设计包/validation/v26-role-tenant-1440.png",
+      "bytes": 96247,
+      "sourceSha256": "aaca6f03c40aafb454fefea15355458b0fb0332101ae6b18a3658d075342bb38",
+      "destinationSha256": "aaca6f03c40aafb454fefea15355458b0fb0332101ae6b18a3658d075342bb38",
+      "linkNormalizedLines": 0
+    },
+    {
+      "sourceRelativePath": "validation/v26-role-tenant-390.png",
+      "destination": "docs/设计包/validation/v26-role-tenant-390.png",
+      "bytes": 55304,
+      "sourceSha256": "ae43af5f6410f4bf7e3e9bc048aa276fed1d5b6d197700887d618f80c106ac24",
+      "destinationSha256": "ae43af5f6410f4bf7e3e9bc048aa276fed1d5b6d197700887d618f80c106ac24",
+      "linkNormalizedLines": 0
+    },
+    {
+      "sourceRelativePath": "validation/v26-role-tool-1440.png",
+      "destination": "docs/设计包/validation/v26-role-tool-1440.png",
+      "bytes": 142828,
+      "sourceSha256": "44dcd428c633e611753c762adb2c287a6500b209626b78e891192ce73f1c16ed",
+      "destinationSha256": "44dcd428c633e611753c762adb2c287a6500b209626b78e891192ce73f1c16ed",
+      "linkNormalizedLines": 0
+    },
+    {
+      "sourceRelativePath": "validation/v26-role-tool-390.png",
+      "destination": "docs/设计包/validation/v26-role-tool-390.png",
+      "bytes": 91026,
+      "sourceSha256": "19fc4655a2d85714b7e6fc3819c3878a34865ccbdc4f39fb832ca725e2e0ddc2",
+      "destinationSha256": "19fc4655a2d85714b7e6fc3819c3878a34865ccbdc4f39fb832ca725e2e0ddc2",
+      "linkNormalizedLines": 0
+    },
+    {
+      "sourceRelativePath": "validation/v26-role-workflow-1440.png",
+      "destination": "docs/设计包/validation/v26-role-workflow-1440.png",
+      "bytes": 114236,
+      "sourceSha256": "79850e910912f38872689bf094314b6b32bbca8e8a578185864435543955fd62",
+      "destinationSha256": "79850e910912f38872689bf094314b6b32bbca8e8a578185864435543955fd62",
+      "linkNormalizedLines": 0
+    },
+    {
+      "sourceRelativePath": "validation/v26-role-workflow-390.png",
+      "destination": "docs/设计包/validation/v26-role-workflow-390.png",
+      "bytes": 61212,
+      "sourceSha256": "dc5662288ffa529c81e80608d774c888c6a1cec1859f31cb33f1dae07e469b8c",
+      "destinationSha256": "dc5662288ffa529c81e80608d774c888c6a1cec1859f31cb33f1dae07e469b8c",
+      "linkNormalizedLines": 0
+    },
+    {
+      "sourceRelativePath": "validation/v26-role-workforce-1440.png",
+      "destination": "docs/设计包/validation/v26-role-workforce-1440.png",
+      "bytes": 110393,
+      "sourceSha256": "f6c359549594e5169f6727bcf810c70780ec46d7b0531d318d45e4b295e6cc0b",
+      "destinationSha256": "f6c359549594e5169f6727bcf810c70780ec46d7b0531d318d45e4b295e6cc0b",
+      "linkNormalizedLines": 0
+    },
+    {
+      "sourceRelativePath": "validation/v26-role-workforce-390.png",
+      "destination": "docs/设计包/validation/v26-role-workforce-390.png",
+      "bytes": 58270,
+      "sourceSha256": "3d1ececa8a6da33426bd8a7d0e5719b50246b325f48e0f6e5c73cb56845bfdbd",
+      "destinationSha256": "3d1ececa8a6da33426bd8a7d0e5719b50246b325f48e0f6e5c73cb56845bfdbd",
+      "linkNormalizedLines": 0
+    },
+    {
+      "sourceRelativePath": "validation/v26-role-writer-1440.png",
+      "destination": "docs/设计包/validation/v26-role-writer-1440.png",
+      "bytes": 162120,
+      "sourceSha256": "72b2faceffbeefdac07a333c65842ac5c3174b0d11423fc73eecfeef17b4ae54",
+      "destinationSha256": "72b2faceffbeefdac07a333c65842ac5c3174b0d11423fc73eecfeef17b4ae54",
+      "linkNormalizedLines": 0
+    },
+    {
+      "sourceRelativePath": "validation/v26-role-writer-390.png",
+      "destination": "docs/设计包/validation/v26-role-writer-390.png",
+      "bytes": 106672,
+      "sourceSha256": "70d6162718102bafbe6c697526cc29f01fd9e50a0846c0bf033ff6a320af2639",
+      "destinationSha256": "70d6162718102bafbe6c697526cc29f01fd9e50a0846c0bf033ff6a320af2639",
+      "linkNormalizedLines": 0
+    },
+    {
+      "sourceRelativePath": "validation/verify-qoder-market.cjs",
+      "destination": "docs/设计包/validation/verify-qoder-market.cjs",
+      "bytes": 8063,
+      "sourceSha256": "e4f5044c62a37a390c515ffaf919e2046f895cce6ad5367e7a3281f4bfedbd73",
+      "destinationSha256": "e4f5044c62a37a390c515ffaf919e2046f895cce6ad5367e7a3281f4bfedbd73",
+      "linkNormalizedLines": 0
+    },
+    {
+      "sourceRelativePath": "validation/verify-qoder-node.cjs",
+      "destination": "docs/设计包/validation/verify-qoder-node.cjs",
+      "bytes": 4727,
+      "sourceSha256": "35a5c5af2941d114e433ec9253e5d6e68cc37459c528db9b2f58367d3bd83d66",
+      "destinationSha256": "35a5c5af2941d114e433ec9253e5d6e68cc37459c528db9b2f58367d3bd83d66",
+      "linkNormalizedLines": 0
+    },
+    {
+      "sourceRelativePath": "validation/verify-qoder-shell.cjs",
+      "destination": "docs/设计包/validation/verify-qoder-shell.cjs",
+      "bytes": 8969,
+      "sourceSha256": "69120dbd38ee24a546a5b9796e8934d1ebf3720096360c8425e3f21e8f169eef",
+      "destinationSha256": "69120dbd38ee24a546a5b9796e8934d1ebf3720096360c8425e3f21e8f169eef",
+      "linkNormalizedLines": 0
+    },
+    {
+      "sourceRelativePath": "validation/verify-v24-documents.py",
+      "destination": "docs/设计包/validation/verify-v24-documents.py",
+      "bytes": 7591,
+      "sourceSha256": "399509dc3ed9429764e6fbc330edf4b99e409d433bd925594413f5af37a88b72",
+      "destinationSha256": "399509dc3ed9429764e6fbc330edf4b99e409d433bd925594413f5af37a88b72",
+      "linkNormalizedLines": 0
+    },
+    {
+      "sourceRelativePath": "validation/verify-v24-market.cjs",
+      "destination": "docs/设计包/validation/verify-v24-market.cjs",
+      "bytes": 9165,
+      "sourceSha256": "21f4d50130f114cd38a3a0dab55e708781fd321373fef736ceede6b56901f55f",
+      "destinationSha256": "21f4d50130f114cd38a3a0dab55e708781fd321373fef736ceede6b56901f55f",
+      "linkNormalizedLines": 0
+    },
+    {
+      "sourceRelativePath": "validation/verify-v24-roles.cjs",
+      "destination": "docs/设计包/validation/verify-v24-roles.cjs",
+      "bytes": 22342,
+      "sourceSha256": "a5d85cbf9f32de7f322493885f1edd3a78ea885c50b0b4eb0aa58467cc484802",
+      "destinationSha256": "a5d85cbf9f32de7f322493885f1edd3a78ea885c50b0b4eb0aa58467cc484802",
+      "linkNormalizedLines": 0
+    },
+    {
+      "sourceRelativePath": "validation/verify-v25-documents.py",
+      "destination": "docs/设计包/validation/verify-v25-documents.py",
+      "bytes": 7589,
+      "sourceSha256": "44b1dcfea0bc1af58633ca1c7bec2a07f16d495a1a83fc088bd1afb6cb8d0de3",
+      "destinationSha256": "44b1dcfea0bc1af58633ca1c7bec2a07f16d495a1a83fc088bd1afb6cb8d0de3",
+      "linkNormalizedLines": 0
+    },
+    {
+      "sourceRelativePath": "validation/verify-v25-market.cjs",
+      "destination": "docs/设计包/validation/verify-v25-market.cjs",
+      "bytes": 9165,
+      "sourceSha256": "83a98dd04cd893d62f6b712967ff4eb74b320be485a96964912b05bb9a91a39d",
+      "destinationSha256": "83a98dd04cd893d62f6b712967ff4eb74b320be485a96964912b05bb9a91a39d",
+      "linkNormalizedLines": 0
+    },
+    {
+      "sourceRelativePath": "validation/verify-v25-oa.cjs",
+      "destination": "docs/设计包/validation/verify-v25-oa.cjs",
+      "bytes": 13998,
+      "sourceSha256": "37edee36884e6f584b3893aae2a093eaec169a75d81457f75307d662606c7746",
+      "destinationSha256": "37edee36884e6f584b3893aae2a093eaec169a75d81457f75307d662606c7746",
+      "linkNormalizedLines": 0
+    },
+    {
+      "sourceRelativePath": "validation/verify-v25-roles.cjs",
+      "destination": "docs/设计包/validation/verify-v25-roles.cjs",
+      "bytes": 22346,
+      "sourceSha256": "9fa3ea15d6010568d8390761ce249dd7cf6c4d7bdf412417d6cbd710274a1aea",
+      "destinationSha256": "9fa3ea15d6010568d8390761ce249dd7cf6c4d7bdf412417d6cbd710274a1aea",
+      "linkNormalizedLines": 0
+    },
+    {
+      "sourceRelativePath": "validation/verify-v26-documents.py",
+      "destination": "docs/设计包/validation/verify-v26-documents.py",
+      "bytes": 8460,
+      "sourceSha256": "af478a19e784c0c1434ba29a77a4402a9409c769730ec2b736ca1aaac776d016",
+      "destinationSha256": "af478a19e784c0c1434ba29a77a4402a9409c769730ec2b736ca1aaac776d016",
+      "linkNormalizedLines": 0
+    },
+    {
+      "sourceRelativePath": "validation/verify-v26-fields.cjs",
+      "destination": "docs/设计包/validation/verify-v26-fields.cjs",
+      "bytes": 11215,
+      "sourceSha256": "f33a144b46b2b2823fe5cb87d61089b751a8d9fb167e9d720e0c56ee48446adf",
+      "destinationSha256": "f33a144b46b2b2823fe5cb87d61089b751a8d9fb167e9d720e0c56ee48446adf",
+      "linkNormalizedLines": 0
+    },
+    {
+      "sourceRelativePath": "validation/verify-v26-market.cjs",
+      "destination": "docs/设计包/validation/verify-v26-market.cjs",
+      "bytes": 9165,
+      "sourceSha256": "8d914c73356519fd52eff15c1ca3bbc5e7ee2b5250bdcf466f30656154d278ae",
+      "destinationSha256": "8d914c73356519fd52eff15c1ca3bbc5e7ee2b5250bdcf466f30656154d278ae",
+      "linkNormalizedLines": 0
+    },
+    {
+      "sourceRelativePath": "validation/verify-v26-oa.cjs",
+      "destination": "docs/设计包/validation/verify-v26-oa.cjs",
+      "bytes": 13998,
+      "sourceSha256": "fee0550c426ed39c56fdc7457392ae97f3d7201f6806ba2b133fd08b23ace88c",
+      "destinationSha256": "fee0550c426ed39c56fdc7457392ae97f3d7201f6806ba2b133fd08b23ace88c",
+      "linkNormalizedLines": 0
+    },
+    {
+      "sourceRelativePath": "validation/verify-v26-roles.cjs",
+      "destination": "docs/设计包/validation/verify-v26-roles.cjs",
+      "bytes": 22346,
+      "sourceSha256": "17302712e71a166effab324c185f2a75fe1146953d941fbeff68b2bf60ac1ad2",
+      "destinationSha256": "17302712e71a166effab324c185f2a75fe1146953d941fbeff68b2bf60ac1ad2",
+      "linkNormalizedLines": 0
+    },
+    {
+      "sourceRelativePath": "validation/workflow-frontend-research-20260911.json",
+      "destination": "docs/设计包/validation/workflow-frontend-research-20260911.json",
+      "bytes": 19839,
+      "sourceSha256": "e678081dcea72e1324d5d0e73e60875bb33e95d9ef247a2c2dda0be659952bae",
+      "destinationSha256": "e678081dcea72e1324d5d0e73e60875bb33e95d9ef247a2c2dda0be659952bae",
+      "linkNormalizedLines": 0
+    },
+    {
+      "sourceRelativePath": "validation/zero-base-ai-candidate-research.md",
+      "destination": "docs/设计包/validation/zero-base-ai-candidate-research.md",
+      "bytes": 17259,
+      "sourceSha256": "dcb4601d91927ec2e8379f587a316b189361ddb90e3684d4e92489982f90120b",
+      "destinationSha256": "dcb4601d91927ec2e8379f587a316b189361ddb90e3684d4e92489982f90120b",
+      "linkNormalizedLines": 0
+    },
+    {
+      "sourceRelativePath": "validation/zero-base-oss-selection-evidence.json",
+      "destination": "docs/设计包/validation/zero-base-oss-selection-evidence.json",
+      "bytes": 28890,
+      "sourceSha256": "2383a4281c35da32eab9ea9eb911ea97f3583b4514a3f7c75ca6ab1b65f5c649",
+      "destinationSha256": "2383a4281c35da32eab9ea9eb911ea97f3583b4514a3f7c75ca6ab1b65f5c649",
+      "linkNormalizedLines": 0
+    },
+    {
+      "sourceRelativePath": "附录-QoderWake竞品分析-初版快照.md",
+      "destination": "docs/设计包/附录-QoderWake竞品分析-初版快照.md",
+      "bytes": 46771,
+      "sourceSha256": "dc9ff80d34ff03c3514ce0f8e1ed7c546470bf9fab2199176cf53d94547422ac",
+      "destinationSha256": "dc9ff80d34ff03c3514ce0f8e1ed7c546470bf9fab2199176cf53d94547422ac",
+      "linkNormalizedLines": 0
+    }
+  ],
+  "archive": {
+    "path": "archive/设计包原始快照-2026-09-11.zip",
+    "sha256": "8c9b459fa6f42f36e531d7ea59d11f500e24d0fb8c02f0506c15ccbf22370c56",
+    "entryCount": 397,
+    "allEntryHashesMatchSources": true
+  },
+  "approvals": [
+    "用户明确要求将以上会话新建项目"
+  ],
+  "risks": [
+    "应用侧栏新项目尚未登记",
+    "技术底座尚未最终决定",
+    "设计演示不是生产实现"
+  ],
+  "appRegistration": {
+    "status": "REQUIRES_MANUAL_ADD_FOLDER",
+    "api": "当前可用工具没有创建项目接口",
+    "ui": "Computer Use is not allowed to use com.openai.codex for safety reasons",
+    "bypassAttempted": false
+  },
+  "verification": {
+    "sourceFilesUnchangedAtCopy": true,
+    "archiveEntryHashesPassed": true,
+    "productRuntimeValidated": false,
+    "finishedAt": "2026-09-11T14:27:14.361545+00:00",
+    "sourceFileHashesRechecked": 397,
+    "workingCopyHashesRechecked": 397,
+    "archiveEntryHashesRechecked": 397,
+    "zipCrcCheck": "PASS",
+    "conversationMessagesRechecked": 90,
+    "entryLinksChecked": 37,
+    "entryLinks": [
+      {
+        "document": "README.md",
+        "link": "CONTEXT.md",
+        "exists": true
+      },
+      {
+        "document": "README.md",
+        "link": "history/用户需求原文.md",
+        "exists": true
+      },
+      {
+        "document": "README.md",
+        "link": "history/会话全文.md",
+        "exists": true
+      },
+      {
+        "document": "README.md",
+        "link": "history/会话消息.json",
+        "exists": true
+      },
+      {
+        "document": "README.md",
+        "link": "docs/设计包/08-人员数字员工协作交互原型.html",
+        "exists": true
+      },
+      {
+        "document": "README.md",
+        "link": "docs/设计包/25-从零开发最小工作量开源选型.md",
+        "exists": true
+      },
+      {
+        "document": "README.md",
+        "link": "项目接续提示词.md",
+        "exists": true
+      },
+      {
+        "document": "README.md",
+        "link": "validation/项目创建与迁移记录.json",
+        "exists": true
+      },
+      {
+        "document": "README.md",
+        "link": "docs/设计包/00-开发设计包导读.md",
+        "exists": true
+      },
+      {
+        "document": "README.md",
+        "link": "docs/设计包/01-产品需求与业务规则.md",
+        "exists": true
+      },
+      {
+        "document": "README.md",
+        "link": "docs/设计包/02-数据模型与ER设计.md",
+        "exists": true
+      },
+      {
+        "document": "README.md",
+        "link": "docs/设计包/03-业务流程与状态机.md",
+        "exists": true
+      },
+      {
+        "document": "README.md",
+        "link": "docs/设计包/04-接口与契约变更设计.md",
+        "exists": true
+      },
+      {
+        "document": "README.md",
+        "link": "docs/设计包/05-UI与交互设计.md",
+        "exists": true
+      },
+      {
+        "document": "README.md",
+        "link": "docs/设计包/06-用户故事与153项追踪矩阵.md",
+        "exists": true
+      },
+      {
+        "document": "README.md",
+        "link": "docs/设计包/07-开发分解与验收方案.md",
+        "exists": true
+      },
+      {
+        "document": "README.md",
+        "link": "docs/设计包/08-人员数字员工协作交互原型.html",
+        "exists": true
+      },
+      {
+        "document": "README.md",
+        "link": "docs/设计包/09-协作扩展候选.schema.json",
+        "exists": true
+      },
+      {
+        "document": "README.md",
+        "link": "docs/设计包/10-需求追踪数据.json",
+        "exists": true
+      },
+      {
+        "document": "README.md",
+        "link": "docs/设计包/11-存量合同字段字典.md",
+        "exists": true
+      },
+      {
+        "document": "README.md",
+        "link": "docs/设计包/12-员工市场复制与使用设计.md",
+        "exists": true
+      },
+      {
+        "document": "README.md",
+        "link": "docs/设计包/13-市场采用候选.schema.json",
+        "exists": true
+      },
+      {
+        "document": "README.md",
+        "link": "docs/设计包/14-QoderWake界面参考与原型设计.md",
+        "exists": true
+      },
+      {
+        "document": "README.md",
+        "link": "docs/设计包/15-全角色界面与操作覆盖矩阵.md",
+        "exists": true
+      },
+      {
+        "document": "README.md",
+        "link": "docs/设计包/16-角色视角与权限演示数据.json",
+        "exists": true
+      },
+      {
+        "document": "README.md",
+        "link": "docs/设计包/17-角色需求与验收追踪.json",
+        "exists": true
+      },
+      {
+        "document": "README.md",
+        "link": "docs/设计包/18-OA多流程多实例产品设计.md",
+        "exists": true
+      },
+      {
+        "document": "README.md",
+        "link": "docs/设计包/19-OA多实例演示数据.json",
+        "exists": true
+      },
+      {
+        "document": "README.md",
+        "link": "docs/设计包/20-OA统一待办候选.schema.json",
+        "exists": true
+      },
+      {
+        "document": "README.md",
+        "link": "docs/设计包/21-OA需求细化与验收追踪.json",
+        "exists": true
+      },
+      {
+        "document": "README.md",
+        "link": "docs/设计包/22-开源工作流与成熟前端复用选型.md",
+        "exists": true
+      },
+      {
+        "document": "README.md",
+        "link": "docs/设计包/23-OA主旨与BS字段一致性核查.md",
+        "exists": true
+      },
+      {
+        "document": "README.md",
+        "link": "docs/设计包/24-业务模板字段候选.json",
+        "exists": true
+      },
+      {
+        "document": "README.md",
+        "link": "docs/设计包/25-从零开发最小工作量开源选型.md",
+        "exists": true
+      },
+      {
+        "document": "README.md",
+        "link": "docs/设计包/ZKER-staff-v2-evidence.json",
+        "exists": true
+      },
+      {
+        "document": "README.md",
+        "link": "docs/设计包/ZKER-staff-完整优化清单-v2-人员数字员工与上下文对齐.md",
+        "exists": true
+      },
+      {
+        "document": "README.md",
+        "link": "docs/设计包/附录-QoderWake竞品分析-初版快照.md",
+        "exists": true
+      }
+    ],
+    "prototypeByteIdentical": true,
+    "prototypeHasNoExternalSrcHrefOrFetch": true,
+    "legacyDesignDirectoryMarkdownLinksRemaining": 0,
+    "browserInteractionRetested": false
+  },
+  "graph": [
+    {
+      "id": "READ_SOURCE",
+      "objective": "定位资料与父子会话",
+      "validation": "源目录清单及forked_from_id核对",
+      "successCondition": "来源与本会话一致",
+      "failurePath": "停止串项目复制"
+    },
+    {
+      "id": "EXPORT_CONVERSATION",
+      "objective": "归档用户可见上下文",
+      "validation": "角色与phase筛选、用户请求锚点",
+      "successCondition": "原始请求和选型请求齐全",
+      "failurePath": "披露缺失，不虚构会话"
+    },
+    {
+      "id": "COPY_AND_ARCHIVE",
+      "objective": "保存全部交付资料",
+      "validation": "逐文件SHA256及ZIP校验",
+      "successCondition": "全部文件可复核",
+      "failurePath": "保留原资料，报告差异"
+    },
+    {
+      "id": "VALIDATE",
+      "objective": "验证新项目可接续",
+      "validation": "清单、会话数、关键链接、原型依赖检查",
+      "successCondition": "本地项目与验证记录一致",
+      "failurePath": "修正局部归档文件或明确阻塞"
+    }
+  ],
+  "projectEntryArtifacts": [
+    {
+      "path": "README.md",
+      "sha256": "2c875e3a60930ceec45b2ffe1ef28d80b4a6ed0161f8cd507db4289457e961cb"
+    },
+    {
+      "path": "CONTEXT.md",
+      "sha256": "a62443961104f77d84e0c3c6c4ac4c045df38cdccdf6593828673338bcde18df"
+    },
+    {
+      "path": "AGENTS.md",
+      "sha256": "17b8371dc9d02d427ac0fc9964bf61e900c5f79ad7c3e29b7040cb5caa742bbd"
+    },
+    {
+      "path": "项目接续提示词.md",
+      "sha256": "941f4612e27372208baea912e43add148e4d9f9af1d92fa9deeda107ebb10da3"
+    },
+    {
+      "path": "history/会话全文.md",
+      "sha256": "556b9fc5c4bdd307c813cfd1d223cc832db2ea1af2c173333d6732b61787e142"
+    },
+    {
+      "path": "history/会话消息.json",
+      "sha256": "328a9ca5de55b074494c5af704a96331291122776ebc8e57e8339ec96b46f60b"
+    },
+    {
+      "path": "history/用户需求原文.md",
+      "sha256": "fe8d3d514fe49d2ce1f4131cacaed4e71ad6dbbb60c8132c11dd73ff8d499fdc"
+    }
+  ]
+}

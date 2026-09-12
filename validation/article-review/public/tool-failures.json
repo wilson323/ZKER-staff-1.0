@@ -1,0 +1,8 @@
+[
+  {
+    "tool": "web.run",
+    "operation": "root primary-source search",
+    "error": "Fatal error: connection failed: error sending request",
+    "fallback": "Explicit public HTTPS URLs; no TLS bypass; moved pages followed to official target; challenge pages not credited as article bodies"
+  }
+]

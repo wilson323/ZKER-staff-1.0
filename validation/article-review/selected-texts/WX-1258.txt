@@ -1,0 +1,200 @@
+#  当你的 Agent 会“多轮思考”，Trace 却还停留在单轮：阿里云 CMS OpenClaw 可观测插件升级
+
+原创  王方（方羞）  王方（方羞）  阿里云云原生
+
+_2026年04月05日 10:00_ __ _ _ _ _ _ 浙江  _
+
+在小说阅读器读本章
+
+去阅读
+
+openclaw-cms-plugin 是阿里云云监控 CMS 自研的 OpenClaw 可观测插件，它实现了对 OpenClaw
+每次任务调用的链路追踪，符合 GenAI 语义规范，方便用户快速定位和排查问题。具体可参考：《  [ 一行命令，给你的 OpenClaw 龙虾装上 X
+光机——阿里云可观测，让养虾更经济更安全
+](https://mp.weixin.qq.com/s?__biz=MzUzNzYxNjAzMg==&mid=2247582796&idx=1&sn=bc5c3aba4ed4744b6a04fa6b4ca577de&scene=21#wechat_redirect)
+》。  
+
+_ ** 引言：为什么你看到了 Trace，  ** _
+
+_ ** 却依然看不懂 Agent 在做什么？  ** _
+
+_ Cloud Native  _
+
+很多团队已经接入 OpenClaw 可观测插件，但排障时依然会遇到“图在，真相不在”的尴尬  ——  虽然有链路图，但无法反映真实决策过程  ：链路上有
+LLM、有 TOOL，可就是看不出模型每一步为什么这样决策。
+
+更关键的是，这不是某一个插件的  个别问题  。在市面上大多数基于  llm_input/llm_output  ` ` hook  实现的
+OpenClaw 可观测插件里，都存在同一类结构性问题：多轮对话只被压成“单轮 LLM + 多个 TOOL”。
+
+![](https://mmbiz.qpic.cn/sz_mmbiz_png/bvDbzNRia8j12dWQdCKq38ktgGmUwru5LAMgHtfyUdghTJVHMS7ooDdRYMAVZFNhk2588GzYdCzVuAAteB6BtqPmRtRxicSnI90I9KZ3eWIBA/640?wx_fmt=png&from=appmsg)
+
+openclaw-cms-plugin 0.1.2 的价值正在这里：  不仅修复旧版问题，更  开创性地  把 OpenClaw
+的真实多轮执行链路完整还原出来。
+
+**  
+**
+
+_ ** 老版本痛点：  ** _
+
+_ ** 不是“少几个字段”，而是链路语义失真  ** _
+
+_ Cloud Native  _
+
+要理解这些痛点的根源，需要先明确 Agent 的真实执行模式：  Agent 并不是“一次 LLM 调用 + 若干工具”，而是 ReAct
+迭代系统。每一轮都包含判断、工具选择、结果吸收和下一步规划。用单个 LLM span 去概括  整轮  行为，会天然丢失中间语义。
+
+因此阿里云 CMS OpenClaw 自研可观测插件 0.1.1 版本（以及很多同类插件）会出现三个典型问题：
+
+  * 看不到中间轮次的真实 LLM 输入输出，只看到会话开头和结尾； 
+
+  * Trace 结构与真实执行不一致，排障时“看起来完整，实际上误导”； 
+
+  * 并发  及  连续调用下容易断链/串链，run  （任务执行）  关联不稳定。 
+
+![](https://mmbiz.qpic.cn/mmbiz_png/bvDbzNRia8j2guukth4W8aQChtxyeFjWAOOUDBsYNX6iaY5yQuSPqicrbyEXNd0L1F0oNic8MES7R5Iao6icrwNbQtG2qBbHRK5fUoAdia4jhwsrg/640?wx_fmt=png&from=appmsg)
+
+_ ** 一目了然：v0.1.2 核心能力  ** _
+
+  
+
+  
+
+  
+
+_ Cloud Native  _
+
+▍  ✅ 1）多轮 LLM 分段：真实还原  LLM -> TOOL -> LLM -> ...
+
+0.1.2 实现了 LLM 分段导出，不再受“多轮只触发一次 llm hook”的限制；同时支持 assistant
+结构化输出块（reasoning/text/toolCall），并在工具批次后重建下一段 LLM 输入上下文。
+
+![](https://mmbiz.qpic.cn/sz_mmbiz_png/bvDbzNRia8j1HGtKS40K3QPsU8SIHrnkU0Xgw3ymk6jWc30iawubuxKASE6gjvnJObT3s5SibLw5tMllh31ORhav3VS1YPiawiaMHtKg0wmIsGeU/640?wx_fmt=png&from=appmsg)
+
+▍  ✅ 2）并发稳定性增强：断链/串链显著降低
+
+0.1.2 通过以下机制，在并发场景下实现了更稳定的链路串联：
+
+  * 按 trace 串行任务队列  ，  避免并发写入冲突； 
+
+  * agent channel 活跃锚点  ，  确保链路归属准确； 
+
+  * identity-safe cleanup  ，  防止误清理活跃链路； 
+
+  * 非破坏性  endTrace()  ，  避免提前截断； 
+
+  * llm_input  的 root/agent 自愈机制  ，  应对异常中断场景。 
+
+![](https://mmbiz.qpic.cn/mmbiz_png/bvDbzNRia8j1Tibuarn0vDfS4RTzN9wkiam9BzpGhxAuRUgsF6dc8nSlnAB17gdMscENZ9uddkM492Aem8J7oWQhzbldYUcTf5V4BqseciawIuk/640?wx_fmt=png&from=appmsg)
+
+▍  ✅ 3）新增 STEP Span：让“第几轮”可观测
+
+新增  STEP  语义（  gen_ai.span.kind=STEP  ），并补齐  gen_ai.operation.name=react  、
+gen_ai.react.round  、  gen_ai.react.finish_reason  ，最终形成  ReAct 标准层级结构  ：
+ENTRY -> AGENT -> STEP -> (LLM/TOOL...)  。
+
+![](https://mmbiz.qpic.cn/sz_mmbiz_png/bvDbzNRia8j1bl5h2OYIzwAjZsL1wfG1MEGlgic0icmdJbaKkkdic82n5XPhz2THHVicxHJgIgyjTY7xia5NGIMfH0fre6M5UDm6ZnmMtMh3tKiclk/640?wx_fmt=png&from=appmsg)
+
+▍  ✅ 4）AGENT 指标改造：从“猜测”变“可量化”
+
+三类核心指标的计算方式全面升级：
+
+  * agent.message_count  ：基于  event.messages.length  精确计算； 
+
+  * agent.tool_call_count  ：基于 assistant 工具调用块逐次计数； 
+
+  * usage（token 用量）  ：改为从  llm_output  缓存汇总后，在  agent_end  统一写入。 
+
+最终可稳定看到 message/tool/token 三类核心指标。
+
+![](https://mmbiz.qpic.cn/sz_mmbiz_png/bvDbzNRia8j2NZXfJCPkzySayd3MlIjdiby8HFo20OUl91GuxichnJylicS3boOBKM9iaqWQQ78T92WPwsibPPFLKsLvgNP94Anib3ILWH4OOWLPzQ/640?wx_fmt=png&from=appmsg)
+
+_ ** 不只是“更细”，而是“更能解决问题”  ** _
+
+  
+
+  
+
+  
+
+_ Cloud Native  _
+
+⚡  价值一：排障效率显著提升  
+
+以前你只能知道“调用了哪些工具”，现在你能看到“每一轮模型为何调用这些工具”。从“怀疑是模型问题”到“定位是第 N 轮参数构造问题”，排障路径明显缩短。
+
+🧪  价值二：并发回归测试更有信心  
+
+并发链路稳定后，压测和回归不再依赖“人工目测是否大致正常”，而是可以基于 run 级一致性、STEP 轮次、父子关系做标准化验收。
+
+💰  价值三：成本治理更精细  
+
+当 AGENT 层拿到稳定的 message/tool/token 指标后，你可以更准确  地
+评估一次任务的“复杂度成本”，识别高消耗任务类型，优化提示词与工具编排策略。
+
+🧭  价值四：跨角色协作更顺滑  
+
+研发、测试、运维看到的是同一条“有语义的真实链路”：开发看决策轮次，测试看行为一致性，运维看并发稳定性，沟通成本  明显下降  。
+
+🔒  价值五：线上故障止损更快  
+
+当出现工具参数异常、模型重试抖动、并发错绑风险时，0.1.2 的链路细粒度数据能更快给出证据。STEP 轮次 + finish_reason
+让定位路径从分钟级压到秒级，减少“长时间盲排”的窗口。
+
+_ ** 0.1.2 是“观测语义升级”，不是简单修补  ** _
+
+  
+
+  
+
+  
+
+_ Cloud Native  _
+
+* * *
+
+##  如果你希望 OpenClaw 的可观测能力真正服务生产，而不是停留在“有图可看”，0.1.2 是  值得优先升级的一版
+：它把多轮决策过程、并发稳定性和 AGENT 核心指标一次补齐，让 Trace 从“展示数据”升级到“支撑决策”。
+
+一句话总结：  看得见每一步、看得准并发、算得清成本  。  这才是可观测在 Agent 场景里的真正价值。欢迎大家尝试体验 openclaw-cms-
+plugin 0.1.2 插件！
+
+👉  接入文档：
+
+https://help.aliyun.com/zh/cms/cloudmonitor-2-0/monitor-openclaw-applications
+
+预览时标签不可点
+
+阅读原文
+
+微信扫一扫  
+关注该公众号
+
+知道了
+
+微信扫一扫  
+使用小程序
+
+****
+
+取消  允许
+
+****
+
+取消  允许
+
+****
+
+取消  允许
+
+×  分析
+
+__
+
+![作者头像](http://mmbiz.qpic.cn/mmbiz_png/yvBJb5IiafvmLicJBEO2fiafFTtc71G0CKibefQ9dLbMwjFgrUABIjUb3gsQB07nZSNaiaRRuacLnLZvE0GXVojic3fA/0?wx_fmt=png)
+
+微信扫一扫可打开此内容，  
+使用完整服务
+
+：  ，  ，  ，  ，  ，  ，  ，  ，  ，  ，  ，  ，  。  视频  小程序  赞  ，轻点两下取消赞  在看  ，轻点两下取消在看
+分享  留言  收藏  听过
+

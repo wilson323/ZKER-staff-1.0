@@ -1,0 +1,15 @@
+{
+  "status": "PASS",
+  "checked_at": "2026-09-11T23:28:58.701423+00:00",
+  "scope": "public-source-snapshot-integrity-and-report-fixed-URLs-only",
+  "source_success_count": 75,
+  "source_failed_attempt_count": 5,
+  "hash_mismatches": [],
+  "fixed_source_urls": 25,
+  "unrecorded_fixed_source_urls": [],
+  "report_file": "validation/agent-runtime/dsh-pi-research.md",
+  "report_sha256": "80660267f226be5bf96a5f01ee9f3c45052a975e23b09475f3830d0197f3c20b",
+  "candidate_tests": "NOT_RUN",
+  "performance": "NOT_RUN",
+  "commercial_distribution_clearance": "NOT_RUN"
+}

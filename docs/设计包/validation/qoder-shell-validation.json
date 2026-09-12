@@ -1,0 +1,1154 @@
+{
+  "revision": "v2.3",
+  "passed": true,
+  "htmlSha256": "38baa87dbf9a93cc5bd44a500a1ad5eb877d2b5e8dfb56160a1d35a76f61560b",
+  "layoutChecks": 75,
+  "interactionChecks": 30,
+  "checks": [
+    {
+      "type": "layout",
+      "width": 1440,
+      "role": "main",
+      "view": "dashboard",
+      "passed": true,
+      "measure": {
+        "width": 1440,
+        "scroll": 1440,
+        "text": 398,
+        "view": "dashboard"
+      }
+    },
+    {
+      "type": "layout",
+      "width": 1440,
+      "role": "main",
+      "view": "node",
+      "passed": true,
+      "measure": {
+        "width": 1440,
+        "scroll": 1440,
+        "text": 552,
+        "view": "node"
+      }
+    },
+    {
+      "type": "layout",
+      "width": 1440,
+      "role": "main",
+      "view": "conversation",
+      "passed": true,
+      "measure": {
+        "width": 1440,
+        "scroll": 1440,
+        "text": 359,
+        "view": "conversation"
+      }
+    },
+    {
+      "type": "layout",
+      "width": 1440,
+      "role": "main",
+      "view": "agents",
+      "passed": true,
+      "measure": {
+        "width": 1440,
+        "scroll": 1440,
+        "text": 198,
+        "view": "agents"
+      }
+    },
+    {
+      "type": "layout",
+      "width": 1440,
+      "role": "main",
+      "view": "market",
+      "passed": true,
+      "measure": {
+        "width": 1440,
+        "scroll": 1440,
+        "text": 776,
+        "view": "market"
+      }
+    },
+    {
+      "type": "layout",
+      "width": 1440,
+      "role": "collab",
+      "view": "dashboard",
+      "passed": true,
+      "measure": {
+        "width": 1440,
+        "scroll": 1440,
+        "text": 395,
+        "view": "dashboard"
+      }
+    },
+    {
+      "type": "layout",
+      "width": 1440,
+      "role": "collab",
+      "view": "node",
+      "passed": true,
+      "measure": {
+        "width": 1440,
+        "scroll": 1440,
+        "text": 551,
+        "view": "node"
+      }
+    },
+    {
+      "type": "layout",
+      "width": 1440,
+      "role": "collab",
+      "view": "conversation",
+      "passed": true,
+      "measure": {
+        "width": 1440,
+        "scroll": 1440,
+        "text": 356,
+        "view": "conversation"
+      }
+    },
+    {
+      "type": "layout",
+      "width": 1440,
+      "role": "collab",
+      "view": "agents",
+      "passed": true,
+      "measure": {
+        "width": 1440,
+        "scroll": 1440,
+        "text": 199,
+        "view": "agents"
+      }
+    },
+    {
+      "type": "layout",
+      "width": 1440,
+      "role": "collab",
+      "view": "market",
+      "passed": true,
+      "measure": {
+        "width": 1440,
+        "scroll": 1440,
+        "text": 589,
+        "view": "market"
+      }
+    },
+    {
+      "type": "layout",
+      "width": 1440,
+      "role": "review",
+      "view": "dashboard",
+      "passed": true,
+      "measure": {
+        "width": 1440,
+        "scroll": 1440,
+        "text": 393,
+        "view": "dashboard"
+      }
+    },
+    {
+      "type": "layout",
+      "width": 1440,
+      "role": "review",
+      "view": "node",
+      "passed": true,
+      "measure": {
+        "width": 1440,
+        "scroll": 1440,
+        "text": 551,
+        "view": "node"
+      }
+    },
+    {
+      "type": "layout",
+      "width": 1440,
+      "role": "review",
+      "view": "conversation",
+      "passed": true,
+      "measure": {
+        "width": 1440,
+        "scroll": 1440,
+        "text": 354,
+        "view": "conversation"
+      }
+    },
+    {
+      "type": "layout",
+      "width": 1440,
+      "role": "review",
+      "view": "agents",
+      "passed": true,
+      "measure": {
+        "width": 1440,
+        "scroll": 1440,
+        "text": 198,
+        "view": "agents"
+      }
+    },
+    {
+      "type": "layout",
+      "width": 1440,
+      "role": "review",
+      "view": "market",
+      "passed": true,
+      "measure": {
+        "width": 1440,
+        "scroll": 1440,
+        "text": 427,
+        "view": "market"
+      }
+    },
+    {
+      "type": "layout",
+      "width": 1440,
+      "role": "designer",
+      "view": "dashboard",
+      "passed": true,
+      "measure": {
+        "width": 1440,
+        "scroll": 1440,
+        "text": 392,
+        "view": "dashboard"
+      }
+    },
+    {
+      "type": "layout",
+      "width": 1440,
+      "role": "designer",
+      "view": "node",
+      "passed": true,
+      "measure": {
+        "width": 1440,
+        "scroll": 1440,
+        "text": 352,
+        "view": "node"
+      }
+    },
+    {
+      "type": "layout",
+      "width": 1440,
+      "role": "designer",
+      "view": "conversation",
+      "passed": true,
+      "measure": {
+        "width": 1440,
+        "scroll": 1440,
+        "text": 353,
+        "view": "conversation"
+      }
+    },
+    {
+      "type": "layout",
+      "width": 1440,
+      "role": "designer",
+      "view": "agents",
+      "passed": true,
+      "measure": {
+        "width": 1440,
+        "scroll": 1440,
+        "text": 198,
+        "view": "agents"
+      }
+    },
+    {
+      "type": "layout",
+      "width": 1440,
+      "role": "designer",
+      "view": "market",
+      "passed": true,
+      "measure": {
+        "width": 1440,
+        "scroll": 1440,
+        "text": 511,
+        "view": "market"
+      }
+    },
+    {
+      "type": "layout",
+      "width": 1440,
+      "role": "resource",
+      "view": "dashboard",
+      "passed": true,
+      "measure": {
+        "width": 1440,
+        "scroll": 1440,
+        "text": 388,
+        "view": "dashboard"
+      }
+    },
+    {
+      "type": "layout",
+      "width": 1440,
+      "role": "resource",
+      "view": "node",
+      "passed": true,
+      "measure": {
+        "width": 1440,
+        "scroll": 1440,
+        "text": 385,
+        "view": "node"
+      }
+    },
+    {
+      "type": "layout",
+      "width": 1440,
+      "role": "resource",
+      "view": "conversation",
+      "passed": true,
+      "measure": {
+        "width": 1440,
+        "scroll": 1440,
+        "text": 349,
+        "view": "conversation"
+      }
+    },
+    {
+      "type": "layout",
+      "width": 1440,
+      "role": "resource",
+      "view": "agents",
+      "passed": true,
+      "measure": {
+        "width": 1440,
+        "scroll": 1440,
+        "text": 198,
+        "view": "agents"
+      }
+    },
+    {
+      "type": "layout",
+      "width": 1440,
+      "role": "resource",
+      "view": "market",
+      "passed": true,
+      "measure": {
+        "width": 1440,
+        "scroll": 1440,
+        "text": 872,
+        "view": "market"
+      }
+    },
+    {
+      "type": "layout",
+      "width": 1024,
+      "role": "main",
+      "view": "dashboard",
+      "passed": true,
+      "measure": {
+        "width": 1024,
+        "scroll": 1024,
+        "text": 367,
+        "view": "dashboard"
+      }
+    },
+    {
+      "type": "layout",
+      "width": 1024,
+      "role": "main",
+      "view": "node",
+      "passed": true,
+      "measure": {
+        "width": 1024,
+        "scroll": 1024,
+        "text": 552,
+        "view": "node"
+      }
+    },
+    {
+      "type": "layout",
+      "width": 1024,
+      "role": "main",
+      "view": "conversation",
+      "passed": true,
+      "measure": {
+        "width": 1024,
+        "scroll": 1024,
+        "text": 359,
+        "view": "conversation"
+      }
+    },
+    {
+      "type": "layout",
+      "width": 1024,
+      "role": "main",
+      "view": "agents",
+      "passed": true,
+      "measure": {
+        "width": 1024,
+        "scroll": 1024,
+        "text": 198,
+        "view": "agents"
+      }
+    },
+    {
+      "type": "layout",
+      "width": 1024,
+      "role": "main",
+      "view": "market",
+      "passed": true,
+      "measure": {
+        "width": 1024,
+        "scroll": 1024,
+        "text": 740,
+        "view": "market"
+      }
+    },
+    {
+      "type": "layout",
+      "width": 1024,
+      "role": "collab",
+      "view": "dashboard",
+      "passed": true,
+      "measure": {
+        "width": 1024,
+        "scroll": 1024,
+        "text": 364,
+        "view": "dashboard"
+      }
+    },
+    {
+      "type": "layout",
+      "width": 1024,
+      "role": "collab",
+      "view": "node",
+      "passed": true,
+      "measure": {
+        "width": 1024,
+        "scroll": 1024,
+        "text": 551,
+        "view": "node"
+      }
+    },
+    {
+      "type": "layout",
+      "width": 1024,
+      "role": "collab",
+      "view": "conversation",
+      "passed": true,
+      "measure": {
+        "width": 1024,
+        "scroll": 1024,
+        "text": 356,
+        "view": "conversation"
+      }
+    },
+    {
+      "type": "layout",
+      "width": 1024,
+      "role": "collab",
+      "view": "agents",
+      "passed": true,
+      "measure": {
+        "width": 1024,
+        "scroll": 1024,
+        "text": 199,
+        "view": "agents"
+      }
+    },
+    {
+      "type": "layout",
+      "width": 1024,
+      "role": "collab",
+      "view": "market",
+      "passed": true,
+      "measure": {
+        "width": 1024,
+        "scroll": 1024,
+        "text": 553,
+        "view": "market"
+      }
+    },
+    {
+      "type": "layout",
+      "width": 1024,
+      "role": "review",
+      "view": "dashboard",
+      "passed": true,
+      "measure": {
+        "width": 1024,
+        "scroll": 1024,
+        "text": 362,
+        "view": "dashboard"
+      }
+    },
+    {
+      "type": "layout",
+      "width": 1024,
+      "role": "review",
+      "view": "node",
+      "passed": true,
+      "measure": {
+        "width": 1024,
+        "scroll": 1024,
+        "text": 551,
+        "view": "node"
+      }
+    },
+    {
+      "type": "layout",
+      "width": 1024,
+      "role": "review",
+      "view": "conversation",
+      "passed": true,
+      "measure": {
+        "width": 1024,
+        "scroll": 1024,
+        "text": 354,
+        "view": "conversation"
+      }
+    },
+    {
+      "type": "layout",
+      "width": 1024,
+      "role": "review",
+      "view": "agents",
+      "passed": true,
+      "measure": {
+        "width": 1024,
+        "scroll": 1024,
+        "text": 198,
+        "view": "agents"
+      }
+    },
+    {
+      "type": "layout",
+      "width": 1024,
+      "role": "review",
+      "view": "market",
+      "passed": true,
+      "measure": {
+        "width": 1024,
+        "scroll": 1024,
+        "text": 391,
+        "view": "market"
+      }
+    },
+    {
+      "type": "layout",
+      "width": 1024,
+      "role": "designer",
+      "view": "dashboard",
+      "passed": true,
+      "measure": {
+        "width": 1024,
+        "scroll": 1024,
+        "text": 361,
+        "view": "dashboard"
+      }
+    },
+    {
+      "type": "layout",
+      "width": 1024,
+      "role": "designer",
+      "view": "node",
+      "passed": true,
+      "measure": {
+        "width": 1024,
+        "scroll": 1024,
+        "text": 352,
+        "view": "node"
+      }
+    },
+    {
+      "type": "layout",
+      "width": 1024,
+      "role": "designer",
+      "view": "conversation",
+      "passed": true,
+      "measure": {
+        "width": 1024,
+        "scroll": 1024,
+        "text": 353,
+        "view": "conversation"
+      }
+    },
+    {
+      "type": "layout",
+      "width": 1024,
+      "role": "designer",
+      "view": "agents",
+      "passed": true,
+      "measure": {
+        "width": 1024,
+        "scroll": 1024,
+        "text": 198,
+        "view": "agents"
+      }
+    },
+    {
+      "type": "layout",
+      "width": 1024,
+      "role": "designer",
+      "view": "market",
+      "passed": true,
+      "measure": {
+        "width": 1024,
+        "scroll": 1024,
+        "text": 475,
+        "view": "market"
+      }
+    },
+    {
+      "type": "layout",
+      "width": 1024,
+      "role": "resource",
+      "view": "dashboard",
+      "passed": true,
+      "measure": {
+        "width": 1024,
+        "scroll": 1024,
+        "text": 357,
+        "view": "dashboard"
+      }
+    },
+    {
+      "type": "layout",
+      "width": 1024,
+      "role": "resource",
+      "view": "node",
+      "passed": true,
+      "measure": {
+        "width": 1024,
+        "scroll": 1024,
+        "text": 385,
+        "view": "node"
+      }
+    },
+    {
+      "type": "layout",
+      "width": 1024,
+      "role": "resource",
+      "view": "conversation",
+      "passed": true,
+      "measure": {
+        "width": 1024,
+        "scroll": 1024,
+        "text": 349,
+        "view": "conversation"
+      }
+    },
+    {
+      "type": "layout",
+      "width": 1024,
+      "role": "resource",
+      "view": "agents",
+      "passed": true,
+      "measure": {
+        "width": 1024,
+        "scroll": 1024,
+        "text": 198,
+        "view": "agents"
+      }
+    },
+    {
+      "type": "layout",
+      "width": 1024,
+      "role": "resource",
+      "view": "market",
+      "passed": true,
+      "measure": {
+        "width": 1024,
+        "scroll": 1024,
+        "text": 836,
+        "view": "market"
+      }
+    },
+    {
+      "type": "layout",
+      "width": 390,
+      "role": "main",
+      "view": "dashboard",
+      "passed": true,
+      "measure": {
+        "width": 390,
+        "scroll": 390,
+        "text": 361,
+        "view": "dashboard"
+      }
+    },
+    {
+      "type": "layout",
+      "width": 390,
+      "role": "main",
+      "view": "node",
+      "passed": true,
+      "measure": {
+        "width": 390,
+        "scroll": 390,
+        "text": 552,
+        "view": "node"
+      }
+    },
+    {
+      "type": "layout",
+      "width": 390,
+      "role": "main",
+      "view": "conversation",
+      "passed": true,
+      "measure": {
+        "width": 390,
+        "scroll": 390,
+        "text": 359,
+        "view": "conversation"
+      }
+    },
+    {
+      "type": "layout",
+      "width": 390,
+      "role": "main",
+      "view": "agents",
+      "passed": true,
+      "measure": {
+        "width": 390,
+        "scroll": 390,
+        "text": 198,
+        "view": "agents"
+      }
+    },
+    {
+      "type": "layout",
+      "width": 390,
+      "role": "main",
+      "view": "market",
+      "passed": true,
+      "measure": {
+        "width": 390,
+        "scroll": 390,
+        "text": 692,
+        "view": "market"
+      }
+    },
+    {
+      "type": "layout",
+      "width": 390,
+      "role": "collab",
+      "view": "dashboard",
+      "passed": true,
+      "measure": {
+        "width": 390,
+        "scroll": 390,
+        "text": 358,
+        "view": "dashboard"
+      }
+    },
+    {
+      "type": "layout",
+      "width": 390,
+      "role": "collab",
+      "view": "node",
+      "passed": true,
+      "measure": {
+        "width": 390,
+        "scroll": 390,
+        "text": 551,
+        "view": "node"
+      }
+    },
+    {
+      "type": "layout",
+      "width": 390,
+      "role": "collab",
+      "view": "conversation",
+      "passed": true,
+      "measure": {
+        "width": 390,
+        "scroll": 390,
+        "text": 356,
+        "view": "conversation"
+      }
+    },
+    {
+      "type": "layout",
+      "width": 390,
+      "role": "collab",
+      "view": "agents",
+      "passed": true,
+      "measure": {
+        "width": 390,
+        "scroll": 390,
+        "text": 199,
+        "view": "agents"
+      }
+    },
+    {
+      "type": "layout",
+      "width": 390,
+      "role": "collab",
+      "view": "market",
+      "passed": true,
+      "measure": {
+        "width": 390,
+        "scroll": 390,
+        "text": 505,
+        "view": "market"
+      }
+    },
+    {
+      "type": "layout",
+      "width": 390,
+      "role": "review",
+      "view": "dashboard",
+      "passed": true,
+      "measure": {
+        "width": 390,
+        "scroll": 390,
+        "text": 356,
+        "view": "dashboard"
+      }
+    },
+    {
+      "type": "layout",
+      "width": 390,
+      "role": "review",
+      "view": "node",
+      "passed": true,
+      "measure": {
+        "width": 390,
+        "scroll": 390,
+        "text": 551,
+        "view": "node"
+      }
+    },
+    {
+      "type": "layout",
+      "width": 390,
+      "role": "review",
+      "view": "conversation",
+      "passed": true,
+      "measure": {
+        "width": 390,
+        "scroll": 390,
+        "text": 354,
+        "view": "conversation"
+      }
+    },
+    {
+      "type": "layout",
+      "width": 390,
+      "role": "review",
+      "view": "agents",
+      "passed": true,
+      "measure": {
+        "width": 390,
+        "scroll": 390,
+        "text": 198,
+        "view": "agents"
+      }
+    },
+    {
+      "type": "layout",
+      "width": 390,
+      "role": "review",
+      "view": "market",
+      "passed": true,
+      "measure": {
+        "width": 390,
+        "scroll": 390,
+        "text": 343,
+        "view": "market"
+      }
+    },
+    {
+      "type": "layout",
+      "width": 390,
+      "role": "designer",
+      "view": "dashboard",
+      "passed": true,
+      "measure": {
+        "width": 390,
+        "scroll": 390,
+        "text": 355,
+        "view": "dashboard"
+      }
+    },
+    {
+      "type": "layout",
+      "width": 390,
+      "role": "designer",
+      "view": "node",
+      "passed": true,
+      "measure": {
+        "width": 390,
+        "scroll": 390,
+        "text": 352,
+        "view": "node"
+      }
+    },
+    {
+      "type": "layout",
+      "width": 390,
+      "role": "designer",
+      "view": "conversation",
+      "passed": true,
+      "measure": {
+        "width": 390,
+        "scroll": 390,
+        "text": 353,
+        "view": "conversation"
+      }
+    },
+    {
+      "type": "layout",
+      "width": 390,
+      "role": "designer",
+      "view": "agents",
+      "passed": true,
+      "measure": {
+        "width": 390,
+        "scroll": 390,
+        "text": 198,
+        "view": "agents"
+      }
+    },
+    {
+      "type": "layout",
+      "width": 390,
+      "role": "designer",
+      "view": "market",
+      "passed": true,
+      "measure": {
+        "width": 390,
+        "scroll": 390,
+        "text": 427,
+        "view": "market"
+      }
+    },
+    {
+      "type": "layout",
+      "width": 390,
+      "role": "resource",
+      "view": "dashboard",
+      "passed": true,
+      "measure": {
+        "width": 390,
+        "scroll": 390,
+        "text": 351,
+        "view": "dashboard"
+      }
+    },
+    {
+      "type": "layout",
+      "width": 390,
+      "role": "resource",
+      "view": "node",
+      "passed": true,
+      "measure": {
+        "width": 390,
+        "scroll": 390,
+        "text": 385,
+        "view": "node"
+      }
+    },
+    {
+      "type": "layout",
+      "width": 390,
+      "role": "resource",
+      "view": "conversation",
+      "passed": true,
+      "measure": {
+        "width": 390,
+        "scroll": 390,
+        "text": 349,
+        "view": "conversation"
+      }
+    },
+    {
+      "type": "layout",
+      "width": 390,
+      "role": "resource",
+      "view": "agents",
+      "passed": true,
+      "measure": {
+        "width": 390,
+        "scroll": 390,
+        "text": 198,
+        "view": "agents"
+      }
+    },
+    {
+      "type": "layout",
+      "width": 390,
+      "role": "resource",
+      "view": "market",
+      "passed": true,
+      "measure": {
+        "width": 390,
+        "scroll": 390,
+        "text": 788,
+        "view": "market"
+      }
+    },
+    {
+      "type": "interaction",
+      "name": "default entry is task dashboard",
+      "passed": true
+    },
+    {
+      "type": "interaction",
+      "name": "employee cannot see management-only navigation",
+      "passed": true
+    },
+    {
+      "type": "interaction",
+      "name": "observed QoderWake shell visual properties applied",
+      "passed": true
+    },
+    {
+      "type": "interaction",
+      "name": "task search produces recoverable empty state",
+      "passed": true
+    },
+    {
+      "type": "interaction",
+      "name": "status filter does not show unfinished task as completed",
+      "passed": true
+    },
+    {
+      "type": "interaction",
+      "name": "clearing filters restores current task",
+      "passed": true
+    },
+    {
+      "type": "interaction",
+      "name": "attention action opens assigned node",
+      "passed": true
+    },
+    {
+      "type": "interaction",
+      "name": "personal agent details show skills tools and knowledge",
+      "passed": true
+    },
+    {
+      "type": "interaction",
+      "name": "agent detail leads to current node configuration",
+      "passed": true
+    },
+    {
+      "type": "interaction",
+      "name": "resource category entry selects skills",
+      "passed": true
+    },
+    {
+      "type": "interaction",
+      "name": "side category switches to tools",
+      "passed": true
+    },
+    {
+      "type": "interaction",
+      "name": "market copy returns to own node after selection",
+      "passed": true
+    },
+    {
+      "type": "interaction",
+      "name": "conversation preserves task role and common basis",
+      "passed": true
+    },
+    {
+      "type": "interaction",
+      "name": "user input rendered as text without markup execution",
+      "passed": true
+    },
+    {
+      "type": "interaction",
+      "name": "demo response explicitly marked local",
+      "passed": true
+    },
+    {
+      "type": "interaction",
+      "name": "conversation survives page navigation",
+      "passed": true
+    },
+    {
+      "type": "interaction",
+      "name": "conversation private additions isolated between employees",
+      "passed": true
+    },
+    {
+      "type": "interaction",
+      "name": "conversation context action opens actual context panel",
+      "passed": true
+    },
+    {
+      "type": "interaction",
+      "name": "designer receives only own management entry",
+      "passed": true
+    },
+    {
+      "type": "interaction",
+      "name": "resource maintainer receives own governance entry",
+      "passed": true
+    },
+    {
+      "type": "interaction",
+      "name": "governance entry opens resource page",
+      "passed": true
+    },
+    {
+      "type": "interaction",
+      "name": "dashboard counters reflect actual demo delivery state",
+      "passed": true
+    },
+    {
+      "type": "interaction",
+      "name": "reset restores initial assignments and clears demo chats",
+      "passed": true
+    },
+    {
+      "type": "interaction",
+      "name": "mobile has a visible navigation entry",
+      "passed": true
+    },
+    {
+      "type": "interaction",
+      "name": "mobile navigation opens",
+      "passed": true
+    },
+    {
+      "type": "interaction",
+      "name": "escape closes navigation",
+      "passed": true
+    },
+    {
+      "type": "interaction",
+      "name": "mobile market navigation closes overlay",
+      "passed": true
+    },
+    {
+      "type": "interaction",
+      "name": "mobile resource dialog stays within viewport",
+      "passed": true
+    },
+    {
+      "type": "interaction",
+      "name": "escape closes detail dialog",
+      "passed": true
+    },
+    {
+      "type": "interaction",
+      "name": "prototype made no network requests",
+      "passed": true
+    }
+  ],
+  "pageErrors": [],
+  "networkRequests": [],
+  "screenshots": [
+    "/Users/mac/Documents/New project 2/validation/qoder-dashboard-1440.png",
+    "/Users/mac/Documents/New project 2/validation/qoder-node-1440.png",
+    "/Users/mac/Documents/New project 2/validation/qoder-conversation-1440.png",
+    "/Users/mac/Documents/New project 2/validation/qoder-agents-1440.png",
+    "/Users/mac/Documents/New project 2/validation/qoder-market-1440.png",
+    "/Users/mac/Documents/New project 2/validation/qoder-dashboard-1024.png",
+    "/Users/mac/Documents/New project 2/validation/qoder-node-1024.png",
+    "/Users/mac/Documents/New project 2/validation/qoder-conversation-1024.png",
+    "/Users/mac/Documents/New project 2/validation/qoder-agents-1024.png",
+    "/Users/mac/Documents/New project 2/validation/qoder-market-1024.png",
+    "/Users/mac/Documents/New project 2/validation/qoder-dashboard-390.png",
+    "/Users/mac/Documents/New project 2/validation/qoder-node-390.png",
+    "/Users/mac/Documents/New project 2/validation/qoder-conversation-390.png",
+    "/Users/mac/Documents/New project 2/validation/qoder-agents-390.png",
+    "/Users/mac/Documents/New project 2/validation/qoder-market-390.png"
+  ],
+  "limitations": "Local UI reference adaptation with fictional data. No real AI/backend/authentication. Layout checks are overflow/content checks, with separate manual screenshot review, not full a11y certification."
+}

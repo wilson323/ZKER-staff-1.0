@@ -1,0 +1,704 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.invalid/zker/design/oa-inbox-entry-v1",
+  "title": "OA InboxEntry candidate read model",
+  "$comment": "DESIGN_PROPOSAL_ONLY. UI projection, not canonical identity roles or authoritative workflow state. Server session fixes tenant; relational authorization and source consistency require server checks.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "inboxEntryId",
+    "tenantId",
+    "recipientMembershipId",
+    "entryKind",
+    "sourceRef",
+    "workExecutionId",
+    "workItemId",
+    "humanTaskId",
+    "approvalRequestId",
+    "activationRound",
+    "sourceRevision",
+    "businessNumber",
+    "title",
+    "processLabel",
+    "taskState",
+    "instanceState",
+    "relationship",
+    "allowedActions",
+    "projectionAsOf",
+    "dueAt",
+    "readAt",
+    "handledAt"
+  ],
+  "properties": {
+    "inboxEntryId": {
+      "type": "string",
+      "pattern": "^[A-Za-z0-9][A-Za-z0-9._:-]{0,127}$"
+    },
+    "tenantId": {
+      "type": "string",
+      "pattern": "^[A-Za-z0-9][A-Za-z0-9._:-]{0,127}$"
+    },
+    "recipientMembershipId": {
+      "type": "string",
+      "pattern": "^[A-Za-z0-9][A-Za-z0-9._:-]{0,127}$"
+    },
+    "entryKind": {
+      "enum": [
+        "WORK",
+        "APPROVAL",
+        "CC"
+      ]
+    },
+    "sourceRef": {
+      "type": "string",
+      "pattern": "^[A-Za-z0-9][A-Za-z0-9._:-]{0,127}$"
+    },
+    "workExecutionId": {
+      "type": "string",
+      "pattern": "^[A-Za-z0-9][A-Za-z0-9._:-]{0,127}$"
+    },
+    "workItemId": {
+      "anyOf": [
+        {
+          "type": "string",
+          "pattern": "^[A-Za-z0-9][A-Za-z0-9._:-]{0,127}$"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "humanTaskId": {
+      "anyOf": [
+        {
+          "type": "string",
+          "pattern": "^[A-Za-z0-9][A-Za-z0-9._:-]{0,127}$"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "approvalRequestId": {
+      "anyOf": [
+        {
+          "type": "string",
+          "pattern": "^[A-Za-z0-9][A-Za-z0-9._:-]{0,127}$"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "activationRound": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "sourceRevision": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "businessNumber": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 120
+    },
+    "title": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 200
+    },
+    "processLabel": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 100
+    },
+    "taskState": {
+      "enum": [
+        "CLAIMABLE",
+        "ACTION_REQUIRED",
+        "WAITING_REVIEW",
+        "HANDLED",
+        "RETURNED",
+        "NEEDS_RECHECK",
+        "SUPERSEDED",
+        "CC",
+        "CANCELLED"
+      ]
+    },
+    "instanceState": {
+      "enum": [
+        "created",
+        "running",
+        "awaiting_human",
+        "awaiting_approval",
+        "completed",
+        "failed",
+        "cancelled",
+        "reconciling"
+      ]
+    },
+    "relationship": {
+      "enum": [
+        "EXECUTOR",
+        "REVIEWER",
+        "CANDIDATE",
+        "CC"
+      ]
+    },
+    "allowedActions": {
+      "type": "array",
+      "uniqueItems": true,
+      "items": {
+        "enum": [
+          "OPEN",
+          "CLAIM",
+          "SAVE_DRAFT",
+          "SUBMIT",
+          "APPROVE",
+          "RETURN",
+          "MARK_READ"
+        ]
+      }
+    },
+    "projectionAsOf": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "dueAt": {
+      "anyOf": [
+        {
+          "type": "string",
+          "format": "date-time"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "readAt": {
+      "anyOf": [
+        {
+          "type": "string",
+          "format": "date-time"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "handledAt": {
+      "anyOf": [
+        {
+          "type": "string",
+          "format": "date-time"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    }
+  },
+  "allOf": [
+    {
+      "if": {
+        "properties": {
+          "entryKind": {
+            "const": "WORK"
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "workItemId": {
+            "type": "string",
+            "pattern": "^[A-Za-z0-9][A-Za-z0-9._:-]{0,127}$"
+          },
+          "humanTaskId": {
+            "type": "string",
+            "pattern": "^[A-Za-z0-9][A-Za-z0-9._:-]{0,127}$"
+          },
+          "approvalRequestId": {
+            "type": "null"
+          },
+          "relationship": {
+            "enum": [
+              "EXECUTOR",
+              "CANDIDATE"
+            ]
+          },
+          "allowedActions": {
+            "items": {
+              "enum": [
+                "OPEN",
+                "CLAIM",
+                "SAVE_DRAFT",
+                "SUBMIT"
+              ]
+            }
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "entryKind": {
+            "const": "APPROVAL"
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "workItemId": {
+            "type": "string",
+            "pattern": "^[A-Za-z0-9][A-Za-z0-9._:-]{0,127}$"
+          },
+          "approvalRequestId": {
+            "type": "string",
+            "pattern": "^[A-Za-z0-9][A-Za-z0-9._:-]{0,127}$"
+          },
+          "relationship": {
+            "const": "REVIEWER"
+          },
+          "allowedActions": {
+            "items": {
+              "enum": [
+                "OPEN",
+                "SAVE_DRAFT",
+                "APPROVE",
+                "RETURN"
+              ]
+            }
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "entryKind": {
+            "const": "CC"
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "relationship": {
+            "const": "CC"
+          },
+          "taskState": {
+            "const": "CC"
+          },
+          "approvalRequestId": {
+            "type": "null"
+          },
+          "allowedActions": {
+            "items": {
+              "enum": [
+                "OPEN",
+                "MARK_READ"
+              ]
+            }
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "taskState": {
+            "enum": [
+              "SUPERSEDED",
+              "CANCELLED",
+              "HANDLED"
+            ]
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "allowedActions": {
+            "items": {
+              "const": "OPEN"
+            }
+          }
+        }
+      }
+    }
+  ],
+  "x-examples": {
+    "valid": [
+      {
+        "name": "Work entry",
+        "value": {
+          "inboxEntryId": "inbox-001",
+          "tenantId": "tenant-demo",
+          "recipientMembershipId": "member-main",
+          "entryKind": "WORK",
+          "sourceRef": "work-item-001",
+          "workExecutionId": "we-001",
+          "workItemId": "wi-001",
+          "humanTaskId": "ht-001-r1",
+          "approvalRequestId": null,
+          "activationRound": 1,
+          "sourceRevision": 1,
+          "businessNumber": "CG-20260911-001",
+          "title": "核对采购依据",
+          "processLabel": "设备采购",
+          "taskState": "ACTION_REQUIRED",
+          "instanceState": "running",
+          "relationship": "EXECUTOR",
+          "allowedActions": [
+            "OPEN",
+            "SAVE_DRAFT",
+            "SUBMIT"
+          ],
+          "projectionAsOf": "2026-09-11T02:00:00Z",
+          "dueAt": "2026-09-11T09:00:00Z",
+          "readAt": null,
+          "handledAt": null
+        }
+      },
+      {
+        "name": "Approval entry",
+        "value": {
+          "inboxEntryId": "approval-001",
+          "tenantId": "tenant-demo",
+          "recipientMembershipId": "member-main",
+          "entryKind": "APPROVAL",
+          "sourceRef": "approval-request-001",
+          "workExecutionId": "we-001",
+          "workItemId": "wi-001",
+          "humanTaskId": "ht-001-r1",
+          "approvalRequestId": "apr-001",
+          "activationRound": 1,
+          "sourceRevision": 1,
+          "businessNumber": "CG-20260911-001",
+          "title": "核对采购依据",
+          "processLabel": "设备采购",
+          "taskState": "ACTION_REQUIRED",
+          "instanceState": "running",
+          "relationship": "REVIEWER",
+          "allowedActions": [
+            "OPEN",
+            "APPROVE",
+            "RETURN"
+          ],
+          "projectionAsOf": "2026-09-11T02:00:00Z",
+          "dueAt": "2026-09-11T09:00:00Z",
+          "readAt": null,
+          "handledAt": null
+        }
+      },
+      {
+        "name": "CC entry",
+        "value": {
+          "inboxEntryId": "cc-001",
+          "tenantId": "tenant-demo",
+          "recipientMembershipId": "member-main",
+          "entryKind": "CC",
+          "sourceRef": "notification-001",
+          "workExecutionId": "we-001",
+          "workItemId": null,
+          "humanTaskId": null,
+          "approvalRequestId": null,
+          "activationRound": 1,
+          "sourceRevision": 1,
+          "businessNumber": "CG-20260911-001",
+          "title": "核对采购依据",
+          "processLabel": "设备采购",
+          "taskState": "CC",
+          "instanceState": "running",
+          "relationship": "CC",
+          "allowedActions": [
+            "OPEN",
+            "MARK_READ"
+          ],
+          "projectionAsOf": "2026-09-11T02:00:00Z",
+          "dueAt": "2026-09-11T09:00:00Z",
+          "readAt": null,
+          "handledAt": null
+        }
+      }
+    ],
+    "invalid": [
+      {
+        "name": "CC cannot approve",
+        "value": {
+          "inboxEntryId": "cc-001",
+          "tenantId": "tenant-demo",
+          "recipientMembershipId": "member-main",
+          "entryKind": "CC",
+          "sourceRef": "notification-001",
+          "workExecutionId": "we-001",
+          "workItemId": null,
+          "humanTaskId": null,
+          "approvalRequestId": null,
+          "activationRound": 1,
+          "sourceRevision": 1,
+          "businessNumber": "CG-20260911-001",
+          "title": "核对采购依据",
+          "processLabel": "设备采购",
+          "taskState": "CC",
+          "instanceState": "running",
+          "relationship": "CC",
+          "allowedActions": [
+            "APPROVE"
+          ],
+          "projectionAsOf": "2026-09-11T02:00:00Z",
+          "dueAt": "2026-09-11T09:00:00Z",
+          "readAt": null,
+          "handledAt": null
+        }
+      },
+      {
+        "name": "WORK cannot approve",
+        "value": {
+          "inboxEntryId": "inbox-001",
+          "tenantId": "tenant-demo",
+          "recipientMembershipId": "member-main",
+          "entryKind": "WORK",
+          "sourceRef": "work-item-001",
+          "workExecutionId": "we-001",
+          "workItemId": "wi-001",
+          "humanTaskId": "ht-001-r1",
+          "approvalRequestId": null,
+          "activationRound": 1,
+          "sourceRevision": 1,
+          "businessNumber": "CG-20260911-001",
+          "title": "核对采购依据",
+          "processLabel": "设备采购",
+          "taskState": "ACTION_REQUIRED",
+          "instanceState": "running",
+          "relationship": "EXECUTOR",
+          "allowedActions": [
+            "APPROVE"
+          ],
+          "projectionAsOf": "2026-09-11T02:00:00Z",
+          "dueAt": "2026-09-11T09:00:00Z",
+          "readAt": null,
+          "handledAt": null
+        }
+      },
+      {
+        "name": "APPROVAL requires request reference",
+        "value": {
+          "inboxEntryId": "approval-001",
+          "tenantId": "tenant-demo",
+          "recipientMembershipId": "member-main",
+          "entryKind": "APPROVAL",
+          "sourceRef": "approval-request-001",
+          "workExecutionId": "we-001",
+          "workItemId": "wi-001",
+          "humanTaskId": "ht-001-r1",
+          "approvalRequestId": null,
+          "activationRound": 1,
+          "sourceRevision": 1,
+          "businessNumber": "CG-20260911-001",
+          "title": "核对采购依据",
+          "processLabel": "设备采购",
+          "taskState": "ACTION_REQUIRED",
+          "instanceState": "running",
+          "relationship": "REVIEWER",
+          "allowedActions": [
+            "OPEN",
+            "APPROVE",
+            "RETURN"
+          ],
+          "projectionAsOf": "2026-09-11T02:00:00Z",
+          "dueAt": "2026-09-11T09:00:00Z",
+          "readAt": null,
+          "handledAt": null
+        }
+      },
+      {
+        "name": "WORK requires work item",
+        "value": {
+          "inboxEntryId": "inbox-001",
+          "tenantId": "tenant-demo",
+          "recipientMembershipId": "member-main",
+          "entryKind": "WORK",
+          "sourceRef": "work-item-001",
+          "workExecutionId": "we-001",
+          "workItemId": null,
+          "humanTaskId": "ht-001-r1",
+          "approvalRequestId": null,
+          "activationRound": 1,
+          "sourceRevision": 1,
+          "businessNumber": "CG-20260911-001",
+          "title": "核对采购依据",
+          "processLabel": "设备采购",
+          "taskState": "ACTION_REQUIRED",
+          "instanceState": "running",
+          "relationship": "EXECUTOR",
+          "allowedActions": [
+            "OPEN",
+            "SAVE_DRAFT",
+            "SUBMIT"
+          ],
+          "projectionAsOf": "2026-09-11T02:00:00Z",
+          "dueAt": "2026-09-11T09:00:00Z",
+          "readAt": null,
+          "handledAt": null
+        }
+      },
+      {
+        "name": "Positive round required",
+        "value": {
+          "inboxEntryId": "inbox-001",
+          "tenantId": "tenant-demo",
+          "recipientMembershipId": "member-main",
+          "entryKind": "WORK",
+          "sourceRef": "work-item-001",
+          "workExecutionId": "we-001",
+          "workItemId": "wi-001",
+          "humanTaskId": "ht-001-r1",
+          "approvalRequestId": null,
+          "activationRound": 0,
+          "sourceRevision": 1,
+          "businessNumber": "CG-20260911-001",
+          "title": "核对采购依据",
+          "processLabel": "设备采购",
+          "taskState": "ACTION_REQUIRED",
+          "instanceState": "running",
+          "relationship": "EXECUTOR",
+          "allowedActions": [
+            "OPEN",
+            "SAVE_DRAFT",
+            "SUBMIT"
+          ],
+          "projectionAsOf": "2026-09-11T02:00:00Z",
+          "dueAt": "2026-09-11T09:00:00Z",
+          "readAt": null,
+          "handledAt": null
+        }
+      },
+      {
+        "name": "Unknown business terminal forbidden",
+        "value": {
+          "inboxEntryId": "inbox-001",
+          "tenantId": "tenant-demo",
+          "recipientMembershipId": "member-main",
+          "entryKind": "WORK",
+          "sourceRef": "work-item-001",
+          "workExecutionId": "we-001",
+          "workItemId": "wi-001",
+          "humanTaskId": "ht-001-r1",
+          "approvalRequestId": null,
+          "activationRound": 1,
+          "sourceRevision": 1,
+          "businessNumber": "CG-20260911-001",
+          "title": "核对采购依据",
+          "processLabel": "设备采购",
+          "taskState": "ACTION_REQUIRED",
+          "instanceState": "AI_SUCCESS",
+          "relationship": "EXECUTOR",
+          "allowedActions": [
+            "OPEN",
+            "SAVE_DRAFT",
+            "SUBMIT"
+          ],
+          "projectionAsOf": "2026-09-11T02:00:00Z",
+          "dueAt": "2026-09-11T09:00:00Z",
+          "readAt": null,
+          "handledAt": null
+        }
+      },
+      {
+        "name": "Stale approval cannot act",
+        "value": {
+          "inboxEntryId": "approval-001",
+          "tenantId": "tenant-demo",
+          "recipientMembershipId": "member-main",
+          "entryKind": "APPROVAL",
+          "sourceRef": "approval-request-001",
+          "workExecutionId": "we-001",
+          "workItemId": "wi-001",
+          "humanTaskId": "ht-001-r1",
+          "approvalRequestId": "apr-001",
+          "activationRound": 1,
+          "sourceRevision": 1,
+          "businessNumber": "CG-20260911-001",
+          "title": "核对采购依据",
+          "processLabel": "设备采购",
+          "taskState": "SUPERSEDED",
+          "instanceState": "running",
+          "relationship": "REVIEWER",
+          "allowedActions": [
+            "OPEN",
+            "APPROVE",
+            "RETURN"
+          ],
+          "projectionAsOf": "2026-09-11T02:00:00Z",
+          "dueAt": "2026-09-11T09:00:00Z",
+          "readAt": null,
+          "handledAt": null
+        }
+      },
+      {
+        "name": "No secret fields",
+        "value": {
+          "inboxEntryId": "inbox-001",
+          "tenantId": "tenant-demo",
+          "recipientMembershipId": "member-main",
+          "entryKind": "WORK",
+          "sourceRef": "work-item-001",
+          "workExecutionId": "we-001",
+          "workItemId": "wi-001",
+          "humanTaskId": "ht-001-r1",
+          "approvalRequestId": null,
+          "activationRound": 1,
+          "sourceRevision": 1,
+          "businessNumber": "CG-20260911-001",
+          "title": "核对采购依据",
+          "processLabel": "设备采购",
+          "taskState": "ACTION_REQUIRED",
+          "instanceState": "running",
+          "relationship": "EXECUTOR",
+          "allowedActions": [
+            "OPEN",
+            "SAVE_DRAFT",
+            "SUBMIT"
+          ],
+          "projectionAsOf": "2026-09-11T02:00:00Z",
+          "dueAt": "2026-09-11T09:00:00Z",
+          "readAt": null,
+          "handledAt": null,
+          "accessToken": "forbidden-placeholder"
+        }
+      },
+      {
+        "name": "Date must parse",
+        "value": {
+          "inboxEntryId": "inbox-001",
+          "tenantId": "tenant-demo",
+          "recipientMembershipId": "member-main",
+          "entryKind": "WORK",
+          "sourceRef": "work-item-001",
+          "workExecutionId": "we-001",
+          "workItemId": "wi-001",
+          "humanTaskId": "ht-001-r1",
+          "approvalRequestId": null,
+          "activationRound": 1,
+          "sourceRevision": 1,
+          "businessNumber": "CG-20260911-001",
+          "title": "核对采购依据",
+          "processLabel": "设备采购",
+          "taskState": "ACTION_REQUIRED",
+          "instanceState": "running",
+          "relationship": "EXECUTOR",
+          "allowedActions": [
+            "OPEN",
+            "SAVE_DRAFT",
+            "SUBMIT"
+          ],
+          "projectionAsOf": "bad-time",
+          "dueAt": "2026-09-11T09:00:00Z",
+          "readAt": null,
+          "handledAt": null
+        }
+      }
+    ]
+  }
+}

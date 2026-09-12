@@ -1,0 +1,6633 @@
+{
+  "schemaVersion": 1,
+  "scope": "DERIVED_TECHNICAL_DESIGN_MAP_NOT_NEW_REQUIREMENT_AUTHORITY",
+  "sourceSha256": "5dbbe41a1e6853cfca898094a5e98ed929c9e4e8fe0c2d49da4cf213363b2fa8",
+  "domains": [
+    {
+      "id": "WD",
+      "label": "员工工作台",
+      "module": "work",
+      "responsibility": "本人待办/工作查询，读BPM与协作投影"
+    },
+    {
+      "id": "HR",
+      "label": "人员职责",
+      "module": "system + work",
+      "responsibility": "可信人员/任职与当前任务责任"
+    },
+    {
+      "id": "NC",
+      "label": "节点执行配置",
+      "module": "work + execution",
+      "responsibility": "任务配置head与不可变版本"
+    },
+    {
+      "id": "AG",
+      "label": "数字员工资产",
+      "module": "ai + adoption",
+      "responsibility": "数字员工资质、发布版与个人采用"
+    },
+    {
+      "id": "SK",
+      "label": "技能",
+      "module": "ai + adoption",
+      "responsibility": "技能定义、隔离测试、版本谱系"
+    },
+    {
+      "id": "CN",
+      "label": "连接器与外部动作",
+      "module": "integration",
+      "responsibility": "连接身份、ToolGate及效果查证"
+    },
+    {
+      "id": "KB",
+      "label": "知识与引用",
+      "module": "ai + intelligence",
+      "responsibility": "来源、索引、关系候选与发布"
+    },
+    {
+      "id": "MM",
+      "label": "记忆与经验",
+      "module": "intelligence",
+      "responsibility": "本人偏好、经验与受控进化"
+    },
+    {
+      "id": "WS",
+      "label": "工作空间与产物",
+      "module": "infra + context",
+      "responsibility": "私有产物版本与授权预览"
+    },
+    {
+      "id": "CV",
+      "label": "对话与执行",
+      "module": "execution + context",
+      "responsibility": "会话投影、Attempt及检查点"
+    },
+    {
+      "id": "TM",
+      "label": "数字员工团队",
+      "module": "execution",
+      "responsibility": "同一Attempt树的有界子执行"
+    },
+    {
+      "id": "FL",
+      "label": "节点执行方案",
+      "module": "ai + execution",
+      "responsibility": "节点方法/方案版本，非第二OA引擎"
+    },
+    {
+      "id": "AT",
+      "label": "自动化",
+      "module": "infra + intelligence",
+      "responsibility": "调度计划、机会和触发去重"
+    },
+    {
+      "id": "IM",
+      "label": "消息渠道与专家协作",
+      "module": "integration",
+      "responsibility": "可信渠道身份、具体工作路由和回执"
+    },
+    {
+      "id": "RS",
+      "label": "成果验收与交接",
+      "module": "contribution + bpm",
+      "responsibility": "贡献、独立审核、正式交付与接手"
+    },
+    {
+      "id": "SD",
+      "label": "SOP设计",
+      "module": "bpm",
+      "responsibility": "原流程设计器、模板、表单和发布"
+    },
+    {
+      "id": "AD",
+      "label": "组织权限与资产管理",
+      "module": "system + integration",
+      "responsibility": "角色/对象/字段/用途授权与撤权"
+    },
+    {
+      "id": "OP",
+      "label": "运行与体验质量",
+      "module": "execution + infra",
+      "responsibility": "用量、审计、运行恢复和监控"
+    },
+    {
+      "id": "HC",
+      "label": "人员与数字员工关系",
+      "module": "work + ai",
+      "responsibility": "承担人与本人绑定资源及版本"
+    },
+    {
+      "id": "CX",
+      "label": "上下文构建与消费",
+      "module": "context",
+      "responsibility": "人员投影与后台输入快照分离"
+    },
+    {
+      "id": "SY",
+      "label": "上下文变更与一致性",
+      "module": "context + contribution",
+      "responsibility": "依据变更传播、版本重核及旧结果失效"
+    }
+  ],
+  "pages": [
+    {
+      "id": "P01",
+      "label": "我的工作台",
+      "route": "/work/inbox",
+      "component": "WorkInbox",
+      "commandIds": [
+        "C01",
+        "C02",
+        "C03",
+        "C04",
+        "C05",
+        "C15",
+        "C25",
+        "C28",
+        "C30"
+      ],
+      "module": "work",
+      "primaryCommandIds": [
+        "C01",
+        "C02",
+        "C15"
+      ]
+    },
+    {
+      "id": "P02",
+      "label": "节点工作区",
+      "route": "/work/:workId",
+      "component": "WorkShell",
+      "commandIds": [
+        "C01",
+        "C02",
+        "C03",
+        "C04",
+        "C05",
+        "C06",
+        "C07",
+        "C08",
+        "C09",
+        "C10",
+        "C11",
+        "C12",
+        "C14",
+        "C15",
+        "C16",
+        "C20",
+        "C21",
+        "C22",
+        "C23",
+        "C24",
+        "C25",
+        "C27",
+        "C28",
+        "C30"
+      ],
+      "module": "work/context",
+      "primaryCommandIds": [
+        "C01",
+        "C05",
+        "C06",
+        "C07"
+      ]
+    },
+    {
+      "id": "P03",
+      "label": "参与者与协作分工",
+      "route": "/work/:workId/collaboration",
+      "component": "CollaborationPanel",
+      "commandIds": [
+        "C03",
+        "C08",
+        "C09",
+        "C21",
+        "C23",
+        "C24"
+      ],
+      "module": "contribution",
+      "primaryCommandIds": [
+        "C08",
+        "C09"
+      ]
+    },
+    {
+      "id": "P04",
+      "label": "本次执行配置",
+      "route": "/work/:workId/config",
+      "component": "BindingEditor",
+      "commandIds": [
+        "C01",
+        "C04",
+        "C05",
+        "C06",
+        "C07",
+        "C13",
+        "C14",
+        "C16",
+        "C17",
+        "C18",
+        "C24",
+        "C27"
+      ],
+      "module": "work",
+      "primaryCommandIds": [
+        "C04",
+        "C05",
+        "C27"
+      ]
+    },
+    {
+      "id": "P05",
+      "label": "数字员工目录与详情",
+      "route": "/resources/employees",
+      "component": "EmployeeCatalog",
+      "commandIds": [
+        "C05",
+        "C13",
+        "C17",
+        "C27"
+      ],
+      "module": "ai/adoption",
+      "primaryCommandIds": [
+        "C17",
+        "C13"
+      ]
+    },
+    {
+      "id": "P06",
+      "label": "技能目录与创作",
+      "route": "/resources/skills",
+      "component": "SkillCatalog",
+      "commandIds": [
+        "C05",
+        "C13",
+        "C17",
+        "C31"
+      ],
+      "module": "ai/adoption",
+      "primaryCommandIds": [
+        "C17",
+        "C13"
+      ]
+    },
+    {
+      "id": "P07",
+      "label": "工具和连接身份",
+      "route": "/resources/connections",
+      "component": "ConnectionList",
+      "commandIds": [
+        "C07",
+        "C14",
+        "C18",
+        "C24",
+        "C25"
+      ],
+      "module": "integration",
+      "primaryCommandIds": [
+        "C18"
+      ]
+    },
+    {
+      "id": "P08",
+      "label": "知识库与来源",
+      "route": "/knowledge",
+      "component": "KnowledgeWorkspace",
+      "commandIds": [
+        "C01",
+        "C05",
+        "C19",
+        "C28",
+        "C29"
+      ],
+      "module": "intelligence",
+      "primaryCommandIds": [
+        "C19",
+        "C29"
+      ]
+    },
+    {
+      "id": "P09",
+      "label": "记忆与经验",
+      "route": "/experience",
+      "component": "MemoryEvolution",
+      "commandIds": [
+        "C16",
+        "C17",
+        "C19",
+        "C27",
+        "C31"
+      ],
+      "module": "intelligence",
+      "primaryCommandIds": [
+        "C19",
+        "C31"
+      ]
+    },
+    {
+      "id": "P10",
+      "label": "文件与产物",
+      "route": "/work/:workId/files",
+      "component": "WorkDisplay(files)",
+      "commandIds": [
+        "C01",
+        "C05",
+        "C06",
+        "C07",
+        "C09",
+        "C10",
+        "C14",
+        "C15",
+        "C20",
+        "C24",
+        "C25"
+      ],
+      "module": "infra/context",
+      "primaryCommandIds": [
+        "C20"
+      ]
+    },
+    {
+      "id": "P11",
+      "label": "对话与执行",
+      "route": "/work/:workId/chat",
+      "component": "WorkShell(chat)",
+      "commandIds": [
+        "C01",
+        "C05",
+        "C06",
+        "C07",
+        "C09",
+        "C10",
+        "C14",
+        "C15",
+        "C19",
+        "C20",
+        "C23",
+        "C24",
+        "C27",
+        "C28"
+      ],
+      "module": "execution/context",
+      "primaryCommandIds": [
+        "C01",
+        "C06",
+        "C07"
+      ]
+    },
+    {
+      "id": "P12",
+      "label": "数字员工团队",
+      "route": "/resources/teams",
+      "component": "AgentTeam",
+      "commandIds": [
+        "C06",
+        "C07",
+        "C21"
+      ],
+      "module": "execution",
+      "primaryCommandIds": [
+        "C21"
+      ]
+    },
+    {
+      "id": "P13",
+      "label": "节点执行方案",
+      "route": "/resources/plans",
+      "component": "ExecutionPlan",
+      "commandIds": [
+        "C06",
+        "C07",
+        "C17",
+        "C21"
+      ],
+      "module": "ai/execution",
+      "primaryCommandIds": [
+        "C17",
+        "C21"
+      ]
+    },
+    {
+      "id": "P14",
+      "label": "自动化",
+      "route": "/assistance",
+      "component": "ProactivePlans",
+      "commandIds": [
+        "C04",
+        "C06",
+        "C15",
+        "C22",
+        "C27",
+        "C30"
+      ],
+      "module": "intelligence",
+      "primaryCommandIds": [
+        "C22",
+        "C30"
+      ]
+    },
+    {
+      "id": "P15",
+      "label": "渠道与专家",
+      "route": "/channels",
+      "component": "ChannelExpert",
+      "commandIds": [
+        "C15",
+        "C23"
+      ],
+      "module": "integration",
+      "primaryCommandIds": [
+        "C23"
+      ]
+    },
+    {
+      "id": "P16",
+      "label": "审核、交付与接手",
+      "route": "/work/:workId/delivery",
+      "component": "DeliveryReview",
+      "commandIds": [
+        "C06",
+        "C07",
+        "C09",
+        "C10",
+        "C11",
+        "C12",
+        "C14",
+        "C16",
+        "C22",
+        "C24",
+        "C30"
+      ],
+      "module": "contribution/bpm",
+      "primaryCommandIds": [
+        "C10",
+        "C11",
+        "C12"
+      ]
+    },
+    {
+      "id": "P17",
+      "label": "SOP Studio",
+      "route": "/admin/processes",
+      "component": "ProcessDesigner",
+      "commandIds": [
+        "C02",
+        "C26"
+      ],
+      "module": "bpm",
+      "primaryCommandIds": [
+        "C26"
+      ]
+    },
+    {
+      "id": "P18",
+      "label": "组织、人员与权限",
+      "route": "/admin/organization",
+      "component": "OrgPermissions",
+      "commandIds": [
+        "C03",
+        "C08",
+        "C18",
+        "C24",
+        "C25"
+      ],
+      "module": "system",
+      "primaryCommandIds": [
+        "C24"
+      ]
+    },
+    {
+      "id": "P19",
+      "label": "运行、用量与审计",
+      "route": "/insights",
+      "component": "AnalysisOperations",
+      "commandIds": [
+        "C01",
+        "C05",
+        "C07",
+        "C14",
+        "C17",
+        "C24",
+        "C25",
+        "C28",
+        "C31"
+      ],
+      "module": "intelligence/execution",
+      "primaryCommandIds": [
+        "C25",
+        "C28"
+      ]
+    },
+    {
+      "id": "P20",
+      "label": "上下文与变化",
+      "route": "/work/:workId/context",
+      "component": "ContextInspector",
+      "commandIds": [
+        "C01",
+        "C05",
+        "C06",
+        "C07",
+        "C09",
+        "C10",
+        "C11",
+        "C12",
+        "C14",
+        "C16",
+        "C19",
+        "C24",
+        "C28",
+        "C29"
+      ],
+      "module": "context",
+      "primaryCommandIds": [
+        "C05",
+        "C16"
+      ]
+    },
+    {
+      "id": "P21",
+      "label": "通知与个人设置",
+      "route": "/preferences",
+      "component": "PersonalPreferences",
+      "commandIds": [
+        "C01",
+        "C04",
+        "C14",
+        "C15",
+        "C19",
+        "C23",
+        "C25",
+        "C27",
+        "C30"
+      ],
+      "module": "system/intelligence",
+      "primaryCommandIds": [
+        "C15",
+        "C27"
+      ]
+    },
+    {
+      "id": "P22",
+      "label": "员工资源市场",
+      "route": "/market",
+      "component": "ResourceMarket",
+      "commandIds": [
+        "C01",
+        "C02",
+        "C03",
+        "C04",
+        "C05",
+        "C06",
+        "C07",
+        "C08",
+        "C09",
+        "C10",
+        "C11",
+        "C12",
+        "C13",
+        "C14",
+        "C15",
+        "C16",
+        "C17",
+        "C18",
+        "C19",
+        "C21",
+        "C23",
+        "C24",
+        "C25",
+        "C27"
+      ],
+      "module": "adoption",
+      "primaryCommandIds": [
+        "C13"
+      ]
+    }
+  ],
+  "commands": [
+    {
+      "id": "C01",
+      "method": "GET",
+      "path": "/oa-api/v1/work-items",
+      "actions": "listInbox/getWork；详情 /work-items/{workId}",
+      "authorization": "本人可发现/可见投影",
+      "contract": "query/cursor；WorkspaceView",
+      "status": "PROPOSED_NOT_IMPLEMENTED"
+    },
+    {
+      "id": "C02",
+      "method": "POST",
+      "path": "/oa-api/v1/process-instances",
+      "actions": "startProcess",
+      "authorization": "模板发起资格",
+      "contract": "definitionVersion/formVersion/intent；实例与任务",
+      "status": "PROPOSED_NOT_IMPLEMENTED"
+    },
+    {
+      "id": "C03",
+      "method": "POST",
+      "path": "/oa-api/v1/work-items/{workId}/responsibility-commands",
+      "actions": "claim/release/transfer/delegate",
+      "authorization": "当前任务动作资格",
+      "contract": "action/expectedRevision/epoch/target；新责任",
+      "status": "PROPOSED_NOT_IMPLEMENTED"
+    },
+    {
+      "id": "C04",
+      "method": "PATCH",
+      "path": "/oa-api/v1/work-items/{workId}/binding",
+      "actions": "saveDraft/saveTaskBinding；草稿 /draft",
+      "authorization": "当前承担人与字段权",
+      "contract": "selectedFields/revision；绑定版本",
+      "status": "PROPOSED_NOT_IMPLEMENTED"
+    },
+    {
+      "id": "C05",
+      "method": "POST",
+      "path": "/oa-api/v1/work-items/{workId}/context-previews",
+      "actions": "previewContext/eligibleResources",
+      "authorization": "人员读取/元数据用途",
+      "contract": "bindingCandidate/purpose；获准预览与缺项",
+      "status": "PROPOSED_NOT_IMPLEMENTED"
+    },
+    {
+      "id": "C06",
+      "method": "POST",
+      "path": "/oa-api/v1/work-items/{workId}/attempts",
+      "actions": "startAttempt",
+      "authorization": "当前责任+独立执行用权",
+      "contract": "epoch/bindingVersion/revision；202/Attempt",
+      "status": "PROPOSED_NOT_IMPLEMENTED"
+    },
+    {
+      "id": "C07",
+      "method": "POST",
+      "path": "/oa-api/v1/attempts/{attemptId}/controls",
+      "actions": "controlAttempt",
+      "authorization": "当前Attempt控制权",
+      "contract": "pause/resume/cancel/expectedRevision；真实状态",
+      "status": "PROPOSED_NOT_IMPLEMENTED"
+    },
+    {
+      "id": "C08",
+      "method": "POST",
+      "path": "/oa-api/v1/collaborations/commands",
+      "actions": "request/accept/declineCollaboration",
+      "authorization": "父合同/接收资格",
+      "contract": "work/recipient/contract/action/version；请求/Link",
+      "status": "PROPOSED_NOT_IMPLEMENTED"
+    },
+    {
+      "id": "C09",
+      "method": "POST",
+      "path": "/oa-api/v1/contributions/commands",
+      "actions": "submit/decideContribution",
+      "authorization": "子提交人或父当前承担人",
+      "contract": "link/version/artifacts/decision；不可变贡献与决定",
+      "status": "PROPOSED_NOT_IMPLEMENTED"
+    },
+    {
+      "id": "C10",
+      "method": "POST",
+      "path": "/oa-api/v1/reviews/commands",
+      "actions": "requestReview/decideReview",
+      "authorization": "目标版本+独立审核资格",
+      "contract": "targetDigest/request/decision；审核任务与回执",
+      "status": "PROPOSED_NOT_IMPLEMENTED"
+    },
+    {
+      "id": "C11",
+      "method": "POST",
+      "path": "/oa-api/v1/work-items/{workId}/deliveries",
+      "actions": "submitDelivery；检查 /completion-checks",
+      "authorization": "当前承担人+全守卫",
+      "contract": "check/approval/epoch/digests；交付或待同步",
+      "status": "PROPOSED_NOT_IMPLEMENTED"
+    },
+    {
+      "id": "C12",
+      "method": "POST",
+      "path": "/oa-api/v1/handoffs/{packageId}/receipts",
+      "actions": "receiveHandoff",
+      "authorization": "当前接收责任+必需资料可读",
+      "contract": "packageVersion/recipientWork/revision；接手回执",
+      "status": "PROPOSED_NOT_IMPLEMENTED"
+    },
+    {
+      "id": "C13",
+      "method": "POST",
+      "path": "/oa-api/v1/market/adoptions",
+      "actions": "adoptMarket；目录GET /market",
+      "authorization": "资源可见/复制/引用/使用分判",
+      "contract": "type/sourceVersion/mode/target；operation/谱系",
+      "status": "PROPOSED_NOT_IMPLEMENTED"
+    },
+    {
+      "id": "C14",
+      "method": "GET",
+      "path": "/oa-api/v1/operations/{operationId}",
+      "actions": "queryOperation；查证 POST /reconcile",
+      "authorization": "当前对象查证权",
+      "contract": "operationRef；确定/未知/待恢复",
+      "status": "PROPOSED_NOT_IMPLEMENTED"
+    },
+    {
+      "id": "C15",
+      "method": "POST",
+      "path": "/oa-api/v1/notifications/commands",
+      "actions": "read/remind/withdraw",
+      "authorization": "本人接收项或合法催办/撤回",
+      "contract": "action/target/version；通知/补偿状态",
+      "status": "PROPOSED_NOT_IMPLEMENTED"
+    },
+    {
+      "id": "C16",
+      "method": "POST",
+      "path": "/oa-api/v1/facts/commands",
+      "actions": "propose/confirmBusinessFact",
+      "authorization": "来源维护与范围确认",
+      "contract": "sourceVersion/oldBaseline/newFacts；新基线",
+      "status": "PROPOSED_NOT_IMPLEMENTED"
+    },
+    {
+      "id": "C17",
+      "method": "POST",
+      "path": "/oa-api/v1/assets/commands",
+      "actions": "draft/test/publish/disable/import/export/diff/promote",
+      "authorization": "资源类型的独立动作权",
+      "contract": "kind/action/version/schemaPayload；测试/发布/操作",
+      "status": "PROPOSED_NOT_IMPLEMENTED"
+    },
+    {
+      "id": "C18",
+      "method": "POST",
+      "path": "/oa-api/v1/connections/commands",
+      "actions": "discover/health/authorize/revoke",
+      "authorization": "连接所有人与工具动作权",
+      "contract": "action/scopes/secretRef；脱敏资格",
+      "status": "PROPOSED_NOT_IMPLEMENTED"
+    },
+    {
+      "id": "C19",
+      "method": "POST",
+      "path": "/oa-api/v1/knowledge/commands",
+      "actions": "ingest/process/search/publish；memory修订",
+      "authorization": "来源/记忆的用途与读写权",
+      "contract": "kind/action/version/sourceRefs；状态/引用",
+      "status": "PROPOSED_NOT_IMPLEMENTED"
+    },
+    {
+      "id": "C20",
+      "method": "POST",
+      "path": "/oa-api/v1/artifacts/commands",
+      "actions": "uploadComplete/parse/merge；内容GET版本路径",
+      "authorization": "文件对象/版本/字段/动作权",
+      "contract": "action/ref/digest/mime；版本或处理状态",
+      "status": "PROPOSED_NOT_IMPLEMENTED"
+    },
+    {
+      "id": "C21",
+      "method": "POST",
+      "path": "/oa-api/v1/agent-teams/commands",
+      "actions": "configure/execute/replace/control",
+      "authorization": "当前任务团队与预算范围",
+      "contract": "action/parentAttempt/members；子执行树",
+      "status": "PROPOSED_NOT_IMPLEMENTED"
+    },
+    {
+      "id": "C22",
+      "method": "POST",
+      "path": "/oa-api/v1/automation-plans/commands",
+      "actions": "create/preview/test/pause/resume/trigger",
+      "authorization": "本人计划或限定维护权",
+      "contract": "action/timezone/scope/limits；计划/触发回执",
+      "status": "PROPOSED_NOT_IMPLEMENTED"
+    },
+    {
+      "id": "C23",
+      "method": "POST",
+      "path": "/oa-api/v1/integrations/events",
+      "actions": "channel/expert/A2A/API事件",
+      "authorization": "可信来源+对象映射+动作授权",
+      "contract": "event/schema/signature/nonce；已受理/去重",
+      "status": "PROPOSED_NOT_IMPLEMENTED"
+    },
+    {
+      "id": "C24",
+      "method": "POST",
+      "path": "/oa-api/v1/administration/commands",
+      "actions": "identity/grant/revoke/transfer/privacy",
+      "authorization": "细分管理域与目的",
+      "contract": "action/target/scope/expiry/version；影响/恢复",
+      "status": "PROPOSED_NOT_IMPLEMENTED"
+    },
+    {
+      "id": "C25",
+      "method": "GET",
+      "path": "/oa-api/v1/operations-insights",
+      "actions": "health/usage/audit；恢复用C14/C07",
+      "authorization": "诊断与正文分别授权",
+      "contract": "range/scope/cursor；真实指标/限制",
+      "status": "PROPOSED_NOT_IMPLEMENTED"
+    },
+    {
+      "id": "C26",
+      "method": "POST",
+      "path": "/oa-api/v1/process-definitions/commands",
+      "actions": "draft/check/preview/review/publish",
+      "authorization": "流程设计/发布资格",
+      "contract": "action/formVersion/definitionVersion；预检/版本",
+      "status": "PROPOSED_NOT_IMPLEMENTED"
+    },
+    {
+      "id": "C27",
+      "method": "POST",
+      "path": "/oa-api/v1/config-proposals/commands",
+      "actions": "proposeConfig/applyProposal/undo",
+      "authorization": "原对象的字段写权",
+      "contract": "action/baseRevision/selectedChanges；差异/变化",
+      "status": "PROPOSED_NOT_IMPLEMENTED"
+    },
+    {
+      "id": "C28",
+      "method": "POST",
+      "path": "/oa-api/v1/analysis/commands",
+      "actions": "plan/execute/readResult",
+      "authorization": "只读指标/数据/结果发布范围",
+      "contract": "question/metric/queryScope/resultRef；计划/结果",
+      "status": "PROPOSED_NOT_IMPLEMENTED"
+    },
+    {
+      "id": "C29",
+      "method": "POST",
+      "path": "/oa-api/v1/relations/commands",
+      "actions": "suggest/confirm/readRelated",
+      "authorization": "来源可读/断言确认/结果读取分判",
+      "contract": "action/sourceVersion/assertionRef；候选/关系",
+      "status": "PROPOSED_NOT_IMPLEMENTED"
+    },
+    {
+      "id": "C30",
+      "method": "POST",
+      "path": "/oa-api/v1/opportunities/{opportunityId}/commands",
+      "actions": "accept/dismiss/snooze；列表GET /opportunities",
+      "authorization": "当前接收人与有效事件",
+      "contract": "action/sourceVersion；原任务草稿/计划引用",
+      "status": "PROPOSED_NOT_IMPLEMENTED"
+    },
+    {
+      "id": "C31",
+      "method": "POST",
+      "path": "/oa-api/v1/evolution/commands",
+      "actions": "propose/evaluate/trial/publish/rollback",
+      "authorization": "独立评估/发布权与证据版本",
+      "contract": "action/baseline/candidate/evidence/trial；真实阶段",
+      "status": "PROPOSED_NOT_IMPLEMENTED"
+    }
+  ],
+  "requirements": [
+    {
+      "id": "WD-01",
+      "sourceCollection": "requirements",
+      "sourceRef": "docs/设计包/30-产品设计追踪数据.json",
+      "pageIds": [
+        "P01",
+        "P02"
+      ],
+      "commandIds": [
+        "C01",
+        "C02",
+        "C03",
+        "C15"
+      ],
+      "caseIds": [
+        "AC-01",
+        "AC-02",
+        "AC-03",
+        "AC-04",
+        "AC-07",
+        "AC-51",
+        "AC-57"
+      ],
+      "module": "work",
+      "technicalRefs": [
+        "docs/设计包/37-技术架构总设计与决策.md",
+        "docs/设计包/38-模块边界与前端工程设计.md",
+        "docs/设计包/39-数据存储与事务一致性设计.md",
+        "docs/设计包/40-接口事件与集成技术设计.md",
+        "docs/设计包/41-AI运行知识分析与安全设计.md",
+        "docs/设计包/42-部署运维与非功能设计.md",
+        "docs/设计包/43-技术实施路线与验证矩阵.md"
+      ],
+      "productEvidence": [],
+      "implementationStatus": "NOT_IMPLEMENTED_IN_THIS_PROJECT"
+    },
+    {
+      "id": "WD-02",
+      "sourceCollection": "requirements",
+      "sourceRef": "docs/设计包/30-产品设计追踪数据.json",
+      "pageIds": [
+        "P01",
+        "P02",
+        "P22"
+      ],
+      "commandIds": [
+        "C01",
+        "C02",
+        "C03",
+        "C15"
+      ],
+      "caseIds": [
+        "AC-01",
+        "AC-02",
+        "AC-03",
+        "AC-04",
+        "AC-07",
+        "AC-51",
+        "AC-57"
+      ],
+      "module": "work",
+      "technicalRefs": [
+        "docs/设计包/37-技术架构总设计与决策.md",
+        "docs/设计包/38-模块边界与前端工程设计.md",
+        "docs/设计包/39-数据存储与事务一致性设计.md",
+        "docs/设计包/40-接口事件与集成技术设计.md",
+        "docs/设计包/41-AI运行知识分析与安全设计.md",
+        "docs/设计包/42-部署运维与非功能设计.md",
+        "docs/设计包/43-技术实施路线与验证矩阵.md"
+      ],
+      "productEvidence": [],
+      "implementationStatus": "NOT_IMPLEMENTED_IN_THIS_PROJECT"
+    },
+    {
+      "id": "WD-03",
+      "sourceCollection": "requirements",
+      "sourceRef": "docs/设计包/30-产品设计追踪数据.json",
+      "pageIds": [
+        "P01",
+        "P02"
+      ],
+      "commandIds": [
+        "C01",
+        "C02",
+        "C03",
+        "C15"
+      ],
+      "caseIds": [
+        "AC-01",
+        "AC-02",
+        "AC-03",
+        "AC-04",
+        "AC-07",
+        "AC-51",
+        "AC-57"
+      ],
+      "module": "work",
+      "technicalRefs": [
+        "docs/设计包/37-技术架构总设计与决策.md",
+        "docs/设计包/38-模块边界与前端工程设计.md",
+        "docs/设计包/39-数据存储与事务一致性设计.md",
+        "docs/设计包/40-接口事件与集成技术设计.md",
+        "docs/设计包/41-AI运行知识分析与安全设计.md",
+        "docs/设计包/42-部署运维与非功能设计.md",
+        "docs/设计包/43-技术实施路线与验证矩阵.md"
+      ],
+      "productEvidence": [],
+      "implementationStatus": "NOT_IMPLEMENTED_IN_THIS_PROJECT"
+    },
+    {
+      "id": "WD-04",
+      "sourceCollection": "requirements",
+      "sourceRef": "docs/设计包/30-产品设计追踪数据.json",
+      "pageIds": [
+        "P01",
+        "P02"
+      ],
+      "commandIds": [
+        "C01",
+        "C02",
+        "C03",
+        "C15"
+      ],
+      "caseIds": [
+        "AC-01",
+        "AC-02",
+        "AC-03",
+        "AC-04",
+        "AC-07",
+        "AC-51",
+        "AC-57"
+      ],
+      "module": "work",
+      "technicalRefs": [
+        "docs/设计包/37-技术架构总设计与决策.md",
+        "docs/设计包/38-模块边界与前端工程设计.md",
+        "docs/设计包/39-数据存储与事务一致性设计.md",
+        "docs/设计包/40-接口事件与集成技术设计.md",
+        "docs/设计包/41-AI运行知识分析与安全设计.md",
+        "docs/设计包/42-部署运维与非功能设计.md",
+        "docs/设计包/43-技术实施路线与验证矩阵.md"
+      ],
+      "productEvidence": [],
+      "implementationStatus": "NOT_IMPLEMENTED_IN_THIS_PROJECT"
+    },
+    {
+      "id": "WD-05",
+      "sourceCollection": "requirements",
+      "sourceRef": "docs/设计包/30-产品设计追踪数据.json",
+      "pageIds": [
+        "P01",
+        "P02"
+      ],
+      "commandIds": [
+        "C01",
+        "C02",
+        "C03",
+        "C15"
+      ],
+      "caseIds": [
+        "AC-01",
+        "AC-02",
+        "AC-03",
+        "AC-04",
+        "AC-07",
+        "AC-51",
+        "AC-57"
+      ],
+      "module": "work",
+      "technicalRefs": [
+        "docs/设计包/37-技术架构总设计与决策.md",
+        "docs/设计包/38-模块边界与前端工程设计.md",
+        "docs/设计包/39-数据存储与事务一致性设计.md",
+        "docs/设计包/40-接口事件与集成技术设计.md",
+        "docs/设计包/41-AI运行知识分析与安全设计.md",
+        "docs/设计包/42-部署运维与非功能设计.md",
+        "docs/设计包/43-技术实施路线与验证矩阵.md"
+      ],
+      "productEvidence": [],
+      "implementationStatus": "NOT_IMPLEMENTED_IN_THIS_PROJECT"
+    },
+    {
+      "id": "WD-06",
+      "sourceCollection": "requirements",
+      "sourceRef": "docs/设计包/30-产品设计追踪数据.json",
+      "pageIds": [
+        "P01",
+        "P02"
+      ],
+      "commandIds": [
+        "C01",
+        "C02",
+        "C03",
+        "C15"
+      ],
+      "caseIds": [
+        "AC-01",
+        "AC-02",
+        "AC-03",
+        "AC-04",
+        "AC-07",
+        "AC-51",
+        "AC-57"
+      ],
+      "module": "work",
+      "technicalRefs": [
+        "docs/设计包/37-技术架构总设计与决策.md",
+        "docs/设计包/38-模块边界与前端工程设计.md",
+        "docs/设计包/39-数据存储与事务一致性设计.md",
+        "docs/设计包/40-接口事件与集成技术设计.md",
+        "docs/设计包/41-AI运行知识分析与安全设计.md",
+        "docs/设计包/42-部署运维与非功能设计.md",
+        "docs/设计包/43-技术实施路线与验证矩阵.md"
+      ],
+      "productEvidence": [],
+      "implementationStatus": "NOT_IMPLEMENTED_IN_THIS_PROJECT"
+    },
+    {
+      "id": "HR-01",
+      "sourceCollection": "requirements",
+      "sourceRef": "docs/设计包/30-产品设计追踪数据.json",
+      "pageIds": [
+        "P02",
+        "P03",
+        "P18"
+      ],
+      "commandIds": [
+        "C03",
+        "C08",
+        "C24"
+      ],
+      "caseIds": [
+        "AC-03",
+        "AC-06",
+        "AC-07",
+        "AC-08",
+        "AC-46",
+        "AC-47"
+      ],
+      "module": "system + work",
+      "technicalRefs": [
+        "docs/设计包/37-技术架构总设计与决策.md",
+        "docs/设计包/38-模块边界与前端工程设计.md",
+        "docs/设计包/39-数据存储与事务一致性设计.md",
+        "docs/设计包/40-接口事件与集成技术设计.md",
+        "docs/设计包/41-AI运行知识分析与安全设计.md",
+        "docs/设计包/42-部署运维与非功能设计.md",
+        "docs/设计包/43-技术实施路线与验证矩阵.md"
+      ],
+      "productEvidence": [],
+      "implementationStatus": "NOT_IMPLEMENTED_IN_THIS_PROJECT"
+    },
+    {
+      "id": "HR-02",
+      "sourceCollection": "requirements",
+      "sourceRef": "docs/设计包/30-产品设计追踪数据.json",
+      "pageIds": [
+        "P02",
+        "P03",
+        "P18"
+      ],
+      "commandIds": [
+        "C03",
+        "C08",
+        "C24"
+      ],
+      "caseIds": [
+        "AC-03",
+        "AC-06",
+        "AC-07",
+        "AC-08",
+        "AC-46",
+        "AC-47"
+      ],
+      "module": "system + work",
+      "technicalRefs": [
+        "docs/设计包/37-技术架构总设计与决策.md",
+        "docs/设计包/38-模块边界与前端工程设计.md",
+        "docs/设计包/39-数据存储与事务一致性设计.md",
+        "docs/设计包/40-接口事件与集成技术设计.md",
+        "docs/设计包/41-AI运行知识分析与安全设计.md",
+        "docs/设计包/42-部署运维与非功能设计.md",
+        "docs/设计包/43-技术实施路线与验证矩阵.md"
+      ],
+      "productEvidence": [],
+      "implementationStatus": "NOT_IMPLEMENTED_IN_THIS_PROJECT"
+    },
+    {
+      "id": "HR-03",
+      "sourceCollection": "requirements",
+      "sourceRef": "docs/设计包/30-产品设计追踪数据.json",
+      "pageIds": [
+        "P02",
+        "P03",
+        "P18"
+      ],
+      "commandIds": [
+        "C03",
+        "C08",
+        "C24"
+      ],
+      "caseIds": [
+        "AC-03",
+        "AC-06",
+        "AC-07",
+        "AC-08",
+        "AC-46",
+        "AC-47"
+      ],
+      "module": "system + work",
+      "technicalRefs": [
+        "docs/设计包/37-技术架构总设计与决策.md",
+        "docs/设计包/38-模块边界与前端工程设计.md",
+        "docs/设计包/39-数据存储与事务一致性设计.md",
+        "docs/设计包/40-接口事件与集成技术设计.md",
+        "docs/设计包/41-AI运行知识分析与安全设计.md",
+        "docs/设计包/42-部署运维与非功能设计.md",
+        "docs/设计包/43-技术实施路线与验证矩阵.md"
+      ],
+      "productEvidence": [],
+      "implementationStatus": "NOT_IMPLEMENTED_IN_THIS_PROJECT"
+    },
+    {
+      "id": "HR-04",
+      "sourceCollection": "requirements",
+      "sourceRef": "docs/设计包/30-产品设计追踪数据.json",
+      "pageIds": [
+        "P02",
+        "P03",
+        "P18"
+      ],
+      "commandIds": [
+        "C03",
+        "C08",
+        "C24"
+      ],
+      "caseIds": [
+        "AC-03",
+        "AC-06",
+        "AC-07",
+        "AC-08",
+        "AC-46",
+        "AC-47"
+      ],
+      "module": "system + work",
+      "technicalRefs": [
+        "docs/设计包/37-技术架构总设计与决策.md",
+        "docs/设计包/38-模块边界与前端工程设计.md",
+        "docs/设计包/39-数据存储与事务一致性设计.md",
+        "docs/设计包/40-接口事件与集成技术设计.md",
+        "docs/设计包/41-AI运行知识分析与安全设计.md",
+        "docs/设计包/42-部署运维与非功能设计.md",
+        "docs/设计包/43-技术实施路线与验证矩阵.md"
+      ],
+      "productEvidence": [],
+      "implementationStatus": "NOT_IMPLEMENTED_IN_THIS_PROJECT"
+    },
+    {
+      "id": "HR-05",
+      "sourceCollection": "requirements",
+      "sourceRef": "docs/设计包/30-产品设计追踪数据.json",
+      "pageIds": [
+        "P02",
+        "P03",
+        "P18"
+      ],
+      "commandIds": [
+        "C03",
+        "C08",
+        "C24"
+      ],
+      "caseIds": [
+        "AC-03",
+        "AC-06",
+        "AC-07",
+        "AC-08",
+        "AC-46",
+        "AC-47"
+      ],
+      "module": "system + work",
+      "technicalRefs": [
+        "docs/设计包/37-技术架构总设计与决策.md",
+        "docs/设计包/38-模块边界与前端工程设计.md",
+        "docs/设计包/39-数据存储与事务一致性设计.md",
+        "docs/设计包/40-接口事件与集成技术设计.md",
+        "docs/设计包/41-AI运行知识分析与安全设计.md",
+        "docs/设计包/42-部署运维与非功能设计.md",
+        "docs/设计包/43-技术实施路线与验证矩阵.md"
+      ],
+      "productEvidence": [],
+      "implementationStatus": "NOT_IMPLEMENTED_IN_THIS_PROJECT"
+    },
+    {
+      "id": "HR-06",
+      "sourceCollection": "requirements",
+      "sourceRef": "docs/设计包/30-产品设计追踪数据.json",
+      "pageIds": [
+        "P02",
+        "P03",
+        "P18"
+      ],
+      "commandIds": [
+        "C03",
+        "C08",
+        "C24"
+      ],
+      "caseIds": [
+        "AC-03",
+        "AC-06",
+        "AC-07",
+        "AC-08",
+        "AC-46",
+        "AC-47"
+      ],
+      "module": "system + work",
+      "technicalRefs": [
+        "docs/设计包/37-技术架构总设计与决策.md",
+        "docs/设计包/38-模块边界与前端工程设计.md",
+        "docs/设计包/39-数据存储与事务一致性设计.md",
+        "docs/设计包/40-接口事件与集成技术设计.md",
+        "docs/设计包/41-AI运行知识分析与安全设计.md",
+        "docs/设计包/42-部署运维与非功能设计.md",
+        "docs/设计包/43-技术实施路线与验证矩阵.md"
+      ],
+      "productEvidence": [],
+      "implementationStatus": "NOT_IMPLEMENTED_IN_THIS_PROJECT"
+    },
+    {
+      "id": "NC-01",
+      "sourceCollection": "requirements",
+      "sourceRef": "docs/设计包/30-产品设计追踪数据.json",
+      "pageIds": [
+        "P04"
+      ],
+      "commandIds": [
+        "C04",
+        "C05",
+        "C06",
+        "C07"
+      ],
+      "caseIds": [
+        "AC-09",
+        "AC-10",
+        "AC-11",
+        "AC-12",
+        "AC-59"
+      ],
+      "module": "work + execution",
+      "technicalRefs": [
+        "docs/设计包/37-技术架构总设计与决策.md",
+        "docs/设计包/38-模块边界与前端工程设计.md",
+        "docs/设计包/39-数据存储与事务一致性设计.md",
+        "docs/设计包/40-接口事件与集成技术设计.md",
+        "docs/设计包/41-AI运行知识分析与安全设计.md",
+        "docs/设计包/42-部署运维与非功能设计.md",
+        "docs/设计包/43-技术实施路线与验证矩阵.md"
+      ],
+      "productEvidence": [],
+      "implementationStatus": "NOT_IMPLEMENTED_IN_THIS_PROJECT"
+    },
+    {
+      "id": "NC-02",
+      "sourceCollection": "requirements",
+      "sourceRef": "docs/设计包/30-产品设计追踪数据.json",
+      "pageIds": [
+        "P04",
+        "P22"
+      ],
+      "commandIds": [
+        "C04",
+        "C05",
+        "C06",
+        "C07"
+      ],
+      "caseIds": [
+        "AC-09",
+        "AC-10",
+        "AC-11",
+        "AC-12",
+        "AC-59"
+      ],
+      "module": "work + execution",
+      "technicalRefs": [
+        "docs/设计包/37-技术架构总设计与决策.md",
+        "docs/设计包/38-模块边界与前端工程设计.md",
+        "docs/设计包/39-数据存储与事务一致性设计.md",
+        "docs/设计包/40-接口事件与集成技术设计.md",
+        "docs/设计包/41-AI运行知识分析与安全设计.md",
+        "docs/设计包/42-部署运维与非功能设计.md",
+        "docs/设计包/43-技术实施路线与验证矩阵.md"
+      ],
+      "productEvidence": [],
+      "implementationStatus": "NOT_IMPLEMENTED_IN_THIS_PROJECT"
+    },
+    {
+      "id": "NC-03",
+      "sourceCollection": "requirements",
+      "sourceRef": "docs/设计包/30-产品设计追踪数据.json",
+      "pageIds": [
+        "P04",
+        "P22"
+      ],
+      "commandIds": [
+        "C04",
+        "C05",
+        "C06",
+        "C07"
+      ],
+      "caseIds": [
+        "AC-09",
+        "AC-10",
+        "AC-11",
+        "AC-12",
+        "AC-59"
+      ],
+      "module": "work + execution",
+      "technicalRefs": [
+        "docs/设计包/37-技术架构总设计与决策.md",
+        "docs/设计包/38-模块边界与前端工程设计.md",
+        "docs/设计包/39-数据存储与事务一致性设计.md",
+        "docs/设计包/40-接口事件与集成技术设计.md",
+        "docs/设计包/41-AI运行知识分析与安全设计.md",
+        "docs/设计包/42-部署运维与非功能设计.md",
+        "docs/设计包/43-技术实施路线与验证矩阵.md"
+      ],
+      "productEvidence": [],
+      "implementationStatus": "NOT_IMPLEMENTED_IN_THIS_PROJECT"
+    },
+    {
+      "id": "NC-04",
+      "sourceCollection": "requirements",
+      "sourceRef": "docs/设计包/30-产品设计追踪数据.json",
+      "pageIds": [
+        "P04",
+        "P22"
+      ],
+      "commandIds": [
+        "C04",
+        "C05",
+        "C06",
+        "C07"
+      ],
+      "caseIds": [
+        "AC-09",
+        "AC-10",
+        "AC-11",
+        "AC-12",
+        "AC-59"
+      ],
+      "module": "work + execution",
+      "technicalRefs": [
+        "docs/设计包/37-技术架构总设计与决策.md",
+        "docs/设计包/38-模块边界与前端工程设计.md",
+        "docs/设计包/39-数据存储与事务一致性设计.md",
+        "docs/设计包/40-接口事件与集成技术设计.md",
+        "docs/设计包/41-AI运行知识分析与安全设计.md",
+        "docs/设计包/42-部署运维与非功能设计.md",
+        "docs/设计包/43-技术实施路线与验证矩阵.md"
+      ],
+      "productEvidence": [],
+      "implementationStatus": "NOT_IMPLEMENTED_IN_THIS_PROJECT"
+    },
+    {
+      "id": "NC-05",
+      "sourceCollection": "requirements",
+      "sourceRef": "docs/设计包/30-产品设计追踪数据.json",
+      "pageIds": [
+        "P04"
+      ],
+      "commandIds": [
+        "C04",
+        "C05",
+        "C06",
+        "C07"
+      ],
+      "caseIds": [
+        "AC-09",
+        "AC-10",
+        "AC-11",
+        "AC-12",
+        "AC-59"
+      ],
+      "module": "work + execution",
+      "technicalRefs": [
+        "docs/设计包/37-技术架构总设计与决策.md",
+        "docs/设计包/38-模块边界与前端工程设计.md",
+        "docs/设计包/39-数据存储与事务一致性设计.md",
+        "docs/设计包/40-接口事件与集成技术设计.md",
+        "docs/设计包/41-AI运行知识分析与安全设计.md",
+        "docs/设计包/42-部署运维与非功能设计.md",
+        "docs/设计包/43-技术实施路线与验证矩阵.md"
+      ],
+      "productEvidence": [],
+      "implementationStatus": "NOT_IMPLEMENTED_IN_THIS_PROJECT"
+    },
+    {
+      "id": "NC-06",
+      "sourceCollection": "requirements",
+      "sourceRef": "docs/设计包/30-产品设计追踪数据.json",
+      "pageIds": [
+        "P04"
+      ],
+      "commandIds": [
+        "C04",
+        "C05",
+        "C06",
+        "C07"
+      ],
+      "caseIds": [
+        "AC-09",
+        "AC-10",
+        "AC-11",
+        "AC-12",
+        "AC-59"
+      ],
+      "module": "work + execution",
+      "technicalRefs": [
+        "docs/设计包/37-技术架构总设计与决策.md",
+        "docs/设计包/38-模块边界与前端工程设计.md",
+        "docs/设计包/39-数据存储与事务一致性设计.md",
+        "docs/设计包/40-接口事件与集成技术设计.md",
+        "docs/设计包/41-AI运行知识分析与安全设计.md",
+        "docs/设计包/42-部署运维与非功能设计.md",
+        "docs/设计包/43-技术实施路线与验证矩阵.md"
+      ],
+      "productEvidence": [],
+      "implementationStatus": "NOT_IMPLEMENTED_IN_THIS_PROJECT"
+    },
+    {
+      "id": "NC-07",
+      "sourceCollection": "requirements",
+      "sourceRef": "docs/设计包/30-产品设计追踪数据.json",
+      "pageIds": [
+        "P04",
+        "P22"
+      ],
+      "commandIds": [
+        "C04",
+        "C05",
+        "C06",
+        "C07"
+      ],
+      "caseIds": [
+        "AC-09",
+        "AC-10",
+        "AC-11",
+        "AC-12",
+        "AC-59"
+      ],
+      "module": "work + execution",
+      "technicalRefs": [
+        "docs/设计包/37-技术架构总设计与决策.md",
+        "docs/设计包/38-模块边界与前端工程设计.md",
+        "docs/设计包/39-数据存储与事务一致性设计.md",
+        "docs/设计包/40-接口事件与集成技术设计.md",
+        "docs/设计包/41-AI运行知识分析与安全设计.md",
+        "docs/设计包/42-部署运维与非功能设计.md",
+        "docs/设计包/43-技术实施路线与验证矩阵.md"
+      ],
+      "productEvidence": [],
+      "implementationStatus": "NOT_IMPLEMENTED_IN_THIS_PROJECT"
+    },
+    {
+      "id": "NC-08",
+      "sourceCollection": "requirements",
+      "sourceRef": "docs/设计包/30-产品设计追踪数据.json",
+      "pageIds": [
+        "P04",
+        "P22"
+      ],
+      "commandIds": [
+        "C04",
+        "C05",
+        "C06",
+        "C07"
+      ],
+      "caseIds": [
+        "AC-09",
+        "AC-10",
+        "AC-11",
+        "AC-12",
+        "AC-59"
+      ],
+      "module": "work + execution",
+      "technicalRefs": [
+        "docs/设计包/37-技术架构总设计与决策.md",
+        "docs/设计包/38-模块边界与前端工程设计.md",
+        "docs/设计包/39-数据存储与事务一致性设计.md",
+        "docs/设计包/40-接口事件与集成技术设计.md",
+        "docs/设计包/41-AI运行知识分析与安全设计.md",
+        "docs/设计包/42-部署运维与非功能设计.md",
+        "docs/设计包/43-技术实施路线与验证矩阵.md"
+      ],
+      "productEvidence": [],
+      "implementationStatus": "NOT_IMPLEMENTED_IN_THIS_PROJECT"
+    },
+    {
+      "id": "AG-01",
+      "sourceCollection": "requirements",
+      "sourceRef": "docs/设计包/30-产品设计追踪数据.json",
+      "pageIds": [
+        "P05"
+      ],
+      "commandIds": [
+        "C13",
+        "C17"
+      ],
+      "caseIds": [
+        "AC-24",
+        "AC-25",
+        "AC-27",
+        "AC-28",
+        "AC-29"
+      ],
+      "module": "ai + adoption",
+      "technicalRefs": [
+        "docs/设计包/37-技术架构总设计与决策.md",
+        "docs/设计包/38-模块边界与前端工程设计.md",
+        "docs/设计包/39-数据存储与事务一致性设计.md",
+        "docs/设计包/40-接口事件与集成技术设计.md",
+        "docs/设计包/41-AI运行知识分析与安全设计.md",
+        "docs/设计包/42-部署运维与非功能设计.md",
+        "docs/设计包/43-技术实施路线与验证矩阵.md"
+      ],
+      "productEvidence": [],
+      "implementationStatus": "NOT_IMPLEMENTED_IN_THIS_PROJECT"
+    },
+    {
+      "id": "AG-02",
+      "sourceCollection": "requirements",
+      "sourceRef": "docs/设计包/30-产品设计追踪数据.json",
+      "pageIds": [
+        "P05",
+        "P22"
+      ],
+      "commandIds": [
+        "C13",
+        "C17"
+      ],
+      "caseIds": [
+        "AC-24",
+        "AC-25",
+        "AC-27",
+        "AC-28",
+        "AC-29"
+      ],
+      "module": "ai + adoption",
+      "technicalRefs": [
+        "docs/设计包/37-技术架构总设计与决策.md",
+        "docs/设计包/38-模块边界与前端工程设计.md",
+        "docs/设计包/39-数据存储与事务一致性设计.md",
+        "docs/设计包/40-接口事件与集成技术设计.md",
+        "docs/设计包/41-AI运行知识分析与安全设计.md",
+        "docs/设计包/42-部署运维与非功能设计.md",
+        "docs/设计包/43-技术实施路线与验证矩阵.md"
+      ],
+      "productEvidence": [],
+      "implementationStatus": "NOT_IMPLEMENTED_IN_THIS_PROJECT"
+    },
+    {
+      "id": "AG-03",
+      "sourceCollection": "requirements",
+      "sourceRef": "docs/设计包/30-产品设计追踪数据.json",
+      "pageIds": [
+        "P05"
+      ],
+      "commandIds": [
+        "C13",
+        "C17"
+      ],
+      "caseIds": [
+        "AC-24",
+        "AC-25",
+        "AC-27",
+        "AC-28",
+        "AC-29"
+      ],
+      "module": "ai + adoption",
+      "technicalRefs": [
+        "docs/设计包/37-技术架构总设计与决策.md",
+        "docs/设计包/38-模块边界与前端工程设计.md",
+        "docs/设计包/39-数据存储与事务一致性设计.md",
+        "docs/设计包/40-接口事件与集成技术设计.md",
+        "docs/设计包/41-AI运行知识分析与安全设计.md",
+        "docs/设计包/42-部署运维与非功能设计.md",
+        "docs/设计包/43-技术实施路线与验证矩阵.md"
+      ],
+      "productEvidence": [],
+      "implementationStatus": "NOT_IMPLEMENTED_IN_THIS_PROJECT"
+    },
+    {
+      "id": "AG-04",
+      "sourceCollection": "requirements",
+      "sourceRef": "docs/设计包/30-产品设计追踪数据.json",
+      "pageIds": [
+        "P05",
+        "P22"
+      ],
+      "commandIds": [
+        "C13",
+        "C17"
+      ],
+      "caseIds": [
+        "AC-24",
+        "AC-25",
+        "AC-27",
+        "AC-28",
+        "AC-29"
+      ],
+      "module": "ai + adoption",
+      "technicalRefs": [
+        "docs/设计包/37-技术架构总设计与决策.md",
+        "docs/设计包/38-模块边界与前端工程设计.md",
+        "docs/设计包/39-数据存储与事务一致性设计.md",
+        "docs/设计包/40-接口事件与集成技术设计.md",
+        "docs/设计包/41-AI运行知识分析与安全设计.md",
+        "docs/设计包/42-部署运维与非功能设计.md",
+        "docs/设计包/43-技术实施路线与验证矩阵.md"
+      ],
+      "productEvidence": [],
+      "implementationStatus": "NOT_IMPLEMENTED_IN_THIS_PROJECT"
+    },
+    {
+      "id": "AG-05",
+      "sourceCollection": "requirements",
+      "sourceRef": "docs/设计包/30-产品设计追踪数据.json",
+      "pageIds": [
+        "P05",
+        "P22"
+      ],
+      "commandIds": [
+        "C13",
+        "C17"
+      ],
+      "caseIds": [
+        "AC-24",
+        "AC-25",
+        "AC-27",
+        "AC-28",
+        "AC-29"
+      ],
+      "module": "ai + adoption",
+      "technicalRefs": [
+        "docs/设计包/37-技术架构总设计与决策.md",
+        "docs/设计包/38-模块边界与前端工程设计.md",
+        "docs/设计包/39-数据存储与事务一致性设计.md",
+        "docs/设计包/40-接口事件与集成技术设计.md",
+        "docs/设计包/41-AI运行知识分析与安全设计.md",
+        "docs/设计包/42-部署运维与非功能设计.md",
+        "docs/设计包/43-技术实施路线与验证矩阵.md"
+      ],
+      "productEvidence": [],
+      "implementationStatus": "NOT_IMPLEMENTED_IN_THIS_PROJECT"
+    },
+    {
+      "id": "AG-06",
+      "sourceCollection": "requirements",
+      "sourceRef": "docs/设计包/30-产品设计追踪数据.json",
+      "pageIds": [
+        "P05",
+        "P22"
+      ],
+      "commandIds": [
+        "C13",
+        "C17"
+      ],
+      "caseIds": [
+        "AC-24",
+        "AC-25",
+        "AC-27",
+        "AC-28",
+        "AC-29"
+      ],
+      "module": "ai + adoption",
+      "technicalRefs": [
+        "docs/设计包/37-技术架构总设计与决策.md",
+        "docs/设计包/38-模块边界与前端工程设计.md",
+        "docs/设计包/39-数据存储与事务一致性设计.md",
+        "docs/设计包/40-接口事件与集成技术设计.md",
+        "docs/设计包/41-AI运行知识分析与安全设计.md",
+        "docs/设计包/42-部署运维与非功能设计.md",
+        "docs/设计包/43-技术实施路线与验证矩阵.md"
+      ],
+      "productEvidence": [],
+      "implementationStatus": "NOT_IMPLEMENTED_IN_THIS_PROJECT"
+    },
+    {
+      "id": "AG-07",
+      "sourceCollection": "requirements",
+      "sourceRef": "docs/设计包/30-产品设计追踪数据.json",
+      "pageIds": [
+        "P05",
+        "P22"
+      ],
+      "commandIds": [
+        "C13",
+        "C17"
+      ],
+      "caseIds": [
+        "AC-24",
+        "AC-25",
+        "AC-27",
+        "AC-28",
+        "AC-29"
+      ],
+      "module": "ai + adoption",
+      "technicalRefs": [
+        "docs/设计包/37-技术架构总设计与决策.md",
+        "docs/设计包/38-模块边界与前端工程设计.md",
+        "docs/设计包/39-数据存储与事务一致性设计.md",
+        "docs/设计包/40-接口事件与集成技术设计.md",
+        "docs/设计包/41-AI运行知识分析与安全设计.md",
+        "docs/设计包/42-部署运维与非功能设计.md",
+        "docs/设计包/43-技术实施路线与验证矩阵.md"
+      ],
+      "productEvidence": [],
+      "implementationStatus": "NOT_IMPLEMENTED_IN_THIS_PROJECT"
+    },
+    {
+      "id": "SK-01",
+      "sourceCollection": "requirements",
+      "sourceRef": "docs/设计包/30-产品设计追踪数据.json",
+      "pageIds": [
+        "P06",
+        "P04",
+        "P22"
+      ],
+      "commandIds": [
+        "C05",
+        "C13",
+        "C17"
+      ],
+      "caseIds": [
+        "AC-10",
+        "AC-26",
+        "AC-27",
+        "AC-29"
+      ],
+      "module": "ai + adoption",
+      "technicalRefs": [
+        "docs/设计包/37-技术架构总设计与决策.md",
+        "docs/设计包/38-模块边界与前端工程设计.md",
+        "docs/设计包/39-数据存储与事务一致性设计.md",
+        "docs/设计包/40-接口事件与集成技术设计.md",
+        "docs/设计包/41-AI运行知识分析与安全设计.md",
+        "docs/设计包/42-部署运维与非功能设计.md",
+        "docs/设计包/43-技术实施路线与验证矩阵.md"
+      ],
+      "productEvidence": [],
+      "implementationStatus": "NOT_IMPLEMENTED_IN_THIS_PROJECT"
+    },
+    {
+      "id": "SK-02",
+      "sourceCollection": "requirements",
+      "sourceRef": "docs/设计包/30-产品设计追踪数据.json",
+      "pageIds": [
+        "P06",
+        "P04"
+      ],
+      "commandIds": [
+        "C05",
+        "C13",
+        "C17"
+      ],
+      "caseIds": [
+        "AC-10",
+        "AC-26",
+        "AC-27",
+        "AC-29"
+      ],
+      "module": "ai + adoption",
+      "technicalRefs": [
+        "docs/设计包/37-技术架构总设计与决策.md",
+        "docs/设计包/38-模块边界与前端工程设计.md",
+        "docs/设计包/39-数据存储与事务一致性设计.md",
+        "docs/设计包/40-接口事件与集成技术设计.md",
+        "docs/设计包/41-AI运行知识分析与安全设计.md",
+        "docs/设计包/42-部署运维与非功能设计.md",
+        "docs/设计包/43-技术实施路线与验证矩阵.md"
+      ],
+      "productEvidence": [],
+      "implementationStatus": "NOT_IMPLEMENTED_IN_THIS_PROJECT"
+    },
+    {
+      "id": "SK-03",
+      "sourceCollection": "requirements",
+      "sourceRef": "docs/设计包/30-产品设计追踪数据.json",
+      "pageIds": [
+        "P06",
+        "P04",
+        "P22"
+      ],
+      "commandIds": [
+        "C05",
+        "C13",
+        "C17"
+      ],
+      "caseIds": [
+        "AC-10",
+        "AC-26",
+        "AC-27",
+        "AC-29"
+      ],
+      "module": "ai + adoption",
+      "technicalRefs": [
+        "docs/设计包/37-技术架构总设计与决策.md",
+        "docs/设计包/38-模块边界与前端工程设计.md",
+        "docs/设计包/39-数据存储与事务一致性设计.md",
+        "docs/设计包/40-接口事件与集成技术设计.md",
+        "docs/设计包/41-AI运行知识分析与安全设计.md",
+        "docs/设计包/42-部署运维与非功能设计.md",
+        "docs/设计包/43-技术实施路线与验证矩阵.md"
+      ],
+      "productEvidence": [],
+      "implementationStatus": "NOT_IMPLEMENTED_IN_THIS_PROJECT"
+    },
+    {
+      "id": "SK-04",
+      "sourceCollection": "requirements",
+      "sourceRef": "docs/设计包/30-产品设计追踪数据.json",
+      "pageIds": [
+        "P06",
+        "P04",
+        "P22"
+      ],
+      "commandIds": [
+        "C05",
+        "C13",
+        "C17"
+      ],
+      "caseIds": [
+        "AC-10",
+        "AC-26",
+        "AC-27",
+        "AC-29"
+      ],
+      "module": "ai + adoption",
+      "technicalRefs": [
+        "docs/设计包/37-技术架构总设计与决策.md",
+        "docs/设计包/38-模块边界与前端工程设计.md",
+        "docs/设计包/39-数据存储与事务一致性设计.md",
+        "docs/设计包/40-接口事件与集成技术设计.md",
+        "docs/设计包/41-AI运行知识分析与安全设计.md",
+        "docs/设计包/42-部署运维与非功能设计.md",
+        "docs/设计包/43-技术实施路线与验证矩阵.md"
+      ],
+      "productEvidence": [],
+      "implementationStatus": "NOT_IMPLEMENTED_IN_THIS_PROJECT"
+    },
+    {
+      "id": "SK-05",
+      "sourceCollection": "requirements",
+      "sourceRef": "docs/设计包/30-产品设计追踪数据.json",
+      "pageIds": [
+        "P06",
+        "P04"
+      ],
+      "commandIds": [
+        "C05",
+        "C13",
+        "C17"
+      ],
+      "caseIds": [
+        "AC-10",
+        "AC-26",
+        "AC-27",
+        "AC-29"
+      ],
+      "module": "ai + adoption",
+      "technicalRefs": [
+        "docs/设计包/37-技术架构总设计与决策.md",
+        "docs/设计包/38-模块边界与前端工程设计.md",
+        "docs/设计包/39-数据存储与事务一致性设计.md",
+        "docs/设计包/40-接口事件与集成技术设计.md",
+        "docs/设计包/41-AI运行知识分析与安全设计.md",
+        "docs/设计包/42-部署运维与非功能设计.md",
+        "docs/设计包/43-技术实施路线与验证矩阵.md"
+      ],
+      "productEvidence": [],
+      "implementationStatus": "NOT_IMPLEMENTED_IN_THIS_PROJECT"
+    },
+    {
+      "id": "SK-06",
+      "sourceCollection": "requirements",
+      "sourceRef": "docs/设计包/30-产品设计追踪数据.json",
+      "pageIds": [
+        "P06",
+        "P04",
+        "P22"
+      ],
+      "commandIds": [
+        "C05",
+        "C13",
+        "C17"
+      ],
+      "caseIds": [
+        "AC-10",
+        "AC-26",
+        "AC-27",
+        "AC-29"
+      ],
+      "module": "ai + adoption",
+      "technicalRefs": [
+        "docs/设计包/37-技术架构总设计与决策.md",
+        "docs/设计包/38-模块边界与前端工程设计.md",
+        "docs/设计包/39-数据存储与事务一致性设计.md",
+        "docs/设计包/40-接口事件与集成技术设计.md",
+        "docs/设计包/41-AI运行知识分析与安全设计.md",
+        "docs/设计包/42-部署运维与非功能设计.md",
+        "docs/设计包/43-技术实施路线与验证矩阵.md"
+      ],
+      "productEvidence": [],
+      "implementationStatus": "NOT_IMPLEMENTED_IN_THIS_PROJECT"
+    },
+    {
+      "id": "SK-07",
+      "sourceCollection": "requirements",
+      "sourceRef": "docs/设计包/30-产品设计追踪数据.json",
+      "pageIds": [
+        "P06",
+        "P04"
+      ],
+      "commandIds": [
+        "C05",
+        "C13",
+        "C17"
+      ],
+      "caseIds": [
+        "AC-10",
+        "AC-26",
+        "AC-27",
+        "AC-29"
+      ],
+      "module": "ai + adoption",
+      "technicalRefs": [
+        "docs/设计包/37-技术架构总设计与决策.md",
+        "docs/设计包/38-模块边界与前端工程设计.md",
+        "docs/设计包/39-数据存储与事务一致性设计.md",
+        "docs/设计包/40-接口事件与集成技术设计.md",
+        "docs/设计包/41-AI运行知识分析与安全设计.md",
+        "docs/设计包/42-部署运维与非功能设计.md",
+        "docs/设计包/43-技术实施路线与验证矩阵.md"
+      ],
+      "productEvidence": [],
+      "implementationStatus": "NOT_IMPLEMENTED_IN_THIS_PROJECT"
+    },
+    {
+      "id": "CN-01",
+      "sourceCollection": "requirements",
+      "sourceRef": "docs/设计包/30-产品设计追踪数据.json",
+      "pageIds": [
+        "P07",
+        "P04"
+      ],
+      "commandIds": [
+        "C07",
+        "C14",
+        "C18"
+      ],
+      "caseIds": [
+        "AC-30",
+        "AC-31",
+        "AC-32",
+        "AC-38",
+        "AC-56"
+      ],
+      "module": "integration",
+      "technicalRefs": [
+        "docs/设计包/37-技术架构总设计与决策.md",
+        "docs/设计包/38-模块边界与前端工程设计.md",
+        "docs/设计包/39-数据存储与事务一致性设计.md",
+        "docs/设计包/40-接口事件与集成技术设计.md",
+        "docs/设计包/41-AI运行知识分析与安全设计.md",
+        "docs/设计包/42-部署运维与非功能设计.md",
+        "docs/设计包/43-技术实施路线与验证矩阵.md"
+      ],
+      "productEvidence": [],
+      "implementationStatus": "NOT_IMPLEMENTED_IN_THIS_PROJECT"
+    },
+    {
+      "id": "CN-02",
+      "sourceCollection": "requirements",
+      "sourceRef": "docs/设计包/30-产品设计追踪数据.json",
+      "pageIds": [
+        "P07",
+        "P04",
+        "P22"
+      ],
+      "commandIds": [
+        "C07",
+        "C14",
+        "C18"
+      ],
+      "caseIds": [
+        "AC-30",
+        "AC-31",
+        "AC-32",
+        "AC-38",
+        "AC-56"
+      ],
+      "module": "integration",
+      "technicalRefs": [
+        "docs/设计包/37-技术架构总设计与决策.md",
+        "docs/设计包/38-模块边界与前端工程设计.md",
+        "docs/设计包/39-数据存储与事务一致性设计.md",
+        "docs/设计包/40-接口事件与集成技术设计.md",
+        "docs/设计包/41-AI运行知识分析与安全设计.md",
+        "docs/设计包/42-部署运维与非功能设计.md",
+        "docs/设计包/43-技术实施路线与验证矩阵.md"
+      ],
+      "productEvidence": [],
+      "implementationStatus": "NOT_IMPLEMENTED_IN_THIS_PROJECT"
+    },
+    {
+      "id": "CN-03",
+      "sourceCollection": "requirements",
+      "sourceRef": "docs/设计包/30-产品设计追踪数据.json",
+      "pageIds": [
+        "P07",
+        "P04",
+        "P22"
+      ],
+      "commandIds": [
+        "C07",
+        "C14",
+        "C18"
+      ],
+      "caseIds": [
+        "AC-30",
+        "AC-31",
+        "AC-32",
+        "AC-38",
+        "AC-56"
+      ],
+      "module": "integration",
+      "technicalRefs": [
+        "docs/设计包/37-技术架构总设计与决策.md",
+        "docs/设计包/38-模块边界与前端工程设计.md",
+        "docs/设计包/39-数据存储与事务一致性设计.md",
+        "docs/设计包/40-接口事件与集成技术设计.md",
+        "docs/设计包/41-AI运行知识分析与安全设计.md",
+        "docs/设计包/42-部署运维与非功能设计.md",
+        "docs/设计包/43-技术实施路线与验证矩阵.md"
+      ],
+      "productEvidence": [],
+      "implementationStatus": "NOT_IMPLEMENTED_IN_THIS_PROJECT"
+    },
+    {
+      "id": "CN-04",
+      "sourceCollection": "requirements",
+      "sourceRef": "docs/设计包/30-产品设计追踪数据.json",
+      "pageIds": [
+        "P07",
+        "P04",
+        "P22"
+      ],
+      "commandIds": [
+        "C07",
+        "C14",
+        "C18"
+      ],
+      "caseIds": [
+        "AC-30",
+        "AC-31",
+        "AC-32",
+        "AC-38",
+        "AC-56"
+      ],
+      "module": "integration",
+      "technicalRefs": [
+        "docs/设计包/37-技术架构总设计与决策.md",
+        "docs/设计包/38-模块边界与前端工程设计.md",
+        "docs/设计包/39-数据存储与事务一致性设计.md",
+        "docs/设计包/40-接口事件与集成技术设计.md",
+        "docs/设计包/41-AI运行知识分析与安全设计.md",
+        "docs/设计包/42-部署运维与非功能设计.md",
+        "docs/设计包/43-技术实施路线与验证矩阵.md"
+      ],
+      "productEvidence": [],
+      "implementationStatus": "NOT_IMPLEMENTED_IN_THIS_PROJECT"
+    },
+    {
+      "id": "CN-05",
+      "sourceCollection": "requirements",
+      "sourceRef": "docs/设计包/30-产品设计追踪数据.json",
+      "pageIds": [
+        "P07",
+        "P04",
+        "P22"
+      ],
+      "commandIds": [
+        "C07",
+        "C14",
+        "C18"
+      ],
+      "caseIds": [
+        "AC-30",
+        "AC-31",
+        "AC-32",
+        "AC-38",
+        "AC-56"
+      ],
+      "module": "integration",
+      "technicalRefs": [
+        "docs/设计包/37-技术架构总设计与决策.md",
+        "docs/设计包/38-模块边界与前端工程设计.md",
+        "docs/设计包/39-数据存储与事务一致性设计.md",
+        "docs/设计包/40-接口事件与集成技术设计.md",
+        "docs/设计包/41-AI运行知识分析与安全设计.md",
+        "docs/设计包/42-部署运维与非功能设计.md",
+        "docs/设计包/43-技术实施路线与验证矩阵.md"
+      ],
+      "productEvidence": [],
+      "implementationStatus": "NOT_IMPLEMENTED_IN_THIS_PROJECT"
+    },
+    {
+      "id": "CN-06",
+      "sourceCollection": "requirements",
+      "sourceRef": "docs/设计包/30-产品设计追踪数据.json",
+      "pageIds": [
+        "P07",
+        "P04"
+      ],
+      "commandIds": [
+        "C07",
+        "C14",
+        "C18"
+      ],
+      "caseIds": [
+        "AC-30",
+        "AC-31",
+        "AC-32",
+        "AC-38",
+        "AC-56"
+      ],
+      "module": "integration",
+      "technicalRefs": [
+        "docs/设计包/37-技术架构总设计与决策.md",
+        "docs/设计包/38-模块边界与前端工程设计.md",
+        "docs/设计包/39-数据存储与事务一致性设计.md",
+        "docs/设计包/40-接口事件与集成技术设计.md",
+        "docs/设计包/41-AI运行知识分析与安全设计.md",
+        "docs/设计包/42-部署运维与非功能设计.md",
+        "docs/设计包/43-技术实施路线与验证矩阵.md"
+      ],
+      "productEvidence": [],
+      "implementationStatus": "NOT_IMPLEMENTED_IN_THIS_PROJECT"
+    },
+    {
+      "id": "CN-07",
+      "sourceCollection": "requirements",
+      "sourceRef": "docs/设计包/30-产品设计追踪数据.json",
+      "pageIds": [
+        "P07",
+        "P04"
+      ],
+      "commandIds": [
+        "C07",
+        "C14",
+        "C18"
+      ],
+      "caseIds": [
+        "AC-30",
+        "AC-31",
+        "AC-32",
+        "AC-38",
+        "AC-56"
+      ],
+      "module": "integration",
+      "technicalRefs": [
+        "docs/设计包/37-技术架构总设计与决策.md",
+        "docs/设计包/38-模块边界与前端工程设计.md",
+        "docs/设计包/39-数据存储与事务一致性设计.md",
+        "docs/设计包/40-接口事件与集成技术设计.md",
+        "docs/设计包/41-AI运行知识分析与安全设计.md",
+        "docs/设计包/42-部署运维与非功能设计.md",
+        "docs/设计包/43-技术实施路线与验证矩阵.md"
+      ],
+      "productEvidence": [],
+      "implementationStatus": "NOT_IMPLEMENTED_IN_THIS_PROJECT"
+    },
+    {
+      "id": "CN-08",
+      "sourceCollection": "requirements",
+      "sourceRef": "docs/设计包/30-产品设计追踪数据.json",
+      "pageIds": [
+        "P07",
+        "P04",
+        "P22"
+      ],
+      "commandIds": [
+        "C07",
+        "C14",
+        "C18"
+      ],
+      "caseIds": [
+        "AC-30",
+        "AC-31",
+        "AC-32",
+        "AC-38",
+        "AC-56"
+      ],
+      "module": "integration",
+      "technicalRefs": [
+        "docs/设计包/37-技术架构总设计与决策.md",
+        "docs/设计包/38-模块边界与前端工程设计.md",
+        "docs/设计包/39-数据存储与事务一致性设计.md",
+        "docs/设计包/40-接口事件与集成技术设计.md",
+        "docs/设计包/41-AI运行知识分析与安全设计.md",
+        "docs/设计包/42-部署运维与非功能设计.md",
+        "docs/设计包/43-技术实施路线与验证矩阵.md"
+      ],
+      "productEvidence": [],
+      "implementationStatus": "NOT_IMPLEMENTED_IN_THIS_PROJECT"
+    },
+    {
+      "id": "CN-09",
+      "sourceCollection": "requirements",
+      "sourceRef": "docs/设计包/30-产品设计追踪数据.json",
+      "pageIds": [
+        "P07",
+        "P04",
+        "P22"
+      ],
+      "commandIds": [
+        "C07",
+        "C14",
+        "C18"
+      ],
+      "caseIds": [
+        "AC-30",
+        "AC-31",
+        "AC-32",
+        "AC-38",
+        "AC-56"
+      ],
+      "module": "integration",
+      "technicalRefs": [
+        "docs/设计包/37-技术架构总设计与决策.md",
+        "docs/设计包/38-模块边界与前端工程设计.md",
+        "docs/设计包/39-数据存储与事务一致性设计.md",
+        "docs/设计包/40-接口事件与集成技术设计.md",
+        "docs/设计包/41-AI运行知识分析与安全设计.md",
+        "docs/设计包/42-部署运维与非功能设计.md",
+        "docs/设计包/43-技术实施路线与验证矩阵.md"
+      ],
+      "productEvidence": [],
+      "implementationStatus": "NOT_IMPLEMENTED_IN_THIS_PROJECT"
+    },
+    {
+      "id": "KB-01",
+      "sourceCollection": "requirements",
+      "sourceRef": "docs/设计包/30-产品设计追踪数据.json",
+      "pageIds": [
+        "P08",
+        "P20"
+      ],
+      "commandIds": [
+        "C05",
+        "C19"
+      ],
+      "caseIds": [
+        "AC-16",
+        "AC-17",
+        "AC-33",
+        "AC-34"
+      ],
+      "module": "ai + intelligence",
+      "technicalRefs": [
+        "docs/设计包/37-技术架构总设计与决策.md",
+        "docs/设计包/38-模块边界与前端工程设计.md",
+        "docs/设计包/39-数据存储与事务一致性设计.md",
+        "docs/设计包/40-接口事件与集成技术设计.md",
+        "docs/设计包/41-AI运行知识分析与安全设计.md",
+        "docs/设计包/42-部署运维与非功能设计.md",
+        "docs/设计包/43-技术实施路线与验证矩阵.md"
+      ],
+      "productEvidence": [],
+      "implementationStatus": "NOT_IMPLEMENTED_IN_THIS_PROJECT"
+    },
+    {
+      "id": "KB-02",
+      "sourceCollection": "requirements",
+      "sourceRef": "docs/设计包/30-产品设计追踪数据.json",
+      "pageIds": [
+        "P08",
+        "P20"
+      ],
+      "commandIds": [
+        "C05",
+        "C19"
+      ],
+      "caseIds": [
+        "AC-16",
+        "AC-17",
+        "AC-33",
+        "AC-34"
+      ],
+      "module": "ai + intelligence",
+      "technicalRefs": [
+        "docs/设计包/37-技术架构总设计与决策.md",
+        "docs/设计包/38-模块边界与前端工程设计.md",
+        "docs/设计包/39-数据存储与事务一致性设计.md",
+        "docs/设计包/40-接口事件与集成技术设计.md",
+        "docs/设计包/41-AI运行知识分析与安全设计.md",
+        "docs/设计包/42-部署运维与非功能设计.md",
+        "docs/设计包/43-技术实施路线与验证矩阵.md"
+      ],
+      "productEvidence": [],
+      "implementationStatus": "NOT_IMPLEMENTED_IN_THIS_PROJECT"
+    },
+    {
+      "id": "KB-03",
+      "sourceCollection": "requirements",
+      "sourceRef": "docs/设计包/30-产品设计追踪数据.json",
+      "pageIds": [
+        "P08",
+        "P20"
+      ],
+      "commandIds": [
+        "C05",
+        "C19"
+      ],
+      "caseIds": [
+        "AC-16",
+        "AC-17",
+        "AC-33",
+        "AC-34"
+      ],
+      "module": "ai + intelligence",
+      "technicalRefs": [
+        "docs/设计包/37-技术架构总设计与决策.md",
+        "docs/设计包/38-模块边界与前端工程设计.md",
+        "docs/设计包/39-数据存储与事务一致性设计.md",
+        "docs/设计包/40-接口事件与集成技术设计.md",
+        "docs/设计包/41-AI运行知识分析与安全设计.md",
+        "docs/设计包/42-部署运维与非功能设计.md",
+        "docs/设计包/43-技术实施路线与验证矩阵.md"
+      ],
+      "productEvidence": [],
+      "implementationStatus": "NOT_IMPLEMENTED_IN_THIS_PROJECT"
+    },
+    {
+      "id": "KB-04",
+      "sourceCollection": "requirements",
+      "sourceRef": "docs/设计包/30-产品设计追踪数据.json",
+      "pageIds": [
+        "P08",
+        "P20"
+      ],
+      "commandIds": [
+        "C05",
+        "C19"
+      ],
+      "caseIds": [
+        "AC-16",
+        "AC-17",
+        "AC-33",
+        "AC-34"
+      ],
+      "module": "ai + intelligence",
+      "technicalRefs": [
+        "docs/设计包/37-技术架构总设计与决策.md",
+        "docs/设计包/38-模块边界与前端工程设计.md",
+        "docs/设计包/39-数据存储与事务一致性设计.md",
+        "docs/设计包/40-接口事件与集成技术设计.md",
+        "docs/设计包/41-AI运行知识分析与安全设计.md",
+        "docs/设计包/42-部署运维与非功能设计.md",
+        "docs/设计包/43-技术实施路线与验证矩阵.md"
+      ],
+      "productEvidence": [],
+      "implementationStatus": "NOT_IMPLEMENTED_IN_THIS_PROJECT"
+    },
+    {
+      "id": "KB-05",
+      "sourceCollection": "requirements",
+      "sourceRef": "docs/设计包/30-产品设计追踪数据.json",
+      "pageIds": [
+        "P08",
+        "P20"
+      ],
+      "commandIds": [
+        "C05",
+        "C19"
+      ],
+      "caseIds": [
+        "AC-16",
+        "AC-17",
+        "AC-33",
+        "AC-34"
+      ],
+      "module": "ai + intelligence",
+      "technicalRefs": [
+        "docs/设计包/37-技术架构总设计与决策.md",
+        "docs/设计包/38-模块边界与前端工程设计.md",
+        "docs/设计包/39-数据存储与事务一致性设计.md",
+        "docs/设计包/40-接口事件与集成技术设计.md",
+        "docs/设计包/41-AI运行知识分析与安全设计.md",
+        "docs/设计包/42-部署运维与非功能设计.md",
+        "docs/设计包/43-技术实施路线与验证矩阵.md"
+      ],
+      "productEvidence": [],
+      "implementationStatus": "NOT_IMPLEMENTED_IN_THIS_PROJECT"
+    },
+    {
+      "id": "KB-06",
+      "sourceCollection": "requirements",
+      "sourceRef": "docs/设计包/30-产品设计追踪数据.json",
+      "pageIds": [
+        "P08",
+        "P20"
+      ],
+      "commandIds": [
+        "C05",
+        "C19"
+      ],
+      "caseIds": [
+        "AC-16",
+        "AC-17",
+        "AC-33",
+        "AC-34"
+      ],
+      "module": "ai + intelligence",
+      "technicalRefs": [
+        "docs/设计包/37-技术架构总设计与决策.md",
+        "docs/设计包/38-模块边界与前端工程设计.md",
+        "docs/设计包/39-数据存储与事务一致性设计.md",
+        "docs/设计包/40-接口事件与集成技术设计.md",
+        "docs/设计包/41-AI运行知识分析与安全设计.md",
+        "docs/设计包/42-部署运维与非功能设计.md",
+        "docs/设计包/43-技术实施路线与验证矩阵.md"
+      ],
+      "productEvidence": [],
+      "implementationStatus": "NOT_IMPLEMENTED_IN_THIS_PROJECT"
+    },
+    {
+      "id": "KB-07",
+      "sourceCollection": "requirements",
+      "sourceRef": "docs/设计包/30-产品设计追踪数据.json",
+      "pageIds": [
+        "P08",
+        "P20"
+      ],
+      "commandIds": [
+        "C05",
+        "C19"
+      ],
+      "caseIds": [
+        "AC-16",
+        "AC-17",
+        "AC-33",
+        "AC-34"
+      ],
+      "module": "ai + intelligence",
+      "technicalRefs": [
+        "docs/设计包/37-技术架构总设计与决策.md",
+        "docs/设计包/38-模块边界与前端工程设计.md",
+        "docs/设计包/39-数据存储与事务一致性设计.md",
+        "docs/设计包/40-接口事件与集成技术设计.md",
+        "docs/设计包/41-AI运行知识分析与安全设计.md",
+        "docs/设计包/42-部署运维与非功能设计.md",
+        "docs/设计包/43-技术实施路线与验证矩阵.md"
+      ],
+      "productEvidence": [],
+      "implementationStatus": "NOT_IMPLEMENTED_IN_THIS_PROJECT"
+    },
+    {
+      "id": "MM-01",
+      "sourceCollection": "requirements",
+      "sourceRef": "docs/设计包/30-产品设计追踪数据.json",
+      "pageIds": [
+        "P09",
+        "P20",
+        "P22"
+      ],
+      "commandIds": [
+        "C16",
+        "C19"
+      ],
+      "caseIds": [
+        "AC-17",
+        "AC-28",
+        "AC-35",
+        "AC-36"
+      ],
+      "module": "intelligence",
+      "technicalRefs": [
+        "docs/设计包/37-技术架构总设计与决策.md",
+        "docs/设计包/38-模块边界与前端工程设计.md",
+        "docs/设计包/39-数据存储与事务一致性设计.md",
+        "docs/设计包/40-接口事件与集成技术设计.md",
+        "docs/设计包/41-AI运行知识分析与安全设计.md",
+        "docs/设计包/42-部署运维与非功能设计.md",
+        "docs/设计包/43-技术实施路线与验证矩阵.md"
+      ],
+      "productEvidence": [],
+      "implementationStatus": "NOT_IMPLEMENTED_IN_THIS_PROJECT"
+    },
+    {
+      "id": "MM-02",
+      "sourceCollection": "requirements",
+      "sourceRef": "docs/设计包/30-产品设计追踪数据.json",
+      "pageIds": [
+        "P09",
+        "P20"
+      ],
+      "commandIds": [
+        "C16",
+        "C19"
+      ],
+      "caseIds": [
+        "AC-17",
+        "AC-28",
+        "AC-35",
+        "AC-36"
+      ],
+      "module": "intelligence",
+      "technicalRefs": [
+        "docs/设计包/37-技术架构总设计与决策.md",
+        "docs/设计包/38-模块边界与前端工程设计.md",
+        "docs/设计包/39-数据存储与事务一致性设计.md",
+        "docs/设计包/40-接口事件与集成技术设计.md",
+        "docs/设计包/41-AI运行知识分析与安全设计.md",
+        "docs/设计包/42-部署运维与非功能设计.md",
+        "docs/设计包/43-技术实施路线与验证矩阵.md"
+      ],
+      "productEvidence": [],
+      "implementationStatus": "NOT_IMPLEMENTED_IN_THIS_PROJECT"
+    },
+    {
+      "id": "MM-03",
+      "sourceCollection": "requirements",
+      "sourceRef": "docs/设计包/30-产品设计追踪数据.json",
+      "pageIds": [
+        "P09",
+        "P20"
+      ],
+      "commandIds": [
+        "C16",
+        "C19"
+      ],
+      "caseIds": [
+        "AC-17",
+        "AC-28",
+        "AC-35",
+        "AC-36"
+      ],
+      "module": "intelligence",
+      "technicalRefs": [
+        "docs/设计包/37-技术架构总设计与决策.md",
+        "docs/设计包/38-模块边界与前端工程设计.md",
+        "docs/设计包/39-数据存储与事务一致性设计.md",
+        "docs/设计包/40-接口事件与集成技术设计.md",
+        "docs/设计包/41-AI运行知识分析与安全设计.md",
+        "docs/设计包/42-部署运维与非功能设计.md",
+        "docs/设计包/43-技术实施路线与验证矩阵.md"
+      ],
+      "productEvidence": [],
+      "implementationStatus": "NOT_IMPLEMENTED_IN_THIS_PROJECT"
+    },
+    {
+      "id": "MM-04",
+      "sourceCollection": "requirements",
+      "sourceRef": "docs/设计包/30-产品设计追踪数据.json",
+      "pageIds": [
+        "P09",
+        "P20"
+      ],
+      "commandIds": [
+        "C16",
+        "C19"
+      ],
+      "caseIds": [
+        "AC-17",
+        "AC-28",
+        "AC-35",
+        "AC-36"
+      ],
+      "module": "intelligence",
+      "technicalRefs": [
+        "docs/设计包/37-技术架构总设计与决策.md",
+        "docs/设计包/38-模块边界与前端工程设计.md",
+        "docs/设计包/39-数据存储与事务一致性设计.md",
+        "docs/设计包/40-接口事件与集成技术设计.md",
+        "docs/设计包/41-AI运行知识分析与安全设计.md",
+        "docs/设计包/42-部署运维与非功能设计.md",
+        "docs/设计包/43-技术实施路线与验证矩阵.md"
+      ],
+      "productEvidence": [],
+      "implementationStatus": "NOT_IMPLEMENTED_IN_THIS_PROJECT"
+    },
+    {
+      "id": "MM-05",
+      "sourceCollection": "requirements",
+      "sourceRef": "docs/设计包/30-产品设计追踪数据.json",
+      "pageIds": [
+        "P09",
+        "P20"
+      ],
+      "commandIds": [
+        "C16",
+        "C19"
+      ],
+      "caseIds": [
+        "AC-17",
+        "AC-28",
+        "AC-35",
+        "AC-36"
+      ],
+      "module": "intelligence",
+      "technicalRefs": [
+        "docs/设计包/37-技术架构总设计与决策.md",
+        "docs/设计包/38-模块边界与前端工程设计.md",
+        "docs/设计包/39-数据存储与事务一致性设计.md",
+        "docs/设计包/40-接口事件与集成技术设计.md",
+        "docs/设计包/41-AI运行知识分析与安全设计.md",
+        "docs/设计包/42-部署运维与非功能设计.md",
+        "docs/设计包/43-技术实施路线与验证矩阵.md"
+      ],
+      "productEvidence": [],
+      "implementationStatus": "NOT_IMPLEMENTED_IN_THIS_PROJECT"
+    },
+    {
+      "id": "MM-06",
+      "sourceCollection": "requirements",
+      "sourceRef": "docs/设计包/30-产品设计追踪数据.json",
+      "pageIds": [
+        "P09",
+        "P20"
+      ],
+      "commandIds": [
+        "C16",
+        "C19"
+      ],
+      "caseIds": [
+        "AC-17",
+        "AC-28",
+        "AC-35",
+        "AC-36"
+      ],
+      "module": "intelligence",
+      "technicalRefs": [
+        "docs/设计包/37-技术架构总设计与决策.md",
+        "docs/设计包/38-模块边界与前端工程设计.md",
+        "docs/设计包/39-数据存储与事务一致性设计.md",
+        "docs/设计包/40-接口事件与集成技术设计.md",
+        "docs/设计包/41-AI运行知识分析与安全设计.md",
+        "docs/设计包/42-部署运维与非功能设计.md",
+        "docs/设计包/43-技术实施路线与验证矩阵.md"
+      ],
+      "productEvidence": [],
+      "implementationStatus": "NOT_IMPLEMENTED_IN_THIS_PROJECT"
+    },
+    {
+      "id": "MM-07",
+      "sourceCollection": "requirements",
+      "sourceRef": "docs/设计包/30-产品设计追踪数据.json",
+      "pageIds": [
+        "P09",
+        "P20"
+      ],
+      "commandIds": [
+        "C16",
+        "C19"
+      ],
+      "caseIds": [
+        "AC-17",
+        "AC-28",
+        "AC-35",
+        "AC-36"
+      ],
+      "module": "intelligence",
+      "technicalRefs": [
+        "docs/设计包/37-技术架构总设计与决策.md",
+        "docs/设计包/38-模块边界与前端工程设计.md",
+        "docs/设计包/39-数据存储与事务一致性设计.md",
+        "docs/设计包/40-接口事件与集成技术设计.md",
+        "docs/设计包/41-AI运行知识分析与安全设计.md",
+        "docs/设计包/42-部署运维与非功能设计.md",
+        "docs/设计包/43-技术实施路线与验证矩阵.md"
+      ],
+      "productEvidence": [],
+      "implementationStatus": "NOT_IMPLEMENTED_IN_THIS_PROJECT"
+    },
+    {
+      "id": "WS-01",
+      "sourceCollection": "requirements",
+      "sourceRef": "docs/设计包/30-产品设计追踪数据.json",
+      "pageIds": [
+        "P10",
+        "P02"
+      ],
+      "commandIds": [
+        "C20",
+        "C25"
+      ],
+      "caseIds": [
+        "AC-11",
+        "AC-37",
+        "AC-38",
+        "AC-56"
+      ],
+      "module": "infra + context",
+      "technicalRefs": [
+        "docs/设计包/37-技术架构总设计与决策.md",
+        "docs/设计包/38-模块边界与前端工程设计.md",
+        "docs/设计包/39-数据存储与事务一致性设计.md",
+        "docs/设计包/40-接口事件与集成技术设计.md",
+        "docs/设计包/41-AI运行知识分析与安全设计.md",
+        "docs/设计包/42-部署运维与非功能设计.md",
+        "docs/设计包/43-技术实施路线与验证矩阵.md"
+      ],
+      "productEvidence": [],
+      "implementationStatus": "NOT_IMPLEMENTED_IN_THIS_PROJECT"
+    },
+    {
+      "id": "WS-02",
+      "sourceCollection": "requirements",
+      "sourceRef": "docs/设计包/30-产品设计追踪数据.json",
+      "pageIds": [
+        "P10",
+        "P02"
+      ],
+      "commandIds": [
+        "C20",
+        "C25"
+      ],
+      "caseIds": [
+        "AC-11",
+        "AC-37",
+        "AC-38",
+        "AC-56"
+      ],
+      "module": "infra + context",
+      "technicalRefs": [
+        "docs/设计包/37-技术架构总设计与决策.md",
+        "docs/设计包/38-模块边界与前端工程设计.md",
+        "docs/设计包/39-数据存储与事务一致性设计.md",
+        "docs/设计包/40-接口事件与集成技术设计.md",
+        "docs/设计包/41-AI运行知识分析与安全设计.md",
+        "docs/设计包/42-部署运维与非功能设计.md",
+        "docs/设计包/43-技术实施路线与验证矩阵.md"
+      ],
+      "productEvidence": [],
+      "implementationStatus": "NOT_IMPLEMENTED_IN_THIS_PROJECT"
+    },
+    {
+      "id": "WS-03",
+      "sourceCollection": "requirements",
+      "sourceRef": "docs/设计包/30-产品设计追踪数据.json",
+      "pageIds": [
+        "P10",
+        "P02"
+      ],
+      "commandIds": [
+        "C20",
+        "C25"
+      ],
+      "caseIds": [
+        "AC-11",
+        "AC-37",
+        "AC-38",
+        "AC-56"
+      ],
+      "module": "infra + context",
+      "technicalRefs": [
+        "docs/设计包/37-技术架构总设计与决策.md",
+        "docs/设计包/38-模块边界与前端工程设计.md",
+        "docs/设计包/39-数据存储与事务一致性设计.md",
+        "docs/设计包/40-接口事件与集成技术设计.md",
+        "docs/设计包/41-AI运行知识分析与安全设计.md",
+        "docs/设计包/42-部署运维与非功能设计.md",
+        "docs/设计包/43-技术实施路线与验证矩阵.md"
+      ],
+      "productEvidence": [],
+      "implementationStatus": "NOT_IMPLEMENTED_IN_THIS_PROJECT"
+    },
+    {
+      "id": "WS-04",
+      "sourceCollection": "requirements",
+      "sourceRef": "docs/设计包/30-产品设计追踪数据.json",
+      "pageIds": [
+        "P10",
+        "P02"
+      ],
+      "commandIds": [
+        "C20",
+        "C25"
+      ],
+      "caseIds": [
+        "AC-11",
+        "AC-37",
+        "AC-38",
+        "AC-56"
+      ],
+      "module": "infra + context",
+      "technicalRefs": [
+        "docs/设计包/37-技术架构总设计与决策.md",
+        "docs/设计包/38-模块边界与前端工程设计.md",
+        "docs/设计包/39-数据存储与事务一致性设计.md",
+        "docs/设计包/40-接口事件与集成技术设计.md",
+        "docs/设计包/41-AI运行知识分析与安全设计.md",
+        "docs/设计包/42-部署运维与非功能设计.md",
+        "docs/设计包/43-技术实施路线与验证矩阵.md"
+      ],
+      "productEvidence": [],
+      "implementationStatus": "NOT_IMPLEMENTED_IN_THIS_PROJECT"
+    },
+    {
+      "id": "WS-05",
+      "sourceCollection": "requirements",
+      "sourceRef": "docs/设计包/30-产品设计追踪数据.json",
+      "pageIds": [
+        "P10",
+        "P02"
+      ],
+      "commandIds": [
+        "C20",
+        "C25"
+      ],
+      "caseIds": [
+        "AC-11",
+        "AC-37",
+        "AC-38",
+        "AC-56"
+      ],
+      "module": "infra + context",
+      "technicalRefs": [
+        "docs/设计包/37-技术架构总设计与决策.md",
+        "docs/设计包/38-模块边界与前端工程设计.md",
+        "docs/设计包/39-数据存储与事务一致性设计.md",
+        "docs/设计包/40-接口事件与集成技术设计.md",
+        "docs/设计包/41-AI运行知识分析与安全设计.md",
+        "docs/设计包/42-部署运维与非功能设计.md",
+        "docs/设计包/43-技术实施路线与验证矩阵.md"
+      ],
+      "productEvidence": [],
+      "implementationStatus": "NOT_IMPLEMENTED_IN_THIS_PROJECT"
+    },
+    {
+      "id": "WS-06",
+      "sourceCollection": "requirements",
+      "sourceRef": "docs/设计包/30-产品设计追踪数据.json",
+      "pageIds": [
+        "P10",
+        "P02"
+      ],
+      "commandIds": [
+        "C20",
+        "C25"
+      ],
+      "caseIds": [
+        "AC-11",
+        "AC-37",
+        "AC-38",
+        "AC-56"
+      ],
+      "module": "infra + context",
+      "technicalRefs": [
+        "docs/设计包/37-技术架构总设计与决策.md",
+        "docs/设计包/38-模块边界与前端工程设计.md",
+        "docs/设计包/39-数据存储与事务一致性设计.md",
+        "docs/设计包/40-接口事件与集成技术设计.md",
+        "docs/设计包/41-AI运行知识分析与安全设计.md",
+        "docs/设计包/42-部署运维与非功能设计.md",
+        "docs/设计包/43-技术实施路线与验证矩阵.md"
+      ],
+      "productEvidence": [],
+      "implementationStatus": "NOT_IMPLEMENTED_IN_THIS_PROJECT"
+    },
+    {
+      "id": "CV-01",
+      "sourceCollection": "requirements",
+      "sourceRef": "docs/设计包/30-产品设计追踪数据.json",
+      "pageIds": [
+        "P11",
+        "P02"
+      ],
+      "commandIds": [
+        "C05",
+        "C06",
+        "C07",
+        "C14",
+        "C23"
+      ],
+      "caseIds": [
+        "AC-11",
+        "AC-12",
+        "AC-16",
+        "AC-19",
+        "AC-45"
+      ],
+      "module": "execution + context",
+      "technicalRefs": [
+        "docs/设计包/37-技术架构总设计与决策.md",
+        "docs/设计包/38-模块边界与前端工程设计.md",
+        "docs/设计包/39-数据存储与事务一致性设计.md",
+        "docs/设计包/40-接口事件与集成技术设计.md",
+        "docs/设计包/41-AI运行知识分析与安全设计.md",
+        "docs/设计包/42-部署运维与非功能设计.md",
+        "docs/设计包/43-技术实施路线与验证矩阵.md"
+      ],
+      "productEvidence": [],
+      "implementationStatus": "NOT_IMPLEMENTED_IN_THIS_PROJECT"
+    },
+    {
+      "id": "CV-02",
+      "sourceCollection": "requirements",
+      "sourceRef": "docs/设计包/30-产品设计追踪数据.json",
+      "pageIds": [
+        "P11",
+        "P02"
+      ],
+      "commandIds": [
+        "C05",
+        "C06",
+        "C07",
+        "C14",
+        "C23"
+      ],
+      "caseIds": [
+        "AC-11",
+        "AC-12",
+        "AC-16",
+        "AC-19",
+        "AC-45"
+      ],
+      "module": "execution + context",
+      "technicalRefs": [
+        "docs/设计包/37-技术架构总设计与决策.md",
+        "docs/设计包/38-模块边界与前端工程设计.md",
+        "docs/设计包/39-数据存储与事务一致性设计.md",
+        "docs/设计包/40-接口事件与集成技术设计.md",
+        "docs/设计包/41-AI运行知识分析与安全设计.md",
+        "docs/设计包/42-部署运维与非功能设计.md",
+        "docs/设计包/43-技术实施路线与验证矩阵.md"
+      ],
+      "productEvidence": [],
+      "implementationStatus": "NOT_IMPLEMENTED_IN_THIS_PROJECT"
+    },
+    {
+      "id": "CV-03",
+      "sourceCollection": "requirements",
+      "sourceRef": "docs/设计包/30-产品设计追踪数据.json",
+      "pageIds": [
+        "P11",
+        "P02"
+      ],
+      "commandIds": [
+        "C05",
+        "C06",
+        "C07",
+        "C14",
+        "C23"
+      ],
+      "caseIds": [
+        "AC-11",
+        "AC-12",
+        "AC-16",
+        "AC-19",
+        "AC-45"
+      ],
+      "module": "execution + context",
+      "technicalRefs": [
+        "docs/设计包/37-技术架构总设计与决策.md",
+        "docs/设计包/38-模块边界与前端工程设计.md",
+        "docs/设计包/39-数据存储与事务一致性设计.md",
+        "docs/设计包/40-接口事件与集成技术设计.md",
+        "docs/设计包/41-AI运行知识分析与安全设计.md",
+        "docs/设计包/42-部署运维与非功能设计.md",
+        "docs/设计包/43-技术实施路线与验证矩阵.md"
+      ],
+      "productEvidence": [],
+      "implementationStatus": "NOT_IMPLEMENTED_IN_THIS_PROJECT"
+    },
+    {
+      "id": "CV-04",
+      "sourceCollection": "requirements",
+      "sourceRef": "docs/设计包/30-产品设计追踪数据.json",
+      "pageIds": [
+        "P11",
+        "P02"
+      ],
+      "commandIds": [
+        "C05",
+        "C06",
+        "C07",
+        "C14",
+        "C23"
+      ],
+      "caseIds": [
+        "AC-11",
+        "AC-12",
+        "AC-16",
+        "AC-19",
+        "AC-45"
+      ],
+      "module": "execution + context",
+      "technicalRefs": [
+        "docs/设计包/37-技术架构总设计与决策.md",
+        "docs/设计包/38-模块边界与前端工程设计.md",
+        "docs/设计包/39-数据存储与事务一致性设计.md",
+        "docs/设计包/40-接口事件与集成技术设计.md",
+        "docs/设计包/41-AI运行知识分析与安全设计.md",
+        "docs/设计包/42-部署运维与非功能设计.md",
+        "docs/设计包/43-技术实施路线与验证矩阵.md"
+      ],
+      "productEvidence": [],
+      "implementationStatus": "NOT_IMPLEMENTED_IN_THIS_PROJECT"
+    },
+    {
+      "id": "CV-05",
+      "sourceCollection": "requirements",
+      "sourceRef": "docs/设计包/30-产品设计追踪数据.json",
+      "pageIds": [
+        "P11",
+        "P02"
+      ],
+      "commandIds": [
+        "C05",
+        "C06",
+        "C07",
+        "C14",
+        "C23"
+      ],
+      "caseIds": [
+        "AC-11",
+        "AC-12",
+        "AC-16",
+        "AC-19",
+        "AC-45"
+      ],
+      "module": "execution + context",
+      "technicalRefs": [
+        "docs/设计包/37-技术架构总设计与决策.md",
+        "docs/设计包/38-模块边界与前端工程设计.md",
+        "docs/设计包/39-数据存储与事务一致性设计.md",
+        "docs/设计包/40-接口事件与集成技术设计.md",
+        "docs/设计包/41-AI运行知识分析与安全设计.md",
+        "docs/设计包/42-部署运维与非功能设计.md",
+        "docs/设计包/43-技术实施路线与验证矩阵.md"
+      ],
+      "productEvidence": [],
+      "implementationStatus": "NOT_IMPLEMENTED_IN_THIS_PROJECT"
+    },
+    {
+      "id": "CV-06",
+      "sourceCollection": "requirements",
+      "sourceRef": "docs/设计包/30-产品设计追踪数据.json",
+      "pageIds": [
+        "P11",
+        "P02"
+      ],
+      "commandIds": [
+        "C05",
+        "C06",
+        "C07",
+        "C14",
+        "C23"
+      ],
+      "caseIds": [
+        "AC-11",
+        "AC-12",
+        "AC-16",
+        "AC-19",
+        "AC-45"
+      ],
+      "module": "execution + context",
+      "technicalRefs": [
+        "docs/设计包/37-技术架构总设计与决策.md",
+        "docs/设计包/38-模块边界与前端工程设计.md",
+        "docs/设计包/39-数据存储与事务一致性设计.md",
+        "docs/设计包/40-接口事件与集成技术设计.md",
+        "docs/设计包/41-AI运行知识分析与安全设计.md",
+        "docs/设计包/42-部署运维与非功能设计.md",
+        "docs/设计包/43-技术实施路线与验证矩阵.md"
+      ],
+      "productEvidence": [],
+      "implementationStatus": "NOT_IMPLEMENTED_IN_THIS_PROJECT"
+    },
+    {
+      "id": "CV-07",
+      "sourceCollection": "requirements",
+      "sourceRef": "docs/设计包/30-产品设计追踪数据.json",
+      "pageIds": [
+        "P11",
+        "P02"
+      ],
+      "commandIds": [
+        "C05",
+        "C06",
+        "C07",
+        "C14",
+        "C23"
+      ],
+      "caseIds": [
+        "AC-11",
+        "AC-12",
+        "AC-16",
+        "AC-19",
+        "AC-45"
+      ],
+      "module": "execution + context",
+      "technicalRefs": [
+        "docs/设计包/37-技术架构总设计与决策.md",
+        "docs/设计包/38-模块边界与前端工程设计.md",
+        "docs/设计包/39-数据存储与事务一致性设计.md",
+        "docs/设计包/40-接口事件与集成技术设计.md",
+        "docs/设计包/41-AI运行知识分析与安全设计.md",
+        "docs/设计包/42-部署运维与非功能设计.md",
+        "docs/设计包/43-技术实施路线与验证矩阵.md"
+      ],
+      "productEvidence": [],
+      "implementationStatus": "NOT_IMPLEMENTED_IN_THIS_PROJECT"
+    },
+    {
+      "id": "TM-01",
+      "sourceCollection": "requirements",
+      "sourceRef": "docs/设计包/30-产品设计追踪数据.json",
+      "pageIds": [
+        "P12",
+        "P02"
+      ],
+      "commandIds": [
+        "C06",
+        "C07",
+        "C21"
+      ],
+      "caseIds": [
+        "AC-14",
+        "AC-19",
+        "AC-39",
+        "AC-58"
+      ],
+      "module": "execution",
+      "technicalRefs": [
+        "docs/设计包/37-技术架构总设计与决策.md",
+        "docs/设计包/38-模块边界与前端工程设计.md",
+        "docs/设计包/39-数据存储与事务一致性设计.md",
+        "docs/设计包/40-接口事件与集成技术设计.md",
+        "docs/设计包/41-AI运行知识分析与安全设计.md",
+        "docs/设计包/42-部署运维与非功能设计.md",
+        "docs/设计包/43-技术实施路线与验证矩阵.md"
+      ],
+      "productEvidence": [],
+      "implementationStatus": "NOT_IMPLEMENTED_IN_THIS_PROJECT"
+    },
+    {
+      "id": "TM-02",
+      "sourceCollection": "requirements",
+      "sourceRef": "docs/设计包/30-产品设计追踪数据.json",
+      "pageIds": [
+        "P12",
+        "P02"
+      ],
+      "commandIds": [
+        "C06",
+        "C07",
+        "C21"
+      ],
+      "caseIds": [
+        "AC-14",
+        "AC-19",
+        "AC-39",
+        "AC-58"
+      ],
+      "module": "execution",
+      "technicalRefs": [
+        "docs/设计包/37-技术架构总设计与决策.md",
+        "docs/设计包/38-模块边界与前端工程设计.md",
+        "docs/设计包/39-数据存储与事务一致性设计.md",
+        "docs/设计包/40-接口事件与集成技术设计.md",
+        "docs/设计包/41-AI运行知识分析与安全设计.md",
+        "docs/设计包/42-部署运维与非功能设计.md",
+        "docs/设计包/43-技术实施路线与验证矩阵.md"
+      ],
+      "productEvidence": [],
+      "implementationStatus": "NOT_IMPLEMENTED_IN_THIS_PROJECT"
+    },
+    {
+      "id": "TM-03",
+      "sourceCollection": "requirements",
+      "sourceRef": "docs/设计包/30-产品设计追踪数据.json",
+      "pageIds": [
+        "P12",
+        "P02"
+      ],
+      "commandIds": [
+        "C06",
+        "C07",
+        "C21"
+      ],
+      "caseIds": [
+        "AC-14",
+        "AC-19",
+        "AC-39",
+        "AC-58"
+      ],
+      "module": "execution",
+      "technicalRefs": [
+        "docs/设计包/37-技术架构总设计与决策.md",
+        "docs/设计包/38-模块边界与前端工程设计.md",
+        "docs/设计包/39-数据存储与事务一致性设计.md",
+        "docs/设计包/40-接口事件与集成技术设计.md",
+        "docs/设计包/41-AI运行知识分析与安全设计.md",
+        "docs/设计包/42-部署运维与非功能设计.md",
+        "docs/设计包/43-技术实施路线与验证矩阵.md"
+      ],
+      "productEvidence": [],
+      "implementationStatus": "NOT_IMPLEMENTED_IN_THIS_PROJECT"
+    },
+    {
+      "id": "TM-04",
+      "sourceCollection": "requirements",
+      "sourceRef": "docs/设计包/30-产品设计追踪数据.json",
+      "pageIds": [
+        "P12",
+        "P02"
+      ],
+      "commandIds": [
+        "C06",
+        "C07",
+        "C21"
+      ],
+      "caseIds": [
+        "AC-14",
+        "AC-19",
+        "AC-39",
+        "AC-58"
+      ],
+      "module": "execution",
+      "technicalRefs": [
+        "docs/设计包/37-技术架构总设计与决策.md",
+        "docs/设计包/38-模块边界与前端工程设计.md",
+        "docs/设计包/39-数据存储与事务一致性设计.md",
+        "docs/设计包/40-接口事件与集成技术设计.md",
+        "docs/设计包/41-AI运行知识分析与安全设计.md",
+        "docs/设计包/42-部署运维与非功能设计.md",
+        "docs/设计包/43-技术实施路线与验证矩阵.md"
+      ],
+      "productEvidence": [],
+      "implementationStatus": "NOT_IMPLEMENTED_IN_THIS_PROJECT"
+    },
+    {
+      "id": "TM-05",
+      "sourceCollection": "requirements",
+      "sourceRef": "docs/设计包/30-产品设计追踪数据.json",
+      "pageIds": [
+        "P12",
+        "P02"
+      ],
+      "commandIds": [
+        "C06",
+        "C07",
+        "C21"
+      ],
+      "caseIds": [
+        "AC-14",
+        "AC-19",
+        "AC-39",
+        "AC-58"
+      ],
+      "module": "execution",
+      "technicalRefs": [
+        "docs/设计包/37-技术架构总设计与决策.md",
+        "docs/设计包/38-模块边界与前端工程设计.md",
+        "docs/设计包/39-数据存储与事务一致性设计.md",
+        "docs/设计包/40-接口事件与集成技术设计.md",
+        "docs/设计包/41-AI运行知识分析与安全设计.md",
+        "docs/设计包/42-部署运维与非功能设计.md",
+        "docs/设计包/43-技术实施路线与验证矩阵.md"
+      ],
+      "productEvidence": [],
+      "implementationStatus": "NOT_IMPLEMENTED_IN_THIS_PROJECT"
+    },
+    {
+      "id": "TM-06",
+      "sourceCollection": "requirements",
+      "sourceRef": "docs/设计包/30-产品设计追踪数据.json",
+      "pageIds": [
+        "P12",
+        "P02"
+      ],
+      "commandIds": [
+        "C06",
+        "C07",
+        "C21"
+      ],
+      "caseIds": [
+        "AC-14",
+        "AC-19",
+        "AC-39",
+        "AC-58"
+      ],
+      "module": "execution",
+      "technicalRefs": [
+        "docs/设计包/37-技术架构总设计与决策.md",
+        "docs/设计包/38-模块边界与前端工程设计.md",
+        "docs/设计包/39-数据存储与事务一致性设计.md",
+        "docs/设计包/40-接口事件与集成技术设计.md",
+        "docs/设计包/41-AI运行知识分析与安全设计.md",
+        "docs/设计包/42-部署运维与非功能设计.md",
+        "docs/设计包/43-技术实施路线与验证矩阵.md"
+      ],
+      "productEvidence": [],
+      "implementationStatus": "NOT_IMPLEMENTED_IN_THIS_PROJECT"
+    },
+    {
+      "id": "FL-01",
+      "sourceCollection": "requirements",
+      "sourceRef": "docs/设计包/30-产品设计追踪数据.json",
+      "pageIds": [
+        "P13",
+        "P04"
+      ],
+      "commandIds": [
+        "C06",
+        "C07",
+        "C17"
+      ],
+      "caseIds": [
+        "AC-10",
+        "AC-12",
+        "AC-19",
+        "AC-40"
+      ],
+      "module": "ai + execution",
+      "technicalRefs": [
+        "docs/设计包/37-技术架构总设计与决策.md",
+        "docs/设计包/38-模块边界与前端工程设计.md",
+        "docs/设计包/39-数据存储与事务一致性设计.md",
+        "docs/设计包/40-接口事件与集成技术设计.md",
+        "docs/设计包/41-AI运行知识分析与安全设计.md",
+        "docs/设计包/42-部署运维与非功能设计.md",
+        "docs/设计包/43-技术实施路线与验证矩阵.md"
+      ],
+      "productEvidence": [],
+      "implementationStatus": "NOT_IMPLEMENTED_IN_THIS_PROJECT"
+    },
+    {
+      "id": "FL-02",
+      "sourceCollection": "requirements",
+      "sourceRef": "docs/设计包/30-产品设计追踪数据.json",
+      "pageIds": [
+        "P13",
+        "P04"
+      ],
+      "commandIds": [
+        "C06",
+        "C07",
+        "C17"
+      ],
+      "caseIds": [
+        "AC-10",
+        "AC-12",
+        "AC-19",
+        "AC-40"
+      ],
+      "module": "ai + execution",
+      "technicalRefs": [
+        "docs/设计包/37-技术架构总设计与决策.md",
+        "docs/设计包/38-模块边界与前端工程设计.md",
+        "docs/设计包/39-数据存储与事务一致性设计.md",
+        "docs/设计包/40-接口事件与集成技术设计.md",
+        "docs/设计包/41-AI运行知识分析与安全设计.md",
+        "docs/设计包/42-部署运维与非功能设计.md",
+        "docs/设计包/43-技术实施路线与验证矩阵.md"
+      ],
+      "productEvidence": [],
+      "implementationStatus": "NOT_IMPLEMENTED_IN_THIS_PROJECT"
+    },
+    {
+      "id": "FL-03",
+      "sourceCollection": "requirements",
+      "sourceRef": "docs/设计包/30-产品设计追踪数据.json",
+      "pageIds": [
+        "P13",
+        "P04"
+      ],
+      "commandIds": [
+        "C06",
+        "C07",
+        "C17"
+      ],
+      "caseIds": [
+        "AC-10",
+        "AC-12",
+        "AC-19",
+        "AC-40"
+      ],
+      "module": "ai + execution",
+      "technicalRefs": [
+        "docs/设计包/37-技术架构总设计与决策.md",
+        "docs/设计包/38-模块边界与前端工程设计.md",
+        "docs/设计包/39-数据存储与事务一致性设计.md",
+        "docs/设计包/40-接口事件与集成技术设计.md",
+        "docs/设计包/41-AI运行知识分析与安全设计.md",
+        "docs/设计包/42-部署运维与非功能设计.md",
+        "docs/设计包/43-技术实施路线与验证矩阵.md"
+      ],
+      "productEvidence": [],
+      "implementationStatus": "NOT_IMPLEMENTED_IN_THIS_PROJECT"
+    },
+    {
+      "id": "FL-04",
+      "sourceCollection": "requirements",
+      "sourceRef": "docs/设计包/30-产品设计追踪数据.json",
+      "pageIds": [
+        "P13",
+        "P04"
+      ],
+      "commandIds": [
+        "C06",
+        "C07",
+        "C17"
+      ],
+      "caseIds": [
+        "AC-10",
+        "AC-12",
+        "AC-19",
+        "AC-40"
+      ],
+      "module": "ai + execution",
+      "technicalRefs": [
+        "docs/设计包/37-技术架构总设计与决策.md",
+        "docs/设计包/38-模块边界与前端工程设计.md",
+        "docs/设计包/39-数据存储与事务一致性设计.md",
+        "docs/设计包/40-接口事件与集成技术设计.md",
+        "docs/设计包/41-AI运行知识分析与安全设计.md",
+        "docs/设计包/42-部署运维与非功能设计.md",
+        "docs/设计包/43-技术实施路线与验证矩阵.md"
+      ],
+      "productEvidence": [],
+      "implementationStatus": "NOT_IMPLEMENTED_IN_THIS_PROJECT"
+    },
+    {
+      "id": "FL-05",
+      "sourceCollection": "requirements",
+      "sourceRef": "docs/设计包/30-产品设计追踪数据.json",
+      "pageIds": [
+        "P13",
+        "P04"
+      ],
+      "commandIds": [
+        "C06",
+        "C07",
+        "C17"
+      ],
+      "caseIds": [
+        "AC-10",
+        "AC-12",
+        "AC-19",
+        "AC-40"
+      ],
+      "module": "ai + execution",
+      "technicalRefs": [
+        "docs/设计包/37-技术架构总设计与决策.md",
+        "docs/设计包/38-模块边界与前端工程设计.md",
+        "docs/设计包/39-数据存储与事务一致性设计.md",
+        "docs/设计包/40-接口事件与集成技术设计.md",
+        "docs/设计包/41-AI运行知识分析与安全设计.md",
+        "docs/设计包/42-部署运维与非功能设计.md",
+        "docs/设计包/43-技术实施路线与验证矩阵.md"
+      ],
+      "productEvidence": [],
+      "implementationStatus": "NOT_IMPLEMENTED_IN_THIS_PROJECT"
+    },
+    {
+      "id": "FL-06",
+      "sourceCollection": "requirements",
+      "sourceRef": "docs/设计包/30-产品设计追踪数据.json",
+      "pageIds": [
+        "P13",
+        "P04"
+      ],
+      "commandIds": [
+        "C06",
+        "C07",
+        "C17"
+      ],
+      "caseIds": [
+        "AC-10",
+        "AC-12",
+        "AC-19",
+        "AC-40"
+      ],
+      "module": "ai + execution",
+      "technicalRefs": [
+        "docs/设计包/37-技术架构总设计与决策.md",
+        "docs/设计包/38-模块边界与前端工程设计.md",
+        "docs/设计包/39-数据存储与事务一致性设计.md",
+        "docs/设计包/40-接口事件与集成技术设计.md",
+        "docs/设计包/41-AI运行知识分析与安全设计.md",
+        "docs/设计包/42-部署运维与非功能设计.md",
+        "docs/设计包/43-技术实施路线与验证矩阵.md"
+      ],
+      "productEvidence": [],
+      "implementationStatus": "NOT_IMPLEMENTED_IN_THIS_PROJECT"
+    },
+    {
+      "id": "AT-01",
+      "sourceCollection": "requirements",
+      "sourceRef": "docs/设计包/30-产品设计追踪数据.json",
+      "pageIds": [
+        "P14"
+      ],
+      "commandIds": [
+        "C22"
+      ],
+      "caseIds": [
+        "AC-18",
+        "AC-41",
+        "AC-42",
+        "AC-58",
+        "AC-59"
+      ],
+      "module": "infra + intelligence",
+      "technicalRefs": [
+        "docs/设计包/37-技术架构总设计与决策.md",
+        "docs/设计包/38-模块边界与前端工程设计.md",
+        "docs/设计包/39-数据存储与事务一致性设计.md",
+        "docs/设计包/40-接口事件与集成技术设计.md",
+        "docs/设计包/41-AI运行知识分析与安全设计.md",
+        "docs/设计包/42-部署运维与非功能设计.md",
+        "docs/设计包/43-技术实施路线与验证矩阵.md"
+      ],
+      "productEvidence": [],
+      "implementationStatus": "NOT_IMPLEMENTED_IN_THIS_PROJECT"
+    },
+    {
+      "id": "AT-02",
+      "sourceCollection": "requirements",
+      "sourceRef": "docs/设计包/30-产品设计追踪数据.json",
+      "pageIds": [
+        "P14"
+      ],
+      "commandIds": [
+        "C22"
+      ],
+      "caseIds": [
+        "AC-18",
+        "AC-41",
+        "AC-42",
+        "AC-58",
+        "AC-59"
+      ],
+      "module": "infra + intelligence",
+      "technicalRefs": [
+        "docs/设计包/37-技术架构总设计与决策.md",
+        "docs/设计包/38-模块边界与前端工程设计.md",
+        "docs/设计包/39-数据存储与事务一致性设计.md",
+        "docs/设计包/40-接口事件与集成技术设计.md",
+        "docs/设计包/41-AI运行知识分析与安全设计.md",
+        "docs/设计包/42-部署运维与非功能设计.md",
+        "docs/设计包/43-技术实施路线与验证矩阵.md"
+      ],
+      "productEvidence": [],
+      "implementationStatus": "NOT_IMPLEMENTED_IN_THIS_PROJECT"
+    },
+    {
+      "id": "AT-03",
+      "sourceCollection": "requirements",
+      "sourceRef": "docs/设计包/30-产品设计追踪数据.json",
+      "pageIds": [
+        "P14"
+      ],
+      "commandIds": [
+        "C22"
+      ],
+      "caseIds": [
+        "AC-18",
+        "AC-41",
+        "AC-42",
+        "AC-58",
+        "AC-59"
+      ],
+      "module": "infra + intelligence",
+      "technicalRefs": [
+        "docs/设计包/37-技术架构总设计与决策.md",
+        "docs/设计包/38-模块边界与前端工程设计.md",
+        "docs/设计包/39-数据存储与事务一致性设计.md",
+        "docs/设计包/40-接口事件与集成技术设计.md",
+        "docs/设计包/41-AI运行知识分析与安全设计.md",
+        "docs/设计包/42-部署运维与非功能设计.md",
+        "docs/设计包/43-技术实施路线与验证矩阵.md"
+      ],
+      "productEvidence": [],
+      "implementationStatus": "NOT_IMPLEMENTED_IN_THIS_PROJECT"
+    },
+    {
+      "id": "AT-04",
+      "sourceCollection": "requirements",
+      "sourceRef": "docs/设计包/30-产品设计追踪数据.json",
+      "pageIds": [
+        "P14"
+      ],
+      "commandIds": [
+        "C22"
+      ],
+      "caseIds": [
+        "AC-18",
+        "AC-41",
+        "AC-42",
+        "AC-58",
+        "AC-59"
+      ],
+      "module": "infra + intelligence",
+      "technicalRefs": [
+        "docs/设计包/37-技术架构总设计与决策.md",
+        "docs/设计包/38-模块边界与前端工程设计.md",
+        "docs/设计包/39-数据存储与事务一致性设计.md",
+        "docs/设计包/40-接口事件与集成技术设计.md",
+        "docs/设计包/41-AI运行知识分析与安全设计.md",
+        "docs/设计包/42-部署运维与非功能设计.md",
+        "docs/设计包/43-技术实施路线与验证矩阵.md"
+      ],
+      "productEvidence": [],
+      "implementationStatus": "NOT_IMPLEMENTED_IN_THIS_PROJECT"
+    },
+    {
+      "id": "AT-05",
+      "sourceCollection": "requirements",
+      "sourceRef": "docs/设计包/30-产品设计追踪数据.json",
+      "pageIds": [
+        "P14"
+      ],
+      "commandIds": [
+        "C22"
+      ],
+      "caseIds": [
+        "AC-18",
+        "AC-41",
+        "AC-42",
+        "AC-58",
+        "AC-59"
+      ],
+      "module": "infra + intelligence",
+      "technicalRefs": [
+        "docs/设计包/37-技术架构总设计与决策.md",
+        "docs/设计包/38-模块边界与前端工程设计.md",
+        "docs/设计包/39-数据存储与事务一致性设计.md",
+        "docs/设计包/40-接口事件与集成技术设计.md",
+        "docs/设计包/41-AI运行知识分析与安全设计.md",
+        "docs/设计包/42-部署运维与非功能设计.md",
+        "docs/设计包/43-技术实施路线与验证矩阵.md"
+      ],
+      "productEvidence": [],
+      "implementationStatus": "NOT_IMPLEMENTED_IN_THIS_PROJECT"
+    },
+    {
+      "id": "AT-06",
+      "sourceCollection": "requirements",
+      "sourceRef": "docs/设计包/30-产品设计追踪数据.json",
+      "pageIds": [
+        "P14"
+      ],
+      "commandIds": [
+        "C22"
+      ],
+      "caseIds": [
+        "AC-18",
+        "AC-41",
+        "AC-42",
+        "AC-58",
+        "AC-59"
+      ],
+      "module": "infra + intelligence",
+      "technicalRefs": [
+        "docs/设计包/37-技术架构总设计与决策.md",
+        "docs/设计包/38-模块边界与前端工程设计.md",
+        "docs/设计包/39-数据存储与事务一致性设计.md",
+        "docs/设计包/40-接口事件与集成技术设计.md",
+        "docs/设计包/41-AI运行知识分析与安全设计.md",
+        "docs/设计包/42-部署运维与非功能设计.md",
+        "docs/设计包/43-技术实施路线与验证矩阵.md"
+      ],
+      "productEvidence": [],
+      "implementationStatus": "NOT_IMPLEMENTED_IN_THIS_PROJECT"
+    },
+    {
+      "id": "IM-01",
+      "sourceCollection": "requirements",
+      "sourceRef": "docs/设计包/30-产品设计追踪数据.json",
+      "pageIds": [
+        "P15",
+        "P21"
+      ],
+      "commandIds": [
+        "C15",
+        "C23"
+      ],
+      "caseIds": [
+        "AC-43",
+        "AC-44",
+        "AC-45",
+        "AC-57"
+      ],
+      "module": "integration",
+      "technicalRefs": [
+        "docs/设计包/37-技术架构总设计与决策.md",
+        "docs/设计包/38-模块边界与前端工程设计.md",
+        "docs/设计包/39-数据存储与事务一致性设计.md",
+        "docs/设计包/40-接口事件与集成技术设计.md",
+        "docs/设计包/41-AI运行知识分析与安全设计.md",
+        "docs/设计包/42-部署运维与非功能设计.md",
+        "docs/设计包/43-技术实施路线与验证矩阵.md"
+      ],
+      "productEvidence": [],
+      "implementationStatus": "NOT_IMPLEMENTED_IN_THIS_PROJECT"
+    },
+    {
+      "id": "IM-02",
+      "sourceCollection": "requirements",
+      "sourceRef": "docs/设计包/30-产品设计追踪数据.json",
+      "pageIds": [
+        "P15",
+        "P21"
+      ],
+      "commandIds": [
+        "C15",
+        "C23"
+      ],
+      "caseIds": [
+        "AC-43",
+        "AC-44",
+        "AC-45",
+        "AC-57"
+      ],
+      "module": "integration",
+      "technicalRefs": [
+        "docs/设计包/37-技术架构总设计与决策.md",
+        "docs/设计包/38-模块边界与前端工程设计.md",
+        "docs/设计包/39-数据存储与事务一致性设计.md",
+        "docs/设计包/40-接口事件与集成技术设计.md",
+        "docs/设计包/41-AI运行知识分析与安全设计.md",
+        "docs/设计包/42-部署运维与非功能设计.md",
+        "docs/设计包/43-技术实施路线与验证矩阵.md"
+      ],
+      "productEvidence": [],
+      "implementationStatus": "NOT_IMPLEMENTED_IN_THIS_PROJECT"
+    },
+    {
+      "id": "IM-03",
+      "sourceCollection": "requirements",
+      "sourceRef": "docs/设计包/30-产品设计追踪数据.json",
+      "pageIds": [
+        "P15",
+        "P21"
+      ],
+      "commandIds": [
+        "C15",
+        "C23"
+      ],
+      "caseIds": [
+        "AC-43",
+        "AC-44",
+        "AC-45",
+        "AC-57"
+      ],
+      "module": "integration",
+      "technicalRefs": [
+        "docs/设计包/37-技术架构总设计与决策.md",
+        "docs/设计包/38-模块边界与前端工程设计.md",
+        "docs/设计包/39-数据存储与事务一致性设计.md",
+        "docs/设计包/40-接口事件与集成技术设计.md",
+        "docs/设计包/41-AI运行知识分析与安全设计.md",
+        "docs/设计包/42-部署运维与非功能设计.md",
+        "docs/设计包/43-技术实施路线与验证矩阵.md"
+      ],
+      "productEvidence": [],
+      "implementationStatus": "NOT_IMPLEMENTED_IN_THIS_PROJECT"
+    },
+    {
+      "id": "IM-04",
+      "sourceCollection": "requirements",
+      "sourceRef": "docs/设计包/30-产品设计追踪数据.json",
+      "pageIds": [
+        "P15",
+        "P21"
+      ],
+      "commandIds": [
+        "C15",
+        "C23"
+      ],
+      "caseIds": [
+        "AC-43",
+        "AC-44",
+        "AC-45",
+        "AC-57"
+      ],
+      "module": "integration",
+      "technicalRefs": [
+        "docs/设计包/37-技术架构总设计与决策.md",
+        "docs/设计包/38-模块边界与前端工程设计.md",
+        "docs/设计包/39-数据存储与事务一致性设计.md",
+        "docs/设计包/40-接口事件与集成技术设计.md",
+        "docs/设计包/41-AI运行知识分析与安全设计.md",
+        "docs/设计包/42-部署运维与非功能设计.md",
+        "docs/设计包/43-技术实施路线与验证矩阵.md"
+      ],
+      "productEvidence": [],
+      "implementationStatus": "NOT_IMPLEMENTED_IN_THIS_PROJECT"
+    },
+    {
+      "id": "IM-05",
+      "sourceCollection": "requirements",
+      "sourceRef": "docs/设计包/30-产品设计追踪数据.json",
+      "pageIds": [
+        "P15",
+        "P21"
+      ],
+      "commandIds": [
+        "C15",
+        "C23"
+      ],
+      "caseIds": [
+        "AC-43",
+        "AC-44",
+        "AC-45",
+        "AC-57"
+      ],
+      "module": "integration",
+      "technicalRefs": [
+        "docs/设计包/37-技术架构总设计与决策.md",
+        "docs/设计包/38-模块边界与前端工程设计.md",
+        "docs/设计包/39-数据存储与事务一致性设计.md",
+        "docs/设计包/40-接口事件与集成技术设计.md",
+        "docs/设计包/41-AI运行知识分析与安全设计.md",
+        "docs/设计包/42-部署运维与非功能设计.md",
+        "docs/设计包/43-技术实施路线与验证矩阵.md"
+      ],
+      "productEvidence": [],
+      "implementationStatus": "NOT_IMPLEMENTED_IN_THIS_PROJECT"
+    },
+    {
+      "id": "IM-06",
+      "sourceCollection": "requirements",
+      "sourceRef": "docs/设计包/30-产品设计追踪数据.json",
+      "pageIds": [
+        "P15",
+        "P21"
+      ],
+      "commandIds": [
+        "C15",
+        "C23"
+      ],
+      "caseIds": [
+        "AC-43",
+        "AC-44",
+        "AC-45",
+        "AC-57"
+      ],
+      "module": "integration",
+      "technicalRefs": [
+        "docs/设计包/37-技术架构总设计与决策.md",
+        "docs/设计包/38-模块边界与前端工程设计.md",
+        "docs/设计包/39-数据存储与事务一致性设计.md",
+        "docs/设计包/40-接口事件与集成技术设计.md",
+        "docs/设计包/41-AI运行知识分析与安全设计.md",
+        "docs/设计包/42-部署运维与非功能设计.md",
+        "docs/设计包/43-技术实施路线与验证矩阵.md"
+      ],
+      "productEvidence": [],
+      "implementationStatus": "NOT_IMPLEMENTED_IN_THIS_PROJECT"
+    },
+    {
+      "id": "RS-01",
+      "sourceCollection": "requirements",
+      "sourceRef": "docs/设计包/30-产品设计追踪数据.json",
+      "pageIds": [
+        "P16",
+        "P02"
+      ],
+      "commandIds": [
+        "C09",
+        "C10",
+        "C11",
+        "C12",
+        "C14"
+      ],
+      "caseIds": [
+        "AC-19",
+        "AC-20",
+        "AC-21",
+        "AC-22",
+        "AC-23",
+        "AC-31"
+      ],
+      "module": "contribution + bpm",
+      "technicalRefs": [
+        "docs/设计包/37-技术架构总设计与决策.md",
+        "docs/设计包/38-模块边界与前端工程设计.md",
+        "docs/设计包/39-数据存储与事务一致性设计.md",
+        "docs/设计包/40-接口事件与集成技术设计.md",
+        "docs/设计包/41-AI运行知识分析与安全设计.md",
+        "docs/设计包/42-部署运维与非功能设计.md",
+        "docs/设计包/43-技术实施路线与验证矩阵.md"
+      ],
+      "productEvidence": [],
+      "implementationStatus": "NOT_IMPLEMENTED_IN_THIS_PROJECT"
+    },
+    {
+      "id": "RS-02",
+      "sourceCollection": "requirements",
+      "sourceRef": "docs/设计包/30-产品设计追踪数据.json",
+      "pageIds": [
+        "P16",
+        "P02"
+      ],
+      "commandIds": [
+        "C09",
+        "C10",
+        "C11",
+        "C12",
+        "C14"
+      ],
+      "caseIds": [
+        "AC-19",
+        "AC-20",
+        "AC-21",
+        "AC-22",
+        "AC-23",
+        "AC-31"
+      ],
+      "module": "contribution + bpm",
+      "technicalRefs": [
+        "docs/设计包/37-技术架构总设计与决策.md",
+        "docs/设计包/38-模块边界与前端工程设计.md",
+        "docs/设计包/39-数据存储与事务一致性设计.md",
+        "docs/设计包/40-接口事件与集成技术设计.md",
+        "docs/设计包/41-AI运行知识分析与安全设计.md",
+        "docs/设计包/42-部署运维与非功能设计.md",
+        "docs/设计包/43-技术实施路线与验证矩阵.md"
+      ],
+      "productEvidence": [],
+      "implementationStatus": "NOT_IMPLEMENTED_IN_THIS_PROJECT"
+    },
+    {
+      "id": "RS-03",
+      "sourceCollection": "requirements",
+      "sourceRef": "docs/设计包/30-产品设计追踪数据.json",
+      "pageIds": [
+        "P16",
+        "P02"
+      ],
+      "commandIds": [
+        "C09",
+        "C10",
+        "C11",
+        "C12",
+        "C14"
+      ],
+      "caseIds": [
+        "AC-19",
+        "AC-20",
+        "AC-21",
+        "AC-22",
+        "AC-23",
+        "AC-31"
+      ],
+      "module": "contribution + bpm",
+      "technicalRefs": [
+        "docs/设计包/37-技术架构总设计与决策.md",
+        "docs/设计包/38-模块边界与前端工程设计.md",
+        "docs/设计包/39-数据存储与事务一致性设计.md",
+        "docs/设计包/40-接口事件与集成技术设计.md",
+        "docs/设计包/41-AI运行知识分析与安全设计.md",
+        "docs/设计包/42-部署运维与非功能设计.md",
+        "docs/设计包/43-技术实施路线与验证矩阵.md"
+      ],
+      "productEvidence": [],
+      "implementationStatus": "NOT_IMPLEMENTED_IN_THIS_PROJECT"
+    },
+    {
+      "id": "RS-04",
+      "sourceCollection": "requirements",
+      "sourceRef": "docs/设计包/30-产品设计追踪数据.json",
+      "pageIds": [
+        "P16",
+        "P02"
+      ],
+      "commandIds": [
+        "C09",
+        "C10",
+        "C11",
+        "C12",
+        "C14"
+      ],
+      "caseIds": [
+        "AC-19",
+        "AC-20",
+        "AC-21",
+        "AC-22",
+        "AC-23",
+        "AC-31"
+      ],
+      "module": "contribution + bpm",
+      "technicalRefs": [
+        "docs/设计包/37-技术架构总设计与决策.md",
+        "docs/设计包/38-模块边界与前端工程设计.md",
+        "docs/设计包/39-数据存储与事务一致性设计.md",
+        "docs/设计包/40-接口事件与集成技术设计.md",
+        "docs/设计包/41-AI运行知识分析与安全设计.md",
+        "docs/设计包/42-部署运维与非功能设计.md",
+        "docs/设计包/43-技术实施路线与验证矩阵.md"
+      ],
+      "productEvidence": [],
+      "implementationStatus": "NOT_IMPLEMENTED_IN_THIS_PROJECT"
+    },
+    {
+      "id": "RS-05",
+      "sourceCollection": "requirements",
+      "sourceRef": "docs/设计包/30-产品设计追踪数据.json",
+      "pageIds": [
+        "P16",
+        "P02"
+      ],
+      "commandIds": [
+        "C09",
+        "C10",
+        "C11",
+        "C12",
+        "C14"
+      ],
+      "caseIds": [
+        "AC-19",
+        "AC-20",
+        "AC-21",
+        "AC-22",
+        "AC-23",
+        "AC-31"
+      ],
+      "module": "contribution + bpm",
+      "technicalRefs": [
+        "docs/设计包/37-技术架构总设计与决策.md",
+        "docs/设计包/38-模块边界与前端工程设计.md",
+        "docs/设计包/39-数据存储与事务一致性设计.md",
+        "docs/设计包/40-接口事件与集成技术设计.md",
+        "docs/设计包/41-AI运行知识分析与安全设计.md",
+        "docs/设计包/42-部署运维与非功能设计.md",
+        "docs/设计包/43-技术实施路线与验证矩阵.md"
+      ],
+      "productEvidence": [],
+      "implementationStatus": "NOT_IMPLEMENTED_IN_THIS_PROJECT"
+    },
+    {
+      "id": "RS-06",
+      "sourceCollection": "requirements",
+      "sourceRef": "docs/设计包/30-产品设计追踪数据.json",
+      "pageIds": [
+        "P16",
+        "P02"
+      ],
+      "commandIds": [
+        "C09",
+        "C10",
+        "C11",
+        "C12",
+        "C14"
+      ],
+      "caseIds": [
+        "AC-19",
+        "AC-20",
+        "AC-21",
+        "AC-22",
+        "AC-23",
+        "AC-31"
+      ],
+      "module": "contribution + bpm",
+      "technicalRefs": [
+        "docs/设计包/37-技术架构总设计与决策.md",
+        "docs/设计包/38-模块边界与前端工程设计.md",
+        "docs/设计包/39-数据存储与事务一致性设计.md",
+        "docs/设计包/40-接口事件与集成技术设计.md",
+        "docs/设计包/41-AI运行知识分析与安全设计.md",
+        "docs/设计包/42-部署运维与非功能设计.md",
+        "docs/设计包/43-技术实施路线与验证矩阵.md"
+      ],
+      "productEvidence": [],
+      "implementationStatus": "NOT_IMPLEMENTED_IN_THIS_PROJECT"
+    },
+    {
+      "id": "RS-07",
+      "sourceCollection": "requirements",
+      "sourceRef": "docs/设计包/30-产品设计追踪数据.json",
+      "pageIds": [
+        "P16",
+        "P02"
+      ],
+      "commandIds": [
+        "C09",
+        "C10",
+        "C11",
+        "C12",
+        "C14"
+      ],
+      "caseIds": [
+        "AC-19",
+        "AC-20",
+        "AC-21",
+        "AC-22",
+        "AC-23",
+        "AC-31"
+      ],
+      "module": "contribution + bpm",
+      "technicalRefs": [
+        "docs/设计包/37-技术架构总设计与决策.md",
+        "docs/设计包/38-模块边界与前端工程设计.md",
+        "docs/设计包/39-数据存储与事务一致性设计.md",
+        "docs/设计包/40-接口事件与集成技术设计.md",
+        "docs/设计包/41-AI运行知识分析与安全设计.md",
+        "docs/设计包/42-部署运维与非功能设计.md",
+        "docs/设计包/43-技术实施路线与验证矩阵.md"
+      ],
+      "productEvidence": [],
+      "implementationStatus": "NOT_IMPLEMENTED_IN_THIS_PROJECT"
+    },
+    {
+      "id": "SD-01",
+      "sourceCollection": "requirements",
+      "sourceRef": "docs/设计包/30-产品设计追踪数据.json",
+      "pageIds": [
+        "P17"
+      ],
+      "commandIds": [
+        "C02",
+        "C26"
+      ],
+      "caseIds": [
+        "AC-04",
+        "AC-05",
+        "AC-06",
+        "AC-48",
+        "AC-52"
+      ],
+      "module": "bpm",
+      "technicalRefs": [
+        "docs/设计包/37-技术架构总设计与决策.md",
+        "docs/设计包/38-模块边界与前端工程设计.md",
+        "docs/设计包/39-数据存储与事务一致性设计.md",
+        "docs/设计包/40-接口事件与集成技术设计.md",
+        "docs/设计包/41-AI运行知识分析与安全设计.md",
+        "docs/设计包/42-部署运维与非功能设计.md",
+        "docs/设计包/43-技术实施路线与验证矩阵.md"
+      ],
+      "productEvidence": [],
+      "implementationStatus": "NOT_IMPLEMENTED_IN_THIS_PROJECT"
+    },
+    {
+      "id": "SD-02",
+      "sourceCollection": "requirements",
+      "sourceRef": "docs/设计包/30-产品设计追踪数据.json",
+      "pageIds": [
+        "P17"
+      ],
+      "commandIds": [
+        "C02",
+        "C26"
+      ],
+      "caseIds": [
+        "AC-04",
+        "AC-05",
+        "AC-06",
+        "AC-48",
+        "AC-52"
+      ],
+      "module": "bpm",
+      "technicalRefs": [
+        "docs/设计包/37-技术架构总设计与决策.md",
+        "docs/设计包/38-模块边界与前端工程设计.md",
+        "docs/设计包/39-数据存储与事务一致性设计.md",
+        "docs/设计包/40-接口事件与集成技术设计.md",
+        "docs/设计包/41-AI运行知识分析与安全设计.md",
+        "docs/设计包/42-部署运维与非功能设计.md",
+        "docs/设计包/43-技术实施路线与验证矩阵.md"
+      ],
+      "productEvidence": [],
+      "implementationStatus": "NOT_IMPLEMENTED_IN_THIS_PROJECT"
+    },
+    {
+      "id": "SD-03",
+      "sourceCollection": "requirements",
+      "sourceRef": "docs/设计包/30-产品设计追踪数据.json",
+      "pageIds": [
+        "P17"
+      ],
+      "commandIds": [
+        "C02",
+        "C26"
+      ],
+      "caseIds": [
+        "AC-04",
+        "AC-05",
+        "AC-06",
+        "AC-48",
+        "AC-52"
+      ],
+      "module": "bpm",
+      "technicalRefs": [
+        "docs/设计包/37-技术架构总设计与决策.md",
+        "docs/设计包/38-模块边界与前端工程设计.md",
+        "docs/设计包/39-数据存储与事务一致性设计.md",
+        "docs/设计包/40-接口事件与集成技术设计.md",
+        "docs/设计包/41-AI运行知识分析与安全设计.md",
+        "docs/设计包/42-部署运维与非功能设计.md",
+        "docs/设计包/43-技术实施路线与验证矩阵.md"
+      ],
+      "productEvidence": [],
+      "implementationStatus": "NOT_IMPLEMENTED_IN_THIS_PROJECT"
+    },
+    {
+      "id": "SD-04",
+      "sourceCollection": "requirements",
+      "sourceRef": "docs/设计包/30-产品设计追踪数据.json",
+      "pageIds": [
+        "P17"
+      ],
+      "commandIds": [
+        "C02",
+        "C26"
+      ],
+      "caseIds": [
+        "AC-04",
+        "AC-05",
+        "AC-06",
+        "AC-48",
+        "AC-52"
+      ],
+      "module": "bpm",
+      "technicalRefs": [
+        "docs/设计包/37-技术架构总设计与决策.md",
+        "docs/设计包/38-模块边界与前端工程设计.md",
+        "docs/设计包/39-数据存储与事务一致性设计.md",
+        "docs/设计包/40-接口事件与集成技术设计.md",
+        "docs/设计包/41-AI运行知识分析与安全设计.md",
+        "docs/设计包/42-部署运维与非功能设计.md",
+        "docs/设计包/43-技术实施路线与验证矩阵.md"
+      ],
+      "productEvidence": [],
+      "implementationStatus": "NOT_IMPLEMENTED_IN_THIS_PROJECT"
+    },
+    {
+      "id": "SD-05",
+      "sourceCollection": "requirements",
+      "sourceRef": "docs/设计包/30-产品设计追踪数据.json",
+      "pageIds": [
+        "P17"
+      ],
+      "commandIds": [
+        "C02",
+        "C26"
+      ],
+      "caseIds": [
+        "AC-04",
+        "AC-05",
+        "AC-06",
+        "AC-48",
+        "AC-52"
+      ],
+      "module": "bpm",
+      "technicalRefs": [
+        "docs/设计包/37-技术架构总设计与决策.md",
+        "docs/设计包/38-模块边界与前端工程设计.md",
+        "docs/设计包/39-数据存储与事务一致性设计.md",
+        "docs/设计包/40-接口事件与集成技术设计.md",
+        "docs/设计包/41-AI运行知识分析与安全设计.md",
+        "docs/设计包/42-部署运维与非功能设计.md",
+        "docs/设计包/43-技术实施路线与验证矩阵.md"
+      ],
+      "productEvidence": [],
+      "implementationStatus": "NOT_IMPLEMENTED_IN_THIS_PROJECT"
+    },
+    {
+      "id": "SD-06",
+      "sourceCollection": "requirements",
+      "sourceRef": "docs/设计包/30-产品设计追踪数据.json",
+      "pageIds": [
+        "P17"
+      ],
+      "commandIds": [
+        "C02",
+        "C26"
+      ],
+      "caseIds": [
+        "AC-04",
+        "AC-05",
+        "AC-06",
+        "AC-48",
+        "AC-52"
+      ],
+      "module": "bpm",
+      "technicalRefs": [
+        "docs/设计包/37-技术架构总设计与决策.md",
+        "docs/设计包/38-模块边界与前端工程设计.md",
+        "docs/设计包/39-数据存储与事务一致性设计.md",
+        "docs/设计包/40-接口事件与集成技术设计.md",
+        "docs/设计包/41-AI运行知识分析与安全设计.md",
+        "docs/设计包/42-部署运维与非功能设计.md",
+        "docs/设计包/43-技术实施路线与验证矩阵.md"
+      ],
+      "productEvidence": [],
+      "implementationStatus": "NOT_IMPLEMENTED_IN_THIS_PROJECT"
+    },
+    {
+      "id": "AD-01",
+      "sourceCollection": "requirements",
+      "sourceRef": "docs/设计包/30-产品设计追踪数据.json",
+      "pageIds": [
+        "P18",
+        "P07",
+        "P22"
+      ],
+      "commandIds": [
+        "C18",
+        "C24",
+        "C25"
+      ],
+      "caseIds": [
+        "AC-08",
+        "AC-28",
+        "AC-32",
+        "AC-46",
+        "AC-47",
+        "AC-56",
+        "AC-59"
+      ],
+      "module": "system + integration",
+      "technicalRefs": [
+        "docs/设计包/37-技术架构总设计与决策.md",
+        "docs/设计包/38-模块边界与前端工程设计.md",
+        "docs/设计包/39-数据存储与事务一致性设计.md",
+        "docs/设计包/40-接口事件与集成技术设计.md",
+        "docs/设计包/41-AI运行知识分析与安全设计.md",
+        "docs/设计包/42-部署运维与非功能设计.md",
+        "docs/设计包/43-技术实施路线与验证矩阵.md"
+      ],
+      "productEvidence": [],
+      "implementationStatus": "NOT_IMPLEMENTED_IN_THIS_PROJECT"
+    },
+    {
+      "id": "AD-02",
+      "sourceCollection": "requirements",
+      "sourceRef": "docs/设计包/30-产品设计追踪数据.json",
+      "pageIds": [
+        "P18",
+        "P07"
+      ],
+      "commandIds": [
+        "C18",
+        "C24",
+        "C25"
+      ],
+      "caseIds": [
+        "AC-08",
+        "AC-28",
+        "AC-32",
+        "AC-46",
+        "AC-47",
+        "AC-56",
+        "AC-59"
+      ],
+      "module": "system + integration",
+      "technicalRefs": [
+        "docs/设计包/37-技术架构总设计与决策.md",
+        "docs/设计包/38-模块边界与前端工程设计.md",
+        "docs/设计包/39-数据存储与事务一致性设计.md",
+        "docs/设计包/40-接口事件与集成技术设计.md",
+        "docs/设计包/41-AI运行知识分析与安全设计.md",
+        "docs/设计包/42-部署运维与非功能设计.md",
+        "docs/设计包/43-技术实施路线与验证矩阵.md"
+      ],
+      "productEvidence": [],
+      "implementationStatus": "NOT_IMPLEMENTED_IN_THIS_PROJECT"
+    },
+    {
+      "id": "AD-03",
+      "sourceCollection": "requirements",
+      "sourceRef": "docs/设计包/30-产品设计追踪数据.json",
+      "pageIds": [
+        "P18",
+        "P07"
+      ],
+      "commandIds": [
+        "C18",
+        "C24",
+        "C25"
+      ],
+      "caseIds": [
+        "AC-08",
+        "AC-28",
+        "AC-32",
+        "AC-46",
+        "AC-47",
+        "AC-56",
+        "AC-59"
+      ],
+      "module": "system + integration",
+      "technicalRefs": [
+        "docs/设计包/37-技术架构总设计与决策.md",
+        "docs/设计包/38-模块边界与前端工程设计.md",
+        "docs/设计包/39-数据存储与事务一致性设计.md",
+        "docs/设计包/40-接口事件与集成技术设计.md",
+        "docs/设计包/41-AI运行知识分析与安全设计.md",
+        "docs/设计包/42-部署运维与非功能设计.md",
+        "docs/设计包/43-技术实施路线与验证矩阵.md"
+      ],
+      "productEvidence": [],
+      "implementationStatus": "NOT_IMPLEMENTED_IN_THIS_PROJECT"
+    },
+    {
+      "id": "AD-04",
+      "sourceCollection": "requirements",
+      "sourceRef": "docs/设计包/30-产品设计追踪数据.json",
+      "pageIds": [
+        "P18",
+        "P07",
+        "P22"
+      ],
+      "commandIds": [
+        "C18",
+        "C24",
+        "C25"
+      ],
+      "caseIds": [
+        "AC-08",
+        "AC-28",
+        "AC-32",
+        "AC-46",
+        "AC-47",
+        "AC-56",
+        "AC-59"
+      ],
+      "module": "system + integration",
+      "technicalRefs": [
+        "docs/设计包/37-技术架构总设计与决策.md",
+        "docs/设计包/38-模块边界与前端工程设计.md",
+        "docs/设计包/39-数据存储与事务一致性设计.md",
+        "docs/设计包/40-接口事件与集成技术设计.md",
+        "docs/设计包/41-AI运行知识分析与安全设计.md",
+        "docs/设计包/42-部署运维与非功能设计.md",
+        "docs/设计包/43-技术实施路线与验证矩阵.md"
+      ],
+      "productEvidence": [],
+      "implementationStatus": "NOT_IMPLEMENTED_IN_THIS_PROJECT"
+    },
+    {
+      "id": "AD-05",
+      "sourceCollection": "requirements",
+      "sourceRef": "docs/设计包/30-产品设计追踪数据.json",
+      "pageIds": [
+        "P18",
+        "P07"
+      ],
+      "commandIds": [
+        "C18",
+        "C24",
+        "C25"
+      ],
+      "caseIds": [
+        "AC-08",
+        "AC-28",
+        "AC-32",
+        "AC-46",
+        "AC-47",
+        "AC-56",
+        "AC-59"
+      ],
+      "module": "system + integration",
+      "technicalRefs": [
+        "docs/设计包/37-技术架构总设计与决策.md",
+        "docs/设计包/38-模块边界与前端工程设计.md",
+        "docs/设计包/39-数据存储与事务一致性设计.md",
+        "docs/设计包/40-接口事件与集成技术设计.md",
+        "docs/设计包/41-AI运行知识分析与安全设计.md",
+        "docs/设计包/42-部署运维与非功能设计.md",
+        "docs/设计包/43-技术实施路线与验证矩阵.md"
+      ],
+      "productEvidence": [],
+      "implementationStatus": "NOT_IMPLEMENTED_IN_THIS_PROJECT"
+    },
+    {
+      "id": "AD-06",
+      "sourceCollection": "requirements",
+      "sourceRef": "docs/设计包/30-产品设计追踪数据.json",
+      "pageIds": [
+        "P18",
+        "P07"
+      ],
+      "commandIds": [
+        "C18",
+        "C24",
+        "C25"
+      ],
+      "caseIds": [
+        "AC-08",
+        "AC-28",
+        "AC-32",
+        "AC-46",
+        "AC-47",
+        "AC-56",
+        "AC-59"
+      ],
+      "module": "system + integration",
+      "technicalRefs": [
+        "docs/设计包/37-技术架构总设计与决策.md",
+        "docs/设计包/38-模块边界与前端工程设计.md",
+        "docs/设计包/39-数据存储与事务一致性设计.md",
+        "docs/设计包/40-接口事件与集成技术设计.md",
+        "docs/设计包/41-AI运行知识分析与安全设计.md",
+        "docs/设计包/42-部署运维与非功能设计.md",
+        "docs/设计包/43-技术实施路线与验证矩阵.md"
+      ],
+      "productEvidence": [],
+      "implementationStatus": "NOT_IMPLEMENTED_IN_THIS_PROJECT"
+    },
+    {
+      "id": "AD-07",
+      "sourceCollection": "requirements",
+      "sourceRef": "docs/设计包/30-产品设计追踪数据.json",
+      "pageIds": [
+        "P18",
+        "P07"
+      ],
+      "commandIds": [
+        "C18",
+        "C24",
+        "C25"
+      ],
+      "caseIds": [
+        "AC-08",
+        "AC-28",
+        "AC-32",
+        "AC-46",
+        "AC-47",
+        "AC-56",
+        "AC-59"
+      ],
+      "module": "system + integration",
+      "technicalRefs": [
+        "docs/设计包/37-技术架构总设计与决策.md",
+        "docs/设计包/38-模块边界与前端工程设计.md",
+        "docs/设计包/39-数据存储与事务一致性设计.md",
+        "docs/设计包/40-接口事件与集成技术设计.md",
+        "docs/设计包/41-AI运行知识分析与安全设计.md",
+        "docs/设计包/42-部署运维与非功能设计.md",
+        "docs/设计包/43-技术实施路线与验证矩阵.md"
+      ],
+      "productEvidence": [],
+      "implementationStatus": "NOT_IMPLEMENTED_IN_THIS_PROJECT"
+    },
+    {
+      "id": "AD-08",
+      "sourceCollection": "requirements",
+      "sourceRef": "docs/设计包/30-产品设计追踪数据.json",
+      "pageIds": [
+        "P18",
+        "P07",
+        "P22"
+      ],
+      "commandIds": [
+        "C18",
+        "C24",
+        "C25"
+      ],
+      "caseIds": [
+        "AC-08",
+        "AC-28",
+        "AC-32",
+        "AC-46",
+        "AC-47",
+        "AC-56",
+        "AC-59"
+      ],
+      "module": "system + integration",
+      "technicalRefs": [
+        "docs/设计包/37-技术架构总设计与决策.md",
+        "docs/设计包/38-模块边界与前端工程设计.md",
+        "docs/设计包/39-数据存储与事务一致性设计.md",
+        "docs/设计包/40-接口事件与集成技术设计.md",
+        "docs/设计包/41-AI运行知识分析与安全设计.md",
+        "docs/设计包/42-部署运维与非功能设计.md",
+        "docs/设计包/43-技术实施路线与验证矩阵.md"
+      ],
+      "productEvidence": [],
+      "implementationStatus": "NOT_IMPLEMENTED_IN_THIS_PROJECT"
+    },
+    {
+      "id": "OP-01",
+      "sourceCollection": "requirements",
+      "sourceRef": "docs/设计包/30-产品设计追踪数据.json",
+      "pageIds": [
+        "P19",
+        "P21"
+      ],
+      "commandIds": [
+        "C14",
+        "C25"
+      ],
+      "caseIds": [
+        "AC-01",
+        "AC-49",
+        "AC-50",
+        "AC-51",
+        "AC-53",
+        "AC-54",
+        "AC-55",
+        "AC-56",
+        "AC-58",
+        "AC-60"
+      ],
+      "module": "execution + infra",
+      "technicalRefs": [
+        "docs/设计包/37-技术架构总设计与决策.md",
+        "docs/设计包/38-模块边界与前端工程设计.md",
+        "docs/设计包/39-数据存储与事务一致性设计.md",
+        "docs/设计包/40-接口事件与集成技术设计.md",
+        "docs/设计包/41-AI运行知识分析与安全设计.md",
+        "docs/设计包/42-部署运维与非功能设计.md",
+        "docs/设计包/43-技术实施路线与验证矩阵.md"
+      ],
+      "productEvidence": [],
+      "implementationStatus": "NOT_IMPLEMENTED_IN_THIS_PROJECT"
+    },
+    {
+      "id": "OP-02",
+      "sourceCollection": "requirements",
+      "sourceRef": "docs/设计包/30-产品设计追踪数据.json",
+      "pageIds": [
+        "P19",
+        "P21",
+        "P22"
+      ],
+      "commandIds": [
+        "C14",
+        "C25"
+      ],
+      "caseIds": [
+        "AC-01",
+        "AC-49",
+        "AC-50",
+        "AC-51",
+        "AC-53",
+        "AC-54",
+        "AC-55",
+        "AC-56",
+        "AC-58",
+        "AC-60"
+      ],
+      "module": "execution + infra",
+      "technicalRefs": [
+        "docs/设计包/37-技术架构总设计与决策.md",
+        "docs/设计包/38-模块边界与前端工程设计.md",
+        "docs/设计包/39-数据存储与事务一致性设计.md",
+        "docs/设计包/40-接口事件与集成技术设计.md",
+        "docs/设计包/41-AI运行知识分析与安全设计.md",
+        "docs/设计包/42-部署运维与非功能设计.md",
+        "docs/设计包/43-技术实施路线与验证矩阵.md"
+      ],
+      "productEvidence": [],
+      "implementationStatus": "NOT_IMPLEMENTED_IN_THIS_PROJECT"
+    },
+    {
+      "id": "OP-03",
+      "sourceCollection": "requirements",
+      "sourceRef": "docs/设计包/30-产品设计追踪数据.json",
+      "pageIds": [
+        "P19",
+        "P21"
+      ],
+      "commandIds": [
+        "C14",
+        "C25"
+      ],
+      "caseIds": [
+        "AC-01",
+        "AC-49",
+        "AC-50",
+        "AC-51",
+        "AC-53",
+        "AC-54",
+        "AC-55",
+        "AC-56",
+        "AC-58",
+        "AC-60"
+      ],
+      "module": "execution + infra",
+      "technicalRefs": [
+        "docs/设计包/37-技术架构总设计与决策.md",
+        "docs/设计包/38-模块边界与前端工程设计.md",
+        "docs/设计包/39-数据存储与事务一致性设计.md",
+        "docs/设计包/40-接口事件与集成技术设计.md",
+        "docs/设计包/41-AI运行知识分析与安全设计.md",
+        "docs/设计包/42-部署运维与非功能设计.md",
+        "docs/设计包/43-技术实施路线与验证矩阵.md"
+      ],
+      "productEvidence": [],
+      "implementationStatus": "NOT_IMPLEMENTED_IN_THIS_PROJECT"
+    },
+    {
+      "id": "OP-04",
+      "sourceCollection": "requirements",
+      "sourceRef": "docs/设计包/30-产品设计追踪数据.json",
+      "pageIds": [
+        "P19",
+        "P21"
+      ],
+      "commandIds": [
+        "C14",
+        "C25"
+      ],
+      "caseIds": [
+        "AC-01",
+        "AC-49",
+        "AC-50",
+        "AC-51",
+        "AC-53",
+        "AC-54",
+        "AC-55",
+        "AC-56",
+        "AC-58",
+        "AC-60"
+      ],
+      "module": "execution + infra",
+      "technicalRefs": [
+        "docs/设计包/37-技术架构总设计与决策.md",
+        "docs/设计包/38-模块边界与前端工程设计.md",
+        "docs/设计包/39-数据存储与事务一致性设计.md",
+        "docs/设计包/40-接口事件与集成技术设计.md",
+        "docs/设计包/41-AI运行知识分析与安全设计.md",
+        "docs/设计包/42-部署运维与非功能设计.md",
+        "docs/设计包/43-技术实施路线与验证矩阵.md"
+      ],
+      "productEvidence": [],
+      "implementationStatus": "NOT_IMPLEMENTED_IN_THIS_PROJECT"
+    },
+    {
+      "id": "OP-05",
+      "sourceCollection": "requirements",
+      "sourceRef": "docs/设计包/30-产品设计追踪数据.json",
+      "pageIds": [
+        "P19",
+        "P21"
+      ],
+      "commandIds": [
+        "C14",
+        "C25"
+      ],
+      "caseIds": [
+        "AC-01",
+        "AC-49",
+        "AC-50",
+        "AC-51",
+        "AC-53",
+        "AC-54",
+        "AC-55",
+        "AC-56",
+        "AC-58",
+        "AC-60"
+      ],
+      "module": "execution + infra",
+      "technicalRefs": [
+        "docs/设计包/37-技术架构总设计与决策.md",
+        "docs/设计包/38-模块边界与前端工程设计.md",
+        "docs/设计包/39-数据存储与事务一致性设计.md",
+        "docs/设计包/40-接口事件与集成技术设计.md",
+        "docs/设计包/41-AI运行知识分析与安全设计.md",
+        "docs/设计包/42-部署运维与非功能设计.md",
+        "docs/设计包/43-技术实施路线与验证矩阵.md"
+      ],
+      "productEvidence": [],
+      "implementationStatus": "NOT_IMPLEMENTED_IN_THIS_PROJECT"
+    },
+    {
+      "id": "OP-06",
+      "sourceCollection": "requirements",
+      "sourceRef": "docs/设计包/30-产品设计追踪数据.json",
+      "pageIds": [
+        "P19",
+        "P21"
+      ],
+      "commandIds": [
+        "C14",
+        "C25"
+      ],
+      "caseIds": [
+        "AC-01",
+        "AC-49",
+        "AC-50",
+        "AC-51",
+        "AC-53",
+        "AC-54",
+        "AC-55",
+        "AC-56",
+        "AC-58",
+        "AC-60"
+      ],
+      "module": "execution + infra",
+      "technicalRefs": [
+        "docs/设计包/37-技术架构总设计与决策.md",
+        "docs/设计包/38-模块边界与前端工程设计.md",
+        "docs/设计包/39-数据存储与事务一致性设计.md",
+        "docs/设计包/40-接口事件与集成技术设计.md",
+        "docs/设计包/41-AI运行知识分析与安全设计.md",
+        "docs/设计包/42-部署运维与非功能设计.md",
+        "docs/设计包/43-技术实施路线与验证矩阵.md"
+      ],
+      "productEvidence": [],
+      "implementationStatus": "NOT_IMPLEMENTED_IN_THIS_PROJECT"
+    },
+    {
+      "id": "OP-07",
+      "sourceCollection": "requirements",
+      "sourceRef": "docs/设计包/30-产品设计追踪数据.json",
+      "pageIds": [
+        "P19",
+        "P21"
+      ],
+      "commandIds": [
+        "C14",
+        "C25"
+      ],
+      "caseIds": [
+        "AC-01",
+        "AC-49",
+        "AC-50",
+        "AC-51",
+        "AC-53",
+        "AC-54",
+        "AC-55",
+        "AC-56",
+        "AC-58",
+        "AC-60"
+      ],
+      "module": "execution + infra",
+      "technicalRefs": [
+        "docs/设计包/37-技术架构总设计与决策.md",
+        "docs/设计包/38-模块边界与前端工程设计.md",
+        "docs/设计包/39-数据存储与事务一致性设计.md",
+        "docs/设计包/40-接口事件与集成技术设计.md",
+        "docs/设计包/41-AI运行知识分析与安全设计.md",
+        "docs/设计包/42-部署运维与非功能设计.md",
+        "docs/设计包/43-技术实施路线与验证矩阵.md"
+      ],
+      "productEvidence": [],
+      "implementationStatus": "NOT_IMPLEMENTED_IN_THIS_PROJECT"
+    },
+    {
+      "id": "OP-08",
+      "sourceCollection": "requirements",
+      "sourceRef": "docs/设计包/30-产品设计追踪数据.json",
+      "pageIds": [
+        "P19",
+        "P21"
+      ],
+      "commandIds": [
+        "C14",
+        "C25"
+      ],
+      "caseIds": [
+        "AC-01",
+        "AC-49",
+        "AC-50",
+        "AC-51",
+        "AC-53",
+        "AC-54",
+        "AC-55",
+        "AC-56",
+        "AC-58",
+        "AC-60"
+      ],
+      "module": "execution + infra",
+      "technicalRefs": [
+        "docs/设计包/37-技术架构总设计与决策.md",
+        "docs/设计包/38-模块边界与前端工程设计.md",
+        "docs/设计包/39-数据存储与事务一致性设计.md",
+        "docs/设计包/40-接口事件与集成技术设计.md",
+        "docs/设计包/41-AI运行知识分析与安全设计.md",
+        "docs/设计包/42-部署运维与非功能设计.md",
+        "docs/设计包/43-技术实施路线与验证矩阵.md"
+      ],
+      "productEvidence": [],
+      "implementationStatus": "NOT_IMPLEMENTED_IN_THIS_PROJECT"
+    },
+    {
+      "id": "HC-01",
+      "sourceCollection": "requirements",
+      "sourceRef": "docs/设计包/30-产品设计追踪数据.json",
+      "pageIds": [
+        "P03",
+        "P02"
+      ],
+      "commandIds": [
+        "C08",
+        "C09",
+        "C21",
+        "C23"
+      ],
+      "caseIds": [
+        "AC-06",
+        "AC-13",
+        "AC-14",
+        "AC-15",
+        "AC-39",
+        "AC-45"
+      ],
+      "module": "work + ai",
+      "technicalRefs": [
+        "docs/设计包/37-技术架构总设计与决策.md",
+        "docs/设计包/38-模块边界与前端工程设计.md",
+        "docs/设计包/39-数据存储与事务一致性设计.md",
+        "docs/设计包/40-接口事件与集成技术设计.md",
+        "docs/设计包/41-AI运行知识分析与安全设计.md",
+        "docs/设计包/42-部署运维与非功能设计.md",
+        "docs/设计包/43-技术实施路线与验证矩阵.md"
+      ],
+      "productEvidence": [],
+      "implementationStatus": "NOT_IMPLEMENTED_IN_THIS_PROJECT"
+    },
+    {
+      "id": "HC-02",
+      "sourceCollection": "requirements",
+      "sourceRef": "docs/设计包/30-产品设计追踪数据.json",
+      "pageIds": [
+        "P03",
+        "P02"
+      ],
+      "commandIds": [
+        "C08",
+        "C09",
+        "C21",
+        "C23"
+      ],
+      "caseIds": [
+        "AC-06",
+        "AC-13",
+        "AC-14",
+        "AC-15",
+        "AC-39",
+        "AC-45"
+      ],
+      "module": "work + ai",
+      "technicalRefs": [
+        "docs/设计包/37-技术架构总设计与决策.md",
+        "docs/设计包/38-模块边界与前端工程设计.md",
+        "docs/设计包/39-数据存储与事务一致性设计.md",
+        "docs/设计包/40-接口事件与集成技术设计.md",
+        "docs/设计包/41-AI运行知识分析与安全设计.md",
+        "docs/设计包/42-部署运维与非功能设计.md",
+        "docs/设计包/43-技术实施路线与验证矩阵.md"
+      ],
+      "productEvidence": [],
+      "implementationStatus": "NOT_IMPLEMENTED_IN_THIS_PROJECT"
+    },
+    {
+      "id": "HC-03",
+      "sourceCollection": "requirements",
+      "sourceRef": "docs/设计包/30-产品设计追踪数据.json",
+      "pageIds": [
+        "P03",
+        "P02",
+        "P22"
+      ],
+      "commandIds": [
+        "C08",
+        "C09",
+        "C21",
+        "C23"
+      ],
+      "caseIds": [
+        "AC-06",
+        "AC-13",
+        "AC-14",
+        "AC-15",
+        "AC-39",
+        "AC-45"
+      ],
+      "module": "work + ai",
+      "technicalRefs": [
+        "docs/设计包/37-技术架构总设计与决策.md",
+        "docs/设计包/38-模块边界与前端工程设计.md",
+        "docs/设计包/39-数据存储与事务一致性设计.md",
+        "docs/设计包/40-接口事件与集成技术设计.md",
+        "docs/设计包/41-AI运行知识分析与安全设计.md",
+        "docs/设计包/42-部署运维与非功能设计.md",
+        "docs/设计包/43-技术实施路线与验证矩阵.md"
+      ],
+      "productEvidence": [],
+      "implementationStatus": "NOT_IMPLEMENTED_IN_THIS_PROJECT"
+    },
+    {
+      "id": "HC-04",
+      "sourceCollection": "requirements",
+      "sourceRef": "docs/设计包/30-产品设计追踪数据.json",
+      "pageIds": [
+        "P03",
+        "P02"
+      ],
+      "commandIds": [
+        "C08",
+        "C09",
+        "C21",
+        "C23"
+      ],
+      "caseIds": [
+        "AC-06",
+        "AC-13",
+        "AC-14",
+        "AC-15",
+        "AC-39",
+        "AC-45"
+      ],
+      "module": "work + ai",
+      "technicalRefs": [
+        "docs/设计包/37-技术架构总设计与决策.md",
+        "docs/设计包/38-模块边界与前端工程设计.md",
+        "docs/设计包/39-数据存储与事务一致性设计.md",
+        "docs/设计包/40-接口事件与集成技术设计.md",
+        "docs/设计包/41-AI运行知识分析与安全设计.md",
+        "docs/设计包/42-部署运维与非功能设计.md",
+        "docs/设计包/43-技术实施路线与验证矩阵.md"
+      ],
+      "productEvidence": [],
+      "implementationStatus": "NOT_IMPLEMENTED_IN_THIS_PROJECT"
+    },
+    {
+      "id": "HC-05",
+      "sourceCollection": "requirements",
+      "sourceRef": "docs/设计包/30-产品设计追踪数据.json",
+      "pageIds": [
+        "P03",
+        "P02"
+      ],
+      "commandIds": [
+        "C08",
+        "C09",
+        "C21",
+        "C23"
+      ],
+      "caseIds": [
+        "AC-06",
+        "AC-13",
+        "AC-14",
+        "AC-15",
+        "AC-39",
+        "AC-45"
+      ],
+      "module": "work + ai",
+      "technicalRefs": [
+        "docs/设计包/37-技术架构总设计与决策.md",
+        "docs/设计包/38-模块边界与前端工程设计.md",
+        "docs/设计包/39-数据存储与事务一致性设计.md",
+        "docs/设计包/40-接口事件与集成技术设计.md",
+        "docs/设计包/41-AI运行知识分析与安全设计.md",
+        "docs/设计包/42-部署运维与非功能设计.md",
+        "docs/设计包/43-技术实施路线与验证矩阵.md"
+      ],
+      "productEvidence": [],
+      "implementationStatus": "NOT_IMPLEMENTED_IN_THIS_PROJECT"
+    },
+    {
+      "id": "HC-06",
+      "sourceCollection": "requirements",
+      "sourceRef": "docs/设计包/30-产品设计追踪数据.json",
+      "pageIds": [
+        "P03",
+        "P02"
+      ],
+      "commandIds": [
+        "C08",
+        "C09",
+        "C21",
+        "C23"
+      ],
+      "caseIds": [
+        "AC-06",
+        "AC-13",
+        "AC-14",
+        "AC-15",
+        "AC-39",
+        "AC-45"
+      ],
+      "module": "work + ai",
+      "technicalRefs": [
+        "docs/设计包/37-技术架构总设计与决策.md",
+        "docs/设计包/38-模块边界与前端工程设计.md",
+        "docs/设计包/39-数据存储与事务一致性设计.md",
+        "docs/设计包/40-接口事件与集成技术设计.md",
+        "docs/设计包/41-AI运行知识分析与安全设计.md",
+        "docs/设计包/42-部署运维与非功能设计.md",
+        "docs/设计包/43-技术实施路线与验证矩阵.md"
+      ],
+      "productEvidence": [],
+      "implementationStatus": "NOT_IMPLEMENTED_IN_THIS_PROJECT"
+    },
+    {
+      "id": "HC-07",
+      "sourceCollection": "requirements",
+      "sourceRef": "docs/设计包/30-产品设计追踪数据.json",
+      "pageIds": [
+        "P03",
+        "P02"
+      ],
+      "commandIds": [
+        "C08",
+        "C09",
+        "C21",
+        "C23"
+      ],
+      "caseIds": [
+        "AC-06",
+        "AC-13",
+        "AC-14",
+        "AC-15",
+        "AC-39",
+        "AC-45"
+      ],
+      "module": "work + ai",
+      "technicalRefs": [
+        "docs/设计包/37-技术架构总设计与决策.md",
+        "docs/设计包/38-模块边界与前端工程设计.md",
+        "docs/设计包/39-数据存储与事务一致性设计.md",
+        "docs/设计包/40-接口事件与集成技术设计.md",
+        "docs/设计包/41-AI运行知识分析与安全设计.md",
+        "docs/设计包/42-部署运维与非功能设计.md",
+        "docs/设计包/43-技术实施路线与验证矩阵.md"
+      ],
+      "productEvidence": [],
+      "implementationStatus": "NOT_IMPLEMENTED_IN_THIS_PROJECT"
+    },
+    {
+      "id": "HC-08",
+      "sourceCollection": "requirements",
+      "sourceRef": "docs/设计包/30-产品设计追踪数据.json",
+      "pageIds": [
+        "P03",
+        "P02",
+        "P22"
+      ],
+      "commandIds": [
+        "C08",
+        "C09",
+        "C21",
+        "C23"
+      ],
+      "caseIds": [
+        "AC-06",
+        "AC-13",
+        "AC-14",
+        "AC-15",
+        "AC-39",
+        "AC-45"
+      ],
+      "module": "work + ai",
+      "technicalRefs": [
+        "docs/设计包/37-技术架构总设计与决策.md",
+        "docs/设计包/38-模块边界与前端工程设计.md",
+        "docs/设计包/39-数据存储与事务一致性设计.md",
+        "docs/设计包/40-接口事件与集成技术设计.md",
+        "docs/设计包/41-AI运行知识分析与安全设计.md",
+        "docs/设计包/42-部署运维与非功能设计.md",
+        "docs/设计包/43-技术实施路线与验证矩阵.md"
+      ],
+      "productEvidence": [],
+      "implementationStatus": "NOT_IMPLEMENTED_IN_THIS_PROJECT"
+    },
+    {
+      "id": "CX-01",
+      "sourceCollection": "requirements",
+      "sourceRef": "docs/设计包/30-产品设计追踪数据.json",
+      "pageIds": [
+        "P20",
+        "P04"
+      ],
+      "commandIds": [
+        "C05",
+        "C06",
+        "C16"
+      ],
+      "caseIds": [
+        "AC-15",
+        "AC-16",
+        "AC-17",
+        "AC-18",
+        "AC-59"
+      ],
+      "module": "context",
+      "technicalRefs": [
+        "docs/设计包/37-技术架构总设计与决策.md",
+        "docs/设计包/38-模块边界与前端工程设计.md",
+        "docs/设计包/39-数据存储与事务一致性设计.md",
+        "docs/设计包/40-接口事件与集成技术设计.md",
+        "docs/设计包/41-AI运行知识分析与安全设计.md",
+        "docs/设计包/42-部署运维与非功能设计.md",
+        "docs/设计包/43-技术实施路线与验证矩阵.md"
+      ],
+      "productEvidence": [],
+      "implementationStatus": "NOT_IMPLEMENTED_IN_THIS_PROJECT"
+    },
+    {
+      "id": "CX-02",
+      "sourceCollection": "requirements",
+      "sourceRef": "docs/设计包/30-产品设计追踪数据.json",
+      "pageIds": [
+        "P20",
+        "P04"
+      ],
+      "commandIds": [
+        "C05",
+        "C06",
+        "C16"
+      ],
+      "caseIds": [
+        "AC-15",
+        "AC-16",
+        "AC-17",
+        "AC-18",
+        "AC-59"
+      ],
+      "module": "context",
+      "technicalRefs": [
+        "docs/设计包/37-技术架构总设计与决策.md",
+        "docs/设计包/38-模块边界与前端工程设计.md",
+        "docs/设计包/39-数据存储与事务一致性设计.md",
+        "docs/设计包/40-接口事件与集成技术设计.md",
+        "docs/设计包/41-AI运行知识分析与安全设计.md",
+        "docs/设计包/42-部署运维与非功能设计.md",
+        "docs/设计包/43-技术实施路线与验证矩阵.md"
+      ],
+      "productEvidence": [],
+      "implementationStatus": "NOT_IMPLEMENTED_IN_THIS_PROJECT"
+    },
+    {
+      "id": "CX-03",
+      "sourceCollection": "requirements",
+      "sourceRef": "docs/设计包/30-产品设计追踪数据.json",
+      "pageIds": [
+        "P20",
+        "P04"
+      ],
+      "commandIds": [
+        "C05",
+        "C06",
+        "C16"
+      ],
+      "caseIds": [
+        "AC-15",
+        "AC-16",
+        "AC-17",
+        "AC-18",
+        "AC-59"
+      ],
+      "module": "context",
+      "technicalRefs": [
+        "docs/设计包/37-技术架构总设计与决策.md",
+        "docs/设计包/38-模块边界与前端工程设计.md",
+        "docs/设计包/39-数据存储与事务一致性设计.md",
+        "docs/设计包/40-接口事件与集成技术设计.md",
+        "docs/设计包/41-AI运行知识分析与安全设计.md",
+        "docs/设计包/42-部署运维与非功能设计.md",
+        "docs/设计包/43-技术实施路线与验证矩阵.md"
+      ],
+      "productEvidence": [],
+      "implementationStatus": "NOT_IMPLEMENTED_IN_THIS_PROJECT"
+    },
+    {
+      "id": "CX-04",
+      "sourceCollection": "requirements",
+      "sourceRef": "docs/设计包/30-产品设计追踪数据.json",
+      "pageIds": [
+        "P20",
+        "P04"
+      ],
+      "commandIds": [
+        "C05",
+        "C06",
+        "C16"
+      ],
+      "caseIds": [
+        "AC-15",
+        "AC-16",
+        "AC-17",
+        "AC-18",
+        "AC-59"
+      ],
+      "module": "context",
+      "technicalRefs": [
+        "docs/设计包/37-技术架构总设计与决策.md",
+        "docs/设计包/38-模块边界与前端工程设计.md",
+        "docs/设计包/39-数据存储与事务一致性设计.md",
+        "docs/设计包/40-接口事件与集成技术设计.md",
+        "docs/设计包/41-AI运行知识分析与安全设计.md",
+        "docs/设计包/42-部署运维与非功能设计.md",
+        "docs/设计包/43-技术实施路线与验证矩阵.md"
+      ],
+      "productEvidence": [],
+      "implementationStatus": "NOT_IMPLEMENTED_IN_THIS_PROJECT"
+    },
+    {
+      "id": "CX-05",
+      "sourceCollection": "requirements",
+      "sourceRef": "docs/设计包/30-产品设计追踪数据.json",
+      "pageIds": [
+        "P20",
+        "P04"
+      ],
+      "commandIds": [
+        "C05",
+        "C06",
+        "C16"
+      ],
+      "caseIds": [
+        "AC-15",
+        "AC-16",
+        "AC-17",
+        "AC-18",
+        "AC-59"
+      ],
+      "module": "context",
+      "technicalRefs": [
+        "docs/设计包/37-技术架构总设计与决策.md",
+        "docs/设计包/38-模块边界与前端工程设计.md",
+        "docs/设计包/39-数据存储与事务一致性设计.md",
+        "docs/设计包/40-接口事件与集成技术设计.md",
+        "docs/设计包/41-AI运行知识分析与安全设计.md",
+        "docs/设计包/42-部署运维与非功能设计.md",
+        "docs/设计包/43-技术实施路线与验证矩阵.md"
+      ],
+      "productEvidence": [],
+      "implementationStatus": "NOT_IMPLEMENTED_IN_THIS_PROJECT"
+    },
+    {
+      "id": "CX-06",
+      "sourceCollection": "requirements",
+      "sourceRef": "docs/设计包/30-产品设计追踪数据.json",
+      "pageIds": [
+        "P20",
+        "P04"
+      ],
+      "commandIds": [
+        "C05",
+        "C06",
+        "C16"
+      ],
+      "caseIds": [
+        "AC-15",
+        "AC-16",
+        "AC-17",
+        "AC-18",
+        "AC-59"
+      ],
+      "module": "context",
+      "technicalRefs": [
+        "docs/设计包/37-技术架构总设计与决策.md",
+        "docs/设计包/38-模块边界与前端工程设计.md",
+        "docs/设计包/39-数据存储与事务一致性设计.md",
+        "docs/设计包/40-接口事件与集成技术设计.md",
+        "docs/设计包/41-AI运行知识分析与安全设计.md",
+        "docs/设计包/42-部署运维与非功能设计.md",
+        "docs/设计包/43-技术实施路线与验证矩阵.md"
+      ],
+      "productEvidence": [],
+      "implementationStatus": "NOT_IMPLEMENTED_IN_THIS_PROJECT"
+    },
+    {
+      "id": "CX-07",
+      "sourceCollection": "requirements",
+      "sourceRef": "docs/设计包/30-产品设计追踪数据.json",
+      "pageIds": [
+        "P20",
+        "P04",
+        "P22"
+      ],
+      "commandIds": [
+        "C05",
+        "C06",
+        "C16"
+      ],
+      "caseIds": [
+        "AC-15",
+        "AC-16",
+        "AC-17",
+        "AC-18",
+        "AC-59"
+      ],
+      "module": "context",
+      "technicalRefs": [
+        "docs/设计包/37-技术架构总设计与决策.md",
+        "docs/设计包/38-模块边界与前端工程设计.md",
+        "docs/设计包/39-数据存储与事务一致性设计.md",
+        "docs/设计包/40-接口事件与集成技术设计.md",
+        "docs/设计包/41-AI运行知识分析与安全设计.md",
+        "docs/设计包/42-部署运维与非功能设计.md",
+        "docs/设计包/43-技术实施路线与验证矩阵.md"
+      ],
+      "productEvidence": [],
+      "implementationStatus": "NOT_IMPLEMENTED_IN_THIS_PROJECT"
+    },
+    {
+      "id": "CX-08",
+      "sourceCollection": "requirements",
+      "sourceRef": "docs/设计包/30-产品设计追踪数据.json",
+      "pageIds": [
+        "P20",
+        "P04"
+      ],
+      "commandIds": [
+        "C05",
+        "C06",
+        "C16"
+      ],
+      "caseIds": [
+        "AC-15",
+        "AC-16",
+        "AC-17",
+        "AC-18",
+        "AC-59"
+      ],
+      "module": "context",
+      "technicalRefs": [
+        "docs/设计包/37-技术架构总设计与决策.md",
+        "docs/设计包/38-模块边界与前端工程设计.md",
+        "docs/设计包/39-数据存储与事务一致性设计.md",
+        "docs/设计包/40-接口事件与集成技术设计.md",
+        "docs/设计包/41-AI运行知识分析与安全设计.md",
+        "docs/设计包/42-部署运维与非功能设计.md",
+        "docs/设计包/43-技术实施路线与验证矩阵.md"
+      ],
+      "productEvidence": [],
+      "implementationStatus": "NOT_IMPLEMENTED_IN_THIS_PROJECT"
+    },
+    {
+      "id": "CX-09",
+      "sourceCollection": "requirements",
+      "sourceRef": "docs/设计包/30-产品设计追踪数据.json",
+      "pageIds": [
+        "P20",
+        "P04"
+      ],
+      "commandIds": [
+        "C05",
+        "C06",
+        "C16"
+      ],
+      "caseIds": [
+        "AC-15",
+        "AC-16",
+        "AC-17",
+        "AC-18",
+        "AC-59"
+      ],
+      "module": "context",
+      "technicalRefs": [
+        "docs/设计包/37-技术架构总设计与决策.md",
+        "docs/设计包/38-模块边界与前端工程设计.md",
+        "docs/设计包/39-数据存储与事务一致性设计.md",
+        "docs/设计包/40-接口事件与集成技术设计.md",
+        "docs/设计包/41-AI运行知识分析与安全设计.md",
+        "docs/设计包/42-部署运维与非功能设计.md",
+        "docs/设计包/43-技术实施路线与验证矩阵.md"
+      ],
+      "productEvidence": [],
+      "implementationStatus": "NOT_IMPLEMENTED_IN_THIS_PROJECT"
+    },
+    {
+      "id": "CX-10",
+      "sourceCollection": "requirements",
+      "sourceRef": "docs/设计包/30-产品设计追踪数据.json",
+      "pageIds": [
+        "P20",
+        "P04"
+      ],
+      "commandIds": [
+        "C05",
+        "C06",
+        "C16"
+      ],
+      "caseIds": [
+        "AC-15",
+        "AC-16",
+        "AC-17",
+        "AC-18",
+        "AC-59"
+      ],
+      "module": "context",
+      "technicalRefs": [
+        "docs/设计包/37-技术架构总设计与决策.md",
+        "docs/设计包/38-模块边界与前端工程设计.md",
+        "docs/设计包/39-数据存储与事务一致性设计.md",
+        "docs/设计包/40-接口事件与集成技术设计.md",
+        "docs/设计包/41-AI运行知识分析与安全设计.md",
+        "docs/设计包/42-部署运维与非功能设计.md",
+        "docs/设计包/43-技术实施路线与验证矩阵.md"
+      ],
+      "productEvidence": [],
+      "implementationStatus": "NOT_IMPLEMENTED_IN_THIS_PROJECT"
+    },
+    {
+      "id": "CX-11",
+      "sourceCollection": "requirements",
+      "sourceRef": "docs/设计包/30-产品设计追踪数据.json",
+      "pageIds": [
+        "P20",
+        "P04"
+      ],
+      "commandIds": [
+        "C05",
+        "C06",
+        "C16"
+      ],
+      "caseIds": [
+        "AC-15",
+        "AC-16",
+        "AC-17",
+        "AC-18",
+        "AC-59"
+      ],
+      "module": "context",
+      "technicalRefs": [
+        "docs/设计包/37-技术架构总设计与决策.md",
+        "docs/设计包/38-模块边界与前端工程设计.md",
+        "docs/设计包/39-数据存储与事务一致性设计.md",
+        "docs/设计包/40-接口事件与集成技术设计.md",
+        "docs/设计包/41-AI运行知识分析与安全设计.md",
+        "docs/设计包/42-部署运维与非功能设计.md",
+        "docs/设计包/43-技术实施路线与验证矩阵.md"
+      ],
+      "productEvidence": [],
+      "implementationStatus": "NOT_IMPLEMENTED_IN_THIS_PROJECT"
+    },
+    {
+      "id": "CX-12",
+      "sourceCollection": "requirements",
+      "sourceRef": "docs/设计包/30-产品设计追踪数据.json",
+      "pageIds": [
+        "P20",
+        "P04"
+      ],
+      "commandIds": [
+        "C05",
+        "C06",
+        "C16"
+      ],
+      "caseIds": [
+        "AC-15",
+        "AC-16",
+        "AC-17",
+        "AC-18",
+        "AC-59"
+      ],
+      "module": "context",
+      "technicalRefs": [
+        "docs/设计包/37-技术架构总设计与决策.md",
+        "docs/设计包/38-模块边界与前端工程设计.md",
+        "docs/设计包/39-数据存储与事务一致性设计.md",
+        "docs/设计包/40-接口事件与集成技术设计.md",
+        "docs/设计包/41-AI运行知识分析与安全设计.md",
+        "docs/设计包/42-部署运维与非功能设计.md",
+        "docs/设计包/43-技术实施路线与验证矩阵.md"
+      ],
+      "productEvidence": [],
+      "implementationStatus": "NOT_IMPLEMENTED_IN_THIS_PROJECT"
+    },
+    {
+      "id": "SY-01",
+      "sourceCollection": "requirements",
+      "sourceRef": "docs/设计包/30-产品设计追踪数据.json",
+      "pageIds": [
+        "P20",
+        "P02",
+        "P16"
+      ],
+      "commandIds": [
+        "C09",
+        "C10",
+        "C11",
+        "C12",
+        "C16"
+      ],
+      "caseIds": [
+        "AC-15",
+        "AC-17",
+        "AC-18",
+        "AC-20",
+        "AC-21",
+        "AC-22",
+        "AC-23",
+        "AC-50",
+        "AC-59"
+      ],
+      "module": "context + contribution",
+      "technicalRefs": [
+        "docs/设计包/37-技术架构总设计与决策.md",
+        "docs/设计包/38-模块边界与前端工程设计.md",
+        "docs/设计包/39-数据存储与事务一致性设计.md",
+        "docs/设计包/40-接口事件与集成技术设计.md",
+        "docs/设计包/41-AI运行知识分析与安全设计.md",
+        "docs/设计包/42-部署运维与非功能设计.md",
+        "docs/设计包/43-技术实施路线与验证矩阵.md"
+      ],
+      "productEvidence": [],
+      "implementationStatus": "NOT_IMPLEMENTED_IN_THIS_PROJECT"
+    },
+    {
+      "id": "SY-02",
+      "sourceCollection": "requirements",
+      "sourceRef": "docs/设计包/30-产品设计追踪数据.json",
+      "pageIds": [
+        "P20",
+        "P02",
+        "P16"
+      ],
+      "commandIds": [
+        "C09",
+        "C10",
+        "C11",
+        "C12",
+        "C16"
+      ],
+      "caseIds": [
+        "AC-15",
+        "AC-17",
+        "AC-18",
+        "AC-20",
+        "AC-21",
+        "AC-22",
+        "AC-23",
+        "AC-50",
+        "AC-59"
+      ],
+      "module": "context + contribution",
+      "technicalRefs": [
+        "docs/设计包/37-技术架构总设计与决策.md",
+        "docs/设计包/38-模块边界与前端工程设计.md",
+        "docs/设计包/39-数据存储与事务一致性设计.md",
+        "docs/设计包/40-接口事件与集成技术设计.md",
+        "docs/设计包/41-AI运行知识分析与安全设计.md",
+        "docs/设计包/42-部署运维与非功能设计.md",
+        "docs/设计包/43-技术实施路线与验证矩阵.md"
+      ],
+      "productEvidence": [],
+      "implementationStatus": "NOT_IMPLEMENTED_IN_THIS_PROJECT"
+    },
+    {
+      "id": "SY-03",
+      "sourceCollection": "requirements",
+      "sourceRef": "docs/设计包/30-产品设计追踪数据.json",
+      "pageIds": [
+        "P20",
+        "P02",
+        "P16",
+        "P22"
+      ],
+      "commandIds": [
+        "C09",
+        "C10",
+        "C11",
+        "C12",
+        "C16"
+      ],
+      "caseIds": [
+        "AC-15",
+        "AC-17",
+        "AC-18",
+        "AC-20",
+        "AC-21",
+        "AC-22",
+        "AC-23",
+        "AC-50",
+        "AC-59"
+      ],
+      "module": "context + contribution",
+      "technicalRefs": [
+        "docs/设计包/37-技术架构总设计与决策.md",
+        "docs/设计包/38-模块边界与前端工程设计.md",
+        "docs/设计包/39-数据存储与事务一致性设计.md",
+        "docs/设计包/40-接口事件与集成技术设计.md",
+        "docs/设计包/41-AI运行知识分析与安全设计.md",
+        "docs/设计包/42-部署运维与非功能设计.md",
+        "docs/设计包/43-技术实施路线与验证矩阵.md"
+      ],
+      "productEvidence": [],
+      "implementationStatus": "NOT_IMPLEMENTED_IN_THIS_PROJECT"
+    },
+    {
+      "id": "SY-04",
+      "sourceCollection": "requirements",
+      "sourceRef": "docs/设计包/30-产品设计追踪数据.json",
+      "pageIds": [
+        "P20",
+        "P02",
+        "P16"
+      ],
+      "commandIds": [
+        "C09",
+        "C10",
+        "C11",
+        "C12",
+        "C16"
+      ],
+      "caseIds": [
+        "AC-15",
+        "AC-17",
+        "AC-18",
+        "AC-20",
+        "AC-21",
+        "AC-22",
+        "AC-23",
+        "AC-50",
+        "AC-59"
+      ],
+      "module": "context + contribution",
+      "technicalRefs": [
+        "docs/设计包/37-技术架构总设计与决策.md",
+        "docs/设计包/38-模块边界与前端工程设计.md",
+        "docs/设计包/39-数据存储与事务一致性设计.md",
+        "docs/设计包/40-接口事件与集成技术设计.md",
+        "docs/设计包/41-AI运行知识分析与安全设计.md",
+        "docs/设计包/42-部署运维与非功能设计.md",
+        "docs/设计包/43-技术实施路线与验证矩阵.md"
+      ],
+      "productEvidence": [],
+      "implementationStatus": "NOT_IMPLEMENTED_IN_THIS_PROJECT"
+    },
+    {
+      "id": "SY-05",
+      "sourceCollection": "requirements",
+      "sourceRef": "docs/设计包/30-产品设计追踪数据.json",
+      "pageIds": [
+        "P20",
+        "P02",
+        "P16"
+      ],
+      "commandIds": [
+        "C09",
+        "C10",
+        "C11",
+        "C12",
+        "C16"
+      ],
+      "caseIds": [
+        "AC-15",
+        "AC-17",
+        "AC-18",
+        "AC-20",
+        "AC-21",
+        "AC-22",
+        "AC-23",
+        "AC-50",
+        "AC-59"
+      ],
+      "module": "context + contribution",
+      "technicalRefs": [
+        "docs/设计包/37-技术架构总设计与决策.md",
+        "docs/设计包/38-模块边界与前端工程设计.md",
+        "docs/设计包/39-数据存储与事务一致性设计.md",
+        "docs/设计包/40-接口事件与集成技术设计.md",
+        "docs/设计包/41-AI运行知识分析与安全设计.md",
+        "docs/设计包/42-部署运维与非功能设计.md",
+        "docs/设计包/43-技术实施路线与验证矩阵.md"
+      ],
+      "productEvidence": [],
+      "implementationStatus": "NOT_IMPLEMENTED_IN_THIS_PROJECT"
+    },
+    {
+      "id": "SY-06",
+      "sourceCollection": "requirements",
+      "sourceRef": "docs/设计包/30-产品设计追踪数据.json",
+      "pageIds": [
+        "P20",
+        "P02",
+        "P16"
+      ],
+      "commandIds": [
+        "C09",
+        "C10",
+        "C11",
+        "C12",
+        "C16"
+      ],
+      "caseIds": [
+        "AC-15",
+        "AC-17",
+        "AC-18",
+        "AC-20",
+        "AC-21",
+        "AC-22",
+        "AC-23",
+        "AC-50",
+        "AC-59"
+      ],
+      "module": "context + contribution",
+      "technicalRefs": [
+        "docs/设计包/37-技术架构总设计与决策.md",
+        "docs/设计包/38-模块边界与前端工程设计.md",
+        "docs/设计包/39-数据存储与事务一致性设计.md",
+        "docs/设计包/40-接口事件与集成技术设计.md",
+        "docs/设计包/41-AI运行知识分析与安全设计.md",
+        "docs/设计包/42-部署运维与非功能设计.md",
+        "docs/设计包/43-技术实施路线与验证矩阵.md"
+      ],
+      "productEvidence": [],
+      "implementationStatus": "NOT_IMPLEMENTED_IN_THIS_PROJECT"
+    },
+    {
+      "id": "SY-07",
+      "sourceCollection": "requirements",
+      "sourceRef": "docs/设计包/30-产品设计追踪数据.json",
+      "pageIds": [
+        "P20",
+        "P02",
+        "P16"
+      ],
+      "commandIds": [
+        "C09",
+        "C10",
+        "C11",
+        "C12",
+        "C16"
+      ],
+      "caseIds": [
+        "AC-15",
+        "AC-17",
+        "AC-18",
+        "AC-20",
+        "AC-21",
+        "AC-22",
+        "AC-23",
+        "AC-50",
+        "AC-59"
+      ],
+      "module": "context + contribution",
+      "technicalRefs": [
+        "docs/设计包/37-技术架构总设计与决策.md",
+        "docs/设计包/38-模块边界与前端工程设计.md",
+        "docs/设计包/39-数据存储与事务一致性设计.md",
+        "docs/设计包/40-接口事件与集成技术设计.md",
+        "docs/设计包/41-AI运行知识分析与安全设计.md",
+        "docs/设计包/42-部署运维与非功能设计.md",
+        "docs/设计包/43-技术实施路线与验证矩阵.md"
+      ],
+      "productEvidence": [],
+      "implementationStatus": "NOT_IMPLEMENTED_IN_THIS_PROJECT"
+    },
+    {
+      "id": "SY-08",
+      "sourceCollection": "requirements",
+      "sourceRef": "docs/设计包/30-产品设计追踪数据.json",
+      "pageIds": [
+        "P20",
+        "P02",
+        "P16"
+      ],
+      "commandIds": [
+        "C09",
+        "C10",
+        "C11",
+        "C12",
+        "C16"
+      ],
+      "caseIds": [
+        "AC-15",
+        "AC-17",
+        "AC-18",
+        "AC-20",
+        "AC-21",
+        "AC-22",
+        "AC-23",
+        "AC-50",
+        "AC-59"
+      ],
+      "module": "context + contribution",
+      "technicalRefs": [
+        "docs/设计包/37-技术架构总设计与决策.md",
+        "docs/设计包/38-模块边界与前端工程设计.md",
+        "docs/设计包/39-数据存储与事务一致性设计.md",
+        "docs/设计包/40-接口事件与集成技术设计.md",
+        "docs/设计包/41-AI运行知识分析与安全设计.md",
+        "docs/设计包/42-部署运维与非功能设计.md",
+        "docs/设计包/43-技术实施路线与验证矩阵.md"
+      ],
+      "productEvidence": [],
+      "implementationStatus": "NOT_IMPLEMENTED_IN_THIS_PROJECT"
+    },
+    {
+      "id": "SY-09",
+      "sourceCollection": "requirements",
+      "sourceRef": "docs/设计包/30-产品设计追踪数据.json",
+      "pageIds": [
+        "P20",
+        "P02",
+        "P16"
+      ],
+      "commandIds": [
+        "C09",
+        "C10",
+        "C11",
+        "C12",
+        "C16"
+      ],
+      "caseIds": [
+        "AC-15",
+        "AC-17",
+        "AC-18",
+        "AC-20",
+        "AC-21",
+        "AC-22",
+        "AC-23",
+        "AC-50",
+        "AC-59"
+      ],
+      "module": "context + contribution",
+      "technicalRefs": [
+        "docs/设计包/37-技术架构总设计与决策.md",
+        "docs/设计包/38-模块边界与前端工程设计.md",
+        "docs/设计包/39-数据存储与事务一致性设计.md",
+        "docs/设计包/40-接口事件与集成技术设计.md",
+        "docs/设计包/41-AI运行知识分析与安全设计.md",
+        "docs/设计包/42-部署运维与非功能设计.md",
+        "docs/设计包/43-技术实施路线与验证矩阵.md"
+      ],
+      "productEvidence": [],
+      "implementationStatus": "NOT_IMPLEMENTED_IN_THIS_PROJECT"
+    },
+    {
+      "id": "SY-10",
+      "sourceCollection": "requirements",
+      "sourceRef": "docs/设计包/30-产品设计追踪数据.json",
+      "pageIds": [
+        "P20",
+        "P02",
+        "P16"
+      ],
+      "commandIds": [
+        "C09",
+        "C10",
+        "C11",
+        "C12",
+        "C16"
+      ],
+      "caseIds": [
+        "AC-15",
+        "AC-17",
+        "AC-18",
+        "AC-20",
+        "AC-21",
+        "AC-22",
+        "AC-23",
+        "AC-50",
+        "AC-59"
+      ],
+      "module": "context + contribution",
+      "technicalRefs": [
+        "docs/设计包/37-技术架构总设计与决策.md",
+        "docs/设计包/38-模块边界与前端工程设计.md",
+        "docs/设计包/39-数据存储与事务一致性设计.md",
+        "docs/设计包/40-接口事件与集成技术设计.md",
+        "docs/设计包/41-AI运行知识分析与安全设计.md",
+        "docs/设计包/42-部署运维与非功能设计.md",
+        "docs/设计包/43-技术实施路线与验证矩阵.md"
+      ],
+      "productEvidence": [],
+      "implementationStatus": "NOT_IMPLEMENTED_IN_THIS_PROJECT"
+    },
+    {
+      "id": "AI-01",
+      "sourceCollection": "aiEnhancements",
+      "sourceRef": "docs/设计包/30-产品设计追踪数据.json",
+      "pageIds": [
+        "P01",
+        "P02",
+        "P04",
+        "P21",
+        "P22"
+      ],
+      "commandIds": [
+        "C01",
+        "C04"
+      ],
+      "caseIds": [
+        "AC-61"
+      ],
+      "module": "cross-domain",
+      "technicalRefs": [
+        "docs/设计包/37-技术架构总设计与决策.md",
+        "docs/设计包/38-模块边界与前端工程设计.md",
+        "docs/设计包/39-数据存储与事务一致性设计.md",
+        "docs/设计包/40-接口事件与集成技术设计.md",
+        "docs/设计包/41-AI运行知识分析与安全设计.md",
+        "docs/设计包/42-部署运维与非功能设计.md",
+        "docs/设计包/43-技术实施路线与验证矩阵.md"
+      ],
+      "productEvidence": [],
+      "implementationStatus": "NOT_IMPLEMENTED_IN_THIS_PROJECT"
+    },
+    {
+      "id": "AI-02",
+      "sourceCollection": "aiEnhancements",
+      "sourceRef": "docs/设计包/30-产品设计追踪数据.json",
+      "pageIds": [
+        "P02",
+        "P04",
+        "P05",
+        "P22"
+      ],
+      "commandIds": [
+        "C05",
+        "C27"
+      ],
+      "caseIds": [
+        "AC-62"
+      ],
+      "module": "cross-domain",
+      "technicalRefs": [
+        "docs/设计包/37-技术架构总设计与决策.md",
+        "docs/设计包/38-模块边界与前端工程设计.md",
+        "docs/设计包/39-数据存储与事务一致性设计.md",
+        "docs/设计包/40-接口事件与集成技术设计.md",
+        "docs/设计包/41-AI运行知识分析与安全设计.md",
+        "docs/设计包/42-部署运维与非功能设计.md",
+        "docs/设计包/43-技术实施路线与验证矩阵.md"
+      ],
+      "productEvidence": [],
+      "implementationStatus": "NOT_IMPLEMENTED_IN_THIS_PROJECT"
+    },
+    {
+      "id": "AI-03",
+      "sourceCollection": "aiEnhancements",
+      "sourceRef": "docs/设计包/30-产品设计追踪数据.json",
+      "pageIds": [
+        "P04",
+        "P14",
+        "P21"
+      ],
+      "commandIds": [
+        "C04",
+        "C27"
+      ],
+      "caseIds": [
+        "AC-63"
+      ],
+      "module": "cross-domain",
+      "technicalRefs": [
+        "docs/设计包/37-技术架构总设计与决策.md",
+        "docs/设计包/38-模块边界与前端工程设计.md",
+        "docs/设计包/39-数据存储与事务一致性设计.md",
+        "docs/设计包/40-接口事件与集成技术设计.md",
+        "docs/设计包/41-AI运行知识分析与安全设计.md",
+        "docs/设计包/42-部署运维与非功能设计.md",
+        "docs/设计包/43-技术实施路线与验证矩阵.md"
+      ],
+      "productEvidence": [],
+      "implementationStatus": "NOT_IMPLEMENTED_IN_THIS_PROJECT"
+    },
+    {
+      "id": "AI-04",
+      "sourceCollection": "aiEnhancements",
+      "sourceRef": "docs/设计包/30-产品设计追踪数据.json",
+      "pageIds": [
+        "P01",
+        "P02",
+        "P19"
+      ],
+      "commandIds": [
+        "C28"
+      ],
+      "caseIds": [
+        "AC-64"
+      ],
+      "module": "cross-domain",
+      "technicalRefs": [
+        "docs/设计包/37-技术架构总设计与决策.md",
+        "docs/设计包/38-模块边界与前端工程设计.md",
+        "docs/设计包/39-数据存储与事务一致性设计.md",
+        "docs/设计包/40-接口事件与集成技术设计.md",
+        "docs/设计包/41-AI运行知识分析与安全设计.md",
+        "docs/设计包/42-部署运维与非功能设计.md",
+        "docs/设计包/43-技术实施路线与验证矩阵.md"
+      ],
+      "productEvidence": [],
+      "implementationStatus": "NOT_IMPLEMENTED_IN_THIS_PROJECT"
+    },
+    {
+      "id": "AI-05",
+      "sourceCollection": "aiEnhancements",
+      "sourceRef": "docs/设计包/30-产品设计追踪数据.json",
+      "pageIds": [
+        "P08",
+        "P20"
+      ],
+      "commandIds": [
+        "C19",
+        "C29"
+      ],
+      "caseIds": [
+        "AC-65"
+      ],
+      "module": "cross-domain",
+      "technicalRefs": [
+        "docs/设计包/37-技术架构总设计与决策.md",
+        "docs/设计包/38-模块边界与前端工程设计.md",
+        "docs/设计包/39-数据存储与事务一致性设计.md",
+        "docs/设计包/40-接口事件与集成技术设计.md",
+        "docs/设计包/41-AI运行知识分析与安全设计.md",
+        "docs/设计包/42-部署运维与非功能设计.md",
+        "docs/设计包/43-技术实施路线与验证矩阵.md"
+      ],
+      "productEvidence": [],
+      "implementationStatus": "NOT_IMPLEMENTED_IN_THIS_PROJECT"
+    },
+    {
+      "id": "AI-06",
+      "sourceCollection": "aiEnhancements",
+      "sourceRef": "docs/设计包/30-产品设计追踪数据.json",
+      "pageIds": [
+        "P01",
+        "P14",
+        "P21"
+      ],
+      "commandIds": [
+        "C15",
+        "C30"
+      ],
+      "caseIds": [
+        "AC-66"
+      ],
+      "module": "cross-domain",
+      "technicalRefs": [
+        "docs/设计包/37-技术架构总设计与决策.md",
+        "docs/设计包/38-模块边界与前端工程设计.md",
+        "docs/设计包/39-数据存储与事务一致性设计.md",
+        "docs/设计包/40-接口事件与集成技术设计.md",
+        "docs/设计包/41-AI运行知识分析与安全设计.md",
+        "docs/设计包/42-部署运维与非功能设计.md",
+        "docs/设计包/43-技术实施路线与验证矩阵.md"
+      ],
+      "productEvidence": [],
+      "implementationStatus": "NOT_IMPLEMENTED_IN_THIS_PROJECT"
+    },
+    {
+      "id": "AI-07",
+      "sourceCollection": "aiEnhancements",
+      "sourceRef": "docs/设计包/30-产品设计追踪数据.json",
+      "pageIds": [
+        "P02",
+        "P14",
+        "P16"
+      ],
+      "commandIds": [
+        "C06",
+        "C22",
+        "C30"
+      ],
+      "caseIds": [
+        "AC-67"
+      ],
+      "module": "cross-domain",
+      "technicalRefs": [
+        "docs/设计包/37-技术架构总设计与决策.md",
+        "docs/设计包/38-模块边界与前端工程设计.md",
+        "docs/设计包/39-数据存储与事务一致性设计.md",
+        "docs/设计包/40-接口事件与集成技术设计.md",
+        "docs/设计包/41-AI运行知识分析与安全设计.md",
+        "docs/设计包/42-部署运维与非功能设计.md",
+        "docs/设计包/43-技术实施路线与验证矩阵.md"
+      ],
+      "productEvidence": [],
+      "implementationStatus": "NOT_IMPLEMENTED_IN_THIS_PROJECT"
+    },
+    {
+      "id": "AI-08",
+      "sourceCollection": "aiEnhancements",
+      "sourceRef": "docs/设计包/30-产品设计追踪数据.json",
+      "pageIds": [
+        "P06",
+        "P09",
+        "P19"
+      ],
+      "commandIds": [
+        "C17",
+        "C31"
+      ],
+      "caseIds": [
+        "AC-68"
+      ],
+      "module": "cross-domain",
+      "technicalRefs": [
+        "docs/设计包/37-技术架构总设计与决策.md",
+        "docs/设计包/38-模块边界与前端工程设计.md",
+        "docs/设计包/39-数据存储与事务一致性设计.md",
+        "docs/设计包/40-接口事件与集成技术设计.md",
+        "docs/设计包/41-AI运行知识分析与安全设计.md",
+        "docs/设计包/42-部署运维与非功能设计.md",
+        "docs/设计包/43-技术实施路线与验证矩阵.md"
+      ],
+      "productEvidence": [],
+      "implementationStatus": "NOT_IMPLEMENTED_IN_THIS_PROJECT"
+    },
+    {
+      "id": "AI-09",
+      "sourceCollection": "aiEnhancements",
+      "sourceRef": "docs/设计包/30-产品设计追踪数据.json",
+      "pageIds": [
+        "P09",
+        "P11",
+        "P21"
+      ],
+      "commandIds": [
+        "C19",
+        "C27"
+      ],
+      "caseIds": [
+        "AC-69"
+      ],
+      "module": "cross-domain",
+      "technicalRefs": [
+        "docs/设计包/37-技术架构总设计与决策.md",
+        "docs/设计包/38-模块边界与前端工程设计.md",
+        "docs/设计包/39-数据存储与事务一致性设计.md",
+        "docs/设计包/40-接口事件与集成技术设计.md",
+        "docs/设计包/41-AI运行知识分析与安全设计.md",
+        "docs/设计包/42-部署运维与非功能设计.md",
+        "docs/设计包/43-技术实施路线与验证矩阵.md"
+      ],
+      "productEvidence": [],
+      "implementationStatus": "NOT_IMPLEMENTED_IN_THIS_PROJECT"
+    },
+    {
+      "id": "AI-10",
+      "sourceCollection": "aiEnhancements",
+      "sourceRef": "docs/设计包/30-产品设计追踪数据.json",
+      "pageIds": [
+        "P01",
+        "P02",
+        "P08",
+        "P11",
+        "P19",
+        "P20"
+      ],
+      "commandIds": [
+        "C01",
+        "C05",
+        "C28"
+      ],
+      "caseIds": [
+        "AC-70"
+      ],
+      "module": "cross-domain",
+      "technicalRefs": [
+        "docs/设计包/37-技术架构总设计与决策.md",
+        "docs/设计包/38-模块边界与前端工程设计.md",
+        "docs/设计包/39-数据存储与事务一致性设计.md",
+        "docs/设计包/40-接口事件与集成技术设计.md",
+        "docs/设计包/41-AI运行知识分析与安全设计.md",
+        "docs/设计包/42-部署运维与非功能设计.md",
+        "docs/设计包/43-技术实施路线与验证矩阵.md"
+      ],
+      "productEvidence": [],
+      "implementationStatus": "NOT_IMPLEMENTED_IN_THIS_PROJECT"
+    },
+    {
+      "id": "AI-11",
+      "sourceCollection": "aiEnhancements",
+      "sourceRef": "docs/设计包/30-产品设计追踪数据.json",
+      "pageIds": [
+        "P02",
+        "P04",
+        "P16",
+        "P19",
+        "P20"
+      ],
+      "commandIds": [
+        "C07",
+        "C14",
+        "C24"
+      ],
+      "caseIds": [
+        "AC-71"
+      ],
+      "module": "cross-domain",
+      "technicalRefs": [
+        "docs/设计包/37-技术架构总设计与决策.md",
+        "docs/设计包/38-模块边界与前端工程设计.md",
+        "docs/设计包/39-数据存储与事务一致性设计.md",
+        "docs/设计包/40-接口事件与集成技术设计.md",
+        "docs/设计包/41-AI运行知识分析与安全设计.md",
+        "docs/设计包/42-部署运维与非功能设计.md",
+        "docs/设计包/43-技术实施路线与验证矩阵.md"
+      ],
+      "productEvidence": [],
+      "implementationStatus": "NOT_IMPLEMENTED_IN_THIS_PROJECT"
+    },
+    {
+      "id": "AI-12",
+      "sourceCollection": "aiEnhancements",
+      "sourceRef": "docs/设计包/30-产品设计追踪数据.json",
+      "pageIds": [
+        "P01",
+        "P19",
+        "P21"
+      ],
+      "commandIds": [
+        "C25"
+      ],
+      "caseIds": [
+        "AC-72"
+      ],
+      "module": "cross-domain",
+      "technicalRefs": [
+        "docs/设计包/37-技术架构总设计与决策.md",
+        "docs/设计包/38-模块边界与前端工程设计.md",
+        "docs/设计包/39-数据存储与事务一致性设计.md",
+        "docs/设计包/40-接口事件与集成技术设计.md",
+        "docs/设计包/41-AI运行知识分析与安全设计.md",
+        "docs/设计包/42-部署运维与非功能设计.md",
+        "docs/设计包/43-技术实施路线与验证矩阵.md"
+      ],
+      "productEvidence": [],
+      "implementationStatus": "NOT_IMPLEMENTED_IN_THIS_PROJECT"
+    },
+    {
+      "id": "EW-01",
+      "sourceCollection": "workspaceRefinements",
+      "sourceRef": "docs/设计包/30-产品设计追踪数据.json",
+      "pageIds": [
+        "P02",
+        "P10",
+        "P11"
+      ],
+      "commandIds": [
+        "C01",
+        "C15"
+      ],
+      "caseIds": [],
+      "module": "cross-domain",
+      "technicalRefs": [
+        "docs/设计包/37-技术架构总设计与决策.md",
+        "docs/设计包/38-模块边界与前端工程设计.md",
+        "docs/设计包/39-数据存储与事务一致性设计.md",
+        "docs/设计包/40-接口事件与集成技术设计.md",
+        "docs/设计包/41-AI运行知识分析与安全设计.md",
+        "docs/设计包/42-部署运维与非功能设计.md",
+        "docs/设计包/43-技术实施路线与验证矩阵.md"
+      ],
+      "productEvidence": [],
+      "implementationStatus": "NOT_IMPLEMENTED_IN_THIS_PROJECT"
+    },
+    {
+      "id": "EW-02",
+      "sourceCollection": "workspaceRefinements",
+      "sourceRef": "docs/设计包/30-产品设计追踪数据.json",
+      "pageIds": [
+        "P02",
+        "P10",
+        "P11"
+      ],
+      "commandIds": [
+        "C01",
+        "C15",
+        "C20"
+      ],
+      "caseIds": [],
+      "module": "cross-domain",
+      "technicalRefs": [
+        "docs/设计包/37-技术架构总设计与决策.md",
+        "docs/设计包/38-模块边界与前端工程设计.md",
+        "docs/设计包/39-数据存储与事务一致性设计.md",
+        "docs/设计包/40-接口事件与集成技术设计.md",
+        "docs/设计包/41-AI运行知识分析与安全设计.md",
+        "docs/设计包/42-部署运维与非功能设计.md",
+        "docs/设计包/43-技术实施路线与验证矩阵.md"
+      ],
+      "productEvidence": [],
+      "implementationStatus": "NOT_IMPLEMENTED_IN_THIS_PROJECT"
+    },
+    {
+      "id": "EW-03",
+      "sourceCollection": "workspaceRefinements",
+      "sourceRef": "docs/设计包/30-产品设计追踪数据.json",
+      "pageIds": [
+        "P02",
+        "P10",
+        "P11"
+      ],
+      "commandIds": [
+        "C20"
+      ],
+      "caseIds": [],
+      "module": "cross-domain",
+      "technicalRefs": [
+        "docs/设计包/37-技术架构总设计与决策.md",
+        "docs/设计包/38-模块边界与前端工程设计.md",
+        "docs/设计包/39-数据存储与事务一致性设计.md",
+        "docs/设计包/40-接口事件与集成技术设计.md",
+        "docs/设计包/41-AI运行知识分析与安全设计.md",
+        "docs/设计包/42-部署运维与非功能设计.md",
+        "docs/设计包/43-技术实施路线与验证矩阵.md"
+      ],
+      "productEvidence": [],
+      "implementationStatus": "NOT_IMPLEMENTED_IN_THIS_PROJECT"
+    },
+    {
+      "id": "EW-04",
+      "sourceCollection": "workspaceRefinements",
+      "sourceRef": "docs/设计包/30-产品设计追踪数据.json",
+      "pageIds": [
+        "P02",
+        "P10",
+        "P11"
+      ],
+      "commandIds": [
+        "C01",
+        "C05",
+        "C24"
+      ],
+      "caseIds": [],
+      "module": "cross-domain",
+      "technicalRefs": [
+        "docs/设计包/37-技术架构总设计与决策.md",
+        "docs/设计包/38-模块边界与前端工程设计.md",
+        "docs/设计包/39-数据存储与事务一致性设计.md",
+        "docs/设计包/40-接口事件与集成技术设计.md",
+        "docs/设计包/41-AI运行知识分析与安全设计.md",
+        "docs/设计包/42-部署运维与非功能设计.md",
+        "docs/设计包/43-技术实施路线与验证矩阵.md"
+      ],
+      "productEvidence": [],
+      "implementationStatus": "NOT_IMPLEMENTED_IN_THIS_PROJECT"
+    },
+    {
+      "id": "EW-05",
+      "sourceCollection": "workspaceRefinements",
+      "sourceRef": "docs/设计包/30-产品设计追踪数据.json",
+      "pageIds": [
+        "P02",
+        "P10",
+        "P11"
+      ],
+      "commandIds": [
+        "C05",
+        "C06",
+        "C07"
+      ],
+      "caseIds": [],
+      "module": "cross-domain",
+      "technicalRefs": [
+        "docs/设计包/37-技术架构总设计与决策.md",
+        "docs/设计包/38-模块边界与前端工程设计.md",
+        "docs/设计包/39-数据存储与事务一致性设计.md",
+        "docs/设计包/40-接口事件与集成技术设计.md",
+        "docs/设计包/41-AI运行知识分析与安全设计.md",
+        "docs/设计包/42-部署运维与非功能设计.md",
+        "docs/设计包/43-技术实施路线与验证矩阵.md"
+      ],
+      "productEvidence": [],
+      "implementationStatus": "NOT_IMPLEMENTED_IN_THIS_PROJECT"
+    },
+    {
+      "id": "EW-06",
+      "sourceCollection": "workspaceRefinements",
+      "sourceRef": "docs/设计包/30-产品设计追踪数据.json",
+      "pageIds": [
+        "P02",
+        "P10",
+        "P11"
+      ],
+      "commandIds": [
+        "C09",
+        "C10",
+        "C15",
+        "C20"
+      ],
+      "caseIds": [],
+      "module": "cross-domain",
+      "technicalRefs": [
+        "docs/设计包/37-技术架构总设计与决策.md",
+        "docs/设计包/38-模块边界与前端工程设计.md",
+        "docs/设计包/39-数据存储与事务一致性设计.md",
+        "docs/设计包/40-接口事件与集成技术设计.md",
+        "docs/设计包/41-AI运行知识分析与安全设计.md",
+        "docs/设计包/42-部署运维与非功能设计.md",
+        "docs/设计包/43-技术实施路线与验证矩阵.md"
+      ],
+      "productEvidence": [],
+      "implementationStatus": "NOT_IMPLEMENTED_IN_THIS_PROJECT"
+    },
+    {
+      "id": "EW-07",
+      "sourceCollection": "workspaceRefinements",
+      "sourceRef": "docs/设计包/30-产品设计追踪数据.json",
+      "pageIds": [
+        "P02",
+        "P10",
+        "P11"
+      ],
+      "commandIds": [
+        "C01",
+        "C07",
+        "C24"
+      ],
+      "caseIds": [],
+      "module": "cross-domain",
+      "technicalRefs": [
+        "docs/设计包/37-技术架构总设计与决策.md",
+        "docs/设计包/38-模块边界与前端工程设计.md",
+        "docs/设计包/39-数据存储与事务一致性设计.md",
+        "docs/设计包/40-接口事件与集成技术设计.md",
+        "docs/设计包/41-AI运行知识分析与安全设计.md",
+        "docs/设计包/42-部署运维与非功能设计.md",
+        "docs/设计包/43-技术实施路线与验证矩阵.md"
+      ],
+      "productEvidence": [],
+      "implementationStatus": "NOT_IMPLEMENTED_IN_THIS_PROJECT"
+    },
+    {
+      "id": "EW-08",
+      "sourceCollection": "workspaceRefinements",
+      "sourceRef": "docs/设计包/30-产品设计追踪数据.json",
+      "pageIds": [
+        "P02",
+        "P10",
+        "P11"
+      ],
+      "commandIds": [
+        "C07",
+        "C14",
+        "C24"
+      ],
+      "caseIds": [],
+      "module": "cross-domain",
+      "technicalRefs": [
+        "docs/设计包/37-技术架构总设计与决策.md",
+        "docs/设计包/38-模块边界与前端工程设计.md",
+        "docs/设计包/39-数据存储与事务一致性设计.md",
+        "docs/设计包/40-接口事件与集成技术设计.md",
+        "docs/设计包/41-AI运行知识分析与安全设计.md",
+        "docs/设计包/42-部署运维与非功能设计.md",
+        "docs/设计包/43-技术实施路线与验证矩阵.md"
+      ],
+      "productEvidence": [],
+      "implementationStatus": "NOT_IMPLEMENTED_IN_THIS_PROJECT"
+    }
+  ],
+  "productTestsRun": false
+}

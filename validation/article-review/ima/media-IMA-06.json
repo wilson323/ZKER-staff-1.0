@@ -1,0 +1,13 @@
+{
+  "retrievedAt": "2026-09-11T23:58:26.917478+00:00",
+  "operation": "get_media_info",
+  "request": {
+    "media_id": "wechatarticle_e20968f5446cc8239705c4154c1542cd_67760ba5adc3d958f28a49a6aa40591d7282281571958196"
+  },
+  "exitCode": 0,
+  "response": {
+    "code": 220030,
+    "msg": "没有权限通过skill获取订阅知识库的文件，请前往ima客户端尝试",
+    "data": {}
+  }
+}

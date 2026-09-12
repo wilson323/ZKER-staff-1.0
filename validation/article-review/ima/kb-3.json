@@ -1,0 +1,240 @@
+{
+  "retrievedAt": "2026-09-11T23:53:51.175364+00:00",
+  "operation": "search_knowledge_base",
+  "request": {
+    "query": "",
+    "cursor": "CgUI6QcYAQoFCOoHGAEKBQjsBxgBCgcI7QcSAjUy",
+    "limit": 20
+  },
+  "exitCode": 0,
+  "response": {
+    "code": 0,
+    "msg": "success",
+    "data": {
+      "info_list": [
+        {
+          "kb_id": "ssRclSkL0wk8uHQr_3odUT6FJhQo3-CfP44XyOxqbq4=",
+          "kb_name": "打工人必备AI办公工具",
+          "cover_url": "",
+          "member_count": "18722",
+          "content_count": "47",
+          "description": "专注探寻打工人好用、必备的AI办公工具，让AI赋能日常工作，提升工作效率，更开心的打工摸鱼",
+          "creator": "半个码农2018",
+          "role_type": "普通成员",
+          "base_type": "我加入的订阅知识库"
+        },
+        {
+          "kb_id": "PSo9_ELBsx-KOgv8gy2-w7Z2P9sB7MDxKnA63R6a67c=",
+          "kb_name": "AI 网络 IT 编程 WEB 算法",
+          "cover_url": "",
+          "member_count": "15",
+          "content_count": "543",
+          "description": "网络即生活",
+          "creator": "认知",
+          "role_type": "普通成员",
+          "base_type": "我加入的订阅知识库"
+        },
+        {
+          "kb_id": "YuHcj5a2hAuCTTSvmw7Slc-Vep6hMhnZYf56Ic02_cY=",
+          "kb_name": "扣子空间知识库",
+          "cover_url": "",
+          "member_count": "1428",
+          "content_count": "149",
+          "description": "扣子空间知识库覆盖Coze空间动态、应用研究、实用技能等，助用户高效获取、整合、使用扣子空间。",
+          "creator": "古今茶情",
+          "role_type": "普通成员",
+          "base_type": "我加入的订阅知识库"
+        },
+        {
+          "kb_id": "O8rBF0RVc-sk7AiFG3jAqcBVvvtdIVEDnzmTB9zbk28=",
+          "kb_name": "智能、算法、AI_诉讼法与司法制度_期刊_2585",
+          "cover_url": "",
+          "member_count": "183",
+          "content_count": "3332",
+          "description": "与司法、诉讼有关的AI、算法、人工智能议题。\n涵盖知网诉讼法、司法制度栏目题目包括智能或者算法或者AI的所有核心期刊论文。\n涵盖大量司法与AI主题的外文学术论文、重要网页。\n仍然在不断增加。",
+          "creator": "Garfield",
+          "role_type": "普通成员",
+          "base_type": "我加入的订阅知识库"
+        },
+        {
+          "kb_id": "STUjv33uBRee0wkwDEfAulzq2JDhyT02NiDqAIKc6zE=",
+          "kb_name": "AI 知识库（持续更新）",
+          "cover_url": "",
+          "member_count": "26220",
+          "content_count": "497",
+          "description": "(入群+v: wx007_108108108)，加入AI知识库，系统掌握AI实用技巧，补齐能力短板。主动拥抱技术变革，清晰认知AI能力边界，回归技术本质深耕学习。善用AI、精用好各类AI工具，打造专属个人AI助手，让我们在AI时代稳步前行、行稳致远。",
+          "creator": "Tim同学",
+          "role_type": "普通成员",
+          "base_type": "我加入的订阅知识库"
+        },
+        {
+          "kb_id": "wYm5SxUAGiPqptVZTN0LURDLeJC3pOHe1aBMzQgmSUQ=",
+          "kb_name": "Ai提示词",
+          "cover_url": "",
+          "member_count": "7524",
+          "content_count": "708",
+          "description": "成品提示词，一键复制，开箱即用！原创内容，商用请申请授权！\n在线体验版：prompttool.xjznpt.cn",
+          "creator": "Smile",
+          "role_type": "普通成员",
+          "base_type": "我加入的订阅知识库"
+        },
+        {
+          "kb_id": "_3hYsatvBFHzmBsEuGc_hh60Tt7tOgxAB_6iMQ3FtOk=",
+          "kb_name": "AI+ · 编程 · 智能体 · 应用开发",
+          "cover_url": "",
+          "member_count": "26",
+          "content_count": "615",
+          "description": "覆盖编程与 AI 编程工具、机器学习与深度学习、大语言模型 LLM、AI 智能体与多智能体开发、提示词工程，以及前沿论文与 AI 工具实践。",
+          "creator": "知与行Lab",
+          "role_type": "普通成员",
+          "base_type": "我加入的订阅知识库"
+        },
+        {
+          "kb_id": "vidl1y6D6jCvv3ZP5ds2t_qjQNR3Xy4qXzalQQiOjjw=",
+          "kb_name": "AI算法/大模型/智能体",
+          "cover_url": "",
+          "member_count": "117",
+          "content_count": "484",
+          "description": "AI算法知识库，你将成为一名优秀的AI算法工程师，开发出优秀的大模型；\n研发智能体平台赋能不同行业的业务。",
+          "creator": "帅锅",
+          "role_type": "普通成员",
+          "base_type": "我加入的订阅知识库"
+        },
+        {
+          "kb_id": "at7X6t46DWAkcXnJubne_ST9DJOH4cAXaLdUoadEbys=",
+          "kb_name": "AI学习知识库（持续更新🔥）",
+          "cover_url": "",
+          "member_count": "6469",
+          "content_count": "2167",
+          "description": "2026年最全AI知识库！每天持续更新AI科普、AI副业、AI提示词、AI工具、AI智能体、AI视频、AI绘画、AI编程等多项AI前沿内容，快来加入学习吧~",
+          "creator": "海哥AI不打烊",
+          "role_type": "普通成员",
+          "base_type": "我加入的订阅知识库"
+        },
+        {
+          "kb_id": "MvCuM5txfV-awel7aN9fyOMBZzppjGnIYkrHOoXe7C4=",
+          "kb_name": "AI商家 智能体行业解决方案",
+          "cover_url": "",
+          "member_count": "681",
+          "content_count": "440",
+          "description": "B端AI变现专属知识库（服务本地商家与企业）：搭建中心→获客中心（GEO专题+73套本地SOP）→变现中心，62条行业案例弹药库+19份可售卖行业方案包+5套GEO词库+工具箱（报价/合同/看板/痛点速查），AI落地变现一站式配齐，日更中。",
+          "creator": "Geo AI",
+          "role_type": "普通成员",
+          "base_type": "我加入的订阅知识库"
+        },
+        {
+          "kb_id": "lpmq2BGDAqCkOh3fjZlRvxdLdKm5zxgA0Bn4Sy078WY=",
+          "kb_name": "超级AI知识库",
+          "cover_url": "",
+          "member_count": "11303",
+          "content_count": "1802",
+          "description": "本知识库由中国领先的AI战略咨询机构——莘产力创研院创办和运营。公众号：莘产力创研院，钟院长微信：topcoach",
+          "creator": "莘产力创研院",
+          "role_type": "普通成员",
+          "base_type": "我加入的订阅知识库"
+        },
+        {
+          "kb_id": "tM2OT-cYu5jMfBKUtQ_hpKYey5QiMqMortFIwg-Rqnc=",
+          "kb_name": "玩转nano banana文生图",
+          "cover_url": "",
+          "member_count": "616",
+          "content_count": "306",
+          "description": "关注nanno banana和ChatGPT Image提示词编写",
+          "creator": "heping",
+          "role_type": "普通成员",
+          "base_type": "我加入的订阅知识库"
+        },
+        {
+          "kb_id": "PCr9btXbr6KxIYCcinZRSnZICigDzJ5T_QuW4ERRgdI=",
+          "kb_name": "去除AI味（持续更新）",
+          "cover_url": "",
+          "member_count": "10082",
+          "content_count": "198",
+          "description": "知识库专注于帮助用户去除AI生成文章中的AI痕迹，使其更接近人类风格。文章介绍了多种方法和工具，如抖知书模型、KIMI模型、DeepSeek提示词等，旨在通过技术手段和写作技巧使AI文章通过朱雀大模型检测。此外，还提供了反检测功能和AI写作技巧，帮助用户提升文章的自然度和可信度。",
+          "creator": "老李创业笔记",
+          "role_type": "普通成员",
+          "base_type": "我加入的订阅知识库"
+        },
+        {
+          "kb_id": "TUtP9aZdFdc8_52UtBf5yIFYM5X-d5mQAWUvOsZABxw=",
+          "kb_name": "AI 算法岗求职经验分享",
+          "cover_url": "",
+          "member_count": "108",
+          "content_count": "61",
+          "description": "让大家在求职路上少走一些弯路。互联网、科技大厂，AI 算法岗，大模型。",
+          "creator": "这 AI 可真得好好学啊",
+          "role_type": "普通成员",
+          "base_type": "我加入的订阅知识库"
+        },
+        {
+          "kb_id": "zAUvn-rjUdHDgSBCBDgCAM3GoQwS51STXFs1SBLe6RM=",
+          "kb_name": "扣子（coze)宝典",
+          "cover_url": "",
+          "member_count": "15497",
+          "content_count": "22",
+          "description": "零基础入门扣子(Coze)智能体！手把手教你搭建第一个AI助手、3分钟搞定工作流。进阶实战工作流模板、多智能体协作、7个变现案例？→订阅「扣子进阶·实战版」49元/年",
+          "creator": "天歌",
+          "role_type": "普通成员",
+          "base_type": "我加入的订阅知识库"
+        },
+        {
+          "kb_id": "TUsQDk5l1dYs8eD3-Fko9p4LmqJsbTrJM2eoMxeO38I=",
+          "kb_name": "AI素养与应用",
+          "cover_url": "",
+          "member_count": "572",
+          "content_count": "2455",
+          "description": "智慧教育、AI素养、大学生学AI、核心素养、AI通识教育、AI应用指南、ima知识库、Agent Skill、WorkBuddy、腾讯AI、养龙虾、一人公司、OPC创业。",
+          "creator": "HuangWZ",
+          "role_type": "普通成员",
+          "base_type": "我加入的订阅知识库"
+        },
+        {
+          "kb_id": "2zOMVQRaL5nWuEXpbTGVms5StKu4iqz0tkctMo7m3f0=",
+          "kb_name": "Nano Banana Pro 提示词",
+          "cover_url": "",
+          "member_count": "108",
+          "content_count": "20",
+          "description": "Nano Banana Pro 提示词集合",
+          "creator": "chuck",
+          "role_type": "普通成员",
+          "base_type": "我加入的订阅知识库"
+        },
+        {
+          "kb_id": "8GpCtSy1Q9DtTM58kaaHfWd4l2JpV7iM4VZLPOts-Ao=",
+          "kb_name": "IMA最全AI知识库（持续更新）",
+          "cover_url": "",
+          "member_count": "13926",
+          "content_count": "0",
+          "description": "欢迎交流！日常行研收集、分享以下材料，由于时间有限、分享不易，欢迎其他感兴趣的朋友参与共建共享，有想法可以【留言】，也感谢解放我的一些时间！",
+          "creator": "南山",
+          "role_type": "普通成员",
+          "base_type": "我加入的订阅知识库"
+        },
+        {
+          "kb_id": "XGAQmU36sx_WDWEjYD0CNkJwwKwwRCkC-QLHymw-5r8=",
+          "kb_name": "AI资料库（持续更新🔥）",
+          "cover_url": "",
+          "member_count": "36715",
+          "content_count": "466",
+          "description": "欢迎订阅我的知识库，你将获得：\n1、一份完整的AI时代生存指南：不再需要自己东拼西凑，这里有从工具到变现的完整闭环。\n2、一套拿来即用的SOP与提示词：节省你成百上千小时的试错成本，直接上手，快速见效。\n3、一个持续更新的“大脑外挂”：紧跟AI领域最前",
+          "creator": "AI 潇洒哥",
+          "role_type": "普通成员",
+          "base_type": "我加入的订阅知识库"
+        },
+        {
+          "kb_id": "hhduw7w1Y015uLQtE-3ikDCeb9eI0LyFTRPJ0JlQ_Ck=",
+          "kb_name": "Nano Banana Pro 提示词",
+          "cover_url": "",
+          "member_count": "9",
+          "content_count": "1",
+          "description": "Nano Banana Pro 提示词库\n每天记录我看到的提示词",
+          "creator": "小丰",
+          "role_type": "普通成员",
+          "base_type": "我加入的订阅知识库"
+        }
+      ],
+      "is_end": false,
+      "next_cursor": "CgUI6QcYAQoFCOoHGAEKBQjsBxgBCgcI7QcSAjcy"
+    }
+  }
+}

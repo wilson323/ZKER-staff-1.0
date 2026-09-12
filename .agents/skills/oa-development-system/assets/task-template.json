@@ -1,0 +1,26 @@
+{
+  "schemaVersion": 1,
+  "id": "",
+  "goal": "",
+  "scope": {"allowed": [], "excluded": ["未授权的Git写入、生产、凭据、外部发送及相邻项目"]},
+  "acceptance_criteria": [],
+  "current_node": "N1",
+  "final_node": "N2",
+  "completed_nodes": [],
+  "failed_nodes": [],
+  "artifacts": [],
+  "evidence": [],
+  "risks": [],
+  "approvals": [],
+  "status": "PENDING",
+  "intent": {"source": "", "problem": "", "users": [], "outcome": ""},
+  "spec": {"refs": [], "behavior": "", "contracts": [], "negativeCases": []},
+  "plan": {"files": [], "checks": [], "highestRisk": "", "rollback": ""},
+  "requirementIds": [],
+  "caseIds": [],
+  "review": {"mode": "NOT_RUN", "findings": [], "evidence": []},
+  "nodes": [
+    {"id": "N1", "objective": "", "dependsOn": [], "preconditions": [], "action": "", "tool_or_skill": "", "expected_output": "", "validation": "", "success_condition": "", "failure_path": "", "rollback_or_compensation": "", "status": "PENDING"},
+    {"id": "N2", "objective": "独立验证并交付", "dependsOn": ["N1"], "preconditions": ["实现已产生可复核产物"], "action": "检查原始产物和适用场景", "tool_or_skill": "make verify / REVIEW.md", "expected_output": "当前输入版本的检查结果", "validation": "验收与证据逐项对应", "success_condition": "无关键失败；未验证部分明确披露", "failure_path": "有限修复或交付阻塞", "rollback_or_compensation": "按本任务记录的恢复方案处理", "status": "PENDING"}
+  ]
+}

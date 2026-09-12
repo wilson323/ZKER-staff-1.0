@@ -1,0 +1,490 @@
+{
+  "startedAt": "2026-09-11T17:25:09.324Z",
+  "scope": "FICTIONAL_UI_STATE_AND_RECOVERY_ONLY",
+  "prototypeSha256": "59a4d8948c86292bb3562218d534ae37154fb8d6317bcfd97883dfc98e7e5cbe",
+  "checks": [
+    {
+      "name": "partial configuration preserves unselected field",
+      "pass": true,
+      "actual": {
+        "revision": 2,
+        "values": [
+          1,
+          0
+        ],
+        "undo": {
+          "values": [
+            0,
+            0
+          ],
+          "expected": 2
+        }
+      }
+    },
+    {
+      "name": "save does not run or approve",
+      "pass": true,
+      "actual": "business unchanged"
+    },
+    {
+      "name": "configuration undo restores previous values",
+      "pass": true,
+      "actual": "restored"
+    },
+    {
+      "name": "conflict retains proposal and current settings",
+      "pass": true,
+      "actual": "设置发生版本冲突。草稿保留，请重新生成并核对变化。"
+    },
+    {
+      "name": "regenerated proposal resolves revision conflict",
+      "pass": true,
+      "actual": "fresh diff"
+    },
+    {
+      "name": "non-owner cannot generate task mutation proposal",
+      "pass": true,
+      "actual": "owner grant required"
+    },
+    {
+      "name": "personal preference applies selected daily digest",
+      "pass": true,
+      "actual": {
+        "revision": 2,
+        "values": [
+          0,
+          1,
+          0,
+          0
+        ],
+        "undo": {
+          "values": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "expected": 2
+        }
+      }
+    },
+    {
+      "name": "personal preference has undo",
+      "pass": true,
+      "actual": "reverted"
+    },
+    {
+      "name": "preferences isolated by subject",
+      "pass": true,
+      "actual": "other subject defaults"
+    },
+    {
+      "name": "own manual fallback values retained",
+      "pass": true,
+      "actual": "manual value retained"
+    },
+    {
+      "name": "visible records counted from state",
+      "pass": true,
+      "actual": "three fixture instances"
+    },
+    {
+      "name": "legitimate zero result retains sample and no invented rows",
+      "pass": true,
+      "actual": "sample 3, delivered 0"
+    },
+    {
+      "name": "chart drilldown has same rows",
+      "pass": true,
+      "actual": "three source rows"
+    },
+    {
+      "name": "drilldown opens same business instance",
+      "pass": true,
+      "actual": "B isolated workbench"
+    },
+    {
+      "name": "empty has no fabricated metric",
+      "pass": true,
+      "actual": {
+        "status": "empty",
+        "rows": [],
+        "policy": 1,
+        "revision": 1,
+        "delivered": false
+      }
+    },
+    {
+      "name": "unauthorized has no fabricated metric",
+      "pass": true,
+      "actual": {
+        "status": "unauthorized",
+        "rows": [],
+        "policy": 1,
+        "revision": 1,
+        "delivered": false
+      }
+    },
+    {
+      "name": "timeout has no fabricated metric",
+      "pass": true,
+      "actual": {
+        "status": "timeout",
+        "rows": [],
+        "policy": 1,
+        "revision": 1,
+        "delivered": false
+      }
+    },
+    {
+      "name": "timeout recovery retains question",
+      "pass": true,
+      "actual": "retry current question"
+    },
+    {
+      "name": "management role does not gain business analytics",
+      "pass": true,
+      "actual": "no records or hidden count"
+    },
+    {
+      "name": "material ambiguity requests clarification",
+      "pass": true,
+      "actual": "no automatic ambiguous metric"
+    },
+    {
+      "name": "source version changes suppress old numeric answer",
+      "pass": true,
+      "actual": "stale guarded"
+    },
+    {
+      "name": "knowledge answer opens exact visible source",
+      "pass": true,
+      "actual": "source v1"
+    },
+    {
+      "name": "ordinary employee requests review instead of confirming",
+      "pass": true,
+      "actual": "separate authority"
+    },
+    {
+      "name": "request does not widen permissions",
+      "pass": true,
+      "actual": "draft only"
+    },
+    {
+      "name": "confirmation requires opening current source",
+      "pass": true,
+      "actual": "source first"
+    },
+    {
+      "name": "authorized source-backed assertion confirmed",
+      "pass": true,
+      "actual": "no business approval"
+    },
+    {
+      "name": "new source invalidates old confirmation for reuse",
+      "pass": true,
+      "actual": "must rederive"
+    },
+    {
+      "name": "new candidate can be checked against current source",
+      "pass": true,
+      "actual": "v2 checked"
+    },
+    {
+      "name": "knowledge view denies ungranted source",
+      "pass": true,
+      "actual": "no source payload"
+    },
+    {
+      "name": "snooze removes active suggestion but keeps work",
+      "pass": true,
+      "actual": "work unchanged"
+    },
+    {
+      "name": "proactive acceptance continues in same task draft",
+      "pass": true,
+      "actual": "draft prepared, not sent"
+    },
+    {
+      "name": "same event acceptance deduplicates draft",
+      "pass": true,
+      "actual": "one draft fragment"
+    },
+    {
+      "name": "dismiss remains quiet across page visits",
+      "pass": true,
+      "actual": "no closure"
+    },
+    {
+      "name": "new source event can create relevant new suggestion",
+      "pass": true,
+      "actual": "new version event"
+    },
+    {
+      "name": "saving plan does not enable it",
+      "pass": true,
+      "actual": "draft"
+    },
+    {
+      "name": "pause future triggers has separate plan state",
+      "pass": true,
+      "actual": "no external action"
+    },
+    {
+      "name": "ordinary experience has feedback but no publishing",
+      "pass": true,
+      "actual": "no claimed lift"
+    },
+    {
+      "name": "feedback has bounded meaning",
+      "pass": true,
+      "actual": "not published or memorized"
+    },
+    {
+      "name": "publish without evidence blocked",
+      "pass": true,
+      "actual": "default v1"
+    },
+    {
+      "name": "author cannot self review",
+      "pass": true,
+      "actual": "independent reviewer"
+    },
+    {
+      "name": "trial without receipt cannot publish",
+      "pass": true,
+      "actual": "receipt required"
+    },
+    {
+      "name": "fictional publication keeps in-flight version pinned",
+      "pass": true,
+      "actual": "new default only"
+    },
+    {
+      "name": "rollback keeps evidence and in-flight snapshot",
+      "pass": true,
+      "actual": "history retained"
+    },
+    {
+      "name": "delivery assistance lists missing conditions without approving",
+      "pass": true,
+      "actual": "human authority unchanged"
+    },
+    {
+      "name": "P01 single contextual assistance entry",
+      "pass": true,
+      "actual": "one per current page"
+    },
+    {
+      "name": "P02 single contextual assistance entry",
+      "pass": true,
+      "actual": "one per current page"
+    },
+    {
+      "name": "P03 single contextual assistance entry",
+      "pass": true,
+      "actual": "one per current page"
+    },
+    {
+      "name": "P04 single contextual assistance entry",
+      "pass": true,
+      "actual": "one per current page"
+    },
+    {
+      "name": "P05 single contextual assistance entry",
+      "pass": true,
+      "actual": "one per current page"
+    },
+    {
+      "name": "P06 single contextual assistance entry",
+      "pass": true,
+      "actual": "one per current page"
+    },
+    {
+      "name": "P07 single contextual assistance entry",
+      "pass": true,
+      "actual": "one per current page"
+    },
+    {
+      "name": "P08 single contextual assistance entry",
+      "pass": true,
+      "actual": "one per current page"
+    },
+    {
+      "name": "P09 single contextual assistance entry",
+      "pass": true,
+      "actual": "one per current page"
+    },
+    {
+      "name": "P10 single contextual assistance entry",
+      "pass": true,
+      "actual": "one per current page"
+    },
+    {
+      "name": "P11 single contextual assistance entry",
+      "pass": true,
+      "actual": "one per current page"
+    },
+    {
+      "name": "P12 single contextual assistance entry",
+      "pass": true,
+      "actual": "one per current page"
+    },
+    {
+      "name": "P13 single contextual assistance entry",
+      "pass": true,
+      "actual": "one per current page"
+    },
+    {
+      "name": "P14 single contextual assistance entry",
+      "pass": true,
+      "actual": "one per current page"
+    },
+    {
+      "name": "P15 single contextual assistance entry",
+      "pass": true,
+      "actual": "one per current page"
+    },
+    {
+      "name": "P16 single contextual assistance entry",
+      "pass": true,
+      "actual": "one per current page"
+    },
+    {
+      "name": "P17 single contextual assistance entry",
+      "pass": true,
+      "actual": "one per current page"
+    },
+    {
+      "name": "P18 single contextual assistance entry",
+      "pass": true,
+      "actual": "one per current page"
+    },
+    {
+      "name": "P19 single contextual assistance entry",
+      "pass": true,
+      "actual": "one per current page"
+    },
+    {
+      "name": "P20 single contextual assistance entry",
+      "pass": true,
+      "actual": "one per current page"
+    },
+    {
+      "name": "P21 single contextual assistance entry",
+      "pass": true,
+      "actual": "one per current page"
+    },
+    {
+      "name": "P22 single contextual assistance entry",
+      "pass": true,
+      "actual": "one per current page"
+    },
+    {
+      "name": "context assistance keeps in-progress task input",
+      "pass": true,
+      "actual": "no draft loss"
+    },
+    {
+      "name": "context drafts separated by user",
+      "pass": true,
+      "actual": "no other user draft"
+    },
+    {
+      "name": "own context draft retained",
+      "pass": true,
+      "actual": "own draft"
+    },
+    {
+      "name": "P04 mobile has no page overflow",
+      "pass": true,
+      "actual": 390
+    },
+    {
+      "name": "P08 mobile has no page overflow",
+      "pass": true,
+      "actual": 390
+    },
+    {
+      "name": "P09 mobile has no page overflow",
+      "pass": true,
+      "actual": 390
+    },
+    {
+      "name": "P14 mobile has no page overflow",
+      "pass": true,
+      "actual": 390
+    },
+    {
+      "name": "P19 mobile has no page overflow",
+      "pass": true,
+      "actual": 390
+    },
+    {
+      "name": "P21 mobile has no page overflow",
+      "pass": true,
+      "actual": 390
+    }
+  ],
+  "screenshots": [
+    {
+      "path": "validation/ai-experience/settings-diff-recovery.png",
+      "scope": "fictional UI viewport"
+    },
+    {
+      "path": "validation/ai-experience/preferences.png",
+      "scope": "fictional UI viewport"
+    },
+    {
+      "path": "validation/ai-experience/analysis-drilldown.png",
+      "scope": "fictional UI viewport"
+    },
+    {
+      "path": "validation/ai-experience/knowledge-source-confirmation.png",
+      "scope": "fictional UI viewport"
+    },
+    {
+      "path": "validation/ai-experience/proactive-plan.png",
+      "scope": "fictional UI viewport"
+    },
+    {
+      "path": "validation/ai-experience/evolution-trial.png",
+      "scope": "fictional UI viewport"
+    },
+    {
+      "path": "validation/ai-experience/P04-mobile.png",
+      "scope": "fictional UI viewport"
+    },
+    {
+      "path": "validation/ai-experience/P08-mobile.png",
+      "scope": "fictional UI viewport"
+    },
+    {
+      "path": "validation/ai-experience/P09-mobile.png",
+      "scope": "fictional UI viewport"
+    },
+    {
+      "path": "validation/ai-experience/P14-mobile.png",
+      "scope": "fictional UI viewport"
+    },
+    {
+      "path": "validation/ai-experience/P19-mobile.png",
+      "scope": "fictional UI viewport"
+    },
+    {
+      "path": "validation/ai-experience/P21-mobile.png",
+      "scope": "fictional UI viewport"
+    }
+  ],
+  "pageErrors": [],
+  "productTestsRun": false,
+  "browserVersion": "152.0.7977.83",
+  "finishedAt": "2026-09-11T17:25:17.460Z",
+  "status": "PASS",
+  "limitations": [
+    "No real model/NL parsing, scheduling or server authorization.",
+    "Evidence and trial receipts are explicitly fictional; no measured improvement.",
+    "No asynchronous revocation race, persistence, real data correctness or user usability acceptance."
+  ]
+}

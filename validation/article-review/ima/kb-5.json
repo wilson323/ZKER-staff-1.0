@@ -1,0 +1,240 @@
+{
+  "retrievedAt": "2026-09-11T23:53:52.830262+00:00",
+  "operation": "search_knowledge_base",
+  "request": {
+    "query": "",
+    "cursor": "CgUI6QcYAQoFCOoHGAEKBQjsBxgBCgcI7QcSAjky",
+    "limit": 20
+  },
+  "exitCode": 0,
+  "response": {
+    "code": 0,
+    "msg": "success",
+    "data": {
+      "info_list": [
+        {
+          "kb_id": "G6fU7TfCovBxOawpsMr6wSiMwkVKfqC91SOkc_bLMZQ=",
+          "kb_name": "AIGC实验室",
+          "cover_url": "",
+          "member_count": "1048",
+          "content_count": "531",
+          "description": "精选的AIGC知识库。",
+          "creator": "AIGC实验室",
+          "role_type": "普通成员",
+          "base_type": "我加入的订阅知识库"
+        },
+        {
+          "kb_id": "ragjbHt-Tc8ELWO3V2yoiEqcxJW-kmYLIp1uMZ4KgHk=",
+          "kb_name": "AI视频变现指南",
+          "cover_url": "",
+          "member_count": "239",
+          "content_count": "27",
+          "description": "AI视频制作的万字实操经验，全部分享给你丨详细咨询搜索公众号：子轩学长说",
+          "creator": "子轩学长说",
+          "role_type": "普通成员",
+          "base_type": "我加入的订阅知识库"
+        },
+        {
+          "kb_id": "IgJLfnmDSDMNfpRB3MQ15zRAEhefosZYIxGzY0YATJU=",
+          "kb_name": "Python学习知识库",
+          "cover_url": "",
+          "member_count": "38801",
+          "content_count": "1014",
+          "description": "学习Python的各种资料",
+          "creator": "Python之家",
+          "role_type": "普通成员",
+          "base_type": "我加入的订阅知识库"
+        },
+        {
+          "kb_id": "MUb6MX2SCTN5Xi2EjCPBsHHuWODJ-fHkL7lSAXe_BdE=",
+          "kb_name": "【浑水调研】叫我第四名🥇",
+          "cover_url": "",
+          "member_count": "45641",
+          "content_count": "76442",
+          "description": "产业专家交流/卖方电话会/外资研报。星球用户会赠送一个 可以查看源文件的 ima知识库。可联系n2192n",
+          "creator": "知识星球【浑水调研】",
+          "role_type": "普通成员",
+          "base_type": "我加入的订阅知识库"
+        },
+        {
+          "kb_id": "xOmeGodGDx6P-aVe8devv1lKVj3_Fb8SLd-305kYpP4=",
+          "kb_name": "最新AI变现项目",
+          "cover_url": "",
+          "member_count": "1627",
+          "content_count": "87",
+          "description": "AI变现知识库。专注最新AI变现技术、AI变现案例分享。更多优质私藏项目合作加V: jy2714",
+          "creator": "金东升",
+          "role_type": "普通成员",
+          "base_type": "我加入的订阅知识库"
+        },
+        {
+          "kb_id": "VBX4lCfwGZ04ntzTyM8pgf_y4FfdmtCVJPABSe6wao0=",
+          "kb_name": "小何虾会计",
+          "cover_url": "",
+          "member_count": "6895",
+          "content_count": "1559",
+          "description": "小何虾会计知识库：免费奉献财务人第2大脑！ 中国最全最大 Ai财会审及思政库,应用免费！最新！库长，微信13618251687）免费享！搜集7天内Ai等在财务会计审计税风控反舞弊等;用法，“混元，deepseek”四种大模型：基于全网或本库上传内部信息或知识库等完成一切Ai财务工作",
+          "creator": "小何虾",
+          "role_type": "普通成员",
+          "base_type": "我加入的订阅知识库"
+        },
+        {
+          "kb_id": "tY9k_-CCb2zQhhCNha83I8AoWCilBJip_y0Ol7zOyjw=",
+          "kb_name": "前沿AI资讯【每日多次更新】",
+          "cover_url": "",
+          "member_count": "4689",
+          "content_count": "17618",
+          "description": "【学术志】AI项目组出品。\n也欢迎关注公众号【AI学术圆桌派】，获取前沿AI资讯～",
+          "creator": "学术志·AI智能体学习圈",
+          "role_type": "普通成员",
+          "base_type": "我加入的订阅知识库"
+        },
+        {
+          "kb_id": "AVxwRl_hl86lACm6UgT5F8QeuGywpAf22Iw7xFXuzXI=",
+          "kb_name": "MCP、A2A和AG-UI宝库",
+          "cover_url": "",
+          "member_count": "570",
+          "content_count": "500",
+          "description": "AI 大模型的USB",
+          "creator": "张善友",
+          "role_type": "普通成员",
+          "base_type": "我加入的订阅知识库"
+        },
+        {
+          "kb_id": "5XkloDKlhYgBEq5ViqYO325sZozOKYH_xXUNZCK9AVc=",
+          "kb_name": "AI视频制作指南（豆包Seedance 2.0体验",
+          "cover_url": "",
+          "member_count": "19909",
+          "content_count": "458",
+          "description": "抢先豆包Seedance 2.0玩法——提供最全面的AI视频指导，有玩法指导，有案例参考，还有海量素材可用，有什么问题可以直接问我。#Seedance 2.0",
+          "creator": "AI指南针",
+          "role_type": "普通成员",
+          "base_type": "我加入的订阅知识库"
+        },
+        {
+          "kb_id": "LbS5u78q67Kcdp2LqRZ7lWq6Bsql8FCDd2kOgs_FaIg=",
+          "kb_name": "语文帮帮忙",
+          "cover_url": "",
+          "member_count": "10003",
+          "content_count": "417",
+          "description": "语基、古文、阅读、作文知识库全覆盖，语文学习路上的好帮手。",
+          "creator": "笑书生",
+          "role_type": "普通成员",
+          "base_type": "我加入的订阅知识库"
+        },
+        {
+          "kb_id": "glweYCQorRVHmDE00JjIWgYgu3iyM5eGNCL_RCNtFSQ=",
+          "kb_name": "Dify+AI Agent知识库",
+          "cover_url": "",
+          "member_count": "85",
+          "content_count": "476",
+          "description": "网罗Dify相关知识，助力智能体开发。",
+          "creator": "AiFin",
+          "role_type": "普通成员",
+          "base_type": "我加入的订阅知识库"
+        },
+        {
+          "kb_id": "u2M-BOhplnxTtDM-UI6_PPiB-3Fy5jIT9uxw5jjs3Zc=",
+          "kb_name": "AI+多模态+DCC 知识库",
+          "cover_url": "",
+          "member_count": "221",
+          "content_count": "247",
+          "description": "Maya+Blender+Houdini+C4D+UE5+++Aigc++ == 快人一步 !!",
+          "creator": "Geoffrey.C",
+          "role_type": "普通成员",
+          "base_type": "我加入的订阅知识库"
+        },
+        {
+          "kb_id": "CqNmOyXynIrm4rRgVsuRVp02fUIKqWJBgvZ6vwxSxfY=",
+          "kb_name": "MCP-Manus-Agents",
+          "cover_url": "",
+          "member_count": "73",
+          "content_count": "850",
+          "description": "Agents相关",
+          "creator": "数字AI方进",
+          "role_type": "普通成员",
+          "base_type": "我加入的订阅知识库"
+        },
+        {
+          "kb_id": "0f6PmcptjoN0i_lBD7Y8Hoq0DAQo3T7da8WGrkoYf3M=",
+          "kb_name": "硅创联.MCP精选",
+          "cover_url": "",
+          "member_count": "1395",
+          "content_count": "425",
+          "description": "智能体/MCP 精选.硅创社",
+          "creator": "硅创联",
+          "role_type": "普通成员",
+          "base_type": "我加入的订阅知识库"
+        },
+        {
+          "kb_id": "8ask7HZNO7vhS1OBWA7k5FwQ-orbSt45uhAvT4FwGYU=",
+          "kb_name": "即梦绘画提示词(持续更新)",
+          "cover_url": "",
+          "member_count": "649",
+          "content_count": "167",
+          "description": "这个知识库汇集了丰富的绘画提示词，涵盖了从动物拟人化到国潮生肖，从治愈系到魔童系列，以及各种风格的插画和AI绘画工具的使用指南。每篇文档都提供了详细的创作指导和灵感，适合各类艺术家和爱好者，助您轻松创作出精美作品，激发无限创意。快来探索，开启您的绘画之旅吧！",
+          "creator": "陈皮糖",
+          "role_type": "普通成员",
+          "base_type": "我加入的订阅知识库"
+        },
+        {
+          "kb_id": "Pc85rwptcyXtXjQ2EGF9DQtNJyWo-qgXzMqw6xUuCBM=",
+          "kb_name": "硅创联.DeepSeek精选",
+          "cover_url": "",
+          "member_count": "21039",
+          "content_count": "1269",
+          "description": "DeepSeek全国首发[.]硅创社官方精选\n01-硅创精选02-高校精选03-使用技巧\n04-技术分享05-行业案例06-产业报告\n07-观点解读08-全球新闻09-安装部署",
+          "creator": "硅创联",
+          "role_type": "普通成员",
+          "base_type": "我加入的订阅知识库"
+        },
+        {
+          "kb_id": "8I4_g6j4preR3uYDIu8fTL2Fpec4ehediznvwuLYvUg=",
+          "kb_name": "MCP与AI前沿技术与最新研究报告",
+          "cover_url": "",
+          "member_count": "64",
+          "content_count": "66",
+          "description": "AI趋势行业认知，宏观认知看法,MCP知识，LLM模型，视觉算法，RAG知识库，算力知识，个人收集汇总，追求质量，不追数量",
+          "creator": "破相般若",
+          "role_type": "普通成员",
+          "base_type": "我加入的订阅知识库"
+        },
+        {
+          "kb_id": "3C_fWRXCQ0P9mbBndxWHFjHSP7472aAubHIv-uk_3vA=",
+          "kb_name": "Dify应用知识库",
+          "cover_url": "",
+          "member_count": "4855",
+          "content_count": "2174",
+          "description": "Dify平台应用知识汇集",
+          "creator": "鑫叔",
+          "role_type": "普通成员",
+          "base_type": "我加入的订阅知识库"
+        },
+        {
+          "kb_id": "720UmSaHy0fzxcjiYBkMuqUniIZi0P202KWwHnQ-Hxk=",
+          "kb_name": "🔮MCP从入门到精通",
+          "cover_url": "",
+          "member_count": "3707",
+          "content_count": "514",
+          "description": "持续更新的MCP精选信息、知识与实践。交流+v：charliebuleng，入群获取更多优质AI资源。\n用好知识库，请多向AI提问。\n点击库主头像，加入更多优质知识库。",
+          "creator": "小查",
+          "role_type": "普通成员",
+          "base_type": "我加入的订阅知识库"
+        },
+        {
+          "kb_id": "cW22dF_hV00HomMP0n-BkC1Loh0inHRd-y4TAlJqDfg=",
+          "kb_name": "预期差寻找",
+          "cover_url": "",
+          "member_count": "1796",
+          "content_count": "2871",
+          "description": "每天一篇个股预期差挖掘文章，搜索公众号“预期差寻找”",
+          "creator": "预期差寻找",
+          "role_type": "普通成员",
+          "base_type": "我加入的订阅知识库"
+        }
+      ],
+      "is_end": false,
+      "next_cursor": "CgUI6QcYAQoFCOoHGAEKBQjsBxgBCggI7QcSAzExMg=="
+    }
+  }
+}

@@ -1,0 +1,178 @@
+{
+  "sha": "77063adc7497182f688a0bcefa099c9232f6e6e8",
+  "node_id": "C_kwDOA0hXpdoAKDc3MDYzYWRjNzQ5NzE4MmY2ODhhMGJjZWZhMDk5YzkyMzJmNmU2ZTg",
+  "commit": {
+    "author": {
+      "name": "dyma solovei",
+      "email": "53943884+bevzzz@users.noreply.github.com",
+      "date": "2026-09-11T14:34:43Z"
+    },
+    "committer": {
+      "name": "GitHub",
+      "email": "noreply@github.com",
+      "date": "2026-09-11T14:34:43Z"
+    },
+    "message": "Merge pull request #12757 from weaviate/feat/shard-status-unavailable\n\nfeat(index): report UNAVAILABLE status for shards whose status could not be retrieved",
+    "tree": {
+      "sha": "fdd3da24497d4c610a11ed4939930d27f70234a7",
+      "url": "https://api.github.com/repos/weaviate/weaviate/git/trees/fdd3da24497d4c610a11ed4939930d27f70234a7"
+    },
+    "url": "https://api.github.com/repos/weaviate/weaviate/git/commits/77063adc7497182f688a0bcefa099c9232f6e6e8",
+    "comment_count": 0,
+    "verification": {
+      "verified": true,
+      "reason": "valid",
+      "signature": "-----BEGIN PGP SIGNATURE-----\n\nwsFcBAABCAAQBQJqpBGDCRC1aQ7uu5UhlAAAqZAQAI77i2u36bMjXft42XtvNtQs\nQFb1QL9N9fwO4DcsT/6BBWbOipjHJ6O6bbo8TFNf3Hf5JPmFXAVBiTSV6Ae7QpaM\na15JXfpQN5UxE9Dt0P9Kw0kJeauwvQcFwGPS1ooSeedRQpWrXmGHYU/TCCffOLKI\nIQjjr5pQcTu9OVak9RShUG6q0c4zFzBd5O/z4qEq2HwH5Gu3AzXTq2QfwXIaoGzR\nu6dz9Z23Ukw1Pe3EDlIHPPFKFKHaJ/JxJ2SQ35ToUKVdVDJl0CRXhj9fAup0VXPq\ntFStwRslMQ2NvtMfeImJVENyf/VFqpyY0mIAVC3yWE8wBauhxnmcsoj4a4wzdNFw\nAnOXGBvZ9dmKV7S4oT93JPOZLuT2bq7J3yZAvyURCtO8CNzTRBt24glNxwQigfmR\nA2U3niVazFDK8B/CxAdnOM2IOktJSk+BBtm1iBGerqJaSM2j7kRLbcmocGpew3ko\ncdAlAy2MF1TWJ2bE6sDPZ+ivTGAkFkw0vpKTz3vlHjjJY2UXlnQPr9/uX8ZZrADU\nGpwvOYu30iu762CNhN2T0wMJo1dGn2t05PTPPzzbn2EIikbFS7hNqeazO4R8g29/\nGIzrtTHOel4Sq4ouZ5gJxCl3626bd+sz9wNv3wfv6BCHEIvCYQ+eziHz2u4g++gw\no0SYRZgUg3Gqhwevhj1+\n=LyjE\n-----END PGP SIGNATURE-----\n",
+      "payload": "tree fdd3da24497d4c610a11ed4939930d27f70234a7\nparent 39c972612fb320bac0149957078b6f7bc16339eb\nparent 5a7b78cc144f915a6df4efc88be960688c4e8dbd\nauthor dyma solovei <53943884+bevzzz@users.noreply.github.com> 1789137283 +0200\ncommitter GitHub <noreply@github.com> 1789137283 +0200\n\nMerge pull request #12757 from weaviate/feat/shard-status-unavailable\n\nfeat(index): report UNAVAILABLE status for shards whose status could not be retrieved",
+      "verified_at": "2026-09-11T14:34:43Z"
+    }
+  },
+  "url": "https://api.github.com/repos/weaviate/weaviate/commits/77063adc7497182f688a0bcefa099c9232f6e6e8",
+  "html_url": "https://github.com/weaviate/weaviate/commit/77063adc7497182f688a0bcefa099c9232f6e6e8",
+  "comments_url": "https://api.github.com/repos/weaviate/weaviate/commits/77063adc7497182f688a0bcefa099c9232f6e6e8/comments",
+  "author": {
+    "login": "bevzzz",
+    "id": 53943884,
+    "node_id": "MDQ6VXNlcjUzOTQzODg0",
+    "avatar_url": "https://avatars.githubusercontent.com/u/53943884?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/bevzzz",
+    "html_url": "https://github.com/bevzzz",
+    "followers_url": "https://api.github.com/users/bevzzz/followers",
+    "following_url": "https://api.github.com/users/bevzzz/following{/other_user}",
+    "gists_url": "https://api.github.com/users/bevzzz/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/bevzzz/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/bevzzz/subscriptions",
+    "organizations_url": "https://api.github.com/users/bevzzz/orgs",
+    "repos_url": "https://api.github.com/users/bevzzz/repos",
+    "events_url": "https://api.github.com/users/bevzzz/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/bevzzz/received_events",
+    "type": "User",
+    "user_view_type": "public",
+    "site_admin": false
+  },
+  "committer": {
+    "login": "web-flow",
+    "id": 19864447,
+    "node_id": "MDQ6VXNlcjE5ODY0NDQ3",
+    "avatar_url": "https://avatars.githubusercontent.com/u/19864447?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/web-flow",
+    "html_url": "https://github.com/web-flow",
+    "followers_url": "https://api.github.com/users/web-flow/followers",
+    "following_url": "https://api.github.com/users/web-flow/following{/other_user}",
+    "gists_url": "https://api.github.com/users/web-flow/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/web-flow/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/web-flow/subscriptions",
+    "organizations_url": "https://api.github.com/users/web-flow/orgs",
+    "repos_url": "https://api.github.com/users/web-flow/repos",
+    "events_url": "https://api.github.com/users/web-flow/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/web-flow/received_events",
+    "type": "User",
+    "user_view_type": "public",
+    "site_admin": false
+  },
+  "parents": [
+    {
+      "sha": "39c972612fb320bac0149957078b6f7bc16339eb",
+      "url": "https://api.github.com/repos/weaviate/weaviate/commits/39c972612fb320bac0149957078b6f7bc16339eb",
+      "html_url": "https://github.com/weaviate/weaviate/commit/39c972612fb320bac0149957078b6f7bc16339eb"
+    },
+    {
+      "sha": "5a7b78cc144f915a6df4efc88be960688c4e8dbd",
+      "url": "https://api.github.com/repos/weaviate/weaviate/commits/5a7b78cc144f915a6df4efc88be960688c4e8dbd",
+      "html_url": "https://github.com/weaviate/weaviate/commit/5a7b78cc144f915a6df4efc88be960688c4e8dbd"
+    }
+  ],
+  "stats": {
+    "total": 70,
+    "additions": 53,
+    "deletions": 17
+  },
+  "files": [
+    {
+      "sha": "9f2bde6c183c8254fe1b78cc93938de3cd8f2c4c",
+      "filename": "adapters/repos/db/index.go",
+      "status": "modified",
+      "additions": 7,
+      "deletions": 1,
+      "changes": 8,
+      "blob_url": "https://github.com/weaviate/weaviate/blob/77063adc7497182f688a0bcefa099c9232f6e6e8/adapters%2Frepos%2Fdb%2Findex.go",
+      "raw_url": "https://github.com/weaviate/weaviate/raw/77063adc7497182f688a0bcefa099c9232f6e6e8/adapters%2Frepos%2Fdb%2Findex.go",
+      "contents_url": "https://api.github.com/repos/weaviate/weaviate/contents/adapters%2Frepos%2Fdb%2Findex.go?ref=77063adc7497182f688a0bcefa099c9232f6e6e8",
+      "patch": "@@ -4233,7 +4233,7 @@ func (i *Index) IncomingGetShardQueueSize(ctx context.Context, shardName string)\n //\n //\tmap[string]map[string]string{\n //\t\t\"shard-0\": { \"node-0\": \"READY\", \"node-1\": \"READONLY\" },\n-//\t\t\"shard-1\": { \"node-1\": \"READY\", \"node-1\": \"READONLY\" },\n+//\t\t\"shard-1\": { \"node-1\": \"READY\", \"node-2\": \"READONLY\" },\n //\t}\n //\n // The second return value are shard statuses mirroring the legacy implementation,\n@@ -4269,7 +4269,9 @@ func (i *Index) getShardsStorageStatus(ctx context.Context, tenant string) (map[\n \t\t\t\toneNodeStatus atomic.Value\n \t\t\t\tperNodeStatus = make(map[string]string, len(replicas))\n \t\t\t)\n+\n \t\t\tfor _, nodeName := range replicas {\n+\t\t\t\tperNodeStatus[nodeName] = storagestate.StatusUnavailable.String()\n \t\t\t\tvar err error\n \t\t\t\tif nodeName == thisNode {\n \t\t\t\t\tvar (\n@@ -4287,13 +4289,17 @@ func (i *Index) getShardsStorageStatus(ctx context.Context, tenant string) (map[\n \t\t\t\t\t\tstatus := shard.GetStatus().String()\n \t\t\t\t\t\toneNodeStatus.Store(status)\n \t\t\t\t\t\tperNodeStatus[nodeName] = status\n+\t\t\t\t\t} else {\n+\t\t\t\t\t\toneNodeStatus.Store(storagestate.StatusUnavailable.String())\n \t\t\t\t\t}\n \t\t\t\t\trelease()\n \t\t\t\t} else {\n \t\t\t\t\tvar status string\n \t\t\t\t\tif status, err = i.remote.GetShardStatus(ctx, shardName, nodeName); err == nil {\n \t\t\t\t\t\toneNodeStatus.CompareAndSwap(nil, status)\n \t\t\t\t\t\tperNodeStatus[nodeName] = status\n+\t\t\t\t\t} else {\n+\t\t\t\t\t\toneNodeStatus.CompareAndSwap(nil, storagestate.StatusUnavailable.String())\n \t\t\t\t\t}\n \t\t\t\t}\n "
+    },
+    {
+      "sha": "abc688b66a6939c0370be763af381819359abd07",
+      "filename": "adapters/repos/db/index_test.go",
+      "status": "modified",
+      "additions": 34,
+      "deletions": 10,
+      "changes": 44,
+      "blob_url": "https://github.com/weaviate/weaviate/blob/77063adc7497182f688a0bcefa099c9232f6e6e8/adapters%2Frepos%2Fdb%2Findex_test.go",
+      "raw_url": "https://github.com/weaviate/weaviate/raw/77063adc7497182f688a0bcefa099c9232f6e6e8/adapters%2Frepos%2Fdb%2Findex_test.go",
+      "contents_url": "https://api.github.com/repos/weaviate/weaviate/contents/adapters%2Frepos%2Fdb%2Findex_test.go?ref=77063adc7497182f688a0bcefa099c9232f6e6e8",
+      "patch": "@@ -348,9 +348,11 @@ func TestIndex_getShardsStorageStatus(t *testing.T) {\n \tclusterNodes := []string{\"node-0\", \"node-1\", \"node-2\"}\n \ttargetNode := clusterNodes[0]\n \tshardReplicas := map[string][]string{\n-\t\t\"shard_local\":          clusterNodes,\n-\t\t\"shard_not_local\":      clusterNodes[1:],\n-\t\t\"remote_not_reachable\": clusterNodes,\n+\t\t\"shard_local\":             clusterNodes,\n+\t\t\"shard_not_local\":         clusterNodes[1:],\n+\t\t\"remote_not_reachable\":    clusterNodes,\n+\t\t\"local_not_reachable\":     clusterNodes,\n+\t\t\"no_local_none_reachable\": clusterNodes[1:],\n \t}\n \tshardStatus := map[string]map[string]string{\n \t\t\"shard_local\": {\n@@ -367,17 +369,34 @@ func TestIndex_getShardsStorageStatus(t *testing.T) {\n \t\t\t\"node-1\": storagestate.StatusReady.String(),\n \t\t\t\"node-2\": NodeUnresponsive, // Remote replica failed to report status.\n \t\t},\n+\t\t\"local_not_reachable\": {\n+\t\t\t\"node-0\": NodeUnresponsive, // Local replica failed to report status.\n+\t\t\t\"node-2\": storagestate.StatusReady.String(),\n+\t\t\t\"node-1\": storagestate.StatusReady.String(),\n+\t\t},\n+\t\t\"no_local_none_reachable\": {\n+\t\t\t\"node-1\": NodeUnresponsive, // Remote replica failed to report status.\n+\t\t\t\"node-2\": storagestate.StatusReady.String(),\n+\t\t},\n \t}\n \n \t// NodeUnresponsive should not be in the final response.\n \twant := maps.Clone(shardStatus)\n \twant[\"remote_not_reachable\"] = maps.Clone(want[\"remote_not_reachable\"])\n-\tdelete(want[\"remote_not_reachable\"], \"node-2\")\n+\twant[\"remote_not_reachable\"][\"node-2\"] = storagestate.StatusUnavailable.String()\n+\n+\twant[\"local_not_reachable\"] = maps.Clone(want[\"local_not_reachable\"])\n+\twant[\"local_not_reachable\"][\"node-0\"] = storagestate.StatusUnavailable.String()\n+\n+\twant[\"no_local_none_reachable\"] = maps.Clone(want[\"no_local_none_reachable\"])\n+\twant[\"no_local_none_reachable\"][\"node-1\"] = storagestate.StatusUnavailable.String()\n \n \twantLegacy := map[string]string{\n-\t\t\"shard_local\":          storagestate.StatusReady.String(),\n-\t\t\"shard_not_local\":      storagestate.StatusIndexing.String(),\n-\t\t\"remote_not_reachable\": storagestate.StatusReady.String(),\n+\t\t\"shard_local\":             storagestate.StatusReady.String(),\n+\t\t\"shard_not_local\":         storagestate.StatusIndexing.String(),\n+\t\t\"remote_not_reachable\":    storagestate.StatusReady.String(),\n+\t\t\"local_not_reachable\":     storagestate.StatusUnavailable.String(),\n+\t\t\"no_local_none_reachable\": storagestate.StatusUnavailable.String(),\n \t}\n \n \tvar replicas []types.Replica\n@@ -448,7 +467,12 @@ func TestIndex_getShardsStorageStatus(t *testing.T) {\n \t\tmockShard := NewMockShardLike(t)\n \t\tmockShard.EXPECT().\n \t\t\tpreventShutdown().\n-\t\t\tReturn(func() {}, nil).Maybe()\n+\t\t\tRunAndReturn(func() (func(), error) {\n+\t\t\t\tif statusByNode[targetNode] == NodeUnresponsive {\n+\t\t\t\t\treturn func() {}, errors.New(NodeUnresponsive)\n+\t\t\t\t}\n+\t\t\t\treturn func() {}, nil\n+\t\t\t}).Maybe()\n \t\tmockShard.EXPECT().\n \t\t\tName().\n \t\t\tReturn(shardName).Maybe()\n@@ -463,8 +487,8 @@ func TestIndex_getShardsStorageStatus(t *testing.T) {\n \n \t// Assert\n \tassert.NoError(t, err)\n-\trequire.Equal(t, want, got, \"shard statuses\")\n-\trequire.Equal(t, wantLegacy, gotLegacy, \"legacy statuses\")\n+\tassert.Equal(t, want, got, \"shard statuses\")\n+\tassert.Equal(t, wantLegacy, gotLegacy, \"legacy statuses\")\n }\n \n // TestIndex_ShardHasMultipleReplicasWrite_RoutesThroughReplicatorDuringMovement pins the"
+    },
+    {
+      "sha": "878693fbccbf058a4ec2f2ce99341f7ea0c0c12a",
+      "filename": "entities/storagestate/status.go",
+      "status": "modified",
+      "additions": 1,
+      "deletions": 0,
+      "changes": 1,
+      "blob_url": "https://github.com/weaviate/weaviate/blob/77063adc7497182f688a0bcefa099c9232f6e6e8/entities%2Fstoragestate%2Fstatus.go",
+      "raw_url": "https://github.com/weaviate/weaviate/raw/77063adc7497182f688a0bcefa099c9232f6e6e8/entities%2Fstoragestate%2Fstatus.go",
+      "contents_url": "https://api.github.com/repos/weaviate/weaviate/contents/entities%2Fstoragestate%2Fstatus.go?ref=77063adc7497182f688a0bcefa099c9232f6e6e8",
+      "patch": "@@ -23,6 +23,7 @@ const (\n \tStatusLazyLoading Status = \"LAZY_LOADING\"\n \tStatusReady       Status = \"READY\"\n \tStatusShutdown    Status = \"SHUTDOWN\"\n+\tStatusUnavailable Status = \"UNAVAILABLE\"\n )\n \n var ErrStatusReadOnlyWithReason = func(reason string) error {"
+    },
+    {
+      "sha": "49e32b1098a832131b6d4030bfe5785daac19002",
+      "filename": "test/acceptance_with_go_client/named_vectors_tests/test_suits/named_vectors_vector_index_dynamic.go",
+      "status": "modified",
+      "additions": 2,
+      "deletions": 1,
+      "changes": 3,
+      "blob_url": "https://github.com/weaviate/weaviate/blob/77063adc7497182f688a0bcefa099c9232f6e6e8/test%2Facceptance_with_go_client%2Fnamed_vectors_tests%2Ftest_suits%2Fnamed_vectors_vector_index_dynamic.go",
+      "raw_url": "https://github.com/weaviate/weaviate/raw/77063adc7497182f688a0bcefa099c9232f6e6e8/test%2Facceptance_with_go_client%2Fnamed_vectors_tests%2Ftest_suits%2Fnamed_vectors_vector_index_dynamic.go",
+      "contents_url": "https://api.github.com/repos/weaviate/weaviate/contents/test%2Facceptance_with_go_client%2Fnamed_vectors_tests%2Ftest_suits%2Fnamed_vectors_vector_index_dynamic.go?ref=77063adc7497182f688a0bcefa099c9232f6e6e8",
+      "patch": "@@ -12,12 +12,13 @@\n package test_suits\n \n import (\n-\tacceptance_with_go_client \"acceptance_tests_with_client\"\n \t\"context\"\n \t\"fmt\"\n \t\"testing\"\n \t\"time\"\n \n+\tacceptance_with_go_client \"acceptance_tests_with_client\"\n+\n \t\"github.com/go-openapi/strfmt\"\n \t\"github.com/google/uuid\"\n \t\"github.com/stretchr/testify/assert\""
+    },
+    {
+      "sha": "c70ad1400ecf88b2328795df18e7b423fd6fcbec",
+      "filename": "test/acceptance_with_go_client/named_vectors_tests/test_suits/named_vectors_vector_index_legacy.go",
+      "status": "modified",
+      "additions": 2,
+      "deletions": 1,
+      "changes": 3,
+      "blob_url": "https://github.com/weaviate/weaviate/blob/77063adc7497182f688a0bcefa099c9232f6e6e8/test%2Facceptance_with_go_client%2Fnamed_vectors_tests%2Ftest_suits%2Fnamed_vectors_vector_index_legacy.go",
+      "raw_url": "https://github.com/weaviate/weaviate/raw/77063adc7497182f688a0bcefa099c9232f6e6e8/test%2Facceptance_with_go_client%2Fnamed_vectors_tests%2Ftest_suits%2Fnamed_vectors_vector_index_legacy.go",
+      "contents_url": "https://api.github.com/repos/weaviate/weaviate/contents/test%2Facceptance_with_go_client%2Fnamed_vectors_tests%2Ftest_suits%2Fnamed_vectors_vector_index_legacy.go?ref=77063adc7497182f688a0bcefa099c9232f6e6e8",
+      "patch": "@@ -12,12 +12,13 @@\n package test_suits\n \n import (\n-\tacceptance_with_go_client \"acceptance_tests_with_client\"\n \t\"context\"\n \t\"fmt\"\n \t\"testing\"\n \t\"time\"\n \n+\tacceptance_with_go_client \"acceptance_tests_with_client\"\n+\n \t\"github.com/go-openapi/strfmt\"\n \t\"github.com/google/uuid\"\n \t\"github.com/stretchr/testify/assert\""
+    },
+    {
+      "sha": "1f9ba0405479ff53ac17b06dc6a659fdbb94fad0",
+      "filename": "test/acceptance_with_go_client/named_vectors_tests/test_suits/named_vectors_vector_index_restart.go",
+      "status": "modified",
+      "additions": 2,
+      "deletions": 1,
+      "changes": 3,
+      "blob_url": "https://github.com/weaviate/weaviate/blob/77063adc7497182f688a0bcefa099c9232f6e6e8/test%2Facceptance_with_go_client%2Fnamed_vectors_tests%2Ftest_suits%2Fnamed_vectors_vector_index_restart.go",
+      "raw_url": "https://github.com/weaviate/weaviate/raw/77063adc7497182f688a0bcefa099c9232f6e6e8/test%2Facceptance_with_go_client%2Fnamed_vectors_tests%2Ftest_suits%2Fnamed_vectors_vector_index_restart.go",
+      "contents_url": "https://api.github.com/repos/weaviate/weaviate/contents/test%2Facceptance_with_go_client%2Fnamed_vectors_tests%2Ftest_suits%2Fnamed_vectors_vector_index_restart.go?ref=77063adc7497182f688a0bcefa099c9232f6e6e8",
+      "patch": "@@ -12,14 +12,15 @@\n package test_suits\n \n import (\n-\tacceptance_with_go_client \"acceptance_tests_with_client\"\n \t\"context\"\n \t\"fmt\"\n \t\"io\"\n \t\"strings\"\n \t\"testing\"\n \t\"time\"\n \n+\tacceptance_with_go_client \"acceptance_tests_with_client\"\n+\n \t\"github.com/go-openapi/strfmt\"\n \t\"github.com/google/uuid\"\n \t\"github.com/stretchr/testify/assert\""
+    },
+    {
+      "sha": "d4dfe3a856db2a2cd6f16ee0abd17c374e7bd3fe",
+      "filename": "tools/gen-code-from-swagger.sh",
+      "status": "modified",
+      "additions": 5,
+      "deletions": 3,
+      "changes": 8,
+      "blob_url": "https://github.com/weaviate/weaviate/blob/77063adc7497182f688a0bcefa099c9232f6e6e8/tools%2Fgen-code-from-swagger.sh",
+      "raw_url": "https://github.com/weaviate/weaviate/raw/77063adc7497182f688a0bcefa099c9232f6e6e8/tools%2Fgen-code-from-swagger.sh",
+      "contents_url": "https://api.github.com/repos/weaviate/weaviate/contents/tools%2Fgen-code-from-swagger.sh?ref=77063adc7497182f688a0bcefa099c9232f6e6e8",
+      "patch": "@@ -51,9 +51,11 @@ echo Now add the header to the generated code too.\n # 3. only *_test.go files\n \n echo Fix imports with goimports\n-(cd \"$DIR\"/..; goimports -w $(find . -type f -name '*.go' -not -name '*_test.go' -not -path './test/*' -not -name '*pb.go' -not -path './vendor/*' -not -path \"./.*/*\"))\n-(cd \"$DIR\"/..; goimports -w $(find . -type f -name '*.go' -not -name '*_test.go' -path './test/*' -not -name '*pb.go' -not -path './vendor/*' -not -path \"./.*/*\"))\n-(cd \"$DIR\"/..; goimports -w $(find . -type f -name '*_test.go' -not -name '*pb.go' -not -path './vendor/*' -not -path \"./.*/*\"))\n+(cd \"$DIR\"/..; find . -type f -name '*.go' \\\n+  -not -name '*pb.go' \\\n+  -not -path './vendor/*' \\\n+  -not -path './.*/*' \\\n+  -exec goimports -w {} +)\n \n echo Run the code formatter\n (cd \"$DIR\"/..; golangci-lint fmt)"
+    }
+  ]
+}

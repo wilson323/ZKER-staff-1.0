@@ -1,0 +1,258 @@
+[
+  {
+    "path": "validation/agent-runtime/staffdeck-source/LICENSE",
+    "repo": "OpenBMB/StaffDeck",
+    "commit": "7adc7c84f61bd6cca13ff0380a811cbb3ae3c544",
+    "sourcePath": "LICENSE",
+    "url": "https://github.com/OpenBMB/StaffDeck/blob/7adc7c84f61bd6cca13ff0380a811cbb3ae3c544/LICENSE",
+    "sha256": "8486a10c4393cee1c25392769ddd3b2d6c242d6ec7928e1414efff7dfb2f07ef"
+  },
+  {
+    "path": "validation/agent-runtime/staffdeck-source/README.md",
+    "repo": "OpenBMB/StaffDeck",
+    "commit": "7adc7c84f61bd6cca13ff0380a811cbb3ae3c544",
+    "sourcePath": "README.md",
+    "url": "https://github.com/OpenBMB/StaffDeck/blob/7adc7c84f61bd6cca13ff0380a811cbb3ae3c544/README.md",
+    "sha256": "29b03141f2f0814d0f8ff2b0fa52f272a6e981ceb6ec02001856ff561686f7df"
+  },
+  {
+    "path": "validation/agent-runtime/staffdeck-source/backend/app/api/sessions.py",
+    "repo": "OpenBMB/StaffDeck",
+    "commit": "7adc7c84f61bd6cca13ff0380a811cbb3ae3c544",
+    "sourcePath": "backend/app/api/sessions.py",
+    "url": "https://github.com/OpenBMB/StaffDeck/blob/7adc7c84f61bd6cca13ff0380a811cbb3ae3c544/backend/app/api/sessions.py",
+    "sha256": "514be657142e8db9ec51f1d1972551d239fbddec63f823f94a4165f458851247"
+  },
+  {
+    "path": "validation/agent-runtime/staffdeck-source/backend/app/core/agent_loop.py",
+    "repo": "OpenBMB/StaffDeck",
+    "commit": "7adc7c84f61bd6cca13ff0380a811cbb3ae3c544",
+    "sourcePath": "backend/app/core/agent_loop.py",
+    "url": "https://github.com/OpenBMB/StaffDeck/blob/7adc7c84f61bd6cca13ff0380a811cbb3ae3c544/backend/app/core/agent_loop.py",
+    "sha256": "bdd48926156a3c814179c3181d35a5b674a71e950f567b872270cf32f29e9916"
+  },
+  {
+    "path": "validation/agent-runtime/staffdeck-source/backend/app/harness/__init__.py",
+    "repo": "OpenBMB/StaffDeck",
+    "commit": "7adc7c84f61bd6cca13ff0380a811cbb3ae3c544",
+    "sourcePath": "backend/app/harness/__init__.py",
+    "url": "https://github.com/OpenBMB/StaffDeck/blob/7adc7c84f61bd6cca13ff0380a811cbb3ae3c544/backend/app/harness/__init__.py",
+    "sha256": "794c0b9284fd9d3beff1ac41ed55cd60ec2aef47414c0a75983136d22bcdeedc"
+  },
+  {
+    "path": "validation/agent-runtime/staffdeck-source/backend/app/harness/artifacts.py",
+    "repo": "OpenBMB/StaffDeck",
+    "commit": "7adc7c84f61bd6cca13ff0380a811cbb3ae3c544",
+    "sourcePath": "backend/app/harness/artifacts.py",
+    "url": "https://github.com/OpenBMB/StaffDeck/blob/7adc7c84f61bd6cca13ff0380a811cbb3ae3c544/backend/app/harness/artifacts.py",
+    "sha256": "133fd1880b6cc3a84a6df3e7811d1f5334192ccf8d3747121dc3d6bb3a0d0d3c"
+  },
+  {
+    "path": "validation/agent-runtime/staffdeck-source/backend/app/harness/command.py",
+    "repo": "OpenBMB/StaffDeck",
+    "commit": "7adc7c84f61bd6cca13ff0380a811cbb3ae3c544",
+    "sourcePath": "backend/app/harness/command.py",
+    "url": "https://github.com/OpenBMB/StaffDeck/blob/7adc7c84f61bd6cca13ff0380a811cbb3ae3c544/backend/app/harness/command.py",
+    "sha256": "ee7af7dad35d4a05a88e8f416b1d01fe607a65e9299594c7dca33bb5a2035c10"
+  },
+  {
+    "path": "validation/agent-runtime/staffdeck-source/backend/app/harness/contracts.py",
+    "repo": "OpenBMB/StaffDeck",
+    "commit": "7adc7c84f61bd6cca13ff0380a811cbb3ae3c544",
+    "sourcePath": "backend/app/harness/contracts.py",
+    "url": "https://github.com/OpenBMB/StaffDeck/blob/7adc7c84f61bd6cca13ff0380a811cbb3ae3c544/backend/app/harness/contracts.py",
+    "sha256": "956c686e5a450443b5466893d630f16825039b66f64574d224f8d7002215e4ee"
+  },
+  {
+    "path": "validation/agent-runtime/staffdeck-source/backend/app/harness/errors.py",
+    "repo": "OpenBMB/StaffDeck",
+    "commit": "7adc7c84f61bd6cca13ff0380a811cbb3ae3c544",
+    "sourcePath": "backend/app/harness/errors.py",
+    "url": "https://github.com/OpenBMB/StaffDeck/blob/7adc7c84f61bd6cca13ff0380a811cbb3ae3c544/backend/app/harness/errors.py",
+    "sha256": "83ad29376228f5a367e235f4f58d3624beecb04af04bd28b35167a481b85269e"
+  },
+  {
+    "path": "validation/agent-runtime/staffdeck-source/backend/app/harness/execution_context.py",
+    "repo": "OpenBMB/StaffDeck",
+    "commit": "7adc7c84f61bd6cca13ff0380a811cbb3ae3c544",
+    "sourcePath": "backend/app/harness/execution_context.py",
+    "url": "https://github.com/OpenBMB/StaffDeck/blob/7adc7c84f61bd6cca13ff0380a811cbb3ae3c544/backend/app/harness/execution_context.py",
+    "sha256": "97aa6a1f3c8e2af262c06edbb61d8c2f537badf97e3170bcc2d4d9eadfb42bb1"
+  },
+  {
+    "path": "validation/agent-runtime/staffdeck-source/backend/app/harness/executor.py",
+    "repo": "OpenBMB/StaffDeck",
+    "commit": "7adc7c84f61bd6cca13ff0380a811cbb3ae3c544",
+    "sourcePath": "backend/app/harness/executor.py",
+    "url": "https://github.com/OpenBMB/StaffDeck/blob/7adc7c84f61bd6cca13ff0380a811cbb3ae3c544/backend/app/harness/executor.py",
+    "sha256": "b0c47c46987a3c5ed4e8975be73b7333320d6f59e0c00293f3088da196e0dba9"
+  },
+  {
+    "path": "validation/agent-runtime/staffdeck-source/backend/app/harness/filesystem.py",
+    "repo": "OpenBMB/StaffDeck",
+    "commit": "7adc7c84f61bd6cca13ff0380a811cbb3ae3c544",
+    "sourcePath": "backend/app/harness/filesystem.py",
+    "url": "https://github.com/OpenBMB/StaffDeck/blob/7adc7c84f61bd6cca13ff0380a811cbb3ae3c544/backend/app/harness/filesystem.py",
+    "sha256": "822d740d4ce94e11c33aaf0d04e210654f58302a2cf4eda4dc9c5bf2898cf991"
+  },
+  {
+    "path": "validation/agent-runtime/staffdeck-source/backend/app/harness/registry.py",
+    "repo": "OpenBMB/StaffDeck",
+    "commit": "7adc7c84f61bd6cca13ff0380a811cbb3ae3c544",
+    "sourcePath": "backend/app/harness/registry.py",
+    "url": "https://github.com/OpenBMB/StaffDeck/blob/7adc7c84f61bd6cca13ff0380a811cbb3ae3c544/backend/app/harness/registry.py",
+    "sha256": "e284e5bcb1581ca129e659609a2d6882507f99ba71a62c0fe1d91ea72f679d35"
+  },
+  {
+    "path": "validation/agent-runtime/staffdeck-source/backend/app/harness/sandbox.py",
+    "repo": "OpenBMB/StaffDeck",
+    "commit": "7adc7c84f61bd6cca13ff0380a811cbb3ae3c544",
+    "sourcePath": "backend/app/harness/sandbox.py",
+    "url": "https://github.com/OpenBMB/StaffDeck/blob/7adc7c84f61bd6cca13ff0380a811cbb3ae3c544/backend/app/harness/sandbox.py",
+    "sha256": "1bcf6ea9d0891cc793d8b4c7f76a97d3d179cc42c89c17992416495cf869879c"
+  },
+  {
+    "path": "validation/agent-runtime/staffdeck-source/backend/app/harness/skill_script.py",
+    "repo": "OpenBMB/StaffDeck",
+    "commit": "7adc7c84f61bd6cca13ff0380a811cbb3ae3c544",
+    "sourcePath": "backend/app/harness/skill_script.py",
+    "url": "https://github.com/OpenBMB/StaffDeck/blob/7adc7c84f61bd6cca13ff0380a811cbb3ae3c544/backend/app/harness/skill_script.py",
+    "sha256": "cd968bfda2ed33a9e8f52292c48713a1274c731240ee36ab5828eab15854d93c"
+  },
+  {
+    "path": "validation/agent-runtime/staffdeck-source/backend/app/runtime_lock.py",
+    "repo": "OpenBMB/StaffDeck",
+    "commit": "7adc7c84f61bd6cca13ff0380a811cbb3ae3c544",
+    "sourcePath": "backend/app/runtime_lock.py",
+    "url": "https://github.com/OpenBMB/StaffDeck/blob/7adc7c84f61bd6cca13ff0380a811cbb3ae3c544/backend/app/runtime_lock.py",
+    "sha256": "1822c177a68a85ef7e8213bbfed804c67d57d2f4b01f9083eb9fa723539609da"
+  },
+  {
+    "path": "validation/agent-runtime/staffdeck-source/backend/app/session/session_schema.py",
+    "repo": "OpenBMB/StaffDeck",
+    "commit": "7adc7c84f61bd6cca13ff0380a811cbb3ae3c544",
+    "sourcePath": "backend/app/session/session_schema.py",
+    "url": "https://github.com/OpenBMB/StaffDeck/blob/7adc7c84f61bd6cca13ff0380a811cbb3ae3c544/backend/app/session/session_schema.py",
+    "sha256": "4cd2f2b65ca21efea5f016826dfeeeff2fa74715fa1ae5f8de9de903ed55f0c3"
+  },
+  {
+    "path": "validation/agent-runtime/staffdeck-source/backend/pyproject.toml",
+    "repo": "OpenBMB/StaffDeck",
+    "commit": "7adc7c84f61bd6cca13ff0380a811cbb3ae3c544",
+    "sourcePath": "backend/pyproject.toml",
+    "url": "https://github.com/OpenBMB/StaffDeck/blob/7adc7c84f61bd6cca13ff0380a811cbb3ae3c544/backend/pyproject.toml",
+    "sha256": "2c70c54c5b43319186b31dd3db08dc2edfbd22a7a6b1b27991ee156e3213b8e4"
+  },
+  {
+    "path": "validation/agent-runtime/staffdeck-source/backend/app/core/cancellation.py",
+    "repo": "OpenBMB/StaffDeck",
+    "commit": "7adc7c84f61bd6cca13ff0380a811cbb3ae3c544",
+    "sourcePath": "backend/app/core/cancellation.py",
+    "url": "https://github.com/OpenBMB/StaffDeck/blob/7adc7c84f61bd6cca13ff0380a811cbb3ae3c544/backend/app/core/cancellation.py",
+    "sha256": "f1f11132cb714b1cce0b02dcd264a31d4688ff5edd532ff3dc501a51ca11ddeb"
+  },
+  {
+    "path": "validation/agent-runtime/staffdeck-source/backend/app/core/context_projection.py",
+    "repo": "OpenBMB/StaffDeck",
+    "commit": "7adc7c84f61bd6cca13ff0380a811cbb3ae3c544",
+    "sourcePath": "backend/app/core/context_projection.py",
+    "url": "https://github.com/OpenBMB/StaffDeck/blob/7adc7c84f61bd6cca13ff0380a811cbb3ae3c544/backend/app/core/context_projection.py",
+    "sha256": "c4a2291f2b0b7febfa73838a11ca40cd161a99d7d46ad93cb2029d08b4a95411"
+  },
+  {
+    "path": "validation/agent-runtime/staffdeck-source/backend/app/core/harness_agent.py",
+    "repo": "OpenBMB/StaffDeck",
+    "commit": "7adc7c84f61bd6cca13ff0380a811cbb3ae3c544",
+    "sourcePath": "backend/app/core/harness_agent.py",
+    "url": "https://github.com/OpenBMB/StaffDeck/blob/7adc7c84f61bd6cca13ff0380a811cbb3ae3c544/backend/app/core/harness_agent.py",
+    "sha256": "623f8a3946209ef56cc5b0b2b9a48bfba8540c8d48278f80b209feffe62510c4"
+  },
+  {
+    "path": "validation/agent-runtime/staffdeck-source/backend/app/core/harness_recovery.py",
+    "repo": "OpenBMB/StaffDeck",
+    "commit": "7adc7c84f61bd6cca13ff0380a811cbb3ae3c544",
+    "sourcePath": "backend/app/core/harness_recovery.py",
+    "url": "https://github.com/OpenBMB/StaffDeck/blob/7adc7c84f61bd6cca13ff0380a811cbb3ae3c544/backend/app/core/harness_recovery.py",
+    "sha256": "eb73924f7fd7c2ff9088c0ea8798d3b883376048fad2283e8e9b9a2d7e8711e3"
+  },
+  {
+    "path": "validation/agent-runtime/staffdeck-source/backend/app/core/harness_session_lease.py",
+    "repo": "OpenBMB/StaffDeck",
+    "commit": "7adc7c84f61bd6cca13ff0380a811cbb3ae3c544",
+    "sourcePath": "backend/app/core/harness_session_lease.py",
+    "url": "https://github.com/OpenBMB/StaffDeck/blob/7adc7c84f61bd6cca13ff0380a811cbb3ae3c544/backend/app/core/harness_session_lease.py",
+    "sha256": "f2a677a09df9d95a7b7bc558abcd291d864fac51a7a3ab47e19125de3224cd9a"
+  },
+  {
+    "path": "validation/agent-runtime/staffdeck-source/backend/app/core/harness_session_lock.py",
+    "repo": "OpenBMB/StaffDeck",
+    "commit": "7adc7c84f61bd6cca13ff0380a811cbb3ae3c544",
+    "sourcePath": "backend/app/core/harness_session_lock.py",
+    "url": "https://github.com/OpenBMB/StaffDeck/blob/7adc7c84f61bd6cca13ff0380a811cbb3ae3c544/backend/app/core/harness_session_lock.py",
+    "sha256": "10db302dbcaeea1d4138f3079507a0a3b83c738e4a692d328138e332498b439d"
+  },
+  {
+    "path": "validation/agent-runtime/staffdeck-source/backend/app/core/harness_turn_store.py",
+    "repo": "OpenBMB/StaffDeck",
+    "commit": "7adc7c84f61bd6cca13ff0380a811cbb3ae3c544",
+    "sourcePath": "backend/app/core/harness_turn_store.py",
+    "url": "https://github.com/OpenBMB/StaffDeck/blob/7adc7c84f61bd6cca13ff0380a811cbb3ae3c544/backend/app/core/harness_turn_store.py",
+    "sha256": "17e4d3fdda5c76ebd8f25e9afc5a5a9b8eee85f387332b083e2b02a7e6e7f4aa"
+  },
+  {
+    "path": "validation/agent-runtime/staffdeck-source/backend/app/core/harness_v2_engine.py",
+    "repo": "OpenBMB/StaffDeck",
+    "commit": "7adc7c84f61bd6cca13ff0380a811cbb3ae3c544",
+    "sourcePath": "backend/app/core/harness_v2_engine.py",
+    "url": "https://github.com/OpenBMB/StaffDeck/blob/7adc7c84f61bd6cca13ff0380a811cbb3ae3c544/backend/app/core/harness_v2_engine.py",
+    "sha256": "d1b51e6e843b4365c9ff63c9599a37e43b7b3c35b3f69e3e8c2171b0f34e7cfe"
+  },
+  {
+    "path": "validation/agent-runtime/staffdeck-source/backend/app/core/human_handoff_service.py",
+    "repo": "OpenBMB/StaffDeck",
+    "commit": "7adc7c84f61bd6cca13ff0380a811cbb3ae3c544",
+    "sourcePath": "backend/app/core/human_handoff_service.py",
+    "url": "https://github.com/OpenBMB/StaffDeck/blob/7adc7c84f61bd6cca13ff0380a811cbb3ae3c544/backend/app/core/human_handoff_service.py",
+    "sha256": "238a087b29fc09e98d54789a05bf7be53c667d789100e506b4345b6199e74a4d"
+  },
+  {
+    "path": "validation/agent-runtime/staffdeck-source/backend/app/core/task_frame_store.py",
+    "repo": "OpenBMB/StaffDeck",
+    "commit": "7adc7c84f61bd6cca13ff0380a811cbb3ae3c544",
+    "sourcePath": "backend/app/core/task_frame_store.py",
+    "url": "https://github.com/OpenBMB/StaffDeck/blob/7adc7c84f61bd6cca13ff0380a811cbb3ae3c544/backend/app/core/task_frame_store.py",
+    "sha256": "8c057f4a2391de5a361cee5518663be52252d52114c5c3617aa7f09e1acc7cd4"
+  },
+  {
+    "path": "validation/agent-runtime/staffdeck-source/backend/app/core/tool_replay_policy.py",
+    "repo": "OpenBMB/StaffDeck",
+    "commit": "7adc7c84f61bd6cca13ff0380a811cbb3ae3c544",
+    "sourcePath": "backend/app/core/tool_replay_policy.py",
+    "url": "https://github.com/OpenBMB/StaffDeck/blob/7adc7c84f61bd6cca13ff0380a811cbb3ae3c544/backend/app/core/tool_replay_policy.py",
+    "sha256": "cd792581b5cc43e0c300b0be74fc7f8058ee11219339aefb7e35e26b00759670"
+  },
+  {
+    "path": "validation/agent-runtime/staffdeck-source/backend/app/core/turn_finalizer.py",
+    "repo": "OpenBMB/StaffDeck",
+    "commit": "7adc7c84f61bd6cca13ff0380a811cbb3ae3c544",
+    "sourcePath": "backend/app/core/turn_finalizer.py",
+    "url": "https://github.com/OpenBMB/StaffDeck/blob/7adc7c84f61bd6cca13ff0380a811cbb3ae3c544/backend/app/core/turn_finalizer.py",
+    "sha256": "b374d6b2330347969d01bd322fb767ccb70383148b032359615c0373192c2be8"
+  },
+  {
+    "path": "validation/agent-runtime/staffdeck-source/backend/app/evolution/service.py",
+    "repo": "OpenBMB/StaffDeck",
+    "commit": "7adc7c84f61bd6cca13ff0380a811cbb3ae3c544",
+    "sourcePath": "backend/app/evolution/service.py",
+    "url": "https://github.com/OpenBMB/StaffDeck/blob/7adc7c84f61bd6cca13ff0380a811cbb3ae3c544/backend/app/evolution/service.py",
+    "sha256": "5f4debc87fa7595ab047a566a6a505280fa8a78db1a04ae198a74f65672fa9ce"
+  },
+  {
+    "path": "validation/agent-runtime/staffdeck-source/backend/app/session/message_visibility.py",
+    "repo": "OpenBMB/StaffDeck",
+    "commit": "7adc7c84f61bd6cca13ff0380a811cbb3ae3c544",
+    "sourcePath": "backend/app/session/message_visibility.py",
+    "url": "https://github.com/OpenBMB/StaffDeck/blob/7adc7c84f61bd6cca13ff0380a811cbb3ae3c544/backend/app/session/message_visibility.py",
+    "sha256": "9885da020ea70c14d6d6d3636e9f994629effa0e3b61e009128fd22302e830d5"
+  }
+]

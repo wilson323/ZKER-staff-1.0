@@ -1,0 +1,459 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+          "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<!--
+  Licensed to the Apache Software Foundation (ASF) under one
+  or more contributor license agreements.  See the NOTICE file
+  distributed with this work for additional information
+  regarding copyright ownership.  The ASF licenses this file
+  to you under the Apache License, Version 2.0 (the
+  "License"); you may not use this file except in compliance
+  with the License.  You may obtain a copy of the License at
+
+    https://www.apache.org/licenses/LICENSE-2.0
+ 
+  Unless required by applicable law or agreed to in writing,
+  software distributed under the License is distributed on an
+  "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+  KIND, either express or implied.  See the License for the
+  specific language governing permissions and limitations
+  under the License.
+-->
+
+
+
+
+
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>Apache Tika &#x2013; Download</title>
+    <style type="text/css" media="all">
+      @import url("./css/site.css");
+    </style>
+    <link rel="icon" type="image/png" href="./tikaNoText16.png" />
+  </head>
+  <body>
+    <div id="body">
+      <div id="banner">
+        <a href="https://tika.apache.org" id="bannerLeft" title="Apache Tika"
+          ><img src="https://tika.apache.org/tika-logo.png" alt="Apache Tika"
+                width="225" height="100"/></a>
+        <a href="https://www.apache.org/" id="bannerRight"
+           title="The Apache Software Foundation"
+          ><img src="https://tika.apache.org/asf-logo.jpg" alt="The Apache Software Foundation"
+                width="190" height="100"/></a>
+      </div>
+      <div id="content">
+        <!-- Licensed to the Apache Software Foundation (ASF) under one or more --><!-- contributor license agreements.  See the NOTICE file distributed with --><!-- this work for additional information regarding copyright ownership. --><!-- The ASF licenses this file to You under the Apache License, Version 2.0 --><!-- (the "License"); you may not use this file except in compliance with --><!-- the License.  You may obtain a copy of the License at --><!--  --><!-- https://www.apache.org/licenses/LICENSE-2.0 --><!--  --><!-- Unless required by applicable law or agreed to in writing, software --><!-- distributed under the License is distributed on an "AS IS" BASIS, --><!-- WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. --><!-- See the License for the specific language governing permissions and --><!-- limitations under the License. --><div class="section">
+<h2><a name="Download_Apache_Tika"></a>Download Apache Tika</h2>
+<p>The latest release is Apache Tika 4.0.0. The 3.x line (3.3.2) remains supported and continues to receive bug fixes and dependency upgrades -- see the &quot;3.x Maintenance Line&quot; section below.</p>
+<div class="section">
+<h3><a name="Latest_Release:_4.0.0"></a>Latest Release: 4.0.0</h3>
+<p><b>Tika 4.x ships zip distributions, not runnable jars.</b> tika-app, tika-server-standard and tika-eval-app are zip archives containing a thin launcher jar and an adjacent <tt>lib/</tt> directory. The same jars are published to Maven Central for dependency resolution, but running one on its own fails with <tt>NoClassDefFoundError</tt>. Unpack the zip and run from inside it:</p>
+<div class="source">
+<pre>% unzip tika-app-4.0.0.zip -d tika-app-4.0.0
+% cd tika-app-4.0.0
+% java -jar tika-app-4.0.0.jar --help</pre></div>
+<p>Tika 4.x requires <b>Java 17 or later</b>. Upgrading from 3.x? Start with the <a href="./docs/4.0.x/migration-to-4x/index.html">migration guides</a>, and see the <a href="./4.0.0/index.html">4.0.0 changes page</a> for the full list of breaking changes.</p>
+<p>See the <a class="externalLink" href="https://www.apache.org/dist/tika/4.0.0/CHANGES-4.0.0.txt">CHANGES-4.0.0.txt</a> file for more information on the list of changes in this release.</p>
+<ul>
+<li><a class="externalLink" href="https://www.apache.org/dyn/closer.lua/tika/4.0.0/tika-4.0.0-src.zip">Mirrors for tika-4.0.0-src.zip</a> (source archive, <a class="externalLink" href="https://downloads.apache.org/tika/4.0.0/tika-4.0.0-src.zip.asc">PGP signature</a>, <a class="externalLink" href="https://downloads.apache.org/tika/4.0.0/tika-4.0.0-src.zip.sha512">SHA512</a>)</li>
+<li><a class="externalLink" href="https://www.apache.org/dyn/closer.lua/tika/4.0.0/tika-app-4.0.0.zip">Mirrors for tika-app-4.0.0.zip</a> (command-line application distribution, <a class="externalLink" href="https://downloads.apache.org/tika/4.0.0/tika-app-4.0.0.zip.asc">PGP signature</a>, <a class="externalLink" href="https://downloads.apache.org/tika/4.0.0/tika-app-4.0.0.zip.sha512">SHA512</a>)</li>
+<li><a class="externalLink" href="https://www.apache.org/dyn/closer.lua/tika/4.0.0/tika-server-standard-4.0.0.zip">Mirrors for tika-server-standard-4.0.0.zip</a> (server distribution, includes service install scripts, <a class="externalLink" href="https://downloads.apache.org/tika/4.0.0/tika-server-standard-4.0.0.zip.asc">PGP signature</a>, <a class="externalLink" href="https://downloads.apache.org/tika/4.0.0/tika-server-standard-4.0.0.zip.sha512">SHA512</a>)</li>
+<li><a class="externalLink" href="https://www.apache.org/dyn/closer.lua/tika/4.0.0/tika-eval-app-4.0.0.zip">Mirrors for tika-eval-app-4.0.0.zip</a> (evaluation toolkit distribution, <a class="externalLink" href="https://downloads.apache.org/tika/4.0.0/tika-eval-app-4.0.0.zip.asc">PGP signature</a>, <a class="externalLink" href="https://downloads.apache.org/tika/4.0.0/tika-eval-app-4.0.0.zip.sha512">SHA512</a>)</li>
+<li><a class="externalLink" href="https://www.apache.org/dyn/closer.lua/tika/4.0.0/tika-parser-scientific-package-4.0.0-shaded.jar">Mirrors for tika-parser-scientific-package-4.0.0-shaded.jar</a> (scientific parsers, <a class="externalLink" href="https://downloads.apache.org/tika/4.0.0/tika-parser-scientific-package-4.0.0-shaded.jar.asc">PGP signature</a>, <a class="externalLink" href="https://downloads.apache.org/tika/4.0.0/tika-parser-scientific-package-4.0.0-shaded.jar.sha512">SHA512</a>)</li>
+<li><a class="externalLink" href="https://www.apache.org/dyn/closer.lua/tika/4.0.0/tika-parser-nlp-package-4.0.0-shaded.jar">Mirrors for tika-parser-nlp-package-4.0.0-shaded.jar</a> (nlp parser, <a class="externalLink" href="https://downloads.apache.org/tika/4.0.0/tika-parser-nlp-package-4.0.0-shaded.jar.asc">PGP signature</a>, <a class="externalLink" href="https://downloads.apache.org/tika/4.0.0/tika-parser-nlp-package-4.0.0-shaded.jar.sha512">SHA512</a>)</li>
+<li><a class="externalLink" href="https://www.apache.org/dyn/closer.lua/tika/4.0.0/tika-parser-sqlite3-package-4.0.0-shaded.jar">Mirrors for tika-parser-sqlite3-package-4.0.0-shaded.jar</a> (sqlite3 parser, <a class="externalLink" href="https://downloads.apache.org/tika/4.0.0/tika-parser-sqlite3-package-4.0.0-shaded.jar.asc">PGP signature</a>, <a class="externalLink" href="https://downloads.apache.org/tika/4.0.0/tika-parser-sqlite3-package-4.0.0-shaded.jar.sha512">SHA512</a>)</li></ul>
+<p>The following optional tika-pipes plugins may be unpacked into the <tt>plugins</tt> directory of the tika-app or tika-server distributions to add fetchers, emitters and iterators for external systems:</p>
+<ul>
+<li><a class="externalLink" href="https://www.apache.org/dyn/closer.lua/tika/4.0.0/tika-pipes-atlassian-jwt-4.0.0.zip">Mirrors for tika-pipes-atlassian-jwt-4.0.0.zip</a> (Atlassian JWT fetcher pipes plugin, <a class="externalLink" href="https://downloads.apache.org/tika/4.0.0/tika-pipes-atlassian-jwt-4.0.0.zip.asc">PGP signature</a>, <a class="externalLink" href="https://downloads.apache.org/tika/4.0.0/tika-pipes-atlassian-jwt-4.0.0.zip.sha512">SHA512</a>)</li>
+<li><a class="externalLink" href="https://www.apache.org/dyn/closer.lua/tika/4.0.0/tika-pipes-az-blob-4.0.0.zip">Mirrors for tika-pipes-az-blob-4.0.0.zip</a> (Azure Blob Storage pipes plugin, <a class="externalLink" href="https://downloads.apache.org/tika/4.0.0/tika-pipes-az-blob-4.0.0.zip.asc">PGP signature</a>, <a class="externalLink" href="https://downloads.apache.org/tika/4.0.0/tika-pipes-az-blob-4.0.0.zip.sha512">SHA512</a>)</li>
+<li><a class="externalLink" href="https://www.apache.org/dyn/closer.lua/tika/4.0.0/tika-pipes-csv-4.0.0.zip">Mirrors for tika-pipes-csv-4.0.0.zip</a> (CSV pipes plugin, <a class="externalLink" href="https://downloads.apache.org/tika/4.0.0/tika-pipes-csv-4.0.0.zip.asc">PGP signature</a>, <a class="externalLink" href="https://downloads.apache.org/tika/4.0.0/tika-pipes-csv-4.0.0.zip.sha512">SHA512</a>)</li>
+<li><a class="externalLink" href="https://www.apache.org/dyn/closer.lua/tika/4.0.0/tika-pipes-es-4.0.0.zip">Mirrors for tika-pipes-es-4.0.0.zip</a> (Elasticsearch pipes plugin, <a class="externalLink" href="https://downloads.apache.org/tika/4.0.0/tika-pipes-es-4.0.0.zip.asc">PGP signature</a>, <a class="externalLink" href="https://downloads.apache.org/tika/4.0.0/tika-pipes-es-4.0.0.zip.sha512">SHA512</a>)</li>
+<li><a class="externalLink" href="https://www.apache.org/dyn/closer.lua/tika/4.0.0/tika-pipes-file-system-4.0.0.zip">Mirrors for tika-pipes-file-system-4.0.0.zip</a> (file system pipes plugin, <a class="externalLink" href="https://downloads.apache.org/tika/4.0.0/tika-pipes-file-system-4.0.0.zip.asc">PGP signature</a>, <a class="externalLink" href="https://downloads.apache.org/tika/4.0.0/tika-pipes-file-system-4.0.0.zip.sha512">SHA512</a>)</li>
+<li><a class="externalLink" href="https://www.apache.org/dyn/closer.lua/tika/4.0.0/tika-pipes-gcs-4.0.0.zip">Mirrors for tika-pipes-gcs-4.0.0.zip</a> (Google Cloud Storage pipes plugin, <a class="externalLink" href="https://downloads.apache.org/tika/4.0.0/tika-pipes-gcs-4.0.0.zip.asc">PGP signature</a>, <a class="externalLink" href="https://downloads.apache.org/tika/4.0.0/tika-pipes-gcs-4.0.0.zip.sha512">SHA512</a>)</li>
+<li><a class="externalLink" href="https://www.apache.org/dyn/closer.lua/tika/4.0.0/tika-pipes-google-drive-4.0.0.zip">Mirrors for tika-pipes-google-drive-4.0.0.zip</a> (Google Drive pipes plugin, <a class="externalLink" href="https://downloads.apache.org/tika/4.0.0/tika-pipes-google-drive-4.0.0.zip.asc">PGP signature</a>, <a class="externalLink" href="https://downloads.apache.org/tika/4.0.0/tika-pipes-google-drive-4.0.0.zip.sha512">SHA512</a>)</li>
+<li><a class="externalLink" href="https://www.apache.org/dyn/closer.lua/tika/4.0.0/tika-pipes-http-4.0.0.zip">Mirrors for tika-pipes-http-4.0.0.zip</a> (HTTP pipes plugin, <a class="externalLink" href="https://downloads.apache.org/tika/4.0.0/tika-pipes-http-4.0.0.zip.asc">PGP signature</a>, <a class="externalLink" href="https://downloads.apache.org/tika/4.0.0/tika-pipes-http-4.0.0.zip.sha512">SHA512</a>)</li>
+<li><a class="externalLink" href="https://www.apache.org/dyn/closer.lua/tika/4.0.0/tika-pipes-jdbc-4.0.0.zip">Mirrors for tika-pipes-jdbc-4.0.0.zip</a> (JDBC pipes plugin, <a class="externalLink" href="https://downloads.apache.org/tika/4.0.0/tika-pipes-jdbc-4.0.0.zip.asc">PGP signature</a>, <a class="externalLink" href="https://downloads.apache.org/tika/4.0.0/tika-pipes-jdbc-4.0.0.zip.sha512">SHA512</a>)</li>
+<li><a class="externalLink" href="https://www.apache.org/dyn/closer.lua/tika/4.0.0/tika-pipes-json-4.0.0.zip">Mirrors for tika-pipes-json-4.0.0.zip</a> (JSON pipes plugin, <a class="externalLink" href="https://downloads.apache.org/tika/4.0.0/tika-pipes-json-4.0.0.zip.asc">PGP signature</a>, <a class="externalLink" href="https://downloads.apache.org/tika/4.0.0/tika-pipes-json-4.0.0.zip.sha512">SHA512</a>)</li>
+<li><a class="externalLink" href="https://www.apache.org/dyn/closer.lua/tika/4.0.0/tika-pipes-kafka-4.0.0.zip">Mirrors for tika-pipes-kafka-4.0.0.zip</a> (Apache Kafka pipes plugin, <a class="externalLink" href="https://downloads.apache.org/tika/4.0.0/tika-pipes-kafka-4.0.0.zip.asc">PGP signature</a>, <a class="externalLink" href="https://downloads.apache.org/tika/4.0.0/tika-pipes-kafka-4.0.0.zip.sha512">SHA512</a>)</li>
+<li><a class="externalLink" href="https://www.apache.org/dyn/closer.lua/tika/4.0.0/tika-pipes-microsoft-graph-4.0.0.zip">Mirrors for tika-pipes-microsoft-graph-4.0.0.zip</a> (Microsoft Graph pipes plugin, <a class="externalLink" href="https://downloads.apache.org/tika/4.0.0/tika-pipes-microsoft-graph-4.0.0.zip.asc">PGP signature</a>, <a class="externalLink" href="https://downloads.apache.org/tika/4.0.0/tika-pipes-microsoft-graph-4.0.0.zip.sha512">SHA512</a>)</li>
+<li><a class="externalLink" href="https://www.apache.org/dyn/closer.lua/tika/4.0.0/tika-pipes-opensearch-4.0.0.zip">Mirrors for tika-pipes-opensearch-4.0.0.zip</a> (OpenSearch pipes plugin, <a class="externalLink" href="https://downloads.apache.org/tika/4.0.0/tika-pipes-opensearch-4.0.0.zip.asc">PGP signature</a>, <a class="externalLink" href="https://downloads.apache.org/tika/4.0.0/tika-pipes-opensearch-4.0.0.zip.sha512">SHA512</a>)</li>
+<li><a class="externalLink" href="https://www.apache.org/dyn/closer.lua/tika/4.0.0/tika-pipes-s3-4.0.0.zip">Mirrors for tika-pipes-s3-4.0.0.zip</a> (Amazon S3 pipes plugin, <a class="externalLink" href="https://downloads.apache.org/tika/4.0.0/tika-pipes-s3-4.0.0.zip.asc">PGP signature</a>, <a class="externalLink" href="https://downloads.apache.org/tika/4.0.0/tika-pipes-s3-4.0.0.zip.sha512">SHA512</a>)</li>
+<li><a class="externalLink" href="https://www.apache.org/dyn/closer.lua/tika/4.0.0/tika-pipes-solr-4.0.0.zip">Mirrors for tika-pipes-solr-4.0.0.zip</a> (Solr pipes plugin, <a class="externalLink" href="https://downloads.apache.org/tika/4.0.0/tika-pipes-solr-4.0.0.zip.asc">PGP signature</a>, <a class="externalLink" href="https://downloads.apache.org/tika/4.0.0/tika-pipes-solr-4.0.0.zip.sha512">SHA512</a>)</li></ul></div>
+<div class="section">
+<h3><a name="a3.x_Maintenance_Line:_3.3.2"></a>3.x Maintenance Line: 3.3.2</h3>
+<p>Tika 3.3.2 is the current release of the 3.x line, which remains supported. It runs on <b>Java 11 or later</b> and ships the traditional runnable jars rather than zip distributions. New work goes into 4.x; the 3.x line receives bug fixes and dependency upgrades.</p>
+<p>See the <a class="externalLink" href="https://www.apache.org/dist/tika/3.3.2/CHANGES-3.3.2.txt">CHANGES-3.3.2.txt</a> file for more information on the list of changes in this release. Documentation for 3.x lives at <a href="./3.3.2/index.html">tika.apache.org/3.3.2</a>.</p>
+<ul>
+<li><a class="externalLink" href="https://www.apache.org/dyn/closer.lua/tika/3.3.2/tika-3.3.2-src.zip">Mirrors for tika-3.3.2-src.zip</a> (source archive, <a class="externalLink" href="https://downloads.apache.org/tika/3.3.2/tika-3.3.2-src.zip.asc">PGP signature</a>, <a class="externalLink" href="https://downloads.apache.org/tika/3.3.2/tika-3.3.2-src.zip.sha512">SHA512</a>)</li>
+<li><a class="externalLink" href="https://www.apache.org/dyn/closer.lua/tika/3.3.2/tika-app-3.3.2.jar">Mirrors for tika-app-3.3.2.jar</a> (runnable jar, <a class="externalLink" href="https://downloads.apache.org/tika/3.3.2/tika-app-3.3.2.jar.asc">PGP signature</a>, <a class="externalLink" href="https://downloads.apache.org/tika/3.3.2/tika-app-3.3.2.jar.sha512">SHA512</a>)</li>
+<li><a class="externalLink" href="https://www.apache.org/dyn/closer.lua/tika/3.3.2/tika-server-standard-3.3.2.jar">Mirrors for tika-server-standard-3.3.2.jar</a> (runnable jar, <a class="externalLink" href="https://downloads.apache.org/tika/3.3.2/tika-server-standard-3.3.2.jar.asc">PGP signature</a>, <a class="externalLink" href="https://downloads.apache.org/tika/3.3.2/tika-server-standard-3.3.2.jar.sha512">SHA512</a>)</li>
+<li><a class="externalLink" href="https://www.apache.org/dyn/closer.lua/tika/3.3.2/tika-server-standard-3.3.2-bin.zip">Mirrors for tika-server-standard-3.3.2-bin.zip</a> (tika-server as a service, zip, <a class="externalLink" href="https://downloads.apache.org/tika/3.3.2/tika-server-standard-3.3.2-bin.zip.asc">PGP signature</a>, <a class="externalLink" href="https://downloads.apache.org/tika/3.3.2/tika-server-standard-3.3.2-bin.zip.sha512">SHA512</a>)</li>
+<li><a class="externalLink" href="https://www.apache.org/dyn/closer.lua/tika/3.3.2/tika-server-standard-3.3.2-bin.tgz">Mirrors for tika-server-standard-3.3.2-bin.tgz</a> (tika-server as a service, tgz, <a class="externalLink" href="https://downloads.apache.org/tika/3.3.2/tika-server-standard-3.3.2-bin.tgz.asc">PGP signature</a>, <a class="externalLink" href="https://downloads.apache.org/tika/3.3.2/tika-server-standard-3.3.2-bin.tgz.sha512">SHA512</a>)</li>
+<li><a class="externalLink" href="https://www.apache.org/dyn/closer.lua/tika/3.3.2/tika-eval-app-3.3.2.jar">Mirrors for tika-eval-app-3.3.2.jar</a> (runnable jar, <a class="externalLink" href="https://downloads.apache.org/tika/3.3.2/tika-eval-app-3.3.2.jar.asc">PGP signature</a>, <a class="externalLink" href="https://downloads.apache.org/tika/3.3.2/tika-eval-app-3.3.2.jar.sha512">SHA512</a>)</li>
+<li><a class="externalLink" href="https://www.apache.org/dyn/closer.lua/tika/3.3.2/tika-parser-scientific-package-3.3.2.jar">Mirrors for tika-parser-scientific-package-3.3.2.jar</a> (scientific parsers, <a class="externalLink" href="https://downloads.apache.org/tika/3.3.2/tika-parser-scientific-package-3.3.2.jar.asc">PGP signature</a>, <a class="externalLink" href="https://downloads.apache.org/tika/3.3.2/tika-parser-scientific-package-3.3.2.jar.sha512">SHA512</a>)</li>
+<li><a class="externalLink" href="https://www.apache.org/dyn/closer.lua/tika/3.3.2/tika-parser-nlp-package-3.3.2.jar">Mirrors for tika-parser-nlp-package-3.3.2.jar</a> (nlp parser, <a class="externalLink" href="https://downloads.apache.org/tika/3.3.2/tika-parser-nlp-package-3.3.2.jar.asc">PGP signature</a>, <a class="externalLink" href="https://downloads.apache.org/tika/3.3.2/tika-parser-nlp-package-3.3.2.jar.sha512">SHA512</a>)</li>
+<li><a class="externalLink" href="https://www.apache.org/dyn/closer.lua/tika/3.3.2/tika-parser-sqlite3-package-3.3.2.jar">Mirrors for tika-parser-sqlite3-package-3.3.2.jar</a> (sqlite3 parser, <a class="externalLink" href="https://downloads.apache.org/tika/3.3.2/tika-parser-sqlite3-package-3.3.2.jar.asc">PGP signature</a>, <a class="externalLink" href="https://downloads.apache.org/tika/3.3.2/tika-parser-sqlite3-package-3.3.2.jar.sha512">SHA512</a>)</li></ul>
+<p>Apache Tika releases are available under the <a class="externalLink" href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a>. See the NOTICE.txt file contained in each release artifact for applicable copyright attribution notices.</p>
+<p>If you are looking for previous releases of Apache Tika, have a look in the <a class="externalLink" href="https://archive.apache.org/dist/tika/">archives</a>.</p>
+<p>If you are looking for releases of Apache Tika from the Apache Lucene project (pre-0.8 releases), have a look in the <a class="externalLink" href="https://archive.apache.org/dist/lucene/tika/">lucene archives</a>. If you are looking for releases of Apache Tika from the Apache Incubator (pre-0.2 releases), have a look in the <a class="externalLink" href="https://archive.apache.org/dist/incubator/tika/">incubator archives</a>.</p></div></div>
+<div class="section">
+<h2><a name="Export_control"></a>Export control</h2>
+<p>Apache Tika includes cryptographic software. The country in which you currently reside may have restrictions on the import, possession, use, and/or re-export to another country, of encryption software. BEFORE using any encryption software, please check your country's laws, regulations and policies concerning the import, possession, or use, and re-export of encryption software, to see if this is permitted. See &lt;<a class="externalLink" href="http://www.wassenaar.org/">http://www.wassenaar.org/</a>&gt; for more information.</p>
+<p>The U.S. Government Department of Commerce, Bureau of Industry and Security (BIS), has classified this software as Export Commodity Control Number (ECCN) 5D002.C.1, which includes information security software using or performing cryptographic functions with asymmetric algorithms. The form and manner of this Apache Software Foundation distribution makes it eligible for export under the License Exception ENC Technology Software Unrestricted (TSU) exception (see the BIS Export Administration Regulations, Section 740.13) for both object code and source code.</p>
+<p>The following provides more details on the included cryptographic software:</p>
+<ul>
+<li>Apache Tika uses the Bouncy Castle generic encryption libraries for extracting text content and metadata from encrypted PDF files. See <a class="externalLink" href="https://www.bouncycastle.org/">https://www.bouncycastle.org/</a> for more details on Bouncy Castle.</li></ul></div>
+<div class="section">
+<h2><a name="Verify"></a>Verify</h2>
+<p>It is essential that you verify the integrity of the downloaded files using the PGP signatures. Please read <a class="externalLink" href="https://www.apache.org/info/verification.html">How to Verify Downloaded Files</a> for more information on how and why you should verify our releases.</p>
+<p>The PGP signatures can be verified using PGP or GPG. First download the <a class="externalLink" href="https://www.apache.org/dist/tika/KEYS">KEYS</a> file as well as the .asc signature files for the relevant release packages. Make sure you get these files from the main distribution directory, rather than from a mirror. Then verify the signatures using</p>
+<div class="source">
+<pre>% pgpk -a KEYS
+% pgpv apache-tika-X.Y.Z-src.zip.asc</pre></div>
+<p>or</p>
+<div class="source">
+<pre>% pgp -ka KEYS
+% pgp apache-tika-X.Y.Z-src.zip.asc</pre></div>
+<p>or</p>
+<div class="source">
+<pre>% gpg --import KEYS
+% gpg --verify apache-tika-X.Y.Z-src.zip.asc apache-tika-X.Y.Z-src.zip</pre></div></div>
+      </div>
+      <div id="sidebar">
+        <div id="navigation">
+                    <h5>Apache Tika</h5>
+            <ul>
+              
+    <li class="none">
+                    <a href="index.html">Introduction</a>
+          </li>
+              
+    <li class="none">
+              <strong>Download</strong>
+        </li>
+              
+    <li class="none">
+                    <a href="contribute.html">Contribute</a>
+          </li>
+              
+    <li class="none">
+                    <a href="mail-lists.html">Mailing Lists</a>
+          </li>
+              
+    <li class="none">
+                    <a href="https://cwiki.apache.org/confluence/display/tika" class="externalLink">Tika Wiki</a>
+          </li>
+              
+    <li class="none">
+                    <a href="https://cwiki.apache.org/confluence/display/TIKA/TikaServer" class="externalLink">Tika Server Wiki</a>
+          </li>
+              
+    <li class="none">
+                    <a href="https://issues.apache.org/jira/browse/TIKA" class="externalLink">Issue Tracker</a>
+          </li>
+              
+    <li class="none">
+                    <a href="security-model.html">Security Model</a>
+          </li>
+              
+    <li class="none">
+                    <a href="security.html">Security</a>
+          </li>
+              
+    <li class="none">
+                    <a href="https://cwiki.apache.org/confluence/display/TIKA/Support" class="externalLink">Tika Support</a>
+          </li>
+          </ul>
+              <h5>Documentation</h5>
+            <ul>
+              
+          
+                    
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+              
+        <li class="expanded">
+                    <a href="docs/4.0.x/index.html">Apache Tika 4.0.0</a>
+                  <ul>
+                  
+    <li class="none">
+                    <a href="docs/4.0.x/index.html">Documentation Home</a>
+          </li>
+                  
+    <li class="none">
+                    <a href="docs/4.0.x/using-tika/index.html">Using Tika</a>
+          </li>
+                  
+    <li class="none">
+                    <a href="docs/4.0.x/using-tika/java-api/getting-started.html">Getting Started (Java API)</a>
+          </li>
+                  
+    <li class="none">
+                    <a href="docs/4.0.x/pipes/index.html">Pipes</a>
+          </li>
+                  
+    <li class="none">
+                    <a href="docs/4.0.x/configuration/index.html">Configuration</a>
+          </li>
+                  
+    <li class="none">
+                    <a href="docs/4.0.x/migration-to-4x/index.html">Migrating to Tika 4.x</a>
+          </li>
+                  
+    <li class="none">
+                    <a href="4.0.0/index.html">Changes</a>
+          </li>
+                  
+    <li class="none">
+                    <a href="4.0.0/api/">API Documentation</a>
+          </li>
+              </ul>
+        </li>
+              
+          
+                    
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+              
+        <li class="expanded">
+                    <a href="3.3.2/index.html">Apache Tika 3.3.2</a>
+                  <ul>
+                  
+    <li class="none">
+                    <a href="3.3.2/gettingstarted.html">Getting Started</a>
+          </li>
+                  
+    <li class="none">
+                    <a href="3.3.2/formats.html">Supported Formats</a>
+          </li>
+                  
+    <li class="none">
+                    <a href="3.3.2/parser.html">Parser API</a>
+          </li>
+                  
+    <li class="none">
+                    <a href="3.3.2/parser_guide.html">Parser 5min Quick Start Guide</a>
+          </li>
+                  
+    <li class="none">
+                    <a href="3.3.2/detection.html">Content and Language Detection</a>
+          </li>
+                  
+    <li class="none">
+                    <a href="3.3.2/configuring.html">Configuring Tika</a>
+          </li>
+                  
+    <li class="none">
+                    <a href="3.3.2/examples.html">Usage Examples</a>
+          </li>
+                  
+    <li class="none">
+                    <a href="3.3.2/api/">API Documentation</a>
+          </li>
+              </ul>
+        </li>
+              
+                
+                    
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+              
+        <li class="collapsed">
+                    <a href="3.3.1/index.html">Apache Tika 3.3.1</a>
+                </li>
+              
+                
+                    
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+              
+        <li class="collapsed">
+                    <a href="3.3.0/index.html">Apache Tika 3.3.0</a>
+                </li>
+              
+                
+                    
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+              
+        <li class="collapsed">
+                    <a href="3.2.3/index.html">Apache Tika 3.2.3</a>
+                </li>
+              
+                
+                    
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+              
+        <li class="collapsed">
+                    <a href="3.2.2/index.html">Apache Tika 3.2.2</a>
+                </li>
+              
+                
+                    
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+              
+        <li class="collapsed">
+                    <a href="3.2.1/index.html">Apache Tika 3.2.1</a>
+                </li>
+              
+                
+                    
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+              
+        <li class="collapsed">
+                    <a href="3.2.0/index.html">Apache Tika 3.2.0</a>
+                </li>
+              
+                
+                    
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+              
+        <li class="collapsed">
+                    <a href="3.1.0/index.html">Apache Tika 3.1.0</a>
+                </li>
+              
+                
+                    
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+              
+        <li class="collapsed">
+                    <a href="3.0.0/index.html">Apache Tika 3.0.0</a>
+                </li>
+              
+                
+                    
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+              
+        <li class="collapsed">
+                    <a href="3.0.0-BETA2/index.html">Apache Tika 3.0.0-BETA2</a>
+                </li>
+              
+                
+                    
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+              
+        <li class="collapsed">
+                    <a href="3.0.0-BETA/index.html">Apache Tika 3.0.0-BETA</a>
+                </li>
+          </ul>
+              <h5>The Apache Software Foundation</h5>
+            <ul>
+              
+    <li class="none">
+                    <a href="https://www.apache.org/foundation/" class="externalLink">About</a>
+          </li>
+              
+    <li class="none">
+                    <a href="https://www.apache.org/licenses/" class="externalLink">License</a>
+          </li>
+              
+    <li class="none">
+                    <a href="https://www.apache.org/security/" class="externalLink">Security</a>
+          </li>
+              
+    <li class="none">
+                    <a href="https://www.apache.org/foundation/sponsorship.html" class="externalLink">Sponsorship</a>
+          </li>
+              
+    <li class="none">
+                    <a href="https://www.apache.org/foundation/thanks.html" class="externalLink">Thanks</a>
+          </li>
+          </ul>
+      
+
+
+          <div id="bookpromo">
+            <h5>Books about Tika</h5>
+            <p>
+              <a href="http://manning.com/mattmann/" title="Tika in Action"
+                ><img src="./mattmann_cover150.jpg"
+                      width="150" height="186"/></a>
+            </p>
+          </div>
+        </div>
+      </div>
+      <div id="footer">
+        <p>
+          Copyright &#169; 2026
+          <a href="https://www.apache.org/">The Apache Software Foundation</a>.
+          Site powered by <a href="https://maven.apache.org/">Apache Maven</a>. 
+           <br/>
+          Apache Tika, Tika, Apache, the Apache feather logo, and the Apache
+          Tika project logo are trademarks of The Apache Software Foundation.
+        </p>
+      </div>
+    </div>
+  </body>
+</html>

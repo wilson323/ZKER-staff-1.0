@@ -1,0 +1,289 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$defs": {
+    "VersionedRef": {
+      "type": "object",
+      "properties": {
+        "kind": {
+          "type": "string",
+          "enum": [
+            "WORK",
+            "HUMAN_TASK",
+            "BINDING",
+            "SNAPSHOT",
+            "MANIFEST",
+            "BASELINE",
+            "ARTIFACT",
+            "CONTRIBUTION",
+            "REVIEW",
+            "DELIVERY",
+            "HANDOFF",
+            "PROCESS",
+            "PROCESS_DEFINITION",
+            "FORM",
+            "OUTPUT_CONTRACT",
+            "AGENT",
+            "SKILL",
+            "TOOL",
+            "CONNECTION",
+            "KNOWLEDGE",
+            "MEMORY",
+            "TEAM",
+            "PLAN",
+            "PROPOSAL",
+            "ANALYSIS",
+            "RELATION",
+            "OPPORTUNITY",
+            "EVALUATION",
+            "TRIAL",
+            "POLICY",
+            "METRIC",
+            "INVOCATION",
+            "MEMBER",
+            "GRANT",
+            "NOTIFICATION"
+          ]
+        },
+        "id": {
+          "type": "string",
+          "pattern": "^[A-Za-z0-9][A-Za-z0-9_-]{0,63}$",
+          "minLength": 1,
+          "maxLength": 64
+        },
+        "version": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 9007199254740991
+        },
+        "digest": {
+          "type": "string",
+          "pattern": "^sha256:[a-f0-9]{64}$"
+        }
+      },
+      "required": [
+        "kind",
+        "id",
+        "version",
+        "digest"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "type": "object",
+  "properties": {
+    "pluginId": {
+      "type": "string",
+      "pattern": "^[A-Za-z0-9][A-Za-z0-9_-]{0,63}$",
+      "minLength": 1,
+      "maxLength": 64
+    },
+    "version": {
+      "type": "string",
+      "pattern": "^[0-9]+\\.[0-9]+\\.[0-9]+$"
+    },
+    "apiVersion": {
+      "const": "oa-extension/v1"
+    },
+    "kind": {
+      "type": "string",
+      "enum": [
+        "CONFIG_BUNDLE",
+        "BUILTIN_MODULE",
+        "OPENAPI_TOOL",
+        "MCP_TOOL"
+      ]
+    },
+    "entrypointId": {
+      "type": "string",
+      "pattern": "^[A-Za-z0-9][A-Za-z0-9_-]{0,63}$",
+      "minLength": 1,
+      "maxLength": 64
+    },
+    "configurationSchemaRef": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 255,
+      "pattern": "^contracts/[A-Za-z0-9_./-]+\\.json#/.+$"
+    },
+    "actions": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string",
+            "pattern": "^[A-Za-z0-9][A-Za-z0-9_-]{0,63}$",
+            "minLength": 1,
+            "maxLength": 64
+          },
+          "inputSchemaRef": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 255,
+            "pattern": "^contracts/[A-Za-z0-9_./-]+\\.json#/.+$"
+          },
+          "outputSchemaRef": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 255,
+            "pattern": "^contracts/[A-Za-z0-9_./-]+\\.json#/.+$"
+          },
+          "risk": {
+            "type": "string",
+            "enum": [
+              "READ",
+              "REVERSIBLE_WRITE",
+              "EXTERNAL_WRITE"
+            ]
+          },
+          "timeoutSeconds": {
+            "type": "integer",
+            "minimum": 1,
+            "maximum": 120
+          },
+          "idempotency": {
+            "type": "string",
+            "enum": [
+              "READ_ONLY",
+              "PROVIDER_KEY",
+              "BUSINESS_KEY_RECONCILE",
+              "UNSUPPORTED"
+            ]
+          },
+          "requestedPermissions": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "pattern": "^[A-Za-z0-9][A-Za-z0-9_-]{0,63}$",
+              "minLength": 1,
+              "maxLength": 64
+            },
+            "minItems": 1,
+            "maxItems": 100,
+            "uniqueItems": true
+          },
+          "destinationIds": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "pattern": "^[A-Za-z0-9][A-Za-z0-9_-]{0,63}$",
+              "minLength": 1,
+              "maxLength": 64
+            },
+            "minItems": 1,
+            "maxItems": 100,
+            "uniqueItems": true
+          }
+        },
+        "required": [
+          "name",
+          "inputSchemaRef",
+          "outputSchemaRef",
+          "risk",
+          "timeoutSeconds",
+          "idempotency",
+          "requestedPermissions",
+          "destinationIds"
+        ],
+        "additionalProperties": false
+      },
+      "minItems": 1,
+      "maxItems": 20,
+      "uniqueItems": true
+    },
+    "dependencies": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "pluginId": {
+            "type": "string",
+            "pattern": "^[A-Za-z0-9][A-Za-z0-9_-]{0,63}$",
+            "minLength": 1,
+            "maxLength": 64
+          },
+          "version": {
+            "type": "string",
+            "pattern": "^[0-9]+\\.[0-9]+\\.[0-9]+$"
+          },
+          "digest": {
+            "type": "string",
+            "pattern": "^sha256:[a-f0-9]{64}$"
+          }
+        },
+        "required": [
+          "pluginId",
+          "version",
+          "digest"
+        ],
+        "additionalProperties": false
+      },
+      "minItems": 0,
+      "maxItems": 20,
+      "uniqueItems": true
+    },
+    "provenance": {
+      "type": "object",
+      "properties": {
+        "sourceUrl": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 500
+        },
+        "sourceRevision": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 100
+        },
+        "licenseDeclared": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 100
+        },
+        "commercialReview": {
+          "type": "string",
+          "enum": [
+            "NOT_RUN",
+            "ACCEPTED_WITH_OBLIGATIONS",
+            "REPLACE",
+            "EXCLUDE",
+            "UNKNOWN"
+          ]
+        }
+      },
+      "required": [
+        "sourceUrl",
+        "sourceRevision",
+        "licenseDeclared",
+        "commercialReview"
+      ],
+      "additionalProperties": false
+    },
+    "evaluationRefs": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/VersionedRef"
+      },
+      "minItems": 0,
+      "maxItems": 100,
+      "uniqueItems": true
+    },
+    "enabled": {
+      "type": "boolean"
+    }
+  },
+  "required": [
+    "pluginId",
+    "version",
+    "apiVersion",
+    "kind",
+    "entrypointId",
+    "configurationSchemaRef",
+    "actions",
+    "dependencies",
+    "provenance",
+    "evaluationRefs",
+    "enabled"
+  ],
+  "additionalProperties": false
+}

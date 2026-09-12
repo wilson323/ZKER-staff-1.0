@@ -1,0 +1,33 @@
+{
+  "pluginId": "demo_readonly_knowledge",
+  "version": "0.1.0",
+  "apiVersion": "oa-extension/v1",
+  "kind": "CONFIG_BUNDLE",
+  "entrypointId": "demo_registered_knowledge",
+  "configurationSchemaRef": "contracts/domain.schema.json#/$defs/C19_searchRequest",
+  "actions": [
+    {
+      "name": "search",
+      "inputSchemaRef": "contracts/domain.schema.json#/$defs/C19_searchRequest",
+      "outputSchemaRef": "contracts/domain.schema.json#/$defs/ResourceList",
+      "risk": "READ",
+      "timeoutSeconds": 15,
+      "idempotency": "READ_ONLY",
+      "requestedPermissions": [
+        "knowledge_read"
+      ],
+      "destinationIds": [
+        "demo_local_provider"
+      ]
+    }
+  ],
+  "dependencies": [],
+  "provenance": {
+    "sourceUrl": "https://example.invalid/synthetic-only",
+    "sourceRevision": "SYNTHETIC_NOT_INSTALLED",
+    "licenseDeclared": "UNDETERMINED",
+    "commercialReview": "NOT_RUN"
+  },
+  "evaluationRefs": [],
+  "enabled": false
+}

@@ -1,0 +1,149 @@
+{
+  "sha": "8071466f2c9f844d630dac879b3988dfb66e4277",
+  "node_id": "C_kwDOMT5TYNoAKDgwNzE0NjZmMmM5Zjg0NGQ2MzBkYWM4NzliMzk4OGRmYjY2ZTQyNzc",
+  "commit": {
+    "author": {
+      "name": "github-actions[bot]",
+      "email": "github-actions[bot]@users.noreply.github.com",
+      "date": "2026-09-04T15:47:31Z"
+    },
+    "committer": {
+      "name": "github-actions[bot]",
+      "email": "github-actions[bot]@users.noreply.github.com",
+      "date": "2026-09-04T15:47:31Z"
+    },
+    "message": "chore: bump version to 2.126.0 [skip ci]",
+    "tree": {
+      "sha": "0352a79ddf2536f961ffc9fd83057efb0d79e881",
+      "url": "https://api.github.com/repos/docling-project/docling/git/trees/0352a79ddf2536f961ffc9fd83057efb0d79e881"
+    },
+    "url": "https://api.github.com/repos/docling-project/docling/git/commits/8071466f2c9f844d630dac879b3988dfb66e4277",
+    "comment_count": 0,
+    "verification": {
+      "verified": false,
+      "reason": "unsigned",
+      "signature": null,
+      "payload": null,
+      "verified_at": null
+    }
+  },
+  "url": "https://api.github.com/repos/docling-project/docling/commits/8071466f2c9f844d630dac879b3988dfb66e4277",
+  "html_url": "https://github.com/docling-project/docling/commit/8071466f2c9f844d630dac879b3988dfb66e4277",
+  "comments_url": "https://api.github.com/repos/docling-project/docling/commits/8071466f2c9f844d630dac879b3988dfb66e4277/comments",
+  "author": {
+    "login": "github-actions[bot]",
+    "id": 41898282,
+    "node_id": "MDM6Qm90NDE4OTgyODI=",
+    "avatar_url": "https://avatars.githubusercontent.com/in/15368?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/github-actions%5Bbot%5D",
+    "html_url": "https://github.com/apps/github-actions",
+    "followers_url": "https://api.github.com/users/github-actions%5Bbot%5D/followers",
+    "following_url": "https://api.github.com/users/github-actions%5Bbot%5D/following{/other_user}",
+    "gists_url": "https://api.github.com/users/github-actions%5Bbot%5D/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/github-actions%5Bbot%5D/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/github-actions%5Bbot%5D/subscriptions",
+    "organizations_url": "https://api.github.com/users/github-actions%5Bbot%5D/orgs",
+    "repos_url": "https://api.github.com/users/github-actions%5Bbot%5D/repos",
+    "events_url": "https://api.github.com/users/github-actions%5Bbot%5D/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/github-actions%5Bbot%5D/received_events",
+    "type": "Bot",
+    "user_view_type": "public",
+    "site_admin": false
+  },
+  "committer": {
+    "login": "github-actions[bot]",
+    "id": 41898282,
+    "node_id": "MDM6Qm90NDE4OTgyODI=",
+    "avatar_url": "https://avatars.githubusercontent.com/in/15368?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/github-actions%5Bbot%5D",
+    "html_url": "https://github.com/apps/github-actions",
+    "followers_url": "https://api.github.com/users/github-actions%5Bbot%5D/followers",
+    "following_url": "https://api.github.com/users/github-actions%5Bbot%5D/following{/other_user}",
+    "gists_url": "https://api.github.com/users/github-actions%5Bbot%5D/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/github-actions%5Bbot%5D/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/github-actions%5Bbot%5D/subscriptions",
+    "organizations_url": "https://api.github.com/users/github-actions%5Bbot%5D/orgs",
+    "repos_url": "https://api.github.com/users/github-actions%5Bbot%5D/repos",
+    "events_url": "https://api.github.com/users/github-actions%5Bbot%5D/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/github-actions%5Bbot%5D/received_events",
+    "type": "Bot",
+    "user_view_type": "public",
+    "site_admin": false
+  },
+  "parents": [
+    {
+      "sha": "a4e94624ef2630641ed2a9e8f91b683f56898f41",
+      "url": "https://api.github.com/repos/docling-project/docling/commits/a4e94624ef2630641ed2a9e8f91b683f56898f41",
+      "html_url": "https://github.com/docling-project/docling/commit/a4e94624ef2630641ed2a9e8f91b683f56898f41"
+    }
+  ],
+  "stats": {
+    "total": 52,
+    "additions": 34,
+    "deletions": 18
+  },
+  "files": [
+    {
+      "sha": "e700faea147ed9c2801ec8a49860f7ebf377b118",
+      "filename": "CHANGELOG.md",
+      "status": "modified",
+      "additions": 16,
+      "deletions": 0,
+      "changes": 16,
+      "blob_url": "https://github.com/docling-project/docling/blob/8071466f2c9f844d630dac879b3988dfb66e4277/CHANGELOG.md",
+      "raw_url": "https://github.com/docling-project/docling/raw/8071466f2c9f844d630dac879b3988dfb66e4277/CHANGELOG.md",
+      "contents_url": "https://api.github.com/repos/docling-project/docling/contents/CHANGELOG.md?ref=8071466f2c9f844d630dac879b3988dfb66e4277",
+      "patch": "@@ -1,3 +1,19 @@\n+## [v2.126.0](https://github.com/docling-project/docling/releases/tag/v2.126.0) - 2026-09-04\n+\n+### Feature\n+\n+* Add native pdf pipeline ([#3979](https://github.com/docling-project/docling/issues/3979)) ([`1c96dd3`](https://github.com/docling-project/docling/commit/1c96dd37ce9af206752f276f73030e5bf4d2fb69))\n+* **jats:** Preserve external hyperlinks ([#4029](https://github.com/docling-project/docling/issues/4029)) ([`cf38d90`](https://github.com/docling-project/docling/commit/cf38d9049cc5633c1736a1c2042dacd029e91c55))\n+* **iwork:** Complete the parsing of Apple Pages documents ([#4062](https://github.com/docling-project/docling/issues/4062)) ([`554b10a`](https://github.com/docling-project/docling/commit/554b10ac1c6a4252d9a193f4c02e3826df378e6a))\n+\n+### Fix\n+\n+* **markdown:** Preserve ordered list start numbers in conversion ([#4138](https://github.com/docling-project/docling/issues/4138)) ([`a4e9462`](https://github.com/docling-project/docling/commit/a4e94624ef2630641ed2a9e8f91b683f56898f41))\n+* **docx:** Inherit heading numId through the style basedOn chain (#3916) ([#3917](https://github.com/docling-project/docling/issues/3917)) ([`b2d333e`](https://github.com/docling-project/docling/commit/b2d333e12260fc9cb74d8e8748b0d45505afcabb))\n+* **ocr:** Apply the deprecated force_full_page_ocr flag on assignment (#4082) ([#4085](https://github.com/docling-project/docling/issues/4085)) ([`cb39dc1`](https://github.com/docling-project/docling/commit/cb39dc1f396a624df15812feafea93dd10634f09))\n+* **markdown:** Preserve hard line breaks ([#4019](https://github.com/docling-project/docling/issues/4019)) ([`1c2b794`](https://github.com/docling-project/docling/commit/1c2b794b00f45c16c33479f2b0e04cfceed19d94))\n+* **asciidoc:** Gate image loading ([#4156](https://github.com/docling-project/docling/issues/4156)) ([`63d1808`](https://github.com/docling-project/docling/commit/63d1808c7593b0add340394f485e12d7f0feda05))\n+\n ## [v2.125.0](https://github.com/docling-project/docling/releases/tag/v2.125.0) - 2026-09-03\n \n ### Feature"
+    },
+    {
+      "sha": "a7111049633477c728d5a735acd58e5da1b763d9",
+      "filename": "packages/docling-client/pyproject.toml",
+      "status": "modified",
+      "additions": 2,
+      "deletions": 2,
+      "changes": 4,
+      "blob_url": "https://github.com/docling-project/docling/blob/8071466f2c9f844d630dac879b3988dfb66e4277/packages%2Fdocling-client%2Fpyproject.toml",
+      "raw_url": "https://github.com/docling-project/docling/raw/8071466f2c9f844d630dac879b3988dfb66e4277/packages%2Fdocling-client%2Fpyproject.toml",
+      "contents_url": "https://api.github.com/repos/docling-project/docling/contents/packages%2Fdocling-client%2Fpyproject.toml?ref=8071466f2c9f844d630dac879b3988dfb66e4277",
+      "patch": "@@ -4,7 +4,7 @@ build-backend = \"hatchling.build\"\n \n [project]\n name = \"docling-client\"\n-version = \"2.125.0\"  # DO NOT EDIT, updated automatically\n+version = \"2.126.0\"  # DO NOT EDIT, updated automatically\n description = \"Client SDK for converting documents via a remote Docling Serve endpoint.\"\n license = \"MIT\"\n keywords = [\n@@ -47,7 +47,7 @@ requires-python = '>=3.10,<4.0'\n # Meta-package: pulls in docling-slim with the service-client extra.\n # The `docling` Python module itself is provided by docling-slim.\n dependencies = [\n-  'docling-slim[service-client]==2.125.0',\n+  'docling-slim[service-client]==2.126.0',\n ]\n \n [project.urls]"
+    },
+    {
+      "sha": "6180adee5ceb427609d2c36d4879977abd2bada6",
+      "filename": "packages/docling/pyproject.toml",
+      "status": "modified",
+      "additions": 12,
+      "deletions": 12,
+      "changes": 24,
+      "blob_url": "https://github.com/docling-project/docling/blob/8071466f2c9f844d630dac879b3988dfb66e4277/packages%2Fdocling%2Fpyproject.toml",
+      "raw_url": "https://github.com/docling-project/docling/raw/8071466f2c9f844d630dac879b3988dfb66e4277/packages%2Fdocling%2Fpyproject.toml",
+      "contents_url": "https://api.github.com/repos/docling-project/docling/contents/packages%2Fdocling%2Fpyproject.toml?ref=8071466f2c9f844d630dac879b3988dfb66e4277",
+      "patch": "@@ -4,7 +4,7 @@ build-backend = \"hatchling.build\"\n \n [project]\n name = \"docling\"\n-version = \"2.125.0\"  # DO NOT EDIT, updated automatically\n+version = \"2.126.0\"  # DO NOT EDIT, updated automatically\n description = \"SDK and CLI for parsing PDF, DOCX, HTML, and more, to a unified document representation for powering downstream workflows such as gen AI applications.\"\n license = \"MIT\"\n keywords = [\n@@ -51,7 +51,7 @@ requires-python = '>=3.10,<4.0'\n # The `docling` Python module itself is provided by docling-slim.\n # CLI entry points are now defined in docling-slim's pyproject.toml.\n dependencies = [\n-  'docling-slim[standard]==2.125.0',\n+  'docling-slim[standard]==2.126.0',\n ]\n \n [project.urls]\n@@ -74,16 +74,16 @@ docling-slim = { workspace = true }\n \n # Re-export slim extras with backwards-compatible names\n [project.optional-dependencies]\n-easyocr = ['docling-slim[feat-ocr-easyocr]==2.125.0']\n-tesserocr = ['docling-slim[feat-ocr-tesserocr]==2.125.0']\n-ocrmac = ['docling-slim[feat-ocr-mac]==2.125.0']\n-vlm = ['docling-slim[models-vlm-inline]==2.125.0']\n-rapidocr = ['docling-slim[feat-ocr-rapidocr-onnx]==2.125.0']\n-asr = ['docling-slim[format-audio]==2.125.0']\n-htmlrender = ['docling-slim[format-html-render]==2.125.0']\n-remote-serving = ['docling-slim[models-remote]==2.125.0']\n-onnxruntime = ['docling-slim[models-onnxruntime]==2.125.0']\n-xbrl = ['docling-slim[format-xml-xbrl]==2.125.0']\n+easyocr = ['docling-slim[feat-ocr-easyocr]==2.126.0']\n+tesserocr = ['docling-slim[feat-ocr-tesserocr]==2.126.0']\n+ocrmac = ['docling-slim[feat-ocr-mac]==2.126.0']\n+vlm = ['docling-slim[models-vlm-inline]==2.126.0']\n+rapidocr = ['docling-slim[feat-ocr-rapidocr-onnx]==2.126.0']\n+asr = ['docling-slim[format-audio]==2.126.0']\n+htmlrender = ['docling-slim[format-html-render]==2.126.0']\n+remote-serving = ['docling-slim[models-remote]==2.126.0']\n+onnxruntime = ['docling-slim[models-onnxruntime]==2.126.0']\n+xbrl = ['docling-slim[format-xml-xbrl]==2.126.0']\n \n # Dependency-only wheel: no Python modules shipped here. All source lives in\n # the docling-slim wheel (built from the repo root). This avoids the prior"
+    },
+    {
+      "sha": "eeb181ea40731ac0c67943b43bead44d84a13a15",
+      "filename": "pyproject.toml",
+      "status": "modified",
+      "additions": 1,
+      "deletions": 1,
+      "changes": 2,
+      "blob_url": "https://github.com/docling-project/docling/blob/8071466f2c9f844d630dac879b3988dfb66e4277/pyproject.toml",
+      "raw_url": "https://github.com/docling-project/docling/raw/8071466f2c9f844d630dac879b3988dfb66e4277/pyproject.toml",
+      "contents_url": "https://api.github.com/repos/docling-project/docling/contents/pyproject.toml?ref=8071466f2c9f844d630dac879b3988dfb66e4277",
+      "patch": "@@ -4,7 +4,7 @@ build-backend = \"hatchling.build\"\n \n [project]\n name = \"docling-slim\"\n-version = \"2.125.0\"  # DO NOT EDIT, updated automatically\n+version = \"2.126.0\"  # DO NOT EDIT, updated automatically\n description = \"Modular version of the Docling package: SDK and CLI for parsing PDF, DOCX, HTML, and more, to a unified document representation for powering downstream workflows such as gen AI applications.\"\n license = \"MIT\"\n keywords = ["
+    },
+    {
+      "sha": "4002b181066bff64925d5b1c79b4c9775d6149af",
+      "filename": "uv.lock",
+      "status": "modified",
+      "additions": 3,
+      "deletions": 3,
+      "changes": 6,
+      "blob_url": "https://github.com/docling-project/docling/blob/8071466f2c9f844d630dac879b3988dfb66e4277/uv.lock",
+      "raw_url": "https://github.com/docling-project/docling/raw/8071466f2c9f844d630dac879b3988dfb66e4277/uv.lock",
+      "contents_url": "https://api.github.com/repos/docling-project/docling/contents/uv.lock?ref=8071466f2c9f844d630dac879b3988dfb66e4277",
+      "patch": "@@ -1650,7 +1650,7 @@ wheels = [\n \n [[package]]\n name = \"docling\"\n-version = \"2.125.0\"\n+version = \"2.126.0\"\n source = { editable = \"packages/docling\" }\n dependencies = [\n     { name = \"docling-slim\", extra = [\"standard\"] },\n@@ -1706,7 +1706,7 @@ provides-extras = [\"easyocr\", \"tesserocr\", \"ocrmac\", \"vlm\", \"rapidocr\", \"asr\", \"\n \n [[package]]\n name = \"docling-client\"\n-version = \"2.125.0\"\n+version = \"2.126.0\"\n source = { editable = \"packages/docling-client\" }\n dependencies = [\n     { name = \"docling-slim\", extra = [\"service-client\"] },\n@@ -1816,7 +1816,7 @@ wheels = [\n \n [[package]]\n name = \"docling-slim\"\n-version = \"2.125.0\"\n+version = \"2.126.0\"\n source = { editable = \".\" }\n dependencies = [\n     { name = \"certifi\" },"
+    }
+  ]
+}

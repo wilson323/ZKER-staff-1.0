@@ -1,0 +1,4790 @@
+{
+  "report": "/Users/mac/Documents/New project 2/ZKER-staff-完整优化清单-v2-人员数字员工与上下文对齐.md",
+  "entryPoint": "/Users/mac/Documents/New project 2/00-开发设计包导读.md",
+  "date": "2026-09-11",
+  "scope": "Analysis and development design artifacts only; no product implementation",
+  "sourceHeadAtDesign": "21a230f2c7a6a26e68a5eff1c36788d6f4206eab",
+  "sourceRoot": "/Users/mac/Documents/ChatGPT/ZKER- staff",
+  "originalReport": "/Users/mac/.codex/visualizations/2026/09/11/01a08f35-b9ee-7aa0-a8b8-96db2faad927/ZKER-staff-human-node-workspace-optimization-checklist.md",
+  "originalEvidence": "/Users/mac/.codex/visualizations/2026/09/11/01a08f35-b9ee-7aa0-a8b8-96db2faad927/optimization-checklist-evidence.json",
+  "contextSourceAnchors": [
+    [
+      "X01",
+      "职责、Agent 与上下文领域定义",
+      "CONTEXT.md",
+      94
+    ],
+    [
+      "X02",
+      "人员数字员工协作主链",
+      "docs/product/human-digital-employee-collaboration-chain.yaml",
+      10
+    ],
+    [
+      "X03",
+      "上下文分享与有界代办",
+      "docs/identity/organization-identity-access-design.md",
+      352
+    ],
+    [
+      "X04",
+      "WorkThread 与交接交互合同",
+      "docs/ui/ui-interaction-spec.md",
+      73
+    ],
+    [
+      "X05",
+      "上下文清单 Schema",
+      "contracts/jsonschema/context-manifest.schema.json",
+      1
+    ],
+    [
+      "X06",
+      "协作线程 Schema",
+      "contracts/jsonschema/work-thread.schema.json",
+      1
+    ],
+    [
+      "X07",
+      "协作条目 Schema",
+      "contracts/jsonschema/work-thread-entry.schema.json",
+      1
+    ],
+    [
+      "X08",
+      "交接包 Schema",
+      "contracts/jsonschema/handoff-package.schema.json",
+      1
+    ],
+    [
+      "X09",
+      "单有效分配约束",
+      "services/control-plane/alembic/versions/20260903_0045_pk05_agent_candidate_domain.py",
+      457
+    ],
+    [
+      "X10",
+      "分配创建与工作项当前分配",
+      "services/control-plane/control_plane/agent_assignment_create_session.py",
+      107
+    ],
+    [
+      "X11",
+      "滚动对话上下文投影",
+      "services/control-plane/control_plane/business_api/conversation_context_projection.py",
+      35
+    ],
+    [
+      "X12",
+      "对话派发消费者",
+      "services/control-plane/control_plane/business_api/conversation_reply_runtime.py",
+      806
+    ],
+    [
+      "X13",
+      "上下文文件物化与 DSH 启动",
+      "packages/runtime-gateway/lib/dsh_adapter.mjs",
+      281
+    ],
+    [
+      "X14",
+      "上下文重新授权决定",
+      "services/control-plane/control_plane/context_manifest_session.py",
+      95
+    ],
+    [
+      "X15",
+      "协作线程读取边界",
+      "services/control-plane/control_plane/work_thread_read_session.py",
+      1
+    ],
+    [
+      "X16",
+      "结果事务中的上下文重授权",
+      "services/control-plane/control_plane/result_commit_store.py",
+      565
+    ],
+    [
+      "X17",
+      "团队黑板及条目提升",
+      "services/control-plane/control_plane/team_blackboard_http.py",
+      1
+    ],
+    [
+      "X18",
+      "滚动投影既有测试",
+      "services/control-plane/tests/business_api/test_conversation_context_projection.py",
+      1
+    ],
+    [
+      "X19",
+      "重授权既有测试",
+      "services/control-plane/tests/test_context_manifest_reauth_decision.py",
+      1
+    ]
+  ],
+  "focusedProductTests": {
+    "command": "PYTHONDONTWRITEBYTECODE=1 .venv/bin/python -m pytest -q -p no:cacheprovider services/control-plane/tests/business_api/test_conversation_context_projection.py services/control-plane/tests/test_context_manifest_reauth_decision.py",
+    "exit": 0,
+    "output": "...................                                                      [100%]\n19 passed in 0.81s",
+    "historyNote": "Historical focused tests from initial design package; not reexecuted in v2.5 OA update."
+  },
+  "startingStatus": {
+    "count": 44,
+    "sha256": "178f4775b94791c029d8d6e69238b8f192b2531141f37ba9abb07dfa16747395",
+    "activeClaims": 0
+  },
+  "schemaValidationFile": "/Users/mac/Documents/New project 2/validation/schema-validation.json",
+  "prototypeValidationFile": "/Users/mac/Documents/New project 2/validation/v26-field-audit.json",
+  "existingSchemaInventory": "/Users/mac/Documents/New project 2/validation/existing-schema-inventory.json",
+  "taskState": {
+    "goal": "交付完整153项优化清单及可供后续开发的产品设计包，含数据ER、流程、故事、UI和接口边界",
+    "scope": [
+      "ZKER-staff文档/合同/代码只读",
+      "New project 2 内新增完整Markdown与证据",
+      "New project 2 内新增产品设计包及交互原型"
+    ],
+    "acceptance_criteria": [
+      "关系与职责清楚",
+      "同节点协作和跨节点交接分别定义",
+      "上下文构建/同步/实际消费/过期提交全链可验收",
+      "原123项完整保留并补齐新增项",
+      "交付文件和证据验证",
+      "153项映射到需求、故事、页面、数据和验收",
+      "现有与建议模型明确区分",
+      "ER/状态机/权限/接口/UI设计一致"
+    ],
+    "current_node": "delivery",
+    "completed_nodes": [
+      "scope",
+      "source_discovery",
+      "focused_verification",
+      "complete_report",
+      "design_package",
+      "delivery"
+    ],
+    "failed_nodes": [],
+    "artifacts": [],
+    "evidence": [
+      "19 existing focused tests passed in 0.81s",
+      "Previous 36 source hashes unchanged at HEAD 21a230f2c7a6a26e68a5eff1c36788d6f4206eab"
+    ],
+    "risks": [
+      "写作人暂按协作人理解，正文同时说明字面写作角色",
+      "服务未做端到端多人验收"
+    ],
+    "approvals": [],
+    "status": "VERIFIED",
+    "nodes": [
+      {
+        "id": "source_discovery",
+        "objective": "确认关系和上下文现状",
+        "preconditions": [
+          "scope"
+        ],
+        "action": "语义检索后读代码合同",
+        "tool_or_skill": "zvec+exec",
+        "expected_output": "证据锚点",
+        "validation": "当前文件和源码",
+        "success_condition": "关系约束及上下文链路可定位",
+        "failure_path": "标未证实",
+        "rollback_or_compensation": "只读"
+      },
+      {
+        "id": "focused_verification",
+        "objective": "核对已有上下文边界测试",
+        "preconditions": [
+          "source_discovery"
+        ],
+        "action": "执行两个既有测试文件",
+        "tool_or_skill": "pytest",
+        "expected_output": "原始结果",
+        "validation": "退出码与测试数",
+        "success_condition": "诚实记录局部通过或失败",
+        "failure_path": "不将测试失败混为文档阻塞",
+        "rollback_or_compensation": "无产品编辑"
+      },
+      {
+        "id": "complete_report",
+        "objective": "补全关系设计和优化条目",
+        "preconditions": [
+          "source_discovery"
+        ],
+        "action": "整合原123项和专门补充",
+        "tool_or_skill": "analysis+apply_patch",
+        "expected_output": "完整修订版",
+        "validation": "旧编号保留、新项各有验收、无重复ID",
+        "success_condition": "可单文件完整阅读",
+        "failure_path": "局部修订",
+        "rollback_or_compensation": "仓外文档可逆"
+      },
+      {
+        "id": "design_package",
+        "objective": "将优化要求具体化为产品开发设计",
+        "preconditions": [
+          "complete_report"
+        ],
+        "action": "核对现有模型接口并编写互相链接的设计包",
+        "tool_or_skill": "exec+apply_patch",
+        "expected_output": "PRD/ER/流程/用户故事/UI/契约变更说明/原型",
+        "validation": "153项映射与跨文档链接校验",
+        "success_condition": "无漏项且建议与当前事实分离",
+        "failure_path": "修订差异",
+        "rollback_or_compensation": "仅交付目录新增文件"
+      },
+      {
+        "id": "delivery",
+        "objective": "验证并交付",
+        "preconditions": [
+          "complete_report",
+          "focused_verification"
+        ],
+        "action": "校验来源、数量、结构和证据",
+        "tool_or_skill": "exec",
+        "expected_output": "文件与证据JSON",
+        "validation": "确定性文件检查",
+        "success_condition": "输出存在且链接有效",
+        "failure_path": "修正校验问题",
+        "rollback_or_compensation": "不更改项目状态"
+      }
+    ]
+  },
+  "status": "DESIGN_AND_LOCAL_PROTOTYPE_VERIFIED_NOT_PRODUCT_ACCEPTED",
+  "limitations": [
+    "Not a product implementation or production acceptance",
+    "Prototype is local fictional data without backend or runtime",
+    "19 product tests are focused pure/mocked checks, not multi-person E2E",
+    "JSON Schema examples do not prove cross-record integrity or authorization",
+    "Competitor report is an archived prior snapshot, not a refreshed commercial comparison",
+    "Design proposals still need integration into current formal contracts and TaskPacket before implementation"
+  ],
+  "originalSourceAnchors": [
+    {
+      "id": "E01",
+      "label": "产品定义与节点人机责任",
+      "path": "/Users/mac/Documents/ChatGPT/ZKER- staff/StaffDeck能力一致平台-完整产品设计文档.md",
+      "line": 609,
+      "note": "责任、候选、配置快照、DSH 技术编排边界",
+      "sha256": "dfa184f86e6c247a19ac8da8c7ee6245fc85495ff60f9731eff0c8bebd0d8ea1",
+      "bytes": 104105
+    },
+    {
+      "id": "E02",
+      "label": "用户任务与完整链路",
+      "path": "/Users/mac/Documents/ChatGPT/ZKER- staff/docs/product/user-jtbd-mvp-prioritization.md",
+      "line": 1,
+      "note": "普通员工优先，能力分期保留",
+      "sha256": "11185fbf8d6cf7bc376330afae9116af27199aafc50234d1a251b6508f36e82d",
+      "bytes": 10084
+    },
+    {
+      "id": "E03",
+      "label": "角色到页面、字段、动作投影",
+      "path": "/Users/mac/Documents/ChatGPT/ZKER- staff/docs/security/business-role-ui-projection-matrix.md",
+      "line": 16,
+      "note": "人类职责及七类登录夹具",
+      "sha256": "025ba1ab98bf525c372f10fe848df27c4348196b342aa87a60ec6064872ea061",
+      "bytes": 9319
+    },
+    {
+      "id": "E04",
+      "label": "信息架构",
+      "path": "/Users/mac/Documents/ChatGPT/ZKER- staff/docs/ui/information-architecture.md",
+      "line": 6,
+      "note": "13 个逻辑权限槽位，菜单按权限呈现",
+      "sha256": "2a827b844054a167b05c455d6a0a07dd190e426f11f7837a37cb13489e296ca8",
+      "bytes": 12231
+    },
+    {
+      "id": "E05",
+      "label": "我的待执行节点",
+      "path": "/Users/mac/Documents/ChatGPT/ZKER- staff/apps/web/src/pages/work/MyWorkPage.tsx",
+      "line": 24,
+      "note": "回调缺接线、普通壳层、节点配置摘要",
+      "sha256": "8f4fcf4f6492e380bf72e27225f2122fe6ebda8fa627a921a2ea413edcd59839",
+      "bytes": 6625
+    },
+    {
+      "id": "E06",
+      "label": "实际页面路由",
+      "path": "/Users/mac/Documents/ChatGPT/ZKER- staff/apps/web/src/app-session-routes.tsx",
+      "line": 408,
+      "note": "MyWork props 不匹配；未传 onCompleteNode",
+      "sha256": "4c8359b86432d3596767baeabea3b05f9824fba802c981cf6cfeab0c27ec1a50",
+      "bytes": 17000
+    },
+    {
+      "id": "E07",
+      "label": "节点能力配置面板",
+      "path": "/Users/mac/Documents/ChatGPT/ZKER- staff/apps/web/src/pages/work/NodeCapabilityPanel.tsx",
+      "line": 30,
+      "note": "触发/审核/三元配置，手填引用；未发现生产引用",
+      "sha256": "f74ec89bd1270270ea248ef216746b3bc7abf054441b34d4b358c5898deb2671",
+      "bytes": 5479
+    },
+    {
+      "id": "E08",
+      "label": "Studio 实际属性面板",
+      "path": "/Users/mac/Documents/ChatGPT/ZKER- staff/apps/web/src/pages/sops/StateNodeConfigPanel.tsx",
+      "line": 31,
+      "note": "roleBinding/capability 字符串",
+      "sha256": "66f217b69c442bd38b9fb459bf70486040626ff9a7130b55cc137068603930e3",
+      "bytes": 3360
+    },
+    {
+      "id": "E09",
+      "label": "任务详情",
+      "path": "/Users/mac/Documents/ChatGPT/ZKER- staff/apps/web/src/pages/work-items/WorkItemDetailPage.tsx",
+      "line": 30,
+      "note": "读摘要和领取，尚未汇聚节点执行工作区",
+      "sha256": "2f8882d239e6775bf9c0c7e9e899e14c9bec810b4606645a7879b7df87d4cfad",
+      "bytes": 7460
+    },
+    {
+      "id": "E10",
+      "label": "数字员工档案",
+      "path": "/Users/mac/Documents/ChatGPT/ZKER- staff/apps/web/src/pages/agents/AgentDetailPage.tsx",
+      "line": 14,
+      "note": "占位摘要创建版本、固定 self editor 授权、简单记忆表单",
+      "sha256": "8e99b42fdac84d9bd0fba9a9b296a6ce2d0848165cfe333f2debdc2424a64939",
+      "bytes": 12649
+    },
+    {
+      "id": "E11",
+      "label": "技能目录",
+      "path": "/Users/mac/Documents/ChatGPT/ZKER- staff/apps/web/src/pages/skills/SkillListPage.tsx",
+      "line": 40,
+      "note": "草稿创建与已发布目录；详情入口未接入路由的提示",
+      "sha256": "563d2178f9090877818c7e9c865bdf657c1f32e2f8e4be2f7a1d39d3a0fb9896",
+      "bytes": 7472
+    },
+    {
+      "id": "E12",
+      "label": "工具目录与调用",
+      "path": "/Users/mac/Documents/ChatGPT/ZKER- staff/apps/web/src/pages/tools/ToolListPage.tsx",
+      "line": 30,
+      "note": "草稿注册和手填工具 ID/JSON 的调用区",
+      "sha256": "735674171e4631a2c9597da56aae9289346ec22aaac46eda2b2340793e94f9ba",
+      "bytes": 15692
+    },
+    {
+      "id": "E13",
+      "label": "知识目录与检索",
+      "path": "/Users/mac/Documents/ChatGPT/ZKER- staff/apps/web/src/pages/knowledge/KnowledgeListPage.tsx",
+      "line": 41,
+      "note": "草稿创建和搜索，无完整资料管理工作区",
+      "sha256": "9282da7630d8fa1069db7baa4b409a71f9e6d715a1a270e2983f93445511d584",
+      "bytes": 8520
+    },
+    {
+      "id": "E14",
+      "label": "对话工作区",
+      "path": "/Users/mac/Documents/ChatGPT/ZKER- staff/apps/web/src/pages/conversations/ConversationWorkspacePage.tsx",
+      "line": 51,
+      "note": "消息、Runtime reply、SSE、反馈已存在",
+      "sha256": "fa19b09d2e9fc8e2453abd243ef4ba3e274caeef688a610ecf18153f247ebcf1",
+      "bytes": 19984
+    },
+    {
+      "id": "E15",
+      "label": "会话角色分类",
+      "path": "/Users/mac/Documents/ChatGPT/ZKER- staff/apps/web/src/session/cookie-session-policy.ts",
+      "line": 97,
+      "note": "TENANT_OWNER/ADMIN 到 admin，其余 member",
+      "sha256": "3dae573fa951987a9070e65c9249a60d83b3155a32ef87fc471f4627720b9180",
+      "bytes": 3309
+    },
+    {
+      "id": "E16",
+      "label": "导航与深链接分类",
+      "path": "/Users/mac/Documents/ChatGPT/ZKER- staff/apps/web/src/nav/role-nav.ts",
+      "line": 20,
+      "note": "组织/人员/权限/审批/审计列入管理员导航集合",
+      "sha256": "b837a7878f166424257d8daa664b022a7a598368c804aca0402cecc2015628b2",
+      "bytes": 3215
+    },
+    {
+      "id": "E17",
+      "label": "Agent 绑定能力处理器",
+      "path": "/Users/mac/Documents/ChatGPT/ZKER- staff/services/control-plane/control_plane/agent_bind_capability_http.py",
+      "line": 92,
+      "note": "解析 capabilityId，变更 Agent revision 后返回；此函数未写入绑定关系",
+      "sha256": "bdf928ab889088f622038efcb54e555f890e54629e6fadcaa73bb83ab59294bd",
+      "bytes": 4942
+    },
+    {
+      "id": "E18",
+      "label": "Runtime 启动",
+      "path": "/Users/mac/Documents/ChatGPT/ZKER- staff/services/control-plane/control_plane/runtime_attempt_start_session.py",
+      "line": 583,
+      "note": "dispatch 调用未传任务正文",
+      "sha256": "6f24a28b6b792e4c15708d032cdb4bd5392ff69af23f246414c876fd5db336eb",
+      "bytes": 21039
+    },
+    {
+      "id": "E19",
+      "label": "Runtime 派发",
+      "path": "/Users/mac/Documents/ChatGPT/ZKER- staff/services/control-plane/control_plane/coordinator_dispatch.py",
+      "line": 145,
+      "note": "缺 task 时回退 attempt 标识",
+      "sha256": "70f162c349d025f9e99a728804dc9ddf75e52573898dbfd2c438edc8b9990732",
+      "bytes": 8911
+    },
+    {
+      "id": "E20",
+      "label": "Runtime 协调与提交",
+      "path": "/Users/mac/Documents/ChatGPT/ZKER- staff/services/control-plane/control_plane/runtime_execution_coordinator.py",
+      "line": 286,
+      "note": "结果候选/审批/提交分支；完成检查与交接参数可选",
+      "sha256": "edd7df8126592f420b69cd5794b6623074aee65e3b88a7cd12e8f5459e744c84",
+      "bytes": 27364
+    },
+    {
+      "id": "E21",
+      "label": "结果提交事务",
+      "path": "/Users/mac/Documents/ChatGPT/ZKER- staff/services/control-plane/control_plane/result_commit_store.py",
+      "line": 506,
+      "note": "摘要、完成检查和交接可选，非每次都会产生全部记录",
+      "sha256": "b6187dcf46d36de289fe3b4ec02acf035aefb9b85a777dc760acca8e7b8a58f3",
+      "bytes": 28819
+    },
+    {
+      "id": "E22",
+      "label": "DSH 网关服务",
+      "path": "/Users/mac/Documents/ChatGPT/ZKER- staff/packages/runtime-gateway/lib/runtime_contract_service.mjs",
+      "line": 478,
+      "note": "streamEvents 等完成；provideInput/resume 未支持",
+      "sha256": "eaf2ac1af93de7ff02b2d9adcbe70221a15f8db269201a2b6b8dfdffda660000",
+      "bytes": 20313
+    },
+    {
+      "id": "E23",
+      "label": "知识搜索执行",
+      "path": "/Users/mac/Documents/ChatGPT/ZKER- staff/services/control-plane/control_plane/knowledge_search_session.py",
+      "line": 223,
+      "note": "本路径使用 ILIKE 和 ID 排序",
+      "sha256": "c7b64517b55d28c5ae39cb46a18c2a9068e44b7248b3c72f7f4095e283c0e8e7",
+      "bytes": 9560
+    },
+    {
+      "id": "E24",
+      "label": "记忆存储",
+      "path": "/Users/mac/Documents/ChatGPT/ZKER- staff/services/control-plane/control_plane/memory_persist_session.py",
+      "line": 96,
+      "note": "agent_memories 存储、更新、过期、查询",
+      "sha256": "333ded8645649691bef3e9ecd44105fb8ace262db7d07d89b73cb9d88aa56a4d",
+      "bytes": 11362
+    },
+    {
+      "id": "E25",
+      "label": "调度执行器",
+      "path": "/Users/mac/Documents/ChatGPT/ZKER- staff/services/control-plane/control_plane/scheduled_task_runner.py",
+      "line": 112,
+      "note": "tick_once、循环启动和补跑源码存在，未做运行验收",
+      "sha256": "223f4b4353ada06d5368397c2ad343940a6db7939fdbb20b9c77cb5236f9a8ef",
+      "bytes": 9059
+    },
+    {
+      "id": "E26",
+      "label": "渠道适配器",
+      "path": "/Users/mac/Documents/ChatGPT/ZKER- staff/services/control-plane/control_plane/channel_adapter_session.py",
+      "line": 1,
+      "note": "渠道配置及凭据处理源码存在",
+      "sha256": "45d6bddc844f4f62a957eedd54ffc519b4deb50a547342df85e8325dff312948",
+      "bytes": 10344
+    },
+    {
+      "id": "E27",
+      "label": "MCP 启用判定",
+      "path": "/Users/mac/Documents/ChatGPT/ZKER- staff/services/control-plane/control_plane/capability_session_mcp_enable.py",
+      "line": 1,
+      "note": "已有快照资格判定；不持久化 mcp_enabled",
+      "sha256": "442022607104839cf33ffdd90c47ff0442712e9d1de13933e001f9150809158a",
+      "bytes": 8449
+    },
+    {
+      "id": "E28",
+      "label": "工具启用判定",
+      "path": "/Users/mac/Documents/ChatGPT/ZKER- staff/services/control-plane/control_plane/tool_enable_session.py",
+      "line": 1,
+      "note": "已有快照资格判定；不持久化 enabled",
+      "sha256": "bed9d64c42b2c706f9f643258d9d082125749f7a04f8ef336c29c4a7ee06cc3e",
+      "bytes": 11999
+    },
+    {
+      "id": "E29",
+      "label": "项目路径边界",
+      "path": "/Users/mac/Documents/ChatGPT/ZKER- staff/services/control-plane/control_plane/workspace_path_resolve_session.py",
+      "line": 1,
+      "note": "边界判定存在，不证明完整项目产品已交付",
+      "sha256": "3f4dc8311a070d5036229dc37c6c28cfc0fb2670074d2bb7abc2eac105deed69",
+      "bytes": 1077
+    },
+    {
+      "id": "E30",
+      "label": "进化提案边界",
+      "path": "/Users/mac/Documents/ChatGPT/ZKER- staff/services/control-plane/control_plane/evolution_proposal_create_session.py",
+      "line": 1,
+      "note": "提案决定逻辑存在，不证明学习发布闭环",
+      "sha256": "785c2b6520bb9a14bfa0ec43e1ffe84c76a73ec4639cb96c5b00ec9a38cb4618",
+      "bytes": 1103
+    },
+    {
+      "id": "E31",
+      "label": "业务指标投影",
+      "path": "/Users/mac/Documents/ChatGPT/ZKER- staff/services/control-plane/control_plane/business_api/autonomy_metrics_projection.py",
+      "line": 224,
+      "note": "租户指标读取与空值提示",
+      "sha256": "568562017242b303433b762e142c42af5647b97364e0c80530873e128f3c9b6d",
+      "bytes": 7478
+    },
+    {
+      "id": "E32",
+      "label": "节点后续推进",
+      "path": "/Users/mac/Documents/ChatGPT/ZKER- staff/services/control-plane/control_plane/sop_node_advance_after_commit.py",
+      "line": 1,
+      "note": "已有提交后节点推进代码，需纳入端到端证明",
+      "sha256": "c8ec9525c1901f804cbb17479e415304853d5bf916642c79a06f0261bd82cc9f",
+      "bytes": 9925
+    },
+    {
+      "id": "E33",
+      "label": "渠道身份绑定",
+      "path": "/Users/mac/Documents/ChatGPT/ZKER- staff/services/control-plane/control_plane/channel_identity_bind_session.py",
+      "line": 1,
+      "note": "身份绑定边界已有源码",
+      "sha256": "0f9ae8ceb1b73b4997d19a07d9f50430f84cdf13c776523f2b8451e077fa81e3",
+      "bytes": 1073
+    },
+    {
+      "id": "E34",
+      "label": "数字员工配置设计",
+      "path": "/Users/mac/Documents/ChatGPT/ZKER- staff/docs/ui/staffdeck-digital-employee-parity-matrix.md",
+      "line": 46,
+      "note": "档案、资源、记忆、历史的完整页面设计",
+      "sha256": "ed8a912c21132d42b8d745cc8ce3ae142d57f2dfec014be5fad254941e41194a",
+      "bytes": 7942
+    },
+    {
+      "id": "E35",
+      "label": "节点链条设计审计",
+      "path": "/Users/mac/Documents/ChatGPT/ZKER- staff/docs/product/sop-chain-consistency-audit-20260904.md",
+      "line": 12,
+      "note": "人员×事项、三元配置、触发双模、流转双模",
+      "sha256": "66f9084f10f2adf2097159832a55f81e4d405b09dbc31690287c1bb4cb670af6",
+      "bytes": 20363
+    },
+    {
+      "id": "E36",
+      "label": "产品壳层",
+      "path": "/Users/mac/Documents/ChatGPT/ZKER- staff/apps/web/src/shell/ProductShell.tsx",
+      "line": 74,
+      "note": "audience 缺省时未作 audience 导航过滤",
+      "sha256": "3361d643afa0a00a9ab7d71725bd7a5c990cf791aba950ea6ee0fe7eb4e8b41e",
+      "bytes": 6380
+    }
+  ],
+  "contextSourceFiles": [
+    {
+      "id": "X01",
+      "label": "职责、Agent 与上下文领域定义",
+      "path": "/Users/mac/Documents/ChatGPT/ZKER- staff/CONTEXT.md",
+      "line": 94,
+      "sha256": "ba4a684c6009bdf176cd3d7dc62827d915f2432aeafce95b7c02d1bbacc843d5"
+    },
+    {
+      "id": "X02",
+      "label": "人员数字员工协作主链",
+      "path": "/Users/mac/Documents/ChatGPT/ZKER- staff/docs/product/human-digital-employee-collaboration-chain.yaml",
+      "line": 10,
+      "sha256": "c1913cf1f5355e749ba85e8afc6fee57c17f7f32c7b854c540972e760050d61a"
+    },
+    {
+      "id": "X03",
+      "label": "上下文分享与有界代办",
+      "path": "/Users/mac/Documents/ChatGPT/ZKER- staff/docs/identity/organization-identity-access-design.md",
+      "line": 352,
+      "sha256": "ffcafa9e99a3c3c9c2dc1c671ebb24ac2c6d2ed5f9757f08df0a15ab999a5c44"
+    },
+    {
+      "id": "X04",
+      "label": "WorkThread 与交接交互合同",
+      "path": "/Users/mac/Documents/ChatGPT/ZKER- staff/docs/ui/ui-interaction-spec.md",
+      "line": 73,
+      "sha256": "7a78acc95e492149a4befbee998e4e4e8657ca9e53f84d34d295b2384f1a14c2"
+    },
+    {
+      "id": "X05",
+      "label": "上下文清单 Schema",
+      "path": "/Users/mac/Documents/ChatGPT/ZKER- staff/contracts/jsonschema/context-manifest.schema.json",
+      "line": 1,
+      "sha256": "6f8b737a28a7abdcec52325eb559ed03c8ad3f3586567533ac71cacac6292573"
+    },
+    {
+      "id": "X06",
+      "label": "协作线程 Schema",
+      "path": "/Users/mac/Documents/ChatGPT/ZKER- staff/contracts/jsonschema/work-thread.schema.json",
+      "line": 1,
+      "sha256": "7c48f7923fc9e86a36b68da9dc3f687cdc41b1d8ba31c802c8c9e8423075df87"
+    },
+    {
+      "id": "X07",
+      "label": "协作条目 Schema",
+      "path": "/Users/mac/Documents/ChatGPT/ZKER- staff/contracts/jsonschema/work-thread-entry.schema.json",
+      "line": 1,
+      "sha256": "6497467c2a57fd8072656c65ac5122c3ede4e5e0699aec0c713c552619a4660e"
+    },
+    {
+      "id": "X08",
+      "label": "交接包 Schema",
+      "path": "/Users/mac/Documents/ChatGPT/ZKER- staff/contracts/jsonschema/handoff-package.schema.json",
+      "line": 1,
+      "sha256": "84aed1a6a935c87f471d81be2d37d256a9cc24ba44a503cb9333d3dadc082ba2"
+    },
+    {
+      "id": "X09",
+      "label": "单有效分配约束",
+      "path": "/Users/mac/Documents/ChatGPT/ZKER- staff/services/control-plane/alembic/versions/20260903_0045_pk05_agent_candidate_domain.py",
+      "line": 457,
+      "sha256": "26219da00448c75076cb3264088e14b0bed1b68ea0287fa404e654124e0c9c33"
+    },
+    {
+      "id": "X10",
+      "label": "分配创建与工作项当前分配",
+      "path": "/Users/mac/Documents/ChatGPT/ZKER- staff/services/control-plane/control_plane/agent_assignment_create_session.py",
+      "line": 107,
+      "sha256": "0632f93c9f69a66577562c8a9f8684d5526c8b095f2dcd5c7d66b68d9ace30f1"
+    },
+    {
+      "id": "X11",
+      "label": "滚动对话上下文投影",
+      "path": "/Users/mac/Documents/ChatGPT/ZKER- staff/services/control-plane/control_plane/business_api/conversation_context_projection.py",
+      "line": 35,
+      "sha256": "a071f98b92ce36fef6e88917fbf1511d6184c2cc7be9fd1484bd0236cfd85d52"
+    },
+    {
+      "id": "X12",
+      "label": "对话派发消费者",
+      "path": "/Users/mac/Documents/ChatGPT/ZKER- staff/services/control-plane/control_plane/business_api/conversation_reply_runtime.py",
+      "line": 806,
+      "sha256": "8402619492c13311bfc95a9928213f6832acfc56d7ad37f78906fb89c0de16fd"
+    },
+    {
+      "id": "X13",
+      "label": "上下文文件物化与 DSH 启动",
+      "path": "/Users/mac/Documents/ChatGPT/ZKER- staff/packages/runtime-gateway/lib/dsh_adapter.mjs",
+      "line": 281,
+      "sha256": "a172962767391f7372075ffd58a9678874f94544cbc38b0e18f749802bb1b992"
+    },
+    {
+      "id": "X14",
+      "label": "上下文重新授权决定",
+      "path": "/Users/mac/Documents/ChatGPT/ZKER- staff/services/control-plane/control_plane/context_manifest_session.py",
+      "line": 95,
+      "sha256": "1545d0525cc066683af51a95d7ecace3ad898f1ef866298af6a1bcfedbce24ab"
+    },
+    {
+      "id": "X15",
+      "label": "协作线程读取边界",
+      "path": "/Users/mac/Documents/ChatGPT/ZKER- staff/services/control-plane/control_plane/work_thread_read_session.py",
+      "line": 1,
+      "sha256": "03b3f02d64f37be276d6029dd0900244069ec646b207875098e7e7a4520b68fa"
+    },
+    {
+      "id": "X16",
+      "label": "结果事务中的上下文重授权",
+      "path": "/Users/mac/Documents/ChatGPT/ZKER- staff/services/control-plane/control_plane/result_commit_store.py",
+      "line": 565,
+      "sha256": "b6187dcf46d36de289fe3b4ec02acf035aefb9b85a777dc760acca8e7b8a58f3"
+    },
+    {
+      "id": "X17",
+      "label": "团队黑板及条目提升",
+      "path": "/Users/mac/Documents/ChatGPT/ZKER- staff/services/control-plane/control_plane/team_blackboard_http.py",
+      "line": 1,
+      "sha256": "faf3dc748352c39cb8db341a7e8b1239db68e438633eb96d61a1677797e3ed08"
+    },
+    {
+      "id": "X18",
+      "label": "滚动投影既有测试",
+      "path": "/Users/mac/Documents/ChatGPT/ZKER- staff/services/control-plane/tests/business_api/test_conversation_context_projection.py",
+      "line": 1,
+      "sha256": "f0ebfd8d68d1efc78091944e01f7a9f43f00b4816e0a3373f282179e1ef5be51"
+    },
+    {
+      "id": "X19",
+      "label": "重授权既有测试",
+      "path": "/Users/mac/Documents/ChatGPT/ZKER- staff/services/control-plane/tests/test_context_manifest_reauth_decision.py",
+      "line": 1,
+      "sha256": "8c3efa689c316219e27a8f2a66e034329f5ca4fb298489cd73c81751e1c3179d"
+    }
+  ],
+  "observedEndingStatus": " M memory/evolution/memory_graph.jsonl\n M ruvector.db\n?? .codebase-memory/\n?? artifacts/nav-01-workbench.png\n?? artifacts/nav-02-agents.png\n?? artifacts/nav-03-conversations.png\n?? artifacts/nav-04-blackboard.png\n?? artifacts/pc04-web-approvals-404-state-final.png\n?? artifacts/pc04-web-approvals-list-404-clean.png\n?? artifacts/pc04-web-approvals-list-404.png\n?? artifacts/pc04-web-blackboard-promote-allow.png\n?? artifacts/pc04-web-blackboard-promote-clean.png\n?? artifacts/pc04-web-blackboard-write-allow.png\n?? artifacts/pc04-web-blackboard-write-clean.png\n?? artifacts/pc10-nav-hide-unwired-workbench.png\n?? artifacts/pr04-workbench-noise-clean.png\n?? docs/ai/evidence/bundles/EV-PC10-CI-FOUNDATION-FIX-20260911.yaml\n?? docs/ai/evidence/bundles/EV-PC10-E2E-DB-ROUNDTRIP-20260911.yaml\n?? docs/ai/evidence/bundles/EV-PC10-W2-5-L2-DEAD-CODE-20260911.yaml\n?? docs/ai/evidence/bundles/EV-PC10-W2-5-L3-SHIM-20260911.yaml\n?? docs/ai/task-packet-pc00-surface-pin-gate-20260911.yaml\n?? docs/ai/task-packet-pc02-k506-security-exit-evidence-20260906.yaml\n?? docs/ai/task-packet-pc02-k506-security-exit-evidence-renew-20260908.yaml\n?? docs/ai/task-packet-pc02-uvcl-admin-chrome-20260908.yaml\n?? docs/ai/task-packet-pc04-golden-slice-browser-20260908.yaml\n?? docs/ai/task-packet-pc09-ci-required-check-matrix-20260909.yaml\n?? docs/ai/task-packet-pc09-exit-closure-projection-sync-candidate-20260909.yaml\n?? docs/ai/task-packet-pc09-restore-rollback-rehearsal-20260909.yaml\n?? docs/ai/task-packet-pc10-ci-foundation-fix-20260911.yaml\n?? docs/ai/task-packet-pc10-e2e-db-roundtrip-20260911.yaml\n?? docs/ai/task-packet-pc10-w2-5-l2-dead-code-20260911.yaml\n?? docs/ai/task-packet-pc10-w2-5-l3-shim-20260911.yaml\n?? docs/ai/worktree-baseline-pc00-surface-pin-gate-20260911.json\n?? docs/ai/worktree-baseline-pc01-k502-surface-extend-20260906.json\n?? docs/ai/worktree-baseline-pc02-control-integrator-evidence-bind-20260908.json\n?? docs/ai/worktree-baseline-pc02-k506-security-exit-evidence-20260906.json\n?? docs/ai/worktree-baseline-pc02-k506-security-exit-evidence-renew-20260908.json\n?? docs/ai/worktree-baseline-pc02-uvcl-admin-chrome-20260908.json\n?? docs/ai/worktree-baseline-pc04-golden-slice-browser-20260908.json\n?? docs/ai/worktree-baseline-pc05-assembly-gap-real-app-20260909.json\n?? docs/ai/worktree-baseline-pc05-fk-testdata-green-20260909.json\n?? docs/ai/worktree-baseline-pc05-regression-green-20260909.json\n?? docs/ai/worktree-baseline-pc06-routes-mount-20260909.json\n?? docs/ai/worktree-baseline-pc09-load-fault-tests-20260909.json\n?? docs/ai/worktree-baseline-pc09-r02-contract-mount-reconcile-20260910.json\n?? docs/ai/worktree-baseline-pc09-r03-product-surface-denoi-20260910.json\n?? docs/ai/worktree-baseline-pc09-restore-rollback-rehearsal-20260909.json\n?? docs/ai/worktree-baseline-pc09-runtime-connected-schema-20260909.json\n?? docs/ai/worktree-baseline-pc10-ci-foundation-fix-20260911.json\n?? docs/ai/worktree-baseline-pc10-e2e-db-roundtrip-20260911.json\n?? docs/ai/worktree-baseline-pc10-w2-5-l2-dead-code-20260911.json\n?? docs/ai/worktree-baseline-pc10-w2-5-l3-shim-20260911.json\n",
+  "validation": {
+    "revision": "v2.6",
+    "passed": true,
+    "checks": [
+      {
+        "name": "41 role profiles still map exactly to 44 human keys",
+        "passed": true,
+        "detail": null
+      },
+      {
+        "name": "Seven canonical fixtures unchanged",
+        "passed": true,
+        "detail": null
+      },
+      {
+        "name": "Embedded role catalog unchanged",
+        "passed": true,
+        "detail": null
+      },
+      {
+        "name": "Original 153 requirements and 22 pages preserved",
+        "passed": true,
+        "detail": null
+      },
+      {
+        "name": "Protected original requirement, schema and role artifacts retain baseline digests",
+        "passed": true,
+        "detail": null
+      },
+      {
+        "name": "28 OA refinements trace to actual requirement IDs and role/page groups",
+        "passed": true,
+        "detail": null
+      },
+      {
+        "name": "Demonstrated versus design-only scope explicit",
+        "passed": true,
+        "detail": null
+      },
+      {
+        "name": "Four browser suites passed all actual cases",
+        "passed": true,
+        "detail": null
+      },
+      {
+        "name": "Role, OA and field browser suites match current HTML digest",
+        "passed": true,
+        "detail": null
+      },
+      {
+        "name": "OA layouts cover all roles, five queues and task detail at three widths",
+        "passed": true,
+        "detail": null
+      },
+      {
+        "name": "No browser errors or external requests",
+        "passed": true,
+        "detail": null
+      },
+      {
+        "name": "OA Schema has tested valid and invalid examples",
+        "passed": true,
+        "detail": null
+      },
+      {
+        "name": "Seven initial instances have unique IDs and business numbers",
+        "passed": true,
+        "detail": null
+      },
+      {
+        "name": "Same published process runs three times on same date",
+        "passed": true,
+        "detail": null
+      },
+      {
+        "name": "Each profile has distinct task references across processes and two nodes in same instance",
+        "passed": true,
+        "detail": null
+      },
+      {
+        "name": "Task IDs and work item references are unique in fixture",
+        "passed": true,
+        "detail": null
+      },
+      {
+        "name": "Fixture has at most one named initiator per instance",
+        "passed": true,
+        "detail": null
+      },
+      {
+        "name": "Current UI version visible",
+        "passed": true,
+        "detail": null
+      },
+      {
+        "name": "All local links and anchors resolve",
+        "passed": true,
+        "detail": {
+          "count": 507,
+          "failures": []
+        }
+      },
+      {
+        "name": "All current screenshots exist and are unique",
+        "passed": true,
+        "detail": 109
+      },
+      {
+        "name": "Canonical role source remains current",
+        "passed": true,
+        "detail": null
+      },
+      {
+        "name": "17 business template fields match embedded definitions",
+        "passed": true,
+        "detail": null
+      },
+      {
+        "name": "Existing contract field sources unchanged",
+        "passed": true,
+        "detail": null
+      },
+      {
+        "name": "All roles have field inventory without full-contract claim",
+        "passed": true,
+        "detail": null
+      }
+    ],
+    "coverage": {
+      "roleProfiles": 41,
+      "humanRoleKeys": 44,
+      "requirements": 153,
+      "oaRefinements": 28,
+      "initialInstances": 7,
+      "initialFixtureTasks": 369,
+      "layoutChecks": 1632,
+      "interactionChecks": 526,
+      "screenshots": 109,
+      "fieldInventoryViews": 237,
+      "businessTemplateFields": 17
+    },
+    "localLinks": 507,
+    "htmlSha256": "97b8bb8b61b3ff1da1f1f59426a24e33d41bd01e3d2c3ee24efeb996dfd1fc73",
+    "sourceHead": "40dbeebf2610c863f07cc65eaf825dd063d26e68",
+    "sourceHashes": {
+      "docs/ui/information-architecture.md": "2a827b844054a167b05c455d6a0a07dd190e426f11f7837a37cb13489e296ca8",
+      "docs/ui/ui-interaction-spec.md": "7a78acc95e492149a4befbee998e4e4e8657ca9e53f84d34d295b2384f1a14c2",
+      "apps/web/src/pages/work/MyWorkPage.tsx": "8f4fcf4f6492e380bf72e27225f2122fe6ebda8fa627a921a2ea413edcd59839",
+      "apps/web/src/list-human-tasks-api.ts": "a5d00a29a33b260df920ca9a1ce4c7dcc0eed4571a5b7741ef53cd413d3d4f6d",
+      "contracts/jsonschema/work-execution-history-item.schema.json": "723e06f1779a5a656cf6976435654f9a4b09645cb85e1793b9290cc6a73ce5f4",
+      "contracts/authz/platform-roles.yaml": "12263586cd56b40c21416249eafac41b3ba715454ec679e78671a372afe31228"
+    },
+    "limitations": [
+      "Local fictional prototype, schema and documentation only; no production database, real-role authentication, cross-browser concurrency, calendar engine or actual Agent runtime verification."
+    ]
+  },
+  "schemaValidationSummary": {
+    "passed": true,
+    "validExamples": 5,
+    "invalidExamples": 13
+  },
+  "prototypeValidationSummary": {
+    "revision": "v2.6",
+    "profiles": 41,
+    "humanRoleKeys": 44,
+    "serviceRoleKeys": 1,
+    "requirements": 153,
+    "domains": 21,
+    "pageGroups": 22,
+    "oaRefinements": 28,
+    "layoutChecks": 1632,
+    "interactionChecks": 526,
+    "screenshots": 109,
+    "pageErrors": 0,
+    "networkRequests": 0,
+    "limitations": "Local fictional prototype only. Field inventory is not full semantic or backend-contract acceptance. No real role authentication, persistence, concurrency, Agent runtime or production acceptance.",
+    "fieldInventoryViews": 237,
+    "businessTemplateFields": 17
+  },
+  "existingSchemaSummary": {
+    "files": 64,
+    "fieldRows": 895
+  },
+  "checklist": {
+    "count": 153,
+    "domains": 21,
+    "priorities": {
+      "P0": 37,
+      "P1": 102,
+      "P2": 14
+    },
+    "originalRowsPreserved": 123,
+    "newRows": 30
+  },
+  "artifacts": [
+    {
+      "path": "/Users/mac/Documents/New project 2/00-开发设计包导读.md",
+      "sha256": "7cdb9a5890e800b2f8a8cce16baecc9e285a7b91d93f4f229093c145090983b6",
+      "bytes": 15010
+    },
+    {
+      "path": "/Users/mac/Documents/New project 2/01-产品需求与业务规则.md",
+      "sha256": "0c19e6ed498728632a902cfd4da58efcf7e86eee704ebcbc2dabe90f4fd963d4",
+      "bytes": 17063
+    },
+    {
+      "path": "/Users/mac/Documents/New project 2/02-数据模型与ER设计.md",
+      "sha256": "7904fb1b884f93e12d56b300a8c193859c6364da8d3400d53585c1f50c96ee76",
+      "bytes": 22691
+    },
+    {
+      "path": "/Users/mac/Documents/New project 2/03-业务流程与状态机.md",
+      "sha256": "fa715497a3744c1a4b909fb8c3918c408af02f770cb5d3a61dd5c9d471b9ea6d",
+      "bytes": 15847
+    },
+    {
+      "path": "/Users/mac/Documents/New project 2/04-接口与契约变更设计.md",
+      "sha256": "995af0b031e655c7089e3b6d2ddee303e469b0077ca3828f7fae20cf413b9c7c",
+      "bytes": 16411
+    },
+    {
+      "path": "/Users/mac/Documents/New project 2/05-UI与交互设计.md",
+      "sha256": "a42937763311969660aa97eaa44af21534b0a80e35b48b56c4894047c7346a0c",
+      "bytes": 22171
+    },
+    {
+      "path": "/Users/mac/Documents/New project 2/06-用户故事与153项追踪矩阵.md",
+      "sha256": "9460c1123c9851c2e6e8e37585d42e82cfe6eb07958443f7da88db0edb8db6be",
+      "bytes": 178577
+    },
+    {
+      "path": "/Users/mac/Documents/New project 2/07-开发分解与验收方案.md",
+      "sha256": "7cd9fd70dd1a4482a7f55bca957c18ff05d950b3fcd2ed1bdee1265d953e85e9",
+      "bytes": 13800
+    },
+    {
+      "path": "/Users/mac/Documents/New project 2/08-人员数字员工协作交互原型.html",
+      "sha256": "97b8bb8b61b3ff1da1f1f59426a24e33d41bd01e3d2c3ee24efeb996dfd1fc73",
+      "bytes": 188977
+    },
+    {
+      "path": "/Users/mac/Documents/New project 2/09-协作扩展候选.schema.json",
+      "sha256": "1febdcd56897f76aaf29087ab7919710397f1c87a6b859fd14fc96e92fe48f45",
+      "bytes": 32651
+    },
+    {
+      "path": "/Users/mac/Documents/New project 2/10-需求追踪数据.json",
+      "sha256": "f462eedd02e8b0168cacfcf5d2e7cc9a2135b710021e4598e2c8e73ca7c0c002",
+      "bytes": 178782
+    },
+    {
+      "path": "/Users/mac/Documents/New project 2/11-存量合同字段字典.md",
+      "sha256": "2027f594acf10075a62f802b50a7addb33992318a050755563b0da40bc67dea9",
+      "bytes": 87499
+    },
+    {
+      "path": "/Users/mac/Documents/New project 2/12-员工市场复制与使用设计.md",
+      "sha256": "3dd288d28b31cf43629ef9878916742078c3f893b99a9862bf7bd5eeca43ef8d",
+      "bytes": 15519
+    },
+    {
+      "path": "/Users/mac/Documents/New project 2/13-市场采用候选.schema.json",
+      "sha256": "3297a6a8f331f54b368a561148ec48a2bc27fe2b482033dffbadcfb684738ffd",
+      "bytes": 17569
+    },
+    {
+      "path": "/Users/mac/Documents/New project 2/14-QoderWake界面参考与原型设计.md",
+      "sha256": "e833433ef8d4896e049d3c997a869a97eb91177a05b0580e8b97376b7bdd825b",
+      "bytes": 9114
+    },
+    {
+      "path": "/Users/mac/Documents/New project 2/15-全角色界面与操作覆盖矩阵.md",
+      "sha256": "21dacf497a98c408ab3c9d0e51af64ee71c9e67421bab2115a8534c43dcb3b3e",
+      "bytes": 29502
+    },
+    {
+      "path": "/Users/mac/Documents/New project 2/16-角色视角与权限演示数据.json",
+      "sha256": "fd3ac843ab53c5ce94f5f70214e735ff85501cc3f34f1bb9d52f36fbdfa35791",
+      "bytes": 20158
+    },
+    {
+      "path": "/Users/mac/Documents/New project 2/17-角色需求与验收追踪.json",
+      "sha256": "72913aac3eb6dce0e7047fa51f56460d717d51d8eccc04ecb986549a5eddbbb8",
+      "bytes": 119518
+    },
+    {
+      "path": "/Users/mac/Documents/New project 2/18-OA多流程多实例产品设计.md",
+      "sha256": "83ef58d49fa929db945c30db0320768eb9bef394e210757089fabbd888a67c33",
+      "bytes": 27263
+    },
+    {
+      "path": "/Users/mac/Documents/New project 2/19-OA多实例演示数据.json",
+      "sha256": "93e9933bd4abe8292b8b9f543d6a726cfb8e768b9197dada644e209619842914",
+      "bytes": 297224
+    },
+    {
+      "path": "/Users/mac/Documents/New project 2/20-OA统一待办候选.schema.json",
+      "sha256": "532fa95aaddf6dac1d25a54c83b37737f583fd1a1cf6551c44b510b2bb415968",
+      "bytes": 18701
+    },
+    {
+      "path": "/Users/mac/Documents/New project 2/21-OA需求细化与验收追踪.json",
+      "sha256": "b20bcd521123667dfc4c12f7da8d9f4f408d231b9241d3651cf425cb190ea12b",
+      "bytes": 20918
+    },
+    {
+      "path": "/Users/mac/Documents/New project 2/22-开源工作流与成熟前端复用选型.md",
+      "sha256": "78b850ab30ffbc1efd5f3e01e57c547508a81b174f0c0013d9d93b4b8664db3a",
+      "bytes": 19470
+    },
+    {
+      "path": "/Users/mac/Documents/New project 2/23-OA主旨与BS字段一致性核查.md",
+      "sha256": "3e2a8a5bbe5f79070a281be48bd34a56b85934ed472bad6bae3b9c5927882f59",
+      "bytes": 13119
+    },
+    {
+      "path": "/Users/mac/Documents/New project 2/24-业务模板字段候选.json",
+      "sha256": "608a25ef9961f917d82801399d5520369874357dd58ec7045f757faff3a65851",
+      "bytes": 3918
+    },
+    {
+      "path": "/Users/mac/Documents/New project 2/ZKER-staff-完整优化清单-v2-人员数字员工与上下文对齐.md",
+      "sha256": "698183a16c0ee189d21ca9b18de8e73a5394b0358e5b9d94abac3a5f66b91874",
+      "bytes": 106983
+    },
+    {
+      "path": "/Users/mac/Documents/New project 2/validation/browser-validation.json",
+      "sha256": "43f01931cf42d25fd3bb8ddc8370a80aa296e1a4f9a2efc4ecfebc25cdc02b34",
+      "bytes": 15051
+    },
+    {
+      "path": "/Users/mac/Documents/New project 2/validation/existing-schema-inventory.json",
+      "sha256": "af76eb9a7217270ff700d5c4cd74d42175cf874ac1b576060d8874219041df96",
+      "bytes": 14507
+    },
+    {
+      "path": "/Users/mac/Documents/New project 2/validation/field-consistency-task-state.json",
+      "sha256": "9c5226d9ea30d5d4480c97c9e6c57f14690a56c4ec66568988238bfa389fc4a2",
+      "bytes": 5945
+    },
+    {
+      "path": "/Users/mac/Documents/New project 2/validation/market-1024.png",
+      "sha256": "f82b4597f1ce255962201ddf2ab1dd8aadc45fbdc763e3866990e327ea1167fc",
+      "bytes": 249910
+    },
+    {
+      "path": "/Users/mac/Documents/New project 2/validation/market-1440.png",
+      "sha256": "fcd0d7d67a7e72deceeddb7414abdde3717515ee3aaa5fdfa4b05c65a670e5b4",
+      "bytes": 254401
+    },
+    {
+      "path": "/Users/mac/Documents/New project 2/validation/market-390.png",
+      "sha256": "3ef85cd9bc625a1ce5fd0106666c09e031c2f5ac5bf7a093351e08ef53319c24",
+      "bytes": 239713
+    },
+    {
+      "path": "/Users/mac/Documents/New project 2/validation/market-baseline.json",
+      "sha256": "e692299aa8bc0a9b743c4734756a6459491f02c4fe6ef63a63f144ab8252943d",
+      "bytes": 156956
+    },
+    {
+      "path": "/Users/mac/Documents/New project 2/validation/market-browser-validation.json",
+      "sha256": "ed8a2ad29b5d21e233cfe59326c8d1aac55093ea90c00c6675707afa634d3b87",
+      "bytes": 18839
+    },
+    {
+      "path": "/Users/mac/Documents/New project 2/validation/market-document-validation.json",
+      "sha256": "be0b564add2920a850eef28eefb09d6a6d57c1fddfbba162acadba2ad24477e3",
+      "bytes": 4740
+    },
+    {
+      "path": "/Users/mac/Documents/New project 2/validation/market-schema-validation.json",
+      "sha256": "3b3e5fb461da135560a78b3bf1fe7732a136917f15d2b186911bae4d08f90d17",
+      "bytes": 1409
+    },
+    {
+      "path": "/Users/mac/Documents/New project 2/validation/oa-task-state.json",
+      "sha256": "519a513c664d96b8edb6ee74a02699b2e61f6ffb7a2664fcb9ef4802e32266ad",
+      "bytes": 4310
+    },
+    {
+      "path": "/Users/mac/Documents/New project 2/validation/prototype-1024.png",
+      "sha256": "dcea5bf1c8e3e105dcc9cba216fbb71ac5f0f47d55b7c3d73198a038224b0ed9",
+      "bytes": 204865
+    },
+    {
+      "path": "/Users/mac/Documents/New project 2/validation/prototype-1440.png",
+      "sha256": "5904c6ceda05358e1827b23155a01e08d808d412d883212ce337050053d85413",
+      "bytes": 204809
+    },
+    {
+      "path": "/Users/mac/Documents/New project 2/validation/prototype-390.png",
+      "sha256": "e7cbc93f25d1e45056bb7bfa8178647dab9f45377f9cde0d8bcaadd8073f1a2c",
+      "bytes": 165900
+    },
+    {
+      "path": "/Users/mac/Documents/New project 2/validation/qoder-agents-1024.png",
+      "sha256": "c693b16edcbad6e5e1d37988635d8011121cbe9198a977123f48959df01a3479",
+      "bytes": 99444
+    },
+    {
+      "path": "/Users/mac/Documents/New project 2/validation/qoder-agents-1440.png",
+      "sha256": "9dd1b641cedc9020b822cb07f8efaaf8f659e5459c8068ca70acf43110a3201e",
+      "bytes": 107955
+    },
+    {
+      "path": "/Users/mac/Documents/New project 2/validation/qoder-agents-390.png",
+      "sha256": "c0a4dbd3337154af1e681bd12871386f599c93028643a342d319acc37db84c4d",
+      "bytes": 52756
+    },
+    {
+      "path": "/Users/mac/Documents/New project 2/validation/qoder-conversation-1024.png",
+      "sha256": "cc2b05a912a8753391c3334381535d78f9a9b7e721d6d62e95eb45641eb9c305",
+      "bytes": 131305
+    },
+    {
+      "path": "/Users/mac/Documents/New project 2/validation/qoder-conversation-1440.png",
+      "sha256": "793560b7a8a14b6edf236f7f776230fb3ada262f2fa749fd6564ceb4641d90fe",
+      "bytes": 139699
+    },
+    {
+      "path": "/Users/mac/Documents/New project 2/validation/qoder-conversation-390.png",
+      "sha256": "6ad4d913b4ac4fc7b8bc7cd4aa2c9d87922c32d4682cab4ebb5724955dffa928",
+      "bytes": 84240
+    },
+    {
+      "path": "/Users/mac/Documents/New project 2/validation/qoder-dashboard-1024.png",
+      "sha256": "c0d537c44f41b0dfb9f4277164b510a848848f1089ff6d2050b41de4b7b2bffe",
+      "bytes": 130382
+    },
+    {
+      "path": "/Users/mac/Documents/New project 2/validation/qoder-dashboard-1440.png",
+      "sha256": "ddd2ac4be289e5822b8937c9b581f6a77d324fb3ffbc50b70afc5b62d6bcbd84",
+      "bytes": 147388
+    },
+    {
+      "path": "/Users/mac/Documents/New project 2/validation/qoder-dashboard-390.png",
+      "sha256": "6dbb454d4c5fa6405125ee4f396c3dec394e2a84fd5e39197e002c46b0858b91",
+      "bytes": 81844
+    },
+    {
+      "path": "/Users/mac/Documents/New project 2/validation/qoder-document-validation.json",
+      "sha256": "4512e51a9185a6dfe64b38b7ba88cdcefd2d89b4cb59ef22fd654759b4e080be",
+      "bytes": 1371
+    },
+    {
+      "path": "/Users/mac/Documents/New project 2/validation/qoder-market-1024.png",
+      "sha256": "726caf1ebc2ec45a8a0242b848a0e5a7f5835e772136275b4104b712d15d529e",
+      "bytes": 189343
+    },
+    {
+      "path": "/Users/mac/Documents/New project 2/validation/qoder-market-1440.png",
+      "sha256": "6868411f34710039fc061178209c10e6dea97a19996327aec40a6ff666a97c3e",
+      "bytes": 183769
+    },
+    {
+      "path": "/Users/mac/Documents/New project 2/validation/qoder-market-390.png",
+      "sha256": "31f379e023f94934395d6e83df9a92ba1660b3dafbfdb28b2672c31100a2e862",
+      "bytes": 141021
+    },
+    {
+      "path": "/Users/mac/Documents/New project 2/validation/qoder-market-initial-validation.json",
+      "sha256": "471520b4d88d4e34b8d72a1967e7025f85f3aa3557968eb88b4e8c7723cd711b",
+      "bytes": 18873
+    },
+    {
+      "path": "/Users/mac/Documents/New project 2/validation/qoder-market-validation.json",
+      "sha256": "9f0f45763cecc8e7a1e61fbac5d69f8eb5f75c8fd049554df73a93b30242e88f",
+      "bytes": 23357
+    },
+    {
+      "path": "/Users/mac/Documents/New project 2/validation/qoder-node-1024.png",
+      "sha256": "2d8f4e60577b2696f7da0a62868fb292eeb8a3fe7a3fe79eae74fd1b51bd9b53",
+      "bytes": 174702
+    },
+    {
+      "path": "/Users/mac/Documents/New project 2/validation/qoder-node-1440.png",
+      "sha256": "b3a99789a64e01a82ad900b2299d66ff2880c1ab1f96e1a6a37222a3ccfbde50",
+      "bytes": 179103
+    },
+    {
+      "path": "/Users/mac/Documents/New project 2/validation/qoder-node-390.png",
+      "sha256": "35997121e7b0e285d04eeac1caed7c1f11d94f0613208474c2e540dacb630781",
+      "bytes": 121825
+    },
+    {
+      "path": "/Users/mac/Documents/New project 2/validation/qoder-node-validation.json",
+      "sha256": "f231e772b915bd333416c7e0c186543d584d4a100b1798658034367c4634a8c3",
+      "bytes": 15064
+    },
+    {
+      "path": "/Users/mac/Documents/New project 2/validation/qoder-shell-validation.json",
+      "sha256": "ef1557e94272a3449b3ab6837dee892fb337f35f264844bca0bf657a9f06c6aa",
+      "bytes": 24085
+    },
+    {
+      "path": "/Users/mac/Documents/New project 2/validation/qoder-ui-task-state.json",
+      "sha256": "e63708ad907c08acb08e53778d7da2ef7c0cebf461583b6a6c0ca8ed581eae43",
+      "bytes": 3069
+    },
+    {
+      "path": "/Users/mac/Documents/New project 2/validation/qoderwake-reference/agent-management-header.png",
+      "sha256": "c09882e70d51696854a512c3c79bf0476d080cc308f582bea4feceb13c9da9f1",
+      "bytes": 27868
+    },
+    {
+      "path": "/Users/mac/Documents/New project 2/validation/qoderwake-reference/capture.json",
+      "sha256": "f3ad0508c39cd3b532e86417edc569ce1a522b8de5c0a739571dfa1b39381e51",
+      "bytes": 1685
+    },
+    {
+      "path": "/Users/mac/Documents/New project 2/validation/qoderwake-reference/connector-market.png",
+      "sha256": "d28310eec5ab7b2e9802910dcd44f8ebb64a1e5ad50e59d208b487bb51c322ea",
+      "bytes": 154902
+    },
+    {
+      "path": "/Users/mac/Documents/New project 2/validation/qoderwake-reference/skill-market-mobile.png",
+      "sha256": "4b0d35d6832f6a9765ee7f706b1316db02d55cdcb336fba9943e159bd22ba6c8",
+      "bytes": 86958
+    },
+    {
+      "path": "/Users/mac/Documents/New project 2/validation/qoderwake-reference/skill-market.png",
+      "sha256": "e026db61a56dfd451867063cd76a3cf663e10197a918d2cbae78b27ea91837ac",
+      "bytes": 227488
+    },
+    {
+      "path": "/Users/mac/Documents/New project 2/validation/qoderwake-reference/task-board-header.png",
+      "sha256": "bf12014747248bc830974f82ee816347bd17d87cef4dff07a4ad8c4ebe35d2a4",
+      "bytes": 40172
+    },
+    {
+      "path": "/Users/mac/Documents/New project 2/validation/role-access-1440.png",
+      "sha256": "516c8c835963879220c3f111ec32990c067ed1287ca6e85d4250a5919185cb98",
+      "bytes": 111133
+    },
+    {
+      "path": "/Users/mac/Documents/New project 2/validation/role-access-390.png",
+      "sha256": "f369e3826e2ecb7e6db23d033bbf3f9c865be548d70283f0d38335f78a65679c",
+      "bytes": 70849
+    },
+    {
+      "path": "/Users/mac/Documents/New project 2/validation/role-api-1440.png",
+      "sha256": "cd51d5d682d788d6e551645a5c54287d43188b638fa573a70117cced07c6b2e1",
+      "bytes": 100924
+    },
+    {
+      "path": "/Users/mac/Documents/New project 2/validation/role-api-390.png",
+      "sha256": "6be84ff59e899087292a0f855921b54c587edd471a231fcdac8df6f848132556",
+      "bytes": 58901
+    },
+    {
+      "path": "/Users/mac/Documents/New project 2/validation/role-apiadmin-1440.png",
+      "sha256": "6bc116a3f0b36f8908f422203404771f8421cf2f8eb7a2238ddbd590d49aa52b",
+      "bytes": 94254
+    },
+    {
+      "path": "/Users/mac/Documents/New project 2/validation/role-apiadmin-390.png",
+      "sha256": "5af8604384ce3f94d0a441e83996e020d705c31d102f74b1fdb95c7a6af98e34",
+      "bytes": 55112
+    },
+    {
+      "path": "/Users/mac/Documents/New project 2/validation/role-approver-1440.png",
+      "sha256": "feea81928eb0bc82f29b077231f8c5c0679951b676fcb2fe4b12314fb66422e8",
+      "bytes": 102757
+    },
+    {
+      "path": "/Users/mac/Documents/New project 2/validation/role-approver-390.png",
+      "sha256": "651b9bc5d864cfef226cd7e1c47cf4636f00fd0d352b1d045316985fd09c0143",
+      "bytes": 62173
+    },
+    {
+      "path": "/Users/mac/Documents/New project 2/validation/role-assignment-1440.png",
+      "sha256": "63ddd83ff6a2b98b055f378db33371fb27a3f6b72799d4cbee36b7df249023cd",
+      "bytes": 97182
+    },
+    {
+      "path": "/Users/mac/Documents/New project 2/validation/role-assignment-390.png",
+      "sha256": "1f991209e972ef0379a750e7e516e2189a27d0b0833a01373eaa91e566be38a0",
+      "bytes": 56328
+    },
+    {
+      "path": "/Users/mac/Documents/New project 2/validation/role-auditgeneral-1440.png",
+      "sha256": "0f7237b4eac9b8f36dcdb3db3a977bf349c10b8eae380e7e321a4e656e903476",
+      "bytes": 100854
+    },
+    {
+      "path": "/Users/mac/Documents/New project 2/validation/role-auditgeneral-390.png",
+      "sha256": "5ddeb3ad925b937862c675434a0c68ea5780d7b0c79c6ea453acbef9b15fd313",
+      "bytes": 57006
+    },
+    {
+      "path": "/Users/mac/Documents/New project 2/validation/role-auditor-1440.png",
+      "sha256": "8253629beed987e1c93904c19747045e0bb163f3e73a44e500924daa4840b111",
+      "bytes": 95899
+    },
+    {
+      "path": "/Users/mac/Documents/New project 2/validation/role-auditor-390.png",
+      "sha256": "55bf6a1a1e0d8a1d488e1788303782a93a26c9aa7566e4bf5c60922b42eaa807",
+      "bytes": 55281
+    },
+    {
+      "path": "/Users/mac/Documents/New project 2/validation/role-automation-1440.png",
+      "sha256": "cfc0bc65b0328f9b7402cc7f06c24a2fd7dfe16fbaf8f4d2c94cbaefeaec644f",
+      "bytes": 103573
+    },
+    {
+      "path": "/Users/mac/Documents/New project 2/validation/role-automation-390.png",
+      "sha256": "379bb60ae60f3d271d9b18e1fe798a9d7ff81f7d3f25122b2e6ffb7f21090449",
+      "bytes": 58155
+    },
+    {
+      "path": "/Users/mac/Documents/New project 2/validation/role-channel-1440.png",
+      "sha256": "ae7ea5725786993e1badf8891bbc6df6a3a232d58a1414ba8807910ba7b491c1",
+      "bytes": 120106
+    },
+    {
+      "path": "/Users/mac/Documents/New project 2/validation/role-channel-390.png",
+      "sha256": "eb2ea71a72da86e3e4b174d7557a3e706bf6c2d6baa47456d458b866af241cf3",
+      "bytes": 70102
+    },
+    {
+      "path": "/Users/mac/Documents/New project 2/validation/role-collab-1440.png",
+      "sha256": "cdb2d1e0c0b1a39b8286dbbe930c8ffc6f2a148861e12d8d3eabee176ff64f3d",
+      "bytes": 180129
+    },
+    {
+      "path": "/Users/mac/Documents/New project 2/validation/role-collab-390.png",
+      "sha256": "5dd03dbd174b08fdc54beddb1f90a424388dd5c5e3445d28158fc1ba023421ea",
+      "bytes": 131563
+    },
+    {
+      "path": "/Users/mac/Documents/New project 2/validation/role-datasubject-1440.png",
+      "sha256": "711e2282ed582cc9d2880e451e5c8c175f5c77f8279f3255e932a9c48daf4db7",
+      "bytes": 99867
+    },
+    {
+      "path": "/Users/mac/Documents/New project 2/validation/role-datasubject-390.png",
+      "sha256": "1f6c9f4e1c211fb9149f33a3fb5edfdc3638a709965dbe38f1cccb5e74c3c2d9",
+      "bytes": 58598
+    },
+    {
+      "path": "/Users/mac/Documents/New project 2/validation/role-designer-1440.png",
+      "sha256": "8d1eb5fbf4e0dcfdfb5f69bb0d0ce38a0a2a485ed536ec81b31dc5ae9699c33a",
+      "bytes": 157758
+    },
+    {
+      "path": "/Users/mac/Documents/New project 2/validation/role-designer-390.png",
+      "sha256": "bf4fe37611e97da77fada688a67920e794568ada833d38bd007878e5eaf1f77d",
+      "bytes": 100770
+    },
+    {
+      "path": "/Users/mac/Documents/New project 2/validation/role-evolution-1440.png",
+      "sha256": "81c70d26964c011dfbe5a9b5016d48791f72ecfe00df2d38dbe8181ad2f42542",
+      "bytes": 101946
+    },
+    {
+      "path": "/Users/mac/Documents/New project 2/validation/role-evolution-390.png",
+      "sha256": "e78176596bfb65732c8d5f7856476fede698953419a3c93b2319f86887008c67",
+      "bytes": 59036
+    },
+    {
+      "path": "/Users/mac/Documents/New project 2/validation/role-hr-1440.png",
+      "sha256": "972f81f6c06594b41257e79ae6fa3d811cb6c36f52a452bf5b2712785f175034",
+      "bytes": 97723
+    },
+    {
+      "path": "/Users/mac/Documents/New project 2/validation/role-hr-390.png",
+      "sha256": "10007003b784ba341b3a3006b5417993fb7f7a60a131ee8534207b5c68cdd07d",
+      "bytes": 59032
+    },
+    {
+      "path": "/Users/mac/Documents/New project 2/validation/role-identity-1440.png",
+      "sha256": "661634c90b16c016e05e72b10e7149c565e258d14fec306254ad20b5699ccf01",
+      "bytes": 105297
+    },
+    {
+      "path": "/Users/mac/Documents/New project 2/validation/role-identity-390.png",
+      "sha256": "29fb886fd6c14b3be92b94a6845dc577afe035924e5077bb5156714130c8a74c",
+      "bytes": 63970
+    },
+    {
+      "path": "/Users/mac/Documents/New project 2/validation/role-initiator-1440.png",
+      "sha256": "a1f19290a2308e32644fbd0319cb827e2299acaa50040cb8bcf4b969f6dadfa9",
+      "bytes": 107337
+    },
+    {
+      "path": "/Users/mac/Documents/New project 2/validation/role-initiator-390.png",
+      "sha256": "e0b44a9894f920c137888529d56870729d52e5677b0c7b059af534810e48b590",
+      "bytes": 59719
+    },
+    {
+      "path": "/Users/mac/Documents/New project 2/validation/role-interactor-1440.png",
+      "sha256": "b08a7b1d3f9a2010ba42d541e17f10e57941d4a0050bf7d05c8464bf60efa2ee",
+      "bytes": 105481
+    },
+    {
+      "path": "/Users/mac/Documents/New project 2/validation/role-interactor-390.png",
+      "sha256": "71bd209df0132b5321dff8fa7cfd4242813233166397fe443a41a36bef981223",
+      "bytes": 55273
+    },
+    {
+      "path": "/Users/mac/Documents/New project 2/validation/role-knowledge-1440.png",
+      "sha256": "685fe4d006c62729e3b1628f61100b6712486f59e7c468fb164dd72a3aa253fa",
+      "bytes": 130790
+    },
+    {
+      "path": "/Users/mac/Documents/New project 2/validation/role-knowledge-390.png",
+      "sha256": "e4e597f7135bdff1ac6884aaa354f0e36dced1ef977a26456a107a5d837e6919",
+      "bytes": 82718
+    },
+    {
+      "path": "/Users/mac/Documents/New project 2/validation/role-knowledgeadmin-1440.png",
+      "sha256": "d35a8a64c0345c812591e548ab674dc22139ed1b5d3a53a07bcbcdd880e53a31",
+      "bytes": 107292
+    },
+    {
+      "path": "/Users/mac/Documents/New project 2/validation/role-knowledgeadmin-390.png",
+      "sha256": "0fe54fd0d74d3e3fd74123fae6abc20489fe4171526be3a75894a1ac9cb6b164",
+      "bytes": 57263
+    },
+    {
+      "path": "/Users/mac/Documents/New project 2/validation/role-main-1440.png",
+      "sha256": "3841a2b099e9f402e9a704bd1d563f77ed46bcdca31205f619e8293e1b169366",
+      "bytes": 199398
+    },
+    {
+      "path": "/Users/mac/Documents/New project 2/validation/role-main-390.png",
+      "sha256": "9e5bd45b13e0507c635ab6e065c66bc88d692c44b92c7e728db815c6714e36b8",
+      "bytes": 146656
+    },
+    {
+      "path": "/Users/mac/Documents/New project 2/validation/role-member-1440.png",
+      "sha256": "ce9ccdc5e21cddfa1c2ef8df61e6a6e89ee695dfe9d3d4fc01576954a1fa1bc0",
+      "bytes": 107576
+    },
+    {
+      "path": "/Users/mac/Documents/New project 2/validation/role-member-390.png",
+      "sha256": "15b549a239fc0575592ac0f3629f5419a7d7cd5acbe76ca217a9916874a66c0f",
+      "bytes": 60813
+    },
+    {
+      "path": "/Users/mac/Documents/New project 2/validation/role-org-1440.png",
+      "sha256": "6fa9506bc4790d605582b24af106c9344c41291740831b8771721775ac75dbfd",
+      "bytes": 99409
+    },
+    {
+      "path": "/Users/mac/Documents/New project 2/validation/role-org-390.png",
+      "sha256": "b7a18cbd02e343251a56500ebab09a20dc64a7091f3b753b8ad8367144ef694b",
+      "bytes": 58993
+    },
+    {
+      "path": "/Users/mac/Documents/New project 2/validation/role-policy-1440.png",
+      "sha256": "786675571560bf721edd0f10b6022113db75d83f617c25ef5b1504c158761311",
+      "bytes": 125913
+    },
+    {
+      "path": "/Users/mac/Documents/New project 2/validation/role-policy-390.png",
+      "sha256": "a29f7cbbe981410c02d70ce1b959b2d54cfa6cdcdfa3d361fab827954a889353",
+      "bytes": 83912
+    },
+    {
+      "path": "/Users/mac/Documents/New project 2/validation/role-privacy-1440.png",
+      "sha256": "9565eef95b8876373dafef824f9dd74b65b5c2df9e6468e89c4e680e8f24c420",
+      "bytes": 102365
+    },
+    {
+      "path": "/Users/mac/Documents/New project 2/validation/role-privacy-390.png",
+      "sha256": "e1264421845b12c26bf8b60cd5a97cf8dc78e50c44b3786968d80b095959fd1e",
+      "bytes": 61272
+    },
+    {
+      "path": "/Users/mac/Documents/New project 2/validation/role-publisher-1440.png",
+      "sha256": "519b242fe5c417c9ec8bd24f76e775b74b7a56263edcfadf7850ec02350cccd2",
+      "bytes": 99398
+    },
+    {
+      "path": "/Users/mac/Documents/New project 2/validation/role-publisher-390.png",
+      "sha256": "e0931ed67c30b87247d409ec6dea446e22640b496b58f19d949d122a84b54302",
+      "bytes": 59542
+    },
+    {
+      "path": "/Users/mac/Documents/New project 2/validation/role-receiver-1440.png",
+      "sha256": "f0cb4439181742199a4af2072248289e8a6aab7c494a5c0c3f12eba0a2ab02f8",
+      "bytes": 122927
+    },
+    {
+      "path": "/Users/mac/Documents/New project 2/validation/role-receiver-390.png",
+      "sha256": "2ccabafc071caf96a8d921d2fe9f1303c989b60db9773e91cded0c8bc817b14b",
+      "bytes": 73436
+    },
+    {
+      "path": "/Users/mac/Documents/New project 2/validation/role-release-1440.png",
+      "sha256": "52c7bfd0b36be51221c5fa3a2f13af72666b484e3d90f4cdc7571cf7b26ef4bc",
+      "bytes": 93573
+    },
+    {
+      "path": "/Users/mac/Documents/New project 2/validation/role-release-390.png",
+      "sha256": "221bac8c92822051748f587a4085cd461c246b163bb262ab310fa93f588642ca",
+      "bytes": 53251
+    },
+    {
+      "path": "/Users/mac/Documents/New project 2/validation/role-resource-1440.png",
+      "sha256": "e877100bce2bb559fb98aeedc9b13af70cb52786abe36c22d854420e99b6374d",
+      "bytes": 134570
+    },
+    {
+      "path": "/Users/mac/Documents/New project 2/validation/role-resource-390.png",
+      "sha256": "237b2a8b76adb8153cfeae17f4d56da9c4fbe6e38e25813e43705cc066657c88",
+      "bytes": 85046
+    },
+    {
+      "path": "/Users/mac/Documents/New project 2/validation/role-responsible-1440.png",
+      "sha256": "97320b34988e3ec0a0a6491b3021955c48d0046e8ba87d3949acdb6671d7682c",
+      "bytes": 115752
+    },
+    {
+      "path": "/Users/mac/Documents/New project 2/validation/role-responsible-390.png",
+      "sha256": "bf830480d1f0958d2b7b9431584a2182b215a75f56ce9b97ed2f2eefb6e551f1",
+      "bytes": 67917
+    },
+    {
+      "path": "/Users/mac/Documents/New project 2/validation/role-review-1440.png",
+      "sha256": "b1e69161069ca27882637502f199315ee357048be3c90f9e829d6a11ceaac2ed",
+      "bytes": 179558
+    },
+    {
+      "path": "/Users/mac/Documents/New project 2/validation/role-review-390.png",
+      "sha256": "6a3dccaa8ec7a5ea48e655f5bb845d26589877e6b4af1f00f24ce78dc60aa6f2",
+      "bytes": 131817
+    },
+    {
+      "path": "/Users/mac/Documents/New project 2/validation/role-runtime-1440.png",
+      "sha256": "65144bf543b288cf96a78824df990c40568dbd6e565c93531152fcba24bf069f",
+      "bytes": 109325
+    },
+    {
+      "path": "/Users/mac/Documents/New project 2/validation/role-runtime-390.png",
+      "sha256": "07bada4acd3e707e8b51a3f00cc8f2e69fd411d71ababb576a24ad09dd41ed0f",
+      "bytes": 68806
+    },
+    {
+      "path": "/Users/mac/Documents/New project 2/validation/role-security-1440.png",
+      "sha256": "18b4a8d2769239b7458abf5b4d11e52e8eddb6028b95d3c1a24b472be4043efb",
+      "bytes": 104594
+    },
+    {
+      "path": "/Users/mac/Documents/New project 2/validation/role-security-390.png",
+      "sha256": "b184426ac6611e1612bff3e7722a736b9f7d7c893aece18b6276bdf98299b8d7",
+      "bytes": 63276
+    },
+    {
+      "path": "/Users/mac/Documents/New project 2/validation/role-securityadmin-1440.png",
+      "sha256": "9726a62a49ea1e924e49c6faacdefc75549faea79c3b413d322d7b2c6048a783",
+      "bytes": 103212
+    },
+    {
+      "path": "/Users/mac/Documents/New project 2/validation/role-securityadmin-390.png",
+      "sha256": "834c9f4d70b011d00d5b1241e402e04b44ade159f1fcf7c5bb08c72e504c1b33",
+      "bytes": 60556
+    },
+    {
+      "path": "/Users/mac/Documents/New project 2/validation/role-skill-1440.png",
+      "sha256": "788f5fbd675eef8939f5247bb32c05aea40b034d12ede7a42bca2aac54e807f0",
+      "bytes": 136231
+    },
+    {
+      "path": "/Users/mac/Documents/New project 2/validation/role-skill-390.png",
+      "sha256": "23e60638944b8ae2e6b661341f5842b0f6257dde7f619db80f348c67da0d50de",
+      "bytes": 87348
+    },
+    {
+      "path": "/Users/mac/Documents/New project 2/validation/role-task-state.json",
+      "sha256": "e7a2a52017e60bc52ef4a818493d1a79b7e1006ea94b3d23d083af6bdbbf5330",
+      "bytes": 3247
+    },
+    {
+      "path": "/Users/mac/Documents/New project 2/validation/role-team-1440.png",
+      "sha256": "f4d19370977951f0a3235081dc5e85ddf815fd3073e4403600824843207e204e",
+      "bytes": 109919
+    },
+    {
+      "path": "/Users/mac/Documents/New project 2/validation/role-team-390.png",
+      "sha256": "542cdca2edc27257e6ff7f05e0730ea39f474ab0de49fad386f055efc2a4cb05",
+      "bytes": 59692
+    },
+    {
+      "path": "/Users/mac/Documents/New project 2/validation/role-tech-1440.png",
+      "sha256": "17c25ad569b9748d8ab41e4c99471a6771d995ffa7ccf5edd7942cefbe2458a0",
+      "bytes": 133334
+    },
+    {
+      "path": "/Users/mac/Documents/New project 2/validation/role-tech-390.png",
+      "sha256": "31629e23081cdfe7542e48752f40fd7ea8324b7aede74e0680f93ce1b58f54c6",
+      "bytes": 85114
+    },
+    {
+      "path": "/Users/mac/Documents/New project 2/validation/role-tenant-1440.png",
+      "sha256": "12aff6a238abd3cc5e5548f46edfb3bd0069a65568428557409e4a9906bfa039",
+      "bytes": 95049
+    },
+    {
+      "path": "/Users/mac/Documents/New project 2/validation/role-tenant-390.png",
+      "sha256": "ae43af5f6410f4bf7e3e9bc048aa276fed1d5b6d197700887d618f80c106ac24",
+      "bytes": 55304
+    },
+    {
+      "path": "/Users/mac/Documents/New project 2/validation/role-tool-1440.png",
+      "sha256": "71c6156b120378373deaa3b7928a46cd3067753f9d63b65211cf3ed75cb5f875",
+      "bytes": 141629
+    },
+    {
+      "path": "/Users/mac/Documents/New project 2/validation/role-tool-390.png",
+      "sha256": "19fc4655a2d85714b7e6fc3819c3878a34865ccbdc4f39fb832ca725e2e0ddc2",
+      "bytes": 91026
+    },
+    {
+      "path": "/Users/mac/Documents/New project 2/validation/role-workflow-1440.png",
+      "sha256": "513d27a72e99cf799ef1a4710af3fc6a4414fc726843bd617a700d843743ffdb",
+      "bytes": 112663
+    },
+    {
+      "path": "/Users/mac/Documents/New project 2/validation/role-workflow-390.png",
+      "sha256": "7e65f6fe7cec5300d66ca65d19bc74d5f450b87da9b7b6f33cc531a9e01563dc",
+      "bytes": 60831
+    },
+    {
+      "path": "/Users/mac/Documents/New project 2/validation/role-workforce-1440.png",
+      "sha256": "71df002a7ad870af21f0ea8360ca8e0c708a1e289ec9c9faa22cefeaddf2afa2",
+      "bytes": 109294
+    },
+    {
+      "path": "/Users/mac/Documents/New project 2/validation/role-workforce-390.png",
+      "sha256": "3d1ececa8a6da33426bd8a7d0e5719b50246b325f48e0f6e5c73cb56845bfdbd",
+      "bytes": 58270
+    },
+    {
+      "path": "/Users/mac/Documents/New project 2/validation/role-writer-1440.png",
+      "sha256": "8bcbf4cbffb8c8e543e1f6dd39f9fc98a2d82d3f7adce848d4a9bd8c678a1966",
+      "bytes": 146472
+    },
+    {
+      "path": "/Users/mac/Documents/New project 2/validation/role-writer-390.png",
+      "sha256": "8ee9ad1c974a4d356cf87d4329b05c806e7ebd980cb0893a43a86c3bfad44113",
+      "bytes": 94333
+    },
+    {
+      "path": "/Users/mac/Documents/New project 2/validation/schema-validation.json",
+      "sha256": "931c034e8e78aed631e90fa6ca94314a984d5955f92a6574c1fe6175f2502b16",
+      "bytes": 2044
+    },
+    {
+      "path": "/Users/mac/Documents/New project 2/validation/v24-document-validation.json",
+      "sha256": "d9fce0f3f2dcd04ff09ba195e58020ec2370047f3725e5981fbed17461bf9baf",
+      "bytes": 5138
+    },
+    {
+      "path": "/Users/mac/Documents/New project 2/validation/v24-market-1024.png",
+      "sha256": "8e8e13685629edf84a0dcb878799a8178f4454d13a1ab7b8e5f442f1e7b196a1",
+      "bytes": 182875
+    },
+    {
+      "path": "/Users/mac/Documents/New project 2/validation/v24-market-1440.png",
+      "sha256": "3bdf5fa106e5df9c3cb6edc5d0fe716598d8c9611c7a6c24b370ba048c3c2110",
+      "bytes": 176299
+    },
+    {
+      "path": "/Users/mac/Documents/New project 2/validation/v24-market-390.png",
+      "sha256": "da1305cc0bb7035d68b80a3fb8bde11dc559a185f3a19c7a179501234d7848c3",
+      "bytes": 143189
+    },
+    {
+      "path": "/Users/mac/Documents/New project 2/validation/v24-market-validation.json",
+      "sha256": "4b2bb83d2039746422f0cdccaa351950282c43c0e15d7f3ee3e11e15a2d9e5ab",
+      "bytes": 36226
+    },
+    {
+      "path": "/Users/mac/Documents/New project 2/validation/v24-role-validation.json",
+      "sha256": "538e8e94bbe559e3ca9722aafe2d3189881c0f957138306904ee1f854b6ff9df",
+      "bytes": 239572
+    },
+    {
+      "path": "/Users/mac/Documents/New project 2/validation/v25-document-validation.json",
+      "sha256": "eb04f58ef0473374b5c3628b29a4fa9cf5a97c5b952a22d58b16a5dc1594322a",
+      "bytes": 4081
+    },
+    {
+      "path": "/Users/mac/Documents/New project 2/validation/v25-market-1024.png",
+      "sha256": "ff709b71f1c6275f70d9daa6d66b275d13af4e7baa6966fdc579f2bc2dc654fc",
+      "bytes": 187740
+    },
+    {
+      "path": "/Users/mac/Documents/New project 2/validation/v25-market-1440.png",
+      "sha256": "a22d3fd401d6a4021d5513b60e8bd793942469c29fb9112800e8bb282b91a09e",
+      "bytes": 182175
+    },
+    {
+      "path": "/Users/mac/Documents/New project 2/validation/v25-market-390.png",
+      "sha256": "bb1c48194446e49afc5b16c56c762c623b8454cf067daae6650542a41f8c1ed1",
+      "bytes": 147197
+    },
+    {
+      "path": "/Users/mac/Documents/New project 2/validation/v25-market-regression.json",
+      "sha256": "5b0c2b0baceba327fe41b434993f3e91a3b4054c24580c387a278dce3f77e512",
+      "bytes": 36226
+    },
+    {
+      "path": "/Users/mac/Documents/New project 2/validation/v25-oa-identity-inbox-1024.png",
+      "sha256": "0efd15c38be60d86dcba87a753cb8e7a083503f889f1212fdb0ae21391a0cdc2",
+      "bytes": 193741
+    },
+    {
+      "path": "/Users/mac/Documents/New project 2/validation/v25-oa-identity-inbox-1440.png",
+      "sha256": "9fbb74018b4b92ac30f248b4bb8f4cbd284992b28a38f58f800940e9e3f7ab47",
+      "bytes": 209428
+    },
+    {
+      "path": "/Users/mac/Documents/New project 2/validation/v25-oa-identity-inbox-390.png",
+      "sha256": "dc65f2f8e29937e6bc5b11a8df701d2c65b0996cca34d616befaaba5cbcd6b9d",
+      "bytes": 146864
+    },
+    {
+      "path": "/Users/mac/Documents/New project 2/validation/v25-oa-interactions.json",
+      "sha256": "9a68a71b89ee17d25ae550a236e2189e064af218f875e90d54862e3e3bbc308a",
+      "bytes": 14445
+    },
+    {
+      "path": "/Users/mac/Documents/New project 2/validation/v25-oa-main-inbox-1024.png",
+      "sha256": "a7eaa32214f6dbb82a6537605073afbf3a7cb267c680fd288f2691ab67f9f41d",
+      "bytes": 194977
+    },
+    {
+      "path": "/Users/mac/Documents/New project 2/validation/v25-oa-main-inbox-1440.png",
+      "sha256": "a51d81fe84334b63976198728dc9ed25fc3e245e61ead6a07affda378d69e1e6",
+      "bytes": 210612
+    },
+    {
+      "path": "/Users/mac/Documents/New project 2/validation/v25-oa-main-inbox-390.png",
+      "sha256": "36b954d0772d0f249c641ce46d5790ff28a833dfc56f12a8583308c7326aad81",
+      "bytes": 145449
+    },
+    {
+      "path": "/Users/mac/Documents/New project 2/validation/v25-oa-main-task-1024.png",
+      "sha256": "5842fd007b4154bd8005877856496f72eab6ab313e0929800ca73d8f0fd04c4c",
+      "bytes": 173562
+    },
+    {
+      "path": "/Users/mac/Documents/New project 2/validation/v25-oa-main-task-1440.png",
+      "sha256": "4f17b838da63ff131058d77ed89dc3c4bdff438971173ba7efc8b37887214237",
+      "bytes": 181474
+    },
+    {
+      "path": "/Users/mac/Documents/New project 2/validation/v25-oa-main-task-390.png",
+      "sha256": "f32b4661b16d29ce909b222ea9edfb079a6b5354af9c9a82d46dd8494b889f70",
+      "bytes": 129969
+    },
+    {
+      "path": "/Users/mac/Documents/New project 2/validation/v25-oa-review-task-1024.png",
+      "sha256": "30a0b49386f3465b22fed80ad3853edac10ea6868338ca615f9bf08edee6f80b",
+      "bytes": 166954
+    },
+    {
+      "path": "/Users/mac/Documents/New project 2/validation/v25-oa-review-task-1440.png",
+      "sha256": "49239795488370ac3a8ab331822a05cda06b538b3d6289c38be3984bc2e56ac4",
+      "bytes": 174367
+    },
+    {
+      "path": "/Users/mac/Documents/New project 2/validation/v25-oa-review-task-390.png",
+      "sha256": "29bcd8b399eb27238e45fd987866492a236d865b84761e16683ebe61fb24ae9b",
+      "bytes": 123916
+    },
+    {
+      "path": "/Users/mac/Documents/New project 2/validation/v25-oa-schema-validation.json",
+      "sha256": "2f3b4756a45c0c6fa31deb08e62430d13a4fea82ffe01e1f2efb979d51952488",
+      "bytes": 2308
+    },
+    {
+      "path": "/Users/mac/Documents/New project 2/validation/v25-oa-validation.json",
+      "sha256": "4d3c394e526777eef528765f3696fce9c32e0370ae8fb891206fb7575a1f538f",
+      "bytes": 122523
+    },
+    {
+      "path": "/Users/mac/Documents/New project 2/validation/v25-role-access-1440.png",
+      "sha256": "3fb9726af598c8ef57071977070b5f206b8855d2b7c7895b8c214e9ed4f3a616",
+      "bytes": 112316
+    },
+    {
+      "path": "/Users/mac/Documents/New project 2/validation/v25-role-access-390.png",
+      "sha256": "f369e3826e2ecb7e6db23d033bbf3f9c865be548d70283f0d38335f78a65679c",
+      "bytes": 70849
+    },
+    {
+      "path": "/Users/mac/Documents/New project 2/validation/v25-role-api-1440.png",
+      "sha256": "9b1292646ec1a21acc1d9df12d4da358a0eccb886649064adada256c8383aa5c",
+      "bytes": 102087
+    },
+    {
+      "path": "/Users/mac/Documents/New project 2/validation/v25-role-api-390.png",
+      "sha256": "6be84ff59e899087292a0f855921b54c587edd471a231fcdac8df6f848132556",
+      "bytes": 58901
+    },
+    {
+      "path": "/Users/mac/Documents/New project 2/validation/v25-role-apiadmin-1440.png",
+      "sha256": "d3beaf37f7243a1f19cb26ee6acc0e5ac35d23cfaf48a607391e451575bc5f19",
+      "bytes": 95416
+    },
+    {
+      "path": "/Users/mac/Documents/New project 2/validation/v25-role-apiadmin-390.png",
+      "sha256": "5af8604384ce3f94d0a441e83996e020d705c31d102f74b1fdb95c7a6af98e34",
+      "bytes": 55112
+    },
+    {
+      "path": "/Users/mac/Documents/New project 2/validation/v25-role-approver-1440.png",
+      "sha256": "b624101360362b97a82e68d22edb21fe75383883f8d6958142d4e45cefac9b52",
+      "bytes": 103913
+    },
+    {
+      "path": "/Users/mac/Documents/New project 2/validation/v25-role-approver-390.png",
+      "sha256": "651b9bc5d864cfef226cd7e1c47cf4636f00fd0d352b1d045316985fd09c0143",
+      "bytes": 62173
+    },
+    {
+      "path": "/Users/mac/Documents/New project 2/validation/v25-role-assignment-1440.png",
+      "sha256": "003f64e58857701df4691ddeb72c56eeecbcb9f2aff98de36b493b43257f406a",
+      "bytes": 98343
+    },
+    {
+      "path": "/Users/mac/Documents/New project 2/validation/v25-role-assignment-390.png",
+      "sha256": "1f991209e972ef0379a750e7e516e2189a27d0b0833a01373eaa91e566be38a0",
+      "bytes": 56328
+    },
+    {
+      "path": "/Users/mac/Documents/New project 2/validation/v25-role-auditgeneral-1440.png",
+      "sha256": "0b5f9afc6bc3762d9164220aa772dbe77f273ac525dcb112dba5374a2539e46a",
+      "bytes": 102069
+    },
+    {
+      "path": "/Users/mac/Documents/New project 2/validation/v25-role-auditgeneral-390.png",
+      "sha256": "5ddeb3ad925b937862c675434a0c68ea5780d7b0c79c6ea453acbef9b15fd313",
+      "bytes": 57006
+    },
+    {
+      "path": "/Users/mac/Documents/New project 2/validation/v25-role-auditor-1440.png",
+      "sha256": "57744b9442444da09c3649e46c76e6b55fb6aa0a9bedaf8c825c00ce96fa09c3",
+      "bytes": 97123
+    },
+    {
+      "path": "/Users/mac/Documents/New project 2/validation/v25-role-auditor-390.png",
+      "sha256": "55bf6a1a1e0d8a1d488e1788303782a93a26c9aa7566e4bf5c60922b42eaa807",
+      "bytes": 55281
+    },
+    {
+      "path": "/Users/mac/Documents/New project 2/validation/v25-role-automation-1440.png",
+      "sha256": "a34cf33f97ebfa8ea67b1d60ee29ddde70fbd6f55f09fc1273e49cd5561a831a",
+      "bytes": 104675
+    },
+    {
+      "path": "/Users/mac/Documents/New project 2/validation/v25-role-automation-390.png",
+      "sha256": "379bb60ae60f3d271d9b18e1fe798a9d7ff81f7d3f25122b2e6ffb7f21090449",
+      "bytes": 58155
+    },
+    {
+      "path": "/Users/mac/Documents/New project 2/validation/v25-role-channel-1440.png",
+      "sha256": "779ff34f30f2ea09a7a0cb302ea784e18f73a65442698ec251d955b172364206",
+      "bytes": 121275
+    },
+    {
+      "path": "/Users/mac/Documents/New project 2/validation/v25-role-channel-390.png",
+      "sha256": "eb2ea71a72da86e3e4b174d7557a3e706bf6c2d6baa47456d458b866af241cf3",
+      "bytes": 70102
+    },
+    {
+      "path": "/Users/mac/Documents/New project 2/validation/v25-role-collab-1440.png",
+      "sha256": "779ac9e18432f462dce037f3f32ecc878a946278f2e10d0db5358766fca26ac2",
+      "bytes": 194065
+    },
+    {
+      "path": "/Users/mac/Documents/New project 2/validation/v25-role-collab-390.png",
+      "sha256": "91b02356613680d693bb95795ee562ea5571605850117c472d9d57c3865d9a2b",
+      "bytes": 143148
+    },
+    {
+      "path": "/Users/mac/Documents/New project 2/validation/v25-role-datasubject-1440.png",
+      "sha256": "f9e51f84d315fd02c96bec766dbc89350dea13b7d9c9a316553f4fd79568e094",
+      "bytes": 101023
+    },
+    {
+      "path": "/Users/mac/Documents/New project 2/validation/v25-role-datasubject-390.png",
+      "sha256": "1f6c9f4e1c211fb9149f33a3fb5edfdc3638a709965dbe38f1cccb5e74c3c2d9",
+      "bytes": 58598
+    },
+    {
+      "path": "/Users/mac/Documents/New project 2/validation/v25-role-designer-1440.png",
+      "sha256": "1610e88efda4b28e29082173924e8bd8568189f22bb3839e1d7707a0bab6933e",
+      "bytes": 158841
+    },
+    {
+      "path": "/Users/mac/Documents/New project 2/validation/v25-role-designer-390.png",
+      "sha256": "bf4fe37611e97da77fada688a67920e794568ada833d38bd007878e5eaf1f77d",
+      "bytes": 100770
+    },
+    {
+      "path": "/Users/mac/Documents/New project 2/validation/v25-role-evolution-1440.png",
+      "sha256": "c083ab968a7ea7d21f650b1d349c7723f93848900663cd85ed62fda2ac36ae21",
+      "bytes": 103149
+    },
+    {
+      "path": "/Users/mac/Documents/New project 2/validation/v25-role-evolution-390.png",
+      "sha256": "e78176596bfb65732c8d5f7856476fede698953419a3c93b2319f86887008c67",
+      "bytes": 59036
+    },
+    {
+      "path": "/Users/mac/Documents/New project 2/validation/v25-role-hr-1440.png",
+      "sha256": "a7b1887a22ecd83313abdbaf6b2efc66c6269564324e00a93c854c90a5ed8328",
+      "bytes": 98960
+    },
+    {
+      "path": "/Users/mac/Documents/New project 2/validation/v25-role-hr-390.png",
+      "sha256": "10007003b784ba341b3a3006b5417993fb7f7a60a131ee8534207b5c68cdd07d",
+      "bytes": 59032
+    },
+    {
+      "path": "/Users/mac/Documents/New project 2/validation/v25-role-identity-1440.png",
+      "sha256": "5d5dd1ae8ff02008fe0c75de50af67b0c83a2928013284447b9c5d6ca7d05535",
+      "bytes": 106437
+    },
+    {
+      "path": "/Users/mac/Documents/New project 2/validation/v25-role-identity-390.png",
+      "sha256": "29fb886fd6c14b3be92b94a6845dc577afe035924e5077bb5156714130c8a74c",
+      "bytes": 63970
+    },
+    {
+      "path": "/Users/mac/Documents/New project 2/validation/v25-role-initiator-1440.png",
+      "sha256": "2e35a604969dd356875451487ea32f7b42f7ada940c8b459d0154e0354f485b0",
+      "bytes": 108458
+    },
+    {
+      "path": "/Users/mac/Documents/New project 2/validation/v25-role-initiator-390.png",
+      "sha256": "e0b44a9894f920c137888529d56870729d52e5677b0c7b059af534810e48b590",
+      "bytes": 59719
+    },
+    {
+      "path": "/Users/mac/Documents/New project 2/validation/v25-role-interactor-1440.png",
+      "sha256": "3612f0692ea550b5f26991f5a99ca8e111c2655e890e8c0b1d81eb5c2de205e6",
+      "bytes": 106579
+    },
+    {
+      "path": "/Users/mac/Documents/New project 2/validation/v25-role-interactor-390.png",
+      "sha256": "71bd209df0132b5321dff8fa7cfd4242813233166397fe443a41a36bef981223",
+      "bytes": 55273
+    },
+    {
+      "path": "/Users/mac/Documents/New project 2/validation/v25-role-knowledge-1440.png",
+      "sha256": "8a78ecfa821469fd4967466de20a4d36e997feca1bb52a47ed7c00d18b0ac9b3",
+      "bytes": 132014
+    },
+    {
+      "path": "/Users/mac/Documents/New project 2/validation/v25-role-knowledge-390.png",
+      "sha256": "e4e597f7135bdff1ac6884aaa354f0e36dced1ef977a26456a107a5d837e6919",
+      "bytes": 82718
+    },
+    {
+      "path": "/Users/mac/Documents/New project 2/validation/v25-role-knowledgeadmin-1440.png",
+      "sha256": "f5d6dca048043f8653249c4bdc28633f43af02e648371c1ca99af3b8cbc84387",
+      "bytes": 108441
+    },
+    {
+      "path": "/Users/mac/Documents/New project 2/validation/v25-role-knowledgeadmin-390.png",
+      "sha256": "0fe54fd0d74d3e3fd74123fae6abc20489fe4171526be3a75894a1ac9cb6b164",
+      "bytes": 57263
+    },
+    {
+      "path": "/Users/mac/Documents/New project 2/validation/v25-role-main-1440.png",
+      "sha256": "10d93123b3e0a71d987f7d59ebb84c473d60b7d250d374a43dd9732d3205a7c8",
+      "bytes": 213234
+    },
+    {
+      "path": "/Users/mac/Documents/New project 2/validation/v25-role-main-390.png",
+      "sha256": "94311204db6a8debaac001df7de012fabe83ea78128e1d4647b1612d02387ae3",
+      "bytes": 158765
+    },
+    {
+      "path": "/Users/mac/Documents/New project 2/validation/v25-role-member-1440.png",
+      "sha256": "9cd8e92ba78252a0ab01295a6ec8c9c37feaf46b0d01e154a287fbbe8a2c8729",
+      "bytes": 108699
+    },
+    {
+      "path": "/Users/mac/Documents/New project 2/validation/v25-role-member-390.png",
+      "sha256": "15b549a239fc0575592ac0f3629f5419a7d7cd5acbe76ca217a9916874a66c0f",
+      "bytes": 60813
+    },
+    {
+      "path": "/Users/mac/Documents/New project 2/validation/v25-role-org-1440.png",
+      "sha256": "5549ae70b913fa09f0496c9a63112e41c10dcbc5aa63d32550aab6057a6458cf",
+      "bytes": 100527
+    },
+    {
+      "path": "/Users/mac/Documents/New project 2/validation/v25-role-org-390.png",
+      "sha256": "b7a18cbd02e343251a56500ebab09a20dc64a7091f3b753b8ad8367144ef694b",
+      "bytes": 58993
+    },
+    {
+      "path": "/Users/mac/Documents/New project 2/validation/v25-role-policy-1440.png",
+      "sha256": "f28468bd6062312a1a3e790bccdcbe8c85a7a78c324c4b86f93ec9e1203936e6",
+      "bytes": 127048
+    },
+    {
+      "path": "/Users/mac/Documents/New project 2/validation/v25-role-policy-390.png",
+      "sha256": "a29f7cbbe981410c02d70ce1b959b2d54cfa6cdcdfa3d361fab827954a889353",
+      "bytes": 83912
+    },
+    {
+      "path": "/Users/mac/Documents/New project 2/validation/v25-role-privacy-1440.png",
+      "sha256": "12e2fb818a208444790e03f715ff1bcc7a01334675f6d5825c2ddfe6bf94ef18",
+      "bytes": 103546
+    },
+    {
+      "path": "/Users/mac/Documents/New project 2/validation/v25-role-privacy-390.png",
+      "sha256": "e1264421845b12c26bf8b60cd5a97cf8dc78e50c44b3786968d80b095959fd1e",
+      "bytes": 61272
+    },
+    {
+      "path": "/Users/mac/Documents/New project 2/validation/v25-role-publisher-1440.png",
+      "sha256": "9fc60f83ce278806d4807f642d8c99a6057cf0a7c3aeb8d126e9715ed7afe7f2",
+      "bytes": 100555
+    },
+    {
+      "path": "/Users/mac/Documents/New project 2/validation/v25-role-publisher-390.png",
+      "sha256": "e0931ed67c30b87247d409ec6dea446e22640b496b58f19d949d122a84b54302",
+      "bytes": 59542
+    },
+    {
+      "path": "/Users/mac/Documents/New project 2/validation/v25-role-receiver-1440.png",
+      "sha256": "0b453d75facc651b6419381909e266410fb4d5b6faca1e6842aa32d60fa963dc",
+      "bytes": 137142
+    },
+    {
+      "path": "/Users/mac/Documents/New project 2/validation/v25-role-receiver-390.png",
+      "sha256": "dc7801358dc0bb0968364e27d71e7042a129fafb80a23810886823b802973084",
+      "bytes": 85180
+    },
+    {
+      "path": "/Users/mac/Documents/New project 2/validation/v25-role-regression.json",
+      "sha256": "89400743f21c51dbed384bfdc758d6c6d6d97a9fb7f4406b252d9afffa8cd1d3",
+      "bytes": 239297
+    },
+    {
+      "path": "/Users/mac/Documents/New project 2/validation/v25-role-release-1440.png",
+      "sha256": "b75f4729a2a356099005123930058c52e283820151b4f18623a2d0ef73e0e4be",
+      "bytes": 94746
+    },
+    {
+      "path": "/Users/mac/Documents/New project 2/validation/v25-role-release-390.png",
+      "sha256": "221bac8c92822051748f587a4085cd461c246b163bb262ab310fa93f588642ca",
+      "bytes": 53251
+    },
+    {
+      "path": "/Users/mac/Documents/New project 2/validation/v25-role-resource-1440.png",
+      "sha256": "6d9782e6ca2a3ddbdab2df598938c1866ab3fccfd64982ffa0adcb0551e9c043",
+      "bytes": 135757
+    },
+    {
+      "path": "/Users/mac/Documents/New project 2/validation/v25-role-resource-390.png",
+      "sha256": "237b2a8b76adb8153cfeae17f4d56da9c4fbe6e38e25813e43705cc066657c88",
+      "bytes": 85046
+    },
+    {
+      "path": "/Users/mac/Documents/New project 2/validation/v25-role-responsible-1440.png",
+      "sha256": "8b8a0180e58b2eb0f86b0fe0bb2aee88ca7ec5ca4465f3345b460c92d65c3d31",
+      "bytes": 130731
+    },
+    {
+      "path": "/Users/mac/Documents/New project 2/validation/v25-role-responsible-390.png",
+      "sha256": "6527f5f78f5736104231dd107b9e7205dc87df0f9b53fe412b77146c3cdc4169",
+      "bytes": 80218
+    },
+    {
+      "path": "/Users/mac/Documents/New project 2/validation/v25-role-review-1440.png",
+      "sha256": "e48a8306fe36ebda6ba1b771a7bee8518dfed83709de39d519de9d41f54b1ea1",
+      "bytes": 193746
+    },
+    {
+      "path": "/Users/mac/Documents/New project 2/validation/v25-role-review-390.png",
+      "sha256": "4a9967562e017fa85429ed69de5568b6fefcda9e0d4efbef34011a8f8e091a0f",
+      "bytes": 143353
+    },
+    {
+      "path": "/Users/mac/Documents/New project 2/validation/v25-role-runtime-1440.png",
+      "sha256": "56d4b22799825bd831eb8d1b346144a871b37c9879dba81d7420c8415c2df5eb",
+      "bytes": 110526
+    },
+    {
+      "path": "/Users/mac/Documents/New project 2/validation/v25-role-runtime-390.png",
+      "sha256": "07bada4acd3e707e8b51a3f00cc8f2e69fd411d71ababb576a24ad09dd41ed0f",
+      "bytes": 68806
+    },
+    {
+      "path": "/Users/mac/Documents/New project 2/validation/v25-role-security-1440.png",
+      "sha256": "4a26484e5b33dd946e638c1cc09c71de67119fd36188e2fa16b0cb91a409b269",
+      "bytes": 105802
+    },
+    {
+      "path": "/Users/mac/Documents/New project 2/validation/v25-role-security-390.png",
+      "sha256": "b184426ac6611e1612bff3e7722a736b9f7d7c893aece18b6276bdf98299b8d7",
+      "bytes": 63276
+    },
+    {
+      "path": "/Users/mac/Documents/New project 2/validation/v25-role-securityadmin-1440.png",
+      "sha256": "25d34920a526fb3008caa1a7f07e38d80480190c5c4f514054fc8c5e2c3b2a2f",
+      "bytes": 104380
+    },
+    {
+      "path": "/Users/mac/Documents/New project 2/validation/v25-role-securityadmin-390.png",
+      "sha256": "834c9f4d70b011d00d5b1241e402e04b44ade159f1fcf7c5bb08c72e504c1b33",
+      "bytes": 60556
+    },
+    {
+      "path": "/Users/mac/Documents/New project 2/validation/v25-role-skill-1440.png",
+      "sha256": "a98ca735aa52ed84847df53fa98da0861e5e13d91b608dbbf6aee8067e1e1050",
+      "bytes": 137397
+    },
+    {
+      "path": "/Users/mac/Documents/New project 2/validation/v25-role-skill-390.png",
+      "sha256": "23e60638944b8ae2e6b661341f5842b0f6257dde7f619db80f348c67da0d50de",
+      "bytes": 87348
+    },
+    {
+      "path": "/Users/mac/Documents/New project 2/validation/v25-role-team-1440.png",
+      "sha256": "b57be5487b825fc0844393dfd997c84c0b01436449fa9900b6f0548e47732ee1",
+      "bytes": 111041
+    },
+    {
+      "path": "/Users/mac/Documents/New project 2/validation/v25-role-team-390.png",
+      "sha256": "542cdca2edc27257e6ff7f05e0730ea39f474ab0de49fad386f055efc2a4cb05",
+      "bytes": 59692
+    },
+    {
+      "path": "/Users/mac/Documents/New project 2/validation/v25-role-tech-1440.png",
+      "sha256": "3f2142ffbcd333b38cdf3dfd1d0006c371eae4781d3d5fd9747cda9cd9215afc",
+      "bytes": 149608
+    },
+    {
+      "path": "/Users/mac/Documents/New project 2/validation/v25-role-tech-390.png",
+      "sha256": "296c961ccb28bca3e1fb65b8ee777bc5ab22eb5168e1289bef049edbff35269b",
+      "bytes": 97276
+    },
+    {
+      "path": "/Users/mac/Documents/New project 2/validation/v25-role-tenant-1440.png",
+      "sha256": "6e29ea8f907968b114a32ab6e7a50e143190486e9d31c01fc24f3b15fe98e391",
+      "bytes": 96241
+    },
+    {
+      "path": "/Users/mac/Documents/New project 2/validation/v25-role-tenant-390.png",
+      "sha256": "ae43af5f6410f4bf7e3e9bc048aa276fed1d5b6d197700887d618f80c106ac24",
+      "bytes": 55304
+    },
+    {
+      "path": "/Users/mac/Documents/New project 2/validation/v25-role-tool-1440.png",
+      "sha256": "e6a8c58f754f9e23e04e4a27b0e6dee5df231a2d31d10ed62fe97fdd4905480b",
+      "bytes": 142828
+    },
+    {
+      "path": "/Users/mac/Documents/New project 2/validation/v25-role-tool-390.png",
+      "sha256": "19fc4655a2d85714b7e6fc3819c3878a34865ccbdc4f39fb832ca725e2e0ddc2",
+      "bytes": 91026
+    },
+    {
+      "path": "/Users/mac/Documents/New project 2/validation/v25-role-workflow-1440.png",
+      "sha256": "623bf1863311d652d24bcf76ad6dcb984ad3f630842de34a4eb098929eb6f4b8",
+      "bytes": 113807
+    },
+    {
+      "path": "/Users/mac/Documents/New project 2/validation/v25-role-workflow-390.png",
+      "sha256": "7e65f6fe7cec5300d66ca65d19bc74d5f450b87da9b7b6f33cc531a9e01563dc",
+      "bytes": 60831
+    },
+    {
+      "path": "/Users/mac/Documents/New project 2/validation/v25-role-workforce-1440.png",
+      "sha256": "984d4a524f10a3e34439c18440d72e18bc596ef0991b57d8099b5c1b4f72e896",
+      "bytes": 110393
+    },
+    {
+      "path": "/Users/mac/Documents/New project 2/validation/v25-role-workforce-390.png",
+      "sha256": "3d1ececa8a6da33426bd8a7d0e5719b50246b325f48e0f6e5c73cb56845bfdbd",
+      "bytes": 58270
+    },
+    {
+      "path": "/Users/mac/Documents/New project 2/validation/v25-role-writer-1440.png",
+      "sha256": "3202153107f70c8123f4f198dbfd413e81b0f8f40c0e0b2a0516eed3ffab563d",
+      "bytes": 162157
+    },
+    {
+      "path": "/Users/mac/Documents/New project 2/validation/v25-role-writer-390.png",
+      "sha256": "70d6162718102bafbe6c697526cc29f01fd9e50a0846c0bf033ff6a320af2639",
+      "bytes": 106672
+    },
+    {
+      "path": "/Users/mac/Documents/New project 2/validation/v26-contract-field-source-audit.json",
+      "sha256": "0c2d15761a3fed092fb7645e0307860965cdc24a9cc8aebb514ff6aef989c763",
+      "bytes": 265
+    },
+    {
+      "path": "/Users/mac/Documents/New project 2/validation/v26-document-validation.json",
+      "sha256": "65f6a3e2e3e5165c527587f9b40d6b63cf3cb025981fa4277e8ad4e19c6c7032",
+      "bytes": 4530
+    },
+    {
+      "path": "/Users/mac/Documents/New project 2/validation/v26-field-audit.json",
+      "sha256": "990cf0fb64ee0023a03bb76e786498927e5c0f8d6caebf045bd94bf8e5eaa689",
+      "bytes": 235717
+    },
+    {
+      "path": "/Users/mac/Documents/New project 2/validation/v26-fields-contract-1024.png",
+      "sha256": "436149f1efcb56613e0756c904e8821fc607426adcfbb77abf910b0ef9774593",
+      "bytes": 195039
+    },
+    {
+      "path": "/Users/mac/Documents/New project 2/validation/v26-fields-contract-1440.png",
+      "sha256": "006c23c9bcb1b2fdede44d0c27b49aaf839ab25aaeb60c5266d3b1079ed64149",
+      "bytes": 203757
+    },
+    {
+      "path": "/Users/mac/Documents/New project 2/validation/v26-fields-contract-390.png",
+      "sha256": "f6697a4e8cfadf2b330bd03af267fc04754ff25fbd0c6b7bdbdd5c070639faab",
+      "bytes": 148658
+    },
+    {
+      "path": "/Users/mac/Documents/New project 2/validation/v26-fields-expense-1024.png",
+      "sha256": "875318b514e62014bec8dc196df6131192f93dc28563c3ae0b18623e6a8f29e2",
+      "bytes": 193694
+    },
+    {
+      "path": "/Users/mac/Documents/New project 2/validation/v26-fields-expense-1440.png",
+      "sha256": "3b7f1b83504e7349061df74df56ec0005bbd58a3b352776a8a8e4a8c9e1098c3",
+      "bytes": 202053
+    },
+    {
+      "path": "/Users/mac/Documents/New project 2/validation/v26-fields-expense-390.png",
+      "sha256": "fe7c17b814a88b95e482a3d84c474e02a0dfedc10c6145bcd087ab90be35787c",
+      "bytes": 147463
+    },
+    {
+      "path": "/Users/mac/Documents/New project 2/validation/v26-fields-people-1024.png",
+      "sha256": "5f1ba339f3ba80460911cdff058f101f80f753dc82e0a465441fe9d32739ba0c",
+      "bytes": 189952
+    },
+    {
+      "path": "/Users/mac/Documents/New project 2/validation/v26-fields-people-1440.png",
+      "sha256": "812c55e476d9a74c96e9809b68d477e9b8b1fc8d430b225c43f2f46b799d5efb",
+      "bytes": 198360
+    },
+    {
+      "path": "/Users/mac/Documents/New project 2/validation/v26-fields-people-390.png",
+      "sha256": "e25e1091d0f970eb42d63bf0c0c00e82ca0d528ef874435f92aaffa8f37ce3e3",
+      "bytes": 144520
+    },
+    {
+      "path": "/Users/mac/Documents/New project 2/validation/v26-fields-purchase-1024.png",
+      "sha256": "afec021863465e9067ea7724cc104ba1f2d92af3ffc33ab28d10a592ec4cb330",
+      "bytes": 191069
+    },
+    {
+      "path": "/Users/mac/Documents/New project 2/validation/v26-fields-purchase-1440.png",
+      "sha256": "aee8cedabbb3092bcf6f05370e633df541c4ec6063ac62e6cc5486be989f60fe",
+      "bytes": 199664
+    },
+    {
+      "path": "/Users/mac/Documents/New project 2/validation/v26-fields-purchase-390.png",
+      "sha256": "f58629c7b3e761f43585411d9e5b23eaa30db6d2e966bc5d8b8470bd49272311",
+      "bytes": 145486
+    },
+    {
+      "path": "/Users/mac/Documents/New project 2/validation/v26-market-1024.png",
+      "sha256": "0ee1cd7e16df9ee1bc8b392808fbd29d38e64e58799a5df358bb02f3ce54ef6a",
+      "bytes": 187918
+    },
+    {
+      "path": "/Users/mac/Documents/New project 2/validation/v26-market-1440.png",
+      "sha256": "c7b09773d1c64e70644eae22985591235a7785670e737f0c7b7c3daed9981d4e",
+      "bytes": 182147
+    },
+    {
+      "path": "/Users/mac/Documents/New project 2/validation/v26-market-390.png",
+      "sha256": "bb1c48194446e49afc5b16c56c762c623b8454cf067daae6650542a41f8c1ed1",
+      "bytes": 147197
+    },
+    {
+      "path": "/Users/mac/Documents/New project 2/validation/v26-market-regression.json",
+      "sha256": "c2553ae26c4ea34a8beb211797ddae154c102d9a7e741be246bbb9fb851afc79",
+      "bytes": 36226
+    },
+    {
+      "path": "/Users/mac/Documents/New project 2/validation/v26-oa-identity-inbox-1024.png",
+      "sha256": "818e1e9c31a7d6daa88d177261db730fb2455f9674744bc190305c622ecc69ff",
+      "bytes": 214914
+    },
+    {
+      "path": "/Users/mac/Documents/New project 2/validation/v26-oa-identity-inbox-1440.png",
+      "sha256": "5ca51ff3af0567626a0ae141c63ba413ff2a8153a81e64853f0e072267b15edb",
+      "bytes": 232296
+    },
+    {
+      "path": "/Users/mac/Documents/New project 2/validation/v26-oa-identity-inbox-390.png",
+      "sha256": "be1ff2a25c8e8a51524a6594e144e71343d7a1c47c92fcc0b0dce673af54fd81",
+      "bytes": 168086
+    },
+    {
+      "path": "/Users/mac/Documents/New project 2/validation/v26-oa-main-inbox-1024.png",
+      "sha256": "a48a11ca69ddbfa36d44f62d39ce2ed6a48e7a63f950665dfa6a25cca8679b65",
+      "bytes": 216414
+    },
+    {
+      "path": "/Users/mac/Documents/New project 2/validation/v26-oa-main-inbox-1440.png",
+      "sha256": "4dc4137d3be67409b0a9fb78f16a0ac6115e12459ace75f0081ca68c7a368cdd",
+      "bytes": 233752
+    },
+    {
+      "path": "/Users/mac/Documents/New project 2/validation/v26-oa-main-inbox-390.png",
+      "sha256": "caf2f249f747aee9a8c6f86982a8ff08d3f431f981480656bd34028703399b6e",
+      "bytes": 166610
+    },
+    {
+      "path": "/Users/mac/Documents/New project 2/validation/v26-oa-main-task-1024.png",
+      "sha256": "9b97af4d647751bd38f8b865e128610fa7d075908d944c079ab44744f2c34387",
+      "bytes": 191193
+    },
+    {
+      "path": "/Users/mac/Documents/New project 2/validation/v26-oa-main-task-1440.png",
+      "sha256": "aee8cedabbb3092bcf6f05370e633df541c4ec6063ac62e6cc5486be989f60fe",
+      "bytes": 199664
+    },
+    {
+      "path": "/Users/mac/Documents/New project 2/validation/v26-oa-main-task-390.png",
+      "sha256": "f58629c7b3e761f43585411d9e5b23eaa30db6d2e966bc5d8b8470bd49272311",
+      "bytes": 145486
+    },
+    {
+      "path": "/Users/mac/Documents/New project 2/validation/v26-oa-review-task-1024.png",
+      "sha256": "1fed44e71879db78abe5096684dfe67313c4ae8e34c568baa931f767ed123ac4",
+      "bytes": 194031
+    },
+    {
+      "path": "/Users/mac/Documents/New project 2/validation/v26-oa-review-task-1440.png",
+      "sha256": "f33740cf722b84f62c790fa54ee0b77008b069d735bf48c6fe7c6377ff998376",
+      "bytes": 202653
+    },
+    {
+      "path": "/Users/mac/Documents/New project 2/validation/v26-oa-review-task-390.png",
+      "sha256": "aaa042eae92405bfba956f5f489f4abac5d5a68ccdf235d4ebfe15b091f91f91",
+      "bytes": 147522
+    },
+    {
+      "path": "/Users/mac/Documents/New project 2/validation/v26-oa-validation.json",
+      "sha256": "3128d833734eecd361000283953a2837855c8033236a79d0a8e223032961b216",
+      "bytes": 122523
+    },
+    {
+      "path": "/Users/mac/Documents/New project 2/validation/v26-preservation-baseline.json",
+      "sha256": "a4a015897a5a7c316209d2e1e2625052dd0cd7fd013fbe90296766b9d316e05f",
+      "bytes": 2090
+    },
+    {
+      "path": "/Users/mac/Documents/New project 2/validation/v26-role-access-1440.png",
+      "sha256": "25d3863eb65a41b06846d8b27f32a14c2ae3b95607ae32d9bbc03ec8902f4df2",
+      "bytes": 112326
+    },
+    {
+      "path": "/Users/mac/Documents/New project 2/validation/v26-role-access-390.png",
+      "sha256": "f369e3826e2ecb7e6db23d033bbf3f9c865be548d70283f0d38335f78a65679c",
+      "bytes": 70849
+    },
+    {
+      "path": "/Users/mac/Documents/New project 2/validation/v26-role-api-1440.png",
+      "sha256": "ac8c687ba93cb540069e5c8ffba1f7ba8d4a3a9d9f9cb73ca3e55568ac7d69c0",
+      "bytes": 102102
+    },
+    {
+      "path": "/Users/mac/Documents/New project 2/validation/v26-role-api-390.png",
+      "sha256": "6be84ff59e899087292a0f855921b54c587edd471a231fcdac8df6f848132556",
+      "bytes": 58901
+    },
+    {
+      "path": "/Users/mac/Documents/New project 2/validation/v26-role-apiadmin-1440.png",
+      "sha256": "0f59bd2137d35aff82f6fbbcdd7a00ed6e7414358da9eca9e92411e14aa19b32",
+      "bytes": 95407
+    },
+    {
+      "path": "/Users/mac/Documents/New project 2/validation/v26-role-apiadmin-390.png",
+      "sha256": "5af8604384ce3f94d0a441e83996e020d705c31d102f74b1fdb95c7a6af98e34",
+      "bytes": 55112
+    },
+    {
+      "path": "/Users/mac/Documents/New project 2/validation/v26-role-approver-1440.png",
+      "sha256": "1210f6de69a8164c006d98dd024848b0d8033e88a257ece1d5a5427a6cacfb18",
+      "bytes": 104203
+    },
+    {
+      "path": "/Users/mac/Documents/New project 2/validation/v26-role-approver-390.png",
+      "sha256": "43da9b22213132648ad4017f360865860e87139ecf80c114ca55a94936fddf38",
+      "bytes": 62392
+    },
+    {
+      "path": "/Users/mac/Documents/New project 2/validation/v26-role-assignment-1440.png",
+      "sha256": "a6c40f954450cbeb57d615104011964c11c3b1908aad2de2416f781b612c757b",
+      "bytes": 98365
+    },
+    {
+      "path": "/Users/mac/Documents/New project 2/validation/v26-role-assignment-390.png",
+      "sha256": "1f991209e972ef0379a750e7e516e2189a27d0b0833a01373eaa91e566be38a0",
+      "bytes": 56328
+    },
+    {
+      "path": "/Users/mac/Documents/New project 2/validation/v26-role-auditgeneral-1440.png",
+      "sha256": "0d995d1d10506ae9bf21b9849b2aa25b292a0b85080ebebca35fb2cc542c9863",
+      "bytes": 102094
+    },
+    {
+      "path": "/Users/mac/Documents/New project 2/validation/v26-role-auditgeneral-390.png",
+      "sha256": "5ddeb3ad925b937862c675434a0c68ea5780d7b0c79c6ea453acbef9b15fd313",
+      "bytes": 57006
+    },
+    {
+      "path": "/Users/mac/Documents/New project 2/validation/v26-role-auditor-1440.png",
+      "sha256": "9d9ce9b184b70ff2f4f5ecf0cbf4a7a67e34d9137dd13f6ced1d0b89f44f0853",
+      "bytes": 97115
+    },
+    {
+      "path": "/Users/mac/Documents/New project 2/validation/v26-role-auditor-390.png",
+      "sha256": "55bf6a1a1e0d8a1d488e1788303782a93a26c9aa7566e4bf5c60922b42eaa807",
+      "bytes": 55281
+    },
+    {
+      "path": "/Users/mac/Documents/New project 2/validation/v26-role-automation-1440.png",
+      "sha256": "f2bdda7ba26f093bfc57417696c7e43cba6591c5d0b39e9598ef5ea21b142c32",
+      "bytes": 107215
+    },
+    {
+      "path": "/Users/mac/Documents/New project 2/validation/v26-role-automation-390.png",
+      "sha256": "f07153928494bad31df8466b419f8176842a046fc6cd313cedac4efd20b953df",
+      "bytes": 60755
+    },
+    {
+      "path": "/Users/mac/Documents/New project 2/validation/v26-role-channel-1440.png",
+      "sha256": "79f3c16aae0be00ed5d9b454f1aae3f8ac327b4b4060d2d6c2b1efc8085641cf",
+      "bytes": 121290
+    },
+    {
+      "path": "/Users/mac/Documents/New project 2/validation/v26-role-channel-390.png",
+      "sha256": "eb2ea71a72da86e3e4b174d7557a3e706bf6c2d6baa47456d458b866af241cf3",
+      "bytes": 70102
+    },
+    {
+      "path": "/Users/mac/Documents/New project 2/validation/v26-role-collab-1440.png",
+      "sha256": "363bbd82bd9e19cd5503d6fb57ec425b16a39db42207cf5c6f238b3894aaf81a",
+      "bytes": 194026
+    },
+    {
+      "path": "/Users/mac/Documents/New project 2/validation/v26-role-collab-390.png",
+      "sha256": "91b02356613680d693bb95795ee562ea5571605850117c472d9d57c3865d9a2b",
+      "bytes": 143148
+    },
+    {
+      "path": "/Users/mac/Documents/New project 2/validation/v26-role-datasubject-1440.png",
+      "sha256": "4904290c984fddc1d26b930ee20d4ac3017920a69eb0d3ab46ff89599310e887",
+      "bytes": 101027
+    },
+    {
+      "path": "/Users/mac/Documents/New project 2/validation/v26-role-datasubject-390.png",
+      "sha256": "1f6c9f4e1c211fb9149f33a3fb5edfdc3638a709965dbe38f1cccb5e74c3c2d9",
+      "bytes": 58598
+    },
+    {
+      "path": "/Users/mac/Documents/New project 2/validation/v26-role-designer-1440.png",
+      "sha256": "eba995c093403b889a10cbc61fcef2dbfb6498f54853ee7601074b4ed89508b8",
+      "bytes": 158829
+    },
+    {
+      "path": "/Users/mac/Documents/New project 2/validation/v26-role-designer-390.png",
+      "sha256": "bf4fe37611e97da77fada688a67920e794568ada833d38bd007878e5eaf1f77d",
+      "bytes": 100770
+    },
+    {
+      "path": "/Users/mac/Documents/New project 2/validation/v26-role-evolution-1440.png",
+      "sha256": "624e6c88866a4bc3d4144af32ffdd9e5a4babb8ae5cc7611a5eead1102e40a47",
+      "bytes": 103143
+    },
+    {
+      "path": "/Users/mac/Documents/New project 2/validation/v26-role-evolution-390.png",
+      "sha256": "e78176596bfb65732c8d5f7856476fede698953419a3c93b2319f86887008c67",
+      "bytes": 59036
+    },
+    {
+      "path": "/Users/mac/Documents/New project 2/validation/v26-role-hr-1440.png",
+      "sha256": "7237af0c4e2e68790d323cc4ae3cd5fc746259f68cced31fefa24bef3080ad2c",
+      "bytes": 98948
+    },
+    {
+      "path": "/Users/mac/Documents/New project 2/validation/v26-role-hr-390.png",
+      "sha256": "10007003b784ba341b3a3006b5417993fb7f7a60a131ee8534207b5c68cdd07d",
+      "bytes": 59032
+    },
+    {
+      "path": "/Users/mac/Documents/New project 2/validation/v26-role-identity-1440.png",
+      "sha256": "e96f1d6390b3890947ca747bdcf17bcc05cf90aeb9432e3681b1f29e994e766b",
+      "bytes": 106441
+    },
+    {
+      "path": "/Users/mac/Documents/New project 2/validation/v26-role-identity-390.png",
+      "sha256": "29fb886fd6c14b3be92b94a6845dc577afe035924e5077bb5156714130c8a74c",
+      "bytes": 63970
+    },
+    {
+      "path": "/Users/mac/Documents/New project 2/validation/v26-role-initiator-1440.png",
+      "sha256": "cbab353df691ab65822cfe3993b3bc1c8f6b0e13bd3c1d99471f8323cf218d6b",
+      "bytes": 108449
+    },
+    {
+      "path": "/Users/mac/Documents/New project 2/validation/v26-role-initiator-390.png",
+      "sha256": "e0b44a9894f920c137888529d56870729d52e5677b0c7b059af534810e48b590",
+      "bytes": 59719
+    },
+    {
+      "path": "/Users/mac/Documents/New project 2/validation/v26-role-interactor-1440.png",
+      "sha256": "1fdc95d1c4f9026d794de786a0a1b57dc791df79c163bf64e122135b8a26f953",
+      "bytes": 106584
+    },
+    {
+      "path": "/Users/mac/Documents/New project 2/validation/v26-role-interactor-390.png",
+      "sha256": "71bd209df0132b5321dff8fa7cfd4242813233166397fe443a41a36bef981223",
+      "bytes": 55273
+    },
+    {
+      "path": "/Users/mac/Documents/New project 2/validation/v26-role-knowledge-1440.png",
+      "sha256": "9b21d01320f5cf4efc68f98793339b7c2ed21e758dbc4d41da030ce1720fa259",
+      "bytes": 131997
+    },
+    {
+      "path": "/Users/mac/Documents/New project 2/validation/v26-role-knowledge-390.png",
+      "sha256": "e4e597f7135bdff1ac6884aaa354f0e36dced1ef977a26456a107a5d837e6919",
+      "bytes": 82718
+    },
+    {
+      "path": "/Users/mac/Documents/New project 2/validation/v26-role-knowledgeadmin-1440.png",
+      "sha256": "c81181068bdf0ddf6c19a1a0ab4388062e76b57ef4036389ac98f829e747a6dd",
+      "bytes": 108457
+    },
+    {
+      "path": "/Users/mac/Documents/New project 2/validation/v26-role-knowledgeadmin-390.png",
+      "sha256": "0fe54fd0d74d3e3fd74123fae6abc20489fe4171526be3a75894a1ac9cb6b164",
+      "bytes": 57263
+    },
+    {
+      "path": "/Users/mac/Documents/New project 2/validation/v26-role-main-1440.png",
+      "sha256": "dc342aa930f41ecbccf95c9bbaf7131abf9f7200d9cdee86a0859413c95ca30d",
+      "bytes": 213188
+    },
+    {
+      "path": "/Users/mac/Documents/New project 2/validation/v26-role-main-390.png",
+      "sha256": "94311204db6a8debaac001df7de012fabe83ea78128e1d4647b1612d02387ae3",
+      "bytes": 158765
+    },
+    {
+      "path": "/Users/mac/Documents/New project 2/validation/v26-role-member-1440.png",
+      "sha256": "cf8c101edb459d8b7bce292d4199c7e06ad6f631689c1ddd388599e99af0e6a6",
+      "bytes": 108706
+    },
+    {
+      "path": "/Users/mac/Documents/New project 2/validation/v26-role-member-390.png",
+      "sha256": "15b549a239fc0575592ac0f3629f5419a7d7cd5acbe76ca217a9916874a66c0f",
+      "bytes": 60813
+    },
+    {
+      "path": "/Users/mac/Documents/New project 2/validation/v26-role-org-1440.png",
+      "sha256": "06c37fdd4c6198bfe1074425ca1af74c1f4dd054787c6088dd6adcfd1187d38b",
+      "bytes": 100536
+    },
+    {
+      "path": "/Users/mac/Documents/New project 2/validation/v26-role-org-390.png",
+      "sha256": "b7a18cbd02e343251a56500ebab09a20dc64a7091f3b753b8ad8367144ef694b",
+      "bytes": 58993
+    },
+    {
+      "path": "/Users/mac/Documents/New project 2/validation/v26-role-policy-1440.png",
+      "sha256": "2210f4cf9d5bb28c5351ecf4f221911b27aacf6adfb38c7136ab5c878e1d12af",
+      "bytes": 127066
+    },
+    {
+      "path": "/Users/mac/Documents/New project 2/validation/v26-role-policy-390.png",
+      "sha256": "a29f7cbbe981410c02d70ce1b959b2d54cfa6cdcdfa3d361fab827954a889353",
+      "bytes": 83912
+    },
+    {
+      "path": "/Users/mac/Documents/New project 2/validation/v26-role-privacy-1440.png",
+      "sha256": "e8fa9482c48a31046d40042a55b7c312592c7d362bdb004d57e9c8c94d32f5f2",
+      "bytes": 103565
+    },
+    {
+      "path": "/Users/mac/Documents/New project 2/validation/v26-role-privacy-390.png",
+      "sha256": "e1264421845b12c26bf8b60cd5a97cf8dc78e50c44b3786968d80b095959fd1e",
+      "bytes": 61272
+    },
+    {
+      "path": "/Users/mac/Documents/New project 2/validation/v26-role-publisher-1440.png",
+      "sha256": "d550a4dd4357bb525cfe1f3a2a9a64eca7b1cb58a5b76a092d81787b19f5373b",
+      "bytes": 100555
+    },
+    {
+      "path": "/Users/mac/Documents/New project 2/validation/v26-role-publisher-390.png",
+      "sha256": "e0931ed67c30b87247d409ec6dea446e22640b496b58f19d949d122a84b54302",
+      "bytes": 59542
+    },
+    {
+      "path": "/Users/mac/Documents/New project 2/validation/v26-role-receiver-1440.png",
+      "sha256": "e35d8b290b45860e440d063f142d79cfcf8956e13501c2305ba50d6e07444fbc",
+      "bytes": 137105
+    },
+    {
+      "path": "/Users/mac/Documents/New project 2/validation/v26-role-receiver-390.png",
+      "sha256": "dc7801358dc0bb0968364e27d71e7042a129fafb80a23810886823b802973084",
+      "bytes": 85180
+    },
+    {
+      "path": "/Users/mac/Documents/New project 2/validation/v26-role-regression.json",
+      "sha256": "4617e0e81ec24da7901a9301d4bf1c3176aff50e3d2f90183e6c44204177f6f1",
+      "bytes": 239420
+    },
+    {
+      "path": "/Users/mac/Documents/New project 2/validation/v26-role-release-1440.png",
+      "sha256": "ad5099f26a8e4ac1a9af823416ee3726976be4e8aaab4f7f695ec523b86a82e0",
+      "bytes": 94746
+    },
+    {
+      "path": "/Users/mac/Documents/New project 2/validation/v26-role-release-390.png",
+      "sha256": "221bac8c92822051748f587a4085cd461c246b163bb262ab310fa93f588642ca",
+      "bytes": 53251
+    },
+    {
+      "path": "/Users/mac/Documents/New project 2/validation/v26-role-resource-1440.png",
+      "sha256": "bbd415d0947092499b31b0cb2fcaf09904962189d9b54ad5442cef3809951bdb",
+      "bytes": 135748
+    },
+    {
+      "path": "/Users/mac/Documents/New project 2/validation/v26-role-resource-390.png",
+      "sha256": "237b2a8b76adb8153cfeae17f4d56da9c4fbe6e38e25813e43705cc066657c88",
+      "bytes": 85046
+    },
+    {
+      "path": "/Users/mac/Documents/New project 2/validation/v26-role-responsible-1440.png",
+      "sha256": "a1aac0f56ae86c961ed05af1975bb6a2cc47625dcca9585fe09e673e658ea43b",
+      "bytes": 130677
+    },
+    {
+      "path": "/Users/mac/Documents/New project 2/validation/v26-role-responsible-390.png",
+      "sha256": "6527f5f78f5736104231dd107b9e7205dc87df0f9b53fe412b77146c3cdc4169",
+      "bytes": 80218
+    },
+    {
+      "path": "/Users/mac/Documents/New project 2/validation/v26-role-review-1440.png",
+      "sha256": "0f47a392c6bbd8cd89768c1386a3cd77603808f74bd9cfc5a1633bb56ac89985",
+      "bytes": 193692
+    },
+    {
+      "path": "/Users/mac/Documents/New project 2/validation/v26-role-review-390.png",
+      "sha256": "4a9967562e017fa85429ed69de5568b6fefcda9e0d4efbef34011a8f8e091a0f",
+      "bytes": 143353
+    },
+    {
+      "path": "/Users/mac/Documents/New project 2/validation/v26-role-runtime-1440.png",
+      "sha256": "6a416c05f2135f3343503bbf87db84b0f13450b98ebd84414e1ddebc744efe62",
+      "bytes": 110533
+    },
+    {
+      "path": "/Users/mac/Documents/New project 2/validation/v26-role-runtime-390.png",
+      "sha256": "07bada4acd3e707e8b51a3f00cc8f2e69fd411d71ababb576a24ad09dd41ed0f",
+      "bytes": 68806
+    },
+    {
+      "path": "/Users/mac/Documents/New project 2/validation/v26-role-security-1440.png",
+      "sha256": "7d90f902d57faae847732a3c08c52d0ad4ea3e746e633eb25b2adcb5d8e4b545",
+      "bytes": 105825
+    },
+    {
+      "path": "/Users/mac/Documents/New project 2/validation/v26-role-security-390.png",
+      "sha256": "b184426ac6611e1612bff3e7722a736b9f7d7c893aece18b6276bdf98299b8d7",
+      "bytes": 63276
+    },
+    {
+      "path": "/Users/mac/Documents/New project 2/validation/v26-role-securityadmin-1440.png",
+      "sha256": "9b77f371889c4a027af758704dee67931badbdcd9a577df7c9e587849339161c",
+      "bytes": 104388
+    },
+    {
+      "path": "/Users/mac/Documents/New project 2/validation/v26-role-securityadmin-390.png",
+      "sha256": "834c9f4d70b011d00d5b1241e402e04b44ade159f1fcf7c5bb08c72e504c1b33",
+      "bytes": 60556
+    },
+    {
+      "path": "/Users/mac/Documents/New project 2/validation/v26-role-skill-1440.png",
+      "sha256": "d7af297d0efd29ae41f9e810f4032dcf7fd289397a7036f07cb94957296ddfdb",
+      "bytes": 137415
+    },
+    {
+      "path": "/Users/mac/Documents/New project 2/validation/v26-role-skill-390.png",
+      "sha256": "23e60638944b8ae2e6b661341f5842b0f6257dde7f619db80f348c67da0d50de",
+      "bytes": 87348
+    },
+    {
+      "path": "/Users/mac/Documents/New project 2/validation/v26-role-team-1440.png",
+      "sha256": "3cc2421609b7f8a83803844a1452b567e7fcefe2c9ad8fe11d1b468084ed4d15",
+      "bytes": 111045
+    },
+    {
+      "path": "/Users/mac/Documents/New project 2/validation/v26-role-team-390.png",
+      "sha256": "542cdca2edc27257e6ff7f05e0730ea39f474ab0de49fad386f055efc2a4cb05",
+      "bytes": 59692
+    },
+    {
+      "path": "/Users/mac/Documents/New project 2/validation/v26-role-tech-1440.png",
+      "sha256": "2c6487204f18c881c672a3de6a1831f0935afd7870988572edf6a89e6b6143ec",
+      "bytes": 149575
+    },
+    {
+      "path": "/Users/mac/Documents/New project 2/validation/v26-role-tech-390.png",
+      "sha256": "296c961ccb28bca3e1fb65b8ee777bc5ab22eb5168e1289bef049edbff35269b",
+      "bytes": 97276
+    },
+    {
+      "path": "/Users/mac/Documents/New project 2/validation/v26-role-tenant-1440.png",
+      "sha256": "aaca6f03c40aafb454fefea15355458b0fb0332101ae6b18a3658d075342bb38",
+      "bytes": 96247
+    },
+    {
+      "path": "/Users/mac/Documents/New project 2/validation/v26-role-tenant-390.png",
+      "sha256": "ae43af5f6410f4bf7e3e9bc048aa276fed1d5b6d197700887d618f80c106ac24",
+      "bytes": 55304
+    },
+    {
+      "path": "/Users/mac/Documents/New project 2/validation/v26-role-tool-1440.png",
+      "sha256": "44dcd428c633e611753c762adb2c287a6500b209626b78e891192ce73f1c16ed",
+      "bytes": 142828
+    },
+    {
+      "path": "/Users/mac/Documents/New project 2/validation/v26-role-tool-390.png",
+      "sha256": "19fc4655a2d85714b7e6fc3819c3878a34865ccbdc4f39fb832ca725e2e0ddc2",
+      "bytes": 91026
+    },
+    {
+      "path": "/Users/mac/Documents/New project 2/validation/v26-role-workflow-1440.png",
+      "sha256": "79850e910912f38872689bf094314b6b32bbca8e8a578185864435543955fd62",
+      "bytes": 114236
+    },
+    {
+      "path": "/Users/mac/Documents/New project 2/validation/v26-role-workflow-390.png",
+      "sha256": "dc5662288ffa529c81e80608d774c888c6a1cec1859f31cb33f1dae07e469b8c",
+      "bytes": 61212
+    },
+    {
+      "path": "/Users/mac/Documents/New project 2/validation/v26-role-workforce-1440.png",
+      "sha256": "f6c359549594e5169f6727bcf810c70780ec46d7b0531d318d45e4b295e6cc0b",
+      "bytes": 110393
+    },
+    {
+      "path": "/Users/mac/Documents/New project 2/validation/v26-role-workforce-390.png",
+      "sha256": "3d1ececa8a6da33426bd8a7d0e5719b50246b325f48e0f6e5c73cb56845bfdbd",
+      "bytes": 58270
+    },
+    {
+      "path": "/Users/mac/Documents/New project 2/validation/v26-role-writer-1440.png",
+      "sha256": "72b2faceffbeefdac07a333c65842ac5c3174b0d11423fc73eecfeef17b4ae54",
+      "bytes": 162120
+    },
+    {
+      "path": "/Users/mac/Documents/New project 2/validation/v26-role-writer-390.png",
+      "sha256": "70d6162718102bafbe6c697526cc29f01fd9e50a0846c0bf033ff6a320af2639",
+      "bytes": 106672
+    },
+    {
+      "path": "/Users/mac/Documents/New project 2/validation/verify-qoder-market.cjs",
+      "sha256": "e4f5044c62a37a390c515ffaf919e2046f895cce6ad5367e7a3281f4bfedbd73",
+      "bytes": 8063
+    },
+    {
+      "path": "/Users/mac/Documents/New project 2/validation/verify-qoder-node.cjs",
+      "sha256": "35a5c5af2941d114e433ec9253e5d6e68cc37459c528db9b2f58367d3bd83d66",
+      "bytes": 4727
+    },
+    {
+      "path": "/Users/mac/Documents/New project 2/validation/verify-qoder-shell.cjs",
+      "sha256": "69120dbd38ee24a546a5b9796e8934d1ebf3720096360c8425e3f21e8f169eef",
+      "bytes": 8969
+    },
+    {
+      "path": "/Users/mac/Documents/New project 2/validation/verify-v24-documents.py",
+      "sha256": "399509dc3ed9429764e6fbc330edf4b99e409d433bd925594413f5af37a88b72",
+      "bytes": 7591
+    },
+    {
+      "path": "/Users/mac/Documents/New project 2/validation/verify-v24-market.cjs",
+      "sha256": "21f4d50130f114cd38a3a0dab55e708781fd321373fef736ceede6b56901f55f",
+      "bytes": 9165
+    },
+    {
+      "path": "/Users/mac/Documents/New project 2/validation/verify-v24-roles.cjs",
+      "sha256": "a5d85cbf9f32de7f322493885f1edd3a78ea885c50b0b4eb0aa58467cc484802",
+      "bytes": 22342
+    },
+    {
+      "path": "/Users/mac/Documents/New project 2/validation/verify-v25-documents.py",
+      "sha256": "44b1dcfea0bc1af58633ca1c7bec2a07f16d495a1a83fc088bd1afb6cb8d0de3",
+      "bytes": 7589
+    },
+    {
+      "path": "/Users/mac/Documents/New project 2/validation/verify-v25-market.cjs",
+      "sha256": "83a98dd04cd893d62f6b712967ff4eb74b320be485a96964912b05bb9a91a39d",
+      "bytes": 9165
+    },
+    {
+      "path": "/Users/mac/Documents/New project 2/validation/verify-v25-oa.cjs",
+      "sha256": "37edee36884e6f584b3893aae2a093eaec169a75d81457f75307d662606c7746",
+      "bytes": 13998
+    },
+    {
+      "path": "/Users/mac/Documents/New project 2/validation/verify-v25-roles.cjs",
+      "sha256": "9fa3ea15d6010568d8390761ce249dd7cf6c4d7bdf412417d6cbd710274a1aea",
+      "bytes": 22346
+    },
+    {
+      "path": "/Users/mac/Documents/New project 2/validation/verify-v26-documents.py",
+      "sha256": "af478a19e784c0c1434ba29a77a4402a9409c769730ec2b736ca1aaac776d016",
+      "bytes": 8460
+    },
+    {
+      "path": "/Users/mac/Documents/New project 2/validation/verify-v26-fields.cjs",
+      "sha256": "f33a144b46b2b2823fe5cb87d61089b751a8d9fb167e9d720e0c56ee48446adf",
+      "bytes": 11215
+    },
+    {
+      "path": "/Users/mac/Documents/New project 2/validation/verify-v26-market.cjs",
+      "sha256": "8d914c73356519fd52eff15c1ca3bbc5e7ee2b5250bdcf466f30656154d278ae",
+      "bytes": 9165
+    },
+    {
+      "path": "/Users/mac/Documents/New project 2/validation/verify-v26-oa.cjs",
+      "sha256": "fee0550c426ed39c56fdc7457392ae97f3d7201f6806ba2b133fd08b23ace88c",
+      "bytes": 13998
+    },
+    {
+      "path": "/Users/mac/Documents/New project 2/validation/verify-v26-roles.cjs",
+      "sha256": "17302712e71a166effab324c185f2a75fe1146953d941fbeff68b2bf60ac1ad2",
+      "bytes": 22346
+    },
+    {
+      "path": "/Users/mac/Documents/New project 2/validation/workflow-frontend-research-20260911.json",
+      "sha256": "e678081dcea72e1324d5d0e73e60875bb33e95d9ef247a2c2dda0be659952bae",
+      "bytes": 19839
+    },
+    {
+      "path": "/Users/mac/Documents/New project 2/附录-QoderWake竞品分析-初版快照.md",
+      "sha256": "dc9ff80d34ff03c3514ce0f8e1ed7c546470bf9fab2199176cf53d94547422ac",
+      "bytes": 46771
+    }
+  ],
+  "sourceDriftReview": {
+    "baseline": "21a230f2c7a6a26e68a5eff1c36788d6f4206eab",
+    "observedHead": "e78eb8e574e38a5c6208fd4722dbf8d653f3a823",
+    "productDiffPaths": [
+      "apps/web/src/pages/work/WorkFamilyRoutes.tsx",
+      "apps/web/src/sop-plan-api.ts",
+      "apps/web/src/sop-plan-view.test.tsx"
+    ],
+    "diffInspected": true,
+    "original36SourceHashesUnchanged": true,
+    "contextSourcesPresentInProductDiff": false,
+    "fullProductTestsRerun": false
+  },
+  "actualCheckCommands": [
+    {
+      "command": "PYTHONDONTWRITEBYTECODE=1 .venv/bin/python -m pytest -q -p no:cacheprovider services/control-plane/tests/business_api/test_conversation_context_projection.py services/control-plane/tests/test_context_manifest_reauth_decision.py",
+      "cwd": "/Users/mac/Documents/ChatGPT/ZKER- staff",
+      "exitCode": 0,
+      "rawOutput": "...................                                                      [100%]\n19 passed in 0.81s"
+    },
+    {
+      "command": "node /private/tmp/zker-design-package-browser-check-20260911.cjs",
+      "exitCode": 0,
+      "resultFile": "/Users/mac/Documents/New project 2/validation/browser-validation.json"
+    },
+    {
+      "command": "Draft202012Validator.check_schema and iter_errors, executed via .venv/bin/python stdin",
+      "exitCode": 0,
+      "resultFile": "/Users/mac/Documents/New project 2/validation/schema-validation.json"
+    },
+    {
+      "command": "python3 stdin: document IDs, preservation, links, references, source hashes, counts and evidence validation",
+      "exitCode": 0,
+      "rawSummary": {
+        "checks": 16,
+        "errors": [],
+        "localLinks": 336
+      }
+    },
+    {
+      "command": "node /private/tmp/zker-design-package-browser-check-20260911.cjs",
+      "exitCode": 0,
+      "scope": "v2.2 existing node prototype regression"
+    },
+    {
+      "command": "node /private/tmp/zker-market-browser-check-20260911.cjs",
+      "exitCode": 0,
+      "resultFile": "/Users/mac/Documents/New project 2/validation/market-browser-validation.json"
+    },
+    {
+      "command": "Draft202012Validator.check_schema and positive/negative examples via .venv/bin/python stdin",
+      "exitCode": 0,
+      "resultFile": "/Users/mac/Documents/New project 2/validation/market-schema-validation.json"
+    },
+    {
+      "command": "python3 stdin: v2.2 document IDs, preservation, links, references, source hashes, counts and evidence validation",
+      "exitCode": 0,
+      "resultFile": "/Users/mac/Documents/New project 2/validation/market-document-validation.json",
+      "rawSummary": {
+        "checks": 18,
+        "errors": [],
+        "localLinks": 383
+      }
+    },
+    {
+      "command": "node '/Users/mac/Documents/New project 2/validation/verify-qoder-node.cjs'",
+      "exitCode": 0,
+      "revision": "v2.3"
+    },
+    {
+      "command": "node '/Users/mac/Documents/New project 2/validation/verify-qoder-market.cjs'",
+      "exitCode": 0,
+      "revision": "v2.3"
+    },
+    {
+      "command": "node '/Users/mac/Documents/New project 2/validation/verify-qoder-shell.cjs'",
+      "exitCode": 0,
+      "revision": "v2.3"
+    },
+    {
+      "command": "python3 stdin: preserved artifact hashes, current HTML digest, source/browser reports, screenshot files, local Markdown links and coverage consistency",
+      "exitCode": 0,
+      "revision": "v2.3",
+      "resultFile": "/Users/mac/Documents/New project 2/validation/qoder-document-validation.json"
+    },
+    {
+      "command": "node \"/Users/mac/Documents/New project 2/validation/verify-v24-roles.cjs\"",
+      "exitCode": 0,
+      "revision": "v2.4",
+      "resultFile": "/Users/mac/Documents/New project 2/validation/v24-role-validation.json"
+    },
+    {
+      "command": "node \"/Users/mac/Documents/New project 2/validation/verify-v24-market.cjs\"",
+      "exitCode": 0,
+      "revision": "v2.4",
+      "resultFile": "/Users/mac/Documents/New project 2/validation/v24-market-validation.json"
+    },
+    {
+      "command": "python3 \"/Users/mac/Documents/New project 2/validation/verify-v24-documents.py\"",
+      "exitCode": 0,
+      "revision": "v2.4",
+      "resultFile": "/Users/mac/Documents/New project 2/validation/v24-document-validation.json"
+    },
+    {
+      "command": "node '/Users/mac/Documents/New project 2/validation/verify-v25-roles.cjs'",
+      "revision": "v2.5",
+      "exitCode": 0,
+      "resultFile": "/Users/mac/Documents/New project 2/validation/v25-role-regression.json"
+    },
+    {
+      "command": "node '/Users/mac/Documents/New project 2/validation/verify-v25-market.cjs'",
+      "revision": "v2.5",
+      "exitCode": 0,
+      "resultFile": "/Users/mac/Documents/New project 2/validation/v25-market-regression.json"
+    },
+    {
+      "command": "node '/Users/mac/Documents/New project 2/validation/verify-v25-oa.cjs'",
+      "revision": "v2.5",
+      "exitCode": 0,
+      "resultFile": "/Users/mac/Documents/New project 2/validation/v25-oa-validation.json"
+    },
+    {
+      "command": "python3 '/Users/mac/Documents/New project 2/validation/verify-v25-documents.py'",
+      "revision": "v2.5",
+      "exitCode": 0,
+      "resultFile": "/Users/mac/Documents/New project 2/validation/v25-document-validation.json"
+    },
+    {
+      "command": "Draft202012Validator.check_schema with FormatChecker and positive/negative examples via .venv/bin/python stdin",
+      "revision": "v2.5",
+      "exitCode": 0,
+      "resultFile": "/Users/mac/Documents/New project 2/validation/v25-oa-schema-validation.json"
+    },
+    {
+      "command": "node '/Users/mac/Documents/New project 2/validation/verify-v26-roles.cjs'",
+      "revision": "v2.6",
+      "exitCode": 0,
+      "resultFile": "/Users/mac/Documents/New project 2/validation/v26-role-regression.json"
+    },
+    {
+      "command": "node '/Users/mac/Documents/New project 2/validation/verify-v26-market.cjs'",
+      "revision": "v2.6",
+      "exitCode": 0,
+      "resultFile": "/Users/mac/Documents/New project 2/validation/v26-market-regression.json"
+    },
+    {
+      "command": "node '/Users/mac/Documents/New project 2/validation/verify-v26-oa.cjs'",
+      "revision": "v2.6",
+      "exitCode": 0,
+      "resultFile": "/Users/mac/Documents/New project 2/validation/v26-oa-validation.json"
+    },
+    {
+      "command": "node '/Users/mac/Documents/New project 2/validation/verify-v26-fields.cjs'",
+      "revision": "v2.6",
+      "exitCode": 0,
+      "resultFile": "/Users/mac/Documents/New project 2/validation/v26-field-audit.json"
+    },
+    {
+      "command": "python3 '/Users/mac/Documents/New project 2/validation/verify-v26-documents.py'",
+      "revision": "v2.6",
+      "exitCode": 0,
+      "resultFile": "/Users/mac/Documents/New project 2/validation/v26-document-validation.json",
+      "rawSummary": {
+        "passed": true,
+        "checks": 24,
+        "coverage": {
+          "roleProfiles": 41,
+          "humanRoleKeys": 44,
+          "requirements": 153,
+          "oaRefinements": 28,
+          "initialInstances": 7,
+          "initialFixtureTasks": 369,
+          "layoutChecks": 1632,
+          "interactionChecks": 526,
+          "screenshots": 109,
+          "fieldInventoryViews": 237,
+          "businessTemplateFields": 17
+        },
+        "localLinks": 507,
+        "failures": []
+      },
+      "priorAttempt": "Initial report-link check failed because the report did not yet exist; it was generated by that run and the final check passed."
+    }
+  ],
+  "finalArtifactRefresh": {
+    "revision": "v2.6",
+    "recordedAt": "2026-09-11T13:17:56.909138+00:00",
+    "sourceHead": "40dbeebf2610c863f07cc65eaf825dd063d26e68",
+    "artifactCount": 393,
+    "excludes": "Evidence manifest itself; no self-referential digest",
+    "reason": "Current v2.6 field corrections, preservation rules, research, four browser suites and document validation. Prior verification remains historical."
+  },
+  "validationHistory": [
+    {
+      "revision": "v2.1",
+      "validation": {
+        "passed": true,
+        "checks": [
+          {
+            "name": "153 unique optimization rows",
+            "passed": true,
+            "detail": 153
+          },
+          {
+            "name": "123 original rows preserved exactly",
+            "passed": true,
+            "detail": null
+          },
+          {
+            "name": "priorities",
+            "passed": true,
+            "detail": {
+              "P0": 37,
+              "P1": 102,
+              "P2": 14
+            }
+          },
+          {
+            "name": "21 domains",
+            "passed": true,
+            "detail": null
+          },
+          {
+            "name": "28 business scenario IDs preserved",
+            "passed": true,
+            "detail": 28
+          },
+          {
+            "name": "153 requirement mappings",
+            "passed": true,
+            "detail": null
+          },
+          {
+            "name": "153 exact story anchors",
+            "passed": true,
+            "detail": null
+          },
+          {
+            "name": "all requirement references resolve",
+            "passed": true,
+            "detail": null
+          },
+          {
+            "name": "all local links exist",
+            "passed": true,
+            "detail": []
+          },
+          {
+            "name": "all source line links in range",
+            "passed": true,
+            "detail": []
+          },
+          {
+            "name": "table column consistency",
+            "passed": true,
+            "detail": []
+          },
+          {
+            "name": "original 36 evidence sources unchanged",
+            "passed": true,
+            "detail": []
+          },
+          {
+            "name": "candidate schema 18 cases",
+            "passed": true,
+            "detail": null
+          },
+          {
+            "name": "prototype 54 layouts and 8 interactions",
+            "passed": true,
+            "detail": null
+          },
+          {
+            "name": "64 existing schemas / 895 fields",
+            "passed": true,
+            "detail": null
+          },
+          {
+            "name": "4 ER diagrams",
+            "passed": true,
+            "detail": null
+          }
+        ],
+        "localLinkCount": 336,
+        "errors": []
+      },
+      "prototypeValidationSummary": {
+        "passed": true,
+        "layoutCombinations": 54,
+        "interactionChecks": 8,
+        "screenshots": 3,
+        "pageErrors": []
+      }
+    }
+  ],
+  "designRevision": "v2.6",
+  "marketUpdate": {
+    "revision": "v2.2",
+    "passed": true,
+    "checks": [
+      {
+        "name": "153 original requirement contents and priorities preserved",
+        "passed": true,
+        "detail": null
+      },
+      {
+        "name": "priority counts unchanged",
+        "passed": true,
+        "detail": {
+          "P0": 37,
+          "P1": 102,
+          "P2": 14
+        }
+      },
+      {
+        "name": "21 domains and 22 distinct page groups",
+        "passed": true,
+        "detail": null
+      },
+      {
+        "name": "10 market refinements mapped to existing requirements",
+        "passed": true,
+        "detail": null
+      },
+      {
+        "name": "30 original requirements enriched",
+        "passed": true,
+        "detail": 30
+      },
+      {
+        "name": "all page/flow/interface references resolve",
+        "passed": true,
+        "detail": null
+      },
+      {
+        "name": "153 unique story anchors",
+        "passed": true,
+        "detail": null
+      },
+      {
+        "name": "market story refinements present for all mapped requirements",
+        "passed": true,
+        "detail": null
+      },
+      {
+        "name": "complete checklist still 153 rows",
+        "passed": true,
+        "detail": null
+      },
+      {
+        "name": "checklist agrees with requirement data",
+        "passed": true,
+        "detail": null
+      },
+      {
+        "name": "5 ER diagrams",
+        "passed": true,
+        "detail": null
+      },
+      {
+        "name": "all local links and line references valid",
+        "passed": true,
+        "detail": []
+      },
+      {
+        "name": "all Markdown table columns consistent",
+        "passed": true,
+        "detail": []
+      },
+      {
+        "name": "existing prototype 54 layouts / 8 interactions passed",
+        "passed": true,
+        "detail": null
+      },
+      {
+        "name": "market prototype 75 layouts / 19 interactions passed",
+        "passed": true,
+        "detail": null
+      },
+      {
+        "name": "market schema 4 valid / 8 invalid passed",
+        "passed": true,
+        "detail": null
+      },
+      {
+        "name": "prior collaboration schema unchanged",
+        "passed": true,
+        "detail": null
+      },
+      {
+        "name": "entry point advertises matching current coverage",
+        "passed": true,
+        "detail": null
+      }
+    ],
+    "errors": [],
+    "localLinks": 383,
+    "coverage": {
+      "requirements": 153,
+      "domains": 21,
+      "pageGroups": 22,
+      "marketRefinements": 10,
+      "mappedRequirements": 30,
+      "erDiagrams": 5,
+      "flows": 13,
+      "interfaceGroups": 17,
+      "layoutCombinations": 129,
+      "interactions": 27,
+      "marketSchemaExamples": 12
+    },
+    "sourceHeadAtMarketReview": "7fe65123c8dee1bb2a5542327bcdc6b80e1f7454",
+    "sourceHeadAtDelivery": "7fe65123c8dee1bb2a5542327bcdc6b80e1f7454",
+    "sources": [
+      {
+        "id": "M01",
+        "path": "/Users/mac/Documents/ChatGPT/ZKER- staff/StaffDeck-业务闭环权限与完整用户故事规格.md",
+        "line": 716,
+        "sha256": "26c2beec6c889cabba9840a121d122fbb7b924370a2230c087031310ea72e190"
+      },
+      {
+        "id": "M02",
+        "path": "/Users/mac/Documents/ChatGPT/ZKER- staff/contracts/authz/actions.yaml",
+        "line": 5378,
+        "sha256": "e7cccbd31a78d49716661f7a7ac08155de1506768c20ab71114340630d80f721"
+      },
+      {
+        "id": "M03",
+        "path": "/Users/mac/Documents/ChatGPT/ZKER- staff/services/control-plane/control_plane/gallery_resources_list_session.py",
+        "line": 1,
+        "sha256": "e9eec9a9655390c2180cfe73d7241c70bc451ea07576fc691d2997dfb1557321"
+      },
+      {
+        "id": "M04",
+        "path": "/Users/mac/Documents/ChatGPT/ZKER- staff/services/control-plane/control_plane/gallery_agent_copy_session.py",
+        "line": 1,
+        "sha256": "2099fa2a16089465c5b9dd9fbd7d918cc8b957a327c5b3da402b22ecca82ed3a"
+      },
+      {
+        "id": "M05",
+        "path": "/Users/mac/Documents/ChatGPT/ZKER- staff/services/control-plane/control_plane/gallery_agent_adopt_session.py",
+        "line": 1,
+        "sha256": "734e326901fa7933b13f423750798dc2bff156c5b50aa8a71b9148fc28d13ae8"
+      },
+      {
+        "id": "M06",
+        "path": "/Users/mac/Documents/ChatGPT/ZKER- staff/services/control-plane/control_plane/operations_not_implemented.py",
+        "line": 63,
+        "sha256": "3a5701520b25d16f0a511d1780b20402e788fd8559d5192ebfef7c651cfc82b4"
+      },
+      {
+        "id": "M07",
+        "path": "/Users/mac/Documents/ChatGPT/ZKER- staff/docs/ui/prototype-screenshot-acceptance-matrix.md",
+        "line": 56,
+        "sha256": "3714a374f989b1d80885a9b13a541e13672140ca84ebc272a55263c79221a1e6"
+      }
+    ],
+    "limitations": [
+      "Prototype fixtures only; not production authorization or marketplace persistence",
+      "No actual copy, credential authorization, capability invocation, product code or database change",
+      "Existing 153 requirements retain earlier code audit times; this turn refreshes market-specific evidence"
+    ]
+  },
+  "marketSchemaValidationSummary": {
+    "passed": true,
+    "validExamples": 4,
+    "invalidExamples": 8
+  },
+  "marketTaskState": {
+    "goal": "将员工市场及按权限复制使用数字员工/技能/工具补齐到全部设计与原型",
+    "scope": [
+      "ZKER-staff当前市场事实只读",
+      "New project 2设计与原型可逆更新"
+    ],
+    "acceptance_criteria": [
+      "员工可见市场入口",
+      "数字员工/技能/工具按权限发现与复制后使用",
+      "原153项保留并完整追踪新增要求",
+      "配置权限/依赖/来源不漂移",
+      "真实原型回归与证据更新"
+    ],
+    "current_node": null,
+    "completed_nodes": [
+      "market_source_check",
+      "update_design",
+      "update_prototype",
+      "verify"
+    ],
+    "failed_nodes": [],
+    "artifacts": [],
+    "evidence": [
+      "Existing node prototype 54 layout combinations / 8 interactions passed",
+      "Marketplace 75 layout combinations / 19 interactions passed",
+      "Marketplace schema 4 valid / 8 invalid examples passed",
+      "v2.2 document validation: 18 checks / 383 local links passed"
+    ],
+    "risks": [
+      "原型为演示不连接生产",
+      "复制权限与可用性不能混为一谈"
+    ],
+    "approvals": [],
+    "status": "VERIFIED",
+    "nodes": [
+      {
+        "id": "market_source_check",
+        "objective": "确认既有市场与复制语义",
+        "preconditions": [],
+        "action": "语义检索及精确读取",
+        "tool_or_skill": "zvec/exec",
+        "expected_output": "当前源码和合同证据",
+        "validation": "当前文件内容",
+        "success_condition": "对象类型和复制/使用权限边界明确",
+        "failure_path": "未验证标注",
+        "rollback_or_compensation": "只读"
+      },
+      {
+        "id": "update_design",
+        "objective": "更新全套设计及追踪",
+        "preconditions": [
+          "market_source_check"
+        ],
+        "action": "局部更新设计包",
+        "tool_or_skill": "apply_patch",
+        "expected_output": "一致文档/故事/字段模型",
+        "validation": "保留153条及新项完整",
+        "success_condition": "所有入口计数和关系一致",
+        "failure_path": "修正",
+        "rollback_or_compensation": "只改交付目录"
+      },
+      {
+        "id": "update_prototype",
+        "objective": "市场浏览复制并配置",
+        "preconditions": [
+          "market_source_check"
+        ],
+        "action": "加入市场视图与按角色投影",
+        "tool_or_skill": "apply_patch",
+        "expected_output": "可交互原型",
+        "validation": "浏览器可见/复制/节点选择负例",
+        "success_condition": "三类资源可复制且权限不扩大",
+        "failure_path": "修正",
+        "rollback_or_compensation": "原型本地可逆"
+      },
+      {
+        "id": "verify",
+        "objective": "验证并交付",
+        "preconditions": [
+          "update_design",
+          "update_prototype"
+        ],
+        "action": "校验映射/链接/原型流程",
+        "tool_or_skill": "Python/Playwright",
+        "expected_output": "真实验证证据",
+        "validation": "退出码和原始结果",
+        "success_condition": "全部指定设计验收通过",
+        "failure_path": "有限修复后诚实交付",
+        "rollback_or_compensation": "无生产修改"
+      }
+    ]
+  },
+  "uiValidationHistory": [
+    {
+      "revision": "v2.2",
+      "validation": {
+        "passed": true,
+        "checks": [
+          {
+            "name": "153 original requirement contents and priorities preserved",
+            "passed": true,
+            "detail": null
+          },
+          {
+            "name": "priority counts unchanged",
+            "passed": true,
+            "detail": {
+              "P0": 37,
+              "P1": 102,
+              "P2": 14
+            }
+          },
+          {
+            "name": "21 domains and 22 distinct page groups",
+            "passed": true,
+            "detail": null
+          },
+          {
+            "name": "10 market refinements mapped to existing requirements",
+            "passed": true,
+            "detail": null
+          },
+          {
+            "name": "30 original requirements enriched",
+            "passed": true,
+            "detail": 30
+          },
+          {
+            "name": "all page/flow/interface references resolve",
+            "passed": true,
+            "detail": null
+          },
+          {
+            "name": "153 unique story anchors",
+            "passed": true,
+            "detail": null
+          },
+          {
+            "name": "market story refinements present for all mapped requirements",
+            "passed": true,
+            "detail": null
+          },
+          {
+            "name": "complete checklist still 153 rows",
+            "passed": true,
+            "detail": null
+          },
+          {
+            "name": "checklist agrees with requirement data",
+            "passed": true,
+            "detail": null
+          },
+          {
+            "name": "5 ER diagrams",
+            "passed": true,
+            "detail": null
+          },
+          {
+            "name": "all local links and line references valid",
+            "passed": true,
+            "detail": []
+          },
+          {
+            "name": "all Markdown table columns consistent",
+            "passed": true,
+            "detail": []
+          },
+          {
+            "name": "existing prototype 54 layouts / 8 interactions passed",
+            "passed": true,
+            "detail": null
+          },
+          {
+            "name": "market prototype 75 layouts / 19 interactions passed",
+            "passed": true,
+            "detail": null
+          },
+          {
+            "name": "market schema 4 valid / 8 invalid passed",
+            "passed": true,
+            "detail": null
+          },
+          {
+            "name": "prior collaboration schema unchanged",
+            "passed": true,
+            "detail": null
+          },
+          {
+            "name": "entry point advertises matching current coverage",
+            "passed": true,
+            "detail": null
+          }
+        ],
+        "localLinkCount": 383,
+        "errors": []
+      },
+      "prototypeValidationSummary": {
+        "passed": true,
+        "layoutCombinations": 129,
+        "interactionChecks": 27,
+        "screenshots": 6,
+        "nodeScope": {
+          "layouts": 54,
+          "interactions": 8
+        },
+        "marketScope": {
+          "layouts": 75,
+          "interactions": 19
+        },
+        "pageErrors": []
+      },
+      "prototypeValidationFile": "/Users/mac/Documents/New project 2/validation/browser-validation.json"
+    }
+  ],
+  "qoderUIUpdate": {
+    "revision": "v2.3",
+    "status": "LOCAL_UI_VERIFIED_NO_PRODUCT_IMPLEMENTATION",
+    "reference": "http://127.0.0.1:19830/",
+    "sourceCaptureFile": "/Users/mac/Documents/New project 2/validation/qoderwake-reference/capture.json",
+    "htmlSha256": "38baa87dbf9a93cc5bd44a500a1ad5eb877d2b5e8dfb56160a1d35a76f61560b",
+    "reportFiles": [
+      "/Users/mac/Documents/New project 2/validation/qoder-node-validation.json",
+      "/Users/mac/Documents/New project 2/validation/qoder-market-validation.json",
+      "/Users/mac/Documents/New project 2/validation/qoder-shell-validation.json",
+      "/Users/mac/Documents/New project 2/validation/qoder-document-validation.json"
+    ],
+    "initialMarketReport": "/Users/mac/Documents/New project 2/validation/qoder-market-initial-validation.json",
+    "mapping": [
+      "P01",
+      "P02",
+      "P03",
+      "P04",
+      "P05",
+      "P06",
+      "P07",
+      "P09",
+      "P11",
+      "P13",
+      "P16",
+      "P19",
+      "P20",
+      "P22"
+    ],
+    "noProductCodeChanged": true,
+    "limitations": [
+      "UI source observations are not ZKER-staff implementation facts",
+      "Local fictional state and scripted chat, no backend or real model",
+      "No new product/runtime/production tests; prior product reports remain dated evidence"
+    ],
+    "taskState": {
+      "goal": "依据本机QoderWake前端UI重设计现有协作原型",
+      "scope": [
+        "08原型",
+        "UI设计说明及导读",
+        "验证证据"
+      ],
+      "acceptance_criteria": [
+        "实际来源界面采集",
+        "任务看板/员工资源/市场形成统一UI",
+        "人员与上下文业务保留",
+        "桌面窄屏和原有交互回归"
+      ],
+      "current_node": null,
+      "completed_nodes": [
+        "source_capture",
+        "redesign",
+        "verify"
+      ],
+      "failed_nodes": [],
+      "artifacts": [
+        "/Users/mac/Documents/New project 2/08-人员数字员工协作交互原型.html",
+        "/Users/mac/Documents/New project 2/14-QoderWake界面参考与原型设计.md",
+        "/Users/mac/Documents/New project 2/05-UI与交互设计.md",
+        "/Users/mac/Documents/New project 2/00-开发设计包导读.md"
+      ],
+      "evidence": [
+        "5 saved live source UI references",
+        "3 browser suites exit 0: 204 layout checks, 57 interactions, 0 page errors",
+        "7 current screenshots manually reviewed",
+        "9 document checks passed, 389 local links resolve"
+      ],
+      "risks": [
+        "前端演示不接后端"
+      ],
+      "approvals": [
+        "用户要求结合QoderWake UI重新设计原型"
+      ],
+      "status": "VERIFIED",
+      "baselineHtmlSha256": "9338da9e20b51bb136759e8c1e239a433d3cf79c0ce25977810bf50650968366",
+      "nodes": [
+        {
+          "id": "source_capture",
+          "objective": "读取QoderWake UI",
+          "preconditions": [],
+          "action": "只读浏览页面与样式",
+          "tool_or_skill": "Playwright",
+          "expected_output": "来源截图与观测",
+          "validation": "实际页面DOM/截图",
+          "success_condition": "页面可达且UI可见",
+          "failure_path": "定位修正后有限重试",
+          "rollback_or_compensation": "恢复本轮改动前原型备份，产品仓库不变"
+        },
+        {
+          "id": "redesign",
+          "objective": "更新完整原型",
+          "preconditions": [
+            "source_capture"
+          ],
+          "action": "重设计壳层与页面",
+          "tool_or_skill": "HTML/CSS/JS",
+          "expected_output": "可交互原型",
+          "validation": "浏览器对照",
+          "success_condition": "保留原任务状态与市场规则",
+          "failure_path": "定位修正后有限重试",
+          "rollback_or_compensation": "恢复本轮改动前原型备份，产品仓库不变"
+        },
+        {
+          "id": "verify",
+          "objective": "验证与交付",
+          "preconditions": [
+            "redesign"
+          ],
+          "action": "回归、截图及文档校验",
+          "tool_or_skill": "Playwright/Python",
+          "expected_output": "真实检查结果",
+          "validation": "退出码与结果文件",
+          "success_condition": "无关键失败且边界声明完整",
+          "failure_path": "定位修正后有限重试",
+          "rollback_or_compensation": "恢复本轮改动前原型备份，产品仓库不变"
+        }
+      ],
+      "resolvedIssues": [
+        "Navigation CSS overrode hidden attribute; fixed and browser-verified",
+        "Old market text length heuristic rejected valid empty state; replaced with heading/description/layout checks and rerun"
+      ]
+    }
+  },
+  "roleValidationHistory": [
+    {
+      "revision": "v2.3",
+      "prototypeValidationSummary": {
+        "passed": true,
+        "layoutCombinations": 204,
+        "interactionChecks": 57,
+        "screenshots": 21,
+        "sourceScreenshots": 5,
+        "nodeScope": {
+          "layouts": 54,
+          "interactions": 8
+        },
+        "marketScope": {
+          "layouts": 75,
+          "interactions": 19
+        },
+        "shellScope": {
+          "layouts": 75,
+          "interactions": 30
+        },
+        "pageErrors": [],
+        "manualScreenshotReviews": 7
+      },
+      "validation": {
+        "revision": "v2.3",
+        "passed": true,
+        "checks": [
+          {
+            "name": "Unchanged business documents, 153 requirements, schemas and contracts preserve hashes",
+            "passed": true,
+            "detail": 13
+          },
+          {
+            "name": "Three real browser suites passed",
+            "passed": true,
+            "detail": null
+          },
+          {
+            "name": "204 layout combinations and 57 interactions",
+            "passed": true,
+            "detail": null
+          },
+          {
+            "name": "21 current prototype screenshots exist",
+            "passed": true,
+            "detail": null
+          },
+          {
+            "name": "Browser result matches current prototype hash",
+            "passed": true,
+            "detail": null
+          },
+          {
+            "name": "No page errors and no outgoing prototype requests",
+            "passed": true,
+            "detail": null
+          },
+          {
+            "name": "All local Markdown links and line anchors resolve",
+            "passed": true,
+            "detail": {
+              "count": 389,
+              "failures": []
+            }
+          },
+          {
+            "name": "Five live reference captures exist",
+            "passed": true,
+            "detail": null
+          },
+          {
+            "name": "Guide and UI handoff agree on counts",
+            "passed": true,
+            "detail": null
+          }
+        ],
+        "localLinks": 389,
+        "errors": [],
+        "limitations": [
+          "Document and local UI verification only; existing business implementation and real dependencies not tested this turn."
+        ]
+      }
+    }
+  ],
+  "roleUpdate": {
+    "date": "2026-09-11T11:30:31.831637+00:00",
+    "sourceHead": "5f6e355eb5a5251d3d0d83a1de7289582787926b",
+    "sourceHashes": {
+      "contracts/authz/platform-roles.yaml": "12263586cd56b40c21416249eafac41b3ba715454ec679e78671a372afe31228",
+      "contracts/authz/actions.yaml": "e7cccbd31a78d49716661f7a7ac08155de1506768c20ab71114340630d80f721",
+      "docs/security/business-role-ui-projection-matrix.md": "025ba1ab98bf525c372f10fe848df27c4348196b342aa87a60ec6064872ea061",
+      "docs/ui/information-architecture.md": "2a827b844054a167b05c455d6a0a07dd190e426f11f7837a37cb13489e296ca8",
+      "docs/ui/prototype-screenshot-acceptance-matrix.md": "3714a374f989b1d80885a9b13a541e13672140ca84ebc272a55263c79221a1e6"
+    },
+    "roleProfiles": 41,
+    "humanRoleKeys": 44,
+    "nonHumanRoleKeys": [
+      "PROVISIONING_SERVICE"
+    ],
+    "canonicalFixtureCount": 7,
+    "requirements": 153,
+    "domains": 21,
+    "pageGroups": 22,
+    "roleStoryCount": 41,
+    "documents": [
+      "/Users/mac/Documents/New project 2/15-全角色界面与操作覆盖矩阵.md",
+      "/Users/mac/Documents/New project 2/16-角色视角与权限演示数据.json",
+      "/Users/mac/Documents/New project 2/17-角色需求与验收追踪.json"
+    ],
+    "browserReports": [
+      "/Users/mac/Documents/New project 2/validation/v24-role-validation.json",
+      "/Users/mac/Documents/New project 2/validation/v24-market-validation.json"
+    ],
+    "visuallyReviewed": [
+      "role-knowledgeadmin-1440.png",
+      "role-initiator-390.png",
+      "role-writer-1440.png"
+    ],
+    "sourceRetrieval": "Semantic index used for discovery (possibly_stale / served_from_current_index / background refresh queued); current exact contract files then read directly.",
+    "unchangedQoderReference": "v2.3 live UI reference captures retained; no new competitive feature/runtime verification in this role update.",
+    "limitations": [
+      "Local prototype and documentation validation; no production permission verification, real role login, model/runtime execution or deployment."
+    ],
+    "productWritesPerformed": false,
+    "productTestsRun": false
+  },
+  "roleTaskState": {
+    "goal": "完整体现文档中的业务与管理角色",
+    "scope": [
+      "New project 2原型、角色矩阵、UI说明和验证记录"
+    ],
+    "acceptance_criteria": [
+      "七类canonical夹具精确保留",
+      "业务/维护/治理角色均有独立目标导航字段和操作",
+      "各角色权限正负例和交付责任边界可交互",
+      "原协作及市场流程回归",
+      "与现有153项需求追踪"
+    ],
+    "current_node": "complete",
+    "completed_nodes": [
+      "source_inventory",
+      "implement",
+      "verify"
+    ],
+    "failed_nodes": [],
+    "artifacts": [
+      "/Users/mac/Documents/New project 2/08-人员数字员工协作交互原型.html",
+      "/Users/mac/Documents/New project 2/15-全角色界面与操作覆盖矩阵.md",
+      "/Users/mac/Documents/New project 2/16-角色视角与权限演示数据.json",
+      "/Users/mac/Documents/New project 2/17-角色需求与验收追踪.json"
+    ],
+    "evidence": [
+      "/Users/mac/Documents/New project 2/validation/v24-role-validation.json",
+      "/Users/mac/Documents/New project 2/validation/v24-market-validation.json",
+      "/Users/mac/Documents/New project 2/validation/v24-document-validation.json"
+    ],
+    "risks": [
+      "Local fixtures do not implement authentication"
+    ],
+    "approvals": [
+      "User requested complete role representation"
+    ],
+    "status": "VERIFIED",
+    "nodes": [
+      {
+        "id": "source_inventory",
+        "objective": "Inventory role contracts",
+        "preconditions": [],
+        "action": "Read current role sources",
+        "tool_or_skill": "Local browser and file tools",
+        "expected_output": "Role matrix",
+        "validation": "Current files and hashes",
+        "success_condition": "No fabricated canonical roles",
+        "failure_path": "Inspect and repair within the design scope",
+        "rollback_or_compensation": "Restore local pre-change prototype backup"
+      },
+      {
+        "id": "implement",
+        "objective": "Add distinct role views",
+        "preconditions": [
+          "source_inventory"
+        ],
+        "action": "Update prototype and role design",
+        "tool_or_skill": "Local browser and file tools",
+        "expected_output": "Interactive role views",
+        "validation": "Browser interaction and source mapping",
+        "success_condition": "All catalog roles have workflows",
+        "failure_path": "Inspect and repair within the design scope",
+        "rollback_or_compensation": "Restore local pre-change prototype backup"
+      },
+      {
+        "id": "verify",
+        "objective": "Validate complete role coverage",
+        "preconditions": [
+          "implement"
+        ],
+        "action": "Run role and regression suites",
+        "tool_or_skill": "Local browser and file tools",
+        "expected_output": "Reports and screenshots",
+        "validation": "Actual execution outputs",
+        "success_condition": "No outstanding critical failures",
+        "failure_path": "Inspect and repair within the design scope",
+        "rollback_or_compensation": "Restore local pre-change prototype backup"
+      }
+    ],
+    "acceptanceResult": {
+      "profiles": 41,
+      "humanRoleKeys": 44,
+      "serviceRoleKeys": 1,
+      "requirements": 153,
+      "domains": 21,
+      "pageGroups": 22,
+      "layoutChecks": 882,
+      "interactionChecks": 373,
+      "screenshots": 85
+    }
+  },
+  "oaValidationHistory": [
+    {
+      "revision": "v2.4",
+      "validation": {
+        "revision": "v2.4",
+        "passed": true,
+        "checks": [
+          {
+            "name": "All 44 human role keys covered by 41 explicit views",
+            "passed": true,
+            "detail": {
+              "humanKeys": 44,
+              "profiles": 41,
+              "missing": [],
+              "extra": []
+            }
+          },
+          {
+            "name": "Embedded role catalog matches delivered JSON",
+            "passed": true,
+            "detail": null
+          },
+          {
+            "name": "Canonical seven fixtures preserve exact membership",
+            "passed": true,
+            "detail": null
+          },
+          {
+            "name": "Service role cannot be selected as a human",
+            "passed": true,
+            "detail": null
+          },
+          {
+            "name": "Current platform role source hash matches fixture",
+            "passed": true,
+            "detail": null
+          },
+          {
+            "name": "All 153 original requirements mapped without extra IDs",
+            "passed": true,
+            "detail": null
+          },
+          {
+            "name": "Original requirements digest unchanged",
+            "passed": true,
+            "detail": null
+          },
+          {
+            "name": "Every role has a journey, negative case and valid page mapping",
+            "passed": true,
+            "detail": null
+          },
+          {
+            "name": "Every requirement has valid roles and original acceptance",
+            "passed": true,
+            "detail": null
+          },
+          {
+            "name": "41 role-specific Given When Then stories present",
+            "passed": true,
+            "detail": null
+          },
+          {
+            "name": "21 domains and 22 page groups preserved",
+            "passed": true,
+            "detail": null
+          },
+          {
+            "name": "Unchanged business models, schemas, requirement map and checklist preserve v2.3 digests",
+            "passed": true,
+            "detail": {
+              "checked": [
+                "02-数据模型与ER设计.md",
+                "03-业务流程与状态机.md",
+                "04-接口与契约变更设计.md",
+                "06-用户故事与153项追踪矩阵.md",
+                "09-协作扩展候选.schema.json",
+                "10-需求追踪数据.json",
+                "11-存量合同字段字典.md",
+                "12-员工市场复制与使用设计.md",
+                "13-市场采用候选.schema.json",
+                "ZKER-staff-完整优化清单-v2-人员数字员工与上下文对齐.md",
+                "附录-QoderWake竞品分析-初版快照.md"
+              ],
+              "drift": []
+            }
+          },
+          {
+            "name": "Both browser suites pass all recorded cases",
+            "passed": true,
+            "detail": null
+          },
+          {
+            "name": "Browser result refers to current HTML digest",
+            "passed": true,
+            "detail": null
+          },
+          {
+            "name": "All role views checked on all three widths",
+            "passed": true,
+            "detail": null
+          },
+          {
+            "name": "No browser errors or external requests",
+            "passed": true,
+            "detail": null
+          },
+          {
+            "name": "All 85 screenshots exist and are nonempty",
+            "passed": true,
+            "detail": null
+          },
+          {
+            "name": "Actual case counts match recorded totals",
+            "passed": true,
+            "detail": {
+              "layouts": 882,
+              "interactions": 373
+            }
+          },
+          {
+            "name": "Toolbar reports current role count",
+            "passed": true,
+            "detail": null
+          },
+          {
+            "name": "00-开发设计包导读.md agrees with actual coverage",
+            "passed": true,
+            "detail": null
+          },
+          {
+            "name": "05-UI与交互设计.md agrees with actual coverage",
+            "passed": true,
+            "detail": null
+          },
+          {
+            "name": "07-开发分解与验收方案.md agrees with actual coverage",
+            "passed": true,
+            "detail": null
+          },
+          {
+            "name": "15-全角色界面与操作覆盖矩阵.md agrees with actual coverage",
+            "passed": true,
+            "detail": null
+          },
+          {
+            "name": "All local Markdown links and line anchors resolve",
+            "passed": true,
+            "detail": {
+              "count": 419,
+              "errors": []
+            }
+          },
+          {
+            "name": "Role source hashes match current source files",
+            "passed": true,
+            "detail": null
+          }
+        ],
+        "localLinks": 419,
+        "sourceHead": "5f6e355eb5a5251d3d0d83a1de7289582787926b",
+        "sourceHashes": {
+          "contracts/authz/platform-roles.yaml": "12263586cd56b40c21416249eafac41b3ba715454ec679e78671a372afe31228",
+          "contracts/authz/actions.yaml": "e7cccbd31a78d49716661f7a7ac08155de1506768c20ab71114340630d80f721",
+          "docs/security/business-role-ui-projection-matrix.md": "025ba1ab98bf525c372f10fe848df27c4348196b342aa87a60ec6064872ea061",
+          "docs/ui/information-architecture.md": "2a827b844054a167b05c455d6a0a07dd190e426f11f7837a37cb13489e296ca8",
+          "docs/ui/prototype-screenshot-acceptance-matrix.md": "3714a374f989b1d80885a9b13a541e13672140ca84ebc272a55263c79221a1e6"
+        },
+        "coverage": {
+          "profiles": 41,
+          "humanRoleKeys": 44,
+          "serviceRoleKeys": 1,
+          "requirements": 153,
+          "domains": 21,
+          "pageGroups": 22,
+          "layoutChecks": 882,
+          "interactionChecks": 373,
+          "screenshots": 85
+        },
+        "htmlSha256": "1663cdcedad1ce6779f6071d6ec219783b986f309648715cee9474106ef977ce",
+        "limitations": [
+          "Local prototype and documentation validation; no production permission verification, real role login, model/runtime execution or deployment."
+        ]
+      },
+      "prototypeValidationSummary": {
+        "revision": "v2.4",
+        "profiles": 41,
+        "humanRoleKeys": 44,
+        "serviceRoleKeys": 1,
+        "requirements": 153,
+        "domains": 21,
+        "pageGroups": 22,
+        "layoutChecks": 882,
+        "interactionChecks": 373,
+        "screenshots": 85,
+        "pageErrors": 0,
+        "networkRequests": 0,
+        "limitations": "Role paths and fixture permissions only; not production role login or full product capability acceptance."
+      },
+      "prototypeValidationFile": "/Users/mac/Documents/New project 2/validation/v24-role-validation.json",
+      "finalArtifactRefresh": {
+        "revision": "v2.4",
+        "sourceHead": "5f6e355eb5a5251d3d0d83a1de7289582787926b",
+        "reason": "Updated full role prototype, role stories, source mapping and verified browser/document reports; historical validation preserved separately."
+      }
+    }
+  ],
+  "oaUpdate": {
+    "revision": "v2.5",
+    "date": "2026-09-11",
+    "scope": "Design package and standalone local prototype; product repository read-only",
+    "sourceHeadAtInitialRead": "922ad8823ac5e99a21b8f13569f2e394ab42466a",
+    "sourceHeadAtDocumentValidation": "9a1e74b5e056ec3101f0c1c701d6c4e6320c4d23",
+    "sourceHeadAtFinalReview": "9a1e74b5e056ec3101f0c1c701d6c4e6320c4d23",
+    "sourceHashes": {
+      "docs/ui/information-architecture.md": "2a827b844054a167b05c455d6a0a07dd190e426f11f7837a37cb13489e296ca8",
+      "docs/ui/ui-interaction-spec.md": "7a78acc95e492149a4befbee998e4e4e8657ca9e53f84d34d295b2384f1a14c2",
+      "apps/web/src/pages/work/MyWorkPage.tsx": "8f4fcf4f6492e380bf72e27225f2122fe6ebda8fa627a921a2ea413edcd59839",
+      "apps/web/src/list-human-tasks-api.ts": "a5d00a29a33b260df920ca9a1ce4c7dcc0eed4571a5b7741ef53cd413d3d4f6d",
+      "contracts/jsonschema/work-execution-history-item.schema.json": "723e06f1779a5a656cf6976435654f9a4b09645cb85e1793b9290cc6a73ce5f4",
+      "contracts/authz/platform-roles.yaml": "12263586cd56b40c21416249eafac41b3ba715454ec679e78671a372afe31228"
+    },
+    "sourceConclusion": "Existing repository already distinguishes SOP execution history and multiple pending node tasks; the prior design prototype needed a multi-instance home and explicit task context. Inbox remains a projection, not a second authoritative workflow state.",
+    "sourceRetrieval": {
+      "semanticSearchFreshness": "fresh",
+      "directReads": [
+        "docs/ui/information-architecture.md",
+        "docs/ui/ui-interaction-spec.md",
+        "apps/web/src/pages/work/MyWorkPage.tsx",
+        "apps/web/src/list-human-tasks-api.ts",
+        "contracts/jsonschema/work-execution-history-item.schema.json",
+        "contracts/authz/platform-roles.yaml"
+      ],
+      "sourceHashesStillMatchAtFinalReview": true
+    },
+    "officialSources": [
+      {
+        "title": "Camunda Tasklist user guide",
+        "url": "https://docs.camunda.io/docs/components/tasklist/userguide/using-tasklist/"
+      },
+      {
+        "title": "飞书人工任务交互",
+        "url": "https://www.feishu.cn/content/600511559565"
+      },
+      {
+        "title": "飞书审批抄送",
+        "url": "https://www.feishu.cn/content/912694085421"
+      },
+      {
+        "title": "飞书审批催办",
+        "url": "https://www.feishu.cn/content/134344362384"
+      },
+      {
+        "title": "Power Automate sequential approvals",
+        "url": "https://learn.microsoft.com/en-us/power-automate/set-up-sequential-approvals"
+      },
+      {
+        "title": "Power Automate parallel approvals",
+        "url": "https://learn.microsoft.com/en-us/power-automate/parallel-modern-approvals"
+      }
+    ],
+    "model": "ProcessTemplate -> ProcessInstance -> NodeInstance/WorkItem -> HumanTask/ApprovalRequest; InboxEntry is a role-scoped projection",
+    "demonstration": {
+      "initialInstances": 7,
+      "sameTemplateSameDayInstances": 3,
+      "profiles": 41,
+      "fixtureTasks": 369,
+      "fixtureNote": "Role demonstration fixtures do not imply that 41 users participate in each real case. One profile has six active tasks across five instances and three process types.",
+      "taskIsolation": [
+        "agent configuration",
+        "unsaved and saved drafts",
+        "conversation",
+        "context revision",
+        "human task round",
+        "review decision",
+        "market copy-and-use target"
+      ]
+    },
+    "refinements": {
+      "count": 28,
+      "mappedOriginalRequirements": 153,
+      "localRepresentativeScenarios": 19,
+      "designOnlyNotDemonstrated": 9
+    },
+    "browserSuites": [
+      {
+        "report": "/Users/mac/Documents/New project 2/validation/v25-role-regression.json",
+        "layoutChecks": 807,
+        "interactionChecks": 250,
+        "screenshots": 82,
+        "pageErrors": 0
+      },
+      {
+        "report": "/Users/mac/Documents/New project 2/validation/v25-market-regression.json",
+        "layoutChecks": 75,
+        "interactionChecks": 123,
+        "screenshots": 3,
+        "pageErrors": 0
+      },
+      {
+        "report": "/Users/mac/Documents/New project 2/validation/v25-oa-validation.json",
+        "layoutChecks": 738,
+        "interactionChecks": 109,
+        "screenshots": 12,
+        "pageErrors": 0
+      }
+    ],
+    "schemaReport": "/Users/mac/Documents/New project 2/validation/v25-oa-schema-validation.json",
+    "schemaExamples": {
+      "valid": 3,
+      "invalidRejected": 9
+    },
+    "documentReport": "/Users/mac/Documents/New project 2/validation/v25-document-validation.json",
+    "documentChecks": 21,
+    "localLinks": 464,
+    "visuallyReviewedScreenshots": [
+      "/Users/mac/Documents/New project 2/validation/v25-oa-main-inbox-390.png",
+      "/Users/mac/Documents/New project 2/validation/v25-oa-main-task-1440.png",
+      "/Users/mac/Documents/New project 2/validation/v25-oa-identity-inbox-1440.png"
+    ],
+    "issuesResolved": [
+      "Task draft renderer now restores per-task unsaved buffer.",
+      "OA marketplace acceptance clicks actual copy-and-use UI; copy-only helper correctly leaves task configuration unchanged.",
+      "Role-based field projection masks business content and uses projected fields for searching."
+    ],
+    "productTestsRerun": false,
+    "productFilesWritten": [],
+    "runtimeValidation": "NOT_EXECUTED",
+    "productionValidation": "NOT_EXECUTED",
+    "limitations": [
+      "Fictional in-memory demonstration; reload resets the session.",
+      "Client visibility is not server authorization; all fixtures reside in HTML.",
+      "Parallel approval, cross-session claim races, durable idempotency, calendar/SLA engine, real nudges and compensation need backend implementation and acceptance.",
+      "QoderWake UI references from the prior v2.3 inspection are retained; not refreshed this OA turn."
+    ]
+  },
+  "oaTaskState": {
+    "goal": "将OA多流程多实例统一工作台及任务隔离落实到设计与交互原型",
+    "scope": [
+      "New project 2设计包和验证产物；产品仓只读"
+    ],
+    "acceptance_criteria": [
+      "同模板同日多实例独立",
+      "本人跨流程跨节点统一队列",
+      "任务配置草稿对话及审批隔离",
+      "发起多笔事务及重复提交区分",
+      "41角色基线不回退",
+      "OA来源与数据ER/接口/用户故事一致"
+    ],
+    "status": "VERIFIED",
+    "current_node": "complete",
+    "completed_nodes": [
+      "sources",
+      "prototype",
+      "documents",
+      "verify"
+    ],
+    "failed_nodes": [],
+    "artifacts": [
+      "/Users/mac/Documents/New project 2/08-人员数字员工协作交互原型.html",
+      "/Users/mac/Documents/New project 2/18-OA多流程多实例产品设计.md",
+      "/Users/mac/Documents/New project 2/19-OA多实例演示数据.json",
+      "/Users/mac/Documents/New project 2/20-OA统一待办候选.schema.json",
+      "/Users/mac/Documents/New project 2/21-OA需求细化与验收追踪.json"
+    ],
+    "evidence": [
+      "/Users/mac/Documents/New project 2/validation/v25-role-regression.json",
+      "/Users/mac/Documents/New project 2/validation/v25-market-regression.json",
+      "/Users/mac/Documents/New project 2/validation/v25-oa-validation.json",
+      "/Users/mac/Documents/New project 2/validation/v25-oa-schema-validation.json",
+      "/Users/mac/Documents/New project 2/validation/v25-document-validation.json"
+    ],
+    "risks": [
+      "仅本地虚构数据，无真实后端或OAuth"
+    ],
+    "approvals": [
+      "用户授权完善多事务多流程OA设计"
+    ],
+    "sourceHead": "922ad8823ac5e99a21b8f13569f2e394ab42466a",
+    "nodes": [
+      {
+        "id": "sources",
+        "objective": "核对项目关系与OA一手资料",
+        "preconditions": [],
+        "action": "核对项目关系与OA一手资料",
+        "tool_or_skill": "现有文件、浏览器与官方文档工具",
+        "expected_output": "核对项目关系与OA一手资料",
+        "validation": "当前合同源码和来源可复核",
+        "success_condition": "当前合同源码和来源可复核",
+        "failure_path": "基于新诊断定点修复或明确未验证范围",
+        "rollback_or_compensation": "恢复v2.4原型备份"
+      },
+      {
+        "id": "prototype",
+        "objective": "完善多实例工作台及任务详情",
+        "preconditions": [
+          "sources"
+        ],
+        "action": "完善多实例工作台及任务详情",
+        "tool_or_skill": "现有文件、浏览器与官方文档工具",
+        "expected_output": "完善多实例工作台及任务详情",
+        "validation": "浏览器验证隔离及流程操作",
+        "success_condition": "浏览器验证隔离及流程操作",
+        "failure_path": "基于新诊断定点修复或明确未验证范围",
+        "rollback_or_compensation": "恢复v2.4原型备份"
+      },
+      {
+        "id": "documents",
+        "objective": "补充ER流程接口及故事设计",
+        "preconditions": [
+          "prototype"
+        ],
+        "action": "补充ER流程接口及故事设计",
+        "tool_or_skill": "现有文件、浏览器与官方文档工具",
+        "expected_output": "补充ER流程接口及故事设计",
+        "validation": "逐项追踪与计数一致",
+        "success_condition": "逐项追踪与计数一致",
+        "failure_path": "基于新诊断定点修复或明确未验证范围",
+        "rollback_or_compensation": "恢复v2.4原型备份"
+      },
+      {
+        "id": "verify",
+        "objective": "验证交付并记录边界",
+        "preconditions": [
+          "documents"
+        ],
+        "action": "验证交付并记录边界",
+        "tool_or_skill": "现有文件、浏览器与官方文档工具",
+        "expected_output": "验证交付并记录边界",
+        "validation": "所有声明有当前报告支持",
+        "success_condition": "所有声明有当前报告支持",
+        "failure_path": "基于新诊断定点修复或明确未验证范围",
+        "rollback_or_compensation": "恢复v2.4原型备份"
+      }
+    ],
+    "acceptanceResult": {
+      "roleProfiles": 41,
+      "humanRoleKeys": 44,
+      "requirements": 153,
+      "oaRefinements": 28,
+      "initialInstances": 7,
+      "initialFixtureTasks": 369,
+      "layoutChecks": 1620,
+      "interactionChecks": 482,
+      "screenshots": 97
+    }
+  },
+  "observedEndingStatusOA": {
+    "sourceHead": "9a1e74b5e056ec3101f0c1c701d6c4e6320c4d23",
+    "count": 64,
+    "sha256": "9951e88b20ce509e3d6644bdc055effbe49db21307ac8df5786afaa0865b9d70",
+    "rawStatus": " M docs/ai/claim-registry.csv\n M docs/ai/evidence/index.yaml\n M memory/evolution/memory_graph.jsonl\n M ruvector.db\n?? .codebase-memory/\n?? artifacts/nav-01-workbench.png\n?? artifacts/nav-02-agents.png\n?? artifacts/nav-03-conversations.png\n?? artifacts/nav-04-blackboard.png\n?? artifacts/pc04-web-approvals-404-state-final.png\n?? artifacts/pc04-web-approvals-list-404-clean.png\n?? artifacts/pc04-web-approvals-list-404.png\n?? artifacts/pc04-web-blackboard-promote-allow.png\n?? artifacts/pc04-web-blackboard-promote-clean.png\n?? artifacts/pc04-web-blackboard-write-allow.png\n?? artifacts/pc04-web-blackboard-write-clean.png\n?? artifacts/pc10-nav-hide-unwired-workbench.png\n?? artifacts/pr04-workbench-noise-clean.png\n?? docs/ai/evidence/bundles/EV-PC00-SURFACE-PIN-GATE-20260911.yaml\n?? docs/ai/evidence/bundles/EV-PC10-CI-FOUNDATION-FIX-20260911.yaml\n?? docs/ai/evidence/bundles/EV-PC10-DEV-CHUNK-STRIP-20260911.yaml\n?? docs/ai/evidence/bundles/EV-PC10-E2E-DB-ROUNDTRIP-20260911.yaml\n?? docs/ai/evidence/bundles/EV-PC10-SOP-STATUS-ALIGNMENT-20260911.yaml\n?? docs/ai/evidence/bundles/EV-PC10-STRUCTURED-JSON-LOGGING-20260911.yaml\n?? docs/ai/evidence/bundles/EV-PC10-W2-5-L2-DEAD-CODE-20260911.yaml\n?? docs/ai/evidence/bundles/EV-PC10-W2-5-L3-SHIM-20260911.yaml\n?? docs/ai/task-packet-pc00-surface-pin-gate-20260911.yaml\n?? docs/ai/task-packet-pc02-k506-security-exit-evidence-20260906.yaml\n?? docs/ai/task-packet-pc02-k506-security-exit-evidence-renew-20260908.yaml\n?? docs/ai/task-packet-pc02-uvcl-admin-chrome-20260908.yaml\n?? docs/ai/task-packet-pc04-golden-slice-browser-20260908.yaml\n?? docs/ai/task-packet-pc09-ci-required-check-matrix-20260909.yaml\n?? docs/ai/task-packet-pc09-exit-closure-projection-sync-candidate-20260909.yaml\n?? docs/ai/task-packet-pc09-restore-rollback-rehearsal-20260909.yaml\n?? docs/ai/task-packet-pc10-ci-foundation-fix-20260911.yaml\n?? docs/ai/task-packet-pc10-dev-chunk-strip-20260911.yaml\n?? docs/ai/task-packet-pc10-e2e-db-roundtrip-20260911.yaml\n?? docs/ai/task-packet-pc10-sop-status-alignment-20260911.yaml\n?? docs/ai/task-packet-pc10-structured-json-logging-20260911.yaml\n?? docs/ai/task-packet-pc10-w2-5-l2-dead-code-20260911.yaml\n?? docs/ai/task-packet-pc10-w2-5-l3-shim-20260911.yaml\n?? docs/ai/worktree-baseline-pc00-surface-pin-gate-20260911.json\n?? docs/ai/worktree-baseline-pc01-k502-surface-extend-20260906.json\n?? docs/ai/worktree-baseline-pc02-control-integrator-evidence-bind-20260908.json\n?? docs/ai/worktree-baseline-pc02-k506-security-exit-evidence-20260906.json\n?? docs/ai/worktree-baseline-pc02-k506-security-exit-evidence-renew-20260908.json\n?? docs/ai/worktree-baseline-pc02-uvcl-admin-chrome-20260908.json\n?? docs/ai/worktree-baseline-pc04-golden-slice-browser-20260908.json\n?? docs/ai/worktree-baseline-pc05-assembly-gap-real-app-20260909.json\n?? docs/ai/worktree-baseline-pc05-fk-testdata-green-20260909.json\n?? docs/ai/worktree-baseline-pc05-regression-green-20260909.json\n?? docs/ai/worktree-baseline-pc06-routes-mount-20260909.json\n?? docs/ai/worktree-baseline-pc09-load-fault-tests-20260909.json\n?? docs/ai/worktree-baseline-pc09-r02-contract-mount-reconcile-20260910.json\n?? docs/ai/worktree-baseline-pc09-r03-product-surface-denoi-20260910.json\n?? docs/ai/worktree-baseline-pc09-restore-rollback-rehearsal-20260909.json\n?? docs/ai/worktree-baseline-pc09-runtime-connected-schema-20260909.json\n?? docs/ai/worktree-baseline-pc10-ci-foundation-fix-20260911.json\n?? docs/ai/worktree-baseline-pc10-dev-chunk-strip-20260911.json\n?? docs/ai/worktree-baseline-pc10-e2e-db-roundtrip-20260911.json\n?? docs/ai/worktree-baseline-pc10-sop-status-alignment-20260911.json\n?? docs/ai/worktree-baseline-pc10-structured-json-logging-20260911.json\n?? docs/ai/worktree-baseline-pc10-w2-5-l2-dead-code-20260911.json\n?? docs/ai/worktree-baseline-pc10-w2-5-l3-shim-20260911.json\n",
+    "note": "Observed repository state only; this turn wrote no product-repository files and acquired no writer claim."
+  },
+  "fieldValidationHistory": [
+    {
+      "revision": "v2.5",
+      "validation": {
+        "revision": "v2.5",
+        "passed": true,
+        "checks": [
+          {
+            "name": "41 role profiles still map exactly to 44 human keys",
+            "passed": true,
+            "detail": null
+          },
+          {
+            "name": "Seven canonical fixtures unchanged",
+            "passed": true,
+            "detail": null
+          },
+          {
+            "name": "Embedded role catalog unchanged",
+            "passed": true,
+            "detail": null
+          },
+          {
+            "name": "Original 153 requirements and 22 pages preserved",
+            "passed": true,
+            "detail": null
+          },
+          {
+            "name": "Protected original requirement, schema and role artifacts retain baseline digests",
+            "passed": true,
+            "detail": null
+          },
+          {
+            "name": "28 OA refinements trace to actual requirement IDs and role/page groups",
+            "passed": true,
+            "detail": null
+          },
+          {
+            "name": "Demonstrated versus design-only scope explicit",
+            "passed": true,
+            "detail": null
+          },
+          {
+            "name": "Three browser suites passed all actual cases",
+            "passed": true,
+            "detail": null
+          },
+          {
+            "name": "Role and OA browser suites match current HTML digest",
+            "passed": true,
+            "detail": null
+          },
+          {
+            "name": "OA layouts cover all roles, five queues and task detail at three widths",
+            "passed": true,
+            "detail": null
+          },
+          {
+            "name": "No browser errors or external requests",
+            "passed": true,
+            "detail": null
+          },
+          {
+            "name": "OA Schema has tested valid and invalid examples",
+            "passed": true,
+            "detail": null
+          },
+          {
+            "name": "Seven initial instances have unique IDs and business numbers",
+            "passed": true,
+            "detail": null
+          },
+          {
+            "name": "Same published process runs three times on same date",
+            "passed": true,
+            "detail": null
+          },
+          {
+            "name": "Each profile has distinct task references across processes and two nodes in same instance",
+            "passed": true,
+            "detail": null
+          },
+          {
+            "name": "Task IDs and work item references are unique in fixture",
+            "passed": true,
+            "detail": null
+          },
+          {
+            "name": "Fixture has at most one named initiator per instance",
+            "passed": true,
+            "detail": null
+          },
+          {
+            "name": "Current UI version visible",
+            "passed": true,
+            "detail": null
+          },
+          {
+            "name": "All local links and anchors resolve",
+            "passed": true,
+            "detail": {
+              "count": 464,
+              "failures": []
+            }
+          },
+          {
+            "name": "All current screenshots exist and are unique",
+            "passed": true,
+            "detail": 97
+          },
+          {
+            "name": "Canonical role source remains current",
+            "passed": true,
+            "detail": null
+          }
+        ],
+        "coverage": {
+          "roleProfiles": 41,
+          "humanRoleKeys": 44,
+          "requirements": 153,
+          "oaRefinements": 28,
+          "initialInstances": 7,
+          "initialFixtureTasks": 369,
+          "layoutChecks": 1620,
+          "interactionChecks": 482,
+          "screenshots": 97
+        },
+        "localLinks": 464,
+        "htmlSha256": "83a267df7095e3af43d6bf876d9f4764d3beb8300bbeba11fd76b9ac711385f7",
+        "sourceHead": "9a1e74b5e056ec3101f0c1c701d6c4e6320c4d23",
+        "sourceHashes": {
+          "docs/ui/information-architecture.md": "2a827b844054a167b05c455d6a0a07dd190e426f11f7837a37cb13489e296ca8",
+          "docs/ui/ui-interaction-spec.md": "7a78acc95e492149a4befbee998e4e4e8657ca9e53f84d34d295b2384f1a14c2",
+          "apps/web/src/pages/work/MyWorkPage.tsx": "8f4fcf4f6492e380bf72e27225f2122fe6ebda8fa627a921a2ea413edcd59839",
+          "apps/web/src/list-human-tasks-api.ts": "a5d00a29a33b260df920ca9a1ce4c7dcc0eed4571a5b7741ef53cd413d3d4f6d",
+          "contracts/jsonschema/work-execution-history-item.schema.json": "723e06f1779a5a656cf6976435654f9a4b09645cb85e1793b9290cc6a73ce5f4",
+          "contracts/authz/platform-roles.yaml": "12263586cd56b40c21416249eafac41b3ba715454ec679e78671a372afe31228"
+        },
+        "limitations": [
+          "Local fictional prototype, schema and documentation only; no production database, real-role authentication, cross-browser concurrency, calendar engine or actual Agent runtime verification."
+        ]
+      },
+      "prototypeValidationSummary": {
+        "revision": "v2.5",
+        "profiles": 41,
+        "humanRoleKeys": 44,
+        "serviceRoleKeys": 1,
+        "requirements": 153,
+        "domains": 21,
+        "pageGroups": 22,
+        "oaRefinements": 28,
+        "layoutChecks": 1620,
+        "interactionChecks": 482,
+        "screenshots": 97,
+        "pageErrors": 0,
+        "networkRequests": 0,
+        "limitations": "Local prototype only. No real role authentication, backend workflow, persistence, concurrency, Agent runtime or production acceptance."
+      },
+      "prototypeValidationFile": "/Users/mac/Documents/New project 2/validation/v25-oa-validation.json",
+      "finalArtifactRefresh": {
+        "revision": "v2.5",
+        "recordedAt": "2026-09-11T12:23:53.921199+00:00",
+        "sourceHead": "9a1e74b5e056ec3101f0c1c701d6c4e6320c4d23",
+        "artifactCount": 267,
+        "excludes": "Evidence manifest itself; no self-referential digest",
+        "reason": "Current OA design, prototype, role/market regression, candidate schema and traceability evidence. Older validation remains historical."
+      }
+    }
+  ],
+  "fieldTaskState": {
+    "goal": "以OA工作流连接人和任务，由本人配置数字员工；确保B/S设计一致并保留存量能力",
+    "scope": [
+      "New project 2设计文档、HTML原型与验证产物",
+      "ZKER-staff产品仓只读"
+    ],
+    "acceptance_criteria": [
+      "153项原需求及角色基线未删减",
+      "已证实字段与状态问题修正",
+      "原角色市场OA交互回归",
+      "当前文档与证据摘要一致",
+      "候选设计和真实后端验收分开"
+    ],
+    "current_node": "complete",
+    "completed_nodes": [
+      "sources",
+      "prototype",
+      "browser_regression",
+      "document_validation",
+      "delivery"
+    ],
+    "failed_nodes": [],
+    "artifacts": [
+      "/Users/mac/Documents/New project 2/08-人员数字员工协作交互原型.html",
+      "/Users/mac/Documents/New project 2/22-开源工作流与成熟前端复用选型.md",
+      "/Users/mac/Documents/New project 2/23-OA主旨与BS字段一致性核查.md",
+      "/Users/mac/Documents/New project 2/24-业务模板字段候选.json"
+    ],
+    "evidence": [
+      "/Users/mac/Documents/New project 2/validation/v26-role-regression.json",
+      "/Users/mac/Documents/New project 2/validation/v26-market-regression.json",
+      "/Users/mac/Documents/New project 2/validation/v26-oa-validation.json",
+      "/Users/mac/Documents/New project 2/validation/v26-field-audit.json",
+      "/Users/mac/Documents/New project 2/validation/v26-contract-field-source-audit.json",
+      "/Users/mac/Documents/New project 2/validation/v26-preservation-baseline.json",
+      "/Users/mac/Documents/New project 2/validation/v26-document-validation.json"
+    ],
+    "risks": [
+      "本地虚构数据交互原型，不是生产B/S运行验收",
+      "237个字段清单页面组合不代表全部UI字段语义及后端绑定验收",
+      "开源候选未安装，完整前端版本组合未锁定验证"
+    ],
+    "approvals": [
+      "用户要求完善设计原型、确保全局一致及现有代码功能不能减少"
+    ],
+    "status": "VERIFIED",
+    "nodes": [
+      {
+        "id": "sources",
+        "preconditions": [],
+        "objective": "核对当前合同代码及官方选型来源",
+        "action": "核对当前合同代码及官方选型来源",
+        "tool_or_skill": "本地文件工具与Playwright独立验证",
+        "expected_output": "源文件摘要与具体引用可复核",
+        "validation": "源文件摘要与具体引用可复核",
+        "success_condition": "源文件摘要与具体引用可复核",
+        "failure_path": "定位不一致并定点修复；不能验证的范围明确披露",
+        "rollback_or_compensation": "必要时用本轮v2.5原型备份恢复局部变更；不触碰产品代码"
+      },
+      {
+        "id": "prototype",
+        "preconditions": [
+          "sources"
+        ],
+        "objective": "修正已证实的14类字段状态及定位问题",
+        "action": "修正已证实的14类字段状态及定位问题",
+        "tool_or_skill": "本地文件工具与Playwright独立验证",
+        "expected_output": "字段专项44项交互通过",
+        "validation": "字段专项44项交互通过",
+        "success_condition": "字段专项44项交互通过",
+        "failure_path": "定位不一致并定点修复；不能验证的范围明确披露",
+        "rollback_or_compensation": "必要时用本轮v2.5原型备份恢复局部变更；不触碰产品代码"
+      },
+      {
+        "id": "browser_regression",
+        "preconditions": [
+          "prototype"
+        ],
+        "objective": "回归角色市场和多实例原有交互",
+        "action": "回归角色市场和多实例原有交互",
+        "tool_or_skill": "本地文件工具与Playwright独立验证",
+        "expected_output": "四组原始报告全部通过且摘要绑定当前HTML",
+        "validation": "四组原始报告全部通过且摘要绑定当前HTML",
+        "success_condition": "四组原始报告全部通过且摘要绑定当前HTML",
+        "failure_path": "定位不一致并定点修复；不能验证的范围明确披露",
+        "rollback_or_compensation": "必要时用本轮v2.5原型备份恢复局部变更；不触碰产品代码"
+      },
+      {
+        "id": "document_validation",
+        "preconditions": [
+          "browser_regression"
+        ],
+        "objective": "核对文档字段角色覆盖和保留基线",
+        "action": "核对文档字段角色覆盖和保留基线",
+        "tool_or_skill": "本地文件工具与Playwright独立验证",
+        "expected_output": "文档验证退出0",
+        "validation": "文档验证退出0",
+        "success_condition": "文档验证退出0",
+        "failure_path": "定位不一致并定点修复；不能验证的范围明确披露",
+        "rollback_or_compensation": "必要时用本轮v2.5原型备份恢复局部变更；不触碰产品代码"
+      },
+      {
+        "id": "delivery",
+        "preconditions": [
+          "document_validation"
+        ],
+        "objective": "刷新聚合证据并交付可打开文件",
+        "action": "刷新聚合证据并交付可打开文件",
+        "tool_or_skill": "本地文件工具与Playwright独立验证",
+        "expected_output": "产物摘要与当前验证报告一致",
+        "validation": "产物摘要与当前验证报告一致",
+        "success_condition": "产物摘要与当前验证报告一致",
+        "failure_path": "定位不一致并定点修复；不能验证的范围明确披露",
+        "rollback_or_compensation": "必要时用本轮v2.5原型备份恢复局部变更；不触碰产品代码"
+      }
+    ],
+    "acceptanceResult": {
+      "roleProfiles": 41,
+      "humanRoleKeys": 44,
+      "requirements": 153,
+      "oaRefinements": 28,
+      "initialInstances": 7,
+      "initialFixtureTasks": 369,
+      "layoutChecks": 1632,
+      "interactionChecks": 526,
+      "screenshots": 109,
+      "fieldInventoryViews": 237,
+      "businessTemplateFields": 17
+    },
+    "sourceHeadAtFinalValidation": "40dbeebf2610c863f07cc65eaf825dd063d26e68",
+    "verificationScope": "Design artifacts and local prototype only"
+  },
+  "fieldConsistencyUpdate": {
+    "revision": "v2.6",
+    "date": "2026-09-11",
+    "scope": "Design package and local HTML only; product code read-only",
+    "productDirection": "OA workflows connect people, responsibilities and tasks; the assigned human configures their digital employee within their own task; enterprise B/S",
+    "preservationRule": "Existing code capabilities are the minimum baseline, including any capabilities not yet represented by the 153 design requirements. No feature reduction during OA restructuring or framework integration.",
+    "corrections": 14,
+    "correctionReport": "/Users/mac/Documents/New project 2/23-OA主旨与BS字段一致性核查.md",
+    "preservedRequirements": 153,
+    "preservedDomains": 21,
+    "preservedPageGroups": 22,
+    "preservedRoleProfiles": 41,
+    "preservedHumanRoleKeys": 44,
+    "preservedCanonicalFixtures": 7,
+    "protectedArtifactReport": "/Users/mac/Documents/New project 2/validation/v26-preservation-baseline.json",
+    "prototypeFunctionNames": {
+      "removed": [],
+      "added": [
+        "oaDateValid",
+        "oaFieldId",
+        "oaFormDefault",
+        "oaFormRows",
+        "oaFormValid",
+        "oaNewFields",
+        "oaReadNewForm",
+        "oaStageIndex",
+        "oaStageRows"
+      ],
+      "limitation": "Named function preservation alone does not establish behavior equivalence; browser suites provide bounded behavior evidence"
+    },
+    "businessTemplateFields": 17,
+    "fieldInventoryViews": 237,
+    "fieldInventoryStatus": "INVENTORIED_NOT_FULL_CONTRACT_ACCEPTANCE",
+    "contractSourceFiles": 64,
+    "contractSourceFieldRows": 895,
+    "contractSourcesUnchanged": 64,
+    "browserSuites": [
+      {
+        "suite": "roles",
+        "report": "/Users/mac/Documents/New project 2/validation/v26-role-regression.json",
+        "passed": true,
+        "layoutChecks": 807,
+        "interactionChecks": 250,
+        "screenshots": 82,
+        "pageErrors": 0,
+        "htmlDigestRecorded": true
+      },
+      {
+        "suite": "market",
+        "report": "/Users/mac/Documents/New project 2/validation/v26-market-regression.json",
+        "passed": true,
+        "layoutChecks": 75,
+        "interactionChecks": 123,
+        "screenshots": 3,
+        "pageErrors": 0,
+        "htmlDigestRecorded": false
+      },
+      {
+        "suite": "oa",
+        "report": "/Users/mac/Documents/New project 2/validation/v26-oa-validation.json",
+        "passed": true,
+        "layoutChecks": 738,
+        "interactionChecks": 109,
+        "screenshots": 12,
+        "pageErrors": 0,
+        "htmlDigestRecorded": true
+      },
+      {
+        "suite": "fields",
+        "report": "/Users/mac/Documents/New project 2/validation/v26-field-audit.json",
+        "passed": true,
+        "layoutChecks": 12,
+        "interactionChecks": 44,
+        "screenshots": 12,
+        "pageErrors": 0,
+        "htmlDigestRecorded": true
+      }
+    ],
+    "documentReport": "/Users/mac/Documents/New project 2/validation/v26-document-validation.json",
+    "documentChecks": 24,
+    "localLinks": 507,
+    "visuallyReviewedScreenshots": [
+      "/Users/mac/Documents/New project 2/validation/v26-fields-contract-1440.png",
+      "/Users/mac/Documents/New project 2/validation/v26-fields-expense-390.png",
+      "/Users/mac/Documents/New project 2/validation/v26-fields-people-1024.png",
+      "/Users/mac/Documents/New project 2/validation/v26-oa-main-inbox-1440.png"
+    ],
+    "sourceHeadAtResearch": "40dbeebf2610c863f07cc65eaf825dd063d26e68",
+    "sourceHeadAtFinalReview": "40dbeebf2610c863f07cc65eaf825dd063d26e68",
+    "sourceHashRecheck": {
+      "apps/web/package.json": true,
+      "apps/web/src/pages/sops/SopStateMachineEditor.tsx": true,
+      "docs/ai/decision-register.yaml": true,
+      "docs/ui/information-architecture.md": true,
+      "contracts/jsonschema/sop-definition.schema.json": true,
+      "services/control-plane/control_plane/sop_node_advance_after_commit.py": true,
+      "docs/ui/ui-interaction-spec.md": true,
+      "apps/web/src/pages/work/MyWorkPage.tsx": true,
+      "apps/web/src/list-human-tasks-api.ts": true,
+      "contracts/jsonschema/work-execution-history-item.schema.json": true,
+      "contracts/authz/platform-roles.yaml": true
+    },
+    "productFilesWritten": [],
+    "productTestsRerun": false,
+    "dependenciesInstalled": false,
+    "runtimeValidation": "NOT_EXECUTED",
+    "productionValidation": "NOT_EXECUTED",
+    "limitations": [
+      "本地虚构数据交互原型，不是生产B/S运行验收",
+      "237个字段清单页面组合不代表全部UI字段语义及后端绑定验收",
+      "开源候选未安装，完整前端版本组合未锁定验证",
+      "QoderWake UI references retain the earlier live inspection; not refreshed in this field correction.",
+      "Prior 19 focused product tests remain historical and were not rerun."
+    ]
+  },
+  "observedEndingStatusFields": {
+    "head": "40dbeebf2610c863f07cc65eaf825dd063d26e68",
+    "gitStatusShort": " M docs/ai/claim-registry.csv\n M docs/ai/evidence/index.yaml\n M memory/evolution/memory_graph.jsonl\n M ruvector.db\n?? .codebase-memory/\n?? artifacts/nav-01-workbench.png\n?? artifacts/nav-02-agents.png\n?? artifacts/nav-03-conversations.png\n?? artifacts/nav-04-blackboard.png\n?? artifacts/pc04-web-approvals-404-state-final.png\n?? artifacts/pc04-web-approvals-list-404-clean.png\n?? artifacts/pc04-web-approvals-list-404.png\n?? artifacts/pc04-web-blackboard-promote-allow.png\n?? artifacts/pc04-web-blackboard-promote-clean.png\n?? artifacts/pc04-web-blackboard-write-allow.png\n?? artifacts/pc04-web-blackboard-write-clean.png\n?? artifacts/pc10-nav-hide-unwired-workbench.png\n?? artifacts/pr04-workbench-noise-clean.png\n?? docs/ai/evidence/bundles/EV-PC00-SURFACE-PIN-GATE-20260911.yaml\n?? docs/ai/evidence/bundles/EV-PC10-CI-FOUNDATION-FIX-20260911.yaml\n?? docs/ai/evidence/bundles/EV-PC10-DEV-CHUNK-STRIP-20260911.yaml\n?? docs/ai/evidence/bundles/EV-PC10-E2E-DB-ROUNDTRIP-20260911.yaml\n?? docs/ai/evidence/bundles/EV-PC10-SOP-STATUS-ALIGNMENT-20260911.yaml\n?? docs/ai/evidence/bundles/EV-PC10-SOP-TRACEID-CONTRACT-20260911.yaml\n?? docs/ai/evidence/bundles/EV-PC10-STRUCTURED-JSON-LOGGING-20260911.yaml\n?? docs/ai/evidence/bundles/EV-PC10-W2-5-L2-DEAD-CODE-20260911.yaml\n?? docs/ai/evidence/bundles/EV-PC10-W2-5-L3-SHIM-20260911.yaml\n?? docs/ai/task-packet-pc00-surface-pin-gate-20260911.yaml\n?? docs/ai/task-packet-pc02-k506-security-exit-evidence-20260906.yaml\n?? docs/ai/task-packet-pc02-k506-security-exit-evidence-renew-20260908.yaml\n?? docs/ai/task-packet-pc02-uvcl-admin-chrome-20260908.yaml\n?? docs/ai/task-packet-pc04-golden-slice-browser-20260908.yaml\n?? docs/ai/task-packet-pc09-ci-required-check-matrix-20260909.yaml\n?? docs/ai/task-packet-pc09-exit-closure-projection-sync-candidate-20260909.yaml\n?? docs/ai/task-packet-pc09-restore-rollback-rehearsal-20260909.yaml\n?? docs/ai/task-packet-pc10-ci-foundation-fix-20260911.yaml\n?? docs/ai/task-packet-pc10-dev-chunk-strip-20260911.yaml\n?? docs/ai/task-packet-pc10-e2e-db-roundtrip-20260911.yaml\n?? docs/ai/task-packet-pc10-sop-status-alignment-20260911.yaml\n?? docs/ai/task-packet-pc10-sop-traceid-contract-20260911.yaml\n?? docs/ai/task-packet-pc10-structured-json-logging-20260911.yaml\n?? docs/ai/task-packet-pc10-w2-5-l2-dead-code-20260911.yaml\n?? docs/ai/task-packet-pc10-w2-5-l3-shim-20260911.yaml\n?? docs/ai/worktree-baseline-pc00-surface-pin-gate-20260911.json\n?? docs/ai/worktree-baseline-pc01-k502-surface-extend-20260906.json\n?? docs/ai/worktree-baseline-pc02-control-integrator-evidence-bind-20260908.json\n?? docs/ai/worktree-baseline-pc02-k506-security-exit-evidence-20260906.json\n?? docs/ai/worktree-baseline-pc02-k506-security-exit-evidence-renew-20260908.json\n?? docs/ai/worktree-baseline-pc02-uvcl-admin-chrome-20260908.json\n?? docs/ai/worktree-baseline-pc04-golden-slice-browser-20260908.json\n?? docs/ai/worktree-baseline-pc05-assembly-gap-real-app-20260909.json\n?? docs/ai/worktree-baseline-pc05-fk-testdata-green-20260909.json\n?? docs/ai/worktree-baseline-pc05-regression-green-20260909.json\n?? docs/ai/worktree-baseline-pc06-routes-mount-20260909.json\n?? docs/ai/worktree-baseline-pc09-load-fault-tests-20260909.json\n?? docs/ai/worktree-baseline-pc09-r02-contract-mount-reconcile-20260910.json\n?? docs/ai/worktree-baseline-pc09-r03-product-surface-denoi-20260910.json\n?? docs/ai/worktree-baseline-pc09-restore-rollback-rehearsal-20260909.json\n?? docs/ai/worktree-baseline-pc09-runtime-connected-schema-20260909.json\n?? docs/ai/worktree-baseline-pc10-ci-foundation-fix-20260911.json\n?? docs/ai/worktree-baseline-pc10-dev-chunk-strip-20260911.json\n?? docs/ai/worktree-baseline-pc10-e2e-db-roundtrip-20260911.json\n?? docs/ai/worktree-baseline-pc10-sop-status-alignment-20260911.json\n?? docs/ai/worktree-baseline-pc10-sop-traceid-contract-20260911.json\n?? docs/ai/worktree-baseline-pc10-structured-json-logging-20260911.json\n?? docs/ai/worktree-baseline-pc10-w2-5-l2-dead-code-20260911.json\n?? docs/ai/worktree-baseline-pc10-w2-5-l3-shim-20260911.json\n",
+    "claimRegistrySha256": "3fe57b3298fd07124ff269d6d1a477aaab3e202db96c42f58e4835f2807c42f1",
+    "interpretation": "Read-only observation. Workspace changes may be produced by other work; this design turn wrote no product repository files."
+  },
+  "openSourceSelection": {
+    "status": "RESEARCHED_CANDIDATES_NOT_INTEGRATED",
+    "report": "/Users/mac/Documents/New project 2/22-开源工作流与成熟前端复用选型.md",
+    "evidence": "/Users/mac/Documents/New project 2/validation/workflow-frontend-research-20260911.json",
+    "frontendCompatibleLockSet": "NOT_VERIFIED",
+    "dependencyInstallation": "NOT_EXECUTED",
+    "scope": "Source-grounded and official-source research only; existing DSH runtime and React/Python stack not replaced"
+  }
+}

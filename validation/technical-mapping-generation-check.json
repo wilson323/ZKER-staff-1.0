@@ -1,0 +1,12 @@
+{
+  "scope": "DOCUMENT_MAPPING_GENERATOR_ONLY",
+  "exitCode": 0,
+  "status": "PASS",
+  "artifactHashes": {
+    "validation/technical-design-map.json": "019fe39d59c709054071e50c75600e9984a462c7de138cfd80cf20bbbf15578f",
+    "docs/设计包/38-模块边界与前端工程设计.md": "c47927a2c1ba70e712a9d75e06f22b21807ac13c1df32cb51a43da1c49377544",
+    "docs/设计包/40-接口事件与集成技术设计.md": "d11ac970ce1459c340deb4fb0a84787b24d630b310ff0feb9b1717d143869486"
+  },
+  "idempotent": true,
+  "output": "{\"requirements\": 173, \"domains\": 21, \"pages\": 22, \"commands\": 31}"
+}

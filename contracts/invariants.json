@@ -1,0 +1,173 @@
+{
+  "status": "NORMATIVE_DESIGN",
+  "items": [
+    {
+      "id": "INV-01",
+      "title": "身份与租户",
+      "trigger": "tenant_mismatch",
+      "expected": "DENY_NOT_FOUND",
+      "rule": "租户/主体只从受信会话获取"
+    },
+    {
+      "id": "INV-02",
+      "title": "对象发现",
+      "trigger": "no_discover",
+      "expected": "OMIT_OBJECT",
+      "rule": "无发现权时不透露节点数、标题、时间或资源存在"
+    },
+    {
+      "id": "INV-03",
+      "title": "路径与内容分离",
+      "trigger": "path_only",
+      "expected": "PATH_ONLY",
+      "rule": "路径权不蕴含标题、摘要、对话、附件读权"
+    },
+    {
+      "id": "INV-04",
+      "title": "后台用权与人读权分离",
+      "trigger": "execute_without_read",
+      "expected": "BACKEND_ONLY",
+      "rule": "来源管理者可给服务任务用权，不给发起人正文"
+    },
+    {
+      "id": "INV-05",
+      "title": "输出发布",
+      "trigger": "unreleased_output",
+      "expected": "WITHHOLD_OUTPUT",
+      "rule": "摘要/引用/图表/错误同受受众发布控制"
+    },
+    {
+      "id": "INV-06",
+      "title": "责任轮次",
+      "trigger": "stale_epoch",
+      "expected": "REJECT_409",
+      "rule": "转派、返工、重新激活使旧配置和执行提交失效"
+    },
+    {
+      "id": "INV-07",
+      "title": "来源版本",
+      "trigger": "stale_source",
+      "expected": "RECHECK",
+      "rule": "过期基线使review/check/manifest不能沿用"
+    },
+    {
+      "id": "INV-08",
+      "title": "独立审核",
+      "trigger": "self_review",
+      "expected": "REJECT_SELF_REVIEW",
+      "rule": "审核人不能是被审候选生产/确认者，管理员无例外"
+    },
+    {
+      "id": "INV-09",
+      "title": "唯一交付",
+      "trigger": "duplicate_delivery",
+      "expected": "SAME_DELIVERY",
+      "rule": "同工作同epoch只一个正式交付"
+    },
+    {
+      "id": "INV-10",
+      "title": "用户意图幂等",
+      "trigger": "same_key_changed_payload",
+      "expected": "REJECT_409",
+      "rule": "同意图键不同方法路径或正文拒绝"
+    },
+    {
+      "id": "INV-11",
+      "title": "未知副作用",
+      "trigger": "unknown_effect",
+      "expected": "RECONCILE_ONLY",
+      "rule": "超时不是失败，不可再发写调用"
+    },
+    {
+      "id": "INV-12",
+      "title": "撤权迟到响应",
+      "trigger": "late_after_revoke",
+      "expected": "DROP_AND_CLEAR",
+      "rule": "前端校验请求代次，旧响应不能恢复内容"
+    },
+    {
+      "id": "INV-13",
+      "title": "下游必需资料",
+      "trigger": "required_input_unreadable",
+      "expected": "BLOCK_HANDOFF",
+      "rule": "后台可用不能替代下游人的必需接手资料"
+    },
+    {
+      "id": "INV-14",
+      "title": "多实例隔离",
+      "trigger": "other_instance_context",
+      "expected": "REJECT_CONTEXT",
+      "rule": "同人同模板不同实例的会话/草稿/空间分开"
+    },
+    {
+      "id": "INV-15",
+      "title": "取消与运行栅栏",
+      "trigger": "late_after_cancel",
+      "expected": "IGNORE_RESULT",
+      "rule": "请求取消后须运行方确认；旧fence不能正式提交"
+    },
+    {
+      "id": "INV-16",
+      "title": "关系源继承",
+      "trigger": "revoked_relation_source",
+      "expected": "RECOMPUTE_PROJECTION",
+      "rule": "知识断言或关系图不能突破来源限制"
+    },
+    {
+      "id": "INV-17",
+      "title": "非受控学习",
+      "trigger": "unreviewed_evolution",
+      "expected": "BLOCK_PUBLICATION",
+      "rule": "评估未执行/不独立/版本变更均不可发布"
+    },
+    {
+      "id": "INV-18",
+      "title": "计量幂等",
+      "trigger": "duplicate_usage_event",
+      "expected": "SINGLE_SETTLEMENT",
+      "rule": "重复回调/事件不重复计费"
+    },
+    {
+      "id": "INV-19",
+      "title": "配置撤销并发",
+      "trigger": "undo_after_change",
+      "expected": "CONFLICT_NO_OVERWRITE",
+      "rule": "撤销不能覆盖别人的后续合法修改"
+    },
+    {
+      "id": "INV-20",
+      "title": "分析空值",
+      "trigger": "no_observations",
+      "expected": "NO_DATA_NULL",
+      "rule": "无样本与真零分开，图与明细同口径同范围"
+    },
+    {
+      "id": "INV-21",
+      "title": "主动触发边界",
+      "trigger": "stale_or_duplicate_signal",
+      "expected": "NO_NEW_RUN",
+      "rule": "过期/去重/预算/冷却均在执行前重验"
+    },
+    {
+      "id": "INV-22",
+      "title": "市场采用",
+      "trigger": "copy_without_credentials",
+      "expected": "COPY_SAFE_CONTENT_ONLY",
+      "rule": "复制成功不代表可执行，不复制凭据/私有上下文"
+    },
+    {
+      "id": "INV-23",
+      "title": "引擎一致性",
+      "trigger": "commit_engine_ack_lost",
+      "expected": "PENDING_COMMIT",
+      "rule": "OA未查证推进不得显示CONFIRMED"
+    },
+    {
+      "id": "INV-24",
+      "title": "权限不可证明",
+      "trigger": "policy_unavailable",
+      "expected": "FAIL_CLOSED",
+      "rule": "超时/策略不可用不返回空业务成功"
+    }
+  ]
+}

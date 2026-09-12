@@ -1,0 +1,440 @@
+{
+  "schemaVersion": 1,
+  "id": "knowledge-memory-research-20260911",
+  "goal": "截至2026-09-11，结合整个OA项目、QoderWake最新官方机制及当前开源源码/发行，研究文档工作空间、知识与记忆最佳实践，输出可商用候选建议及完整实施设计",
+  "scope": {
+    "allowed": [
+      "README.md",
+      "CONTEXT.md",
+      "docs/设计包/41-AI运行知识分析与安全设计.md",
+      "docs/设计包/46-开发基线与低代码插件化决策.md",
+      "docs/设计包/53-AI运行工具与效果评测规范.md",
+      "docs/设计包/54-开源二开与完整商用准入.md",
+      "docs/设计包/55-知识库与记忆开源方案深度研究.md",
+      "docs/设计包/56-知识记忆技术栈与实施决策.md",
+      "validation/knowledge-memory/",
+      "validation/check_knowledge_memory_research.py",
+      "validation/development-task-knowledge-memory-research-20260911.json",
+      "validation/development-workflow.json",
+      "validation/technical-design-check.json"
+    ],
+    "excluded": [
+      "未授权的Git写入、生产、凭据、外部发送及相邻项目",
+      "原需求/原型改动",
+      "安装候选/数据库/模型调用/真实私有数据上传",
+      "更改长期记忆或启用新全局技能"
+    ]
+  },
+  "acceptance_criteria": [
+    "明确当前未定版事实，区分会话/业务记忆/知识/本体",
+    "结合整个OA任务/权限/来源版本/低代码需求评价方案",
+    "一手来源核对核心候选固定提交、许可例外、依赖与成熟度",
+    "给出单一优先组合、条件替代及不选理由，不引入重复平台",
+    "文档包含端到端数据流/撤权/记忆确认与淘汰/具体POC验收",
+    "保留原173需求和真实验证边界，引用与本地检查通过",
+    "核对QoderWake官方项目/资料/知识卡/记忆机制，明确文档管理、原件和派生物权威、任务工作区隔离、经验晋升、可发现与可使用边界"
+  ],
+  "current_node": "N2",
+  "final_node": "N2",
+  "completed_nodes": [
+    "N1",
+    "N2"
+  ],
+  "failed_nodes": [],
+  "artifacts": [
+    {
+      "path": "docs/设计包/55-知识库与记忆开源方案深度研究.md",
+      "sha256": "cf6946d6d50de169d3acf89bc735a996148d09360b28788d360d86b7e2e88e31"
+    },
+    {
+      "path": "docs/设计包/56-知识记忆技术栈与实施决策.md",
+      "sha256": "fe5ef5404652ae9e1f60ce150d61bce9d0d85e7a48a454b0624a967e69e93cc6"
+    },
+    {
+      "path": "validation/knowledge-memory/memory-candidates-research.md",
+      "sha256": "8bdd2789c9706df64db91365984fbbb4bff260b414349d9546f5152b0bdb469a"
+    },
+    {
+      "path": "validation/check_knowledge_memory_research.py",
+      "sha256": "25053f64c1bf0bb88cd1061263ab88a4548274ed6e37921452eab60c09eb111d"
+    },
+    {
+      "path": "validation/knowledge-memory/review-notes.md",
+      "sha256": "4511e7d6f8a2f35de4d6417ea3744afc555cd11da2076941005d623bed698936"
+    }
+  ],
+  "evidence": [
+    "validation/knowledge-memory/research-check.json",
+    "validation/knowledge-memory/sources/file-manifest.json",
+    "validation/knowledge-memory/sources/web-manifest.json",
+    "validation/knowledge-memory/memory-sources/source-manifest.json",
+    "validation/technical-design-check.json",
+    "validation/development-system-check.json"
+  ],
+  "risks": [
+    "本任务VERIFIED仅研究文档交付；产品NOT_CONFIGURED，原72项产品AC和30项专项POC全部NOT_RUN",
+    "最新上游发行与底座版本兼容未实测，模型权重和传递依赖尚未整包准入",
+    "QoderWake仅本轮公开官方机制参考；StaffDeck保持历史资料边界，无新本地运行验收",
+    "没有安装、模型调用、数据库/生产写入、全局记忆或技能变更"
+  ],
+  "approvals": [],
+  "status": "VERIFIED",
+  "intent": {
+    "source": "本会话用户：知识库、记忆的技术栈是什么；结合全项目全网深度研究合适的可商用成熟开源方案；最新追问：是否最佳实践，数字员工工作空间或知识库以文档形式如何管理，结合QoderWake深度分析；最后明确：全网搜索深度研究输出最佳实践，要最新的。",
+    "problem": "已有技术文档只规定抽象知识与记忆规则，没有专项组件比较和推荐组合",
+    "users": [
+      "产品负责人",
+      "架构/研发与AI编程人员"
+    ],
+    "outcome": "可追溯的专项选型与业务集成决策，非安装或采用声明"
+  },
+  "spec": {
+    "refs": [
+      "docs/设计包/41-AI运行知识分析与安全设计.md",
+      "docs/设计包/53-AI运行工具与效果评测规范.md",
+      "docs/设计包/54-开源二开与完整商用准入.md"
+    ],
+    "behavior": "原生Java底座优先，成熟组件作为受控扩展；人读与后台用权分离",
+    "contracts": [
+      "不引入第二身份/OA/Agent循环",
+      "记忆不自动变业务事实或跨主体共享",
+      "许可满足闭源商业部署/客户交付的具体方式才采用"
+    ],
+    "negativeCases": [
+      "根MIT不覆盖模型/子目录/传递依赖",
+      "SDK会话窗口不等于业务长期记忆",
+      "向量tenant字段不等于完整细粒度权限",
+      "源撤权后不能从摘要/索引/图继续泄漏"
+    ]
+  },
+  "plan": {
+    "files": [
+      "README.md",
+      "CONTEXT.md",
+      "docs/设计包/41-AI运行知识分析与安全设计.md",
+      "docs/设计包/46-开发基线与低代码插件化决策.md",
+      "docs/设计包/53-AI运行工具与效果评测规范.md",
+      "docs/设计包/54-开源二开与完整商用准入.md",
+      "docs/设计包/55-知识库与记忆开源方案深度研究.md",
+      "docs/设计包/56-知识记忆技术栈与实施决策.md",
+      "validation/knowledge-memory/",
+      "validation/check_knowledge_memory_research.py",
+      "validation/development-task-knowledge-memory-research-20260911.json",
+      "validation/development-workflow.json",
+      "validation/technical-design-check.json"
+    ],
+    "checks": [
+      "python3 validation/check_knowledge_memory_research.py",
+      "make verify"
+    ],
+    "highestRisk": "以库名称/热度/根许可冒充成熟完整商用与业务适配",
+    "rollback": "用本轮备份局部恢复入口改动，保留新研究为候选，不覆盖后续编辑"
+  },
+  "requirementIds": [],
+  "caseIds": [],
+  "review": {
+    "mode": "SOURCE_AND_DOCUMENT_REVIEW_ONLY",
+    "findings": [
+      {
+        "id": "REV-01",
+        "issue": "Weaviate整仓BSD表述不成立",
+        "resolution": "读取固定HEAD根、BSD、wl许可；55/54修正为分区准入",
+        "status": "RESOLVED_IN_DESIGN"
+      },
+      {
+        "id": "REV-02",
+        "issue": "原文与人工改义知识卡版本归属不清",
+        "resolution": "55/56明确派生来源和独立正式知识版本",
+        "status": "RESOLVED_IN_DESIGN"
+      },
+      {
+        "id": "REV-03",
+        "issue": "同会话并发与default身份边界未写明",
+        "resolution": "56第5.3节及KM-P18补可信ID、串行/CAS",
+        "status": "RESOLVED_IN_DESIGN"
+      },
+      {
+        "id": "REV-04",
+        "issue": "派生幂等键缺来源完整身份和权限事件",
+        "resolution": "56第3.2节补tenant/source/stage/event/policyRevision及墓碑",
+        "status": "RESOLVED_IN_DESIGN"
+      }
+    ],
+    "evidence": [
+      "validation/knowledge-memory/review-notes.md",
+      "validation/knowledge-memory/research-check.json",
+      "validation/knowledge-memory/memory-candidates-research.md"
+    ],
+    "checklist": [
+      {
+        "id": "KM-01",
+        "aspect": "知识摄取与检索 / 业务需求",
+        "status": "REVIEWED_DESIGN_ONLY",
+        "reference": "56 §2–4/6；55 §5–7"
+      },
+      {
+        "id": "KM-02",
+        "aspect": "知识摄取与检索 / 开源来源",
+        "status": "REVIEWED_DESIGN_ONLY",
+        "reference": "55 §5–6 源码及官方链接"
+      },
+      {
+        "id": "KM-03",
+        "aspect": "知识摄取与检索 / 固定版本与许可",
+        "status": "REVIEWED_DESIGN_ONLY",
+        "reference": "55 §6–7 固定版本及模型许可"
+      },
+      {
+        "id": "KM-04",
+        "aspect": "知识摄取与检索 / 失败与替代",
+        "status": "REVIEWED_DESIGN_ONLY",
+        "reference": "56 §4.2/6.3/7"
+      },
+      {
+        "id": "KM-05",
+        "aspect": "知识摄取与检索 / 可验证出口",
+        "status": "REVIEWED_DESIGN_ONLY",
+        "reference": "56 KM-P08–14/27"
+      },
+      {
+        "id": "KM-06",
+        "aspect": "任务/会话/长期记忆 / 业务需求",
+        "status": "REVIEWED_DESIGN_ONLY",
+        "reference": "56 §2/4.3/5.3"
+      },
+      {
+        "id": "KM-07",
+        "aspect": "任务/会话/长期记忆 / 开源来源",
+        "status": "REVIEWED_DESIGN_ONLY",
+        "reference": "55 §3/4/5/6.3；记忆源码笔记"
+      },
+      {
+        "id": "KM-08",
+        "aspect": "任务/会话/长期记忆 / 固定版本与许可",
+        "status": "REVIEWED_DESIGN_ONLY",
+        "reference": "55 §6 与记忆源码笔记"
+      },
+      {
+        "id": "KM-09",
+        "aspect": "任务/会话/长期记忆 / 失败与替代",
+        "status": "REVIEWED_DESIGN_ONLY",
+        "reference": "56 §4.3/5.3/7/8"
+      },
+      {
+        "id": "KM-10",
+        "aspect": "任务/会话/长期记忆 / 可验证出口",
+        "status": "REVIEWED_DESIGN_ONLY",
+        "reference": "56 KM-P01/15–21/24–25"
+      },
+      {
+        "id": "KM-11",
+        "aspect": "本体与关系 / 业务需求",
+        "status": "REVIEWED_DESIGN_ONLY",
+        "reference": "56 §8"
+      },
+      {
+        "id": "KM-12",
+        "aspect": "本体与关系 / 开源来源",
+        "status": "REVIEWED_DESIGN_ONLY",
+        "reference": "55 Graphiti条目与记忆源码笔记"
+      },
+      {
+        "id": "KM-13",
+        "aspect": "本体与关系 / 固定版本与许可",
+        "status": "REVIEWED_DESIGN_ONLY",
+        "reference": "55 §6 图依赖许可；记忆源码笔记"
+      },
+      {
+        "id": "KM-14",
+        "aspect": "本体与关系 / 失败与替代",
+        "status": "REVIEWED_DESIGN_ONLY",
+        "reference": "56 §8 先业务ID、后按需要引图"
+      },
+      {
+        "id": "KM-15",
+        "aspect": "本体与关系 / 可验证出口",
+        "status": "REVIEWED_DESIGN_ONLY",
+        "reference": "56 §10 映射AI-05；既有本体验收仍NOT_RUN"
+      },
+      {
+        "id": "KM-16",
+        "aspect": "权限与撤权 / 业务需求",
+        "status": "REVIEWED_DESIGN_ONLY",
+        "reference": "56 §5–7"
+      },
+      {
+        "id": "KM-17",
+        "aspect": "权限与撤权 / 开源来源",
+        "status": "REVIEWED_DESIGN_ONLY",
+        "reference": "55 §2/5 与OWASP/微软/底座源码"
+      },
+      {
+        "id": "KM-18",
+        "aspect": "权限与撤权 / 固定版本与许可",
+        "status": "REVIEWED_DESIGN_ONLY",
+        "reference": "55 固定源码引用；56 epoch及版本"
+      },
+      {
+        "id": "KM-19",
+        "aspect": "权限与撤权 / 失败与替代",
+        "status": "REVIEWED_DESIGN_ONLY",
+        "reference": "56 §7 全链撤权/恢复"
+      },
+      {
+        "id": "KM-20",
+        "aspect": "权限与撤权 / 可验证出口",
+        "status": "REVIEWED_DESIGN_ONLY",
+        "reference": "56 KM-P01–07/14/17/22/25"
+      },
+      {
+        "id": "KM-21",
+        "aspect": "商用与成熟度 / 业务需求",
+        "status": "REVIEWED_DESIGN_ONLY",
+        "reference": "55 §6–8；54组件档案"
+      },
+      {
+        "id": "KM-22",
+        "aspect": "商用与成熟度 / 开源来源",
+        "status": "REVIEWED_DESIGN_ONLY",
+        "reference": "55 官方许可证/发行/模型原始来源"
+      },
+      {
+        "id": "KM-23",
+        "aspect": "商用与成熟度 / 固定版本与许可",
+        "status": "REVIEWED_DESIGN_ONLY",
+        "reference": "55 §6.1 Weaviate修正与固定提交"
+      },
+      {
+        "id": "KM-24",
+        "aspect": "商用与成熟度 / 失败与替代",
+        "status": "REVIEWED_DESIGN_ONLY",
+        "reference": "55 §6–8 条件替代及闭源边界"
+      },
+      {
+        "id": "KM-25",
+        "aspect": "商用与成熟度 / 可验证出口",
+        "status": "REVIEWED_DESIGN_ONLY",
+        "reference": "56 KM-P30；54最终交付出口"
+      },
+      {
+        "id": "KM-26",
+        "aspect": "集成与POC / 业务需求",
+        "status": "REVIEWED_DESIGN_ONLY",
+        "reference": "56 §9/11"
+      },
+      {
+        "id": "KM-27",
+        "aspect": "集成与POC / 开源来源",
+        "status": "REVIEWED_DESIGN_ONLY",
+        "reference": "55 §5 现有底座；56扩展职责"
+      },
+      {
+        "id": "KM-28",
+        "aspect": "集成与POC / 固定版本与许可",
+        "status": "REVIEWED_DESIGN_ONLY",
+        "reference": "55 §6/7；56 §9版本策略"
+      },
+      {
+        "id": "KM-29",
+        "aspect": "集成与POC / 失败与替代",
+        "status": "REVIEWED_DESIGN_ONLY",
+        "reference": "56 §6.3/11停止与改线"
+      },
+      {
+        "id": "KM-30",
+        "aspect": "集成与POC / 可验证出口",
+        "status": "REVIEWED_DESIGN_ONLY",
+        "reference": "56 §10 30个NOT_RUN及同组对照"
+      }
+    ]
+  },
+  "nodes": [
+    {
+      "id": "N1",
+      "objective": "研究并撰写知识/记忆专项选型与集成",
+      "dependsOn": [],
+      "preconditions": [
+        "已核当前项目状态与原知识/记忆规则"
+      ],
+      "action": "一手源码及官方文档研究；专门后台Agent只写记忆候选笔记，主执行者负责知识栈与综合判断",
+      "tool_or_skill": "research / oa-development-system / web / GitHub公共接口 / Python",
+      "expected_output": "55/56及来源登记",
+      "validation": "固定提交/许可/依赖/功能/权限/维护证据交叉核对",
+      "success_condition": "有明确推荐、替代、成本及具体业务验收，不夸大未验证能力",
+      "failure_path": "来源不可用时换官方接口；证据不足标未确证",
+      "rollback_or_compensation": "不执行研究对象；局部恢复本次导航",
+      "status": "VERIFIED"
+    },
+    {
+      "id": "N2",
+      "objective": "独立验证并交付",
+      "dependsOn": [
+        "N1"
+      ],
+      "preconditions": [
+        "实现已产生可复核产物"
+      ],
+      "action": "检查原始产物和适用场景",
+      "tool_or_skill": "make verify / REVIEW.md",
+      "expected_output": "当前输入版本的检查结果",
+      "validation": "验收与证据逐项对应",
+      "success_condition": "无关键失败；未验证部分明确披露",
+      "failure_path": "有限修复或交付阻塞",
+      "rollback_or_compensation": "按本任务记录的恢复方案处理",
+      "status": "VERIFIED"
+    }
+  ],
+  "projectRoot": "/Users/mac/Documents/OA数字员工协作平台",
+  "createdAt": "2026-09-11T22:21:22.059000+00:00",
+  "baseline": {
+    "README.md": "4193d189f0593892e5543b380d2a4b35065637c547153057564191584355aaab",
+    "CONTEXT.md": "a923922b5174e3ed9319e2c3a867fd22929568e974e9d4d28e6b78fe068dc394",
+    "docs/设计包/41-AI运行知识分析与安全设计.md": "9be618ee54f770fd4884f71d7c1480b057a2bb2c9eb2f24250b67e34a49b6d9c",
+    "docs/设计包/46-开发基线与低代码插件化决策.md": "c18917cf44de76ddc85cf62124e09870dd8f9cf1f75aa6fa767e0133f99c2424",
+    "docs/设计包/53-AI运行工具与效果评测规范.md": "45d366352f8841796a35de1a7e2ce26a90f4b5ce847be89f8813b3351a2561f1",
+    "docs/设计包/54-开源二开与完整商用准入.md": "53795d93881f0bf65c13e09e19775df4e133f97b8f61cc82d5b918fa8829ffd2",
+    "docs/设计包/30-产品设计追踪数据.json": "5dbbe41a1e6853cfca898094a5e98ed929c9e4e8fe0c2d49da4cf213363b2fa8",
+    "docs/设计包/31-完整产品交互原型.html": "59a4d8948c86292bb3562218d534ae37154fb8d6317bcfd97883dfc98e7e5cbe"
+  },
+  "validationScope": "RESEARCH_AND_DOCUMENT_DELIVERY_ONLY",
+  "acceptanceEvidence": [
+    {
+      "criterion": "明确当前未定版事实，区分会话/业务记忆/知识/本体",
+      "evidence": "56 §2/3/5；development-workflow product仍NOT_CONFIGURED"
+    },
+    {
+      "criterion": "结合整个OA任务/权限/来源版本/低代码需求评价方案",
+      "evidence": "56 §3/5/7/9；原30/31哈希未变"
+    },
+    {
+      "criterion": "一手来源核对核心候选固定提交、许可例外、依赖与成熟度",
+      "evidence": "55 §5–7；118份成功来源摘要核对，6条失败获取另记"
+    },
+    {
+      "criterion": "给出单一优先组合、条件替代及不选理由，不引入重复平台",
+      "evidence": "55 §1/6；56 §9/11 最小组合与停止条件"
+    },
+    {
+      "criterion": "文档包含端到端数据流/撤权/记忆确认与淘汰/具体POC验收",
+      "evidence": "56 §4–8流程、版本、撤权与候选整理；§10 30场景NOT_RUN"
+    },
+    {
+      "criterion": "保留原173需求和真实验证边界，引用与本地检查通过",
+      "evidence": "research-check PASS；technical-design-check PASS；make verify PASS，productReady=false"
+    },
+    {
+      "criterion": "核对QoderWake官方项目/资料/知识卡/记忆机制，明确文档管理、原件和派生物权威、任务工作区隔离、经验晋升、可发现与可使用边界",
+      "evidence": "55 §3/4、56 §2–7；qoder项目/知识库/记忆/员工管理官方快照"
+    }
+  ],
+  "validationSummary": {
+    "researchDocumentChecks": 463,
+    "sourceSnapshotsChecked": 118,
+    "failedFetchesRecorded": 6,
+    "technicalDocumentChecks": 871,
+    "makeVerify": "PASS_LOCAL_DEVELOPMENT_SYSTEM_ONLY",
+    "productTestsRun": false,
+    "pocCasesRun": 0,
+    "commercialReleaseCleared": false
+  }
+}

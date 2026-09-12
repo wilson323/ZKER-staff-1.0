@@ -1,0 +1,101 @@
+{
+  "sha": "efa08fda9ec485d80292d0487a77939c087dedcc",
+  "node_id": "C_kwDOFXRw2doAKGVmYTA4ZmRhOWVjNDg1ZDgwMjkyZDA0ODdhNzc5MzljMDg3ZGVkY2M",
+  "commit": {
+    "author": {
+      "name": "Andrew Kane",
+      "email": "andrew@ankane.org",
+      "date": "2026-09-08T14:26:15Z"
+    },
+    "committer": {
+      "name": "Andrew Kane",
+      "email": "andrew@ankane.org",
+      "date": "2026-09-08T14:26:15Z"
+    },
+    "message": "Fixed zero handling for HNSW level selection - resolves #1023\n\nCo-authored-by: cuishuang <imcusg@gmail.com>",
+    "tree": {
+      "sha": "72029b65d36759809761bfca636489652e2c32ab",
+      "url": "https://api.github.com/repos/pgvector/pgvector/git/trees/72029b65d36759809761bfca636489652e2c32ab"
+    },
+    "url": "https://api.github.com/repos/pgvector/pgvector/git/commits/efa08fda9ec485d80292d0487a77939c087dedcc",
+    "comment_count": 0,
+    "verification": {
+      "verified": false,
+      "reason": "unsigned",
+      "signature": null,
+      "payload": null,
+      "verified_at": null
+    }
+  },
+  "url": "https://api.github.com/repos/pgvector/pgvector/commits/efa08fda9ec485d80292d0487a77939c087dedcc",
+  "html_url": "https://github.com/pgvector/pgvector/commit/efa08fda9ec485d80292d0487a77939c087dedcc",
+  "comments_url": "https://api.github.com/repos/pgvector/pgvector/commits/efa08fda9ec485d80292d0487a77939c087dedcc/comments",
+  "author": {
+    "login": "ankane",
+    "id": 220358,
+    "node_id": "MDQ6VXNlcjIyMDM1OA==",
+    "avatar_url": "https://avatars.githubusercontent.com/u/220358?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/ankane",
+    "html_url": "https://github.com/ankane",
+    "followers_url": "https://api.github.com/users/ankane/followers",
+    "following_url": "https://api.github.com/users/ankane/following{/other_user}",
+    "gists_url": "https://api.github.com/users/ankane/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/ankane/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/ankane/subscriptions",
+    "organizations_url": "https://api.github.com/users/ankane/orgs",
+    "repos_url": "https://api.github.com/users/ankane/repos",
+    "events_url": "https://api.github.com/users/ankane/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/ankane/received_events",
+    "type": "User",
+    "user_view_type": "public",
+    "site_admin": false
+  },
+  "committer": {
+    "login": "ankane",
+    "id": 220358,
+    "node_id": "MDQ6VXNlcjIyMDM1OA==",
+    "avatar_url": "https://avatars.githubusercontent.com/u/220358?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/ankane",
+    "html_url": "https://github.com/ankane",
+    "followers_url": "https://api.github.com/users/ankane/followers",
+    "following_url": "https://api.github.com/users/ankane/following{/other_user}",
+    "gists_url": "https://api.github.com/users/ankane/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/ankane/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/ankane/subscriptions",
+    "organizations_url": "https://api.github.com/users/ankane/orgs",
+    "repos_url": "https://api.github.com/users/ankane/repos",
+    "events_url": "https://api.github.com/users/ankane/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/ankane/received_events",
+    "type": "User",
+    "user_view_type": "public",
+    "site_admin": false
+  },
+  "parents": [
+    {
+      "sha": "e48241b4dcc045b18902914f668d03d1d399dfbe",
+      "url": "https://api.github.com/repos/pgvector/pgvector/commits/e48241b4dcc045b18902914f668d03d1d399dfbe",
+      "html_url": "https://github.com/pgvector/pgvector/commit/e48241b4dcc045b18902914f668d03d1d399dfbe"
+    }
+  ],
+  "stats": {
+    "total": 3,
+    "additions": 2,
+    "deletions": 1
+  },
+  "files": [
+    {
+      "sha": "d927bbd748577f3bf4374b5649ae3f30fe1b4196",
+      "filename": "src/hnswutils.c",
+      "status": "modified",
+      "additions": 2,
+      "deletions": 1,
+      "changes": 3,
+      "blob_url": "https://github.com/pgvector/pgvector/blob/efa08fda9ec485d80292d0487a77939c087dedcc/src%2Fhnswutils.c",
+      "raw_url": "https://github.com/pgvector/pgvector/raw/efa08fda9ec485d80292d0487a77939c087dedcc/src%2Fhnswutils.c",
+      "contents_url": "https://api.github.com/repos/pgvector/pgvector/contents/src%2Fhnswutils.c?ref=efa08fda9ec485d80292d0487a77939c087dedcc",
+      "patch": "@@ -246,7 +246,8 @@ HnswInitElement(char *base, ItemPointer heaptid, int m, double ml, int maxLevel,\n {\n \tHnswElement element = HnswAlloc(allocator, sizeof(HnswElementData));\n \n-\tint\t\t\tlevel = (int) (-log(RandomDouble()) * ml);\n+\tdouble\t\tuniform = RandomDouble();\n+\tint\t\t\tlevel = uniform == 0.0 ? maxLevel : (int) (-log(uniform) * ml);\n \n \t/* Cap level */\n \tif (level > maxLevel)"
+    }
+  ]
+}

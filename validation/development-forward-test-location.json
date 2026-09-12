@@ -1,0 +1,7 @@
+{
+  "scope": "ISOLATED_SKILL_FORWARD_TEST",
+  "workspace": "/private/var/folders/8l/6tnv8ssd2vs0h8463rnv66b00000gn/T/oa-skill-forward-u9rqfovl/project",
+  "instruction": "副本仅用于验证，不得修改真实项目或调用真实服务",
+  "status": "NOT_RUN",
+  "reason": "用户范围扩大为所有项目后，改用Python与纯文档独立试用；该OA副本未作为评测结果。"
+}

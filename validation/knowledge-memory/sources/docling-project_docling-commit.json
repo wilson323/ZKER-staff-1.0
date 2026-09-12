@@ -1,0 +1,101 @@
+{
+  "sha": "5ea6490ffdc57b2fd7de5cc436f2d0a22f2214d4",
+  "node_id": "C_kwDOMT5TYNoAKDVlYTY0OTBmZmRjNTdiMmZkN2RlNWNjNDM2ZjJkMGEyMmYyMjE0ZDQ",
+  "commit": {
+    "author": {
+      "name": "Viktor Kuropiatnyk",
+      "email": "103574791+vku-ibm@users.noreply.github.com",
+      "date": "2026-09-11T15:42:20Z"
+    },
+    "committer": {
+      "name": "GitHub",
+      "email": "noreply@github.com",
+      "date": "2026-09-11T15:42:20Z"
+    },
+    "message": "feat: Addition of 'region' to S3Coordinates (#4221)\n\nAdds 'region' to S3Coordinates, which is necessary for making pre-signed urls in non default region s3\n\nSigned-off-by: Viktor Kuropiatnyk <vku@zurich.ibm.com>",
+    "tree": {
+      "sha": "186b797f1593c4cb89d1c9e69dd9b0d96ac46db0",
+      "url": "https://api.github.com/repos/docling-project/docling/git/trees/186b797f1593c4cb89d1c9e69dd9b0d96ac46db0"
+    },
+    "url": "https://api.github.com/repos/docling-project/docling/git/commits/5ea6490ffdc57b2fd7de5cc436f2d0a22f2214d4",
+    "comment_count": 0,
+    "verification": {
+      "verified": true,
+      "reason": "valid",
+      "signature": "-----BEGIN PGP SIGNATURE-----\n\nwsFcBAABCAAQBQJqpCFcCRC1aQ7uu5UhlAAAqAwQAHaqoBeRBMh+rP7yBmsoy87b\nvWkGRc5CDrY+cbYmyM8r+uUht4UXClqdfHpacqYK1a8B2TUy+MKI0FcHMoHypkIR\nWOxUxRJ/eNKz2hBVq76mzrB69JjPJ5SNBxXiq+nU4YSyIdklEsc/4PsgUOQZt6P1\n0dGPIlIUzBCifF4G5tubBIHYSisa8WODWy4ih0iYn5A9yNOHgFt1HFv9OiYIbtFt\nEt0gvwebg2V6ZHZGxJw9Nile0GDsHrdFe/n1CXW+B9W+kiWVzREWcsmHnghU+W5c\nFf6ytKiHLE71VCksnACNRIG2YlzBIrvK73R1U1x0EEw3w5X9WlpE7TGB13hFahlV\ni/nXUCB4WhbukMvZ/uQ4qUdZf+cbWYvuMZvWyACHNA9GpYlaeXXtkDWKHtPmaU0/\n/t6ZbLxf5Jn/+Vx3UXGkbP9RTUMmvRoaenlA/6Cz/bPk+Z1l82az/FlHEAB8YHiP\nzzooHpOTRvewWjZJtF+e8J7L7t8m2jNRedfnYFdhfcg3QDVPAxRQZOKQPTYxeK0J\nS5XePsOZWG92er+1LP0hUYRdI8l0Rnz8E1esdghVVul0xvx4RPjpgnPoLTPO4Rdm\n0KR0g7A2CaCNsBENmPQJFo6Nz7YqYWXXtSLD4/MqJvedVjtmZhc6RnIzQa6VEaG8\nGxztBChCkse7LmbhGuqB\n=AnmV\n-----END PGP SIGNATURE-----\n",
+      "payload": "tree 186b797f1593c4cb89d1c9e69dd9b0d96ac46db0\nparent 5ef4f9283ed8810350ac9730a1b135db41cd8f47\nauthor Viktor Kuropiatnyk <103574791+vku-ibm@users.noreply.github.com> 1789141340 +0200\ncommitter GitHub <noreply@github.com> 1789141340 +0200\n\nfeat: Addition of 'region' to S3Coordinates (#4221)\n\nAdds 'region' to S3Coordinates, which is necessary for making pre-signed urls in non default region s3\n\nSigned-off-by: Viktor Kuropiatnyk <vku@zurich.ibm.com>",
+      "verified_at": "2026-09-11T15:42:20Z"
+    }
+  },
+  "url": "https://api.github.com/repos/docling-project/docling/commits/5ea6490ffdc57b2fd7de5cc436f2d0a22f2214d4",
+  "html_url": "https://github.com/docling-project/docling/commit/5ea6490ffdc57b2fd7de5cc436f2d0a22f2214d4",
+  "comments_url": "https://api.github.com/repos/docling-project/docling/commits/5ea6490ffdc57b2fd7de5cc436f2d0a22f2214d4/comments",
+  "author": {
+    "login": "vku-ibm",
+    "id": 103574791,
+    "node_id": "U_kgDOBixtBw",
+    "avatar_url": "https://avatars.githubusercontent.com/u/103574791?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/vku-ibm",
+    "html_url": "https://github.com/vku-ibm",
+    "followers_url": "https://api.github.com/users/vku-ibm/followers",
+    "following_url": "https://api.github.com/users/vku-ibm/following{/other_user}",
+    "gists_url": "https://api.github.com/users/vku-ibm/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/vku-ibm/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/vku-ibm/subscriptions",
+    "organizations_url": "https://api.github.com/users/vku-ibm/orgs",
+    "repos_url": "https://api.github.com/users/vku-ibm/repos",
+    "events_url": "https://api.github.com/users/vku-ibm/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/vku-ibm/received_events",
+    "type": "User",
+    "user_view_type": "public",
+    "site_admin": false
+  },
+  "committer": {
+    "login": "web-flow",
+    "id": 19864447,
+    "node_id": "MDQ6VXNlcjE5ODY0NDQ3",
+    "avatar_url": "https://avatars.githubusercontent.com/u/19864447?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/web-flow",
+    "html_url": "https://github.com/web-flow",
+    "followers_url": "https://api.github.com/users/web-flow/followers",
+    "following_url": "https://api.github.com/users/web-flow/following{/other_user}",
+    "gists_url": "https://api.github.com/users/web-flow/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/web-flow/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/web-flow/subscriptions",
+    "organizations_url": "https://api.github.com/users/web-flow/orgs",
+    "repos_url": "https://api.github.com/users/web-flow/repos",
+    "events_url": "https://api.github.com/users/web-flow/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/web-flow/received_events",
+    "type": "User",
+    "user_view_type": "public",
+    "site_admin": false
+  },
+  "parents": [
+    {
+      "sha": "5ef4f9283ed8810350ac9730a1b135db41cd8f47",
+      "url": "https://api.github.com/repos/docling-project/docling/commits/5ef4f9283ed8810350ac9730a1b135db41cd8f47",
+      "html_url": "https://github.com/docling-project/docling/commit/5ef4f9283ed8810350ac9730a1b135db41cd8f47"
+    }
+  ],
+  "stats": {
+    "total": 14,
+    "additions": 14,
+    "deletions": 0
+  },
+  "files": [
+    {
+      "sha": "5af0faecacb893e9f83d596daf469e79a2eb995c",
+      "filename": "docling/datamodel/service/sources.py",
+      "status": "modified",
+      "additions": 14,
+      "deletions": 0,
+      "changes": 14,
+      "blob_url": "https://github.com/docling-project/docling/blob/5ea6490ffdc57b2fd7de5cc436f2d0a22f2214d4/docling%2Fdatamodel%2Fservice%2Fsources.py",
+      "raw_url": "https://github.com/docling-project/docling/raw/5ea6490ffdc57b2fd7de5cc436f2d0a22f2214d4/docling%2Fdatamodel%2Fservice%2Fsources.py",
+      "contents_url": "https://api.github.com/repos/docling-project/docling/contents/docling%2Fdatamodel%2Fservice%2Fsources.py?ref=5ea6490ffdc57b2fd7de5cc436f2d0a22f2214d4",
+      "patch": "@@ -64,6 +64,20 @@ class S3Coordinates(BaseModel):\n         ),\n     ] = True\n \n+    region: Annotated[\n+        Optional[str],\n+        Field(\n+            description=(\n+                \"AWS region of the S3 bucket, e.g. 'us-east-2'. Required for \"\n+                \"correctly signed requests (including presigned URLs) against \"\n+                \"real AWS S3 buckets outside the default 'us-east-1' region. \"\n+                \"Optional, defaults to unset for S3-compatible services \"\n+                \"(e.g. IBM COS, MinIO) that don't require it.\"\n+            ),\n+            examples=[\"us-east-2\", \"eu-de\"],\n+        ),\n+    ] = None\n+\n     access_key: Annotated[\n         StrictStr,\n         Field("
+    }
+  ]
+}

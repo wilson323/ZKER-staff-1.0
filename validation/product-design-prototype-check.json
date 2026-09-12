@@ -1,0 +1,2128 @@
+{
+  "startedAt": "2026-09-11T17:25:09.339Z",
+  "scope": "LOCAL_IN_MEMORY_DESIGN_PROTOTYPE_ONLY",
+  "browser": "Installed Google Chrome via bundled Playwright, isolated temporary browser context",
+  "checks": [
+    {
+      "name": "P01 1440px rendered and no page overflow",
+      "pass": true,
+      "actual": {
+        "h1": "我的工作",
+        "bodyWidth": 1440,
+        "viewport": 1440,
+        "page": "P01"
+      }
+    },
+    {
+      "name": "P02 1440px rendered and no page overflow",
+      "pass": true,
+      "actual": {
+        "h1": "采购A · 采购方案编制",
+        "bodyWidth": 1440,
+        "viewport": 1440,
+        "page": "P02"
+      }
+    },
+    {
+      "name": "P03 1440px rendered and no page overflow",
+      "pass": true,
+      "actual": {
+        "h1": "研发实验室 · 采购方案编制",
+        "bodyWidth": 1440,
+        "viewport": 1440,
+        "page": "P03"
+      }
+    },
+    {
+      "name": "P04 1440px rendered and no page overflow",
+      "pass": true,
+      "actual": {
+        "h1": "研发实验室 · 采购方案编制",
+        "bodyWidth": 1440,
+        "viewport": 1440,
+        "page": "P04"
+      }
+    },
+    {
+      "name": "P05 1440px rendered and no page overflow",
+      "pass": true,
+      "actual": {
+        "h1": "我的数字员工",
+        "bodyWidth": 1440,
+        "viewport": 1440,
+        "page": "P05"
+      }
+    },
+    {
+      "name": "P06 1440px rendered and no page overflow",
+      "pass": true,
+      "actual": {
+        "h1": "技能与工作方法",
+        "bodyWidth": 1440,
+        "viewport": 1440,
+        "page": "P06"
+      }
+    },
+    {
+      "name": "P07 1440px rendered and no page overflow",
+      "pass": true,
+      "actual": {
+        "h1": "工具与连接",
+        "bodyWidth": 1440,
+        "viewport": 1440,
+        "page": "P07"
+      }
+    },
+    {
+      "name": "P08 1440px rendered and no page overflow",
+      "pass": true,
+      "actual": {
+        "h1": "业务知识",
+        "bodyWidth": 1440,
+        "viewport": 1440,
+        "page": "P08"
+      }
+    },
+    {
+      "name": "P09 1440px rendered and no page overflow",
+      "pass": true,
+      "actual": {
+        "h1": "记忆与改进",
+        "bodyWidth": 1440,
+        "viewport": 1440,
+        "page": "P09"
+      }
+    },
+    {
+      "name": "P10 1440px rendered and no page overflow",
+      "pass": true,
+      "actual": {
+        "h1": "采购A · 采购方案编制",
+        "bodyWidth": 1440,
+        "viewport": 1440,
+        "page": "P10"
+      }
+    },
+    {
+      "name": "P11 1440px rendered and no page overflow",
+      "pass": true,
+      "actual": {
+        "h1": "采购A · 采购方案编制",
+        "bodyWidth": 1440,
+        "viewport": 1440,
+        "page": "P11"
+      }
+    },
+    {
+      "name": "P12 1440px rendered and no page overflow",
+      "pass": true,
+      "actual": {
+        "h1": "数字员工团队",
+        "bodyWidth": 1440,
+        "viewport": 1440,
+        "page": "P12"
+      }
+    },
+    {
+      "name": "P13 1440px rendered and no page overflow",
+      "pass": true,
+      "actual": {
+        "h1": "节点执行方案",
+        "bodyWidth": 1440,
+        "viewport": 1440,
+        "page": "P13"
+      }
+    },
+    {
+      "name": "P14 1440px rendered and no page overflow",
+      "pass": true,
+      "actual": {
+        "h1": "主动协助",
+        "bodyWidth": 1440,
+        "viewport": 1440,
+        "page": "P14"
+      }
+    },
+    {
+      "name": "P15 1440px rendered and no page overflow",
+      "pass": true,
+      "actual": {
+        "h1": "渠道与专家",
+        "bodyWidth": 1440,
+        "viewport": 1440,
+        "page": "P15"
+      }
+    },
+    {
+      "name": "P16 1440px rendered and no page overflow",
+      "pass": true,
+      "actual": {
+        "h1": "研发实验室 · 采购方案编制",
+        "bodyWidth": 1440,
+        "viewport": 1440,
+        "page": "P16"
+      }
+    },
+    {
+      "name": "P17 1440px rendered and no page overflow",
+      "pass": true,
+      "actual": {
+        "h1": "流程设计与管理",
+        "bodyWidth": 1440,
+        "viewport": 1440,
+        "page": "P17"
+      }
+    },
+    {
+      "name": "P18 1440px rendered and no page overflow",
+      "pass": true,
+      "actual": {
+        "h1": "组织与权限",
+        "bodyWidth": 1440,
+        "viewport": 1440,
+        "page": "P18"
+      }
+    },
+    {
+      "name": "P19 1440px rendered and no page overflow",
+      "pass": true,
+      "actual": {
+        "h1": "业务分析",
+        "bodyWidth": 1440,
+        "viewport": 1440,
+        "page": "P19"
+      }
+    },
+    {
+      "name": "P20 1440px rendered and no page overflow",
+      "pass": true,
+      "actual": {
+        "h1": "研发实验室 · 采购方案编制",
+        "bodyWidth": 1440,
+        "viewport": 1440,
+        "page": "P20"
+      }
+    },
+    {
+      "name": "P21 1440px rendered and no page overflow",
+      "pass": true,
+      "actual": {
+        "h1": "我的偏好",
+        "bodyWidth": 1440,
+        "viewport": 1440,
+        "page": "P21"
+      }
+    },
+    {
+      "name": "P22 1440px rendered and no page overflow",
+      "pass": true,
+      "actual": {
+        "h1": "员工资源市场",
+        "bodyWidth": 1440,
+        "viewport": 1440,
+        "page": "P22"
+      }
+    },
+    {
+      "name": "P01 1024px rendered and no page overflow",
+      "pass": true,
+      "actual": {
+        "h1": "我的工作",
+        "bodyWidth": 1024,
+        "viewport": 1024,
+        "page": "P01"
+      }
+    },
+    {
+      "name": "P02 1024px rendered and no page overflow",
+      "pass": true,
+      "actual": {
+        "h1": "采购A · 采购方案编制",
+        "bodyWidth": 1024,
+        "viewport": 1024,
+        "page": "P02"
+      }
+    },
+    {
+      "name": "P03 1024px rendered and no page overflow",
+      "pass": true,
+      "actual": {
+        "h1": "研发实验室 · 采购方案编制",
+        "bodyWidth": 1024,
+        "viewport": 1024,
+        "page": "P03"
+      }
+    },
+    {
+      "name": "P04 1024px rendered and no page overflow",
+      "pass": true,
+      "actual": {
+        "h1": "研发实验室 · 采购方案编制",
+        "bodyWidth": 1024,
+        "viewport": 1024,
+        "page": "P04"
+      }
+    },
+    {
+      "name": "P05 1024px rendered and no page overflow",
+      "pass": true,
+      "actual": {
+        "h1": "我的数字员工",
+        "bodyWidth": 1024,
+        "viewport": 1024,
+        "page": "P05"
+      }
+    },
+    {
+      "name": "P06 1024px rendered and no page overflow",
+      "pass": true,
+      "actual": {
+        "h1": "技能与工作方法",
+        "bodyWidth": 1024,
+        "viewport": 1024,
+        "page": "P06"
+      }
+    },
+    {
+      "name": "P07 1024px rendered and no page overflow",
+      "pass": true,
+      "actual": {
+        "h1": "工具与连接",
+        "bodyWidth": 1024,
+        "viewport": 1024,
+        "page": "P07"
+      }
+    },
+    {
+      "name": "P08 1024px rendered and no page overflow",
+      "pass": true,
+      "actual": {
+        "h1": "业务知识",
+        "bodyWidth": 1024,
+        "viewport": 1024,
+        "page": "P08"
+      }
+    },
+    {
+      "name": "P09 1024px rendered and no page overflow",
+      "pass": true,
+      "actual": {
+        "h1": "记忆与改进",
+        "bodyWidth": 1024,
+        "viewport": 1024,
+        "page": "P09"
+      }
+    },
+    {
+      "name": "P10 1024px rendered and no page overflow",
+      "pass": true,
+      "actual": {
+        "h1": "采购A · 采购方案编制",
+        "bodyWidth": 1024,
+        "viewport": 1024,
+        "page": "P10"
+      }
+    },
+    {
+      "name": "P11 1024px rendered and no page overflow",
+      "pass": true,
+      "actual": {
+        "h1": "采购A · 采购方案编制",
+        "bodyWidth": 1024,
+        "viewport": 1024,
+        "page": "P11"
+      }
+    },
+    {
+      "name": "P12 1024px rendered and no page overflow",
+      "pass": true,
+      "actual": {
+        "h1": "数字员工团队",
+        "bodyWidth": 1024,
+        "viewport": 1024,
+        "page": "P12"
+      }
+    },
+    {
+      "name": "P13 1024px rendered and no page overflow",
+      "pass": true,
+      "actual": {
+        "h1": "节点执行方案",
+        "bodyWidth": 1024,
+        "viewport": 1024,
+        "page": "P13"
+      }
+    },
+    {
+      "name": "P14 1024px rendered and no page overflow",
+      "pass": true,
+      "actual": {
+        "h1": "主动协助",
+        "bodyWidth": 1024,
+        "viewport": 1024,
+        "page": "P14"
+      }
+    },
+    {
+      "name": "P15 1024px rendered and no page overflow",
+      "pass": true,
+      "actual": {
+        "h1": "渠道与专家",
+        "bodyWidth": 1024,
+        "viewport": 1024,
+        "page": "P15"
+      }
+    },
+    {
+      "name": "P16 1024px rendered and no page overflow",
+      "pass": true,
+      "actual": {
+        "h1": "研发实验室 · 采购方案编制",
+        "bodyWidth": 1024,
+        "viewport": 1024,
+        "page": "P16"
+      }
+    },
+    {
+      "name": "P17 1024px rendered and no page overflow",
+      "pass": true,
+      "actual": {
+        "h1": "流程设计与管理",
+        "bodyWidth": 1024,
+        "viewport": 1024,
+        "page": "P17"
+      }
+    },
+    {
+      "name": "P18 1024px rendered and no page overflow",
+      "pass": true,
+      "actual": {
+        "h1": "组织与权限",
+        "bodyWidth": 1024,
+        "viewport": 1024,
+        "page": "P18"
+      }
+    },
+    {
+      "name": "P19 1024px rendered and no page overflow",
+      "pass": true,
+      "actual": {
+        "h1": "业务分析",
+        "bodyWidth": 1024,
+        "viewport": 1024,
+        "page": "P19"
+      }
+    },
+    {
+      "name": "P20 1024px rendered and no page overflow",
+      "pass": true,
+      "actual": {
+        "h1": "研发实验室 · 采购方案编制",
+        "bodyWidth": 1024,
+        "viewport": 1024,
+        "page": "P20"
+      }
+    },
+    {
+      "name": "P21 1024px rendered and no page overflow",
+      "pass": true,
+      "actual": {
+        "h1": "我的偏好",
+        "bodyWidth": 1024,
+        "viewport": 1024,
+        "page": "P21"
+      }
+    },
+    {
+      "name": "P22 1024px rendered and no page overflow",
+      "pass": true,
+      "actual": {
+        "h1": "员工资源市场",
+        "bodyWidth": 1024,
+        "viewport": 1024,
+        "page": "P22"
+      }
+    },
+    {
+      "name": "P01 390px rendered and no page overflow",
+      "pass": true,
+      "actual": {
+        "h1": "我的工作",
+        "bodyWidth": 390,
+        "viewport": 390,
+        "page": "P01"
+      }
+    },
+    {
+      "name": "P02 390px rendered and no page overflow",
+      "pass": true,
+      "actual": {
+        "h1": "采购A · 采购方案编制",
+        "bodyWidth": 390,
+        "viewport": 390,
+        "page": "P02"
+      }
+    },
+    {
+      "name": "P03 390px rendered and no page overflow",
+      "pass": true,
+      "actual": {
+        "h1": "研发实验室 · 采购方案编制",
+        "bodyWidth": 390,
+        "viewport": 390,
+        "page": "P03"
+      }
+    },
+    {
+      "name": "P04 390px rendered and no page overflow",
+      "pass": true,
+      "actual": {
+        "h1": "研发实验室 · 采购方案编制",
+        "bodyWidth": 390,
+        "viewport": 390,
+        "page": "P04"
+      }
+    },
+    {
+      "name": "P05 390px rendered and no page overflow",
+      "pass": true,
+      "actual": {
+        "h1": "我的数字员工",
+        "bodyWidth": 390,
+        "viewport": 390,
+        "page": "P05"
+      }
+    },
+    {
+      "name": "P06 390px rendered and no page overflow",
+      "pass": true,
+      "actual": {
+        "h1": "技能与工作方法",
+        "bodyWidth": 390,
+        "viewport": 390,
+        "page": "P06"
+      }
+    },
+    {
+      "name": "P07 390px rendered and no page overflow",
+      "pass": true,
+      "actual": {
+        "h1": "工具与连接",
+        "bodyWidth": 390,
+        "viewport": 390,
+        "page": "P07"
+      }
+    },
+    {
+      "name": "P08 390px rendered and no page overflow",
+      "pass": true,
+      "actual": {
+        "h1": "业务知识",
+        "bodyWidth": 390,
+        "viewport": 390,
+        "page": "P08"
+      }
+    },
+    {
+      "name": "P09 390px rendered and no page overflow",
+      "pass": true,
+      "actual": {
+        "h1": "记忆与改进",
+        "bodyWidth": 390,
+        "viewport": 390,
+        "page": "P09"
+      }
+    },
+    {
+      "name": "P10 390px rendered and no page overflow",
+      "pass": true,
+      "actual": {
+        "h1": "采购A · 采购方案编制",
+        "bodyWidth": 390,
+        "viewport": 390,
+        "page": "P10"
+      }
+    },
+    {
+      "name": "P11 390px rendered and no page overflow",
+      "pass": true,
+      "actual": {
+        "h1": "采购A · 采购方案编制",
+        "bodyWidth": 390,
+        "viewport": 390,
+        "page": "P11"
+      }
+    },
+    {
+      "name": "P12 390px rendered and no page overflow",
+      "pass": true,
+      "actual": {
+        "h1": "数字员工团队",
+        "bodyWidth": 390,
+        "viewport": 390,
+        "page": "P12"
+      }
+    },
+    {
+      "name": "P13 390px rendered and no page overflow",
+      "pass": true,
+      "actual": {
+        "h1": "节点执行方案",
+        "bodyWidth": 390,
+        "viewport": 390,
+        "page": "P13"
+      }
+    },
+    {
+      "name": "P14 390px rendered and no page overflow",
+      "pass": true,
+      "actual": {
+        "h1": "主动协助",
+        "bodyWidth": 390,
+        "viewport": 390,
+        "page": "P14"
+      }
+    },
+    {
+      "name": "P15 390px rendered and no page overflow",
+      "pass": true,
+      "actual": {
+        "h1": "渠道与专家",
+        "bodyWidth": 390,
+        "viewport": 390,
+        "page": "P15"
+      }
+    },
+    {
+      "name": "P16 390px rendered and no page overflow",
+      "pass": true,
+      "actual": {
+        "h1": "研发实验室 · 采购方案编制",
+        "bodyWidth": 390,
+        "viewport": 390,
+        "page": "P16"
+      }
+    },
+    {
+      "name": "P17 390px rendered and no page overflow",
+      "pass": true,
+      "actual": {
+        "h1": "流程设计与管理",
+        "bodyWidth": 390,
+        "viewport": 390,
+        "page": "P17"
+      }
+    },
+    {
+      "name": "P18 390px rendered and no page overflow",
+      "pass": true,
+      "actual": {
+        "h1": "组织与权限",
+        "bodyWidth": 390,
+        "viewport": 390,
+        "page": "P18"
+      }
+    },
+    {
+      "name": "P19 390px rendered and no page overflow",
+      "pass": true,
+      "actual": {
+        "h1": "业务分析",
+        "bodyWidth": 390,
+        "viewport": 390,
+        "page": "P19"
+      }
+    },
+    {
+      "name": "P20 390px rendered and no page overflow",
+      "pass": true,
+      "actual": {
+        "h1": "研发实验室 · 采购方案编制",
+        "bodyWidth": 390,
+        "viewport": 390,
+        "page": "P20"
+      }
+    },
+    {
+      "name": "P21 390px rendered and no page overflow",
+      "pass": true,
+      "actual": {
+        "h1": "我的偏好",
+        "bodyWidth": 390,
+        "viewport": 390,
+        "page": "P21"
+      }
+    },
+    {
+      "name": "P22 390px rendered and no page overflow",
+      "pass": true,
+      "actual": {
+        "h1": "员工资源市场",
+        "bodyWidth": 390,
+        "viewport": 390,
+        "page": "P22"
+      }
+    },
+    {
+      "name": "role view member",
+      "pass": true,
+      "actual": {
+        "role": "member",
+        "overview": false,
+        "title": "我的工作",
+        "nav": 4
+      }
+    },
+    {
+      "name": "role view main",
+      "pass": true,
+      "actual": {
+        "role": "main",
+        "overview": false,
+        "title": "我的工作",
+        "nav": 9
+      }
+    },
+    {
+      "name": "role view tech",
+      "pass": true,
+      "actual": {
+        "role": "tech",
+        "overview": false,
+        "title": "我的工作",
+        "nav": 8
+      }
+    },
+    {
+      "name": "role view collab",
+      "pass": true,
+      "actual": {
+        "role": "collab",
+        "overview": false,
+        "title": "我的工作",
+        "nav": 9
+      }
+    },
+    {
+      "name": "role view writer",
+      "pass": true,
+      "actual": {
+        "role": "writer",
+        "overview": false,
+        "title": "我的工作",
+        "nav": 9
+      }
+    },
+    {
+      "name": "role view responsible",
+      "pass": true,
+      "actual": {
+        "role": "responsible",
+        "overview": false,
+        "title": "我的工作",
+        "nav": 8
+      }
+    },
+    {
+      "name": "role view review",
+      "pass": true,
+      "actual": {
+        "role": "review",
+        "overview": false,
+        "title": "我的工作",
+        "nav": 7
+      }
+    },
+    {
+      "name": "role view approver",
+      "pass": true,
+      "actual": {
+        "role": "approver",
+        "overview": false,
+        "title": "我的工作",
+        "nav": 4
+      }
+    },
+    {
+      "name": "role view receiver",
+      "pass": true,
+      "actual": {
+        "role": "receiver",
+        "overview": false,
+        "title": "我的工作",
+        "nav": 9
+      }
+    },
+    {
+      "name": "role view designer",
+      "pass": true,
+      "actual": {
+        "role": "designer",
+        "overview": false,
+        "title": "我的工作",
+        "nav": 4
+      }
+    },
+    {
+      "name": "role view publisher",
+      "pass": true,
+      "actual": {
+        "role": "publisher",
+        "overview": false,
+        "title": "我的工作",
+        "nav": 4
+      }
+    },
+    {
+      "name": "role view resource",
+      "pass": true,
+      "actual": {
+        "role": "resource",
+        "overview": false,
+        "title": "我的工作",
+        "nav": 4
+      }
+    },
+    {
+      "name": "role view knowledge",
+      "pass": true,
+      "actual": {
+        "role": "knowledge",
+        "overview": false,
+        "title": "我的工作",
+        "nav": 4
+      }
+    },
+    {
+      "name": "role view skill",
+      "pass": true,
+      "actual": {
+        "role": "skill",
+        "overview": false,
+        "title": "我的工作",
+        "nav": 5
+      }
+    },
+    {
+      "name": "role view tool",
+      "pass": true,
+      "actual": {
+        "role": "tool",
+        "overview": false,
+        "title": "我的工作",
+        "nav": 4
+      }
+    },
+    {
+      "name": "role view org",
+      "pass": true,
+      "actual": {
+        "role": "org",
+        "overview": false,
+        "title": "我的工作",
+        "nav": 3
+      }
+    },
+    {
+      "name": "role view hr",
+      "pass": true,
+      "actual": {
+        "role": "hr",
+        "overview": false,
+        "title": "我的工作",
+        "nav": 3
+      }
+    },
+    {
+      "name": "role view identity",
+      "pass": true,
+      "actual": {
+        "role": "identity",
+        "overview": false,
+        "title": "我的工作",
+        "nav": 3
+      }
+    },
+    {
+      "name": "role view access",
+      "pass": true,
+      "actual": {
+        "role": "access",
+        "overview": false,
+        "title": "我的工作",
+        "nav": 4
+      }
+    },
+    {
+      "name": "role view auditor",
+      "pass": true,
+      "actual": {
+        "role": "auditor",
+        "overview": false,
+        "title": "我的工作",
+        "nav": 4
+      }
+    },
+    {
+      "name": "role view security",
+      "pass": true,
+      "actual": {
+        "role": "security",
+        "overview": false,
+        "title": "我的工作",
+        "nav": 6
+      }
+    },
+    {
+      "name": "role view privacy",
+      "pass": true,
+      "actual": {
+        "role": "privacy",
+        "overview": false,
+        "title": "我的工作",
+        "nav": 5
+      }
+    },
+    {
+      "name": "role view runtime",
+      "pass": true,
+      "actual": {
+        "role": "runtime",
+        "overview": false,
+        "title": "我的工作",
+        "nav": 3
+      }
+    },
+    {
+      "name": "role view release",
+      "pass": true,
+      "actual": {
+        "role": "release",
+        "overview": false,
+        "title": "我的工作",
+        "nav": 3
+      }
+    },
+    {
+      "name": "role view tenant",
+      "pass": true,
+      "actual": {
+        "role": "tenant",
+        "overview": false,
+        "title": "我的工作",
+        "nav": 3
+      }
+    },
+    {
+      "name": "role view workflow",
+      "pass": true,
+      "actual": {
+        "role": "workflow",
+        "overview": false,
+        "title": "我的工作",
+        "nav": 4
+      }
+    },
+    {
+      "name": "role view policy",
+      "pass": true,
+      "actual": {
+        "role": "policy",
+        "overview": false,
+        "title": "我的工作",
+        "nav": 3
+      }
+    },
+    {
+      "name": "role view automation",
+      "pass": true,
+      "actual": {
+        "role": "automation",
+        "overview": false,
+        "title": "我的工作",
+        "nav": 3
+      }
+    },
+    {
+      "name": "role view channel",
+      "pass": true,
+      "actual": {
+        "role": "channel",
+        "overview": false,
+        "title": "我的工作",
+        "nav": 3
+      }
+    },
+    {
+      "name": "role view team",
+      "pass": true,
+      "actual": {
+        "role": "team",
+        "overview": false,
+        "title": "我的工作",
+        "nav": 6
+      }
+    },
+    {
+      "name": "role view api",
+      "pass": true,
+      "actual": {
+        "role": "api",
+        "overview": false,
+        "title": "我的工作",
+        "nav": 4
+      }
+    },
+    {
+      "name": "role view interactor",
+      "pass": true,
+      "actual": {
+        "role": "interactor",
+        "overview": false,
+        "title": "我的工作",
+        "nav": 5
+      }
+    },
+    {
+      "name": "role view apiadmin",
+      "pass": true,
+      "actual": {
+        "role": "apiadmin",
+        "overview": false,
+        "title": "我的工作",
+        "nav": 4
+      }
+    },
+    {
+      "name": "role view assignment",
+      "pass": true,
+      "actual": {
+        "role": "assignment",
+        "overview": false,
+        "title": "我的工作",
+        "nav": 4
+      }
+    },
+    {
+      "name": "role view auditgeneral",
+      "pass": true,
+      "actual": {
+        "role": "auditgeneral",
+        "overview": false,
+        "title": "我的工作",
+        "nav": 4
+      }
+    },
+    {
+      "name": "role view datasubject",
+      "pass": true,
+      "actual": {
+        "role": "datasubject",
+        "overview": false,
+        "title": "我的工作",
+        "nav": 3
+      }
+    },
+    {
+      "name": "role view evolution",
+      "pass": true,
+      "actual": {
+        "role": "evolution",
+        "overview": false,
+        "title": "我的工作",
+        "nav": 4
+      }
+    },
+    {
+      "name": "role view knowledgeadmin",
+      "pass": true,
+      "actual": {
+        "role": "knowledgeadmin",
+        "overview": false,
+        "title": "我的工作",
+        "nav": 4
+      }
+    },
+    {
+      "name": "role view initiator",
+      "pass": true,
+      "actual": {
+        "role": "initiator",
+        "overview": false,
+        "title": "我的工作",
+        "nav": 3
+      }
+    },
+    {
+      "name": "role view securityadmin",
+      "pass": true,
+      "actual": {
+        "role": "securityadmin",
+        "overview": false,
+        "title": "我的工作",
+        "nav": 4
+      }
+    },
+    {
+      "name": "role view workforce",
+      "pass": true,
+      "actual": {
+        "role": "workforce",
+        "overview": false,
+        "title": "我的工作",
+        "nav": 4
+      }
+    },
+    {
+      "name": "guided scenario happy",
+      "pass": true,
+      "actual": {
+        "state": {
+          "baseline": 1,
+          "budgetBasis": 1,
+          "candidate": 2,
+          "contribution": true,
+          "review": "已审核",
+          "reviewVersion": 2,
+          "committed": {
+            "version": 2,
+            "baseline": 1,
+            "epoch": 1,
+            "actor": "甲"
+          },
+          "readable": true,
+          "received": true,
+          "assignee": "甲",
+          "epoch": 1,
+          "runEpoch": 1,
+          "external": "未调用",
+          "copies": 0,
+          "copiedResources": [],
+          "preferences": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "connection": false,
+          "mode": "AI协助",
+          "selectedTask": "A",
+          "tasks": [
+            "A",
+            "B",
+            "C"
+          ],
+          "notice": "己核对了包版本和资料并接手；后续业务仍由流程继续。",
+          "history": [
+            "发起人创建采购A、采购B及合同C；实例与任务相互独立。",
+            "协作人已确认专业贡献，当前承担人接受并形成方案v2。",
+            "方案v2进入丁的独立审核待办。",
+            "丁已审核方案v2；甲仍需正式提交。",
+            "方案v2正式交付，生成唯一交接包和下游接手任务；流程仍待下游处理。",
+            "己核对了包版本和资料并接手；后续业务仍由流程继续。"
+          ],
+          "drafts": {
+            "A": "",
+            "B": "",
+            "C": ""
+          },
+          "scenario": "happy",
+          "step": 5
+        },
+        "role": "receiver",
+        "page": "P16",
+        "overview": true
+      }
+    },
+    {
+      "name": "guided scenario stale",
+      "pass": true,
+      "actual": {
+        "state": {
+          "baseline": 2,
+          "budgetBasis": 2,
+          "candidate": 3,
+          "contribution": true,
+          "review": "已审核",
+          "reviewVersion": 3,
+          "committed": {
+            "version": 3,
+            "baseline": 2,
+            "epoch": 1,
+            "actor": "甲"
+          },
+          "readable": true,
+          "received": false,
+          "assignee": "甲",
+          "epoch": 1,
+          "runEpoch": 1,
+          "external": "未调用",
+          "copies": 0,
+          "copiedResources": [],
+          "preferences": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "connection": false,
+          "mode": "AI协助",
+          "selectedTask": "A",
+          "tasks": [
+            "A",
+            "B",
+            "C"
+          ],
+          "notice": "方案v3正式交付，生成唯一交接包和下游接手任务；流程仍待下游处理。",
+          "history": [
+            "发起人创建采购A、采购B及合同C；实例与任务相互独立。",
+            "协作人已确认专业贡献，当前承担人接受并形成方案v2。",
+            "方案v2进入丁的独立审核待办。",
+            "丁已审核方案v2；甲仍需正式提交。",
+            "设备清单变为v2，预算及依赖稿件待重核；采购B不受影响。",
+            "已阻止：预算依据已过期；当前成果尚无有效独立审核",
+            "协作人已确认专业贡献，当前承担人接受并形成方案v3。",
+            "方案v3进入丁的独立审核待办。",
+            "丁已审核方案v3；甲仍需正式提交。",
+            "方案v3正式交付，生成唯一交接包和下游接手任务；流程仍待下游处理。"
+          ],
+          "drafts": {
+            "A": "",
+            "B": "",
+            "C": ""
+          },
+          "scenario": "stale",
+          "step": 9
+        },
+        "role": "main",
+        "page": "P16",
+        "overview": true
+      }
+    },
+    {
+      "name": "guided scenario transfer",
+      "pass": true,
+      "actual": {
+        "state": {
+          "baseline": 1,
+          "budgetBasis": 1,
+          "candidate": 3,
+          "contribution": true,
+          "review": "已审核",
+          "reviewVersion": 3,
+          "committed": {
+            "version": 3,
+            "baseline": 1,
+            "epoch": 2,
+            "actor": "戊"
+          },
+          "readable": true,
+          "received": false,
+          "assignee": "戊",
+          "epoch": 2,
+          "runEpoch": 2,
+          "external": "未调用",
+          "copies": 0,
+          "copiedResources": [],
+          "preferences": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "connection": false,
+          "mode": "AI协助",
+          "selectedTask": "A",
+          "tasks": [
+            "A",
+            "B",
+            "C"
+          ],
+          "notice": "方案v3正式交付，生成唯一交接包和下游接手任务；流程仍待下游处理。",
+          "history": [
+            "发起人创建采购A、采购B及合同C；实例与任务相互独立。",
+            "协作人已确认专业贡献，当前承担人接受并形成方案v2。",
+            "当前承担人改为戊，第2轮；甲的运行即使迟到也不能提交。",
+            "已阻止：仅当前承担人可正式提交",
+            "戊已确认本轮配置与资料，旧运行只保留为历史。",
+            "协作人已确认专业贡献，当前承担人接受并形成方案v3。",
+            "方案v3进入丁的独立审核待办。",
+            "丁已审核方案v3；甲仍需正式提交。",
+            "方案v3正式交付，生成唯一交接包和下游接手任务；流程仍待下游处理。"
+          ],
+          "drafts": {
+            "A": "",
+            "B": "",
+            "C": ""
+          },
+          "scenario": "transfer",
+          "step": 8
+        },
+        "role": "writer",
+        "page": "P16",
+        "overview": true
+      }
+    },
+    {
+      "name": "guided scenario blocked",
+      "pass": true,
+      "actual": {
+        "state": {
+          "baseline": 1,
+          "budgetBasis": 1,
+          "candidate": 2,
+          "contribution": true,
+          "review": "已审核",
+          "reviewVersion": 2,
+          "committed": {
+            "version": 2,
+            "baseline": 1,
+            "epoch": 1,
+            "actor": "甲"
+          },
+          "readable": true,
+          "received": true,
+          "assignee": "甲",
+          "epoch": 1,
+          "runEpoch": 1,
+          "external": "未调用",
+          "copies": 0,
+          "copiedResources": [],
+          "preferences": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "connection": false,
+          "mode": "AI协助",
+          "selectedTask": "A",
+          "tasks": [
+            "A",
+            "B",
+            "C"
+          ],
+          "notice": "己核对了包版本和资料并接手；后续业务仍由流程继续。",
+          "history": [
+            "发起人创建采购A、采购B及合同C；实例与任务相互独立。",
+            "协作人已确认专业贡献，当前承担人接受并形成方案v2。",
+            "方案v2进入丁的独立审核待办。",
+            "丁已审核方案v2；甲仍需正式提交。",
+            "方案v2正式交付，生成唯一交接包和下游接手任务；流程仍待下游处理。",
+            "模拟必需预算文件对下游不可读，接手必须被阻止。",
+            "已阻止：必需预算附件不可读，请补齐资料权限",
+            "有权人员已补齐该包对接收人的必需读取条件（仅本地模拟）。",
+            "己核对了包版本和资料并接手；后续业务仍由流程继续。"
+          ],
+          "drafts": {
+            "A": "",
+            "B": "",
+            "C": ""
+          },
+          "scenario": "blocked",
+          "step": 8
+        },
+        "role": "receiver",
+        "page": "P16",
+        "overview": true
+      }
+    },
+    {
+      "name": "guided scenario unknown",
+      "pass": true,
+      "actual": {
+        "state": {
+          "baseline": 1,
+          "budgetBasis": 1,
+          "candidate": 2,
+          "contribution": true,
+          "review": "已审核",
+          "reviewVersion": 2,
+          "committed": {
+            "version": 2,
+            "baseline": 1,
+            "epoch": 1,
+            "actor": "甲"
+          },
+          "readable": true,
+          "received": false,
+          "assignee": "甲",
+          "epoch": 1,
+          "runEpoch": 1,
+          "external": "已查证：单一外部对象",
+          "copies": 0,
+          "copiedResources": [],
+          "preferences": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "connection": false,
+          "mode": "AI协助",
+          "selectedTask": "A",
+          "tasks": [
+            "A",
+            "B",
+            "C"
+          ],
+          "notice": "方案v2正式交付，生成唯一交接包和下游接手任务；流程仍待下游处理。",
+          "history": [
+            "发起人创建采购A、采购B及合同C；实例与任务相互独立。",
+            "协作人已确认专业贡献，当前承担人接受并形成方案v2。",
+            "方案v2进入丁的独立审核待办。",
+            "丁已审核方案v2；甲仍需正式提交。",
+            "外部请求已发出但未获确定回执；禁止盲目重发或正式提交。",
+            "已阻止：外部操作结果尚未查证",
+            "查证到原逻辑动作的唯一外部对象，未再次执行写入。",
+            "方案v2正式交付，生成唯一交接包和下游接手任务；流程仍待下游处理。"
+          ],
+          "drafts": {
+            "A": "",
+            "B": "",
+            "C": ""
+          },
+          "scenario": "unknown",
+          "step": 7
+        },
+        "role": "main",
+        "page": "P16",
+        "overview": true
+      }
+    },
+    {
+      "name": "guided scenario market",
+      "pass": true,
+      "actual": {
+        "state": {
+          "baseline": 1,
+          "budgetBasis": 1,
+          "candidate": 1,
+          "contribution": false,
+          "review": "未送审",
+          "reviewVersion": null,
+          "committed": null,
+          "readable": true,
+          "received": false,
+          "assignee": "甲",
+          "epoch": 1,
+          "runEpoch": 1,
+          "external": "未调用",
+          "copies": 1,
+          "copiedResources": [
+            "数字员工"
+          ],
+          "preferences": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "connection": true,
+          "mode": "AI协助",
+          "selectedTask": "A",
+          "tasks": [
+            "A",
+            "B",
+            "C"
+          ],
+          "notice": "个人副本已选入采购A当前任务配置，尚未运行。",
+          "history": [
+            "发起人创建采购A、采购B及合同C；实例与任务相互独立。",
+            "已获得数字员工个人副本，保留各自来源版本；重复本次意图返回同一副本。需要配置本人的连接身份。",
+            "已获得数字员工个人副本，保留各自来源版本；重复本次意图返回同一副本。需要配置本人的连接身份。",
+            "已阻止：需先有个人副本并配置本人连接",
+            "本人连接已完成示例配置，没有复制来源作者的凭据。",
+            "个人副本已选入采购A当前任务配置，尚未运行。"
+          ],
+          "drafts": {
+            "A": "",
+            "B": "",
+            "C": ""
+          },
+          "scenario": "market",
+          "step": 5
+        },
+        "role": "main",
+        "page": "P22",
+        "overview": true
+      }
+    },
+    {
+      "name": "guided scenario rework",
+      "pass": true,
+      "actual": {
+        "state": {
+          "baseline": 1,
+          "budgetBasis": 1,
+          "candidate": 3,
+          "contribution": true,
+          "review": "已审核",
+          "reviewVersion": 3,
+          "committed": {
+            "version": 3,
+            "baseline": 1,
+            "epoch": 2,
+            "actor": "甲"
+          },
+          "readable": true,
+          "received": false,
+          "assignee": "甲",
+          "epoch": 2,
+          "runEpoch": 2,
+          "external": "未调用",
+          "copies": 0,
+          "copiedResources": [],
+          "preferences": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "connection": false,
+          "mode": "AI协助",
+          "selectedTask": "A",
+          "tasks": [
+            "A",
+            "B",
+            "C"
+          ],
+          "notice": "方案v3正式交付，生成唯一交接包和下游接手任务；流程仍待下游处理。",
+          "history": [
+            "发起人创建采购A、采购B及合同C；实例与任务相互独立。",
+            "协作人已确认专业贡献，当前承担人接受并形成方案v2。",
+            "方案v2进入丁的独立审核待办。",
+            "丁退回并给出理由，产生第2轮任务；旧执行和审核失效。",
+            "已阻止：必需专业贡献尚未确认；当前成果尚无有效独立审核；原执行依据的人员责任已失效",
+            "甲已确认本轮配置与资料，旧运行只保留为历史。",
+            "协作人已确认专业贡献，当前承担人接受并形成方案v3。",
+            "方案v3进入丁的独立审核待办。",
+            "丁已审核方案v3；甲仍需正式提交。",
+            "方案v3正式交付，生成唯一交接包和下游接手任务；流程仍待下游处理。"
+          ],
+          "drafts": {
+            "A": "",
+            "B": "",
+            "C": ""
+          },
+          "scenario": "rework",
+          "step": 9
+        },
+        "role": "main",
+        "page": "P16",
+        "overview": true
+      }
+    },
+    {
+      "name": "self approval blocked",
+      "pass": true,
+      "actual": "已阻止：必须由被指定的独立审核人决定"
+    },
+    {
+      "name": "delivered package immutable",
+      "pass": true,
+      "actual": "已阻止：已交付包不可改写，请发起补充/返工"
+    },
+    {
+      "name": "B draft starts empty",
+      "pass": true,
+      "actual": ""
+    },
+    {
+      "name": "A draft preserved independently",
+      "pass": true,
+      "actual": "采购A的私有草稿"
+    },
+    {
+      "name": "AI configuration preview and accept without run",
+      "pass": true,
+      "actual": "已采用所选变化，可撤销。仅保存设置，未启动执行。"
+    },
+    {
+      "name": "AI experience P19",
+      "pass": true,
+      "actual": {
+        "notice": "采购A待甲编制方案，各协作人拥有独立工作。",
+        "analysis": true
+      }
+    },
+    {
+      "name": "AI experience P08",
+      "pass": true,
+      "actual": {
+        "notice": "关系已确认。业务方案、审核和授权均未改变。",
+        "factConfirmed": true
+      }
+    },
+    {
+      "name": "AI experience P14",
+      "pass": true,
+      "actual": {
+        "notice": "已接续到本任务草稿，尚未发送或执行。",
+        "proactiveDraft": true
+      }
+    },
+    {
+      "name": "AI experience P09",
+      "pass": true,
+      "actual": {
+        "notice": "已展开证据样例，实际业务评估仍待执行。",
+        "evolutionEvaluated": true
+      }
+    },
+    {
+      "name": "AI experience P21",
+      "pass": true,
+      "actual": {
+        "notice": "本人偏好已保存，可撤销。",
+        "preferenceSaved": true
+      }
+    },
+    {
+      "name": "market empty state",
+      "pass": true,
+      "actual": "no copies"
+    },
+    {
+      "name": "market skill filter",
+      "pass": true,
+      "actual": "one skill"
+    },
+    {
+      "name": "copies separated by resource and idempotent",
+      "pass": true,
+      "actual": [
+        "技能",
+        "数字员工"
+      ]
+    },
+    {
+      "name": "my copies filter",
+      "pass": true,
+      "actual": "two adopted resources"
+    },
+    {
+      "name": "saved preference value survives rerender",
+      "pass": true,
+      "actual": "daily digest selected"
+    },
+    {
+      "name": "no stale-source alert in initial state",
+      "pass": true,
+      "actual": "initial version consistent"
+    },
+    {
+      "name": "secondary instance excludes A delivery controls",
+      "pass": true,
+      "actual": "B own draft-only design boundary"
+    },
+    {
+      "name": "audit summary masks business titles",
+      "pass": true,
+      "actual": "我的工作"
+    },
+    {
+      "name": "audit view has no process start action",
+      "pass": true,
+      "actual": "restricted entry"
+    }
+  ],
+  "screenshots": [
+    {
+      "page": "P01",
+      "width": 1440,
+      "height": 1080,
+      "path": "validation/product-design-prototype/P01-1440.png",
+      "scope": "viewport screenshot, not full-page interaction proof"
+    },
+    {
+      "page": "P02",
+      "width": 1440,
+      "height": 1080,
+      "path": "validation/product-design-prototype/P02-1440.png",
+      "scope": "viewport screenshot, not full-page interaction proof"
+    },
+    {
+      "page": "P03",
+      "width": 1440,
+      "height": 1080,
+      "path": "validation/product-design-prototype/P03-1440.png",
+      "scope": "viewport screenshot, not full-page interaction proof"
+    },
+    {
+      "page": "P04",
+      "width": 1440,
+      "height": 1080,
+      "path": "validation/product-design-prototype/P04-1440.png",
+      "scope": "viewport screenshot, not full-page interaction proof"
+    },
+    {
+      "page": "P05",
+      "width": 1440,
+      "height": 1080,
+      "path": "validation/product-design-prototype/P05-1440.png",
+      "scope": "viewport screenshot, not full-page interaction proof"
+    },
+    {
+      "page": "P06",
+      "width": 1440,
+      "height": 1080,
+      "path": "validation/product-design-prototype/P06-1440.png",
+      "scope": "viewport screenshot, not full-page interaction proof"
+    },
+    {
+      "page": "P07",
+      "width": 1440,
+      "height": 1080,
+      "path": "validation/product-design-prototype/P07-1440.png",
+      "scope": "viewport screenshot, not full-page interaction proof"
+    },
+    {
+      "page": "P08",
+      "width": 1440,
+      "height": 1080,
+      "path": "validation/product-design-prototype/P08-1440.png",
+      "scope": "viewport screenshot, not full-page interaction proof"
+    },
+    {
+      "page": "P09",
+      "width": 1440,
+      "height": 1080,
+      "path": "validation/product-design-prototype/P09-1440.png",
+      "scope": "viewport screenshot, not full-page interaction proof"
+    },
+    {
+      "page": "P10",
+      "width": 1440,
+      "height": 1080,
+      "path": "validation/product-design-prototype/P10-1440.png",
+      "scope": "viewport screenshot, not full-page interaction proof"
+    },
+    {
+      "page": "P11",
+      "width": 1440,
+      "height": 1080,
+      "path": "validation/product-design-prototype/P11-1440.png",
+      "scope": "viewport screenshot, not full-page interaction proof"
+    },
+    {
+      "page": "P12",
+      "width": 1440,
+      "height": 1080,
+      "path": "validation/product-design-prototype/P12-1440.png",
+      "scope": "viewport screenshot, not full-page interaction proof"
+    },
+    {
+      "page": "P13",
+      "width": 1440,
+      "height": 1080,
+      "path": "validation/product-design-prototype/P13-1440.png",
+      "scope": "viewport screenshot, not full-page interaction proof"
+    },
+    {
+      "page": "P14",
+      "width": 1440,
+      "height": 1080,
+      "path": "validation/product-design-prototype/P14-1440.png",
+      "scope": "viewport screenshot, not full-page interaction proof"
+    },
+    {
+      "page": "P15",
+      "width": 1440,
+      "height": 1080,
+      "path": "validation/product-design-prototype/P15-1440.png",
+      "scope": "viewport screenshot, not full-page interaction proof"
+    },
+    {
+      "page": "P16",
+      "width": 1440,
+      "height": 1080,
+      "path": "validation/product-design-prototype/P16-1440.png",
+      "scope": "viewport screenshot, not full-page interaction proof"
+    },
+    {
+      "page": "P17",
+      "width": 1440,
+      "height": 1080,
+      "path": "validation/product-design-prototype/P17-1440.png",
+      "scope": "viewport screenshot, not full-page interaction proof"
+    },
+    {
+      "page": "P18",
+      "width": 1440,
+      "height": 1080,
+      "path": "validation/product-design-prototype/P18-1440.png",
+      "scope": "viewport screenshot, not full-page interaction proof"
+    },
+    {
+      "page": "P19",
+      "width": 1440,
+      "height": 1080,
+      "path": "validation/product-design-prototype/P19-1440.png",
+      "scope": "viewport screenshot, not full-page interaction proof"
+    },
+    {
+      "page": "P20",
+      "width": 1440,
+      "height": 1080,
+      "path": "validation/product-design-prototype/P20-1440.png",
+      "scope": "viewport screenshot, not full-page interaction proof"
+    },
+    {
+      "page": "P21",
+      "width": 1440,
+      "height": 1080,
+      "path": "validation/product-design-prototype/P21-1440.png",
+      "scope": "viewport screenshot, not full-page interaction proof"
+    },
+    {
+      "page": "P22",
+      "width": 1440,
+      "height": 1080,
+      "path": "validation/product-design-prototype/P22-1440.png",
+      "scope": "viewport screenshot, not full-page interaction proof"
+    },
+    {
+      "page": "P01",
+      "width": 1024,
+      "height": 1080,
+      "path": "validation/product-design-prototype/P01-1024.png",
+      "scope": "viewport screenshot, not full-page interaction proof"
+    },
+    {
+      "page": "P02",
+      "width": 1024,
+      "height": 1080,
+      "path": "validation/product-design-prototype/P02-1024.png",
+      "scope": "viewport screenshot, not full-page interaction proof"
+    },
+    {
+      "page": "P03",
+      "width": 1024,
+      "height": 1080,
+      "path": "validation/product-design-prototype/P03-1024.png",
+      "scope": "viewport screenshot, not full-page interaction proof"
+    },
+    {
+      "page": "P04",
+      "width": 1024,
+      "height": 1080,
+      "path": "validation/product-design-prototype/P04-1024.png",
+      "scope": "viewport screenshot, not full-page interaction proof"
+    },
+    {
+      "page": "P05",
+      "width": 1024,
+      "height": 1080,
+      "path": "validation/product-design-prototype/P05-1024.png",
+      "scope": "viewport screenshot, not full-page interaction proof"
+    },
+    {
+      "page": "P06",
+      "width": 1024,
+      "height": 1080,
+      "path": "validation/product-design-prototype/P06-1024.png",
+      "scope": "viewport screenshot, not full-page interaction proof"
+    },
+    {
+      "page": "P07",
+      "width": 1024,
+      "height": 1080,
+      "path": "validation/product-design-prototype/P07-1024.png",
+      "scope": "viewport screenshot, not full-page interaction proof"
+    },
+    {
+      "page": "P08",
+      "width": 1024,
+      "height": 1080,
+      "path": "validation/product-design-prototype/P08-1024.png",
+      "scope": "viewport screenshot, not full-page interaction proof"
+    },
+    {
+      "page": "P09",
+      "width": 1024,
+      "height": 1080,
+      "path": "validation/product-design-prototype/P09-1024.png",
+      "scope": "viewport screenshot, not full-page interaction proof"
+    },
+    {
+      "page": "P10",
+      "width": 1024,
+      "height": 1080,
+      "path": "validation/product-design-prototype/P10-1024.png",
+      "scope": "viewport screenshot, not full-page interaction proof"
+    },
+    {
+      "page": "P11",
+      "width": 1024,
+      "height": 1080,
+      "path": "validation/product-design-prototype/P11-1024.png",
+      "scope": "viewport screenshot, not full-page interaction proof"
+    },
+    {
+      "page": "P12",
+      "width": 1024,
+      "height": 1080,
+      "path": "validation/product-design-prototype/P12-1024.png",
+      "scope": "viewport screenshot, not full-page interaction proof"
+    },
+    {
+      "page": "P13",
+      "width": 1024,
+      "height": 1080,
+      "path": "validation/product-design-prototype/P13-1024.png",
+      "scope": "viewport screenshot, not full-page interaction proof"
+    },
+    {
+      "page": "P14",
+      "width": 1024,
+      "height": 1080,
+      "path": "validation/product-design-prototype/P14-1024.png",
+      "scope": "viewport screenshot, not full-page interaction proof"
+    },
+    {
+      "page": "P15",
+      "width": 1024,
+      "height": 1080,
+      "path": "validation/product-design-prototype/P15-1024.png",
+      "scope": "viewport screenshot, not full-page interaction proof"
+    },
+    {
+      "page": "P16",
+      "width": 1024,
+      "height": 1080,
+      "path": "validation/product-design-prototype/P16-1024.png",
+      "scope": "viewport screenshot, not full-page interaction proof"
+    },
+    {
+      "page": "P17",
+      "width": 1024,
+      "height": 1080,
+      "path": "validation/product-design-prototype/P17-1024.png",
+      "scope": "viewport screenshot, not full-page interaction proof"
+    },
+    {
+      "page": "P18",
+      "width": 1024,
+      "height": 1080,
+      "path": "validation/product-design-prototype/P18-1024.png",
+      "scope": "viewport screenshot, not full-page interaction proof"
+    },
+    {
+      "page": "P19",
+      "width": 1024,
+      "height": 1080,
+      "path": "validation/product-design-prototype/P19-1024.png",
+      "scope": "viewport screenshot, not full-page interaction proof"
+    },
+    {
+      "page": "P20",
+      "width": 1024,
+      "height": 1080,
+      "path": "validation/product-design-prototype/P20-1024.png",
+      "scope": "viewport screenshot, not full-page interaction proof"
+    },
+    {
+      "page": "P21",
+      "width": 1024,
+      "height": 1080,
+      "path": "validation/product-design-prototype/P21-1024.png",
+      "scope": "viewport screenshot, not full-page interaction proof"
+    },
+    {
+      "page": "P22",
+      "width": 1024,
+      "height": 1080,
+      "path": "validation/product-design-prototype/P22-1024.png",
+      "scope": "viewport screenshot, not full-page interaction proof"
+    },
+    {
+      "page": "P01",
+      "width": 390,
+      "height": 1080,
+      "path": "validation/product-design-prototype/P01-390.png",
+      "scope": "viewport screenshot, not full-page interaction proof"
+    },
+    {
+      "page": "P02",
+      "width": 390,
+      "height": 1080,
+      "path": "validation/product-design-prototype/P02-390.png",
+      "scope": "viewport screenshot, not full-page interaction proof"
+    },
+    {
+      "page": "P03",
+      "width": 390,
+      "height": 1080,
+      "path": "validation/product-design-prototype/P03-390.png",
+      "scope": "viewport screenshot, not full-page interaction proof"
+    },
+    {
+      "page": "P04",
+      "width": 390,
+      "height": 1080,
+      "path": "validation/product-design-prototype/P04-390.png",
+      "scope": "viewport screenshot, not full-page interaction proof"
+    },
+    {
+      "page": "P05",
+      "width": 390,
+      "height": 1080,
+      "path": "validation/product-design-prototype/P05-390.png",
+      "scope": "viewport screenshot, not full-page interaction proof"
+    },
+    {
+      "page": "P06",
+      "width": 390,
+      "height": 1080,
+      "path": "validation/product-design-prototype/P06-390.png",
+      "scope": "viewport screenshot, not full-page interaction proof"
+    },
+    {
+      "page": "P07",
+      "width": 390,
+      "height": 1080,
+      "path": "validation/product-design-prototype/P07-390.png",
+      "scope": "viewport screenshot, not full-page interaction proof"
+    },
+    {
+      "page": "P08",
+      "width": 390,
+      "height": 1080,
+      "path": "validation/product-design-prototype/P08-390.png",
+      "scope": "viewport screenshot, not full-page interaction proof"
+    },
+    {
+      "page": "P09",
+      "width": 390,
+      "height": 1080,
+      "path": "validation/product-design-prototype/P09-390.png",
+      "scope": "viewport screenshot, not full-page interaction proof"
+    },
+    {
+      "page": "P10",
+      "width": 390,
+      "height": 1080,
+      "path": "validation/product-design-prototype/P10-390.png",
+      "scope": "viewport screenshot, not full-page interaction proof"
+    },
+    {
+      "page": "P11",
+      "width": 390,
+      "height": 1080,
+      "path": "validation/product-design-prototype/P11-390.png",
+      "scope": "viewport screenshot, not full-page interaction proof"
+    },
+    {
+      "page": "P12",
+      "width": 390,
+      "height": 1080,
+      "path": "validation/product-design-prototype/P12-390.png",
+      "scope": "viewport screenshot, not full-page interaction proof"
+    },
+    {
+      "page": "P13",
+      "width": 390,
+      "height": 1080,
+      "path": "validation/product-design-prototype/P13-390.png",
+      "scope": "viewport screenshot, not full-page interaction proof"
+    },
+    {
+      "page": "P14",
+      "width": 390,
+      "height": 1080,
+      "path": "validation/product-design-prototype/P14-390.png",
+      "scope": "viewport screenshot, not full-page interaction proof"
+    },
+    {
+      "page": "P15",
+      "width": 390,
+      "height": 1080,
+      "path": "validation/product-design-prototype/P15-390.png",
+      "scope": "viewport screenshot, not full-page interaction proof"
+    },
+    {
+      "page": "P16",
+      "width": 390,
+      "height": 1080,
+      "path": "validation/product-design-prototype/P16-390.png",
+      "scope": "viewport screenshot, not full-page interaction proof"
+    },
+    {
+      "page": "P17",
+      "width": 390,
+      "height": 1080,
+      "path": "validation/product-design-prototype/P17-390.png",
+      "scope": "viewport screenshot, not full-page interaction proof"
+    },
+    {
+      "page": "P18",
+      "width": 390,
+      "height": 1080,
+      "path": "validation/product-design-prototype/P18-390.png",
+      "scope": "viewport screenshot, not full-page interaction proof"
+    },
+    {
+      "page": "P19",
+      "width": 390,
+      "height": 1080,
+      "path": "validation/product-design-prototype/P19-390.png",
+      "scope": "viewport screenshot, not full-page interaction proof"
+    },
+    {
+      "page": "P20",
+      "width": 390,
+      "height": 1080,
+      "path": "validation/product-design-prototype/P20-390.png",
+      "scope": "viewport screenshot, not full-page interaction proof"
+    },
+    {
+      "page": "P21",
+      "width": 390,
+      "height": 1080,
+      "path": "validation/product-design-prototype/P21-390.png",
+      "scope": "viewport screenshot, not full-page interaction proof"
+    },
+    {
+      "page": "P22",
+      "width": 390,
+      "height": 1080,
+      "path": "validation/product-design-prototype/P22-390.png",
+      "scope": "viewport screenshot, not full-page interaction proof"
+    },
+    {
+      "scenario": "happy",
+      "path": "validation/product-design-prototype/scenario-happy.png"
+    },
+    {
+      "scenario": "stale",
+      "path": "validation/product-design-prototype/scenario-stale.png"
+    },
+    {
+      "scenario": "transfer",
+      "path": "validation/product-design-prototype/scenario-transfer.png"
+    },
+    {
+      "scenario": "blocked",
+      "path": "validation/product-design-prototype/scenario-blocked.png"
+    },
+    {
+      "scenario": "unknown",
+      "path": "validation/product-design-prototype/scenario-unknown.png"
+    },
+    {
+      "scenario": "market",
+      "path": "validation/product-design-prototype/scenario-market.png"
+    },
+    {
+      "scenario": "rework",
+      "path": "validation/product-design-prototype/scenario-rework.png"
+    }
+  ],
+  "pageErrors": [],
+  "productTestsRun": false,
+  "prototypeSha256": "59a4d8948c86292bb3562218d534ae37154fb8d6317bcfd97883dfc98e7e5cbe",
+  "browserVersion": "152.0.7977.83",
+  "finishedAt": "2026-09-11T17:25:22.192Z",
+  "status": "PASS"
+}

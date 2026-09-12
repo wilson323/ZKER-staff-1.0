@@ -1,0 +1,381 @@
+{
+  "retrievedAt": "2026-09-11T23:55:12.942876+00:00",
+  "operation": "get_knowledge_list",
+  "request": {
+    "knowledge_base_id": "rTA7c5cPSJzEEruONUS2Ku0Afd01qlq2a64D56ZbH8o=",
+    "cursor": "",
+    "limit": 50
+  },
+  "exitCode": 0,
+  "response": {
+    "code": 0,
+    "msg": "success",
+    "data": {
+      "knowledge_list": [
+        {
+          "media_id": "markdown_ec33932d8853cbba6c243aca003fa1c2_fc4cbb5f9726a7f67ac1bf2c7f5a85a97493979318811421",
+          "title": "DSH Desktop 插件开发.md",
+          "parent_folder_id": "7493979318811421",
+          "tags": [],
+          "media_type": 7
+        },
+        {
+          "media_id": "markdown_ec33932d8853cbba6c243aca003fa1c2_888d06fac23243e11a1d94f0faa6a0547493979318811421",
+          "title": "20260816DSH插件精选-880+.md",
+          "parent_folder_id": "7493979318811421",
+          "tags": [],
+          "media_type": 7
+        },
+        {
+          "media_id": "wechatarticle_ec33932d8853cbba6c243aca003fa1c2_23994f145a4dabfac12d14daf23382d27493979318811421",
+          "title": "一个提示词，十五步DIY你的AI取证工作台",
+          "parent_folder_id": "7493979318811421",
+          "tags": [],
+          "media_type": 6
+        },
+        {
+          "media_id": "weburl_ec33932d8853cbba6c243aca003fa1c2_aa9167e6db312c71e78e498c9dd82d847493979318811421",
+          "title": "The deepseek of DeepSeek Harness: Overengineering or built for self-evolution? | Life Odyssey-Life Odyssey",
+          "parent_folder_id": "7493979318811421",
+          "tags": [],
+          "media_type": 2
+        },
+        {
+          "media_id": "wechatarticle_ec33932d8853cbba6c243aca003fa1c2_85dd6a1a991e1603435dc6304eb69b647493979318811421",
+          "title": "我封装的插件让DeepSeek Harness秒变多媒体工作台",
+          "parent_folder_id": "7493979318811421",
+          "tags": [],
+          "media_type": 6
+        },
+        {
+          "media_id": "wechatarticle_ec33932d8853cbba6c243aca003fa1c2_a079da317526bbb4214bef0e1fa694817493979318811421",
+          "title": "DSH：Minke v0.2.0 发布了",
+          "parent_folder_id": "7493979318811421",
+          "tags": [],
+          "media_type": 6
+        },
+        {
+          "media_id": "wechatarticle_ec33932d8853cbba6c243aca003fa1c2_bd56b80f02f0cf8193e13797bf9cca497493979318811421",
+          "title": "DeepSeek 终于支持多模态了（附实测及接入教程）",
+          "parent_folder_id": "7493979318811421",
+          "tags": [],
+          "media_type": 6
+        },
+        {
+          "media_id": "wechatarticle_ec33932d8853cbba6c243aca003fa1c2_8146c3f94a7052bc6d9b245fa66616b97493979318811421",
+          "title": "V4-Flash-Vision-Exp 上线，开启多模态 API 服务",
+          "parent_folder_id": "7493979318811421",
+          "tags": [],
+          "media_type": 6
+        },
+        {
+          "media_id": "wechatarticle_ec33932d8853cbba6c243aca003fa1c2_cfbb879572beb704e337470b253e68697493979318811421",
+          "title": "DeepSeek Harness 更新：官方多模态支持",
+          "parent_folder_id": "7493979318811421",
+          "tags": [],
+          "media_type": 6
+        },
+        {
+          "media_id": "wechatarticle_ec33932d8853cbba6c243aca003fa1c2_383179d3ab2b07ad3151edf30f3cd20d7493979318811421",
+          "title": "基于阿里云 AgentLoop 的 DeepSeek Harness 评测实践",
+          "parent_folder_id": "7493979318811421",
+          "tags": [],
+          "media_type": 6
+        },
+        {
+          "media_id": "wechatarticle_ec33932d8853cbba6c243aca003fa1c2_31fc8063b0f84d42c18cd6fe6c3c14527493979318811421",
+          "title": "DeepSeek Harness 大起底：这一次，重新定义「插件」",
+          "parent_folder_id": "7493979318811421",
+          "tags": [],
+          "media_type": 6
+        },
+        {
+          "media_id": "wechatarticle_ec33932d8853cbba6c243aca003fa1c2_288bd01b8e21e2bd96f4b270455d84e27493979318811421",
+          "title": "Minke：DeepSeek Harness 桌面应用",
+          "parent_folder_id": "7493979318811421",
+          "tags": [],
+          "media_type": 6
+        },
+        {
+          "media_id": "wechatarticle_ec33932d8853cbba6c243aca003fa1c2_bfee29077587df0a18de92c4f2ee52d97493979318811421",
+          "title": "DeepSeek Harness 首发实测 + 入门教程，夯爆了！",
+          "parent_folder_id": "7493979318811421",
+          "tags": [],
+          "media_type": 6
+        },
+        {
+          "media_id": "wechatarticle_ec33932d8853cbba6c243aca003fa1c2_24e18b2570c96692766d93b0c3411bf47493979318811421",
+          "title": "网友把DeepSeek Harness玩成了赛博乐高，我们挑出了最有意思的11个插件",
+          "parent_folder_id": "7493979318811421",
+          "tags": [],
+          "media_type": 6
+        },
+        {
+          "media_id": "wechatarticle_ec33932d8853cbba6c243aca003fa1c2_715c80dd6ce2741f75cd192d194665117493979318811421",
+          "title": "爆火的 DeepSeek Harness，全网最全小白接入教程！",
+          "parent_folder_id": "7493979318811421",
+          "tags": [],
+          "media_type": 6
+        },
+        {
+          "media_id": "wechatarticle_ec33932d8853cbba6c243aca003fa1c2_fa224d9e9ebc534201cabfdc3aab87d77493979318811421",
+          "title": "一个小众变态的 DeepSeek Harness 插件",
+          "parent_folder_id": "7493979318811421",
+          "tags": [],
+          "media_type": 6
+        },
+        {
+          "media_id": "wechatarticle_ec33932d8853cbba6c243aca003fa1c2_77615eb9a133940cb87bf9f00486376e7493979318811421",
+          "title": "DeepSeek Harness 保姆级教程！",
+          "parent_folder_id": "7493979318811421",
+          "tags": [],
+          "media_type": 6
+        },
+        {
+          "media_id": "wechatarticle_ec33932d8853cbba6c243aca003fa1c2_8f67f2082e3022936741568808e972f37493979318811421",
+          "title": "DeepSeek的Harness，为何是一头黑色鲸鱼？",
+          "parent_folder_id": "7493979318811421",
+          "tags": [],
+          "media_type": 6
+        },
+        {
+          "media_id": "wechatarticle_ec33932d8853cbba6c243aca003fa1c2_df2fd65f921f742c24622efc88265d097493979318811421",
+          "title": "DeepSeek Harness 必装插件清单：10个社区插件让你的DSH更好用",
+          "parent_folder_id": "7493979318811421",
+          "tags": [],
+          "media_type": 6
+        },
+        {
+          "media_id": "wechatarticle_ec33932d8853cbba6c243aca003fa1c2_d2f14a9e02f36282c09f73a360724cda7493979318811421",
+          "title": "太快了！聊聊 DeepSeek Harness 必装的插件。",
+          "parent_folder_id": "7493979318811421",
+          "tags": [],
+          "media_type": 6
+        },
+        {
+          "media_id": "wechatarticle_ec33932d8853cbba6c243aca003fa1c2_6a1c7209c05e3e12423d8a7d5e621b4b7493979318811421",
+          "title": "DeepSeek Harness从0到1实操教程",
+          "parent_folder_id": "7493979318811421",
+          "tags": [],
+          "media_type": 6
+        },
+        {
+          "media_id": "wechatarticle_ec33932d8853cbba6c243aca003fa1c2_7f2adacc84be17d6099f914781a5a6ca7493979318811421",
+          "title": "二次元头像=技术大佬？DeepSeek Harness揭开AI圈隐藏规律",
+          "parent_folder_id": "7493979318811421",
+          "tags": [],
+          "media_type": 6
+        },
+        {
+          "media_id": "wechatarticle_ec33932d8853cbba6c243aca003fa1c2_8d7cc7c5d3d0399b526f9c3c9ecaf6a37493979318811421",
+          "title": "DeepSeek V4 Pro 满血形态解锁指南",
+          "parent_folder_id": "7493979318811421",
+          "tags": [],
+          "media_type": 6
+        },
+        {
+          "media_id": "wechatarticle_ec33932d8853cbba6c243aca003fa1c2_45c6bce91cd1b2bcbf7c9d29a0b5b6947493979318811421",
+          "title": "深度拆解DeepSeek Harness：放弃桌面端、不内置TUI、主打插件生态的底层战略抉择",
+          "parent_folder_id": "7493979318811421",
+          "tags": [],
+          "media_type": 6
+        },
+        {
+          "media_id": "wechatarticle_ec33932d8853cbba6c243aca003fa1c2_6963bc0a5b20bc78b4f27770cf3464007493979318811421",
+          "title": "太夯了！6 个 DeepSeek Harness 必备插件！",
+          "parent_folder_id": "7493979318811421",
+          "tags": [],
+          "media_type": 6
+        },
+        {
+          "media_id": "wechatarticle_ec33932d8853cbba6c243aca003fa1c2_10dad76d1a3c8d312cd16ac6acef48667493979318811421",
+          "title": "DeepSeek Harness 插件搜索与安装",
+          "parent_folder_id": "7493979318811421",
+          "tags": [],
+          "media_type": 6
+        },
+        {
+          "media_id": "wechatarticle_ec33932d8853cbba6c243aca003fa1c2_7229dca3d14b42f6ff740eafb861b7157493979318811421",
+          "title": "二次元头像=技术大佬？DeepSeek Harness揭开AI圈隐藏规律",
+          "parent_folder_id": "7493979318811421",
+          "tags": [],
+          "media_type": 6
+        },
+        {
+          "media_id": "wechatarticle_ec33932d8853cbba6c243aca003fa1c2_314530c1f361a8b3cf34abed85e61b3d7493979318811421",
+          "title": "我的朋友，要不来试试 Harness？",
+          "parent_folder_id": "7493979318811421",
+          "tags": [],
+          "media_type": 6
+        },
+        {
+          "media_id": "wechatarticle_ec33932d8853cbba6c243aca003fa1c2_a3dcf2b5ff3ccfa0b563a4fc748deb987493979318811421",
+          "title": "花几天把 DeepSeek Harness 跑了个遍，跟你说说值不值得装",
+          "parent_folder_id": "7493979318811421",
+          "tags": [],
+          "media_type": 6
+        },
+        {
+          "media_id": "wechatarticle_ec33932d8853cbba6c243aca003fa1c2_ef5a44e7a1be8303c3afbad8305d02d37493979318811421",
+          "title": "从零开始，搭建你的 Harness，定制化懂你的 Agent",
+          "parent_folder_id": "7493979318811421",
+          "tags": [],
+          "media_type": 6
+        },
+        {
+          "media_id": "wechatarticle_ec33932d8853cbba6c243aca003fa1c2_3fe57553a22b80600b968aaf24c349cc7493979318811421",
+          "title": "从零开始，搭建你的 Harness，定制化懂你的 Agent",
+          "parent_folder_id": "7493979318811421",
+          "tags": [],
+          "media_type": 6
+        },
+        {
+          "media_id": "wechatarticle_ec33932d8853cbba6c243aca003fa1c2_7fc013b835c6cc2ae9dced0ad8ed305d7493979318811421",
+          "title": "我把 DeepSeek Harness 的二十万行，做成了一间可以亲手拆开的实验室",
+          "parent_folder_id": "7493979318811421",
+          "tags": [],
+          "media_type": 6
+        },
+        {
+          "media_id": "wechatarticle_ec33932d8853cbba6c243aca003fa1c2_afc1018571f35bb959347316a99ba7f27493979318811421",
+          "title": "10 万 Star 的 DeepSeek Harness，终于有开源桌面版了。",
+          "parent_folder_id": "7493979318811421",
+          "tags": [],
+          "media_type": 6
+        },
+        {
+          "media_id": "wechatarticle_ec33932d8853cbba6c243aca003fa1c2_813cbaf2091864186e7a8771b8bb766d7493979318811421",
+          "title": "实测DeepSeek Harness，原来PTC模式和Cordis插件才是隐藏大招",
+          "parent_folder_id": "7493979318811421",
+          "tags": [],
+          "media_type": 6
+        },
+        {
+          "media_id": "wechatarticle_ec33932d8853cbba6c243aca003fa1c2_62129f17b003a14c160af0cb1c09a8217493979318811421",
+          "title": "DeepSeek Harness插件一夜燃爆GitHub：长期记忆、电子宠物、4399小游戏全来了",
+          "parent_folder_id": "7493979318811421",
+          "tags": [],
+          "media_type": 6
+        },
+        {
+          "media_id": "wechatarticle_ec33932d8853cbba6c243aca003fa1c2_c5fecb01e3803b29187cfaceeff517267493979318811421",
+          "title": "DeepSeek Harness + Ollama = 新世界",
+          "parent_folder_id": "7493979318811421",
+          "tags": [],
+          "media_type": 6
+        },
+        {
+          "media_id": "weburl_ec33932d8853cbba6c243aca003fa1c2_9a013d92e3e54d6a378d5d7937bdcea77493979318811421",
+          "title": "DeepSeek Harness背后的论文：让Agent在运行中改写自己",
+          "parent_folder_id": "7493979318811421",
+          "tags": [],
+          "media_type": 2
+        },
+        {
+          "media_id": "weburl_ec33932d8853cbba6c243aca003fa1c2_02af0d5da29d5cec9846ea5fe7a87dcb7493979318811421",
+          "title": "深度体验DeepSeek Harness，我原谅它涨价了",
+          "parent_folder_id": "7493979318811421",
+          "tags": [],
+          "media_type": 2
+        },
+        {
+          "media_id": "wechatarticle_ec33932d8853cbba6c243aca003fa1c2_42ce6f117963c614f8f1504edf227f697493979318811421",
+          "title": "DeepSeek Harness 深度拆解，黑鲸出水掀起大模型终局之战？",
+          "parent_folder_id": "7493979318811421",
+          "tags": [],
+          "media_type": 6
+        },
+        {
+          "media_id": "wechatarticle_ec33932d8853cbba6c243aca003fa1c2_68c854f731decaf519208cb72763f1437493979318811421",
+          "title": "最新！DeepSeek Harness 插件教程来了！",
+          "parent_folder_id": "7493979318811421",
+          "tags": [],
+          "media_type": 6
+        },
+        {
+          "media_id": "wechatarticle_ec33932d8853cbba6c243aca003fa1c2_8f0cac9973ab3bed41c91509c30f4e6a7493979318811421",
+          "title": "高强度用了一天Deepseek Harness有兴奋有悲伤",
+          "parent_folder_id": "7493979318811421",
+          "tags": [],
+          "media_type": 6
+        },
+        {
+          "media_id": "wechatarticle_ec33932d8853cbba6c243aca003fa1c2_e06127ea2f36b8219d12ba671769069c7493979318811421",
+          "title": "DeepSeek Harness底层机制解析——北大&DS合作论文（附下载）",
+          "parent_folder_id": "7493979318811421",
+          "tags": [],
+          "media_type": 6
+        },
+        {
+          "media_id": "wechatarticle_ec33932d8853cbba6c243aca003fa1c2_cd4804cabe237655646cf5b401da4bde7493979318811421",
+          "title": "DeepSeek Harness从0到1实操教程",
+          "parent_folder_id": "7493979318811421",
+          "tags": [],
+          "media_type": 6
+        },
+        {
+          "media_id": "wechatarticle_ec33932d8853cbba6c243aca003fa1c2_5171541b1a3885018dca33ae076bbeb27493979318811421",
+          "title": "刚刚 DeepSeek-Harness 桌面版开源 win/mac",
+          "parent_folder_id": "7493979318811421",
+          "tags": [],
+          "media_type": 6
+        },
+        {
+          "media_id": "wechatarticle_ec33932d8853cbba6c243aca003fa1c2_dadedd54b73392fd3f92f7d5bc56e3c47493979318811421",
+          "title": "DeepSeek Harness 上手：一行命令，10 分钟跑起来",
+          "parent_folder_id": "7493979318811421",
+          "tags": [],
+          "media_type": 6
+        },
+        {
+          "media_id": "wechatarticle_ec33932d8853cbba6c243aca003fa1c2_2e156b4fdf77b4c935a5e5d3543ce3b67493979318811421",
+          "title": "DeepSeek Harness 首发实测 + 入门教程，夯爆了！对不起梁神我错了。。",
+          "parent_folder_id": "7493979318811421",
+          "tags": [],
+          "media_type": 6
+        },
+        {
+          "media_id": "wechatarticle_ec33932d8853cbba6c243aca003fa1c2_35731482e7961ae58c9b0386ac913be87493979318811421",
+          "title": "DeepSeek的Harness，为何是一头黑色鲸鱼？",
+          "parent_folder_id": "7493979318811421",
+          "tags": [],
+          "media_type": 6
+        },
+        {
+          "media_id": "wechatarticle_ec33932d8853cbba6c243aca003fa1c2_b16a5bc5651ba61cfc84fce5652536357493979318811421",
+          "title": "上手体验 DeepSeek Harness（ AI新手友好，附安装教程）",
+          "parent_folder_id": "7493979318811421",
+          "tags": [],
+          "media_type": 6
+        },
+        {
+          "media_id": "wechatarticle_ec33932d8853cbba6c243aca003fa1c2_3376291dc2c20665c20a2b1f5775ef947493979318811421",
+          "title": "DeepSeek黑鲸鱼Harness，“新”在哪里？",
+          "parent_folder_id": "7493979318811421",
+          "tags": [],
+          "media_type": 6
+        },
+        {
+          "media_id": "wechatarticle_ec33932d8853cbba6c243aca003fa1c2_7cb9afe7cadb5e9fba56fa56a700c2057493979318811421",
+          "title": "DeepSeek Harness：一切皆插件，以及 Agent 自进化",
+          "parent_folder_id": "7493979318811421",
+          "tags": [],
+          "media_type": 6
+        }
+      ],
+      "is_end": false,
+      "next_cursor": "CDI=",
+      "current_path": [
+        {
+          "folder_id": "7493979318811421",
+          "name": "DeepSeek Harness",
+          "file_number": "0",
+          "folder_number": "0",
+          "parent_folder_id": "",
+          "is_top": false
+        }
+      ],
+      "searched_tags": []
+    }
+  }
+}

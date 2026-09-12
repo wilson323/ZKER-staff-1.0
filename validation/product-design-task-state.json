@@ -1,0 +1,1595 @@
+{
+  "goal": "基于现有深度研究和QoderWake/StaffDeck一手研究，交付完整、闭环且低学习成本的全产品AI设计、用户故事、流程图与原型",
+  "scope": [
+    "新增26至30号设计文件",
+    "更新README、CONTEXT及00号导航",
+    "新增本次文档验证记录与校验脚本",
+    "31号自包含交互原型及原型截图",
+    "32号业务流程图与断点闭环审查",
+    "本地浏览器原型验收记录",
+    "33号QoderWake与StaffDeck融合研究及来源记录",
+    "本轮用户需求原文补充与接续提示词局部更新",
+    "AI-01至AI-12增量设计及AC-61至AC-72待执行验收",
+    "U22：34号工作台权限设计、31号原型局部重构、八项EW细化与局部导航/契约/验收同步",
+    "1.3：35号一手体验复核，31号全产品AI交互迭代，26/27/28/29/30及导航和验证同步"
+  ],
+  "acceptance_criteria": [
+    "保留153需求、21领域、22页面、41角色视角、44历史角色键、10市场和28OA细化",
+    "覆盖产品定位、职责、全域功能、UI字段、流程状态、ER与接口、非功能和验收",
+    "研究推荐不写成已选架构；历史代码和原型不写成新项目实现",
+    "本地引用有效，逐项追踪完整，源需求数据不改写",
+    "用户故事、业务流程图、可交互原型及真实浏览器截图齐备",
+    "逐项记录业务断点、处理人、恢复入口、验收及待实施边界",
+    "四区导航、默认推荐和渐进设置不缩减原功能",
+    "设置、分析、业务本体、主动AI与自主进化均有来源、权限、人员确认与恢复规则"
+  ],
+  "current_node": "T3",
+  "completed_nodes": [
+    "N1",
+    "N2",
+    "N3",
+    "N4",
+    "N5",
+    "N6",
+    "W1",
+    "W2",
+    "W3",
+    "A13-1",
+    "A13-2",
+    "A13-3",
+    "T1",
+    "T2",
+    "T3"
+  ],
+  "failed_nodes": [],
+  "artifacts": [
+    {
+      "path": "CONTEXT.md",
+      "sha256": "1c8818682ba1fad935832717bbca44b7f08db8efdf6dfb1fd8cd772fae86927e"
+    },
+    {
+      "path": "README.md",
+      "sha256": "2c7cc8d5f104c5e142763157c27871340e695fc272d146c343ec4f764f825e06"
+    },
+    {
+      "path": "docs/设计包/00-开发设计包导读.md",
+      "sha256": "0e0f1b01457b13243ad58095beea94e4f8761daaeda5d45eee27b80adb0bfd3a"
+    },
+    {
+      "path": "docs/设计包/26-完整产品设计文档.md",
+      "sha256": "bcebbc7b630db513d6e25f1e3a29cf6d8c0aa20984cfb76584c47e8243265166"
+    },
+    {
+      "path": "docs/设计包/27-逻辑数据模型与接口契约.md",
+      "sha256": "f151d7374dd9e61161e78d933937158dc61e1566c9acab39d449fd0ace727c1f"
+    },
+    {
+      "path": "docs/设计包/28-开发分期与验收用例.md",
+      "sha256": "95c8081a8aa1e75d1709c84764434cde92aa7f60992965fe4dc8dfcfed6a06ab"
+    },
+    {
+      "path": "docs/设计包/29-全量需求与角色追踪.md",
+      "sha256": "5fc35795c63ad04eee1b29a36ea66e98ac976eaf9558aad40598a039ecd7f11b"
+    },
+    {
+      "path": "docs/设计包/30-产品设计追踪数据.json",
+      "sha256": "5dbbe41a1e6853cfca898094a5e98ed929c9e4e8fe0c2d49da4cf213363b2fa8"
+    },
+    {
+      "path": "docs/设计包/31-完整产品交互原型.html",
+      "sha256": "59a4d8948c86292bb3562218d534ae37154fb8d6317bcfd97883dfc98e7e5cbe"
+    },
+    {
+      "path": "docs/设计包/32-业务流程图原型图与断点闭环审查.md",
+      "sha256": "716f48eaad1e17613223a2c148351d484d0bc238e61a5ea15cd91444cdabc3e5"
+    },
+    {
+      "path": "docs/设计包/33-QoderWake与StaffDeck融合及AI体验研究.md",
+      "sha256": "912757c5163345ca1ac9becba4c6408d9ab971a14683938e6648075f31227f17"
+    },
+    {
+      "path": "docs/设计包/34-任务执行工作台与权限分层设计.md",
+      "sha256": "e55216ef84474708326ca3697e095b8009639fca3d011813852c399e3f1134c4"
+    },
+    {
+      "path": "docs/设计包/35-全产品AI体验复核与改进.md",
+      "sha256": "3208f1dd91b7b0e32883d62e0c5ba34f0dac9e0458bb9ed71a281b7dc338fe68"
+    },
+    {
+      "path": "history/本轮产品设计需求补充-2026-09-11.md",
+      "sha256": "a00ff4c2de7a44522d447562278b3cce7d3d096a9cb78dc431e2ffcd92d81d83"
+    },
+    {
+      "path": "validation/ai-experience-research-check.json",
+      "sha256": "3482e1f909a522b9908683767dd17c225230c1c4af86fa77f51db4602b0f5634"
+    },
+    {
+      "path": "validation/ai-experience.css",
+      "sha256": "8ae4ee7092f0f63459d159afb9cec28cb9c4c3376fe765d541f6ebaefbaa99ab"
+    },
+    {
+      "path": "validation/ai-experience.js",
+      "sha256": "531e7e0fb557a5c6cac88d8fac7df63b6e8350dc2d6a9a04dc7c9315d8ed88c2"
+    },
+    {
+      "path": "validation/build_ai_experience.py",
+      "sha256": "fcc2c147cec4890a57c35612a757086853a29f4ae211bb04117a52a889a515f2"
+    },
+    {
+      "path": "validation/build_execution_workspace.py",
+      "sha256": "a310e75a97b2b08be1647a4f465199c35001f810b01a65404c0e7986825a0dd8"
+    },
+    {
+      "path": "validation/build_product_design_trace.py",
+      "sha256": "10d49bd9474a70093071d93f39ce2d7b2e50a72bc166bf0895d27a6eca280187"
+    },
+    {
+      "path": "validation/execution-workspace.css",
+      "sha256": "966bf6bcd791258af9f8c6e23655555b77c6c1bb9e1fd64779f8322ec7347269"
+    },
+    {
+      "path": "validation/execution-workspace.js",
+      "sha256": "f05750f0cf3673bcdab0126f3e9a31484404643b707adfb334b7d76cb10827e5"
+    },
+    {
+      "path": "validation/validate_ai_experience.cjs",
+      "sha256": "9e997d19537284a538183a1615767a0c89dac5425ec99bbc087b8529916e0935"
+    },
+    {
+      "path": "validation/validate_execution_workspace.cjs",
+      "sha256": "c739ca203f8a747fc459803e72a11f743008aace1cc8ba8cd47123e0e7c05c60"
+    },
+    {
+      "path": "validation/validate_product_design_documents.py",
+      "sha256": "27cf9aeeaa9a46b45715ad033e6dd2c197144a647220fa10a7047ad4b33a87b2"
+    },
+    {
+      "path": "validation/validate_product_design_prototype.cjs",
+      "sha256": "6b699fde04315c8b194fa8b77cd1eeea8159b6b9a32492b2e3bab450d2ce89b4"
+    },
+    {
+      "path": "项目接续提示词.md",
+      "sha256": "67c41a2547202e128cd79579d10a831838fdb0d77b977468dbc0d639daa6e7f9"
+    }
+  ],
+  "evidence": [
+    {
+      "path": "validation/product-design-document-check.json",
+      "status": "PASS",
+      "scope": "NEW_PRODUCT_DESIGN_DOCUMENTS_AND_LOCAL_PROTOTYPE_REFERENCES_ONLY",
+      "checks": 458,
+      "localLinks": 1404,
+      "mermaidSources": 16
+    },
+    {
+      "path": "validation/product-design-prototype-check.json",
+      "status": "PASS",
+      "scope": "LOCAL_IN_MEMORY_DESIGN_PROTOTYPE_ONLY",
+      "checks": 133,
+      "screenshots": 73,
+      "pageErrors": 0
+    },
+    {
+      "path": "validation/execution-workspace-check.json",
+      "status": "PASS",
+      "scope": "FICTIONAL_LOCAL_UI_PROJECTION_ONLY",
+      "checks": 32,
+      "screenshots": 9,
+      "pageErrors": 0
+    },
+    {
+      "path": "validation/ai-experience-check.json",
+      "status": "PASS",
+      "scope": "FICTIONAL_UI_STATE_AND_RECOVERY_ONLY",
+      "checks": 75,
+      "screenshots": 12,
+      "pageErrors": 0
+    },
+    {
+      "path": "validation/ai-experience-research-check.json",
+      "status": "PASS",
+      "scope": "STAFFDECK_LOCAL_STATIC_RESEARCH_ONLY",
+      "checks": 5
+    },
+    {
+      "path": "validation/ai-ux-research-sources.json",
+      "scope": "Prior research capture retained; new current-source recheck in ai-experience-research-check.json"
+    }
+  ],
+  "risks": [
+    "技术底座待确定",
+    "原型与历史证据非当前产品运行验证",
+    "旧源码能力尚未在新项目逐项复核"
+  ],
+  "approvals": [
+    "用户明确要求生成完整产品设计、用户故事、流程图与原型，并结合QoderWake/StaffDeck及全网最佳实践完善全产品AI体验；本轮只写本项目文档、原型、验证资料及导航。"
+  ],
+  "status": "VERIFIED",
+  "createdAt": "2026-09-11T14:31:28.581971+00:00",
+  "repositoryBaseline": "本目录没有Git仓库；未建分支或提交",
+  "sourceHashes": {
+    "docs/设计包/01-产品需求与业务规则.md": "70e831df05834202f9ee1da06eb0deee509d540c3bee1086ea4e5ad616374242",
+    "docs/设计包/02-数据模型与ER设计.md": "b37782f8eaf0af730dea956e701dbc2a19cbcf7db7cb9769118bd554d62ea505",
+    "docs/设计包/03-业务流程与状态机.md": "9cf5f2dadca47f1094ec2c4abeabf1439f42f5d0aae707763c0fb6ef2274ab50",
+    "docs/设计包/04-接口与契约变更设计.md": "28c8d9ce81a3ddd6c87dbd2948d4ed5690506931cdc349a2405e16c4a5176b47",
+    "docs/设计包/05-UI与交互设计.md": "a8cdb664ce33731b6b6e7778d12c8ff0e47540faa1a7c72cfbcae97b355b5d15",
+    "docs/设计包/06-用户故事与153项追踪矩阵.md": "9a42b4707fea6468a10a3c45b33858fb570e5609725fd9b0be97f800ee01374b",
+    "docs/设计包/07-开发分解与验收方案.md": "02b275525e83dda8e41070345e6d780e47831d67d8940244ab5b12f19bf0624e",
+    "docs/设计包/09-协作扩展候选.schema.json": "1febdcd56897f76aaf29087ab7919710397f1c87a6b859fd14fc96e92fe48f45",
+    "docs/设计包/10-需求追踪数据.json": "f462eedd02e8b0168cacfcf5d2e7cc9a2135b710021e4598e2c8e73ca7c0c002",
+    "docs/设计包/11-存量合同字段字典.md": "2027f594acf10075a62f802b50a7addb33992318a050755563b0da40bc67dea9",
+    "docs/设计包/12-员工市场复制与使用设计.md": "3dd288d28b31cf43629ef9878916742078c3f893b99a9862bf7bd5eeca43ef8d",
+    "docs/设计包/13-市场采用候选.schema.json": "3297a6a8f331f54b368a561148ec48a2bc27fe2b482033dffbadcfb684738ffd",
+    "docs/设计包/14-QoderWake界面参考与原型设计.md": "eb95c72c10dd37ce83df6fe72137d4bb3229d540e8808298d5e1c4aafbc3cd84",
+    "docs/设计包/15-全角色界面与操作覆盖矩阵.md": "d98271682ac632922236d92c4b60a950df635b7f3d4d5761bfc4a44dad20dd8f",
+    "docs/设计包/16-角色视角与权限演示数据.json": "fd3ac843ab53c5ce94f5f70214e735ff85501cc3f34f1bb9d52f36fbdfa35791",
+    "docs/设计包/17-角色需求与验收追踪.json": "72913aac3eb6dce0e7047fa51f56460d717d51d8eccc04ecb986549a5eddbbb8",
+    "docs/设计包/18-OA多流程多实例产品设计.md": "f219ba8d206db7fc0b1a5b03b869dcb2ed4acd0bb1b4f1ed09ce1292543bf25e",
+    "docs/设计包/19-OA多实例演示数据.json": "93e9933bd4abe8292b8b9f543d6a726cfb8e768b9197dada644e209619842914",
+    "docs/设计包/20-OA统一待办候选.schema.json": "532fa95aaddf6dac1d25a54c83b37737f583fd1a1cf6551c44b510b2bb415968",
+    "docs/设计包/21-OA需求细化与验收追踪.json": "b20bcd521123667dfc4c12f7da8d9f4f408d231b9241d3651cf425cb190ea12b",
+    "docs/设计包/22-开源工作流与成熟前端复用选型.md": "e31b625d6df8bb065920e4b863d080eddba00457fc6b4f845e55ab56a0b752aa",
+    "docs/设计包/23-OA主旨与BS字段一致性核查.md": "5ae3ac28a4863338f9687edee25314f64d2a1eb91ceba3ae4972cd7cf27463d4",
+    "docs/设计包/24-业务模板字段候选.json": "608a25ef9961f917d82801399d5520369874357dd58ec7045f757faff3a65851",
+    "docs/设计包/25-从零开发最小工作量开源选型.md": "abb035e1b89ab5f8be72d28da16a2f88c45e5da1a0b16fe7e0419b715bf27f38",
+    "docs/设计包/ZKER-staff-v2-evidence.json": "ae6d179bbccd1dd477c5dd877c648ec233c155a9d3813339c15275ee2dfe51b7",
+    "docs/设计包/ZKER-staff-完整优化清单-v2-人员数字员工与上下文对齐.md": "c00b18a8fe0cb1f28d62b799dc11545666dc11dc792af2105be15db4e145a14f",
+    "docs/设计包/附录-QoderWake竞品分析-初版快照.md": "dc9ff80d34ff03c3514ce0f8e1ed7c546470bf9fab2199176cf53d94547422ac",
+    "history/用户需求原文.md": "fe8d3d514fe49d2ce1f4131cacaed4e71ad6dbbb60c8132c11dd73ff8d499fdc"
+  },
+  "nodes": [
+    {
+      "id": "N1",
+      "objective": "核对需求与研究事实",
+      "dependsOn": [],
+      "preconditions": [
+        "项目文件可读"
+      ],
+      "action": "读取本地需求、设计和选型；语义索引缺失后用精确检索",
+      "tool_or_skill": "本地文件工具 / documentation / Python标准库",
+      "expected_output": "来源路径及范围",
+      "validation": "核对实际文件、原始需求ID、引用与源摘要",
+      "success_condition": "确认新项目边界和研究推荐",
+      "failure_path": "保留错误，定位后最多两次有依据修复；否则交付阻塞",
+      "rollback_or_compensation": "仅恢复本次新增文件或导航局部修改；不触碰历史资料",
+      "status": "VERIFIED"
+    },
+    {
+      "id": "N2",
+      "objective": "编写完整设计",
+      "dependsOn": [
+        "N1",
+        "N6"
+      ],
+      "preconditions": [
+        "已完成前置节点"
+      ],
+      "action": "形成产品、模型契约和验收文档",
+      "tool_or_skill": "本地文件工具 / documentation / Python标准库",
+      "expected_output": "26至28号Markdown",
+      "validation": "核对实际文件、原始需求ID、引用与源摘要",
+      "success_condition": "业务链和各领域均有规则及异常路径",
+      "failure_path": "保留错误，定位后最多两次有依据修复；否则交付阻塞",
+      "rollback_or_compensation": "仅恢复本次新增文件或导航局部修改；不触碰历史资料",
+      "status": "VERIFIED"
+    },
+    {
+      "id": "N3",
+      "objective": "建立逐项追踪并接入导航",
+      "dependsOn": [
+        "N2"
+      ],
+      "preconditions": [
+        "已完成前置节点"
+      ],
+      "action": "生成29号Markdown和30号JSON并局部更新导航",
+      "tool_or_skill": "本地文件工具 / documentation / Python标准库",
+      "expected_output": "需求及角色映射",
+      "validation": "核对实际文件、原始需求ID、引用与源摘要",
+      "success_condition": "原ID与优先级完整且引用有效",
+      "failure_path": "保留错误，定位后最多两次有依据修复；否则交付阻塞",
+      "rollback_or_compensation": "仅恢复本次新增文件或导航局部修改；不触碰历史资料",
+      "status": "VERIFIED"
+    },
+    {
+      "id": "N4",
+      "objective": "独立文档校验与审阅",
+      "dependsOn": [
+        "N3",
+        "N5",
+        "N6"
+      ],
+      "preconditions": [
+        "已完成前置节点"
+      ],
+      "action": "执行确定性检查并复核状态边界",
+      "tool_or_skill": "本地文件工具 / documentation / Python标准库",
+      "expected_output": "校验JSON及审阅记录",
+      "validation": "核对实际文件、原始需求ID、引用与源摘要",
+      "success_condition": "全部文档检查通过且限制明确",
+      "failure_path": "保留错误，定位后最多两次有依据修复；否则交付阻塞",
+      "rollback_or_compensation": "仅恢复本次新增文件或导航局部修改；不触碰历史资料",
+      "status": "VERIFIED"
+    },
+    {
+      "id": "N5",
+      "objective": "形成并验证完整交互原型",
+      "dependsOn": [
+        "N2"
+      ],
+      "preconditions": [
+        "用户补充需求及前置设计资料可读"
+      ],
+      "action": "创建内存原型并使用独立Playwright浏览器验证",
+      "tool_or_skill": "research / ontology / prototype / local browser and file tools",
+      "expected_output": "31号HTML、73张截图及浏览器JSON",
+      "validation": "133项实际浏览器检查通过，0页面错误，HTML摘要一致",
+      "success_condition": "133项实际浏览器检查通过，0页面错误，HTML摘要一致",
+      "failure_path": "先保留原始错误，根据诊断调整本地设计或浏览器执行方式；无法验证的产品能力保留未实施",
+      "rollback_or_compensation": "仅调整本次新增可逆文件，保留原始需求和研究快照",
+      "status": "VERIFIED"
+    },
+    {
+      "id": "N6",
+      "objective": "补充全产品AI一手研究与体验设计",
+      "dependsOn": [
+        "N1"
+      ],
+      "preconditions": [
+        "用户补充需求及前置设计资料可读"
+      ],
+      "action": "按research技能分配独立研究，主执行直接审阅产物",
+      "tool_or_skill": "research / ontology / prototype / local browser and file tools",
+      "expected_output": "33号研究、来源JSON及12项AI设计",
+      "validation": "28个来源明确区分公开/本地版本，来源ID和本地哈希复核，AI增量映射有效",
+      "success_condition": "28个来源明确区分公开/本地版本，来源ID和本地哈希复核，AI增量映射有效",
+      "failure_path": "先保留原始错误，根据诊断调整本地设计或浏览器执行方式；无法验证的产品能力保留未实施",
+      "rollback_or_compensation": "仅调整本次新增可逆文件，保留原始需求和研究快照",
+      "status": "VERIFIED"
+    },
+    {
+      "id": "W1",
+      "objective": "明确现有状态与权限差异",
+      "dependsOn": [
+        "N4"
+      ],
+      "preconditions": [
+        "本轮用户U22/U23已明确目标",
+        "前序节点产物可读"
+      ],
+      "action": "读取当前设计、原型、原始要求和Coze官方对话流文档，保留1.1快照",
+      "tool_or_skill": "prototype / production-grade-task-methodology / existing local validation scripts / installed Chrome",
+      "expected_output": "来源边界与修改基线",
+      "validation": "实际读取31、26、27及Coze官方文档",
+      "success_condition": "本节点交付可读取且对应验证通过；不宣称真实产品权限已实现",
+      "failure_path": "根据可复核诊断修复；必要时使用本次快照恢复局部文件，保留历史来源；不触及生产或Git",
+      "rollback_or_compensation": "从validation/design-v1.1-before-workspace-v1.2.zip恢复受影响局部文件；不触及历史原需求或外部系统",
+      "status": "VERIFIED"
+    },
+    {
+      "id": "W2",
+      "objective": "在P02/P11/P10实现统一工作台并同步文档",
+      "dependsOn": [
+        "W1"
+      ],
+      "preconditions": [
+        "本轮用户U22/U23已明确目标",
+        "前序节点产物可读"
+      ],
+      "action": "更新任务工作台、动作级权限设计、8项EW细化和导航",
+      "tool_or_skill": "prototype / production-grade-task-methodology / existing local validation scripts / installed Chrome",
+      "expected_output": "31号原型、34号设计与同步追踪",
+      "validation": "鱼骨节点与产物/历史/文件夹联动，服务端投影规则有明确合同",
+      "success_condition": "本节点交付可读取且对应验证通过；不宣称真实产品权限已实现",
+      "failure_path": "根据可复核诊断修复；必要时使用本次快照恢复局部文件，保留历史来源；不触及生产或Git",
+      "rollback_or_compensation": "从validation/design-v1.1-before-workspace-v1.2.zip恢复受影响局部文件；不触及历史原需求或外部系统",
+      "status": "VERIFIED"
+    },
+    {
+      "id": "W3",
+      "objective": "浏览器正负例和源追踪校验",
+      "dependsOn": [
+        "W2"
+      ],
+      "preconditions": [
+        "本轮用户U22/U23已明确目标",
+        "前序节点产物可读"
+      ],
+      "action": "执行32项工作台检查、133项回归及450项文档检查，读取截图并修正",
+      "tool_or_skill": "prototype / production-grade-task-methodology / existing local validation scripts / installed Chrome",
+      "expected_output": "真实本地检查JSON和截图",
+      "validation": "布局、多实例、人员降权清屏、后台授权独立、全页回归及截图",
+      "success_condition": "本节点交付可读取且对应验证通过；不宣称真实产品权限已实现",
+      "failure_path": "根据可复核诊断修复；必要时使用本次快照恢复局部文件，保留历史来源；不触及生产或Git",
+      "rollback_or_compensation": "从validation/design-v1.1-before-workspace-v1.2.zip恢复受影响局部文件；不触及历史原需求或外部系统",
+      "status": "VERIFIED"
+    },
+    {
+      "id": "A13-1",
+      "objective": "一手来源复核与原型差距审查",
+      "dependsOn": [
+        "W3"
+      ],
+      "preconditions": [
+        "U24确认迭代范围",
+        "前序产物可读及1.2局部快照已保存"
+      ],
+      "action": "读取本项目设计与官方资料、StaffDeck来源；独立研究报告与父执行者复核",
+      "tool_or_skill": "production-grade-task-methodology / research / local scripts / Chrome",
+      "expected_output": "35号研究与5个当前源码哈希",
+      "validation": "一手链接、源码行号与哈希核对",
+      "success_condition": "交付物可读取且当前对应检查通过；只确认设计及虚构原型",
+      "failure_path": "获取真实诊断后局部修复并重验；保留原始失败原因",
+      "rollback_or_compensation": "从validation/design-v1.2-before-ai-experience-v1.3.zip恢复受影响局部文件，不改源需求或外部系统",
+      "status": "VERIFIED"
+    },
+    {
+      "id": "A13-2",
+      "objective": "设置、分析、知识、主动和进化的操作闭环及统一协助入口",
+      "dependsOn": [
+        "A13-1"
+      ],
+      "preconditions": [
+        "U24确认迭代范围",
+        "前序产物可读及1.2局部快照已保存"
+      ],
+      "action": "更新31号模块与26/27/28/29/30及接续文档",
+      "tool_or_skill": "production-grade-task-methodology / research / local scripts / Chrome",
+      "expected_output": "22页协助入口、6领域状态、16段流程图源",
+      "validation": "读取文件并执行75项AI状态检查及截图审查",
+      "success_condition": "交付物可读取且当前对应检查通过；只确认设计及虚构原型",
+      "failure_path": "获取真实诊断后局部修复并重验；保留原始失败原因",
+      "rollback_or_compensation": "从validation/design-v1.2-before-ai-experience-v1.3.zip恢复受影响局部文件，不改源需求或外部系统",
+      "status": "VERIFIED"
+    },
+    {
+      "id": "A13-3",
+      "objective": "全页与专项检查，源追踪和文档同步",
+      "dependsOn": [
+        "A13-2"
+      ],
+      "preconditions": [
+        "U24确认迭代范围",
+        "前序产物可读及1.2局部快照已保存"
+      ],
+      "action": "重跑既有133项/32项浏览器检查与文档完整性检查",
+      "tool_or_skill": "production-grade-task-methodology / research / local scripts / Chrome",
+      "expected_output": "240项浏览器检查、458项文档检查及94张视口截图",
+      "validation": "证据与原型SHA-256一致；基线、引用与范围核验",
+      "success_condition": "交付物可读取且当前对应检查通过；只确认设计及虚构原型",
+      "failure_path": "获取真实诊断后局部修复并重验；保留原始失败原因",
+      "rollback_or_compensation": "从validation/design-v1.2-before-ai-experience-v1.3.zip恢复受影响局部文件，不改源需求或外部系统",
+      "status": "VERIFIED"
+    },
+    {
+      "id": "T1",
+      "objective": "固定源码与原需求核验",
+      "dependsOn": [
+        "A13-3"
+      ],
+      "preconditions": [
+        "当前用户技术文档范围已明确",
+        "前序节点证据可读取，原设计快照已保存"
+      ],
+      "action": "读取固定提交POM、流程/AI调用链、SQL与许可；独立回读9个主要来源",
+      "tool_or_skill": "production-grade-task-methodology / research / archify / project scripts",
+      "expected_output": "36号研究和源码回读证据",
+      "validation": "固定SHA、引用、版本与未运行边界可复核",
+      "success_condition": "当前范围的交付检查通过；产品实现状态继续NOT_IMPLEMENTED",
+      "failure_path": "依据新诊断有限修复；不可恢复时明确交付边界",
+      "rollback_or_compensation": "仅从本轮快照恢复本轮修改；不动其他任务治理指针或真实服务",
+      "status": "VERIFIED"
+    },
+    {
+      "id": "T2",
+      "objective": "技术架构、模块数据接口权限及部署设计",
+      "dependsOn": [
+        "T1"
+      ],
+      "preconditions": [
+        "当前用户技术文档范围已明确",
+        "前序节点证据可读取，原设计快照已保存"
+      ],
+      "action": "映射原领域/页面/命令，设计事务、授权、恢复及运行边界，生成图源和HTML",
+      "tool_or_skill": "production-grade-task-methodology / research / archify / project scripts",
+      "expected_output": "37—44号文档、技术映射和架构图",
+      "validation": "全部173项ID与21领域22页31命令保留，关键链路有失败恢复",
+      "success_condition": "当前范围的交付检查通过；产品实现状态继续NOT_IMPLEMENTED",
+      "failure_path": "依据新诊断有限修复；不可恢复时明确交付边界",
+      "rollback_or_compensation": "仅从本轮快照恢复本轮修改；不动其他任务治理指针或真实服务",
+      "status": "VERIFIED"
+    },
+    {
+      "id": "T3",
+      "objective": "文档与图形验证及交付",
+      "dependsOn": [
+        "T2"
+      ],
+      "preconditions": [
+        "当前用户技术文档范围已明确",
+        "前序节点证据可读取，原设计快照已保存"
+      ],
+      "action": "执行技术文档校验、架构图检查及浏览器/图像复核，记录范围门禁",
+      "tool_or_skill": "production-grade-task-methodology / research / archify / project scripts",
+      "expected_output": "技术文档报告、图形回执、浏览器和图像证据",
+      "validation": "所有当前字节与追踪检查通过，无实现或生产虚假完成",
+      "success_condition": "当前范围的交付检查通过；产品实现状态继续NOT_IMPLEMENTED",
+      "failure_path": "依据新诊断有限修复；不可恢复时明确交付边界",
+      "rollback_or_compensation": "仅从本轮快照恢复本轮修改；不动其他任务治理指针或真实服务",
+      "status": "VERIFIED"
+    }
+  ],
+  "methodology": {
+    "skill": "/Users/mac/.cc-switch/skills/task-quality-assurance-v2/production-grade-task-methodology/SKILL.md",
+    "taskType": "创建类产品设计加闭环审查",
+    "inputs": [
+      "当前用户原文",
+      "既有深度研究",
+      "26至30号设计草案",
+      "既有原型参考",
+      "history/本轮产品设计需求补充-2026-09-11.md",
+      "docs/设计包/33-QoderWake与StaffDeck融合及AI体验研究.md"
+    ],
+    "completion": "文档全覆盖、业务图、原型图和交互闭环、独立校验及诚实边界",
+    "risks": [
+      "将本地演示误报为生产实现",
+      "历史技术锚点污染新项目",
+      "状态重核后无合法恢复出口"
+    ],
+    "authorization": "本次用户已明确要求完整执行；复用现有授权，不重复申请文档与本地原型许可",
+    "skillAdaptations": [
+      "使用既有结构化任务状态与本地脚本作清单工具，不假装已安装ClawHub子技能",
+      "初始设计复用既有研究；用户补充全产品AI要求后使用research技能安排独立一手来源研究，主执行核对产物，不假造额外搜索或安装。",
+      "原型不创建Git分支/提交，不移入不存在的生产代码；与用户范围一致"
+    ],
+    "steps": [
+      {
+        "step": 1,
+        "name": "思考",
+        "status": "VERIFIED"
+      },
+      {
+        "step": 2,
+        "name": "计划",
+        "status": "VERIFIED"
+      },
+      {
+        "step": 3,
+        "name": "确认",
+        "status": "VERIFIED"
+      },
+      {
+        "step": 4,
+        "name": "执行",
+        "status": "VERIFIED"
+      },
+      {
+        "step": 5,
+        "name": "验证",
+        "status": "VERIFIED"
+      },
+      {
+        "step": 6,
+        "name": "深度分析",
+        "status": "VERIFIED"
+      },
+      {
+        "step": 7,
+        "name": "再验证",
+        "status": "VERIFIED"
+      },
+      {
+        "step": 8,
+        "name": "交付",
+        "status": "VERIFIED"
+      }
+    ],
+    "deliveryScope": "Artifacts present and reviewable locally. No product/backend/model/production completion claim."
+  },
+  "toolProbe": {
+    "checklistCliAvailable": false,
+    "mermaidCliAvailable": false
+  },
+  "reviewChecklist": [
+    {
+      "id": "Q01",
+      "item": "产品定位",
+      "status": "VERIFIED",
+      "evidence": [
+        "docs/设计包/26-完整产品设计文档.md#positioning"
+      ],
+      "scope": "Design specified and/or local prototype checked; real product acceptance remains NOT_RUN",
+      "recheckedAt": "2026-09-11T17:26:53.584868+00:00"
+    },
+    {
+      "id": "Q02",
+      "item": "研究与已定决策区分",
+      "status": "VERIFIED",
+      "evidence": [
+        "docs/设计包/26-完整产品设计文档.md#research",
+        "docs/设计包/33-QoderWake与StaffDeck融合及AI体验研究.md",
+        "docs/设计包/35-全产品AI体验复核与改进.md",
+        "validation/ai-experience-check.json"
+      ],
+      "scope": "Design specified and/or local prototype checked; real product acceptance remains NOT_RUN",
+      "recheckedAt": "2026-09-11T17:26:53.584868+00:00"
+    },
+    {
+      "id": "Q03",
+      "item": "全部153需求",
+      "status": "VERIFIED",
+      "evidence": [
+        "docs/设计包/29-全量需求与角色追踪.md",
+        "validation/product-design-document-check.json"
+      ],
+      "scope": "Design specified and/or local prototype checked; real product acceptance remains NOT_RUN",
+      "recheckedAt": "2026-09-11T17:26:53.584868+00:00"
+    },
+    {
+      "id": "Q04",
+      "item": "全部21领域",
+      "status": "VERIFIED",
+      "evidence": [
+        "docs/设计包/29-全量需求与角色追踪.md",
+        "validation/product-design-document-check.json"
+      ],
+      "scope": "Design specified and/or local prototype checked; real product acceptance remains NOT_RUN",
+      "recheckedAt": "2026-09-11T17:26:53.584868+00:00"
+    },
+    {
+      "id": "Q05",
+      "item": "全部22页面",
+      "status": "VERIFIED",
+      "evidence": [
+        "docs/设计包/26-完整产品设计文档.md#ui",
+        "validation/product-design-prototype-check.json"
+      ],
+      "scope": "Design specified and/or local prototype checked; real product acceptance remains NOT_RUN",
+      "recheckedAt": "2026-09-11T17:26:53.584868+00:00"
+    },
+    {
+      "id": "Q06",
+      "item": "全部41视角",
+      "status": "VERIFIED",
+      "evidence": [
+        "docs/设计包/29-全量需求与角色追踪.md",
+        "validation/product-design-prototype-check.json"
+      ],
+      "scope": "Design specified and/or local prototype checked; real product acceptance remains NOT_RUN",
+      "recheckedAt": "2026-09-11T17:26:53.584868+00:00"
+    },
+    {
+      "id": "Q07",
+      "item": "44角色键映射边界",
+      "status": "VERIFIED",
+      "evidence": [
+        "docs/设计包/29-全量需求与角色追踪.md",
+        "validation/product-design-document-check.json"
+      ],
+      "scope": "Design specified and/or local prototype checked; real product acceptance remains NOT_RUN",
+      "recheckedAt": "2026-09-11T17:26:53.584868+00:00"
+    },
+    {
+      "id": "Q08",
+      "item": "10市场细化",
+      "status": "VERIFIED",
+      "evidence": [
+        "docs/设计包/29-全量需求与角色追踪.md",
+        "validation/product-design-document-check.json"
+      ],
+      "scope": "Design specified and/or local prototype checked; real product acceptance remains NOT_RUN",
+      "recheckedAt": "2026-09-11T17:26:53.584868+00:00"
+    },
+    {
+      "id": "Q09",
+      "item": "28OA细化",
+      "status": "VERIFIED",
+      "evidence": [
+        "docs/设计包/29-全量需求与角色追踪.md",
+        "validation/product-design-document-check.json"
+      ],
+      "scope": "Design specified and/or local prototype checked; real product acceptance remains NOT_RUN",
+      "recheckedAt": "2026-09-11T17:26:53.584868+00:00"
+    },
+    {
+      "id": "Q10",
+      "item": "用户故事与GivenWhenThen",
+      "status": "VERIFIED",
+      "evidence": [
+        "docs/设计包/29-全量需求与角色追踪.md",
+        "validation/product-design-document-check.json"
+      ],
+      "scope": "Design specified and/or local prototype checked; real product acceptance remains NOT_RUN",
+      "recheckedAt": "2026-09-11T17:26:53.584868+00:00"
+    },
+    {
+      "id": "Q11",
+      "item": "业务主流程图",
+      "status": "VERIFIED",
+      "evidence": [
+        "docs/设计包/32-业务流程图原型图与断点闭环审查.md"
+      ],
+      "scope": "Design specified and/or local prototype checked; real product acceptance remains NOT_RUN",
+      "recheckedAt": "2026-09-11T17:26:53.584868+00:00"
+    },
+    {
+      "id": "Q12",
+      "item": "异常恢复流程图",
+      "status": "VERIFIED",
+      "evidence": [
+        "docs/设计包/32-业务流程图原型图与断点闭环审查.md"
+      ],
+      "scope": "Design specified and/or local prototype checked; real product acceptance remains NOT_RUN",
+      "recheckedAt": "2026-09-11T17:26:53.584868+00:00"
+    },
+    {
+      "id": "Q13",
+      "item": "多实例与任务隔离",
+      "status": "VERIFIED",
+      "evidence": [
+        "docs/设计包/27-逻辑数据模型与接口契约.md#fields",
+        "validation/product-design-prototype-check.json",
+        "docs/设计包/34-任务执行工作台与权限分层设计.md",
+        "validation/execution-workspace-check.json"
+      ],
+      "scope": "Design specified and/or local prototype checked; real product acceptance remains NOT_RUN",
+      "recheckedAt": "2026-09-11T17:26:53.584868+00:00"
+    },
+    {
+      "id": "Q14",
+      "item": "人员角色与职责分离",
+      "status": "VERIFIED",
+      "evidence": [
+        "docs/设计包/26-完整产品设计文档.md#roles",
+        "validation/product-design-prototype-check.json",
+        "docs/设计包/34-任务执行工作台与权限分层设计.md",
+        "validation/execution-workspace-check.json"
+      ],
+      "scope": "Design specified and/or local prototype checked; real product acceptance remains NOT_RUN",
+      "recheckedAt": "2026-09-11T17:26:53.584868+00:00"
+    },
+    {
+      "id": "Q15",
+      "item": "人工路径",
+      "status": "VERIFIED",
+      "evidence": [
+        "docs/设计包/26-完整产品设计文档.md#execution"
+      ],
+      "scope": "Design specified and/or local prototype checked; real product acceptance remains NOT_RUN",
+      "recheckedAt": "2026-09-11T17:26:53.584868+00:00"
+    },
+    {
+      "id": "Q16",
+      "item": "AI配置与快照",
+      "status": "VERIFIED",
+      "evidence": [
+        "docs/设计包/26-完整产品设计文档.md#execution",
+        "docs/设计包/27-逻辑数据模型与接口契约.md#ai-contracts",
+        "docs/设计包/34-任务执行工作台与权限分层设计.md",
+        "validation/execution-workspace-check.json",
+        "docs/设计包/35-全产品AI体验复核与改进.md",
+        "validation/ai-experience-check.json"
+      ],
+      "scope": "Design specified and/or local prototype checked; real product acceptance remains NOT_RUN",
+      "recheckedAt": "2026-09-11T17:26:53.584868+00:00"
+    },
+    {
+      "id": "Q17",
+      "item": "协作贡献版本",
+      "status": "VERIFIED",
+      "evidence": [
+        "docs/设计包/26-完整产品设计文档.md#collaboration",
+        "docs/设计包/27-逻辑数据模型与接口契约.md#states"
+      ],
+      "scope": "Design specified and/or local prototype checked; real product acceptance remains NOT_RUN",
+      "recheckedAt": "2026-09-11T17:26:53.584868+00:00"
+    },
+    {
+      "id": "Q18",
+      "item": "上下文变更与重核",
+      "status": "VERIFIED",
+      "evidence": [
+        "docs/设计包/26-完整产品设计文档.md#context",
+        "validation/product-design-prototype-check.json"
+      ],
+      "scope": "Design specified and/or local prototype checked; real product acceptance remains NOT_RUN",
+      "recheckedAt": "2026-09-11T17:26:53.584868+00:00"
+    },
+    {
+      "id": "Q19",
+      "item": "审核与正式提交",
+      "status": "VERIFIED",
+      "evidence": [
+        "docs/设计包/27-逻辑数据模型与接口契约.md#states",
+        "validation/product-design-prototype-check.json"
+      ],
+      "scope": "Design specified and/or local prototype checked; real product acceptance remains NOT_RUN",
+      "recheckedAt": "2026-09-11T17:26:53.584868+00:00"
+    },
+    {
+      "id": "Q20",
+      "item": "交接可读性与接收",
+      "status": "VERIFIED",
+      "evidence": [
+        "docs/设计包/26-完整产品设计文档.md#collaboration",
+        "validation/product-design-prototype-check.json"
+      ],
+      "scope": "Design specified and/or local prototype checked; real product acceptance remains NOT_RUN",
+      "recheckedAt": "2026-09-11T17:26:53.584868+00:00"
+    },
+    {
+      "id": "Q21",
+      "item": "工具结果未知",
+      "status": "VERIFIED",
+      "evidence": [
+        "docs/设计包/27-逻辑数据模型与接口契约.md#commands",
+        "validation/product-design-prototype-check.json"
+      ],
+      "scope": "Design specified and/or local prototype checked; real product acceptance remains NOT_RUN",
+      "recheckedAt": "2026-09-11T17:26:53.584868+00:00"
+    },
+    {
+      "id": "Q22",
+      "item": "幂等与并发",
+      "status": "VERIFIED",
+      "evidence": [
+        "docs/设计包/27-逻辑数据模型与接口契约.md#commands"
+      ],
+      "scope": "Design specified and/or local prototype checked; real product acceptance remains NOT_RUN",
+      "recheckedAt": "2026-09-11T17:26:53.584868+00:00"
+    },
+    {
+      "id": "Q23",
+      "item": "字段来源与校验",
+      "status": "VERIFIED",
+      "evidence": [
+        "docs/设计包/27-逻辑数据模型与接口契约.md#fields",
+        "validation/product-design-document-check.json"
+      ],
+      "scope": "Design specified and/or local prototype checked; real product acceptance remains NOT_RUN",
+      "recheckedAt": "2026-09-11T17:26:53.584868+00:00"
+    },
+    {
+      "id": "Q24",
+      "item": "E-R与事实归属",
+      "status": "VERIFIED",
+      "evidence": [
+        "docs/设计包/27-逻辑数据模型与接口契约.md#er",
+        "docs/设计包/34-任务执行工作台与权限分层设计.md",
+        "validation/execution-workspace-check.json"
+      ],
+      "scope": "Design specified and/or local prototype checked; real product acceptance remains NOT_RUN",
+      "recheckedAt": "2026-09-11T17:26:53.584868+00:00"
+    },
+    {
+      "id": "Q25",
+      "item": "接口和状态语义",
+      "status": "VERIFIED",
+      "evidence": [
+        "docs/设计包/27-逻辑数据模型与接口契约.md#commands",
+        "validation/product-design-document-check.json",
+        "docs/设计包/34-任务执行工作台与权限分层设计.md",
+        "validation/execution-workspace-check.json",
+        "docs/设计包/35-全产品AI体验复核与改进.md",
+        "validation/ai-experience-check.json"
+      ],
+      "scope": "Design specified and/or local prototype checked; real product acceptance remains NOT_RUN",
+      "recheckedAt": "2026-09-11T17:26:53.584868+00:00"
+    },
+    {
+      "id": "Q26",
+      "item": "市场复制与凭据隔离",
+      "status": "VERIFIED",
+      "evidence": [
+        "docs/设计包/26-完整产品设计文档.md#assets",
+        "validation/product-design-prototype-check.json"
+      ],
+      "scope": "Design specified and/or local prototype checked; real product acceptance remains NOT_RUN",
+      "recheckedAt": "2026-09-11T17:26:53.584868+00:00"
+    },
+    {
+      "id": "Q27",
+      "item": "知识记忆和文件",
+      "status": "VERIFIED",
+      "evidence": [
+        "docs/设计包/26-完整产品设计文档.md#knowledge",
+        "docs/设计包/26-完整产品设计文档.md#ai-experience",
+        "docs/设计包/34-任务执行工作台与权限分层设计.md",
+        "validation/execution-workspace-check.json",
+        "docs/设计包/35-全产品AI体验复核与改进.md",
+        "validation/ai-experience-check.json"
+      ],
+      "scope": "Design specified and/or local prototype checked; real product acceptance remains NOT_RUN",
+      "recheckedAt": "2026-09-11T17:26:53.584868+00:00"
+    },
+    {
+      "id": "Q28",
+      "item": "高级能力不缩减",
+      "status": "VERIFIED",
+      "evidence": [
+        "docs/设计包/26-完整产品设计文档.md#extensions",
+        "docs/设计包/29-全量需求与角色追踪.md",
+        "docs/设计包/35-全产品AI体验复核与改进.md",
+        "validation/ai-experience-check.json"
+      ],
+      "scope": "Design specified and/or local prototype checked; real product acceptance remains NOT_RUN",
+      "recheckedAt": "2026-09-11T17:26:53.584868+00:00"
+    },
+    {
+      "id": "Q29",
+      "item": "非功能和指标",
+      "status": "VERIFIED",
+      "evidence": [
+        "docs/设计包/26-完整产品设计文档.md#quality",
+        "docs/设计包/35-全产品AI体验复核与改进.md",
+        "validation/ai-experience-check.json"
+      ],
+      "scope": "Design specified and/or local prototype checked; real product acceptance remains NOT_RUN",
+      "recheckedAt": "2026-09-11T17:26:53.584868+00:00"
+    },
+    {
+      "id": "Q30",
+      "item": "分期和验收边界",
+      "status": "VERIFIED",
+      "evidence": [
+        "docs/设计包/28-开发分期与验收用例.md#gates",
+        "docs/设计包/35-全产品AI体验复核与改进.md",
+        "validation/ai-experience-check.json"
+      ],
+      "scope": "Design specified and/or local prototype checked; real product acceptance remains NOT_RUN",
+      "recheckedAt": "2026-09-11T17:26:53.584868+00:00"
+    },
+    {
+      "id": "Q31",
+      "item": "原型关键角色",
+      "status": "VERIFIED",
+      "evidence": [
+        "validation/product-design-prototype-check.json",
+        "docs/设计包/34-任务执行工作台与权限分层设计.md",
+        "validation/execution-workspace-check.json"
+      ],
+      "scope": "Design specified and/or local prototype checked; real product acceptance remains NOT_RUN",
+      "recheckedAt": "2026-09-11T17:26:53.584868+00:00"
+    },
+    {
+      "id": "Q32",
+      "item": "原型正常和异常旅程",
+      "status": "VERIFIED",
+      "evidence": [
+        "validation/product-design-prototype-check.json",
+        "docs/设计包/34-任务执行工作台与权限分层设计.md",
+        "validation/execution-workspace-check.json",
+        "docs/设计包/35-全产品AI体验复核与改进.md",
+        "validation/ai-experience-check.json"
+      ],
+      "scope": "Design specified and/or local prototype checked; real product acceptance remains NOT_RUN",
+      "recheckedAt": "2026-09-11T17:26:53.584868+00:00"
+    },
+    {
+      "id": "Q33",
+      "item": "原型390和1440截图",
+      "status": "VERIFIED",
+      "evidence": [
+        "validation/product-design-prototype-check.json",
+        "docs/设计包/34-任务执行工作台与权限分层设计.md",
+        "validation/execution-workspace-check.json"
+      ],
+      "scope": "Design specified and/or local prototype checked; real product acceptance remains NOT_RUN",
+      "recheckedAt": "2026-09-11T17:26:53.584868+00:00"
+    },
+    {
+      "id": "Q34",
+      "item": "文档链接和源摘要",
+      "status": "VERIFIED",
+      "evidence": [
+        "validation/product-design-document-check.json"
+      ],
+      "scope": "Design specified and/or local prototype checked; real product acceptance remains NOT_RUN",
+      "recheckedAt": "2026-09-11T17:26:53.584868+00:00"
+    },
+    {
+      "id": "Q35",
+      "item": "断点处理人及恢复出口",
+      "status": "VERIFIED",
+      "evidence": [
+        "docs/设计包/32-业务流程图原型图与断点闭环审查.md",
+        "docs/设计包/34-任务执行工作台与权限分层设计.md",
+        "validation/execution-workspace-check.json",
+        "docs/设计包/35-全产品AI体验复核与改进.md",
+        "validation/ai-experience-check.json"
+      ],
+      "scope": "Design specified and/or local prototype checked; real product acceptance remains NOT_RUN",
+      "recheckedAt": "2026-09-11T17:26:53.584868+00:00"
+    },
+    {
+      "id": "Q36",
+      "item": "最终限制披露",
+      "status": "VERIFIED",
+      "evidence": [
+        "docs/设计包/32-业务流程图原型图与断点闭环审查.md",
+        "docs/设计包/28-开发分期与验收用例.md#evidence",
+        "docs/设计包/34-任务执行工作台与权限分层设计.md",
+        "validation/execution-workspace-check.json",
+        "docs/设计包/35-全产品AI体验复核与改进.md",
+        "validation/ai-experience-check.json"
+      ],
+      "scope": "Design specified and/or local prototype checked; real product acceptance remains NOT_RUN",
+      "recheckedAt": "2026-09-11T17:26:53.584868+00:00"
+    }
+  ],
+  "qualityGates": {
+    "designCoverageRequired": 1.0,
+    "sourcePreservationRequired": true,
+    "brokenLocalLinksAllowed": 0,
+    "prototypePageErrorsAllowed": 0,
+    "evidenceDistinctionRequired": true,
+    "sourceRule": "核心事实优先原始需求和研究两类依据；设计新增明确标推导，不伪造第二份独立数据"
+  },
+  "updatedAt": "2026-09-11T18:01:49.099581+00:00",
+  "verificationScope": "VERSIONED_DESIGN_AND_FICTIONAL_PROTOTYPE_EVIDENCE_ONLY; latest iteration is technical documentation, not implementation",
+  "productStatus": "NOT_IMPLEMENTED",
+  "productAcceptanceCasesRun": 0,
+  "recoveredToolIssues": [
+    {
+      "issue": "Workspace semantic index absent",
+      "resolution": "Used exact rg and focused source reads; no index created"
+    },
+    {
+      "issue": "Default Playwright Chromium binary absent",
+      "resolution": "Used installed Google Chrome with isolated browser context; no installation"
+    }
+  ],
+  "limitations": [
+    "技术底座待选，物理模型与服务端接口尚未实施。",
+    "72个跨域产品场景及8项EW细化均未执行。",
+    "240项浏览器检查仅覆盖虚构HTML，不能证明后端、对象存储、模型、异步撤权竞态或生产安全。",
+    "6个核心页面有虚构状态流；其余是原有工作台或页面协助草稿，任意自然语言理解与实际生成尚未接入。",
+    "分析仅使用固定样例窗口与虚构数据；进化评估和试用回执均为样例，没有真实提升数据。",
+    "16段Mermaid仅核查源结构，未使用独立Mermaid引擎渲染。",
+    "尚无真实用户首次上手、正确完成率和认知成本数据。",
+    "QoderWake记忆页本次不可读；35号已区分前次研究与本次复核范围。"
+  ],
+  "verifiedAt": "2026-09-11T18:01:49.099581+00:00",
+  "iterations": [
+    {
+      "version": "1.2",
+      "goal": "U22 左对话右展示、鱼骨工作流、产物/文件夹/历史摘要和人员/后台使用权限分层",
+      "status": "VERIFIED",
+      "preChangeSnapshot": "validation/design-v1.1-before-workspace-v1.2.zip",
+      "nodes": [
+        {
+          "id": "W1",
+          "objective": "明确现有状态与权限差异",
+          "validation": "实际读取31、26、27及Coze官方文档",
+          "status": "VERIFIED"
+        },
+        {
+          "id": "W2",
+          "objective": "在P02/P11/P10实现统一工作台并同步文档",
+          "validation": "鱼骨节点与产物/历史/文件夹联动，服务端投影规则有明确合同",
+          "status": "VERIFIED"
+        },
+        {
+          "id": "W3",
+          "objective": "浏览器正负例和源追踪校验",
+          "validation": "布局、多实例、人员降权清屏、后台授权独立、全页回归及截图",
+          "status": "VERIFIED"
+        }
+      ],
+      "failurePath": "根据可复核诊断修复；必要时使用本次快照恢复局部文件，保留历史来源；不触及生产或Git",
+      "finishedAt": "2026-09-11T16:48:37.016170+00:00",
+      "clarification": "U23: department examples only; permissions depend on subject, object, action, purpose, expiry and current task relationship.",
+      "evidence": [
+        "validation/execution-workspace-check.json",
+        "validation/product-design-prototype-check.json",
+        "validation/product-design-document-check.json"
+      ],
+      "productTestsRun": false
+    },
+    {
+      "version": "1.3",
+      "goal": "全产品AI体验复核并修复复杂设置和操作断点，保留1.2工作台与通用权限",
+      "status": "VERIFIED",
+      "preChangeSnapshot": "validation/design-v1.2-before-ai-experience-v1.3.zip",
+      "nodes": [
+        {
+          "id": "A13-1",
+          "objective": "一手来源复核与原型差距审查",
+          "status": "VERIFIED"
+        },
+        {
+          "id": "A13-2",
+          "objective": "设置、分析、知识、主动和进化的可操作状态闭环及统一AI入口",
+          "status": "VERIFIED"
+        },
+        {
+          "id": "A13-3",
+          "objective": "全页与专项检查，源追踪和文档同步",
+          "status": "VERIFIED"
+        }
+      ],
+      "acceptance": [
+        "原153需求/12AI增强/8EW细化不缩减",
+        "六类体验有清晰前置、输出、确认、恢复和权限边界",
+        "真实用户、模型和生产验收不由模拟数字替代"
+      ],
+      "failurePath": "基于新诊断做局部修复，必要时从本次快照恢复受影响文件；不提交、部署或改相邻项目",
+      "verifiedAt": "2026-09-11T17:26:53.584868+00:00",
+      "evidence": [
+        "validation/product-design-document-check.json",
+        "validation/product-design-prototype-check.json",
+        "validation/execution-workspace-check.json",
+        "validation/ai-experience-check.json",
+        "validation/ai-experience-research-check.json"
+      ],
+      "recoveredFailures": [
+        {
+          "observed": "全页检查遇到P04两个h1，strict locator失败",
+          "fix": "保留任务主标题，将本次协助设置改为二级标题",
+          "verification": "133项回归重新通过"
+        },
+        {
+          "observed": "复核发现执行页协助入口重绘可能丢失未保存补充",
+          "fix": "在协助操作前保存当前人员与任务草稿",
+          "verification": "新增正例，75项专项通过"
+        }
+      ]
+    },
+    {
+      "version": "technical-1.0",
+      "goal": "结合开源项目深度研究完整输出技术架构、设计等相关技术文档",
+      "source": "当前用户明确要求，2026-09-11",
+      "status": "VERIFIED",
+      "current_node": "T3",
+      "nodes": [
+        {
+          "id": "T1",
+          "objective": "固定源码与原需求核验",
+          "status": "VERIFIED",
+          "dependsOn": [
+            "A13-3"
+          ],
+          "preconditions": [
+            "当前用户技术文档范围已明确",
+            "前序节点证据可读取，原设计快照已保存"
+          ],
+          "action": "读取固定提交POM、流程/AI调用链、SQL与许可；独立回读9个主要来源",
+          "tool_or_skill": "production-grade-task-methodology / research / archify / project scripts",
+          "expected_output": "36号研究和源码回读证据",
+          "validation": "固定SHA、引用、版本与未运行边界可复核",
+          "success_condition": "当前范围的交付检查通过；产品实现状态继续NOT_IMPLEMENTED",
+          "failure_path": "依据新诊断有限修复；不可恢复时明确交付边界",
+          "rollback_or_compensation": "仅从本轮快照恢复本轮修改；不动其他任务治理指针或真实服务"
+        },
+        {
+          "id": "T2",
+          "objective": "技术架构、模块数据接口权限及部署设计",
+          "status": "VERIFIED",
+          "dependsOn": [
+            "T1"
+          ],
+          "preconditions": [
+            "当前用户技术文档范围已明确",
+            "前序节点证据可读取，原设计快照已保存"
+          ],
+          "action": "映射原领域/页面/命令，设计事务、授权、恢复及运行边界，生成图源和HTML",
+          "tool_or_skill": "production-grade-task-methodology / research / archify / project scripts",
+          "expected_output": "37—44号文档、技术映射和架构图",
+          "validation": "全部173项ID与21领域22页31命令保留，关键链路有失败恢复",
+          "success_condition": "当前范围的交付检查通过；产品实现状态继续NOT_IMPLEMENTED",
+          "failure_path": "依据新诊断有限修复；不可恢复时明确交付边界",
+          "rollback_or_compensation": "仅从本轮快照恢复本轮修改；不动其他任务治理指针或真实服务"
+        },
+        {
+          "id": "T3",
+          "objective": "文档与图形验证及交付",
+          "status": "VERIFIED",
+          "dependsOn": [
+            "T2"
+          ],
+          "preconditions": [
+            "当前用户技术文档范围已明确",
+            "前序节点证据可读取，原设计快照已保存"
+          ],
+          "action": "执行技术文档校验、架构图检查及浏览器/图像复核，记录范围门禁",
+          "tool_or_skill": "production-grade-task-methodology / research / archify / project scripts",
+          "expected_output": "技术文档报告、图形回执、浏览器和图像证据",
+          "validation": "所有当前字节与追踪检查通过，无实现或生产虚假完成",
+          "success_condition": "当前范围的交付检查通过；产品实现状态继续NOT_IMPLEMENTED",
+          "failure_path": "依据新诊断有限修复；不可恢复时明确交付边界",
+          "rollback_or_compensation": "仅从本轮快照恢复本轮修改；不动其他任务治理指针或真实服务"
+        }
+      ],
+      "scope": [
+        "仅新增36—44技术文档和本次validation证据",
+        "不修改1.3原型、153项与12AI/8EW基线",
+        "不修改并发开发体系线程的currentTask或治理文件"
+      ],
+      "coordination": "development-workflow.json 的currentTask属于正在运行的其他开发体系任务；本次延续原产品设计任务记录，不抢占其指针。",
+      "acceptance": [
+        "固定版本、源码、许可与未测边界可追溯",
+        "21领域、22页、31命令有模块和接口设计归属",
+        "权限、事务、幂等、重启恢复和部署运维闭环",
+        "原始需求与产品未实现状态保持不变",
+        "架构图可浏览且验收报告绑定当前字节"
+      ],
+      "preChangeSnapshot": "validation/technical-design-before-20260911.zip",
+      "failurePath": "针对有证据问题有限修复；不变更真实服务或执行外部项目代码",
+      "reviewChecklist": [
+        {
+          "id": "TR-01",
+          "item": "固定仓库提交与来源范围",
+          "reference": "docs/设计包/36-开源底座源码研究与技术选型.md",
+          "status": "REVIEWED_DESIGN_ONLY"
+        },
+        {
+          "id": "TR-02",
+          "item": "声明版本不冒充已解析依赖",
+          "reference": "docs/设计包/36-开源底座源码研究与技术选型.md",
+          "status": "REVIEWED_DESIGN_ONLY"
+        },
+        {
+          "id": "TR-03",
+          "item": "Boot与流程引擎兼容冲突",
+          "reference": "docs/设计包/36-开源底座源码研究与技术选型.md",
+          "status": "REVIEWED_DESIGN_ONLY"
+        },
+        {
+          "id": "TR-04",
+          "item": "基础SQL与模块初始化分判",
+          "reference": "docs/设计包/36-开源底座源码研究与技术选型.md",
+          "status": "REVIEWED_DESIGN_ONLY"
+        },
+        {
+          "id": "TR-05",
+          "item": "仓库许可与第三方材料分判",
+          "reference": "docs/设计包/36-开源底座源码研究与技术选型.md",
+          "status": "REVIEWED_DESIGN_ONLY"
+        },
+        {
+          "id": "TR-06",
+          "item": "公开下载旁路明确",
+          "reference": "docs/设计包/36-开源底座源码研究与技术选型.md",
+          "status": "REVIEWED_DESIGN_ONLY"
+        },
+        {
+          "id": "TR-07",
+          "item": "候选比较无虚构人日/复用率",
+          "reference": "docs/设计包/36-开源底座源码研究与技术选型.md",
+          "status": "REVIEWED_DESIGN_ONLY"
+        },
+        {
+          "id": "TR-08",
+          "item": "一套身份与流程状态权威",
+          "reference": "docs/设计包/37-技术架构总设计与决策.md",
+          "status": "REVIEWED_DESIGN_ONLY"
+        },
+        {
+          "id": "TR-09",
+          "item": "一个SDK工具执行循环",
+          "reference": "docs/设计包/37-技术架构总设计与决策.md",
+          "status": "REVIEWED_DESIGN_ONLY"
+        },
+        {
+          "id": "TR-10",
+          "item": "底座验证优先级与条件映射",
+          "reference": "docs/设计包/37-技术架构总设计与决策.md",
+          "status": "REVIEWED_DESIGN_ONLY"
+        },
+        {
+          "id": "TR-11",
+          "item": "21领域与22页映射",
+          "reference": "docs/设计包/38-模块边界与前端工程设计.md",
+          "status": "REVIEWED_DESIGN_ONLY"
+        },
+        {
+          "id": "TR-12",
+          "item": "同人多流程多实例隔离",
+          "reference": "docs/设计包/38-模块边界与前端工程设计.md",
+          "status": "REVIEWED_DESIGN_ONLY"
+        },
+        {
+          "id": "TR-13",
+          "item": "左对话右展示及权限鱼骨投影",
+          "reference": "docs/设计包/38-模块边界与前端工程设计.md",
+          "status": "REVIEWED_DESIGN_ONLY"
+        },
+        {
+          "id": "TR-14",
+          "item": "迟到响应与切换清屏",
+          "reference": "docs/设计包/38-模块边界与前端工程设计.md",
+          "status": "REVIEWED_DESIGN_ONLY"
+        },
+        {
+          "id": "TR-15",
+          "item": "简明AI设置及草稿保持",
+          "reference": "docs/设计包/38-模块边界与前端工程设计.md",
+          "status": "REVIEWED_DESIGN_ONLY"
+        },
+        {
+          "id": "TR-16",
+          "item": "绑定head与不可变输入快照",
+          "reference": "docs/设计包/39-数据存储与事务一致性设计.md",
+          "status": "REVIEWED_DESIGN_ONLY"
+        },
+        {
+          "id": "TR-17",
+          "item": "跨租户关联约束",
+          "reference": "docs/设计包/39-数据存储与事务一致性设计.md",
+          "status": "REVIEWED_DESIGN_ONLY"
+        },
+        {
+          "id": "TR-18",
+          "item": "幂等键冲突与稳定意图",
+          "reference": "docs/设计包/39-数据存储与事务一致性设计.md",
+          "status": "REVIEWED_DESIGN_ONLY"
+        },
+        {
+          "id": "TR-19",
+          "item": "fence租约与旧回执拒绝",
+          "reference": "docs/设计包/39-数据存储与事务一致性设计.md",
+          "status": "REVIEWED_DESIGN_ONLY"
+        },
+        {
+          "id": "TR-20",
+          "item": "正式交付与引擎事务",
+          "reference": "docs/设计包/39-数据存储与事务一致性设计.md",
+          "status": "REVIEWED_DESIGN_ONLY"
+        },
+        {
+          "id": "TR-21",
+          "item": "UNKNOWN外部效果查证",
+          "reference": "docs/设计包/39-数据存储与事务一致性设计.md",
+          "status": "REVIEWED_DESIGN_ONLY"
+        },
+        {
+          "id": "TR-22",
+          "item": "备份恢复和来源变更失效",
+          "reference": "docs/设计包/39-数据存储与事务一致性设计.md",
+          "status": "REVIEWED_DESIGN_ONLY"
+        },
+        {
+          "id": "TR-23",
+          "item": "31命令与字段/状态守卫",
+          "reference": "docs/设计包/40-接口事件与集成技术设计.md",
+          "status": "REVIEWED_DESIGN_ONLY"
+        },
+        {
+          "id": "TR-24",
+          "item": "创建资源不依赖已有路径ID",
+          "reference": "docs/设计包/40-接口事件与集成技术设计.md",
+          "status": "REVIEWED_DESIGN_ONLY"
+        },
+        {
+          "id": "TR-25",
+          "item": "SSE只观察且重连不重复执行",
+          "reference": "docs/设计包/40-接口事件与集成技术设计.md",
+          "status": "REVIEWED_DESIGN_ONLY"
+        },
+        {
+          "id": "TR-26",
+          "item": "文件版本/Range/历史授权一致",
+          "reference": "docs/设计包/40-接口事件与集成技术设计.md",
+          "status": "REVIEWED_DESIGN_ONLY"
+        },
+        {
+          "id": "TR-27",
+          "item": "后台使用与人员读取分判",
+          "reference": "docs/设计包/41-AI运行知识分析与安全设计.md",
+          "status": "REVIEWED_DESIGN_ONLY"
+        },
+        {
+          "id": "TR-28",
+          "item": "RAG/本体/记忆有来源与撤权",
+          "reference": "docs/设计包/41-AI运行知识分析与安全设计.md",
+          "status": "REVIEWED_DESIGN_ONLY"
+        },
+        {
+          "id": "TR-29",
+          "item": "分析查询只读且同源口径",
+          "reference": "docs/设计包/41-AI运行知识分析与安全设计.md",
+          "status": "REVIEWED_DESIGN_ONLY"
+        },
+        {
+          "id": "TR-30",
+          "item": "主动计划/机会/执行分离",
+          "reference": "docs/设计包/41-AI运行知识分析与安全设计.md",
+          "status": "REVIEWED_DESIGN_ONLY"
+        },
+        {
+          "id": "TR-31",
+          "item": "进化真实评估与独立复核",
+          "reference": "docs/设计包/41-AI运行知识分析与安全设计.md",
+          "status": "REVIEWED_DESIGN_ONLY"
+        },
+        {
+          "id": "TR-32",
+          "item": "部署规模和SLO显式假设",
+          "reference": "docs/设计包/42-部署运维与非功能设计.md",
+          "status": "REVIEWED_DESIGN_ONLY"
+        },
+        {
+          "id": "TR-33",
+          "item": "故障负责人和恢复条件",
+          "reference": "docs/设计包/42-部署运维与非功能设计.md",
+          "status": "REVIEWED_DESIGN_ONLY"
+        },
+        {
+          "id": "TR-34",
+          "item": "173项保留且72用例仍NOT_RUN",
+          "reference": "docs/设计包/43-技术实施路线与验证矩阵.md",
+          "status": "REVIEWED_DESIGN_ONLY"
+        },
+        {
+          "id": "TR-35",
+          "item": "八类POC与M0—M5依赖出口",
+          "reference": "docs/设计包/43-技术实施路线与验证矩阵.md",
+          "status": "REVIEWED_DESIGN_ONLY"
+        },
+        {
+          "id": "TR-36",
+          "item": "设计交付和真实产品验证分离",
+          "reference": "docs/设计包/43-技术实施路线与验证矩阵.md",
+          "status": "REVIEWED_DESIGN_ONLY"
+        }
+      ],
+      "evidence": [
+        "validation/technical-source-check.json",
+        "validation/technical-design-check.json",
+        "validation/technical-architecture-delivery.json",
+        "validation/technical-architecture-browser.json",
+        "validation/technical-architecture-review.json",
+        "validation/technical-architecture-interaction.json",
+        "validation/technical-mapping-generation-check.json"
+      ],
+      "recoveredIssues": [
+        "Python HTTPS certificate store could not validate issuer; switched to system curl with certificate verification enabled, no global configuration changed.",
+        "Supplementary export selector normalized visible text incorrectly; repaired selector and reran against current artifact.",
+        "Diagram semantic reread and supported label correction; final artifact re-delivered and all browser evidence regenerated.",
+        "Technical check found all page tables still rendered full associations instead of primaryCommandIds and a self-report link needing path normalization; generator and check fixed, 869 checks passed. Repeat generation kept all three output hashes unchanged."
+      ],
+      "verifiedAt": "2026-09-11T18:01:49.099581+00:00",
+      "verificationScope": "TECHNICAL_DESIGN_DOCUMENTS_AND_DIAGRAM_ONLY",
+      "productTestsRun": false,
+      "artifacts": [
+        {
+          "path": "docs/设计包/36-开源底座源码研究与技术选型.md",
+          "sha256": "be068d6b39577c2ffaf5e79f59c23db1ccfb526dee8b7de8fc5b3406e604d6bc",
+          "bytes": 48934
+        },
+        {
+          "path": "docs/设计包/37-技术架构总设计与决策.md",
+          "sha256": "d2392b269d920861084a9d3cbdf82b31499b23ec5c8a309b54e0d1018f52a79b",
+          "bytes": 12748
+        },
+        {
+          "path": "docs/设计包/38-模块边界与前端工程设计.md",
+          "sha256": "c47927a2c1ba70e712a9d75e06f22b21807ac13c1df32cb51a43da1c49377544",
+          "bytes": 11027
+        },
+        {
+          "path": "docs/设计包/39-数据存储与事务一致性设计.md",
+          "sha256": "6fb80fc33ac6849027d115e98010387e26bfdbf23516b5348e14dfe43da79550",
+          "bytes": 11408
+        },
+        {
+          "path": "docs/设计包/40-接口事件与集成技术设计.md",
+          "sha256": "d11ac970ce1459c340deb4fb0a84787b24d630b310ff0feb9b1717d143869486",
+          "bytes": 13148
+        },
+        {
+          "path": "docs/设计包/41-AI运行知识分析与安全设计.md",
+          "sha256": "9be618ee54f770fd4884f71d7c1480b057a2bb2c9eb2f24250b67e34a49b6d9c",
+          "bytes": 10977
+        },
+        {
+          "path": "docs/设计包/42-部署运维与非功能设计.md",
+          "sha256": "4506b95b093e5484d86976bbbb4eb7b52187927a706fcfd1822224758d6d5076",
+          "bytes": 8529
+        },
+        {
+          "path": "docs/设计包/43-技术实施路线与验证矩阵.md",
+          "sha256": "0e02380f968702f842a81744a68316fc2d742aed2143c42a7af477c850f170a3",
+          "bytes": 8440
+        },
+        {
+          "path": "docs/设计包/44-技术架构交互图.html",
+          "sha256": "2d306f81e493018a85b1fb5525686a422595dc4f4181f177535040ab83bc1dc7",
+          "bytes": 712424
+        },
+        {
+          "path": "docs/设计包/44-技术架构图.architecture.json",
+          "sha256": "51a667b959b2ccae7b9893017fb909e7e8d022df7963d1c77c7c1505eb4a64d2",
+          "bytes": 4703
+        },
+        {
+          "path": "validation/technical-design-map.json",
+          "sha256": "019fe39d59c709054071e50c75600e9984a462c7de138cfd80cf20bbbf15578f",
+          "bytes": 198251
+        }
+      ],
+      "remainingImplementationGates": [
+        "Final base selection and full eligible package license/dependency inventory",
+        "Reproducible build, legal clean/upgrade database initialization and framework compatibility",
+        "Real OA/AI/permission/recovery/browser acceptance",
+        "Capacity, operational ownership and recovery targets validated in actual environment"
+      ]
+    }
+  ],
+  "designVersion": "1.3",
+  "workspaceReviewChecklist": [
+    {
+      "id": "EW-01",
+      "status": "VERIFIED_FOR_DESIGN",
+      "evidence": [
+        "docs/设计包/34-任务执行工作台与权限分层设计.md",
+        "validation/execution-workspace-check.json"
+      ],
+      "productStatus": "NOT_RUN"
+    },
+    {
+      "id": "EW-02",
+      "status": "VERIFIED_FOR_DESIGN",
+      "evidence": [
+        "docs/设计包/34-任务执行工作台与权限分层设计.md",
+        "validation/execution-workspace-check.json"
+      ],
+      "productStatus": "NOT_RUN"
+    },
+    {
+      "id": "EW-03",
+      "status": "VERIFIED_FOR_DESIGN",
+      "evidence": [
+        "docs/设计包/34-任务执行工作台与权限分层设计.md",
+        "validation/execution-workspace-check.json"
+      ],
+      "productStatus": "NOT_RUN"
+    },
+    {
+      "id": "EW-04",
+      "status": "VERIFIED_FOR_DESIGN",
+      "evidence": [
+        "docs/设计包/34-任务执行工作台与权限分层设计.md",
+        "validation/execution-workspace-check.json"
+      ],
+      "productStatus": "NOT_RUN"
+    },
+    {
+      "id": "EW-05",
+      "status": "VERIFIED_FOR_DESIGN",
+      "evidence": [
+        "docs/设计包/34-任务执行工作台与权限分层设计.md",
+        "validation/execution-workspace-check.json"
+      ],
+      "productStatus": "NOT_RUN"
+    },
+    {
+      "id": "EW-06",
+      "status": "VERIFIED_FOR_DESIGN",
+      "evidence": [
+        "docs/设计包/34-任务执行工作台与权限分层设计.md",
+        "validation/execution-workspace-check.json"
+      ],
+      "productStatus": "NOT_RUN"
+    },
+    {
+      "id": "EW-07",
+      "status": "VERIFIED_FOR_DESIGN",
+      "evidence": [
+        "docs/设计包/34-任务执行工作台与权限分层设计.md",
+        "validation/execution-workspace-check.json"
+      ],
+      "productStatus": "NOT_RUN"
+    },
+    {
+      "id": "EW-08",
+      "status": "VERIFIED_FOR_DESIGN",
+      "evidence": [
+        "docs/设计包/34-任务执行工作台与权限分层设计.md",
+        "validation/execution-workspace-check.json"
+      ],
+      "productStatus": "NOT_RUN"
+    }
+  ],
+  "technicalVersion": "1.0"
+}

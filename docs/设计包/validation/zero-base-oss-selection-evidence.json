@@ -1,0 +1,675 @@
+{
+  "schemaVersion": 1,
+  "generatedAt": "2026-09-11T13:59:04.289634+00:00",
+  "goal": "从零选择允许闭源商业开发且预计工作量最少的 OA 与数字员工底座",
+  "scope": [
+    "公开官方资料研究",
+    "关键许可证和源码核查",
+    "独立选型报告与证据"
+  ],
+  "acceptance_criteria": [
+    "比较完整前后端和 OA/AI 整合度",
+    "实际许可范围明确",
+    "版本和未验证边界明确",
+    "剩余开发清单与来源可读"
+  ],
+  "current_node": "DELIVER_RESEARCH",
+  "completed_nodes": [
+    "N1_SCOPE",
+    "N2_RESEARCH",
+    "N3_LICENSE",
+    "N4_REPORT",
+    "N5_VALIDATE"
+  ],
+  "failed_nodes": [],
+  "nodes": [
+    {
+      "id": "N1_SCOPE",
+      "objective": "固定从零商业选型范围",
+      "preconditions": [
+        "用户授权研究"
+      ],
+      "action": "按用户意图确定 OA、B/S 和个人数字员工需求",
+      "tool_or_skill": "research / web / Python read-only validation",
+      "validation": "报告明确假设，不改现有技术决策",
+      "success_condition": "报告明确假设，不改现有技术决策",
+      "failure_path": "记录问题，取得新证据后有限修正；不升级未验证结论",
+      "rollback_or_compensation": "不修改产品代码和既有设计文档",
+      "status": "COMPLETE_RESEARCH_SCOPE"
+    },
+    {
+      "id": "N2_RESEARCH",
+      "objective": "比较 OA 与 AI 候选",
+      "preconditions": [
+        "N1_SCOPE"
+      ],
+      "action": "官方网页、GitHub API 和源码只读核查",
+      "tool_or_skill": "research / web / Python read-only validation",
+      "validation": "候选有官方来源，区分发行与主分支",
+      "success_condition": "候选有官方来源，区分发行与主分支",
+      "failure_path": "记录问题，取得新证据后有限修正；不升级未验证结论",
+      "rollback_or_compensation": "不修改产品代码和既有设计文档",
+      "status": "COMPLETE_RESEARCH_SCOPE"
+    },
+    {
+      "id": "N3_LICENSE",
+      "objective": "核对许可及集成风险",
+      "preconditions": [
+        "N2_RESEARCH"
+      ],
+      "action": "读取 LICENSE、pom、package、控制器和模型",
+      "tool_or_skill": "research / web / Python read-only validation",
+      "validation": "原始字段与报告结论对齐",
+      "success_condition": "原始字段与报告结论对齐",
+      "failure_path": "记录问题，取得新证据后有限修正；不升级未验证结论",
+      "rollback_or_compensation": "不修改产品代码和既有设计文档",
+      "status": "COMPLETE_RESEARCH_SCOPE"
+    },
+    {
+      "id": "N4_REPORT",
+      "objective": "生成独立可交付报告",
+      "preconditions": [
+        "N3_LICENSE"
+      ],
+      "action": "新建 Markdown 和证据文件",
+      "tool_or_skill": "research / web / Python read-only validation",
+      "validation": "结构、引用、范围和估算可复核",
+      "success_condition": "结构、引用、范围和估算可复核",
+      "failure_path": "记录问题，取得新证据后有限修正；不升级未验证结论",
+      "rollback_or_compensation": "不修改产品代码和既有设计文档",
+      "status": "COMPLETE_RESEARCH_SCOPE"
+    },
+    {
+      "id": "N5_VALIDATE",
+      "objective": "验证报告与证据",
+      "preconditions": [
+        "N4_REPORT"
+      ],
+      "action": "Python 静态断言及独立 AI 研究复核",
+      "tool_or_skill": "research / web / Python read-only validation",
+      "validation": "静态检查通过，独立复核无阻断",
+      "success_condition": "静态检查通过，独立复核无阻断",
+      "failure_path": "记录问题，取得新证据后有限修正；不升级未验证结论",
+      "rollback_or_compensation": "不修改产品代码和既有设计文档",
+      "status": "COMPLETE_RESEARCH_SCOPE"
+    }
+  ],
+  "status": "RESEARCHED_NOT_INTEGRATED",
+  "risks": [
+    "无构建与集成实测",
+    "无全量依赖审计",
+    "工作量为工程估算",
+    "芋道 Boot3/Flowable8 兼容疑点"
+  ],
+  "approvals": [
+    "用户授权全网选型研究与文档输出"
+  ],
+  "repositoryMetadataSnapshot": {
+    "retrievedAt": "2026-09-11T13:41:28.628669+00:00",
+    "repositories": [
+      {
+        "repository": "YunaiV/ruoyi-vue-pro",
+        "metadata": {
+          "default_branch": "master",
+          "archived": false,
+          "pushed_at": "2026-09-04T01:51:59Z",
+          "license": {
+            "key": "mit",
+            "name": "MIT License",
+            "spdx_id": "MIT",
+            "url": "https://api.github.com/licenses/mit",
+            "node_id": "MDc6TGljZW5zZTEz"
+          },
+          "html_url": "https://github.com/YunaiV/ruoyi-vue-pro"
+        },
+        "release": {
+          "tag_name": "v2026.08(jdk25)",
+          "published_at": "2026-09-02T14:37:40Z",
+          "prerelease": false,
+          "html_url": "https://github.com/YunaiV/ruoyi-vue-pro/releases/tag/v2026.08(jdk25)"
+        }
+      },
+      {
+        "repository": "yudaocode/yudao-ui-admin-vue3",
+        "metadata": {
+          "default_branch": "master",
+          "archived": false,
+          "pushed_at": "2026-09-05T02:00:48Z",
+          "license": {
+            "key": "mit",
+            "name": "MIT License",
+            "spdx_id": "MIT",
+            "url": "https://api.github.com/licenses/mit",
+            "node_id": "MDc6TGljZW5zZTEz"
+          },
+          "html_url": "https://github.com/yudaocode/yudao-ui-admin-vue3"
+        },
+        "release": {
+          "tag_name": "v2026.07",
+          "published_at": "2026-07-31T14:30:55Z",
+          "prerelease": false,
+          "html_url": "https://github.com/yudaocode/yudao-ui-admin-vue3/releases/tag/v2026.07"
+        }
+      },
+      {
+        "repository": "dromara/RuoYi-Vue-Plus",
+        "metadata": {
+          "default_branch": "6.X",
+          "archived": false,
+          "pushed_at": "2026-09-11T09:46:15Z",
+          "license": {
+            "key": "mit",
+            "name": "MIT License",
+            "spdx_id": "MIT",
+            "url": "https://api.github.com/licenses/mit",
+            "node_id": "MDc6TGljZW5zZTEz"
+          },
+          "html_url": "https://github.com/dromara/RuoYi-Vue-Plus"
+        },
+        "release": {
+          "tag_name": "v6.0.0",
+          "published_at": "2026-07-30T03:11:05Z",
+          "prerelease": false,
+          "html_url": "https://github.com/dromara/RuoYi-Vue-Plus/releases/tag/v6.0.0"
+        }
+      },
+      {
+        "repository": "dromara/warm-flow",
+        "metadata": {
+          "default_branch": "master",
+          "archived": false,
+          "pushed_at": "2026-08-07T03:48:33Z",
+          "license": {
+            "key": "apache-2.0",
+            "name": "Apache License 2.0",
+            "spdx_id": "Apache-2.0",
+            "url": "https://api.github.com/licenses/apache-2.0",
+            "node_id": "MDc6TGljZW5zZTI="
+          },
+          "html_url": "https://github.com/dromara/warm-flow"
+        },
+        "release": {
+          "tag_name": "v1.6.0-m4",
+          "published_at": "2025-01-15T07:30:37Z",
+          "prerelease": false,
+          "html_url": "https://github.com/dromara/warm-flow/releases/tag/v1.6.0-m4"
+        }
+      },
+      {
+        "repository": "ageerle/ruoyi-ai",
+        "metadata": {
+          "default_branch": "main",
+          "archived": false,
+          "pushed_at": "2026-09-11T02:49:37Z",
+          "license": {
+            "key": "mit",
+            "name": "MIT License",
+            "spdx_id": "MIT",
+            "url": "https://api.github.com/licenses/mit",
+            "node_id": "MDc6TGljZW5zZTEz"
+          },
+          "html_url": "https://github.com/ageerle/ruoyi-ai"
+        },
+        "release": {
+          "tag_name": "v3.1.0",
+          "published_at": "2026-08-04T07:24:20Z",
+          "prerelease": false,
+          "html_url": "https://github.com/ageerle/ruoyi-ai/releases/tag/v3.1.0"
+        }
+      },
+      {
+        "repository": "nocobase/nocobase",
+        "metadata": {
+          "default_branch": "main",
+          "archived": false,
+          "pushed_at": "2026-09-11T08:22:33Z",
+          "license": {
+            "key": "other",
+            "name": "Other",
+            "spdx_id": "NOASSERTION",
+            "url": null,
+            "node_id": "MDc6TGljZW5zZTA="
+          },
+          "html_url": "https://github.com/nocobase/nocobase"
+        },
+        "release": {
+          "tag_name": "v2.2.12",
+          "published_at": "2026-09-11T08:21:15Z",
+          "prerelease": false,
+          "html_url": "https://github.com/nocobase/nocobase/releases/tag/v2.2.12"
+        }
+      },
+      {
+        "repository": "cortezaproject/corteza",
+        "metadata": {
+          "default_branch": "2024.9.x",
+          "archived": false,
+          "pushed_at": "2026-08-27T14:31:07Z",
+          "license": {
+            "key": "apache-2.0",
+            "name": "Apache License 2.0",
+            "spdx_id": "Apache-2.0",
+            "url": "https://api.github.com/licenses/apache-2.0",
+            "node_id": "MDc6TGljZW5zZTI="
+          },
+          "html_url": "https://github.com/cortezaproject/corteza"
+        },
+        "release": {
+          "tag_name": "2024.9.10",
+          "published_at": "2026-08-27T14:41:31Z",
+          "prerelease": false,
+          "html_url": "https://github.com/cortezaproject/corteza/releases/tag/2024.9.10"
+        }
+      },
+      {
+        "repository": "frappe/frappe",
+        "metadata": {
+          "default_branch": "develop",
+          "archived": false,
+          "pushed_at": "2026-09-11T11:57:46Z",
+          "license": {
+            "key": "mit",
+            "name": "MIT License",
+            "spdx_id": "MIT",
+            "url": "https://api.github.com/licenses/mit",
+            "node_id": "MDc6TGljZW5zZTEz"
+          },
+          "html_url": "https://github.com/frappe/frappe"
+        },
+        "release": {
+          "tag_name": "v15.120.1",
+          "published_at": "2026-09-08T17:08:25Z",
+          "prerelease": false,
+          "html_url": "https://github.com/frappe/frappe/releases/tag/v15.120.1"
+        }
+      }
+    ]
+  },
+  "sourceFetches": [
+    {
+      "url": "https://raw.githubusercontent.com/YunaiV/ruoyi-vue-pro/master/LICENSE",
+      "exitCode": 0,
+      "error": null,
+      "sha256": "772daf1f82a50025a74e4066050490d875feba62a49cf0ecefa1b4cc824e9a07",
+      "id": "zero-base-source-files.json:yudao-license",
+      "hashVerifiedFromFetchedText": true
+    },
+    {
+      "url": "https://raw.githubusercontent.com/yudaocode/yudao-ui-admin-vue3/master/LICENSE",
+      "exitCode": 0,
+      "error": null,
+      "sha256": "3f101f5e0207524af727e58ca8abf241b754665ee1eb90b45388ff0263d3640d",
+      "id": "zero-base-source-files.json:yudao-ui-license",
+      "hashVerifiedFromFetchedText": true
+    },
+    {
+      "url": "https://raw.githubusercontent.com/YunaiV/ruoyi-vue-pro/master/pom.xml",
+      "exitCode": 0,
+      "error": null,
+      "sha256": "dc588f09c25c7f6496fc84034f9f31a163424f6be8070099e5fea01a471bf887",
+      "id": "zero-base-source-files.json:yudao-pom",
+      "hashVerifiedFromFetchedText": true
+    },
+    {
+      "url": "https://raw.githubusercontent.com/YunaiV/ruoyi-vue-pro/master/yudao-module-ai/pom.xml",
+      "exitCode": 0,
+      "error": null,
+      "sha256": "5659ee58498da97a65c97f78defbba134bb759687fc9b20b43bf9f336a9c4ecd",
+      "id": "zero-base-source-files.json:yudao-ai-pom",
+      "hashVerifiedFromFetchedText": true
+    },
+    {
+      "url": "https://raw.githubusercontent.com/dromara/RuoYi-Vue-Plus/6.X/LICENSE",
+      "exitCode": 0,
+      "error": null,
+      "sha256": "e175f7e0248508916cd20e20d1b301a7c1079efcc57fadb93ddd7bfce3a432b3",
+      "id": "zero-base-source-files.json:plus-license",
+      "hashVerifiedFromFetchedText": true
+    },
+    {
+      "url": "https://raw.githubusercontent.com/dromara/warm-flow/master/LICENSE",
+      "exitCode": 0,
+      "error": null,
+      "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4",
+      "id": "zero-base-source-files.json:warm-license",
+      "hashVerifiedFromFetchedText": true
+    },
+    {
+      "url": "https://raw.githubusercontent.com/nocobase/nocobase/main/LICENSE.txt",
+      "exitCode": 0,
+      "error": null,
+      "sha256": "6599d526e9fc5593cabadc8349d6c947b155c534042f1df6a992ce42ce0b68c9",
+      "id": "zero-base-source-files.json:nocobase-license",
+      "hashVerifiedFromFetchedText": true
+    },
+    {
+      "url": "https://raw.githubusercontent.com/jeecgboot/JeecgBoot/main/LICENSE",
+      "exitCode": 0,
+      "error": null,
+      "sha256": "d93c8aa60d88a53099cd53940f50e4905a6fc74bf144759c2ff98720c12dbc85",
+      "id": "zero-base-source-files.json:jeecg-license",
+      "hashVerifiedFromFetchedText": true
+    },
+    {
+      "url": "https://raw.githubusercontent.com/frappe/frappe/develop/LICENSE",
+      "exitCode": 0,
+      "error": null,
+      "sha256": "bc6001a54ffcc4ab520424d7dbb85b293578efcdcb7d8f8055e00dddf942e5d7",
+      "id": "zero-base-source-files.json:frappe-license",
+      "hashVerifiedFromFetchedText": true
+    },
+    {
+      "url": "https://raw.githubusercontent.com/cortezaproject/corteza/2024.9.x/LICENSE",
+      "exitCode": 0,
+      "error": null,
+      "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+      "id": "zero-base-source-files.json:corteza-license",
+      "hashVerifiedFromFetchedText": true
+    },
+    {
+      "url": "https://raw.githubusercontent.com/ageerle/ruoyi-ai/main/LICENSE",
+      "exitCode": 0,
+      "error": null,
+      "sha256": "00fcb99d17bf06a9ce9bd901cdb5cb2cb326fc4937ee13e458071f49cc2de233",
+      "id": "zero-base-source-files.json:ruoyi-ai-license",
+      "hashVerifiedFromFetchedText": true
+    },
+    {
+      "url": "https://raw.githubusercontent.com/ageerle/ruoyi-ai/main/pom.xml",
+      "exitCode": 0,
+      "error": null,
+      "sha256": "22ce4d492abe3faaf4484848300ac22af5a264f77f1a857d8b3e1421ce0bf5ab",
+      "id": "zero-base-source-files.json:ruoyi-ai-pom",
+      "hashVerifiedFromFetchedText": true
+    },
+    {
+      "url": "https://raw.githubusercontent.com/YunaiV/ruoyi-vue-pro/master-jdk17/pom.xml",
+      "exitCode": 0,
+      "error": null,
+      "sha256": "e7f381640a6f829870827a33cad6b85e72a0c33efe0cb1944c66391872ff62c5",
+      "id": "zero-base-selected-source-files.json:yudao-boot3-pom",
+      "hashVerifiedFromFetchedText": true
+    },
+    {
+      "url": "https://raw.githubusercontent.com/YunaiV/ruoyi-vue-pro/master-jdk17/yudao-dependencies/pom.xml",
+      "exitCode": 0,
+      "error": null,
+      "sha256": "9f4f2ea64c44c9d19e6a2d314d174979bc3f116c904267f887864a247fd8be68",
+      "id": "zero-base-selected-source-files.json:yudao-boot3-deps",
+      "hashVerifiedFromFetchedText": true
+    },
+    {
+      "url": "https://raw.githubusercontent.com/YunaiV/ruoyi-vue-pro/master-jdk17/yudao-module-ai/src/main/java/cn/iocoder/yudao/module/ai/dal/dataobject/model/AiChatRoleDO.java",
+      "exitCode": 0,
+      "error": null,
+      "sha256": "68f629a5a235fa09990ac36ce40b6eac0f383bea348e0559524f2b27e0914d57",
+      "id": "zero-base-selected-source-files.json:yudao-role",
+      "hashVerifiedFromFetchedText": true
+    },
+    {
+      "url": "https://raw.githubusercontent.com/YunaiV/ruoyi-vue-pro/master-jdk17/yudao-module-ai/src/main/java/cn/iocoder/yudao/module/ai/controller/admin/model/AiChatRoleController.java",
+      "exitCode": 0,
+      "error": null,
+      "sha256": "02ddaaf92ae0b812237864d442acfc3eeaa64c5dec983563b4abf58f5f363a5e",
+      "id": "zero-base-selected-source-files.json:yudao-role-controller",
+      "hashVerifiedFromFetchedText": true
+    },
+    {
+      "url": "https://raw.githubusercontent.com/YunaiV/ruoyi-vue-pro/master-jdk17/yudao-module-bpm/src/main/java/cn/iocoder/yudao/module/bpm/service/task/BpmTaskServiceImpl.java",
+      "exitCode": 0,
+      "error": null,
+      "sha256": "787d8399d26ccc056bd951b7864904a5c8019d28bd4fb6637ee14615248b5226",
+      "id": "zero-base-selected-source-files.json:yudao-bpm",
+      "hashVerifiedFromFetchedText": true
+    },
+    {
+      "url": "https://raw.githubusercontent.com/ageerle/ruoyi-ai/main/ruoyi-modules/ruoyi-workflow/src/main/java/org/ruoyi/workflow/controller/FlwTaskController.java",
+      "exitCode": 0,
+      "error": null,
+      "sha256": "db8a0fbbcd30c177cab89714cd3217b1ecff44087b0eeadf8e7b0c059b62d7aa",
+      "id": "zero-base-selected-source-files.json:ruoyi-ai-oa",
+      "hashVerifiedFromFetchedText": true
+    },
+    {
+      "url": "https://raw.githubusercontent.com/ageerle/ruoyi-ai/main/ruoyi-modules/ruoyi-chat/src/main/java/org/ruoyi/controller/mcp/McpMarketController.java",
+      "exitCode": 0,
+      "error": null,
+      "sha256": "9b8bfa4f0e5b069cdf88dd89d7ca7f3aef372943965b972dabe212b4bfb86e24",
+      "id": "zero-base-selected-source-files.json:ruoyi-ai-market",
+      "hashVerifiedFromFetchedText": true
+    },
+    {
+      "url": "https://raw.githubusercontent.com/yudaocode/yudao-ui-admin-vue3/master/package.json",
+      "exitCode": 0,
+      "error": null,
+      "sha256": "e2512b12ded1be9bd20d734779be868e1d064bfa8bc77ac7b7c55191e2ca7fa1",
+      "id": "zero-base-selected-source-files.json:yudao-ui-package",
+      "hashVerifiedFromFetchedText": true
+    },
+    {
+      "url": "https://raw.githubusercontent.com/tinyflow-ai/tinyflow-java/main/LICENSE",
+      "exitCode": 0,
+      "error": null,
+      "sha256": "9ccf26cfe845e0eb8bb58053e47366e7ab6b697ae010f7650978d4b71b7d1fc1",
+      "id": "zero-base-selected-source-files.json:tinyflow-license",
+      "hashVerifiedFromFetchedText": true
+    },
+    {
+      "url": "https://raw.githubusercontent.com/ageerle/ruoyi-web/main/LICENSE",
+      "exitCode": 56,
+      "error": "curl: (56) The requested URL returned error: 404\n",
+      "sha256": null,
+      "id": "zero-base-selected-source-files.json:ruoyi-web-license",
+      "status": "FAILED_URL_RESOLVED_BY_CORRECT_PATH",
+      "resolution": "https://github.com/ageerle/ruoyi-web/blob/main/license"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/ageerle/ruoyi-admin/main/LICENSE",
+      "exitCode": 0,
+      "error": null,
+      "sha256": "00fcb99d17bf06a9ce9bd901cdb5cb2cb326fc4937ee13e458071f49cc2de233",
+      "id": "zero-base-selected-source-files.json:ruoyi-admin-license",
+      "hashVerifiedFromFetchedText": true
+    },
+    {
+      "url": "https://raw.githubusercontent.com/dromara/RuoYi-Vue-Plus/6.X/README.md",
+      "exitCode": 0,
+      "sha256": "7bb446177d837ff22cc73edc07e26385f375c721c4e641bfc5f23987c9d9315f",
+      "error": "",
+      "id": "zero-base-final-source-checks.json:plus-readme",
+      "hashVerifiedFromFetchedText": true
+    },
+    {
+      "url": "https://api.github.com/repos/YunaiV/ruoyi-vue-pro/releases?per_page=8",
+      "exitCode": 0,
+      "sha256": "7560c5cd46815b231e920a0ceb7f9e013257ec1eb706b27f2c08d8ed714c4078",
+      "error": "",
+      "id": "zero-base-final-source-checks.json:yudao-releases",
+      "hashVerifiedFromFetchedText": true
+    },
+    {
+      "url": "https://raw.githubusercontent.com/YunaiV/ruoyi-vue-pro/master-jdk17/yudao-module-bpm/pom.xml",
+      "exitCode": 0,
+      "sha256": "2536dd3020d554574cf815f5b3a9c13a6db915fd90534aa2eeb5dacd8881eb3d",
+      "error": "",
+      "id": "zero-base-final-source-checks.json:yudao-bpm-pom",
+      "hashVerifiedFromFetchedText": true
+    },
+    {
+      "url": "https://raw.githubusercontent.com/yudaocode/yudao-ui-admin-vue3/master/src/components/Tinyflow/Tinyflow.vue",
+      "exitCode": 0,
+      "sha256": "e338e065bf3ea6bc3498d01ae239e654aa081a7f2e0b1ad87df03e7f30ccbf78",
+      "error": "",
+      "id": "zero-base-final-source-checks.json:yudao-ui-tinyflow",
+      "hashVerifiedFromFetchedText": true
+    },
+    {
+      "url": "https://raw.githubusercontent.com/yudaocode/yudao-ui-admin-vue3/master/src/views/pms/pm/project/detail/ProjectGantt.vue",
+      "exitCode": 0,
+      "sha256": "7ef69538842e5c1385ab141e743a05ebc8f7d8ff7e557d6998a19afdb18b20fa",
+      "error": "",
+      "id": "zero-base-final-source-checks.json:yudao-ui-gantt",
+      "hashVerifiedFromFetchedText": true
+    },
+    {
+      "url": "https://raw.githubusercontent.com/YunaiV/ruoyi-vue-pro/v2026.08(jdk17%2F21)/yudao-dependencies/pom.xml",
+      "exitCode": 0,
+      "sha256": "ce909d70990ac0e67629776abe665897148b4364235510e1fc7c1e5618b7904b",
+      "error": "",
+      "id": "zero-base-additional-pins.json:yudao-release17-deps",
+      "hashVerifiedFromFetchedText": true
+    },
+    {
+      "url": "https://raw.githubusercontent.com/ageerle/ruoyi-web/main/LICENSE.md",
+      "exitCode": 56,
+      "sha256": null,
+      "error": "curl: (56) The requested URL returned error: 404\n",
+      "id": "zero-base-additional-pins.json:ruoyi-web-license",
+      "status": "FAILED_URL_RESOLVED_BY_CORRECT_PATH",
+      "resolution": "https://github.com/ageerle/ruoyi-web/blob/main/license"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/CrazyLionCat/plus-ui/6.X/LICENSE",
+      "exitCode": 56,
+      "sha256": null,
+      "error": "curl: (56) The requested URL returned error: 404\n",
+      "id": "zero-base-additional-pins.json:plus-ui-license",
+      "status": "FAILED_URL_RESOLVED_BY_CORRECT_PATH",
+      "resolution": "https://github.com/CrazyLionCat/plus-ui/blob/6.X-Vue/LICENSE"
+    }
+  ],
+  "treeSnapshots": [
+    {
+      "repository": "YunaiV/ruoyi-vue-pro",
+      "treeSha": "01a0eaf573a962eda54c83e46551cdd6bfbf207c",
+      "isCommitSha": false,
+      "truncated": false,
+      "fileCount": 8214
+    },
+    {
+      "repository": "yudaocode/yudao-ui-admin-vue3",
+      "treeSha": "aab14fb0e74720dd09e964ae066f8bbde9f9012e",
+      "isCommitSha": false,
+      "truncated": false,
+      "fileCount": 2904
+    },
+    {
+      "repository": "ageerle/ruoyi-ai",
+      "treeSha": "cca30905778357e3aeb42b6adb65ef2384e75e60",
+      "isCommitSha": false,
+      "truncated": false,
+      "fileCount": 1632
+    }
+  ],
+  "correctedPathsVerifiedWithWeb": [
+    {
+      "url": "https://github.com/ageerle/ruoyi-web/blob/main/license",
+      "observed": "MIT License, copyright 2026 ruoyi-ai"
+    },
+    {
+      "url": "https://github.com/CrazyLionCat/plus-ui/blob/6.X-Vue/LICENSE",
+      "observed": "MIT License, copyright 2019 RuoYi-Vue-Plus"
+    }
+  ],
+  "reportExternalUrls": [
+    "https://dhtmlx.com/blog/dhtmlx-gantt-licensing-options-explained-gpl-mit-community-pro-editions/",
+    "https://doc.iocoder.cn/bpm/",
+    "https://doc.ruoyiai.chat/guide/features/orchestration.html",
+    "https://docs.cortezaproject.org/corteza-docs/2024.9/integrator-guide/security-model/index.html",
+    "https://docs.dhtmlx.com/gantt/migration/",
+    "https://docs.frappe.io/legal/others/license-and-trademark",
+    "https://docs.langflow.org/security",
+    "https://docs.nocobase.com/ai-employees/workflow/nodes/employee/configuration",
+    "https://docs.nocobase.com/plugins/%40nocobase/plugin-ai",
+    "https://docs.nocobase.com/workflow/nodes/manual",
+    "https://github.com/CrazyLionCat/plus-ui/blob/6.X-Vue/LICENSE",
+    "https://github.com/FlowiseAI/Flowise",
+    "https://github.com/FlowiseAI/Flowise/blob/9291856d1ea4a4ceea9f8fef8ce14f4f6c81e8eb/LICENSE.md",
+    "https://github.com/YunaiV/ruoyi-vue-pro/blob/master-jdk17/pom.xml",
+    "https://github.com/YunaiV/ruoyi-vue-pro/blob/master-jdk17/yudao-dependencies/pom.xml",
+    "https://github.com/YunaiV/ruoyi-vue-pro/blob/master-jdk17/yudao-module-ai/src/main/java/cn/iocoder/yudao/module/ai/controller/admin/model/AiChatRoleController.java",
+    "https://github.com/YunaiV/ruoyi-vue-pro/blob/master-jdk17/yudao-module-ai/src/main/java/cn/iocoder/yudao/module/ai/dal/dataobject/model/AiChatRoleDO.java",
+    "https://github.com/YunaiV/ruoyi-vue-pro/blob/master-jdk17/yudao-module-bpm/pom.xml",
+    "https://github.com/YunaiV/ruoyi-vue-pro/blob/master-jdk17/yudao-module-bpm/src/main/java/cn/iocoder/yudao/module/bpm/service/task/BpmTaskServiceImpl.java",
+    "https://github.com/YunaiV/ruoyi-vue-pro/blob/master/LICENSE",
+    "https://github.com/YunaiV/ruoyi-vue-pro/blob/master/yudao-module-ai/pom.xml",
+    "https://github.com/YunaiV/ruoyi-vue-pro/releases",
+    "https://github.com/ageerle/ruoyi-admin/blob/main/LICENSE",
+    "https://github.com/ageerle/ruoyi-ai/blob/main/LICENSE",
+    "https://github.com/ageerle/ruoyi-ai/blob/main/pom.xml",
+    "https://github.com/ageerle/ruoyi-ai/blob/main/ruoyi-modules/ruoyi-chat/src/main/java/org/ruoyi/controller/mcp/McpMarketController.java",
+    "https://github.com/ageerle/ruoyi-ai/blob/main/ruoyi-modules/ruoyi-workflow/src/main/java/org/ruoyi/workflow/controller/FlwTaskController.java",
+    "https://github.com/ageerle/ruoyi-ai/releases",
+    "https://github.com/ageerle/ruoyi-web/blob/main/license",
+    "https://github.com/agentscope-ai/agentscope-java/blob/c5db8f72dbea5c2c70de96885e4167ce5b1b24b0/LICENSE",
+    "https://github.com/agentscope-ai/agentscope-java/blob/c5db8f72dbea5c2c70de96885e4167ce5b1b24b0/agentscope-service/README.md",
+    "https://github.com/alibaba/spring-ai-alibaba/blob/f82da0b50f35744c13968191be2b1cd2452ef550/LICENSE",
+    "https://github.com/alibaba/spring-ai-alibaba/blob/f82da0b50f35744c13968191be2b1cd2452ef550/spring-ai-alibaba-admin/README.md",
+    "https://github.com/apache/incubator-kie",
+    "https://github.com/bpmn-io/bpmn-js/blob/develop/LICENSE",
+    "https://github.com/cortezaproject/corteza/blob/2024.9.x/LICENSE",
+    "https://github.com/dromara/RuoYi-Vue-Plus/blob/6.X/LICENSE",
+    "https://github.com/dromara/warm-flow/blob/master/LICENSE",
+    "https://github.com/element-plus/element-plus/blob/dev/LICENSE",
+    "https://github.com/flowable/flowable-engine/blob/main/LICENSE",
+    "https://github.com/flowable/flowable-engine/releases/tag/flowable-8.0.0",
+    "https://github.com/frappe/frappe/blob/develop/LICENSE",
+    "https://github.com/frappe/frappe/blob/develop/frappe/workflow/doctype/workflow/workflow.py",
+    "https://github.com/frappe/frappe/blob/develop/frappe/workflow/doctype/workflow_action/workflow_action.py",
+    "https://github.com/jeecgboot/JeecgBoot/blob/main/LICENSE",
+    "https://github.com/langgenius/dify/blob/e7981a6f19435d52ef4b92f71054739ebc2b593e/LICENSE",
+    "https://github.com/n8n-io/n8n-docs/blob/main/docs/n8n-community-license/README.md",
+    "https://github.com/nocobase/nocobase/blob/main/LICENSE.txt",
+    "https://github.com/operaton/operaton/blob/main/LICENSE",
+    "https://github.com/spring-projects/spring-ai/blob/main/LICENSE.txt",
+    "https://github.com/tinyflow-ai/tinyflow-java/blob/main/LICENSE",
+    "https://github.com/tinyflow-ai/tinyflow/blob/main/LICENSE",
+    "https://github.com/xaboy/form-create-designer/blob/master/LICENSE",
+    "https://github.com/xaboy/form-create/blob/master/LICENSE",
+    "https://github.com/yudaocode/yudao-ui-admin-vue3/blob/master/LICENSE",
+    "https://github.com/yudaocode/yudao-ui-admin-vue3/blob/master/package.json",
+    "https://github.com/yudaocode/yudao-ui-admin-vue3/blob/master/src/components/Tinyflow/Tinyflow.vue",
+    "https://github.com/yudaocode/yudao-ui-admin-vue3/tree/master/src/components/SimpleProcessDesignerV2",
+    "https://github.com/yudaocode/yudao-ui-admin-vue3/tree/master/src/views/bpm",
+    "https://help.jeecg.com/java/",
+    "https://joget.com/platform-guide/licensing-and-total-cost-of-ownership/",
+    "https://v2.docs.nocobase.com/plugins/%40nocobase/plugin-workflow-approval/",
+    "https://www.nocobase.com/en/blog/pricing-adjustment-202602",
+    "https://www.nocobase.com/en/commercial"
+  ],
+  "validation": {
+    "method": "python3 stdin: SHA256, Markdown structure/local links, estimate arithmetic, XML/JSON properties, source fields",
+    "checksPassed": true,
+    "independentAiReview": "无阻断问题；许可、版本和隔离表述与官方证据一致。",
+    "priorAttempt": {
+      "exitCode": 1,
+      "cause": "验证器误写 spring-boot.version，实际源码属性为 spring.boot.version；报告版本数值正确。",
+      "resolution": "读取真实属性并用 ElementTree 校验，不修改源码或降低断言。"
+    },
+    "runtimeTestsExecuted": false,
+    "buildsExecuted": false,
+    "sbomAuditExecuted": false,
+    "browserAcceptanceExecuted": false,
+    "productFilesModified": false
+  },
+  "artifacts": [
+    {
+      "path": "25-从零开发最小工作量开源选型.md",
+      "sha256": "abb035e1b89ab5f8be72d28da16a2f88c45e5da1a0b16fe7e0419b715bf27f38",
+      "bytes": 35211
+    },
+    {
+      "path": "validation/zero-base-ai-candidate-research.md",
+      "sha256": "dcb4601d91927ec2e8379f587a316b189361ddb90e3684d4e92489982f90120b",
+      "bytes": 17259
+    }
+  ],
+  "limitations": [
+    "sourceFetches.exitCode 是只读抓取结果，不是构建结果",
+    "源码存在不能替代运行验收",
+    "未测试候选 OA/AI 端到端",
+    "没有工作量比较基准",
+    "一方许可不覆盖所有依赖、模型和服务",
+    "分支可变；抓取时间与内容哈希表示本次观察"
+  ]
+}

@@ -1,0 +1,259 @@
+#  让Agent成本暴降90%！自动化Harness适配框架被CMU开源了
+
+关注AI Agent  关注AI Agent  智猩猩AI
+
+_2026年07月27日 12:18_ __ _ _ _ _ _ 北京  _
+
+在小说阅读器读本章
+
+去阅读
+
+智猩猩AI整理
+
+编辑：BugMaker
+
+  
+
+企业部署Agent时，一个现实问题始终绕不开：前沿大模型效果不错，  但  高昂的推理成本  让大规模部署难以持续。
+
+  
+
+但直接把大模型替换成小语言模型，往往也难以奏效。  同一套Agent系统只替换模型，小模型往往会在规划、工具选择和指令遵循上迅速掉队  。
+
+  
+
+卡内基梅隆大学团队发布  《Better Harnesses, Smaller Models: Building 90% Cheaper Agents
+via Automated Harness Adaptation》  提出了另一条路径：  模型可以变小，但围绕模型运行的harness
+也需要针对任务和模型能力重新适配。
+
+  
+
+![](https://mmbiz.qpic.cn/sz_mmbiz_png/zJVQUll3YIaOZPia5IBnC4h9NZUOZ8qicplA9IicVAmLzaRWUO6hxGOjAPf7X8oicribt91DBaWfibNAGy7G9DDjfqjnSG1eI38xGpicUGLQicIqYxc/640?wx_fmt=png&from=appmsg)
+
+  * 论文标题： 
+
+Better Harnesses, Smaller Models: Building 90% Cheaper Agents via Automated
+Harness Adaptation
+
+  * 论文链接： 
+
+https://arxiv.org/abs/2607.08938
+
+  * 项目链接： 
+
+https://github.com/malusamayo/migration-analysis
+
+  
+
+团队没有继续训练模型，而是让meta-agent分析失败轨迹，自动调整指令、工具和Agent循环。
+
+  
+
+结果很直接：  优化后的harness在21个“任务-SLM”组合中的16个上显著提升性能，  7个组合弥合了SLM与前沿LLM之间的性能差距。
+表现最好的SLM恢复了约89%的前沿LLM性能，推理成本仅为前沿LLM的4%。
+
+  
+
+_ ** 01  ** _
+
+** 不是换模型  **
+
+** 而是把  部分  难度移出模型  
+**
+
+  
+
+当前很多Agent系统  是围绕前沿LLM设计的  。模型需要自己理解任务、制定计划、挑选工具，并在出错后重新规划。
+前沿模型通常能够较好地完成这些工作，SLM却更容易暴露出模型能力与任务需求之间的缺口。
+
+  
+
+![](https://mmbiz.qpic.cn/mmbiz_png/zJVQUll3YIaSibuyW5bB0suhNYaDvJwCibmCsw0gfvPaGTuPQhV53xfDzYmzo7d1SiaMmkOsCkYaFlgT29ib6HciabbnM0MTovOy0hZCtZ6bIiaFQ/640?wx_fmt=png&from=appmsg)
+
+  
+
+作者将常见问题归为五类：  工具使用失败（  tool-use failure  ）、遵循  指令  失败（  instruction-following
+failure  ）、知识失败（  knowledge failure  ）、长上下文失败（  long-context failure
+），以及规划或推理失败（  planning/reasoning failure  ）  。
+
+  
+
+问题并不完全出在模型无法完成单个步骤，而是它需要同时承担过多工作  ：  既要推断流程，又要从大量工具中做选择，还要避免重复发送消息  。
+
+  
+
+harness adaptation的思路，是把不同实例共享的部分难点固化到外部系统中。明确的步骤写入system
+prompt，重复操作封装为工具，不相关工具直接隐藏，必须遵守的条件交给程序检查。
+
+  
+
+模型  不必临场解决所有问题，只需可靠完成harness为它划定的任务  。
+
+  
+
+![](https://mmbiz.qpic.cn/sz_mmbiz_png/zJVQUll3YIbU0WGV3zicn9upUeJOmOe542PmDwNX7DaZU0OCFMXLQno6ER9hfWgUW3lHLib0AofsAhDOCElC1IG9ZHu4ClIX6DP0aceukGnKU/640?wx_fmt=png&from=appmsg)
+
+  
+
+_ ** 02  ** _
+
+** meta-agent  **
+
+** 自动修改Agent系统  
+**
+
+  
+
+手工寻找合适的harness并不轻松。同一次失败可能同时涉及工具选择、上下文增长和指令遵循，而且不同模型的失败方式并不相同。
+
+  
+
+因此，  研究团队  把harness设计转化为一个由数据和评估驱动的搜索问题。
+
+  
+
+harness optimizer接收目标SLM、训练及验证数据和初始harness，在一个明确的空间中  修改system
+prompts、skills、dynamic contexts、工具、hooks、上下文管理组件和sub-agents  。
+
+  
+
+首先，从已经尝试过的harness候选池中采样一个版本，在训练实例上运行，并记录完整轨迹，包括工具调用、中间观察、输出、分数和反馈。
+
+  
+
+meta-agent读取原始轨迹与当前harness代码  ，诊断失败原因，再提出具体修改。它还会查看过去方案及效果，避免重复尝试已经证明无效的调整。
+
+  
+
+最后，新harness先经过低成本的代码检查，通过后，它会在同一批实例上重新评估，只有出现改进，才进入完整验证并被加入候选池。
+
+  
+
+团队使用gemini-3.1-pro-preview作为meta-agent
+。每个任务与模型组合的单次优化预算为20美元，执行三次独立搜索，再保留验证分数最高的harness。
+
+  
+
+这不是让Agent自由重写自己，而是在受约束的组件空间内，用真实失败轨迹寻找有效修改  。
+
+  
+
+![](https://mmbiz.qpic.cn/sz_mmbiz_png/zJVQUll3YIbnmf0wtxr4Q04iaYAp1xfmPicV9TEulQho0jEg3EokU5vqphosIEPvIjzWxRv8ICZUpkDgweicMEpWDAetvd6zky05JNWfAe2350/640?wx_fmt=png&from=appmsg)  
+
+_ ** 03  ** _
+
+** 预算审批从75.0%升至98.3%  
+**
+
+  
+
+预算审批任务最能说明harness具体改了什么。
+
+  
+
+经过23轮迭代，优化器为gemma-4-26b-a4b找到了三项关键调整。
+
+  
+
+第一，把简短的通用提示改写为明确的逐步流程，规定联系人发现、信息收集、预算核对和消息回复的顺序。
+
+  
+
+第二，过滤不需要的MCP工具，缩小模型的动作空间，减少工具选择错误。
+
+  
+
+第三，创建anti_loop_hook.py。当Agent准备向同一接收人再次发送完全相同的消息时，hook会直接拒绝调用，并要求模型进入下一步或结束任务。
+
+  
+
+调整之后，  gemma-4-26b-a4b的准确率从75.0%提升至98.3%  ，超过  gemini-3.1-pro-preview的97.3%  ；
+单实例平均成本则从0.039美元降至0.017美元  。
+
+  
+
+harness承担了脆弱的规划、筛选和检查，SLM只负责执行已经结构化的流程  。
+
+  
+
+![](https://mmbiz.qpic.cn/mmbiz_png/zJVQUll3YIaOAbeuOLZvHL3BibicxZ6iaF1jpFwEo17wyvL4JwxiayWchfhZpoIq2KOWFy3FFAe6dzoEoLqV4Qc8wMIEJZ4XElusszVTic4h2gj8/640?wx_fmt=png&from=appmsg)
+
+  
+
+_ ** 04  ** _
+
+** 什么时候用小模型加harness  
+**
+
+  
+
+论文在七项业务相关任务上进行了实验，包括  考勤审计、预算审批、库存预警、IoT时序异常检测、Playwright测试生成、网站管理和代码重构  。
+
+  
+
+三款SLM分别是  qwen3-coder-30b-a3b、  ministral-3-8b
+和gemma-4-26b-a4b，对照模型为gemini-3.1-pro-preview  。所有配置运行三次并报告平均结果。
+
+  
+
+三款SLM中，整体适配效果最强的是gemma-4-26b-a4b。  它在通用harness下的七项任务  平均准确率只有31.4%，优化后达到80.2%
+；  平均延迟也从328秒降至135秒  。前沿LLM的平均准确率为89.7%，平均延迟为181秒。
+
+  
+
+qwen3-coder-30b-a3b的平均准确率从26.9%提升至74.8%  。但  ministral-3-8b  只从9.5%提升至25.0%
+，部分任务仍然没有改善。
+
+  
+
+![](https://mmbiz.qpic.cn/mmbiz_png/zJVQUll3YIZfykdHMVUkY9I8gCv0eLRCQLsE7y3lhibKn7PUKRbXD3lSpkNh6DSzt6Kcg0mBKClMxz3TM979yRatIpSpH2R6st9t5z1j96tg/640?wx_fmt=png&from=appmsg)
+
+  
+
+这说明harness可以转移任务难度，  但无法替代模型缺失的核心能力  。
+
+  
+
+因此，预算审批、考勤审计、库存预警等流程相对固定的任务，更适合使用  “小模型+专用Harness”
+，代码重构等需求差异较大的开放任务，则更难依靠一套Harness覆盖。
+
+** END  **
+
+  
+
+** 关注+星标，获取AI前沿进展与优质开源项目  **
+
+预览时标签不可点
+
+微信扫一扫  
+关注该公众号
+
+知道了
+
+微信扫一扫  
+使用小程序
+
+****
+
+取消  允许
+
+****
+
+取消  允许
+
+****
+
+取消  允许
+
+×  分析
+
+__
+
+![作者头像](http://mmbiz.qpic.cn/sz_mmbiz_png/DPAHibibAl3vRucibjtBRsFa4OaXd2L5oNOTxyXO8G9fC42Ic8lYEySicttZIQNhNWem4xr9QHRcs7KoWUfsAf2Yvg/0?wx_fmt=png)
+
+微信扫一扫可打开此内容，  
+使用完整服务
+
+：  ，  ，  ，  ，  ，  ，  ，  ，  ，  ，  ，  ，  。  视频  小程序  赞  ，轻点两下取消赞  在看  ，轻点两下取消在看
+分享  留言  收藏  听过
+

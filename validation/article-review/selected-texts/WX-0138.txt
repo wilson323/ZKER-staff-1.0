@@ -1,0 +1,237 @@
+#  Eval：有了“什么叫好”，为什么还不能放心上线？
+
+原创  AI产品白皮书  AI产品白皮书  AI产品白皮书
+
+_2026年07月12日 14:30_ __ _ _ _ _
+
+在小说阅读器读本章
+
+去阅读
+
+团队已经为市场研究 Agent 写好了一套评分量规，也就是 Rubric。
+
+他们选出 20 个研究任务，让 v1.2 和 v1.3 分别生成报告，再由业务专家按照同一套标准评分。新版本平均高出 3.4 分，负责人看完结果问了一句：
+
+** “高了 3.4 分，就能上线吗？”  **
+
+![](https://mmbiz.qpic.cn/sz_mmbiz_png/lLgz7oZICVt7icX4eTNtesmicLv41jxjD1u4efk1v3s9KqEUzibdB0XL49m16ibd53tUqg1icm83bQZ1zbOIehlcAwmQa9Jdaeyx4DLKU15UudYc/640?wx_fmt=png&from=appmsg)
+
+这算不算 Eval？
+
+当然算。
+
+用固定任务测试系统，再按明确标准比较结果，本身就是一套最小 Eval。它不依赖某个平台，也不要求同时使用程序、模型 Judge 和自动化流水线。
+
+真正的问题是：  ** 这 3.4 分足以支持发布新版本吗？  **
+
+20 个任务能代表真实业务吗？两位专家的打分一致吗？再跑一次，结果会反转吗？报告写得好但引用打不开，算通过吗？Agent
+没有取得关键数据，只看最终文本够吗？
+
+这些问题共同构成了 AI Eval 的完整设计。
+
+> ** Eval 不是一种评测方法，而是一套用证据判断 AI 系统是否值得发布、采用或继续改进的机制。  **
+
+质量标准是其中的重要组成，但不是全部。
+
+![](https://mmbiz.qpic.cn/mmbiz_png/lLgz7oZICVt6vwcKEgH0KRic3qiaicPGCHQU4be3wn3hsUibxWkzXibqjE9gBgKOnsjAHkg6gkibhM1hSVwCOOQCUP8m7PkicDcPacDtoP3I0icYHws/640?wx_fmt=png&from=appmsg)
+Eval 不是一种评测方法，而是一套用证据判断 AI 系统是否值得发布、采用或继续改进的机制
+
+##  一、先把关系摆正：质量标准是 Eval 的标准层
+
+Rubric 可以理解为一份  ** 判分说明书  ** 。它告诉评价者要看哪些方面、用什么证据判断，以及怎样区分优秀、合格与不合格。
+
+例如，评价一份市场研究报告，不能只凭“感觉不错”。团队需要检查事实是否可靠、推理是否完整、建议能否支持决策，并明确哪些问题一旦出现就不能通过。Rubric
+的作用，就是让不同评价者尽量按照同一套标准判断。
+
+但一次完整评测还会遇到许多有明确答案的问题。这些问题  不必让人或模型阅读判断  ，用更直接的方法反而更可靠：
+
+  * 分类标签是否正确，核对标准答案； 
+  * JSON 格式是否合规，用程序验证； 
+  * 代码能否工作，运行单元测试； 
+  * 订单是否退款，检查数据库状态； 
+  * 推理是否完整、建议是否有价值，再交给 Rubric、模型或专家判断。 
+
+因此，评测一个 AI 系统，通常要组合多种检查方式：明确事实交给程序，开放质量交给 Rubric、模型或人工。
+
+所以，更准确的关系是：
+
+> ** Eval 是整个评测活动；Rubric 是开放质量的标准与评分工具。  **
+
+这些方式并不互相竞争：程序验证确定事实，模型和人工理解开放语义，质量协议让判断使用同一套语言。
+
+![](https://mmbiz.qpic.cn/sz_mmbiz_png/lLgz7oZICVsjoSmXM8YUbxuXwr74HI6anzukBlo3KOAavLmeh636ykLdS3WnMLAkiaWQMC4gegDHxSqYcBYbFrsicnhsgqho4kABMNfxYBBQ8/640?wx_fmt=png&from=appmsg)
+评分量规负责定义什么叫好：评哪些维度、观察什么证据、怎样匹配等级，以及什么情况必须阻断。
+
+##  二、Eval 的起点不是“怎么打分”，而是“要做什么决定”
+
+同一套市场研究 Agent，可以因为目的不同而需要完全不同的 Eval。
+
+  *   *   *   * 
+
+    
+    
+    选择模型时，Eval 要比较质量、成本和延迟；发布新版本时，要检查回归；排查投诉时，要定位失败环节；用于高风险业务时，还要验证红线能否被发现和阻断。
+
+常见评测决策大致有四类：
+
+1\.  ** 能力判断  ** ：系统会不会完成某类任务？
+
+2\.  ** 版本选择  ** ：A 和 B 哪个更适合当前业务？
+
+3\.  ** 发布门禁  ** ：新版本能否上线，有没有不可接受的退步？
+
+4\.  ** 问题诊断  ** ：失败发生在哪里，下一轮应该改什么？
+
+目的不同，样本、证据和结果都会变化。用于模型选型的平均分，不能直接充当发布门禁；验证安全红线的测试集，也不能代表日常体验。
+
+因此，设计 Eval 时最先写下的，不应是“用哪个 Judge”，而是：
+
+> ** 这次评测最终要支持哪个决定？  **
+
+![](https://mmbiz.qpic.cn/mmbiz_png/lLgz7oZICVvs3gvKlWk5trS8Wg5k4MKv09JurlBPqKC5Rm2JwxVZP1uHvbnk4uMU9f9bQZh0wxSzhBW9QCXKZJq5u8CCMDStNl9skS7gAus/640?wx_fmt=png&from=appmsg)
+同一套市场研究 Agent，可以因为目的不同而需要完全不同的 Eval。
+
+##  三、一套完整 Eval，至少连接七个部分
+
+综合 OpenAI、LangSmith 和 Anthropic 的实践，一套完整 Eval 至少包含七部分：
+
+1\.  ** 评测决策  ** ：这次评测要支持选型、发布、诊断还是风险判断；
+
+2\.  ** 被测对象  ** ：具体到模型、Prompt、知识库、工具和工作流版本；
+
+3\.  ** 评测任务  ** ：用哪些真实、边界和高风险场景测试；
+
+4\.  ** 运行协议  ** ：环境如何准备，同一任务跑几次，哪些条件必须保持一致；
+
+5\.  ** 观察证据  ** ：看最终输出、执行过程、环境结果，还是成本与延迟；
+
+6\.  ** 评价方式  ** ：使用规则、参考答案、程序、Rubric、模型 Judge 或人工；
+
+7\.  ** 结果与动作  ** ：怎样汇总、比较、处理证据不足，并触发发布、返修或阻断。
+
+可以把它压缩成一个公式：
+
+> ** Eval = 决策问题 + 被测版本 + 测试任务 + 运行协议 + 观察证据 + 评价方式 + 结果动作  **
+
+这也是为什么 Eval 更接近产品实验与质量工程，而不只是“给 AI 打个分”。
+
+![](https://mmbiz.qpic.cn/sz_mmbiz_png/lLgz7oZICVvpictoMslrYlHy3wpeWvBuxPjHuA1TLic25XQCickSy6ZibcWzs1Z2ZbIibpBibgLVW6VKrRDloVhbFqoFrqSq3c7YKqQwOKI8aw57g/640?wx_fmt=png&from=appmsg)
+综合 OpenAI、LangSmith 和 Anthropic 的实践，一套完整 Eval 至少包含七部分：OpenAI Ev…
+
+##  四、以市场研究 Agent 为例，一次 Eval 怎样成立？
+
+假设团队要决定 v1.3 是否可以替代 v1.2。
+
+先写清决策条件：新版本要提升研究质量，不能增加伪造引用，成本也不能超出业务上限。
+
+再固定研究任务和模型、Prompt、知识库、工具配置，在相同环境中运行，保存报告、引用、工具记录、耗时和成本。
+
+接下来才轮到不同评价方式分工：
+
+  * 程序检查链接、日期、字段和成本； 
+  * 参考答案或清单检查关键内容是否覆盖； 
+  * 模型按照质量协议判断推理完整性和决策价值； 
+  * 业务专家抽样复核模型评分，并处理红线与争议结果。 
+
+最终输出的不是一个总分，而是一份版本判断：
+
+  * 哪些任务两个版本都通过； 
+  * 哪些能力在 v1.3 上明显改善； 
+  * 哪些旧问题没有变化； 
+  * 哪些原本通过的任务出现回归； 
+  * 是否触发红线或证据不足； 
+  * 质量提升是否值得增加的成本和延迟。 
+
+如果 v1.3 的报告更完整，却更容易使用过期来源，团队得到的就不该是简单的“新版本高 3.4
+分”，而应是：“暂不全量替换；先修复来源时效性，再对失败任务回归。”
+
+这才是一次能支持产品决定的 Eval。
+
+![](https://mmbiz.qpic.cn/mmbiz_png/lLgz7oZICVtdh0a9ICj7iaNcndhsvQNDW1ZPubsEOLcweYMLe33tH7TAziczAn5q0YJ2pOmoiceepAdlTQnXnNicHyiazMrv5C1dN3t8lLfj62c4/640?wx_fmt=png&from=appmsg)
+
+##  五、为什么有质量标准和分数，结论仍可能不可信？
+
+因为每一个组成部分都可能让结果失真。
+
+** 任务选偏了。  ** 20 个样本都来自简单场景，高分只能说明系统擅长简单任务，不能代表真实业务。这是评测集设计问题。
+
+** 评价者不稳定。  ** 两名专家对同一报告分歧很大，或者模型 Judge 更偏爱长答案，分数就不能直接用于版本决策。这是 Judge 与人工校准问题。
+
+** 只看最终文本。  ** Agent 的回复看似完成，实际没有调用必要工具，或者没有改变环境状态。这是 Agent Eval 的观察对象问题。
+
+** 只运行一次。  ** 同一个模型对相同任务可能产生不同结果。一次高分无法说明稳定通过，需要多次 trial 和不确定性分析。
+
+** 评完没有动作。  ** 结果没有进入发布门禁、回归集合和失败修复，Eval 就只是一份报告，而不是产品机制。
+
+它们也是后续文章的主线：拿什么考、谁来判断、观察什么、分数是否可信，以及结果怎样影响产品。
+
+![](https://mmbiz.qpic.cn/mmbiz_png/lLgz7oZICVs6rdImbKCgsBZQ6JnibBDYTpClgS3icaEzViaicvyGv5Z84TF7VOoxybShibSPQ39Vibn7VGzEYxTHic0wpOFaVzo8dJhcgIoAZovTKw/640?wx_fmt=png&from=appmsg)
+
+##  六、用一页画布设计第一套 Eval
+
+普通团队不必先建平台。选择一个具体决策，填完下面七行，就能得到第一版评测设计：
+
+    
+    
+    评测要支持的决定：  
+    被测系统与版本：  
+    测试任务及其来源：  
+    运行次数与固定条件：  
+    需要保存的证据：  
+    每类证据的评价方式：  
+    通过、返修、复核和阻断规则：
+
+例如：比较 v1.2 与 v1.3；使用 20
+个固定任务，每题运行三次；保存报告、引用、工具记录、成本和耗时；程序检查确定事实，模型评价开放质量，人工复核分歧；红线直接阻断。
+
+填完之后，再检查三个问题：
+
+1\. 这套 Eval 的结果能否直接支持最初的产品决定？
+
+2\. 每个结论能否追溯到具体任务、运行记录和评价证据？
+
+3\. 修改系统后，能否在相同条件下重新运行并发现回归？
+
+如果答案都是“能”，团队已经拥有了一套最小但完整的 Eval。
+
+Rubric 把“什么叫好”说清楚；Eval 把标准、任务、运行和产品决定连接起来。
+
+真正的评测能力，不是掌握某个评分技巧，而是知道应该用什么证据，回答哪个产品问题。
+
+** 一键关注 👇 点亮星标  ** ** 产品前沿进展每日见  **
+![图片](https://mmbiz.qpic.cn/sz_mmbiz_png/lLgz7oZICVvcqicxQAB9gOOUZSvrvRRSNVCMyDCRLMjb6lQknfB8zKKKkgL570D28l9ZnIzrh4ECOCo9t7Wz6iaibiavUKNvO5Z8HiaA6ic14O1R0/640?wx_fmt=png&from=appmsg&watermark=1&tp=webp&wxfrom=5&wx_lazy=1#imgIndex=7)
+
+预览时标签不可点
+
+微信扫一扫  
+关注该公众号
+
+知道了
+
+微信扫一扫  
+使用小程序
+
+****
+
+取消  允许
+
+****
+
+取消  允许
+
+****
+
+取消  允许
+
+×  分析
+
+__
+
+![作者头像](http://mmbiz.qpic.cn/mmbiz_png/lLgz7oZICVtaI0DEvVsSKAcOgIGCtjCagL8GWJyWJtLRj6SwOyhqJbRrgz8T61jQ9mRNibjKyRFibhN5morKEVDRquILILjRibJjUZFt3VricQA/0?wx_fmt=png)
+
+微信扫一扫可打开此内容，  
+使用完整服务
+
+：  ，  ，  ，  ，  ，  ，  ，  ，  ，  ，  ，  ，  。  视频  小程序  赞  ，轻点两下取消赞  在看  ，轻点两下取消在看
+分享  留言  收藏  听过
+

@@ -1,0 +1,234 @@
+{
+  "schema_version": 1,
+  "diagram_type": "architecture",
+  "meta": {
+    "title": "OA 数字员工平台 · 拟议技术架构",
+    "locale": "zh-CN",
+    "animation": "none",
+    "quality_profile": "showcase",
+    "views": [
+      {
+        "id": "human-work",
+        "label": "人员工作链",
+        "focus": [
+          "web",
+          "application",
+          "identity",
+          "database"
+        ],
+        "note": "OA、人员责任与正式交付由应用服务统一办理。"
+      },
+      {
+        "id": "bounded-ai",
+        "label": "有界 AI 执行",
+        "focus": [
+          "application",
+          "worker",
+          "models",
+          "tools",
+          "database",
+          "files"
+        ],
+        "note": "执行使用任务限定授权；候选结果经人员投影后才能展示。"
+      }
+    ]
+  },
+  "components": [
+    {
+      "id": "web",
+      "type": "frontend",
+      "label": "统一 B/S 工作台",
+      "sublabel": "Vue 3 · 对话与鱼骨路径",
+      "pos": [
+        40,
+        140
+      ],
+      "size": [
+        200,
+        76
+      ]
+    },
+    {
+      "id": "application",
+      "type": "backend",
+      "label": "OA 应用与协作层",
+      "sublabel": "模块化单体 · 底座待验证",
+      "pos": [
+        355,
+        140
+      ],
+      "size": [
+        220,
+        76
+      ]
+    },
+    {
+      "id": "worker",
+      "type": "backend",
+      "label": "隔离 AI Worker",
+      "sublabel": "单一执行循环 · 版本快照",
+      "pos": [
+        730,
+        140
+      ],
+      "size": [
+        210,
+        76
+      ]
+    },
+    {
+      "id": "models",
+      "type": "external",
+      "label": "获准模型服务",
+      "sublabel": "范围、用量与超时受限",
+      "pos": [
+        1090,
+        140
+      ],
+      "size": [
+        200,
+        76
+      ]
+    },
+    {
+      "id": "identity",
+      "type": "security",
+      "label": "统一身份与对象授权",
+      "sublabel": "人员读取与后台使用分判",
+      "pos": [
+        355,
+        375
+      ],
+      "size": [
+        220,
+        76
+      ]
+    },
+    {
+      "id": "database",
+      "type": "database",
+      "label": "业务数据库",
+      "sublabel": "OA · 版本 · Outbox · 审计",
+      "pos": [
+        730,
+        375
+      ],
+      "size": [
+        210,
+        76
+      ]
+    },
+    {
+      "id": "tools",
+      "type": "security",
+      "label": "工具出站代理",
+      "sublabel": "动作白名单 · 凭据引用",
+      "pos": [
+        1090,
+        375
+      ],
+      "size": [
+        200,
+        76
+      ]
+    },
+    {
+      "id": "files",
+      "type": "database",
+      "label": "私有文件与知识来源",
+      "sublabel": "不可变版本 · 按次授权",
+      "pos": [
+        730,
+        595
+      ],
+      "size": [
+        210,
+        76
+      ]
+    }
+  ],
+  "connections": [
+    {
+      "from": "web",
+      "to": "application",
+      "label": "HTTPS / SSE",
+      "variant": "emphasis"
+    },
+    {
+      "from": "application",
+      "to": "worker",
+      "label": "任务快照",
+      "variant": "emphasis"
+    },
+    {
+      "from": "worker",
+      "to": "models",
+      "label": "受限调用",
+      "variant": "security"
+    },
+    {
+      "from": "application",
+      "to": "identity",
+      "label": "逐动作校验",
+      "variant": "security",
+      "labelDy": 24
+    },
+    {
+      "from": "worker",
+      "to": "database",
+      "label": "专用队列租约",
+      "variant": "dashed",
+      "labelDy": 24
+    },
+    {
+      "from": "worker",
+      "to": "tools",
+      "label": "带授权调用",
+      "variant": "security"
+    },
+    {
+      "from": "identity",
+      "to": "database",
+      "label": "可信对象关系",
+      "labelDy": 42
+    },
+    {
+      "from": "database",
+      "to": "files",
+      "label": "版本引用",
+      "labelDy": 24
+    },
+    {
+      "from": "application",
+      "to": "database",
+      "label": "业务事务",
+      "variant": "emphasis"
+    }
+  ],
+  "cards": [
+    {
+      "dot": "cyan",
+      "title": "复用一套业务底座",
+      "items": [
+        "OA 与组织权限复用现有模块",
+        "人员确认、正式提交和接手分别记录"
+      ]
+    },
+    {
+      "dot": "rose",
+      "title": "权限贯穿输入与输出",
+      "items": [
+        "后台可用不等于人员可读",
+        "文件、摘要、搜索与聚合均重新授权"
+      ]
+    },
+    {
+      "dot": "emerald",
+      "title": "先验证再冻结技术版本",
+      "items": [
+        "当前是架构提案，没有已部署系统",
+        "幂等、重启恢复与兼容性须通过真实 POC"
+      ]
+    }
+  ]
+}

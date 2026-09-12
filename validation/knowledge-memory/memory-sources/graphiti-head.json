@@ -1,0 +1,101 @@
+{
+  "sha": "c035afb7990b6077331a81e98b04efcfd9bf8184",
+  "node_id": "C_kwDOMhI98toAKGMwMzVhZmI3OTkwYjYwNzczMzFhODFlOThiMDRlZmNmZDliZjgxODQ",
+  "commit": {
+    "author": {
+      "name": "Peter Evans",
+      "email": "632480+pevans@users.noreply.github.com",
+      "date": "2026-09-11T20:16:24Z"
+    },
+    "committer": {
+      "name": "GitHub",
+      "email": "noreply@github.com",
+      "date": "2026-09-11T20:16:24Z"
+    },
+    "message": "Update mcp_server/uv.lock to fix httpx2/httpcore2 Dependabot alerts [ZEPAI-3570] (#1884)",
+    "tree": {
+      "sha": "7ebce09caafc0c8a71682a26e26f4f4a9cfaf5f3",
+      "url": "https://api.github.com/repos/getzep/graphiti/git/trees/7ebce09caafc0c8a71682a26e26f4f4a9cfaf5f3"
+    },
+    "url": "https://api.github.com/repos/getzep/graphiti/git/commits/c035afb7990b6077331a81e98b04efcfd9bf8184",
+    "comment_count": 0,
+    "verification": {
+      "verified": true,
+      "reason": "valid",
+      "signature": "-----BEGIN PGP SIGNATURE-----\n\nwsFcBAABCAAQBQJqpGGYCRC1aQ7uu5UhlAAA8JAQAH1PC2Kzq3hhjBizfCQ6YkoX\nKyycxT7CQPteius8vQubJUKER8956KD9NEDJ54NcWY0qmNWgbrfkPLJdPcRdW4g4\nHAwOTsQZBHmpIFeXs0VSyaTopzwwnmxuHqwRxmSodGMV+Fo5XoUQptCSL7tfKCqj\nYdOLqlCFEGczvI45WHJIdwBKs9DyDw1JIgYeOymcLPU2nskx7SXyvuYHBrq26AGf\n5JLsAMilwdZw/a7Xx7DkfeQ3knxwgo4BP9ptdLGU7riSWbUPH5aYpn8Ykvx09HTi\nVUD/2Ib/nxiaaJt/modIlyLuaea3vZLjTz66Of1HL2vp6TalYxNkHPUwKgbS1KFe\nz4CXP2qwTcx2Gl0Tye0Cpf7taTnigX0SSxr8udCFGzTGDfmDuNSIz/Bx1x9k+HCT\n0hEvSpaVwiZcjCA/DoT/THkd8P0mqr5vXa2rdzL1X2YFZjnMBm77SKXOkieLFioh\ncwFsGnH49vihYrVYhzyDdoQLNntNhEFTtYplLjHhBkusf81QeptHDySXK9eS6Rcl\nDjuRDuZE6IeygfL6f3rtPujkMio/iOU/wn65ib/KYhddDJJbYIm0SbRIxfawvwVQ\nZ/MQLHzPPBJRvCigCmtTVypnH3bCCffOPVQySdjt+X1MKt5Ud9ji6C4QruNP9p1U\nXVsVuidyXK1UqYQJz9sb\n=DieE\n-----END PGP SIGNATURE-----\n",
+      "payload": "tree 7ebce09caafc0c8a71682a26e26f4f4a9cfaf5f3\nparent 9efd61f525eef19dc0083a49f6635185b7c7fe66\nauthor Peter Evans <632480+pevans@users.noreply.github.com> 1789157784 -0500\ncommitter GitHub <noreply@github.com> 1789157784 -0500\n\nUpdate mcp_server/uv.lock to fix httpx2/httpcore2 Dependabot alerts [ZEPAI-3570] (#1884)",
+      "verified_at": "2026-09-11T20:16:24Z"
+    }
+  },
+  "url": "https://api.github.com/repos/getzep/graphiti/commits/c035afb7990b6077331a81e98b04efcfd9bf8184",
+  "html_url": "https://github.com/getzep/graphiti/commit/c035afb7990b6077331a81e98b04efcfd9bf8184",
+  "comments_url": "https://api.github.com/repos/getzep/graphiti/commits/c035afb7990b6077331a81e98b04efcfd9bf8184/comments",
+  "author": {
+    "login": "pevans",
+    "id": 632480,
+    "node_id": "MDQ6VXNlcjYzMjQ4MA==",
+    "avatar_url": "https://avatars.githubusercontent.com/u/632480?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/pevans",
+    "html_url": "https://github.com/pevans",
+    "followers_url": "https://api.github.com/users/pevans/followers",
+    "following_url": "https://api.github.com/users/pevans/following{/other_user}",
+    "gists_url": "https://api.github.com/users/pevans/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/pevans/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/pevans/subscriptions",
+    "organizations_url": "https://api.github.com/users/pevans/orgs",
+    "repos_url": "https://api.github.com/users/pevans/repos",
+    "events_url": "https://api.github.com/users/pevans/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/pevans/received_events",
+    "type": "User",
+    "user_view_type": "public",
+    "site_admin": false
+  },
+  "committer": {
+    "login": "web-flow",
+    "id": 19864447,
+    "node_id": "MDQ6VXNlcjE5ODY0NDQ3",
+    "avatar_url": "https://avatars.githubusercontent.com/u/19864447?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/web-flow",
+    "html_url": "https://github.com/web-flow",
+    "followers_url": "https://api.github.com/users/web-flow/followers",
+    "following_url": "https://api.github.com/users/web-flow/following{/other_user}",
+    "gists_url": "https://api.github.com/users/web-flow/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/web-flow/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/web-flow/subscriptions",
+    "organizations_url": "https://api.github.com/users/web-flow/orgs",
+    "repos_url": "https://api.github.com/users/web-flow/repos",
+    "events_url": "https://api.github.com/users/web-flow/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/web-flow/received_events",
+    "type": "User",
+    "user_view_type": "public",
+    "site_admin": false
+  },
+  "parents": [
+    {
+      "sha": "9efd61f525eef19dc0083a49f6635185b7c7fe66",
+      "url": "https://api.github.com/repos/getzep/graphiti/commits/9efd61f525eef19dc0083a49f6635185b7c7fe66",
+      "html_url": "https://github.com/getzep/graphiti/commit/9efd61f525eef19dc0083a49f6635185b7c7fe66"
+    }
+  ],
+  "stats": {
+    "total": 88,
+    "additions": 64,
+    "deletions": 24
+  },
+  "files": [
+    {
+      "sha": "a7133d44ffb982a839ad9bcd5e473e42a931d176",
+      "filename": "mcp_server/uv.lock",
+      "status": "modified",
+      "additions": 64,
+      "deletions": 24,
+      "changes": 88,
+      "blob_url": "https://github.com/getzep/graphiti/blob/c035afb7990b6077331a81e98b04efcfd9bf8184/mcp_server%2Fuv.lock",
+      "raw_url": "https://github.com/getzep/graphiti/raw/c035afb7990b6077331a81e98b04efcfd9bf8184/mcp_server%2Fuv.lock",
+      "contents_url": "https://api.github.com/repos/getzep/graphiti/contents/mcp_server%2Fuv.lock?ref=c035afb7990b6077331a81e98b04efcfd9bf8184",
+      "patch": "@@ -199,7 +199,8 @@ name = \"anthropic\"\n version = \"0.111.0\"\n source = { registry = \"https://pypi.org/simple\" }\n dependencies = [\n-    { name = \"anyio\" },\n+    { name = \"anyio\", version = \"4.14.2\", source = { registry = \"https://pypi.org/simple\" }, marker = \"python_full_version < '3.14'\" },\n+    { name = \"anyio\", version = \"4.15.1\", source = { registry = \"https://pypi.org/simple\" }, marker = \"python_full_version >= '3.14'\" },\n     { name = \"distro\" },\n     { name = \"docstring-parser\" },\n     { name = \"httpx\" },\n@@ -217,17 +218,37 @@ wheels = [\n \n [[package]]\n name = \"anyio\"\n-version = \"4.9.0\"\n+version = \"4.14.2\"\n source = { registry = \"https://pypi.org/simple\" }\n+resolution-markers = [\n+    \"python_full_version == '3.13.*'\",\n+    \"python_full_version == '3.12.*'\",\n+    \"python_full_version < '3.12'\",\n+]\n dependencies = [\n-    { name = \"exceptiongroup\", marker = \"python_full_version < '3.11'\" },\n+    { name = \"exceptiongroup\", marker = \"python_full_version < '3.11' or python_full_version >= '3.14'\" },\n     { name = \"idna\" },\n-    { name = \"sniffio\" },\n-    { name = \"typing-extensions\", version = \"4.14.0\", source = { registry = \"https://pypi.org/simple\" }, marker = \"python_full_version < '3.13'\" },\n+    { name = \"typing-extensions\", version = \"4.14.0\", source = { registry = \"https://pypi.org/simple\" }, marker = \"python_full_version != '3.13.*'\" },\n+]\n+sdist = { url = \"https://files.pythonhosted.org/packages/61/cc/a381afa6efea9f496eff839d4a6a1aed3bfafc7b3ab4b0d1b243a12573dd/anyio-4.14.2.tar.gz\", hash = \"sha256:cfa139f3ed1a23ee8f88a145ddb5ac7605b8bbfd8592baacd7ce3d8bb4313c7f\", size = 260176, upload-time = \"2026-07-12T20:29:07.082Z\" }\n+wheels = [\n+    { url = \"https://files.pythonhosted.org/packages/da/35/f2287558c17e29fafc8ef3daf819bb9834061cfa43bff8014f7df7f63bdc/anyio-4.14.2-py3-none-any.whl\", hash = \"sha256:9f505dda5ac9f0c8309b5e8bd445a8c2bf7246f3ce950121e45ea15bc41d1494\", size = 125813, upload-time = \"2026-07-12T20:29:05.763Z\" },\n+]\n+\n+[[package]]\n+name = \"anyio\"\n+version = \"4.15.1\"\n+source = { registry = \"https://pypi.org/simple\" }\n+resolution-markers = [\n+    \"python_full_version >= '3.14'\",\n+]\n+dependencies = [\n+    { name = \"idna\" },\n+    { name = \"typing-extensions\", version = \"4.16.0\", source = { registry = \"https://pypi.org/simple\" }, marker = \"python_full_version < '3.15'\" },\n ]\n-sdist = { url = \"https://files.pythonhosted.org/packages/95/7d/4c1bd541d4dffa1b52bd83fb8527089e097a106fc90b467a7313b105f840/anyio-4.9.0.tar.gz\", hash = \"sha256:673c0c244e15788651a4ff38710fea9675823028a6f08a5eda409e0c9840a028\", size = 190949, upload-time = \"2025-03-17T00:02:54.77Z\" }\n+sdist = { url = \"https://files.pythonhosted.org/packages/a9/d2/f4d173e22df740bc37b1db102b386ba719b66e95b0f0d751f556b387e6d2/anyio-4.15.1.tar.gz\", hash = \"sha256:9f28306018cbd6d329e64a36d58256edff76dd996fe423bc957326e578b82a94\", size = 276966, upload-time = \"2026-09-05T10:42:39.44Z\" }\n wheels = [\n-    { url = \"https://files.pythonhosted.org/packages/a1/ee/48ca1a7c89ffec8b6a0c5d02b89c305671d5ffd8d3c94acf8b8c408575bb/anyio-4.9.0-py3-none-any.whl\", hash = \"sha256:9f76d541cad6e36af7beb62e978876f3b41e3e04f2c1fbf0884604c0a9c4d93c\", size = 100916, upload-time = \"2025-03-17T00:02:52.713Z\" },\n+    { url = \"https://files.pythonhosted.org/packages/12/b8/4bd346e22b28902df4d651910f5242c28d84e4a5c2435ca5c3f797ed7e2e/anyio-4.15.1-py3-none-any.whl\", hash = \"sha256:6152fdbbf9a77fdec97731721bebf7c4c44f7c29b424b0065826173efc7ed101\", size = 132079, upload-time = \"2026-09-05T10:42:37.923Z\" },\n ]\n \n [[package]]\n@@ -826,7 +847,8 @@ name = \"google-genai\"\n version = \"2.8.0\"\n source = { registry = \"https://pypi.org/simple\" }\n dependencies = [\n-    { name = \"anyio\" },\n+    { name = \"anyio\", version = \"4.14.2\", source = { registry = \"https://pypi.org/simple\" }, marker = \"python_full_version < '3.14'\" },\n+    { name = \"anyio\", version = \"4.15.1\", source = { registry = \"https://pypi.org/simple\" }, marker = \"python_full_version >= '3.14'\" },\n     { name = \"distro\" },\n     { name = \"google-auth\", extra = [\"requests\"] },\n     { name = \"httpx\" },\n@@ -873,7 +895,8 @@ name = \"groq\"\n version = \"1.2.0\"\n source = { registry = \"https://pypi.org/simple\" }\n dependencies = [\n-    { name = \"anyio\" },\n+    { name = \"anyio\", version = \"4.14.2\", source = { registry = \"https://pypi.org/simple\" }, marker = \"python_full_version < '3.14'\" },\n+    { name = \"anyio\", version = \"4.15.1\", source = { registry = \"https://pypi.org/simple\" }, marker = \"python_full_version >= '3.14'\" },\n     { name = \"distro\" },\n     { name = \"httpx\" },\n     { name = \"pydantic\", version = \"2.11.7\", source = { registry = \"https://pypi.org/simple\" }, marker = \"python_full_version < '3.14'\" },\n@@ -943,23 +966,24 @@ wheels = [\n \n [[package]]\n name = \"httpcore2\"\n-version = \"2.6.0\"\n+version = \"2.12.0\"\n source = { registry = \"https://pypi.org/simple\" }\n dependencies = [\n     { name = \"h11\" },\n     { name = \"truststore\" },\n ]\n-sdist = { url = \"https://files.pythonhosted.org/packages/53/db/2ad49878b36af4cff7527c1158b083ad6d9350462f1a35685cc3ebfa7c2b/httpcore2-2.6.0.tar.gz\", hash = \"sha256:95b692b582402ec49b3d84c2343556e4ac4c0962c8b3d39c48d485b9ecc240ab\", size = 65592, upload-time = \"2026-07-14T10:48:33.816Z\" }\n+sdist = { url = \"https://files.pythonhosted.org/packages/be/ad/f4f0e57345f1870f3e8cb624e058d7eca6e5a27d33bcc3311d9b618734cd/httpcore2-2.12.0.tar.gz\", hash = \"sha256:9293522bba0aa7c4c8e9e3f040c16575bd8868e155a77fa30c7a9085a5eae648\", size = 67548, upload-time = \"2026-08-18T13:22:08.211Z\" }\n wheels = [\n-    { url = \"https://files.pythonhosted.org/packages/c2/fa/08f483851a70ef10806e3b84240f2a8f923658035b794f7609795895d9ea/httpcore2-2.6.0-py3-none-any.whl\", hash = \"sha256:c237a45c7eef885cf032cb9b850d59fcf1fa7e00230307f08aab26486a6ed584\", size = 81507, upload-time = \"2026-07-14T10:48:31.504Z\" },\n+    { url = \"https://files.pythonhosted.org/packages/d2/74/d370e55600d9bcfa0d9794b0166126d49291a3d2b20c268fc98c453a4948/httpcore2-2.12.0-py3-none-any.whl\", hash = \"sha256:7e04258ce01013d7d615e5b910a3b27fac937d7a95038227e79652b4ba3b4ceb\", size = 83074, upload-time = \"2026-08-18T13:22:05.854Z\" },\n ]\n \n [[package]]\n name = \"httpx\"\n version = \"0.28.1\"\n source = { registry = \"https://pypi.org/simple\" }\n dependencies = [\n-    { name = \"anyio\" },\n+    { name = \"anyio\", version = \"4.14.2\", source = { registry = \"https://pypi.org/simple\" }, marker = \"python_full_version < '3.14'\" },\n+    { name = \"anyio\", version = \"4.15.1\", source = { registry = \"https://pypi.org/simple\" }, marker = \"python_full_version >= '3.14'\" },\n     { name = \"certifi\" },\n     { name = \"httpcore\" },\n     { name = \"idna\" },\n@@ -980,18 +1004,29 @@ wheels = [\n \n [[package]]\n name = \"httpx2\"\n-version = \"2.6.0\"\n+version = \"2.12.0\"\n source = { registry = \"https://pypi.org/simple\" }\n dependencies = [\n-    { name = \"anyio\" },\n-    { name = \"httpcore2\" },\n+    { name = \"anyio\", version = \"4.14.2\", source = { registry = \"https://pypi.org/simple\" }, marker = \"python_full_version < '3.14' and sys_platform != 'emscripten'\" },\n+    { name = \"anyio\", version = \"4.15.1\", source = { registry = \"https://pypi.org/simple\" }, marker = \"python_full_version >= '3.14' and sys_platform != 'emscripten'\" },\n+    { name = \"httpcore2\", marker = \"sys_platform != 'emscripten'\" },\n+    { name = \"httpx2-jsfetch\", marker = \"python_full_version >= '3.12' and sys_platform == 'emscripten'\" },\n     { name = \"idna\" },\n-    { name = \"truststore\" },\n+    { name = \"truststore\", marker = \"sys_platform != 'emscripten'\" },\n     { name = \"typing-extensions\", version = \"4.14.0\", source = { registry = \"https://pypi.org/simple\" }, marker = \"python_full_version < '3.13'\" },\n ]\n-sdist = { url = \"https://files.pythonhosted.org/packages/89/17/1e142bf3c76684232a092e1e4002be07fd3403b1c2dcb15d0012ea300c8f/httpx2-2.6.0.tar.gz\", hash = \"sha256:5d362fd59562cf2139a60c67bb016587a70b36156a517f176c7cbf1587d1ab22\", size = 92736, upload-time = \"2026-07-14T10:48:35.12Z\" }\n+sdist = { url = \"https://files.pythonhosted.org/packages/7f/f8/579a8b51e42e38ee32647df9f08aa25643ae788e275cc625b199829c4671/httpx2-2.12.0.tar.gz\", hash = \"sha256:7631fe9887a8a2275f4a2540e053aa670fcc50742864a9ae7c66e609fdcf12cf\", size = 100040, upload-time = \"2026-08-18T13:22:09.086Z\" }\n+wheels = [\n+    { url = \"https://files.pythonhosted.org/packages/c8/95/411ba65569158e862368917aaf56597f3e5fa3b91b0502919638465a08f3/httpx2-2.12.0-py3-none-any.whl\", hash = \"sha256:cc8b6eecb8661c146b8f89a60e97456ee086e91a784ed31ac450c3a9e613dd36\", size = 95427, upload-time = \"2026-08-18T13:22:06.834Z\" },\n+]\n+\n+[[package]]\n+name = \"httpx2-jsfetch\"\n+version = \"1.0\"\n+source = { registry = \"https://pypi.org/simple\" }\n+sdist = { url = \"https://files.pythonhosted.org/packages/cd/c4/0e5636363151a2a1795e0a77617168b9ca438e1748ec05fc9b5687f93d64/httpx2_jsfetch-1.0.tar.gz\", hash = \"sha256:70a0e3eabfef7cce5ad9c629f7d01ca05e418f586646f4ddf14782e4c1454c60\", size = 6872, upload-time = \"2026-08-07T00:13:07.492Z\" }\n wheels = [\n-    { url = \"https://files.pythonhosted.org/packages/47/86/7d82f7c6aac32433eaf0c914b8bc870ae25759413b9d7d52ea6aa15f2546/httpx2-2.6.0-py3-none-any.whl\", hash = \"sha256:6cccc3665d6bceb3c1c4f1422ae7e53fda67a853f0135f09b25ce0d4dcac01e3\", size = 88541, upload-time = \"2026-07-14T10:48:32.681Z\" },\n+    { url = \"https://files.pythonhosted.org/packages/9b/43/832f631d32e4f1211caa2ba368317739fe71f0b8530e4c9d15dc454bac2a/httpx2_jsfetch-1.0-py3-none-any.whl\", hash = \"sha256:cb916b707601e69a07721aabc8f3f6659be3a6893bc1ff5c6f9e02241df2da32\", size = 6382, upload-time = \"2026-08-07T00:13:06.567Z\" },\n ]\n \n [[package]]\n@@ -1226,7 +1261,8 @@ name = \"langsmith\"\n version = \"0.12.4\"\n source = { registry = \"https://pypi.org/simple\" }\n dependencies = [\n-    { name = \"anyio\" },\n+    { name = \"anyio\", version = \"4.14.2\", source = { registry = \"https://pypi.org/simple\" }, marker = \"python_full_version < '3.14'\" },\n+    { name = \"anyio\", version = \"4.15.1\", source = { registry = \"https://pypi.org/simple\" }, marker = \"python_full_version >= '3.14'\" },\n     { name = \"distro\" },\n     { name = \"httpx2\" },\n     { name = \"orjson\", marker = \"platform_python_implementation != 'PyPy'\" },\n@@ -1323,7 +1359,8 @@ name = \"mcp\"\n version = \"1.30.0\"\n source = { registry = \"https://pypi.org/simple\" }\n dependencies = [\n-    { name = \"anyio\" },\n+    { name = \"anyio\", version = \"4.14.2\", source = { registry = \"https://pypi.org/simple\" }, marker = \"python_full_version < '3.14'\" },\n+    { name = \"anyio\", version = \"4.15.1\", source = { registry = \"https://pypi.org/simple\" }, marker = \"python_full_version >= '3.14'\" },\n     { name = \"httpx\" },\n     { name = \"httpx-sse\" },\n     { name = \"jsonschema\" },\n@@ -1810,7 +1847,8 @@ name = \"openai\"\n version = \"2.43.0\"\n source = { registry = \"https://pypi.org/simple\" }\n dependencies = [\n-    { name = \"anyio\" },\n+    { name = \"anyio\", version = \"4.14.2\", source = { registry = \"https://pypi.org/simple\" }, marker = \"python_full_version < '3.14'\" },\n+    { name = \"anyio\", version = \"4.15.1\", source = { registry = \"https://pypi.org/simple\" }, marker = \"python_full_version >= '3.14'\" },\n     { name = \"distro\" },\n     { name = \"httpx\" },\n     { name = \"jiter\" },\n@@ -3200,7 +3238,8 @@ name = \"sse-starlette\"\n version = \"2.3.6\"\n source = { registry = \"https://pypi.org/simple\" }\n dependencies = [\n-    { name = \"anyio\" },\n+    { name = \"anyio\", version = \"4.14.2\", source = { registry = \"https://pypi.org/simple\" }, marker = \"python_full_version < '3.14'\" },\n+    { name = \"anyio\", version = \"4.15.1\", source = { registry = \"https://pypi.org/simple\" }, marker = \"python_full_version >= '3.14'\" },\n ]\n sdist = { url = \"https://files.pythonhosted.org/packages/8c/f4/989bc70cb8091eda43a9034ef969b25145291f3601703b82766e5172dfed/sse_starlette-2.3.6.tar.gz\", hash = \"sha256:0382336f7d4ec30160cf9ca0518962905e1b69b72d6c1c995131e0a703b436e3\", size = 18284, upload-time = \"2025-05-30T13:34:12.914Z\" }\n wheels = [\n@@ -3212,7 +3251,8 @@ name = \"starlette\"\n version = \"1.3.1\"\n source = { registry = \"https://pypi.org/simple\" }\n dependencies = [\n-    { name = \"anyio\" },\n+    { name = \"anyio\", version = \"4.14.2\", source = { registry = \"https://pypi.org/simple\" }, marker = \"python_full_version < '3.14'\" },\n+    { name = \"anyio\", version = \"4.15.1\", source = { registry = \"https://pypi.org/simple\" }, marker = \"python_full_version >= '3.14'\" },\n     { name = \"typing-extensions\", version = \"4.14.0\", source = { registry = \"https://pypi.org/simple\" }, marker = \"python_full_version < '3.13'\" },\n ]\n sdist = { url = \"https://files.pythonhosted.org/packages/eb/e3/7c1dc7381d9f8ab7d854328ebfa884e62cb3f3d8549ddfd37c7814f42afa/starlette-1.3.1.tar.gz\", hash = \"sha256:05d0213193f2fbaae60e2ecb593b4add4262ad4e46536b54abe36f11a71724e0\", size = 2703240, upload-time = \"2026-06-12T09:23:11.602Z\" }"
+    }
+  ]
+}

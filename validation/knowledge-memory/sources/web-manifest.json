@@ -1,0 +1,210 @@
+[
+  {
+    "id": "qoder-knowledge",
+    "url": "https://docs.qoder.cn/qoderwake/knowledge-base",
+    "file": "validation/knowledge-memory/sources/qoder-knowledge.source",
+    "exit": 0,
+    "retrievedAt": "2026-09-11",
+    "sha256": "ee7b1ef3b338f50db27111eca7a1722fe06064f0068659cf3fab16299db75867"
+  },
+  {
+    "id": "qoder-memory",
+    "url": "https://docs.qoder.cn/qoderwake/memory",
+    "file": "validation/knowledge-memory/sources/qoder-memory.source",
+    "exit": 0,
+    "retrievedAt": "2026-09-11",
+    "sha256": "530e4640c0f0bcd5cda940233bb1a3811ad0e0a0db3f4bd63240c1869c7c487c"
+  },
+  {
+    "id": "qoder-projects",
+    "url": "https://docs.qoder.cn/qoderwake/projects",
+    "file": "validation/knowledge-memory/sources/qoder-projects.source",
+    "exit": 0,
+    "retrievedAt": "2026-09-11",
+    "sha256": "21c6e71ba36a0d195b851c3534ebea3f08e5e9951a3c4635d412224367bf4dcc"
+  },
+  {
+    "id": "qoder-wakers",
+    "url": "https://docs.qoder.cn/qoderwake/manage-wakers",
+    "file": "validation/knowledge-memory/sources/qoder-wakers.source",
+    "exit": 0,
+    "retrievedAt": "2026-09-11",
+    "sha256": "8b7aa3c1f8b23a434d77005058a08c9b55d9888b6777c2a34f0a72f6b99470c4"
+  },
+  {
+    "id": "claude-memory",
+    "url": "https://platform.claude.com/docs/en/managed-agents/memory",
+    "file": "validation/knowledge-memory/sources/claude-memory.source",
+    "exit": 0,
+    "retrievedAt": "2026-09-11",
+    "sha256": "3d3a5cc302715cea9ba2dc7097a50d80fd07c373476bdb62bf434fdb013373cd"
+  },
+  {
+    "id": "claude-dreams",
+    "url": "https://platform.claude.com/docs/en/managed-agents/dreams",
+    "file": "validation/knowledge-memory/sources/claude-dreams.source",
+    "exit": 0,
+    "retrievedAt": "2026-09-11",
+    "sha256": "b037eaaa79e6dc098dcffb9c912fc18fc94b7acce33b6707f184b257a240e1a7"
+  },
+  {
+    "id": "anthropic-context",
+    "url": "https://www.anthropic.com/engineering/effective-context-engineering-for-ai-agents",
+    "file": "validation/knowledge-memory/sources/anthropic-context.source",
+    "exit": 0,
+    "retrievedAt": "2026-09-11",
+    "sha256": "a562ee707ace260e029d38c739aac3e50062260ee94708cc13dc2258f8fd8f3c"
+  },
+  {
+    "id": "ms-document-acl",
+    "url": "https://devblogs.microsoft.com/ise/sharepoint-doc-level-access/",
+    "file": "validation/knowledge-memory/sources/ms-document-acl.source",
+    "exit": 0,
+    "retrievedAt": "2026-09-11",
+    "sha256": "ec8243a3984635598bd30abb432addf0a966aa0a7d8803576a25ad7e077347f8"
+  },
+  {
+    "id": "owasp-rag",
+    "url": "https://cheatsheetseries.owasp.org/cheatsheets/RAG_Security_Cheat_Sheet.html",
+    "file": "validation/knowledge-memory/sources/owasp-rag.source",
+    "exit": 0,
+    "retrievedAt": "2026-09-11",
+    "sha256": "5950627751b21ba37ef5cb112cec7491c8dc67033dbda679bc47f7c836ecb838"
+  },
+  {
+    "id": "tika-download",
+    "url": "https://tika.apache.org/download",
+    "file": "validation/knowledge-memory/sources/tika-download.source",
+    "exit": 0,
+    "retrievedAt": "2026-09-11",
+    "sha256": "2d2a7728dfc15ce313a633efa21b8382db3cf8f9ec4d01e74c7d360efea8ea6f"
+  },
+  {
+    "id": "pgvector-tags",
+    "url": "https://api.github.com/repos/pgvector/pgvector/tags?per_page=5",
+    "file": "validation/knowledge-memory/sources/pgvector-tags.source",
+    "exit": 0,
+    "retrievedAt": "2026-09-11",
+    "sha256": "840fc414be8c1ee503e490c1c8384ca9b690b73215dafe45f11cd25d9259fe51"
+  },
+  {
+    "id": "weaviate-release",
+    "url": "https://api.github.com/repos/weaviate/weaviate/releases/latest",
+    "file": "validation/knowledge-memory/sources/weaviate-release.source",
+    "exit": 0,
+    "retrievedAt": "2026-09-11",
+    "sha256": "7cd5ac18436d77a3a5bd0c55655b7d872715b6d87aa6b3b3545053b73c0adb06"
+  },
+  {
+    "id": "pageindex-release",
+    "url": "https://api.github.com/repos/VectifyAI/PageIndex/releases/latest",
+    "file": "validation/knowledge-memory/sources/pageindex-release.source",
+    "exit": 0,
+    "retrievedAt": "2026-09-11",
+    "sha256": "222ad5ff4b40b54e03ae57acdd192da1d2be1ed21e1c620398979d66fa5559d1"
+  },
+  {
+    "id": "pageindex-readme",
+    "url": "https://raw.githubusercontent.com/VectifyAI/PageIndex/c75800506c43c6d0b147d3032e291867f190e159/README.md",
+    "file": "validation/knowledge-memory/sources/pageindex-readme.source",
+    "exit": 0,
+    "retrievedAt": "2026-09-11",
+    "sha256": "e16813d9d846355eddf71bfa4566209d8f93b3820b2d21e4ab07f1464d1a353b"
+  },
+  {
+    "id": "pageindex-license",
+    "url": "https://raw.githubusercontent.com/VectifyAI/PageIndex/c75800506c43c6d0b147d3032e291867f190e159/LICENSE",
+    "file": "validation/knowledge-memory/sources/pageindex-license.source",
+    "exit": 0,
+    "retrievedAt": "2026-09-11",
+    "sha256": "bca9c3d401fdfd0965a2a2224f7dcf9945b512eaf5802b91d312ba739dbe9584"
+  },
+  {
+    "id": "weaviate-license",
+    "url": "https://raw.githubusercontent.com/weaviate/weaviate/77063adc7497182f688a0bcefa099c9232f6e6e8/LICENSE",
+    "file": "validation/knowledge-memory/sources/weaviate-license.source",
+    "exit": 0,
+    "retrievedAt": "2026-09-11",
+    "sha256": "f36c21d76a28113b9b4d20393e229fa7f21ef7fd0ceaffabcf3310c644611ede"
+  },
+  {
+    "id": "docling-release-license",
+    "url": "https://raw.githubusercontent.com/docling-project/docling/8071466f2c9f844d630dac879b3988dfb66e4277/LICENSE",
+    "file": "validation/knowledge-memory/sources/docling-release-license.source",
+    "exit": 0,
+    "retrievedAt": "2026-09-11",
+    "sha256": "edb765d1e3e60d0c7a7d5fba5f2bb2c3c29f7465cecb5c22cf1185c884954e4c"
+  },
+  {
+    "id": "docling-release-pyproject",
+    "url": "https://raw.githubusercontent.com/docling-project/docling/8071466f2c9f844d630dac879b3988dfb66e4277/pyproject.toml",
+    "file": "validation/knowledge-memory/sources/docling-release-pyproject.source",
+    "exit": 0,
+    "retrievedAt": "2026-09-11",
+    "sha256": "bb7b6762bb20271045988c4ad76a7f7988bf16e2aa9e36bdc9697fd994fa06ca"
+  },
+  {
+    "id": "bge-m3-model",
+    "url": "https://huggingface.co/api/models/BAAI/bge-m3",
+    "file": "validation/knowledge-memory/sources/bge-m3-model.source",
+    "exit": 0,
+    "retrievedAt": "2026-09-11",
+    "sha256": "e07fe032de8a42d33b17b0d73dee45215dd3b1c0f67e6ae5b2eceb22fe1a875e"
+  },
+  {
+    "id": "bge-reranker-model",
+    "url": "https://huggingface.co/api/models/BAAI/bge-reranker-v2-m3",
+    "file": "validation/knowledge-memory/sources/bge-reranker-model.source",
+    "exit": 0,
+    "retrievedAt": "2026-09-11",
+    "sha256": "9d00fe9c2b8d335a039ca333cf71f5c0bd604b96c04dcefcb024bc0b47477e84"
+  },
+  {
+    "id": "docling-models",
+    "url": "https://huggingface.co/api/models/docling-project/docling-models",
+    "file": "validation/knowledge-memory/sources/docling-models.source",
+    "exit": 0,
+    "retrievedAt": "2026-09-11",
+    "sha256": "c9a42b12a5b6381669ca726676ef6f0577029489acb1785fea59a42e899c9981"
+  },
+  {
+    "id": "pgvector-latest-pin",
+    "url": "https://api.github.com/repos/pgvector/pgvector/commits/v0.8.6",
+    "file": "validation/knowledge-memory/sources/pgvector-latest-pin.source",
+    "exit": 0,
+    "retrievedAt": "2026-09-11",
+    "sha256": "18863da9da704be5d0ceae3364fdf73ea16dc9dd9a79111342513a125099dd0c"
+  },
+  {
+    "id": "qwen3-embedding",
+    "url": "https://huggingface.co/api/models/Qwen/Qwen3-Embedding-0.6B",
+    "file": "validation/knowledge-memory/sources/qwen3-embedding.source",
+    "exit": 35,
+    "retrievedAt": "2026-09-11",
+    "error": "curl: (35) LibreSSL SSL_connect: SSL_ERROR_SYSCALL in connection to huggingface.co:443 \n"
+  },
+  {
+    "id": "qwen3-reranker",
+    "url": "https://huggingface.co/api/models/Qwen/Qwen3-Reranker-0.6B",
+    "file": "validation/knowledge-memory/sources/qwen3-reranker.source",
+    "exit": 35,
+    "retrievedAt": "2026-09-11",
+    "error": "curl: (35) LibreSSL SSL_connect: SSL_ERROR_SYSCALL in connection to huggingface.co:443 \n"
+  },
+  {
+    "id": "weaviate-wl-license",
+    "url": "https://raw.githubusercontent.com/weaviate/weaviate/77063adc7497182f688a0bcefa099c9232f6e6e8/wl/LICENSE-WEAVIATE",
+    "file": "validation/knowledge-memory/sources/weaviate-wl-license.source",
+    "exit": 0,
+    "retrievedAt": "2026-09-11",
+    "sha256": "18869aeacef6d70cf654d71dcba998ddc6c5d5a87049b2946d48ab03fa12fd30"
+  },
+  {
+    "id": "weaviate-bsd-license",
+    "url": "https://raw.githubusercontent.com/weaviate/weaviate/77063adc7497182f688a0bcefa099c9232f6e6e8/LICENSE-BSD",
+    "file": "validation/knowledge-memory/sources/weaviate-bsd-license.source",
+    "exit": 0,
+    "retrievedAt": "2026-09-11",
+    "sha256": "18feb4da4d786a6a5201afa09b0d6cee2ec4dca5b34b11d7c2e24eca3e9c09eb"
+  }
+]

@@ -1,0 +1,19 @@
+{
+  "retrievedAt": "2026-09-11T23:58:24.317366+00:00",
+  "operation": "get_media_info",
+  "request": {
+    "media_id": "wechatarticle_8189f7408df6364eae772ea1fe3507df_8bb84fef8b2a7105fc7cb5ad19ecfc41"
+  },
+  "exitCode": 0,
+  "response": {
+    "code": 0,
+    "msg": "success",
+    "data": {
+      "media_type": 6,
+      "url_info": {
+        "url": "https://mp.weixin.qq.com/s?__biz=Mzg2ODA5NTM1OA%3D%3D&mid=2247487704&idx=1&sn=12bfc5faa28068d0b79b4ccf47860445"
+      },
+      "notebook_ext_info": null
+    }
+  }
+}

@@ -1,0 +1,279 @@
+{
+  "status": "M0_MAPPING_REQUIRED",
+  "createAllCandidateTables": false,
+  "policy": "选定底座后先映射权威记录/字段/约束；每个新表需缺口证据，不复制身份/流程/SDK权威状态",
+  "items": [
+    {
+      "candidateTable": "oa_work_item",
+      "strategy": "EXTEND_EXISTING_IF_POSSIBLE",
+      "preferredAuthority": "业务工作合同；流程运行和人员责任归选定OA引擎",
+      "actualBaseTable": null,
+      "newTableAuthorized": false,
+      "requiredProof": "确切源码/字段/约束差异及真实切片测试"
+    },
+    {
+      "candidateTable": "oa_human_task",
+      "strategy": "REUSE_BASE_FIRST",
+      "preferredAuthority": "原生OA任务/待办及责任历史",
+      "actualBaseTable": null,
+      "newTableAuthorized": false,
+      "requiredProof": "确切源码/字段/约束差异及真实切片测试"
+    },
+    {
+      "candidateTable": "oa_binding",
+      "strategy": "EXTEND_EXISTING_IF_POSSIBLE",
+      "preferredAuthority": "本任务数字员工配置元数据",
+      "actualBaseTable": null,
+      "newTableAuthorized": false,
+      "requiredProof": "确切源码/字段/约束差异及真实切片测试"
+    },
+    {
+      "candidateTable": "oa_binding_version",
+      "strategy": "EXTEND_EXISTING_IF_POSSIBLE",
+      "preferredAuthority": "不可变配置快照",
+      "actualBaseTable": null,
+      "newTableAuthorized": false,
+      "requiredProof": "确切源码/字段/约束差异及真实切片测试"
+    },
+    {
+      "candidateTable": "oa_baseline",
+      "strategy": "EXTEND_EXISTING_IF_POSSIBLE",
+      "preferredAuthority": "共同业务事实基线；确认后不可变",
+      "actualBaseTable": null,
+      "newTableAuthorized": false,
+      "requiredProof": "确切源码/字段/约束差异及真实切片测试"
+    },
+    {
+      "candidateTable": "oa_context_manifest",
+      "strategy": "EXTEND_EXISTING_IF_POSSIBLE",
+      "preferredAuthority": "输入集合的不可变版本引用；不存公开对话",
+      "actualBaseTable": null,
+      "newTableAuthorized": false,
+      "requiredProof": "确切源码/字段/约束差异及真实切片测试"
+    },
+    {
+      "candidateTable": "oa_execution_snapshot",
+      "strategy": "EXTEND_EXISTING_IF_POSSIBLE",
+      "preferredAuthority": "真实执行时重验后形成；只供后台",
+      "actualBaseTable": null,
+      "newTableAuthorized": false,
+      "requiredProof": "确切源码/字段/约束差异及真实切片测试"
+    },
+    {
+      "candidateTable": "oa_execution_grant",
+      "strategy": "REUSE_BASE_FIRST",
+      "preferredAuthority": "原生Grant/策略机制",
+      "actualBaseTable": null,
+      "newTableAuthorized": false,
+      "requiredProof": "确切源码/字段/约束差异及真实切片测试"
+    },
+    {
+      "candidateTable": "oa_attempt",
+      "strategy": "REUSE_BASE_FIRST",
+      "preferredAuthority": "原生SDK run/checkpoint",
+      "actualBaseTable": null,
+      "newTableAuthorized": false,
+      "requiredProof": "确切源码/字段/约束差异及真实切片测试"
+    },
+    {
+      "candidateTable": "oa_artifact_version",
+      "strategy": "REUSE_BASE_FIRST",
+      "preferredAuthority": "原生文件版本与私有对象存储",
+      "actualBaseTable": null,
+      "newTableAuthorized": false,
+      "requiredProof": "确切源码/字段/约束差异及真实切片测试"
+    },
+    {
+      "candidateTable": "oa_collaboration",
+      "strategy": "EXTEND_EXISTING_IF_POSSIBLE",
+      "preferredAuthority": "父子工作关系不隐含私有内容共享",
+      "actualBaseTable": null,
+      "newTableAuthorized": false,
+      "requiredProof": "确切源码/字段/约束差异及真实切片测试"
+    },
+    {
+      "candidateTable": "oa_contribution_version",
+      "strategy": "EXTEND_EXISTING_IF_POSSIBLE",
+      "preferredAuthority": "贡献版本不可变；决定独立记录",
+      "actualBaseTable": null,
+      "newTableAuthorized": false,
+      "requiredProof": "确切源码/字段/约束差异及真实切片测试"
+    },
+    {
+      "candidateTable": "oa_review",
+      "strategy": "REUSE_BASE_FIRST",
+      "preferredAuthority": "原生审批任务/回执，补候选digest/epoch",
+      "actualBaseTable": null,
+      "newTableAuthorized": false,
+      "requiredProof": "确切源码/字段/约束差异及真实切片测试"
+    },
+    {
+      "candidateTable": "oa_completion_check",
+      "strategy": "EXTEND_EXISTING_IF_POSSIBLE",
+      "preferredAuthority": "短期预检证据；交付事务仍重新校验",
+      "actualBaseTable": null,
+      "newTableAuthorized": false,
+      "requiredProof": "确切源码/字段/约束差异及真实切片测试"
+    },
+    {
+      "candidateTable": "oa_delivery",
+      "strategy": "EXTEND_EXISTING_IF_POSSIBLE",
+      "preferredAuthority": "唯一正式交付；成功与OA推进对账",
+      "actualBaseTable": null,
+      "newTableAuthorized": false,
+      "requiredProof": "确切源码/字段/约束差异及真实切片测试"
+    },
+    {
+      "candidateTable": "oa_handoff",
+      "strategy": "EXTEND_EXISTING_IF_POSSIBLE",
+      "preferredAuthority": "下游接手包版本",
+      "actualBaseTable": null,
+      "newTableAuthorized": false,
+      "requiredProof": "确切源码/字段/约束差异及真实切片测试"
+    },
+    {
+      "candidateTable": "oa_handoff_receipt",
+      "strategy": "EXTEND_EXISTING_IF_POSSIBLE",
+      "preferredAuthority": "下游真实接受回执",
+      "actualBaseTable": null,
+      "newTableAuthorized": false,
+      "requiredProof": "确切源码/字段/约束差异及真实切片测试"
+    },
+    {
+      "candidateTable": "oa_operation",
+      "strategy": "REUSE_BASE_FIRST",
+      "preferredAuthority": "原生幂等/操作状态；不足才扩展",
+      "actualBaseTable": null,
+      "newTableAuthorized": false,
+      "requiredProof": "确切源码/字段/约束差异及真实切片测试"
+    },
+    {
+      "candidateTable": "oa_invocation",
+      "strategy": "REUSE_BASE_FIRST",
+      "preferredAuthority": "原生工具调用日志与幂等台账",
+      "actualBaseTable": null,
+      "newTableAuthorized": false,
+      "requiredProof": "确切源码/字段/约束差异及真实切片测试"
+    },
+    {
+      "candidateTable": "oa_outbox",
+      "strategy": "REUSE_BASE_FIRST",
+      "preferredAuthority": "底座已有事务消息机制",
+      "actualBaseTable": null,
+      "newTableAuthorized": false,
+      "requiredProof": "确切源码/字段/约束差异及真实切片测试"
+    },
+    {
+      "candidateTable": "oa_inbox",
+      "strategy": "REUSE_BASE_FIRST",
+      "preferredAuthority": "底座已有消费去重机制",
+      "actualBaseTable": null,
+      "newTableAuthorized": false,
+      "requiredProof": "确切源码/字段/约束差异及真实切片测试"
+    },
+    {
+      "candidateTable": "oa_output_release",
+      "strategy": "EXTEND_EXISTING_IF_POSSIBLE",
+      "preferredAuthority": "每受众和来源版本的展示发布决定",
+      "actualBaseTable": null,
+      "newTableAuthorized": false,
+      "requiredProof": "确切源码/字段/约束差异及真实切片测试"
+    },
+    {
+      "candidateTable": "oa_thread_entry",
+      "strategy": "REUSE_BASE_FIRST",
+      "preferredAuthority": "原生会话/消息，补work/release及字段投影",
+      "actualBaseTable": null,
+      "newTableAuthorized": false,
+      "requiredProof": "确切源码/字段/约束差异及真实切片测试"
+    },
+    {
+      "candidateTable": "oa_draft",
+      "strategy": "REUSE_BASE_FIRST",
+      "preferredAuthority": "原生草稿/用户偏好",
+      "actualBaseTable": null,
+      "newTableAuthorized": false,
+      "requiredProof": "确切源码/字段/约束差异及真实切片测试"
+    },
+    {
+      "candidateTable": "oa_asset_revision",
+      "strategy": "REUSE_BASE_FIRST",
+      "preferredAuthority": "原生Agent/技能/方案/工具版本",
+      "actualBaseTable": null,
+      "newTableAuthorized": false,
+      "requiredProof": "确切源码/字段/约束差异及真实切片测试"
+    },
+    {
+      "candidateTable": "oa_market_adoption",
+      "strategy": "EXTEND_EXISTING_IF_POSSIBLE",
+      "preferredAuthority": "复制/引用谱系及异步操作",
+      "actualBaseTable": null,
+      "newTableAuthorized": false,
+      "requiredProof": "确切源码/字段/约束差异及真实切片测试"
+    },
+    {
+      "candidateTable": "oa_knowledge_job",
+      "strategy": "REUSE_BASE_FIRST",
+      "preferredAuthority": "原生知识摄取作业",
+      "actualBaseTable": null,
+      "newTableAuthorized": false,
+      "requiredProof": "确切源码/字段/约束差异及真实切片测试"
+    },
+    {
+      "candidateTable": "oa_team_configuration",
+      "strategy": "REUSE_BASE_FIRST",
+      "preferredAuthority": "原生Agent团队配置",
+      "actualBaseTable": null,
+      "newTableAuthorized": false,
+      "requiredProof": "确切源码/字段/约束差异及真实切片测试"
+    },
+    {
+      "candidateTable": "oa_automation_plan",
+      "strategy": "REUSE_BASE_FIRST",
+      "preferredAuthority": "原生调度计划",
+      "actualBaseTable": null,
+      "newTableAuthorized": false,
+      "requiredProof": "确切源码/字段/约束差异及真实切片测试"
+    },
+    {
+      "candidateTable": "oa_config_proposal",
+      "strategy": "EXTEND_EXISTING_IF_POSSIBLE",
+      "preferredAuthority": "只引用原配置，不成为配置权威",
+      "actualBaseTable": null,
+      "newTableAuthorized": false,
+      "requiredProof": "确切源码/字段/约束差异及真实切片测试"
+    },
+    {
+      "candidateTable": "oa_analysis_plan",
+      "strategy": "EXTEND_EXISTING_IF_POSSIBLE",
+      "preferredAuthority": "只读分析计划；结果存在私有ArtifactVersion",
+      "actualBaseTable": null,
+      "newTableAuthorized": false,
+      "requiredProof": "确切源码/字段/约束差异及真实切片测试"
+    },
+    {
+      "candidateTable": "oa_relation_assertion",
+      "strategy": "EXTEND_EXISTING_IF_POSSIBLE",
+      "preferredAuthority": "来源有据的关系断言扩展",
+      "actualBaseTable": null,
+      "newTableAuthorized": false,
+      "requiredProof": "确切源码/字段/约束差异及真实切片测试"
+    },
+    {
+      "candidateTable": "oa_opportunity",
+      "strategy": "EXTEND_EXISTING_IF_POSSIBLE",
+      "preferredAuthority": "有界主动建议与用户反馈",
+      "actualBaseTable": null,
+      "newTableAuthorized": false,
+      "requiredProof": "确切源码/字段/约束差异及真实切片测试"
+    },
+    {
+      "candidateTable": "oa_evolution_proposal",
+      "strategy": "EXTEND_EXISTING_IF_POSSIBLE",
+      "preferredAuthority": "原资源版本的评估/试用/发布证据扩展",
+      "actualBaseTable": null,
+      "newTableAuthorized": false,
+      "requiredProof": "确切源码/字段/约束差异及真实切片测试"
+    }
+  ]
+}

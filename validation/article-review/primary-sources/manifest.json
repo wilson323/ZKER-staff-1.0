@@ -1,0 +1,338 @@
+{
+  "scope": "PUBLIC_PRIMARY_SOURCE_CAPTURE_ONLY",
+  "records": [
+    {
+      "id": "qdrant-text-filtering",
+      "url": "https://qdrant.tech/documentation/search/text-search/text-filtering/",
+      "capturedAt": "2026-09-11T23:53:48.207470+00:00",
+      "exitCode": 0,
+      "path": "validation/article-review/primary-sources/qdrant-text-filtering.txt",
+      "error": "",
+      "bytes": 370417,
+      "sha256": "e2d6f501cdc7ebf63bfa51a9d23f5f13d2814fb16211bd7244118cb2bc1b73ed"
+    },
+    {
+      "id": "qdrant-hybrid",
+      "url": "https://qdrant.tech/documentation/search/hybrid-queries/",
+      "capturedAt": "2026-09-11T23:53:48.208061+00:00",
+      "exitCode": 0,
+      "path": "validation/article-review/primary-sources/qdrant-hybrid.txt",
+      "error": "",
+      "bytes": 348587,
+      "sha256": "c9f0b9691378b28e2f38baec7a99379b6b1aace65119b7471a1bf49c60de5ff0"
+    },
+    {
+      "id": "qdrant-multitenancy",
+      "url": "https://qdrant.tech/documentation/guides/multiple-partitions/",
+      "capturedAt": "2026-09-11T23:53:48.210466+00:00",
+      "exitCode": 0,
+      "path": "validation/article-review/primary-sources/qdrant-multitenancy.txt",
+      "error": "",
+      "bytes": 356215,
+      "sha256": "2dbe5f58ec26c68a3fc438188c368999cf1d34349189d9837ce4f9924e2e28f1"
+    },
+    {
+      "id": "pgvector-readme-fixed",
+      "url": "https://raw.githubusercontent.com/pgvector/pgvector/efa08fda9ec485d80292d0487a77939c087dedcc/README.md",
+      "capturedAt": "2026-09-11T23:53:49.538591+00:00",
+      "exitCode": 0,
+      "path": "validation/article-review/primary-sources/pgvector-readme-fixed.txt",
+      "error": "",
+      "bytes": 42305,
+      "sha256": "54cb3a5f4344308476cb2378469ac77d10fbff415d1b5be66608bb386ce8f527"
+    },
+    {
+      "id": "pgvector-license-fixed",
+      "url": "https://raw.githubusercontent.com/pgvector/pgvector/efa08fda9ec485d80292d0487a77939c087dedcc/LICENSE",
+      "capturedAt": "2026-09-11T23:53:49.585474+00:00",
+      "exitCode": 0,
+      "path": "validation/article-review/primary-sources/pgvector-license-fixed.txt",
+      "error": "",
+      "bytes": 1104,
+      "sha256": "6bba9ebeb73e27477463b05e5ef1bf303bccbddb3db9bbc95905d351604d6a87"
+    },
+    {
+      "id": "mysql84-ngram",
+      "url": "https://dev.mysql.com/doc/refman/8.4/en/fulltext-search-ngram.html",
+      "capturedAt": "2026-09-11T23:53:49.817130+00:00",
+      "exitCode": 0,
+      "path": "validation/article-review/primary-sources/mysql84-ngram.txt",
+      "error": "",
+      "bytes": 88381,
+      "sha256": "eca8874d26a04277eb4b620b02cbe5b8a0de112ba9785a2a638791144f01ce6d"
+    },
+    {
+      "id": "docling-advanced",
+      "url": "https://docling-project.github.io/docling/usage/advanced_options/",
+      "capturedAt": "2026-09-11T23:53:50.249351+00:00",
+      "exitCode": 0,
+      "path": "validation/article-review/primary-sources/docling-advanced.txt",
+      "error": "",
+      "bytes": 112366,
+      "sha256": "b7c4e79275726e7f9038ef7cfd8bb0319626282d296082bdc5b2af39caf65dcd"
+    },
+    {
+      "id": "docling-pipeline-options",
+      "url": "https://docling-project.github.io/docling/reference/pipeline_options/",
+      "capturedAt": "2026-09-11T23:53:50.258366+00:00",
+      "exitCode": 0,
+      "path": "validation/article-review/primary-sources/docling-pipeline-options.txt",
+      "error": "",
+      "bytes": 2425117,
+      "sha256": "6a859ebf05a5d8f636a1dfea5be80c349e3d22cfbbd35125d7d9964cb996130f"
+    },
+    {
+      "id": "anthropic-contextual-retrieval",
+      "url": "https://www.anthropic.com/engineering/contextual-retrieval",
+      "capturedAt": "2026-09-11T23:53:50.654684+00:00",
+      "exitCode": 0,
+      "path": "validation/article-review/primary-sources/anthropic-contextual-retrieval.txt",
+      "error": "",
+      "bytes": 199814,
+      "sha256": "f2345f5709da99c3bb0945f5c58e4de348bc204d1187e21c8f6b964b9e837db3"
+    },
+    {
+      "id": "anthropic-context-engineering",
+      "url": "https://www.anthropic.com/engineering/effective-context-engineering-for-ai-agents",
+      "capturedAt": "2026-09-11T23:53:50.918476+00:00",
+      "exitCode": 0,
+      "path": "validation/article-review/primary-sources/anthropic-context-engineering.txt",
+      "error": "",
+      "bytes": 201527,
+      "sha256": "a562ee707ace260e029d38c739aac3e50062260ee94708cc13dc2258f8fd8f3c"
+    },
+    {
+      "id": "qdrant-license-v1.19.1",
+      "url": "https://raw.githubusercontent.com/qdrant/qdrant/v1.19.1/LICENSE",
+      "capturedAt": "2026-09-11T23:53:51.310680+00:00",
+      "exitCode": 0,
+      "path": "validation/article-review/primary-sources/qdrant-license-v1.19.1.txt",
+      "error": "",
+      "bytes": 11351,
+      "sha256": "210b508429e913d9de5301f90508bc2cbf5b2281de5b45e607c04d58f0f3bd8f"
+    },
+    {
+      "id": "docling-license-v2.126.0",
+      "url": "https://raw.githubusercontent.com/docling-project/docling/v2.126.0/LICENSE",
+      "capturedAt": "2026-09-11T23:53:51.494528+00:00",
+      "exitCode": 0,
+      "path": "validation/article-review/primary-sources/docling-license-v2.126.0.txt",
+      "error": "",
+      "bytes": 1072,
+      "sha256": "edb765d1e3e60d0c7a7d5fba5f2bb2c3c29f7465cecb5c22cf1185c884954e4c"
+    },
+    {
+      "id": "postgres-rls",
+      "url": "https://www.postgresql.org/docs/current/ddl-rowsecurity.html",
+      "capturedAt": "2026-09-11T23:53:51.752795+00:00",
+      "exitCode": 0,
+      "path": "validation/article-review/primary-sources/postgres-rls.txt",
+      "error": "",
+      "bytes": 31316,
+      "sha256": "dafc639c1f8d4093cb061b16f09babd9407184c0fe18c5f6e99f2a74697ae1d8"
+    },
+    {
+      "id": "wikicreator-skillhub",
+      "url": "https://www.skillhub.cn/skills/wiki-creator",
+      "capturedAt": "2026-09-11T23:56:07.544249+00:00",
+      "exitCode": 0,
+      "path": "validation/article-review/primary-sources/wikicreator-skillhub.txt",
+      "error": "",
+      "bytes": 7429,
+      "sha256": "c811fff182f3e529b4b54fe85cfaddf9e57907cb95c821b9e48a924959250c48"
+    },
+    {
+      "id": "semantica-readme-rolling",
+      "url": "https://raw.githubusercontent.com/semantica-agi/semantica/main/README.md",
+      "capturedAt": "2026-09-11T23:56:07.821732+00:00",
+      "exitCode": 0,
+      "path": "validation/article-review/primary-sources/semantica-readme-rolling.txt",
+      "error": "",
+      "bytes": 79485,
+      "sha256": "a60fea0ff0427f99f4335de42809ddf296232a0a26f7b02228b7bcc9dc21353a"
+    },
+    {
+      "id": "semantica-license-rolling",
+      "url": "https://raw.githubusercontent.com/semantica-agi/semantica/main/LICENSE",
+      "capturedAt": "2026-09-11T23:56:07.820722+00:00",
+      "exitCode": 0,
+      "path": "validation/article-review/primary-sources/semantica-license-rolling.txt",
+      "error": "",
+      "bytes": 1066,
+      "sha256": "7650ef0576603b337c310b9ad9dc051819257213abc44b720d9e678f8e4f4c40"
+    },
+    {
+      "id": "semantica-pyproject-rolling",
+      "url": "https://raw.githubusercontent.com/semantica-agi/semantica/main/pyproject.toml",
+      "capturedAt": "2026-09-11T23:56:08.149664+00:00",
+      "exitCode": 0,
+      "path": "validation/article-review/primary-sources/semantica-pyproject-rolling.txt",
+      "error": "",
+      "bytes": 13307,
+      "sha256": "40fe09b7963395ccbc46f5df3bf1cea86d96aaa883110f47fb1133875c2364c9"
+    },
+    {
+      "id": "palantir-ontology-overview",
+      "url": "https://www.palantir.com/docs/foundry/ontology/overview/",
+      "capturedAt": "2026-09-11T23:56:09.264448+00:00",
+      "exitCode": 0,
+      "path": "validation/article-review/primary-sources/palantir-ontology-overview.txt",
+      "error": "",
+      "bytes": 437680,
+      "sha256": "b7e52f510e24690d1a0cc1948f61251c4333581126296b02972d49f2f9aa3832"
+    },
+    {
+      "id": "palantir-action-permissions",
+      "url": "https://www.palantir.com/docs/foundry/action-types/permissions/",
+      "capturedAt": "2026-09-11T23:56:09.399084+00:00",
+      "exitCode": 0,
+      "path": "validation/article-review/primary-sources/palantir-action-permissions.txt",
+      "error": "",
+      "bytes": 446290,
+      "sha256": "a9a0f39e6e8f83a8f032dfb45114c03beacebe0699c7da8600e2bcfe6279d9c1"
+    },
+    {
+      "id": "w3c-owl-overview",
+      "url": "https://www.w3.org/TR/owl2-overview/",
+      "capturedAt": "2026-09-11T23:56:08.703462+00:00",
+      "exitCode": 0,
+      "path": "validation/article-review/primary-sources/w3c-owl-overview.txt",
+      "error": "",
+      "bytes": 43840,
+      "sha256": "d5d22b811eb348c845c5aa5aaa5c05448e61b63e3a8ee24b129075916d6115a5"
+    },
+    {
+      "id": "w3c-prov-o",
+      "url": "https://www.w3.org/TR/prov-o/",
+      "capturedAt": "2026-09-11T23:56:09.404839+00:00",
+      "exitCode": 0,
+      "path": "validation/article-review/primary-sources/w3c-prov-o.txt",
+      "error": "",
+      "bytes": 464179,
+      "sha256": "6b96671ab84faf12ce3f041aca12c3f93a6df2ed242348810743179a68e69555"
+    },
+    {
+      "id": "company-brain-original",
+      "url": "https://x.com/vibemarketer_/status/2092243372929151135",
+      "capturedAt": "2026-09-11T23:56:12.178896+00:00",
+      "exitCode": 0,
+      "path": "validation/article-review/primary-sources/company-brain-original.txt",
+      "error": "",
+      "bytes": 434869,
+      "sha256": "692e795e8c656b4aadca73ee3661a5707616d1c8d451c38f0546d0f154e3de2d"
+    },
+    {
+      "id": "semantica-readme-fixed",
+      "url": "https://raw.githubusercontent.com/semantica-agi/semantica/05aec1975defbac087b29334ab0e35302a49a884/README.md",
+      "capturedAt": "2026-09-11T23:56:51.388714+00:00",
+      "exitCode": 0,
+      "path": "validation/article-review/primary-sources/semantica-readme-fixed.txt",
+      "error": "",
+      "bytes": 79485,
+      "sha256": "a60fea0ff0427f99f4335de42809ddf296232a0a26f7b02228b7bcc9dc21353a"
+    },
+    {
+      "id": "semantica-license-fixed",
+      "url": "https://raw.githubusercontent.com/semantica-agi/semantica/05aec1975defbac087b29334ab0e35302a49a884/LICENSE",
+      "capturedAt": "2026-09-11T23:56:51.307419+00:00",
+      "exitCode": 0,
+      "path": "validation/article-review/primary-sources/semantica-license-fixed.txt",
+      "error": "",
+      "bytes": 1066,
+      "sha256": "7650ef0576603b337c310b9ad9dc051819257213abc44b720d9e678f8e4f4c40"
+    },
+    {
+      "id": "semantica-pyproject-fixed",
+      "url": "https://raw.githubusercontent.com/semantica-agi/semantica/05aec1975defbac087b29334ab0e35302a49a884/pyproject.toml",
+      "capturedAt": "2026-09-11T23:56:51.330909+00:00",
+      "exitCode": 0,
+      "path": "validation/article-review/primary-sources/semantica-pyproject-fixed.txt",
+      "error": "",
+      "bytes": 13307,
+      "sha256": "40fe09b7963395ccbc46f5df3bf1cea86d96aaa883110f47fb1133875c2364c9"
+    },
+    {
+      "id": "semantica-context-graph-fixed",
+      "url": "https://raw.githubusercontent.com/semantica-agi/semantica/05aec1975defbac087b29334ab0e35302a49a884/semantica/context/context_graph.py",
+      "capturedAt": "2026-09-11T23:56:52.028395+00:00",
+      "exitCode": 0,
+      "path": "validation/article-review/primary-sources/semantica-context-graph-fixed.txt",
+      "error": "",
+      "bytes": 229404,
+      "sha256": "99e386d7d38498380e0df7cc9a57de3596a4fb9ac193606b9add7a409cd36f50"
+    },
+    {
+      "id": "semantica-release-pypi",
+      "url": "https://pypi.org/pypi/semantica/json",
+      "capturedAt": "2026-09-11T23:56:51.982528+00:00",
+      "exitCode": 0,
+      "path": "validation/article-review/primary-sources/semantica-release-pypi.txt",
+      "error": "",
+      "bytes": 129857,
+      "sha256": "4f0410a219a5cf827f0136e41c405b03e706ccb1a9918e29caf49921cc32a20b"
+    },
+    {
+      "id": "ragflow-readme-v0.27.2",
+      "url": "https://raw.githubusercontent.com/infiniflow/ragflow/v0.27.2/README.md",
+      "capturedAt": "2026-09-11T23:56:51.988261+00:00",
+      "exitCode": 0,
+      "path": "validation/article-review/primary-sources/ragflow-readme-v0.27.2.txt",
+      "error": "",
+      "bytes": 17682,
+      "sha256": "e321e3b65b92b34121e96d147fe9145e1e428ec1453e3cbbf4426fab09d701ad"
+    },
+    {
+      "id": "ragflow-compose-v0.27.2",
+      "url": "https://raw.githubusercontent.com/infiniflow/ragflow/v0.27.2/docker/docker-compose-base.yml",
+      "capturedAt": "2026-09-11T23:56:52.857540+00:00",
+      "exitCode": 0,
+      "path": "validation/article-review/primary-sources/ragflow-compose-v0.27.2.txt",
+      "error": "",
+      "bytes": 12061,
+      "sha256": "097dbf316c754c2a8b14492e93b5296439f3add08e1a416335c1123f65ac0033"
+    },
+    {
+      "id": "openviking-license-rolling",
+      "url": "https://raw.githubusercontent.com/volcengine/OpenViking/main/LICENSE",
+      "capturedAt": "2026-09-11T23:56:53.267497+00:00",
+      "exitCode": 0,
+      "path": "validation/article-review/primary-sources/openviking-license-rolling.txt",
+      "error": "",
+      "bytes": 34568,
+      "sha256": "1bd87fa6d9a5c79daf0c2af042b6725c9773bf095cc3d1bdf3656e66d1c3e5b1"
+    },
+    {
+      "id": "openviking-readme-rolling",
+      "url": "https://raw.githubusercontent.com/volcengine/OpenViking/main/README.md",
+      "capturedAt": "2026-09-11T23:56:53.085739+00:00",
+      "exitCode": 0,
+      "path": "validation/article-review/primary-sources/openviking-readme-rolling.txt",
+      "error": "",
+      "bytes": 20628,
+      "sha256": "123b7076dbebe3222ec7e06e9949fdedbbd517ca424bc2d865cdbbb5ceaee0c8"
+    },
+    {
+      "id": "semantica-git-refs",
+      "url": "https://github.com/semantica-agi/semantica.git",
+      "command": "git ls-remote HEAD refs/tags/v0.6.5 refs/tags/v0.6.6 refs/tags/v0.6.8",
+      "exitCode": 0,
+      "capturedAt": "2026-09-11T23:56:54.822524+00:00",
+      "path": "validation/article-review/primary-sources/semantica-git-refs.txt",
+      "sha256": "8687e605b6b3907d14fc9d59d8a09ef8305aec6bb900f0f4aee865666172d326"
+    }
+  ],
+  "toolFailures": [
+    {
+      "tool": "web.run",
+      "operation": "find/open official docs",
+      "error": "Fatal error: connection failed: error sending request",
+      "fallback": "direct HTTPS curl primary sites; no TLS bypass"
+    },
+    {
+      "tool": "web.run",
+      "operation": "article primary owner searches",
+      "error": "Fatal error: connection failed: error sending request",
+      "fallback": "direct HTTPS public URLs given in articles; no further web.run retry"
+    }
+  ]
+}

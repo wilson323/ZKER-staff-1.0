@@ -1,0 +1,488 @@
+#  从 AI Agent 到模型推理：端到端 AI 可观测实践
+
+原创  张乎兴(望陶)  张乎兴(望陶)  阿里云云原生
+
+_2025年06月10日 19:47_ __ _ _ _ _ _ 浙江  _
+
+在小说阅读器读本章
+
+去阅读
+
+![](https://mmbiz.qpic.cn/mmbiz_gif/yvBJb5IiafvndcaYrVCNrRvy0SF78MSJNicKEOua3VvDnWRicZrGFwd7W62ant4IdRSdnicLwAnMiaJXof9DCmFk3ow/640?wx_fmt=gif&from=appmsg)
+
+  
+
+在 AI 时代，随着模型和应用侧的快速演化，对于推理过程，成本和性能显得尤为重要，而端到端的 AI 可观测是其中至关重要的一环，以下内容整理自最近的「深圳
+AI 原生应用实践营」分享实录。
+
+  
+
+![](https://mmbiz.qpic.cn/mmbiz_png/yvBJb5IiafvkEibcspOKFpQzKXxbiaibKiaOPCGfFBnhSTHym7JK7pCErfGae4Q9icSICe3I6VVgwjBZjEWSQSJ2vc6w/640?wx_fmt=png&from=appmsg)
+
+  
+
+我们用日新月异来形容当前的 AI 发展可以说毫不为过。现阶段 AI 应用生态主要可以分为三个方面：
+
+  
+
+  * 第一个是模型，以 DeepSeek, Qwen 等为代表的模型正在快速追近国外的 OpenAI, Claude 等模型能力。 
+
+  * 第二个方面是开发框架，AI 应用当前以 Python 语言为出发点，从最早一代的 LangChain、LlamaIndex，这一批框架主要以高代码为主要形态，到现在其他语言也逐步涌现出各种开发框架，例如 Java 的 Spring AI Alibaba 等都在快速对齐 Python 生态的能力。同时，低代码开发平台也成为 AI 应用一种快速的载体。AI 应用相比传统的微服务来说具备更加轻量化的特点，因此低代码开发也非常适合这类场景。在开发 AI 应用的过程中也需要 MCP/Tools，向量数据库等配套的服务设施。 
+
+  * 第三是 AI 应用，从最开始的聊天机器人，到编程 Copilot，再到通用的智能体 Agent，可以说是百花齐放，层出不穷。 
+
+  
+
+那么在 AI 应用开发的时候，主要会面临哪些痛点呢？我们实践下来，主要总结了以下三个方面。
+
+  
+
+![](https://mmbiz.qpic.cn/mmbiz_png/yvBJb5IiafvkEibcspOKFpQzKXxbiaibKiaOPXnNoMx9rcCLRGqWPSjm1g1pUzKc11wvmiaL2KT6nPNuPTfibngZ3Ppdg/640?wx_fmt=png&from=appmsg)
+
+  
+
+第一是怎么把它用起来，第二是要用得省，第三是用得好。
+
+  
+
+第一，用起来的问题。这里最大的问题是，虽然我们很容易能够基于一个开源的框架去搭建一个 AI 应用，比如聊天机器人，或者类似的 AI
+Agent，但是我们发现当同一个问题问他两三次时，几乎每次的回答都不一样，这时候我们就会困惑，到底是哪里有问题，或者说同样的提示词、同样的应用，为什么换了一个模型，回答的效果就大打折扣了。再有，突然这个模型某一次的推理请求或者用户的请求发过去，怎么回答就卡住了，或者响应老是回不来。所以，我们把
+AI 应用从第一步去做 PoC，或者去做一些 demo，到真正把它用到生产实践里面，其实会遇到非常多的问题。
+
+  
+
+第二，用起来之后，我们就要考虑用得省的问题。大家都知道模型的调用是会消耗 Token 的。我们每一次的调用到底消耗多少 Token，哪些请求消耗了比较多的
+Token，哪些 AI 应用在消耗比较多的成本？我们是希望能够一目了然地知道它的情况，从而帮助我们去做整体的运营规划。
+
+  
+
+第三个，就是需要解决用得好，也就是数据质量的问题。我们构建出来的 Agent 使用了各种各样的模型能力，但是它的回答质量  到底
+好不好、是不是在我们预期的范围内，有没有一些不合理、不合规的回答，这些我们都需要去关注。
+
+  
+
+基本上我们在做的事情，就是通过一些可观测性的手段去解决以上这三个问题。在解决问题之前，我们先了解下 AI 应用开发里一个典型的应用架构。
+
+  
+
+![](https://mmbiz.qpic.cn/mmbiz_png/yvBJb5IiafvkEibcspOKFpQzKXxbiaibKiaOPDh5j87lfibwG2SsJNc1vrcVVwgmysgxiaSeabjtewRc0LnthmL8ibdVIA/640?wx_fmt=png&from=appmsg)
+
+  
+
+如上图所示，从用户业务层，到 AI 应用层，也就是 AI
+Agent（图示中间部分），到模型服务层，基本上可以划分为三个大的板块。首先从用户界面进来，可以通过
+iOS、Android、小程序等入口，我们的生产环境里会有一个 API 网关来完成流量的防护、API 管理能力，这和传统微服务是一致的。这里的 API
+网关可以通过像开源的 Higress 的能力，帮大家做统一 API 管理。流量从 API 网关进入到 AI 应用层，我们有各种用 Python 或者
+Java
+编写的应用程序。这些程序会去调用不同的模型，从模型的高可用以及对比层面，我们通常会部署多个模型，然后根据一定的策略在各种模型之间做一些切换，例如按照成本、重要程度、流量策略等，分别调用不同的模型。这个时候，就需要一个统一的代理来实现通用的能力，也就是我们这里展示的
+AI 网关。它可以去帮助我们做统一的流量防护、Token 限流、敏感信息过滤、模型内容缓存等等。这样，AI 应用就不需要感知在多个模型中去做各种切换的过程。
+
+  
+
+我们首先要解决的是一次调用到底经过了哪些组件，然后通过调用链把这些组件全部串联起来。要实现全链路的诊断，首先要把这些链路打通，当一个请求出现问题的时候，到底是哪个环节出问题了，是
+AI 应用还是这个模型内部推理出现了问题，我们需要快速界定。
+
+  
+
+第二需要构建一个全栈的可观测数据平台，它能够把所有的这些数据  之间能够很好地关联起来  ，不仅是链路，还包括指标，例如模型内部的一些 GPU
+利用率，通过关联分析能知道到底是应用层出问题，还是模型底层出问题了。
+
+  
+
+最后我们还需要通过一些模型日志，了解每次调用的输入输出是什么，并利用这些数据做一些评估和分析，来验证 AI 应用的质量。
+
+  
+
+从这三个手段入手，从监控的领域来说，我们在不同层面分别为大家提供了一些观察手段和核心关注点。
+
+  
+
+![](https://mmbiz.qpic.cn/mmbiz_png/yvBJb5IiafvkEibcspOKFpQzKXxbiaibKiaOPtjY5D2Vyp1VAgMT9r5kX3hbMbwgGjyEIoVq3ZV9iac2bxia0xOJpiadqw/640?wx_fmt=png&from=appmsg)
+
+  
+
+例如在用户层，我们通常需要分析会话是不是有卡顿，对用户体验是否造成了影响；在应用层里面，我们通常会关注响应的耗时是否出现了异常，及推理的延时等；在网关层面，或者依赖的一些组件，包括
+MCP/Tools，以及一些其他的向量数据库等，我们会去关注可用性；在模型服务层，我们通常会关注推理效果和成本；最后在基础设施这层，我们会关注这些资源的一些利用率、缓存命中率等。
+
+  
+
+在阿里云，我们提供了一套完整的 AI 全栈可观测解决方案，来确保整体观测是没有盲区的。
+
+  
+
+![](https://mmbiz.qpic.cn/mmbiz_png/yvBJb5IiafvkEibcspOKFpQzKXxbiaibKiaOPpz9qnWkw8ln82Sz3ZTpx1CVKnf0fxicFBkOicWL46PnFL0QxAM0TTibuQ/640?wx_fmt=png&from=appmsg)
+
+  
+
+从最底层智算服务器提供基础设施的监控能力，到通过容器服务自行部署的一些模型能力，再到 AI 平台像 PAI 这样的 PaaS
+产品，覆盖了从训练到推理的各个阶段，到像百炼这样的大模型服务平台 MaaS，再往上到 AI 应用开发，能够具备从上到下的、立体化的全栈可观测能力。
+
+  
+
+接下来介绍一些具体实践。第一个就是基于 Trace 的全链路诊断能力是如何打通刚才说的全链路调用的。我们基于 OpenTelemetry
+这套追踪的规范，从用户端侧开始，到 API 网关，到 AI 应用层，到 AI 网关，再到模型层，都进行了埋点，这里有一部分，比如网关层，采用的
+是手动埋点，  在应用层和模型内部层采用的是无侵入的自动埋点，最终把各个环节的追踪数据上报到阿里云的可观测平台。
+
+  
+
+![](https://mmbiz.qpic.cn/mmbiz_png/yvBJb5IiafvkEibcspOKFpQzKXxbiaibKiaOPticJWHVOwPnsMxyS7ggOKIIGDJtLoxKoB3xt98EficcyZjIgliaxZSFsA/640?wx_fmt=png&from=appmsg)
+
+  
+
+在 AI 应用内部，我们对常用的 AI 开发框架都进行了埋点，其实一个典型的 AI 应用内部流转还是非常复杂的，包括
+RAG、工具的使用、模型调用等多种复杂场景，我们会针对这些关键节点进行埋点，来抓取到每一步的详细执行过程。无论应用采用 Python 还是 Java
+进行开发，我们都可以通过一些无侵入的方式，挂载可观测数据采集的探针到 Python 或者 Java 程序里面，去采集 AI
+应用内部的一些实现细节。另外我们发现在模型推理阶段，它底层其实也是一个 Python
+程序在运行，因此数据采集探针也可以部署到模型推理层，去采集很多模型内部推理过程的信息。因此我们能够实现从用户终端开始，到模型最底层推理这一条整个链路的串接。
+
+  
+
+![](https://mmbiz.qpic.cn/mmbiz_png/yvBJb5IiafvkEibcspOKFpQzKXxbiaibKiaOP0GjDQ46ZwA6PFQMhEVN4icvbIkySfAha9bH6dG6WPx54LiaBj5QHhm8A/640?wx_fmt=png&from=appmsg)
+
+  
+
+由于 AI 应用的迭代速度非  常快，OpenTelemetry 社区的  语义规范也在不断演进。我们基于社区规范和内部的实践，定义了一套面向 AI
+应用的语义规范，包括我们需要采集哪些指标、在调用链中需要记录哪些数据、将它们以怎样的形式存储下来。在此基础上，我们也与社区紧密协同，把我们的一些能力向社区反馈和贡献。
+
+  
+
+![](https://mmbiz.qpic.cn/mmbiz_png/yvBJb5IiafvkEibcspOKFpQzKXxbiaibKiaOPPevcW0GUaSnpyI9pfibOTGSCicNaFQyNMnv9kJmic4K9G5ibJV7pWC7cvg/640?wx_fmt=png&from=appmsg)
+
+  
+
+与传统微服务应用所关注的黄金三指标（请求数，错误，耗时）类比，我们认为 AI 应用的黄金三指标可能是
+Token，Error，Duration。耗时主要关注的是模型推理延迟，也就是在推理过程中我们通常需要关注模型的首包延迟，即 TTFT(Time to
+first token)，这个指标反映了相应的速度，还有像 TPOT  (Time Per Output Token)  反映生成的效率和流畅度。
+
+  
+
+Token 可能是 AI 应用最重要的一个指标，所以每次请求会记录 Token 的消耗情况，甚至我们需要精确地区分 Input Token 和 Output
+Token 的消耗，因为大家知道模型的定价里面  Input Token  和  Output Token  是不一样的，我们在成本核算的时候，会将输入
+Token 和输出 Token 分别进行统计。还有像系统的利用率，包括 GPU 使用率、模型 KV 缓存的命中率等，在每一个领域，都会有一些比较黄金的指标。
+
+  
+
+接下来重点介绍下，在模型推理阶段比较重要的两个关键指标，TTFT 和 TPOT，它们分别反映了模型推理时两个关键阶段的性能。
+
+  
+
+![](https://mmbiz.qpic.cn/mmbiz_png/yvBJb5IiafvkEibcspOKFpQzKXxbiaibKiaOPHuKibtnv5U7d5WdjQ5YZRGia9oalTFGazq3AewsttoPQbKTrGrqvyEZQ/640?wx_fmt=png&from=appmsg)
+
+  
+
+模型推理时有两个核心的阶段，第一个叫 Prefill，其实就是在我们把提示词输入给模型的时候，它会把提示词作一个输入，然后去进行
+tokenize，也就是把你的那些自然语言变成一个模型的 Token，然后这些 Token 之间会计算它的一些相似度，再把它的结果保存在一个 KV
+Cache 里面，从 input 到了模型，然后模型吐出第一个 Token 为止，这个阶段叫做 Prefill。TTFT
+就是首包延迟时间，是衡量这个阶段的耗时，也是衡量推理效率的一个非常核心的指标。
+
+  
+
+第二个阶段就是在吐出第一个 Token 以后，接下来每一个新的 Token 都需要把这个 Token 过去生成的结果作为一个输入，再喂给模型，然后计算下一个
+Token，它是一个不断迭代的过程。所以这个过程中会有模型的推理，会有一些缓存，帮我们去缓存中间的结果。从第二个 Token 开始到最后一个 Token
+出来，整个阶段就是我们叫做 Decode，这是第二个比较重要的阶段。在这里面它每一个 Token 出来的平均间隔时间，我们叫做 TPOP。TTFT +
+TPOT * （总 Token 数 -1），基本就能推导出推理的关键耗时。
+
+  
+
+针对单个请求来说，最需要关注的就是 TTFT 和 TPOT
+这两个指标。另外一个比较重要的指标就是吞吐率。吞吐率可以衡量我们这个模型本身，能够同时去支撑多少个推理请求。所以这几个指标是需要进行一些平衡的，三个指标
+不可能  同时满足得特别好。比如说在线推理的场景下，我们会通常会关注更快的 TTFT 和
+TPOT。但是在离线分析的时候，我们可能会批量喂给模型一些数据做分析。我们希望模型能够提供更好的吞吐率，而 TTFT
+反而就没有那么关注了。这些关键指标，我们都会采集上报上来，并且重点展示。
+
+  
+
+![](https://mmbiz.qpic.cn/mmbiz_png/yvBJb5IiafvkEibcspOKFpQzKXxbiaibKiaOPzSmHpbgwOXZmzR08gg5ibXK7pP9FNueqVjkkrJeJdaDDaOFh5f7JyMQ/640?wx_fmt=png&from=appmsg)
+
+  
+
+接下来介绍下我们是如何实现对上述数据的采集的。其实作为一个 Python
+程序的话，它其实有一些机制能够让我们去实现一个无侵入的一个埋点，我们的方案基本上基于这个 OpenTelemetry 的 Python agent
+为底座，然后在上面做了一些扩展和增强，首先就是我们对于一些常用的国内的一些开发框架，比如说国内比较流行的 Dify、LangChain 或者
+LlamaIndex
+等框架进行了埋点的支持，使得我们通过无侵入的方式能够把这些数据信息给采集上来。其次，我们在开源探针的基础上，做了一些稳定性和性能优化的一些事情，能够帮助探针以一个非常低成本的方式进入到
+AI 框架的工作流程里面，去采集到各种各样的想要的那些调用链、指标和日志等信息。
+
+  
+
+这里是对探针的埋点原理的一个简单的介绍。
+
+  
+
+![](https://mmbiz.qpic.cn/mmbiz_png/yvBJb5IiafvkEibcspOKFpQzKXxbiaibKiaOP5bCF86uvXkAUAPQWr9YNqRIHJOn6jAvsJbRaHjsIDAyR6WlKHYg5fw/640?wx_fmt=png&from=appmsg)
+
+  
+
+左边是一个 Python 程序，简单的 hello 方法。Python 语言，它本身提供了一个叫做 monkey patch
+的一种机制，允许我们的程序在运行的时候去动态地修改一个函数，包括它的属性和方法。所以我们只需要去在它的外层重新定义一个包装的方法，这个方法可以在原始方法执行前后做一些事情。这有点像我们在设计模式中见到过的装饰器模式。
+
+  
+
+这个 hello 就是原始的方法定义，Python
+程序运行的初始化的阶段，可以把原来那个函数的类似于引用给替换掉。这样的话其实实际执行的就是替换后的包装方法。在包装后的方法里面，还会去调原来的那个方法。最后的结果，就像第
+4 步看到的，可以实现在原始的方法的前后去插入一些我们想要的一些逻辑。然后通过这种方式，我们就能够实现一个在用户的代码不修改的情况下去采集各种数据。
+
+  
+
+那阿里云提供的 Python 探针能力和开源的有什么区别呢？
+
+  
+
+![](https://mmbiz.qpic.cn/mmbiz_png/yvBJb5IiafvkEibcspOKFpQzKXxbiaibKiaOPB41bFvgvNKm1R23iaydD8cw59q5z1ibFBWqZjZAz3f39KzN2hlNFDc0g/640?wx_fmt=png&from=appmsg)
+
+  
+
+第一个就是我们在刚才说的 AI 应用开发框架中，在一些常见的开发框架的支持上是最为全面的，包括大模型的一些核心指标。TTFT/TPOT
+等指标，以及在模型的输入输出这些数据上，做了一个非常完整的支持，包括流式场景下的数据采集能力也是完整的支持。
+
+  
+
+另外，我们还支持一些生产实践上的特性，很多 Python 应用会使用多进程来提升并发度，例如 unicorn 或者 gunicorn。在这种模式下，开源的
+OpenTelemetry
+探针在支持上面都会有一些问题，某些场景下挂载了探针之后有可能导致应用无法启动，或者数据无法采集等等一些问题。在更严重的情况下，它可能还会把一些进程给搞挂。另一方面，很多
+Python 进程还会使用 gevent 来实现协程，进一步提高程序整体的吞吐率，比如 Dify 就会使用这个能力。当开了 gevent 能力之后，开源的
+OTel 探针，会让这个进程卡住，业务无法工作，更不要说去采集数据 等等一系列问题。这些场景下我们都提供了完整支持。基本上能够让这些 Python
+程序很好的在生产实践上能够部署起来，能够比较安全稳定地采集可观测数据。
+
+  
+
+![](https://mmbiz.qpic.cn/mmbiz_png/yvBJb5IiafvkEibcspOKFpQzKXxbiaibKiaOPjjibXYiblcgibZbIPicmHyPwvVVv8jELElTtdox4U60t9YNGfiahbA3Obibw/640?wx_fmt=png&from=appmsg)
+
+  
+
+此外，针对流式上报的场景，我们也做了一些优化。在阿里云的内部很多业务也使用了这个数据采集的探针，当一些大流量的场景下，比如网关想要去采集这个流式的数据，模型的返回结果可能是比较大的，一次调用可能会有几千上万个
+Token 产生，流式场景下 Token 是一批一批的返回的，如果要完整的采集输入输出，需要在网关中去缓存这些 Token
+数据，一直等到结束以后再把数据往上报，在高并发的情况下  ，这种方式会对我们应用的内存占用造成一些压力，
+因此我们也做了一些优化方案，将数据进行拆分上报，把这些数据分批地上报到服务端，然后在服务端把这些内容再组合还原，起到降低内存占用的效果。
+
+  
+
+![](https://mmbiz.qpic.cn/mmbiz_png/yvBJb5IiafvkEibcspOKFpQzKXxbiaibKiaOP7gyBLLn5Y44M16QBPaIkJPEoudCztxAxDemyqBJDWmoppjM89dD6Lg/640?wx_fmt=png&from=appmsg)
+
+  
+
+接下来专门介绍下 Dify 这块的实践。就我们目前接触下来，大量的开发者都在使用 Dify 做 AI Agent 的开发平台，包括我们内部也用到了
+Dify。给大家分享下在生产中遇到的一些问题以及建议。
+
+  
+
+首先简单介绍下 Dify 的系统架构。请求从前端进来，通过 Nginx 反向代理，达到 API 后端，这个后端是由 Flask 部署的后端。这个 API
+后端会将一些复杂的任务，放到 Redis，再由另外一个 worker 组件去执行这些后台任务，同时把一些数据存储在对象存储和 PGSQL 当中。
+
+  
+
+1\. 在做 RAG 的过程中，当上传一些文档时，有时会超过 Nginx 默认的上传限制，此时建议调大 NGINX_CLIENT_MAX_BODY_SIZE
+这个值。
+
+  
+
+2\. 在数据库的连接池，Dify 的 workflow 在运行的时候，一个请求就会一直保持一个数据库连接，Dify 默认的 PGSQL
+连接池是比较小的。一旦连接打满了，就会出现整个业务卡住的情况。当平台上运行的应用任务变多的时候，很容易出现连接池打满的情况，所以我们建议把 PGSQL
+的数据库连接池调大到 300 以上。
+
+  
+
+3\. Dify 中的 Redis 同时承担了两个职责，一个是做缓存，同时也做消息队列，可以使用 Redis
+的哨兵模式来提升高可用性。同时，我们通过挂载探针采集到的数据，也观察到它的架构上使用不合理的地方，比如通过 Redis 去管理任务的时候，一次
+workflow 的请求，实际我们观察到可能会访问上千次 Redis，原因是 Dify 一直在轮询
+Redis，去获取这个任务的状态是否结束。这个本质上就是一个消息队列常用的场景，完全可以用消息队列去实现它。只要在这个任务结束之后发一个消息，然后另外一个组件就可以去直接消费它，不需要频繁地查询
+Redis。我们建议在大规模的场景下，用消息队列 RocketMQ 来替换 Redis。
+
+  
+
+4\. Dify 内部使用的是存放在本地的，也建议替换为第三方向量数据库，还有内置的一些存储，其实在高可用性、稳定性上面都是有问题的，建议替换为云存储。
+
+  
+
+5\. 最后是可观测性，Dify 本身内置一定的可观测能力。开启之后，每次执行一个
+workflow，都能看到每一个阶段它的耗时这些情况。但是这个功能需要每个应用单独去配置。观测维度上也相对比较单一，就是在 workflow
+的每一步能观测到，但如果这个程序又跟外部的一些微服务，比如说传统的 Java
+应用互相调用的话，或者调用了模型侧的能力，它的调用链就没法串起来，也就是数据相对比较孤立。另外，它的可观测性的数据是存到 PGSQL
+数据库中，在规模很大的时候，它的查询效率也很低，如果要去拉长时间去查询，会发现查询非常卡。
+
+  
+
+![](https://mmbiz.qpic.cn/mmbiz_png/yvBJb5IiafvkEibcspOKFpQzKXxbiaibKiaOPutQ47NwYYbvuBX1NRzDFRlISj2kzmBWbu4mt0aU6cSfbMUm0eb7Rug/640?wx_fmt=png&from=appmsg)
+
+  
+
+使用阿里云探针采集可观测数据，可以解决上述的问题，一次接入，所有应用全体生效，并且支持将多个 APP 的观测数据进行拆分。同时，基于
+OpenTelemetry 可以将 Dify 内部的流程和外部的微服务调用和模型推理完整串起来，包括每个流程的 input/output 和 Token
+消耗，能够支持多层级的全局维度进行分析，并且解决了高可用和稳定性的问题。我们在实践的过程中发现，当 Dify 开启 gevent
+协程的时候，挂载开源的探针会造成程序 hang
+住业务无法继续运行的问题，对业务造成严重影响，我们也解决了这个问题，能够帮助业务低成本、稳定地采集可观测数据。
+
+  
+
+针对模型推理这一侧，我们也进行了可观测数据的采集，能够观测到模型内部推理过程中的  细节。目前市面上开源的 vLLM 和 SGLang
+这两个比较著名的推理加速框架，能够通过内存分块，KV 缓存复用等方式大幅度加速模型的推理效率。
+
+  
+
+![](https://mmbiz.qpic.cn/mmbiz_png/yvBJb5IiafvkEibcspOKFpQzKXxbiaibKiaOPcnibEj5foz7g9SL0LSgfaIpRCBlp77aXcxvQlWbgq4EDCushbVO1iblw/640?wx_fmt=png&from=appmsg)
+
+  
+
+由于它本身也是一个 Python 程序，我们可以用同样的方式去观测采集到 vLLM
+内部的流转细节，去采集到它内部的一些执行路径，能够采集到调用链和前面提到的核心指标例如 TTFT 和 TPOT
+等。这里也介绍一个通过我们的可观测能力定位问题的真实案例，解决了某个业务通过 AI 网关发现调用自建的 Deepseek 模型耗时特别高的问题。
+
+  
+
+首先通过全链路追踪，分析调用链能够定位到底是哪一个阶段的问题，由于 Dify
+和模型都接入了探针，通过耗时分析发现问题不在应用层，而是模型推理那一层。然后观察模型侧的一些黄金指标，包括 TTFT 和
+TPOT，发现都比较正常。再进一步检查时，由于我们记录了单个推理请求运行相关的信息，包括推理引擎里面的一些排队的情况，可以发现当时这个请求本身在推理引擎里排队，所以确认是因为这个推理请求排队导致的耗时升高。解决办法就是调大推理引擎中请求队列的大小配置。可以看到通过可观测性分析，我们就能够定位到一些推理的根本原因，同时指导下一步的动作和建议。
+
+  
+
+![](https://mmbiz.qpic.cn/mmbiz_png/yvBJb5IiafvkEibcspOKFpQzKXxbiaibKiaOPbF7cfw20NibB8r2nG1siceMjrlQDjuNGsv6lR6DJhHIIlXZo68A4I41Q/640?wx_fmt=png&from=appmsg)
+
+  
+
+接下来讨论一下模型质量的问题。我们要解决模型回答得好不好，每次模型的升级和优化，都需要建立一个基线，并且确保模型的迭代满足这个基线，否则回答的质量会导致用户体验受损。为此，我们把模型的
+input/output
+全部都采集到阿里云的日志平台中，接下来我们可以筛选出一批记录，通过数据加工，引用外部的裁判员模型，对当前这个模型回答的输入输出结果进行一个评估。这里我们有一些系统内置的评估模板，未来也计划支持自定义的评估模板，比如说用户可以去分析这个模型的回答到底有没有敏感词、有没有幻觉、有没有
+MCP 投毒攻击等等情况。
+
+  
+
+![](https://mmbiz.qpic.cn/mmbiz_png/yvBJb5IiafvkEibcspOKFpQzKXxbiaibKiaOPTILhn2Sia4BOuaxZTpth5hIR9QXw4JcVV7R0DvYlU5sq5feSibDtAL8w/640?wx_fmt=png&from=appmsg)
+
+  
+
+大致效果如上图所示，比如说我们的提示词是如图中所示，然后它去调一个模型，得到模型返回的结果。然后我们可以从一个模型的模板去评估它是不是正确地回答了这个问题，它的回答到底靠不靠谱、是否有毒等等。我们还可以对评估的结果进行一些分类和聚类，也就是对这些结果进行一些语义化的标签的孵化，
+比如这个模型这次回答同时是一个友善的回答，属于一个文化类的问题。
+
+  
+
+最后聊一聊 MCP 的问题，MCP 解决了 AI 应用调用 Tools 的标准化问题。在实践 MCP 的过程中，我们也发现了一个很大的问题，我们把它叫作
+MCP 的 Token 黑洞问题。
+
+  
+
+![](https://mmbiz.qpic.cn/mmbiz_png/yvBJb5IiafvkEibcspOKFpQzKXxbiaibKiaOPpTbz2fZg61hhQAk7PMb1tBMPAK3aT4ZrTuMYwHjuicUna1tEibg7vdUg/640?wx_fmt=png&from=appmsg)
+
+  
+
+这里最核心的问题是当我们构建了一个使用 MCP 工具的 AI Agent，输入问了一个问题，模型最终给出了一个回答，这个回答可能能耗 1000 个
+Token，但实际背后可能调了几十次模型，调用非常多的 MCP Tools，实际消耗了可能有上万个
+Token。如果我们只看最终它的输出，很容易忽略背后的细节。而中间的计算过程，每次和模型的对话，都会把历史的对话以及 MCP  T  ools
+的调用结果，一起作为 input 再发给大模型，这个过程是不断叠加的，次数越多消耗的 Token 越大。因此我们非常需要 MCP  T  ools
+的可观测性，需要采集到每一个 MCP  T  ool 的调用耗时、消耗 Token 情况，这个功能预计 5 月底将发布上线。
+
+  
+
+下图展示的是阿里云云监控 2.0 平台，这是我们的大模型可观测产品页面。我们提前部署了一个 Dify 应用，并预先编排了一些
+workflow，挂载了探针，接入了云监控 2.0 平台，可以看到应用概览，能够展示模型的调用次数、Token 消耗、调用排行等信息。
+
+  
+
+![](https://mmbiz.qpic.cn/mmbiz_jpg/yvBJb5IiafvkEibcspOKFpQzKXxbiaibKiaOPPeMszAna9x2PK7YVAHhhqM0LhCaqWD9zrhEyvwUeD59et3NOGfB7nQ/640?wx_fmt=other&from=appmsg)
+
+  
+
+查看关联的拓扑信息，从 Client 到 Dify，再到 vLLM 部署的一个 7b 模型都看到关联关系，并且支持进一步的下钻。
+
+  
+
+![](https://mmbiz.qpic.cn/mmbiz_jpg/yvBJb5IiafvkEibcspOKFpQzKXxbiaibKiaOPy5kIp4ABNRWib49iam3ts0VRxicz25TGWQBJ65O6MnNflJXgmSsEGQhGw/640?wx_fmt=other&from=appmsg)
+
+  
+
+调用量分析视图，能够看到 input/output 的情况，Dify 中 workflow 的每一步执行情况，这里的每一步都对应了 Dify
+中的一个流程，以及 vLLM 内部的推理执行情况。
+
+  
+
+![](https://mmbiz.qpic.cn/mmbiz_jpg/yvBJb5IiafvkEibcspOKFpQzKXxbiaibKiaOP8DfNvFfbaULJeOZKRQGRjF9yheYU0oVUTlX3Bg50PUibpT4hOxHvU3A/640?wx_fmt=other&from=appmsg)
+
+  
+
+这个 vLLM 7b 的模型是部署在 PAI 平台上的，通过实体关联，可以进一步分析 PAI 底层模型的指标信息，例如 GPU 利用率，KV cache
+命中率等。
+
+  
+
+![](https://mmbiz.qpic.cn/mmbiz_jpg/yvBJb5IiafvkEibcspOKFpQzKXxbiaibKiaOPWEXe6Lv33hFDnKembLGWI9I4nL4iakSLaCE62IR5sgOaRU2a9SWnyHw/640?wx_fmt=other&from=appmsg)
+
+  
+
+通过会话分析，展示多轮对话的每一个轮的对话详情。
+
+  
+
+![](https://mmbiz.qpic.cn/mmbiz_jpg/yvBJb5IiafvkEibcspOKFpQzKXxbiaibKiaOPRcL4fzEhMoVk3ThayTPhl8KmCZd7zQTj9Hcl3KqyUHX05dbx5wlrfg/640?wx_fmt=other&from=appmsg)
+
+  
+
+通过外部裁判员模型对历史的模型输入输出，进行评估。
+
+  
+
+![](https://mmbiz.qpic.cn/mmbiz_jpg/yvBJb5IiafvkEibcspOKFpQzKXxbiaibKiaOPub45E0LuQGpMOpcNibicYBxqot5JdI1cbbUib2PTF0nlSJuZZFW49ibhYg/640?wx_fmt=other&from=appmsg)
+
+  
+
+对模型的回答进行语义提取，并进行聚类展示。
+
+  
+
+![](https://mmbiz.qpic.cn/mmbiz_jpg/yvBJb5IiafvkEibcspOKFpQzKXxbiaibKiaOPfvotB3Z0PwFwEjBIZc9PuMEHWVcl9qZ09icKicjHW5gdSF5ziap5TMUzg/640?wx_fmt=other&from=appmsg)
+
+  
+
+近期即将上线对 MCP 可观测的支持，敬请期待！
+
+  
+
+最后，欢迎试用云监控 2.0：  
+
+https://cmsnext.console.aliyun.com/
+
+  
+
+阿里云云监控 2.0 是融合日志服务 SLS、云监控 CMS、应用实时监控服务 ARMS
+产品后全新升级的一站式可观测平台，提供基于指标、链路、日志、事件的统一观测图谱，结合可视化和告警能力，实现从基础设施到应用层的全链路、端到端的统一观测，快速发现并解决潜在问题，提高运维效率。
+
+  
+
+LoongSuite Python Agent 已经开源，欢迎大家参与：
+
+https://github.com/alibaba/loongsuite-python-agent
+
+预览时标签不可点
+
+阅读原文
+
+微信扫一扫  
+关注该公众号
+
+知道了
+
+微信扫一扫  
+使用小程序
+
+****
+
+取消  允许
+
+****
+
+取消  允许
+
+****
+
+取消  允许
+
+×  分析
+
+__
+
+![作者头像](http://mmbiz.qpic.cn/mmbiz_png/yvBJb5IiafvmLicJBEO2fiafFTtc71G0CKibefQ9dLbMwjFgrUABIjUb3gsQB07nZSNaiaRRuacLnLZvE0GXVojic3fA/0?wx_fmt=png)
+
+微信扫一扫可打开此内容，  
+使用完整服务
+
+：  ，  ，  ，  ，  ，  ，  ，  ，  ，  ，  ，  ，  。  视频  小程序  赞  ，轻点两下取消赞  在看  ，轻点两下取消在看
+分享  留言  收藏  听过
+

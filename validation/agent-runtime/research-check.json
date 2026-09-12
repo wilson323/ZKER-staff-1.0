@@ -1,0 +1,3107 @@
+{
+  "scope": "AGENT_RUNTIME_RESEARCH_AND_DESIGN_ONLY",
+  "checkedAt": "2026-09-11T23:37:04.763743+00:00",
+  "status": "PASS",
+  "checksPassed": 536,
+  "checkCount": 536,
+  "failures": [],
+  "checks": [
+    {
+      "name": "failed fetch not credited: https://api.github.com/repos/OpenBMB/StaffDeck/commits/main",
+      "pass": true
+    },
+    {
+      "name": "failed fetch not credited: https://api.github.com/repos/OpenBMB/StaffDeck/releases/latest",
+      "pass": true
+    },
+    {
+      "name": "failed fetch not credited: https://api.github.com/repos/openai/codex/commits/main",
+      "pass": true
+    },
+    {
+      "name": "failed fetch not credited: https://api.github.com/repos/openai/codex/releases/latest",
+      "pass": true
+    },
+    {
+      "name": "source SHA: validation/agent-runtime/sources/qoder-changelog.html",
+      "pass": true
+    },
+    {
+      "name": "source SHA: validation/agent-runtime/sources/qoder-wakerflow.html",
+      "pass": true
+    },
+    {
+      "name": "source SHA: validation/agent-runtime/sources/qoder-automated.html",
+      "pass": true
+    },
+    {
+      "name": "source SHA: validation/agent-runtime/sources/qoder-cli.html",
+      "pass": true
+    },
+    {
+      "name": "source SHA: validation/agent-runtime/sources/codex-appserver.html",
+      "pass": true
+    },
+    {
+      "name": "failed fetch not credited: https://openai.com/index/harness-engineering/",
+      "pass": true
+    },
+    {
+      "name": "source SHA: validation/agent-runtime/sources/staffdeck-latest-release.html",
+      "pass": true
+    },
+    {
+      "name": "source SHA: validation/agent-runtime/sources/codex-latest-release.html",
+      "pass": true
+    },
+    {
+      "name": "source SHA: validation/agent-runtime/sources/staffdeck.tar.gz",
+      "pass": true
+    },
+    {
+      "name": "failed fetch not credited: https://raw.githubusercontent.com/openai/codex/e8271aa8b482f917b2e62dca0e51e29b8d5ec156/codex-rs/app-server/README.md",
+      "pass": true
+    },
+    {
+      "name": "failed fetch not credited: https://raw.githubusercontent.com/openai/codex/e8271aa8b482f917b2e62dca0e51e29b8d5ec156/LICENSE",
+      "pass": true
+    },
+    {
+      "name": "failed fetch not credited: https://raw.githubusercontent.com/openai/codex/e8271aa8b482f917b2e62dca0e51e29b8d5ec156/sdk/typescript/README.md",
+      "pass": true
+    },
+    {
+      "name": "failed fetch not credited: https://raw.githubusercontent.com/openai/codex/e8271aa8b482f917b2e62dca0e51e29b8d5ec156/docs/security.md",
+      "pass": true
+    },
+    {
+      "name": "failed fetch not credited: https://raw.githubusercontent.com/openai/codex/e8271aa8b482f917b2e62dca0e51e29b8d5ec156/codex-rs/app-server-protocol/src/protocol/v2.rs",
+      "pass": true
+    },
+    {
+      "name": "source SHA: validation/agent-runtime/sources/codex.tar.gz",
+      "pass": true
+    },
+    {
+      "name": "source SHA: validation/agent-runtime/sources/openai-latency.html",
+      "pass": true
+    },
+    {
+      "name": "source SHA: validation/agent-runtime/sources/anthropic-multiagent.html",
+      "pass": true
+    },
+    {
+      "name": "source SHA: validation/agent-runtime/sources/harness-convergence.html",
+      "pass": true
+    },
+    {
+      "name": "source SHA: validation/agent-runtime/sources/harness-of-harness.html",
+      "pass": true
+    },
+    {
+      "name": "source SHA: validation/agent-runtime/sources/staffdeck-refs.txt",
+      "pass": true
+    },
+    {
+      "name": "source SHA: validation/agent-runtime/sources/codex-refs.txt",
+      "pass": true
+    },
+    {
+      "name": "source SHA: validation/agent-runtime/staffdeck-source/LICENSE",
+      "pass": true
+    },
+    {
+      "name": "source commit: validation/agent-runtime/staffdeck-source/LICENSE",
+      "pass": true
+    },
+    {
+      "name": "source SHA: validation/agent-runtime/staffdeck-source/README.md",
+      "pass": true
+    },
+    {
+      "name": "source commit: validation/agent-runtime/staffdeck-source/README.md",
+      "pass": true
+    },
+    {
+      "name": "source SHA: validation/agent-runtime/staffdeck-source/backend/app/api/sessions.py",
+      "pass": true
+    },
+    {
+      "name": "source commit: validation/agent-runtime/staffdeck-source/backend/app/api/sessions.py",
+      "pass": true
+    },
+    {
+      "name": "source SHA: validation/agent-runtime/staffdeck-source/backend/app/core/agent_loop.py",
+      "pass": true
+    },
+    {
+      "name": "source commit: validation/agent-runtime/staffdeck-source/backend/app/core/agent_loop.py",
+      "pass": true
+    },
+    {
+      "name": "source SHA: validation/agent-runtime/staffdeck-source/backend/app/harness/__init__.py",
+      "pass": true
+    },
+    {
+      "name": "source commit: validation/agent-runtime/staffdeck-source/backend/app/harness/__init__.py",
+      "pass": true
+    },
+    {
+      "name": "source SHA: validation/agent-runtime/staffdeck-source/backend/app/harness/artifacts.py",
+      "pass": true
+    },
+    {
+      "name": "source commit: validation/agent-runtime/staffdeck-source/backend/app/harness/artifacts.py",
+      "pass": true
+    },
+    {
+      "name": "source SHA: validation/agent-runtime/staffdeck-source/backend/app/harness/command.py",
+      "pass": true
+    },
+    {
+      "name": "source commit: validation/agent-runtime/staffdeck-source/backend/app/harness/command.py",
+      "pass": true
+    },
+    {
+      "name": "source SHA: validation/agent-runtime/staffdeck-source/backend/app/harness/contracts.py",
+      "pass": true
+    },
+    {
+      "name": "source commit: validation/agent-runtime/staffdeck-source/backend/app/harness/contracts.py",
+      "pass": true
+    },
+    {
+      "name": "source SHA: validation/agent-runtime/staffdeck-source/backend/app/harness/errors.py",
+      "pass": true
+    },
+    {
+      "name": "source commit: validation/agent-runtime/staffdeck-source/backend/app/harness/errors.py",
+      "pass": true
+    },
+    {
+      "name": "source SHA: validation/agent-runtime/staffdeck-source/backend/app/harness/execution_context.py",
+      "pass": true
+    },
+    {
+      "name": "source commit: validation/agent-runtime/staffdeck-source/backend/app/harness/execution_context.py",
+      "pass": true
+    },
+    {
+      "name": "source SHA: validation/agent-runtime/staffdeck-source/backend/app/harness/executor.py",
+      "pass": true
+    },
+    {
+      "name": "source commit: validation/agent-runtime/staffdeck-source/backend/app/harness/executor.py",
+      "pass": true
+    },
+    {
+      "name": "source SHA: validation/agent-runtime/staffdeck-source/backend/app/harness/filesystem.py",
+      "pass": true
+    },
+    {
+      "name": "source commit: validation/agent-runtime/staffdeck-source/backend/app/harness/filesystem.py",
+      "pass": true
+    },
+    {
+      "name": "source SHA: validation/agent-runtime/staffdeck-source/backend/app/harness/registry.py",
+      "pass": true
+    },
+    {
+      "name": "source commit: validation/agent-runtime/staffdeck-source/backend/app/harness/registry.py",
+      "pass": true
+    },
+    {
+      "name": "source SHA: validation/agent-runtime/staffdeck-source/backend/app/harness/sandbox.py",
+      "pass": true
+    },
+    {
+      "name": "source commit: validation/agent-runtime/staffdeck-source/backend/app/harness/sandbox.py",
+      "pass": true
+    },
+    {
+      "name": "source SHA: validation/agent-runtime/staffdeck-source/backend/app/harness/skill_script.py",
+      "pass": true
+    },
+    {
+      "name": "source commit: validation/agent-runtime/staffdeck-source/backend/app/harness/skill_script.py",
+      "pass": true
+    },
+    {
+      "name": "source SHA: validation/agent-runtime/staffdeck-source/backend/app/runtime_lock.py",
+      "pass": true
+    },
+    {
+      "name": "source commit: validation/agent-runtime/staffdeck-source/backend/app/runtime_lock.py",
+      "pass": true
+    },
+    {
+      "name": "source SHA: validation/agent-runtime/staffdeck-source/backend/app/session/session_schema.py",
+      "pass": true
+    },
+    {
+      "name": "source commit: validation/agent-runtime/staffdeck-source/backend/app/session/session_schema.py",
+      "pass": true
+    },
+    {
+      "name": "source SHA: validation/agent-runtime/staffdeck-source/backend/pyproject.toml",
+      "pass": true
+    },
+    {
+      "name": "source commit: validation/agent-runtime/staffdeck-source/backend/pyproject.toml",
+      "pass": true
+    },
+    {
+      "name": "source SHA: validation/agent-runtime/staffdeck-source/backend/app/core/cancellation.py",
+      "pass": true
+    },
+    {
+      "name": "source commit: validation/agent-runtime/staffdeck-source/backend/app/core/cancellation.py",
+      "pass": true
+    },
+    {
+      "name": "source SHA: validation/agent-runtime/staffdeck-source/backend/app/core/context_projection.py",
+      "pass": true
+    },
+    {
+      "name": "source commit: validation/agent-runtime/staffdeck-source/backend/app/core/context_projection.py",
+      "pass": true
+    },
+    {
+      "name": "source SHA: validation/agent-runtime/staffdeck-source/backend/app/core/harness_agent.py",
+      "pass": true
+    },
+    {
+      "name": "source commit: validation/agent-runtime/staffdeck-source/backend/app/core/harness_agent.py",
+      "pass": true
+    },
+    {
+      "name": "source SHA: validation/agent-runtime/staffdeck-source/backend/app/core/harness_recovery.py",
+      "pass": true
+    },
+    {
+      "name": "source commit: validation/agent-runtime/staffdeck-source/backend/app/core/harness_recovery.py",
+      "pass": true
+    },
+    {
+      "name": "source SHA: validation/agent-runtime/staffdeck-source/backend/app/core/harness_session_lease.py",
+      "pass": true
+    },
+    {
+      "name": "source commit: validation/agent-runtime/staffdeck-source/backend/app/core/harness_session_lease.py",
+      "pass": true
+    },
+    {
+      "name": "source SHA: validation/agent-runtime/staffdeck-source/backend/app/core/harness_session_lock.py",
+      "pass": true
+    },
+    {
+      "name": "source commit: validation/agent-runtime/staffdeck-source/backend/app/core/harness_session_lock.py",
+      "pass": true
+    },
+    {
+      "name": "source SHA: validation/agent-runtime/staffdeck-source/backend/app/core/harness_turn_store.py",
+      "pass": true
+    },
+    {
+      "name": "source commit: validation/agent-runtime/staffdeck-source/backend/app/core/harness_turn_store.py",
+      "pass": true
+    },
+    {
+      "name": "source SHA: validation/agent-runtime/staffdeck-source/backend/app/core/harness_v2_engine.py",
+      "pass": true
+    },
+    {
+      "name": "source commit: validation/agent-runtime/staffdeck-source/backend/app/core/harness_v2_engine.py",
+      "pass": true
+    },
+    {
+      "name": "source SHA: validation/agent-runtime/staffdeck-source/backend/app/core/human_handoff_service.py",
+      "pass": true
+    },
+    {
+      "name": "source commit: validation/agent-runtime/staffdeck-source/backend/app/core/human_handoff_service.py",
+      "pass": true
+    },
+    {
+      "name": "source SHA: validation/agent-runtime/staffdeck-source/backend/app/core/task_frame_store.py",
+      "pass": true
+    },
+    {
+      "name": "source commit: validation/agent-runtime/staffdeck-source/backend/app/core/task_frame_store.py",
+      "pass": true
+    },
+    {
+      "name": "source SHA: validation/agent-runtime/staffdeck-source/backend/app/core/tool_replay_policy.py",
+      "pass": true
+    },
+    {
+      "name": "source commit: validation/agent-runtime/staffdeck-source/backend/app/core/tool_replay_policy.py",
+      "pass": true
+    },
+    {
+      "name": "source SHA: validation/agent-runtime/staffdeck-source/backend/app/core/turn_finalizer.py",
+      "pass": true
+    },
+    {
+      "name": "source commit: validation/agent-runtime/staffdeck-source/backend/app/core/turn_finalizer.py",
+      "pass": true
+    },
+    {
+      "name": "source SHA: validation/agent-runtime/staffdeck-source/backend/app/evolution/service.py",
+      "pass": true
+    },
+    {
+      "name": "source commit: validation/agent-runtime/staffdeck-source/backend/app/evolution/service.py",
+      "pass": true
+    },
+    {
+      "name": "source SHA: validation/agent-runtime/staffdeck-source/backend/app/session/message_visibility.py",
+      "pass": true
+    },
+    {
+      "name": "source commit: validation/agent-runtime/staffdeck-source/backend/app/session/message_visibility.py",
+      "pass": true
+    },
+    {
+      "name": "source SHA: validation/agent-runtime/codex-source/LICENSE",
+      "pass": true
+    },
+    {
+      "name": "source commit: validation/agent-runtime/codex-source/LICENSE",
+      "pass": true
+    },
+    {
+      "name": "source SHA: validation/agent-runtime/codex-source/NOTICE",
+      "pass": true
+    },
+    {
+      "name": "source commit: validation/agent-runtime/codex-source/NOTICE",
+      "pass": true
+    },
+    {
+      "name": "source SHA: validation/agent-runtime/codex-source/README.md",
+      "pass": true
+    },
+    {
+      "name": "source commit: validation/agent-runtime/codex-source/README.md",
+      "pass": true
+    },
+    {
+      "name": "source SHA: validation/agent-runtime/codex-source/codex-rs/app-server-client/README.md",
+      "pass": true
+    },
+    {
+      "name": "source commit: validation/agent-runtime/codex-source/codex-rs/app-server-client/README.md",
+      "pass": true
+    },
+    {
+      "name": "source SHA: validation/agent-runtime/codex-source/codex-rs/app-server-daemon/README.md",
+      "pass": true
+    },
+    {
+      "name": "source commit: validation/agent-runtime/codex-source/codex-rs/app-server-daemon/README.md",
+      "pass": true
+    },
+    {
+      "name": "source SHA: validation/agent-runtime/codex-source/codex-rs/app-server-protocol/src/protocol/v2/thread.rs",
+      "pass": true
+    },
+    {
+      "name": "source commit: validation/agent-runtime/codex-source/codex-rs/app-server-protocol/src/protocol/v2/thread.rs",
+      "pass": true
+    },
+    {
+      "name": "source SHA: validation/agent-runtime/codex-source/codex-rs/app-server-protocol/src/protocol/v2/turn.rs",
+      "pass": true
+    },
+    {
+      "name": "source commit: validation/agent-runtime/codex-source/codex-rs/app-server-protocol/src/protocol/v2/turn.rs",
+      "pass": true
+    },
+    {
+      "name": "source SHA: validation/agent-runtime/codex-source/codex-rs/app-server-transport/src/outgoing_message.rs",
+      "pass": true
+    },
+    {
+      "name": "source commit: validation/agent-runtime/codex-source/codex-rs/app-server-transport/src/outgoing_message.rs",
+      "pass": true
+    },
+    {
+      "name": "source SHA: validation/agent-runtime/codex-source/codex-rs/app-server/src/message_processor.rs",
+      "pass": true
+    },
+    {
+      "name": "source commit: validation/agent-runtime/codex-source/codex-rs/app-server/src/message_processor.rs",
+      "pass": true
+    },
+    {
+      "name": "source SHA: validation/agent-runtime/codex-source/codex-rs/app-server/src/outgoing_message.rs",
+      "pass": true
+    },
+    {
+      "name": "source commit: validation/agent-runtime/codex-source/codex-rs/app-server/src/outgoing_message.rs",
+      "pass": true
+    },
+    {
+      "name": "source SHA: validation/agent-runtime/codex-source/codex-rs/app-server/src/transport.rs",
+      "pass": true
+    },
+    {
+      "name": "source commit: validation/agent-runtime/codex-source/codex-rs/app-server/src/transport.rs",
+      "pass": true
+    },
+    {
+      "name": "source SHA: validation/agent-runtime/codex-source/docs/authentication.md",
+      "pass": true
+    },
+    {
+      "name": "source commit: validation/agent-runtime/codex-source/docs/authentication.md",
+      "pass": true
+    },
+    {
+      "name": "source SHA: validation/agent-runtime/codex-source/docs/sandbox.md",
+      "pass": true
+    },
+    {
+      "name": "source commit: validation/agent-runtime/codex-source/docs/sandbox.md",
+      "pass": true
+    },
+    {
+      "name": "source SHA: validation/agent-runtime/codex-source/sdk/python/README.md",
+      "pass": true
+    },
+    {
+      "name": "source commit: validation/agent-runtime/codex-source/sdk/python/README.md",
+      "pass": true
+    },
+    {
+      "name": "source SHA: validation/agent-runtime/codex-source/sdk/typescript/README.md",
+      "pass": true
+    },
+    {
+      "name": "source commit: validation/agent-runtime/codex-source/sdk/typescript/README.md",
+      "pass": true
+    },
+    {
+      "name": "source SHA: validation/agent-runtime/codex-source/sdk/typescript/src/codex.ts",
+      "pass": true
+    },
+    {
+      "name": "source commit: validation/agent-runtime/codex-source/sdk/typescript/src/codex.ts",
+      "pass": true
+    },
+    {
+      "name": "source SHA: validation/agent-runtime/codex-source/sdk/typescript/src/thread.ts",
+      "pass": true
+    },
+    {
+      "name": "source commit: validation/agent-runtime/codex-source/sdk/typescript/src/thread.ts",
+      "pass": true
+    },
+    {
+      "name": "failed fetch not credited: https://api.github.com/repos/deepseek-ai/deepseek-harness",
+      "pass": true
+    },
+    {
+      "name": "failed fetch not credited: https://api.github.com/repos/deepseek-ai/deepseek-harness/releases/latest",
+      "pass": true
+    },
+    {
+      "name": "failed fetch not credited: https://api.github.com/repos/deepseek-ai/deepseek-harness/commits/HEAD",
+      "pass": true
+    },
+    {
+      "name": "source SHA: validation/agent-runtime/dsh-pi-sources/pi-repository.json",
+      "pass": true
+    },
+    {
+      "name": "failed fetch not credited: https://api.github.com/repos/badlogic/pi-mono/releases/latest",
+      "pass": true
+    },
+    {
+      "name": "failed fetch not credited: https://api.github.com/repos/badlogic/pi-mono/commits/HEAD",
+      "pass": true
+    },
+    {
+      "name": "source SHA: validation/agent-runtime/dsh-pi-sources/dsh-refs.txt",
+      "pass": true
+    },
+    {
+      "name": "source SHA: validation/agent-runtime/dsh-pi-sources/pi-refs.txt",
+      "pass": true
+    },
+    {
+      "name": "source SHA: validation/agent-runtime/dsh-pi-sources/dsh-c291e7961a515f6d7af9304e7fd1d257929aef26.tar.gz",
+      "pass": true
+    },
+    {
+      "name": "source commit: validation/agent-runtime/dsh-pi-sources/dsh-c291e7961a515f6d7af9304e7fd1d257929aef26.tar.gz",
+      "pass": true
+    },
+    {
+      "name": "source SHA: validation/agent-runtime/dsh-pi-sources/pi-d981de1229ef899957bbe968bc8dcda02a21f477.tar.gz",
+      "pass": true
+    },
+    {
+      "name": "source commit: validation/agent-runtime/dsh-pi-sources/pi-d981de1229ef899957bbe968bc8dcda02a21f477.tar.gz",
+      "pass": true
+    },
+    {
+      "name": "source SHA: validation/agent-runtime/dsh-pi-sources/dsh/README.md",
+      "pass": true
+    },
+    {
+      "name": "source commit: validation/agent-runtime/dsh-pi-sources/dsh/README.md",
+      "pass": true
+    },
+    {
+      "name": "source SHA: validation/agent-runtime/dsh-pi-sources/dsh/LICENSE",
+      "pass": true
+    },
+    {
+      "name": "source commit: validation/agent-runtime/dsh-pi-sources/dsh/LICENSE",
+      "pass": true
+    },
+    {
+      "name": "source SHA: validation/agent-runtime/dsh-pi-sources/dsh/SAFETY.md",
+      "pass": true
+    },
+    {
+      "name": "source commit: validation/agent-runtime/dsh-pi-sources/dsh/SAFETY.md",
+      "pass": true
+    },
+    {
+      "name": "source SHA: validation/agent-runtime/dsh-pi-sources/dsh/THIRD_PARTY_NOTICES.md",
+      "pass": true
+    },
+    {
+      "name": "source commit: validation/agent-runtime/dsh-pi-sources/dsh/THIRD_PARTY_NOTICES.md",
+      "pass": true
+    },
+    {
+      "name": "source SHA: validation/agent-runtime/dsh-pi-sources/dsh/package.json",
+      "pass": true
+    },
+    {
+      "name": "source commit: validation/agent-runtime/dsh-pi-sources/dsh/package.json",
+      "pass": true
+    },
+    {
+      "name": "source SHA: validation/agent-runtime/dsh-pi-sources/dsh/docs__architecture.md",
+      "pass": true
+    },
+    {
+      "name": "source commit: validation/agent-runtime/dsh-pi-sources/dsh/docs__architecture.md",
+      "pass": true
+    },
+    {
+      "name": "source SHA: validation/agent-runtime/dsh-pi-sources/dsh/docs__agent-lifecycle.md",
+      "pass": true
+    },
+    {
+      "name": "source commit: validation/agent-runtime/dsh-pi-sources/dsh/docs__agent-lifecycle.md",
+      "pass": true
+    },
+    {
+      "name": "source SHA: validation/agent-runtime/dsh-pi-sources/dsh/docs__api-gateway.md",
+      "pass": true
+    },
+    {
+      "name": "source commit: validation/agent-runtime/dsh-pi-sources/dsh/docs__api-gateway.md",
+      "pass": true
+    },
+    {
+      "name": "source SHA: validation/agent-runtime/dsh-pi-sources/dsh/docs__tool-execution-pipeline.md",
+      "pass": true
+    },
+    {
+      "name": "source commit: validation/agent-runtime/dsh-pi-sources/dsh/docs__tool-execution-pipeline.md",
+      "pass": true
+    },
+    {
+      "name": "source SHA: validation/agent-runtime/dsh-pi-sources/dsh/docs__subsystems__core.md",
+      "pass": true
+    },
+    {
+      "name": "source commit: validation/agent-runtime/dsh-pi-sources/dsh/docs__subsystems__core.md",
+      "pass": true
+    },
+    {
+      "name": "source SHA: validation/agent-runtime/dsh-pi-sources/dsh/docs__subsystems__session.md",
+      "pass": true
+    },
+    {
+      "name": "source commit: validation/agent-runtime/dsh-pi-sources/dsh/docs__subsystems__session.md",
+      "pass": true
+    },
+    {
+      "name": "source SHA: validation/agent-runtime/dsh-pi-sources/dsh/docs__subsystems__approval.md",
+      "pass": true
+    },
+    {
+      "name": "source commit: validation/agent-runtime/dsh-pi-sources/dsh/docs__subsystems__approval.md",
+      "pass": true
+    },
+    {
+      "name": "source SHA: validation/agent-runtime/dsh-pi-sources/dsh/docs__subsystems__sandbox.md",
+      "pass": true
+    },
+    {
+      "name": "source commit: validation/agent-runtime/dsh-pi-sources/dsh/docs__subsystems__sandbox.md",
+      "pass": true
+    },
+    {
+      "name": "source SHA: validation/agent-runtime/dsh-pi-sources/dsh/docs__subsystems__persistence.md",
+      "pass": true
+    },
+    {
+      "name": "source commit: validation/agent-runtime/dsh-pi-sources/dsh/docs__subsystems__persistence.md",
+      "pass": true
+    },
+    {
+      "name": "source SHA: validation/agent-runtime/dsh-pi-sources/dsh/docs__subsystems__extensions.md",
+      "pass": true
+    },
+    {
+      "name": "source commit: validation/agent-runtime/dsh-pi-sources/dsh/docs__subsystems__extensions.md",
+      "pass": true
+    },
+    {
+      "name": "source SHA: validation/agent-runtime/dsh-pi-sources/dsh/docs__subsystems__subagent.md",
+      "pass": true
+    },
+    {
+      "name": "source commit: validation/agent-runtime/dsh-pi-sources/dsh/docs__subsystems__subagent.md",
+      "pass": true
+    },
+    {
+      "name": "source SHA: validation/agent-runtime/dsh-pi-sources/dsh/docs__subsystems__compaction.md",
+      "pass": true
+    },
+    {
+      "name": "source commit: validation/agent-runtime/dsh-pi-sources/dsh/docs__subsystems__compaction.md",
+      "pass": true
+    },
+    {
+      "name": "source SHA: validation/agent-runtime/dsh-pi-sources/dsh/packages__core__agent-loop__src__agent.ts",
+      "pass": true
+    },
+    {
+      "name": "source commit: validation/agent-runtime/dsh-pi-sources/dsh/packages__core__agent-loop__src__agent.ts",
+      "pass": true
+    },
+    {
+      "name": "source SHA: validation/agent-runtime/dsh-pi-sources/dsh/packages__core__agent-loop__src__index.ts",
+      "pass": true
+    },
+    {
+      "name": "source commit: validation/agent-runtime/dsh-pi-sources/dsh/packages__core__agent-loop__src__index.ts",
+      "pass": true
+    },
+    {
+      "name": "source SHA: validation/agent-runtime/dsh-pi-sources/dsh/packages__core__agent__src__index.ts",
+      "pass": true
+    },
+    {
+      "name": "source commit: validation/agent-runtime/dsh-pi-sources/dsh/packages__core__agent__src__index.ts",
+      "pass": true
+    },
+    {
+      "name": "source SHA: validation/agent-runtime/dsh-pi-sources/dsh/packages__core__tools__src__index.ts",
+      "pass": true
+    },
+    {
+      "name": "source commit: validation/agent-runtime/dsh-pi-sources/dsh/packages__core__tools__src__index.ts",
+      "pass": true
+    },
+    {
+      "name": "source SHA: validation/agent-runtime/dsh-pi-sources/dsh/packages__core__session__src__index.ts",
+      "pass": true
+    },
+    {
+      "name": "source commit: validation/agent-runtime/dsh-pi-sources/dsh/packages__core__session__src__index.ts",
+      "pass": true
+    },
+    {
+      "name": "source SHA: validation/agent-runtime/dsh-pi-sources/pi/README.md",
+      "pass": true
+    },
+    {
+      "name": "source commit: validation/agent-runtime/dsh-pi-sources/pi/README.md",
+      "pass": true
+    },
+    {
+      "name": "source SHA: validation/agent-runtime/dsh-pi-sources/pi/LICENSE",
+      "pass": true
+    },
+    {
+      "name": "source commit: validation/agent-runtime/dsh-pi-sources/pi/LICENSE",
+      "pass": true
+    },
+    {
+      "name": "source SHA: validation/agent-runtime/dsh-pi-sources/pi/package.json",
+      "pass": true
+    },
+    {
+      "name": "source commit: validation/agent-runtime/dsh-pi-sources/pi/package.json",
+      "pass": true
+    },
+    {
+      "name": "source SHA: validation/agent-runtime/dsh-pi-sources/pi/packages__agent__README.md",
+      "pass": true
+    },
+    {
+      "name": "source commit: validation/agent-runtime/dsh-pi-sources/pi/packages__agent__README.md",
+      "pass": true
+    },
+    {
+      "name": "source SHA: validation/agent-runtime/dsh-pi-sources/pi/packages__agent__package.json",
+      "pass": true
+    },
+    {
+      "name": "source commit: validation/agent-runtime/dsh-pi-sources/pi/packages__agent__package.json",
+      "pass": true
+    },
+    {
+      "name": "source SHA: validation/agent-runtime/dsh-pi-sources/pi/packages__agent__src__agent-loop.ts",
+      "pass": true
+    },
+    {
+      "name": "source commit: validation/agent-runtime/dsh-pi-sources/pi/packages__agent__src__agent-loop.ts",
+      "pass": true
+    },
+    {
+      "name": "source SHA: validation/agent-runtime/dsh-pi-sources/pi/packages__agent__src__agent.ts",
+      "pass": true
+    },
+    {
+      "name": "source commit: validation/agent-runtime/dsh-pi-sources/pi/packages__agent__src__agent.ts",
+      "pass": true
+    },
+    {
+      "name": "source SHA: validation/agent-runtime/dsh-pi-sources/pi/packages__agent__src__types.ts",
+      "pass": true
+    },
+    {
+      "name": "source commit: validation/agent-runtime/dsh-pi-sources/pi/packages__agent__src__types.ts",
+      "pass": true
+    },
+    {
+      "name": "source SHA: validation/agent-runtime/dsh-pi-sources/pi/packages__coding-agent__README.md",
+      "pass": true
+    },
+    {
+      "name": "source commit: validation/agent-runtime/dsh-pi-sources/pi/packages__coding-agent__README.md",
+      "pass": true
+    },
+    {
+      "name": "source SHA: validation/agent-runtime/dsh-pi-sources/pi/packages__coding-agent__CHANGELOG.md",
+      "pass": true
+    },
+    {
+      "name": "source commit: validation/agent-runtime/dsh-pi-sources/pi/packages__coding-agent__CHANGELOG.md",
+      "pass": true
+    },
+    {
+      "name": "source SHA: validation/agent-runtime/dsh-pi-sources/pi/packages__coding-agent__package.json",
+      "pass": true
+    },
+    {
+      "name": "source commit: validation/agent-runtime/dsh-pi-sources/pi/packages__coding-agent__package.json",
+      "pass": true
+    },
+    {
+      "name": "source SHA: validation/agent-runtime/dsh-pi-sources/pi/packages__coding-agent__docs__extensions.md",
+      "pass": true
+    },
+    {
+      "name": "source commit: validation/agent-runtime/dsh-pi-sources/pi/packages__coding-agent__docs__extensions.md",
+      "pass": true
+    },
+    {
+      "name": "source SHA: validation/agent-runtime/dsh-pi-sources/pi/packages__coding-agent__docs__rpc.md",
+      "pass": true
+    },
+    {
+      "name": "source commit: validation/agent-runtime/dsh-pi-sources/pi/packages__coding-agent__docs__rpc.md",
+      "pass": true
+    },
+    {
+      "name": "source SHA: validation/agent-runtime/dsh-pi-sources/pi/packages__coding-agent__docs__sdk.md",
+      "pass": true
+    },
+    {
+      "name": "source commit: validation/agent-runtime/dsh-pi-sources/pi/packages__coding-agent__docs__sdk.md",
+      "pass": true
+    },
+    {
+      "name": "source SHA: validation/agent-runtime/dsh-pi-sources/pi/packages__coding-agent__docs__security.md",
+      "pass": true
+    },
+    {
+      "name": "source commit: validation/agent-runtime/dsh-pi-sources/pi/packages__coding-agent__docs__security.md",
+      "pass": true
+    },
+    {
+      "name": "source SHA: validation/agent-runtime/dsh-pi-sources/pi/packages__coding-agent__docs__sessions.md",
+      "pass": true
+    },
+    {
+      "name": "source commit: validation/agent-runtime/dsh-pi-sources/pi/packages__coding-agent__docs__sessions.md",
+      "pass": true
+    },
+    {
+      "name": "source SHA: validation/agent-runtime/dsh-pi-sources/pi/packages__coding-agent__src__core__session-manager.ts",
+      "pass": true
+    },
+    {
+      "name": "source commit: validation/agent-runtime/dsh-pi-sources/pi/packages__coding-agent__src__core__session-manager.ts",
+      "pass": true
+    },
+    {
+      "name": "source SHA: validation/agent-runtime/dsh-pi-sources/pi/packages__coding-agent__src__core__agent-session.ts",
+      "pass": true
+    },
+    {
+      "name": "source commit: validation/agent-runtime/dsh-pi-sources/pi/packages__coding-agent__src__core__agent-session.ts",
+      "pass": true
+    },
+    {
+      "name": "source SHA: validation/agent-runtime/dsh-pi-sources/pi/packages__coding-agent__src__core__agent-session-runtime.ts",
+      "pass": true
+    },
+    {
+      "name": "source commit: validation/agent-runtime/dsh-pi-sources/pi/packages__coding-agent__src__core__agent-session-runtime.ts",
+      "pass": true
+    },
+    {
+      "name": "source SHA: validation/agent-runtime/dsh-pi-sources/pi/packages__coding-agent__src__core__tools__bash.ts",
+      "pass": true
+    },
+    {
+      "name": "source commit: validation/agent-runtime/dsh-pi-sources/pi/packages__coding-agent__src__core__tools__bash.ts",
+      "pass": true
+    },
+    {
+      "name": "source SHA: validation/agent-runtime/dsh-pi-sources/pi/packages__coding-agent__src__core__tools__path-utils.ts",
+      "pass": true
+    },
+    {
+      "name": "source commit: validation/agent-runtime/dsh-pi-sources/pi/packages__coding-agent__src__core__tools__path-utils.ts",
+      "pass": true
+    },
+    {
+      "name": "source SHA: validation/agent-runtime/dsh-pi-sources/pi/packages__coding-agent__src__core__tools__file-mutation-queue.ts",
+      "pass": true
+    },
+    {
+      "name": "source commit: validation/agent-runtime/dsh-pi-sources/pi/packages__coding-agent__src__core__tools__file-mutation-queue.ts",
+      "pass": true
+    },
+    {
+      "name": "source SHA: validation/agent-runtime/dsh-pi-sources/pi/packages__coding-agent__src__core__project-trust.ts",
+      "pass": true
+    },
+    {
+      "name": "source commit: validation/agent-runtime/dsh-pi-sources/pi/packages__coding-agent__src__core__project-trust.ts",
+      "pass": true
+    },
+    {
+      "name": "source SHA: validation/agent-runtime/dsh-pi-sources/pi/packages__coding-agent__src__core__extensions__wrapper.ts",
+      "pass": true
+    },
+    {
+      "name": "source commit: validation/agent-runtime/dsh-pi-sources/pi/packages__coding-agent__src__core__extensions__wrapper.ts",
+      "pass": true
+    },
+    {
+      "name": "source SHA: validation/agent-runtime/dsh-pi-sources/pi/packages__coding-agent__examples__extensions__sandbox__index.ts",
+      "pass": true
+    },
+    {
+      "name": "source commit: validation/agent-runtime/dsh-pi-sources/pi/packages__coding-agent__examples__extensions__sandbox__index.ts",
+      "pass": true
+    },
+    {
+      "name": "source SHA: validation/agent-runtime/dsh-pi-sources/dsh/packages__core__agent-loop__src__tool-calls.ts",
+      "pass": true
+    },
+    {
+      "name": "source commit: validation/agent-runtime/dsh-pi-sources/dsh/packages__core__agent-loop__src__tool-calls.ts",
+      "pass": true
+    },
+    {
+      "name": "source SHA: validation/agent-runtime/dsh-pi-sources/dsh/packages__core__agent-loop__src__constants.ts",
+      "pass": true
+    },
+    {
+      "name": "source commit: validation/agent-runtime/dsh-pi-sources/dsh/packages__core__agent-loop__src__constants.ts",
+      "pass": true
+    },
+    {
+      "name": "source SHA: validation/agent-runtime/dsh-pi-sources/dsh/packages__core__agent__src__types.ts",
+      "pass": true
+    },
+    {
+      "name": "source commit: validation/agent-runtime/dsh-pi-sources/dsh/packages__core__agent__src__types.ts",
+      "pass": true
+    },
+    {
+      "name": "source SHA: validation/agent-runtime/dsh-pi-sources/dsh/packages__interaction__user-approval__src__index.ts",
+      "pass": true
+    },
+    {
+      "name": "source commit: validation/agent-runtime/dsh-pi-sources/dsh/packages__interaction__user-approval__src__index.ts",
+      "pass": true
+    },
+    {
+      "name": "source SHA: validation/agent-runtime/dsh-pi-sources/dsh/packages__session__session-persistence-jsonl__src__lease.ts",
+      "pass": true
+    },
+    {
+      "name": "source commit: validation/agent-runtime/dsh-pi-sources/dsh/packages__session__session-persistence-jsonl__src__lease.ts",
+      "pass": true
+    },
+    {
+      "name": "source SHA: validation/agent-runtime/dsh-pi-sources/dsh/packages__session__session-persistence-jsonl__src__index.ts",
+      "pass": true
+    },
+    {
+      "name": "source commit: validation/agent-runtime/dsh-pi-sources/dsh/packages__session__session-persistence-jsonl__src__index.ts",
+      "pass": true
+    },
+    {
+      "name": "source SHA: validation/agent-runtime/dsh-pi-sources/dsh/packages__session__session-persistence-jsonl__src__storage.ts",
+      "pass": true
+    },
+    {
+      "name": "source commit: validation/agent-runtime/dsh-pi-sources/dsh/packages__session__session-persistence-jsonl__src__storage.ts",
+      "pass": true
+    },
+    {
+      "name": "source SHA: validation/agent-runtime/dsh-pi-sources/dsh/packages__sandbox__sandbox-local__src__index.ts",
+      "pass": true
+    },
+    {
+      "name": "source commit: validation/agent-runtime/dsh-pi-sources/dsh/packages__sandbox__sandbox-local__src__index.ts",
+      "pass": true
+    },
+    {
+      "name": "source SHA: validation/agent-runtime/dsh-pi-sources/dsh/packages__api__gateway__src__stream-protocol.ts",
+      "pass": true
+    },
+    {
+      "name": "source commit: validation/agent-runtime/dsh-pi-sources/dsh/packages__api__gateway__src__stream-protocol.ts",
+      "pass": true
+    },
+    {
+      "name": "source SHA: validation/agent-runtime/dsh-pi-sources/dsh/packages__api__session-controller__src__remote-events.ts",
+      "pass": true
+    },
+    {
+      "name": "source commit: validation/agent-runtime/dsh-pi-sources/dsh/packages__api__session-controller__src__remote-events.ts",
+      "pass": true
+    },
+    {
+      "name": "source SHA: validation/agent-runtime/dsh-pi-sources/pi/packages__coding-agent__src__modes__rpc__rpc-mode.ts",
+      "pass": true
+    },
+    {
+      "name": "source commit: validation/agent-runtime/dsh-pi-sources/pi/packages__coding-agent__src__modes__rpc__rpc-mode.ts",
+      "pass": true
+    },
+    {
+      "name": "source SHA: validation/agent-runtime/dsh-pi-sources/pi/packages__coding-agent__src__core__agent-session-services.ts",
+      "pass": true
+    },
+    {
+      "name": "source commit: validation/agent-runtime/dsh-pi-sources/pi/packages__coding-agent__src__core__agent-session-services.ts",
+      "pass": true
+    },
+    {
+      "name": "source SHA: validation/agent-runtime/dsh-pi-sources/pi/packages__coding-agent__src__core__sdk.ts",
+      "pass": true
+    },
+    {
+      "name": "source commit: validation/agent-runtime/dsh-pi-sources/pi/packages__coding-agent__src__core__sdk.ts",
+      "pass": true
+    },
+    {
+      "name": "source SHA: validation/agent-runtime/dsh-pi-sources/pi/packages__coding-agent__docs__containerization.md",
+      "pass": true
+    },
+    {
+      "name": "source commit: validation/agent-runtime/dsh-pi-sources/pi/packages__coding-agent__docs__containerization.md",
+      "pass": true
+    },
+    {
+      "name": "source SHA: validation/agent-runtime/dsh-pi-sources/pi/packages__agent__benchmark__session__README.md",
+      "pass": true
+    },
+    {
+      "name": "source commit: validation/agent-runtime/dsh-pi-sources/pi/packages__agent__benchmark__session__README.md",
+      "pass": true
+    },
+    {
+      "name": "source SHA: validation/agent-runtime/dsh-pi-sources/dsh-npm-latest.source",
+      "pass": true
+    },
+    {
+      "name": "source SHA: validation/agent-runtime/dsh-pi-sources/pi-npm-latest.source",
+      "pass": true
+    },
+    {
+      "name": "source SHA: validation/agent-runtime/dsh-pi-sources/dsh-head-patch.source",
+      "pass": true
+    },
+    {
+      "name": "source SHA: validation/agent-runtime/dsh-pi-sources/dsh-tag-patch.source",
+      "pass": true
+    },
+    {
+      "name": "source SHA: validation/agent-runtime/dsh-pi-sources/pi-release-page.source",
+      "pass": true
+    },
+    {
+      "name": "source SHA: validation/agent-runtime/dsh-pi-sources/dsh-official.source",
+      "pass": true
+    },
+    {
+      "name": "source SHA: validation/agent-runtime/dsh-pi-sources/paper-convergence.source",
+      "pass": true
+    },
+    {
+      "name": "source SHA: validation/agent-runtime/dsh-pi-sources/paper-injection.source",
+      "pass": true
+    },
+    {
+      "name": "original artifact unchanged: docs/设计包/30-产品设计追踪数据.json",
+      "pass": true
+    },
+    {
+      "name": "original artifact unchanged: docs/设计包/31-完整产品交互原型.html",
+      "pass": true
+    },
+    {
+      "name": "173 requirements preserved",
+      "pass": true
+    },
+    {
+      "name": "22 pages preserved",
+      "pass": true
+    },
+    {
+      "name": "72 original cases unrun",
+      "pass": true
+    },
+    {
+      "name": "product not configured",
+      "pass": true
+    },
+    {
+      "name": "balanced fences: README.md",
+      "pass": true
+    },
+    {
+      "name": "local target: README.md:docs/设计包/34-任务执行工作台与权限分层设计.md",
+      "pass": true
+    },
+    {
+      "name": "local target: README.md:docs/设计包/37-技术架构总设计与决策.md",
+      "pass": true
+    },
+    {
+      "name": "local target: README.md:docs/设计包/46-开发基线与低代码插件化决策.md",
+      "pass": true
+    },
+    {
+      "name": "local target: README.md:docs/设计包/57-Agent运行框架最新源码研究.md",
+      "pass": true
+    },
+    {
+      "name": "local target: README.md:docs/设计包/58-Agent技术架构与性能实施设计.md",
+      "pass": true
+    },
+    {
+      "name": "local target: README.md:docs/设计包/55-知识库与记忆开源方案深度研究.md",
+      "pass": true
+    },
+    {
+      "name": "local target: README.md:docs/设计包/56-知识记忆技术栈与实施决策.md",
+      "pass": true
+    },
+    {
+      "name": "local target: README.md:CONTEXT.md",
+      "pass": true
+    },
+    {
+      "name": "local target: README.md:history/用户需求原文.md",
+      "pass": true
+    },
+    {
+      "name": "local target: README.md:history/会话全文.md",
+      "pass": true
+    },
+    {
+      "name": "local target: README.md:history/会话消息.json",
+      "pass": true
+    },
+    {
+      "name": "local target: README.md:docs/设计包/26-完整产品设计文档.md",
+      "pass": true
+    },
+    {
+      "name": "local target: README.md:docs/设计包/31-完整产品交互原型.html",
+      "pass": true
+    },
+    {
+      "name": "local target: README.md:docs/设计包/32-业务流程图原型图与断点闭环审查.md",
+      "pass": true
+    },
+    {
+      "name": "local target: README.md:history/本轮产品设计需求补充-2026-09-11.md",
+      "pass": true
+    },
+    {
+      "name": "local target: README.md:docs/设计包/33-QoderWake与StaffDeck融合及AI体验研究.md",
+      "pass": true
+    },
+    {
+      "name": "local target: README.md:docs/设计包/27-逻辑数据模型与接口契约.md",
+      "pass": true
+    },
+    {
+      "name": "local target: README.md:docs/设计包/29-全量需求与角色追踪.md",
+      "pass": true
+    },
+    {
+      "name": "local target: README.md:docs/设计包/28-开发分期与验收用例.md",
+      "pass": true
+    },
+    {
+      "name": "local target: README.md:validation/product-design-document-check.json",
+      "pass": true
+    },
+    {
+      "name": "local target: README.md:validation/product-design-prototype-check.json",
+      "pass": true
+    },
+    {
+      "name": "local target: README.md:docs/设计包/36-开源底座源码研究与技术选型.md",
+      "pass": true
+    },
+    {
+      "name": "local target: README.md:docs/设计包/37-技术架构总设计与决策.md",
+      "pass": true
+    },
+    {
+      "name": "local target: README.md:docs/设计包/45-AI编程文档就绪审查与补齐清单.md",
+      "pass": true
+    },
+    {
+      "name": "local target: README.md:docs/设计包/25-从零开发最小工作量开源选型.md",
+      "pass": true
+    },
+    {
+      "name": "local target: README.md:项目接续提示词.md",
+      "pass": true
+    },
+    {
+      "name": "local target: README.md:validation/项目创建与迁移记录.json",
+      "pass": true
+    },
+    {
+      "name": "local target: README.md:docs/设计包/00-开发设计包导读.md",
+      "pass": true
+    },
+    {
+      "name": "local target: README.md:docs/设计包/01-产品需求与业务规则.md",
+      "pass": true
+    },
+    {
+      "name": "local target: README.md:docs/设计包/02-数据模型与ER设计.md",
+      "pass": true
+    },
+    {
+      "name": "local target: README.md:docs/设计包/03-业务流程与状态机.md",
+      "pass": true
+    },
+    {
+      "name": "local target: README.md:docs/设计包/04-接口与契约变更设计.md",
+      "pass": true
+    },
+    {
+      "name": "local target: README.md:docs/设计包/05-UI与交互设计.md",
+      "pass": true
+    },
+    {
+      "name": "local target: README.md:docs/设计包/06-用户故事与153项追踪矩阵.md",
+      "pass": true
+    },
+    {
+      "name": "local target: README.md:docs/设计包/07-开发分解与验收方案.md",
+      "pass": true
+    },
+    {
+      "name": "local target: README.md:docs/设计包/08-人员数字员工协作交互原型.html",
+      "pass": true
+    },
+    {
+      "name": "local target: README.md:docs/设计包/09-协作扩展候选.schema.json",
+      "pass": true
+    },
+    {
+      "name": "local target: README.md:docs/设计包/10-需求追踪数据.json",
+      "pass": true
+    },
+    {
+      "name": "local target: README.md:docs/设计包/11-存量合同字段字典.md",
+      "pass": true
+    },
+    {
+      "name": "local target: README.md:docs/设计包/12-员工市场复制与使用设计.md",
+      "pass": true
+    },
+    {
+      "name": "local target: README.md:docs/设计包/13-市场采用候选.schema.json",
+      "pass": true
+    },
+    {
+      "name": "local target: README.md:docs/设计包/14-QoderWake界面参考与原型设计.md",
+      "pass": true
+    },
+    {
+      "name": "local target: README.md:docs/设计包/15-全角色界面与操作覆盖矩阵.md",
+      "pass": true
+    },
+    {
+      "name": "local target: README.md:docs/设计包/16-角色视角与权限演示数据.json",
+      "pass": true
+    },
+    {
+      "name": "local target: README.md:docs/设计包/17-角色需求与验收追踪.json",
+      "pass": true
+    },
+    {
+      "name": "local target: README.md:docs/设计包/18-OA多流程多实例产品设计.md",
+      "pass": true
+    },
+    {
+      "name": "local target: README.md:docs/设计包/19-OA多实例演示数据.json",
+      "pass": true
+    },
+    {
+      "name": "local target: README.md:docs/设计包/20-OA统一待办候选.schema.json",
+      "pass": true
+    },
+    {
+      "name": "local target: README.md:docs/设计包/21-OA需求细化与验收追踪.json",
+      "pass": true
+    },
+    {
+      "name": "local target: README.md:docs/设计包/22-开源工作流与成熟前端复用选型.md",
+      "pass": true
+    },
+    {
+      "name": "local target: README.md:docs/设计包/23-OA主旨与BS字段一致性核查.md",
+      "pass": true
+    },
+    {
+      "name": "local target: README.md:docs/设计包/24-业务模板字段候选.json",
+      "pass": true
+    },
+    {
+      "name": "local target: README.md:docs/设计包/25-从零开发最小工作量开源选型.md",
+      "pass": true
+    },
+    {
+      "name": "local target: README.md:docs/设计包/26-完整产品设计文档.md",
+      "pass": true
+    },
+    {
+      "name": "local target: README.md:docs/设计包/27-逻辑数据模型与接口契约.md",
+      "pass": true
+    },
+    {
+      "name": "local target: README.md:docs/设计包/28-开发分期与验收用例.md",
+      "pass": true
+    },
+    {
+      "name": "local target: README.md:docs/设计包/29-全量需求与角色追踪.md",
+      "pass": true
+    },
+    {
+      "name": "local target: README.md:docs/设计包/30-产品设计追踪数据.json",
+      "pass": true
+    },
+    {
+      "name": "local target: README.md:docs/设计包/31-完整产品交互原型.html",
+      "pass": true
+    },
+    {
+      "name": "local target: README.md:docs/设计包/32-业务流程图原型图与断点闭环审查.md",
+      "pass": true
+    },
+    {
+      "name": "local target: README.md:docs/设计包/33-QoderWake与StaffDeck融合及AI体验研究.md",
+      "pass": true
+    },
+    {
+      "name": "local target: README.md:docs/设计包/34-任务执行工作台与权限分层设计.md",
+      "pass": true
+    },
+    {
+      "name": "local target: README.md:docs/设计包/ZKER-staff-v2-evidence.json",
+      "pass": true
+    },
+    {
+      "name": "local target: README.md:docs/设计包/ZKER-staff-完整优化清单-v2-人员数字员工与上下文对齐.md",
+      "pass": true
+    },
+    {
+      "name": "local target: README.md:docs/设计包/附录-QoderWake竞品分析-初版快照.md",
+      "pass": true
+    },
+    {
+      "name": "local target: README.md:.agents/skills/oa-development-system/SKILL.md",
+      "pass": true
+    },
+    {
+      "name": "local target: README.md:docs/开发体系.md",
+      "pass": true
+    },
+    {
+      "name": "local target: README.md:docs/设计包/35-全产品AI体验复核与改进.md",
+      "pass": true
+    },
+    {
+      "name": "local target: README.md:docs/设计包/46-开发基线与低代码插件化决策.md",
+      "pass": true
+    },
+    {
+      "name": "local target: README.md:docs/设计包/54-开源二开与完整商用准入.md",
+      "pass": true
+    },
+    {
+      "name": "local target: README.md:docs/设计包/47-全产品实施切片与首期开发规格.md",
+      "pass": true
+    },
+    {
+      "name": "local target: README.md:docs/设计包/48-接口事件与插件合同.md",
+      "pass": true
+    },
+    {
+      "name": "local target: README.md:docs/设计包/49-字段级数据模型与迁移规范.md",
+      "pass": true
+    },
+    {
+      "name": "local target: README.md:docs/设计包/50-业务不变量权限与验收夹具.md",
+      "pass": true
+    },
+    {
+      "name": "local target: README.md:docs/设计包/51-开发启动测试与故障恢复手册.md",
+      "pass": true
+    },
+    {
+      "name": "local target: README.md:docs/设计包/52-UI实现与页面状态规格.md",
+      "pass": true
+    },
+    {
+      "name": "local target: README.md:docs/设计包/53-AI运行工具与效果评测规范.md",
+      "pass": true
+    },
+    {
+      "name": "local target: README.md:contracts/openapi.json",
+      "pass": true
+    },
+    {
+      "name": "local target: README.md:contracts/data-dictionary.md",
+      "pass": true
+    },
+    {
+      "name": "local target: README.md:contracts/implementation-map.json",
+      "pass": true
+    },
+    {
+      "name": "local target: README.md:validation/implementation-contract-check.json",
+      "pass": true
+    },
+    {
+      "name": "balanced fences: CONTEXT.md",
+      "pass": true
+    },
+    {
+      "name": "local target: CONTEXT.md:docs/设计包/37-技术架构总设计与决策.md",
+      "pass": true
+    },
+    {
+      "name": "local target: CONTEXT.md:docs/设计包/46-开发基线与低代码插件化决策.md",
+      "pass": true
+    },
+    {
+      "name": "local target: CONTEXT.md:history/本轮产品设计需求补充-2026-09-11.md",
+      "pass": true
+    },
+    {
+      "name": "local target: CONTEXT.md:docs/设计包/57-Agent运行框架最新源码研究.md",
+      "pass": true
+    },
+    {
+      "name": "local target: CONTEXT.md:docs/设计包/58-Agent技术架构与性能实施设计.md",
+      "pass": true
+    },
+    {
+      "name": "local target: CONTEXT.md:docs/设计包/55-知识库与记忆开源方案深度研究.md",
+      "pass": true
+    },
+    {
+      "name": "local target: CONTEXT.md:docs/设计包/56-知识记忆技术栈与实施决策.md",
+      "pass": true
+    },
+    {
+      "name": "local target: CONTEXT.md:docs/设计包/34-任务执行工作台与权限分层设计.md",
+      "pass": true
+    },
+    {
+      "name": "local target: CONTEXT.md:.agents/skills/oa-development-system/SKILL.md",
+      "pass": true
+    },
+    {
+      "name": "local target: CONTEXT.md:docs/开发体系.md",
+      "pass": true
+    },
+    {
+      "name": "local target: CONTEXT.md:docs/设计包/35-全产品AI体验复核与改进.md",
+      "pass": true
+    },
+    {
+      "name": "balanced fences: 37-技术架构总设计与决策.md",
+      "pass": true
+    },
+    {
+      "name": "local target: 37-技术架构总设计与决策.md:36-开源底座源码研究与技术选型.md",
+      "pass": true
+    },
+    {
+      "name": "local target: 37-技术架构总设计与决策.md:38-模块边界与前端工程设计.md",
+      "pass": true
+    },
+    {
+      "name": "local target: 37-技术架构总设计与决策.md:39-数据存储与事务一致性设计.md",
+      "pass": true
+    },
+    {
+      "name": "local target: 37-技术架构总设计与决策.md:40-接口事件与集成技术设计.md",
+      "pass": true
+    },
+    {
+      "name": "local target: 37-技术架构总设计与决策.md:41-AI运行知识分析与安全设计.md",
+      "pass": true
+    },
+    {
+      "name": "local target: 37-技术架构总设计与决策.md:42-部署运维与非功能设计.md",
+      "pass": true
+    },
+    {
+      "name": "local target: 37-技术架构总设计与决策.md:43-技术实施路线与验证矩阵.md",
+      "pass": true
+    },
+    {
+      "name": "local target: 37-技术架构总设计与决策.md:44-技术架构交互图.html",
+      "pass": true
+    },
+    {
+      "name": "local target: 37-技术架构总设计与决策.md:26-完整产品设计文档.md",
+      "pass": true
+    },
+    {
+      "name": "local target: 37-技术架构总设计与决策.md:27-逻辑数据模型与接口契约.md",
+      "pass": true
+    },
+    {
+      "name": "local target: 37-技术架构总设计与决策.md:28-开发分期与验收用例.md",
+      "pass": true
+    },
+    {
+      "name": "local target: 37-技术架构总设计与决策.md:30-产品设计追踪数据.json",
+      "pass": true
+    },
+    {
+      "name": "local target: 37-技术架构总设计与决策.md:57-Agent运行框架最新源码研究.md",
+      "pass": true
+    },
+    {
+      "name": "local target: 37-技术架构总设计与决策.md:58-Agent技术架构与性能实施设计.md",
+      "pass": true
+    },
+    {
+      "name": "balanced fences: 41-AI运行知识分析与安全设计.md",
+      "pass": true
+    },
+    {
+      "name": "local target: 41-AI运行知识分析与安全设计.md:34-任务执行工作台与权限分层设计.md",
+      "pass": true
+    },
+    {
+      "name": "local target: 41-AI运行知识分析与安全设计.md:35-全产品AI体验复核与改进.md",
+      "pass": true
+    },
+    {
+      "name": "local target: 41-AI运行知识分析与安全设计.md:57-Agent运行框架最新源码研究.md",
+      "pass": true
+    },
+    {
+      "name": "local target: 41-AI运行知识分析与安全设计.md:58-Agent技术架构与性能实施设计.md",
+      "pass": true
+    },
+    {
+      "name": "local target: 41-AI运行知识分析与安全设计.md:55-知识库与记忆开源方案深度研究.md",
+      "pass": true
+    },
+    {
+      "name": "local target: 41-AI运行知识分析与安全设计.md:56-知识记忆技术栈与实施决策.md",
+      "pass": true
+    },
+    {
+      "name": "balanced fences: 46-开发基线与低代码插件化决策.md",
+      "pass": true
+    },
+    {
+      "name": "local target: 46-开发基线与低代码插件化决策.md:45-AI编程文档就绪审查与补齐清单.md",
+      "pass": true
+    },
+    {
+      "name": "local target: 46-开发基线与低代码插件化决策.md:54-开源二开与完整商用准入.md",
+      "pass": true
+    },
+    {
+      "name": "local target: 46-开发基线与低代码插件化决策.md:47-全产品实施切片与首期开发规格.md",
+      "pass": true
+    },
+    {
+      "name": "local target: 46-开发基线与低代码插件化决策.md:48-接口事件与插件合同.md",
+      "pass": true
+    },
+    {
+      "name": "local target: 46-开发基线与低代码插件化决策.md:49-字段级数据模型与迁移规范.md",
+      "pass": true
+    },
+    {
+      "name": "local target: 46-开发基线与低代码插件化决策.md:50-业务不变量权限与验收夹具.md",
+      "pass": true
+    },
+    {
+      "name": "local target: 46-开发基线与低代码插件化决策.md:51-开发启动测试与故障恢复手册.md",
+      "pass": true
+    },
+    {
+      "name": "local target: 46-开发基线与低代码插件化决策.md:52-UI实现与页面状态规格.md",
+      "pass": true
+    },
+    {
+      "name": "local target: 46-开发基线与低代码插件化决策.md:53-AI运行工具与效果评测规范.md",
+      "pass": true
+    },
+    {
+      "name": "local target: 46-开发基线与低代码插件化决策.md:36-开源底座源码研究与技术选型.md",
+      "pass": true
+    },
+    {
+      "name": "local target: 46-开发基线与低代码插件化决策.md:55-知识库与记忆开源方案深度研究.md",
+      "pass": true
+    },
+    {
+      "name": "local target: 46-开发基线与低代码插件化决策.md:56-知识记忆技术栈与实施决策.md",
+      "pass": true
+    },
+    {
+      "name": "local target: 46-开发基线与低代码插件化决策.md:57-Agent运行框架最新源码研究.md",
+      "pass": true
+    },
+    {
+      "name": "local target: 46-开发基线与低代码插件化决策.md:58-Agent技术架构与性能实施设计.md",
+      "pass": true
+    },
+    {
+      "name": "local target: 46-开发基线与低代码插件化决策.md:../../contracts/storage-reuse-plan.json",
+      "pass": true
+    },
+    {
+      "name": "local target: 46-开发基线与低代码插件化决策.md:../../contracts/plugin-manifest.schema.json",
+      "pass": true
+    },
+    {
+      "name": "balanced fences: 53-AI运行工具与效果评测规范.md",
+      "pass": true
+    },
+    {
+      "name": "local target: 53-AI运行工具与效果评测规范.md:56-知识记忆技术栈与实施决策.md",
+      "pass": true
+    },
+    {
+      "name": "local target: 53-AI运行工具与效果评测规范.md:55-知识库与记忆开源方案深度研究.md",
+      "pass": true
+    },
+    {
+      "name": "local target: 53-AI运行工具与效果评测规范.md:57-Agent运行框架最新源码研究.md",
+      "pass": true
+    },
+    {
+      "name": "local target: 53-AI运行工具与效果评测规范.md:58-Agent技术架构与性能实施设计.md",
+      "pass": true
+    },
+    {
+      "name": "local target: 53-AI运行工具与效果评测规范.md:../../contracts/fixtures/ai-evals.json",
+      "pass": true
+    },
+    {
+      "name": "balanced fences: 56-知识记忆技术栈与实施决策.md",
+      "pass": true
+    },
+    {
+      "name": "local target: 56-知识记忆技术栈与实施决策.md:55-知识库与记忆开源方案深度研究.md",
+      "pass": true
+    },
+    {
+      "name": "local target: 56-知识记忆技术栈与实施决策.md:57-Agent运行框架最新源码研究.md",
+      "pass": true
+    },
+    {
+      "name": "local target: 56-知识记忆技术栈与实施决策.md:58-Agent技术架构与性能实施设计.md",
+      "pass": true
+    },
+    {
+      "name": "balanced fences: 57-Agent运行框架最新源码研究.md",
+      "pass": true
+    },
+    {
+      "name": "defined reference: 57-Agent运行框架最新源码研究.md:sd-license",
+      "pass": true
+    },
+    {
+      "name": "defined reference: 57-Agent运行框架最新源码研究.md:sd-package",
+      "pass": true
+    },
+    {
+      "name": "defined reference: 57-Agent运行框架最新源码研究.md:cx-sdk",
+      "pass": true
+    },
+    {
+      "name": "defined reference: 57-Agent运行框架最新源码研究.md:cx-python",
+      "pass": true
+    },
+    {
+      "name": "defined reference: 57-Agent运行框架最新源码研究.md:cx-thread",
+      "pass": true
+    },
+    {
+      "name": "defined reference: 57-Agent运行框架最新源码研究.md:cx-daemon",
+      "pass": true
+    },
+    {
+      "name": "defined reference: 57-Agent运行框架最新源码研究.md:cx-turn",
+      "pass": true
+    },
+    {
+      "name": "defined reference: 57-Agent运行框架最新源码研究.md:cx-license",
+      "pass": true
+    },
+    {
+      "name": "defined reference: 57-Agent运行框架最新源码研究.md:sd-loop",
+      "pass": true
+    },
+    {
+      "name": "defined reference: 57-Agent运行框架最新源码研究.md:sd-engine",
+      "pass": true
+    },
+    {
+      "name": "defined reference: 57-Agent运行框架最新源码研究.md:sd-lock",
+      "pass": true
+    },
+    {
+      "name": "defined reference: 57-Agent运行框架最新源码研究.md:sd-lease",
+      "pass": true
+    },
+    {
+      "name": "defined reference: 57-Agent运行框架最新源码研究.md:sd-recovery",
+      "pass": true
+    },
+    {
+      "name": "defined reference: 57-Agent运行框架最新源码研究.md:sd-replay",
+      "pass": true
+    },
+    {
+      "name": "defined reference: 57-Agent运行框架最新源码研究.md:sd-sandbox",
+      "pass": true
+    },
+    {
+      "name": "defined reference: 57-Agent运行框架最新源码研究.md:sd-command",
+      "pass": true
+    },
+    {
+      "name": "defined reference: 57-Agent运行框架最新源码研究.md:sd-evolution",
+      "pass": true
+    },
+    {
+      "name": "defined reference: 57-Agent运行框架最新源码研究.md:sd-license",
+      "pass": true
+    },
+    {
+      "name": "defined reference: 57-Agent运行框架最新源码研究.md:sd-readme",
+      "pass": true
+    },
+    {
+      "name": "local target: 57-Agent运行框架最新源码研究.md:58-Agent技术架构与性能实施设计.md",
+      "pass": true
+    },
+    {
+      "name": "local target: 57-Agent运行框架最新源码研究.md:55-知识库与记忆开源方案深度研究.md",
+      "pass": true
+    },
+    {
+      "name": "local target: 57-Agent运行框架最新源码研究.md:56-知识记忆技术栈与实施决策.md",
+      "pass": true
+    },
+    {
+      "name": "local target: 57-Agent运行框架最新源码研究.md:../../validation/agent-runtime/dsh-pi-research.md",
+      "pass": true
+    },
+    {
+      "name": "local target: 57-Agent运行框架最新源码研究.md:../../validation/agent-runtime/",
+      "pass": true
+    },
+    {
+      "name": "local target: 57-Agent运行框架最新源码研究.md:../../validation/agent-runtime/dsh-pi-research.md",
+      "pass": true
+    },
+    {
+      "name": "fixed citation captured: https://github.com/deepseek-ai/deepseek-harness/blob/c291e7961a515f6d7af9304e7fd1d257929aef26/THIRD_PARTY_NOTICES.md",
+      "pass": true
+    },
+    {
+      "name": "fixed citation captured: https://github.com/deepseek-ai/deepseek-harness/blob/c291e7961a515f6d7af9304e7fd1d257929aef26/LICENSE",
+      "pass": true
+    },
+    {
+      "name": "local target: 57-Agent运行框架最新源码研究.md:../../validation/agent-runtime/dsh-pi-research.md",
+      "pass": true
+    },
+    {
+      "name": "fixed citation captured: https://github.com/OpenBMB/StaffDeck/blob/7adc7c84f61bd6cca13ff0380a811cbb3ae3c544/LICENSE",
+      "pass": true
+    },
+    {
+      "name": "fixed citation captured: https://github.com/OpenBMB/StaffDeck/blob/7adc7c84f61bd6cca13ff0380a811cbb3ae3c544/backend/pyproject.toml",
+      "pass": true
+    },
+    {
+      "name": "fixed citation captured: https://github.com/OpenBMB/StaffDeck/blob/7adc7c84f61bd6cca13ff0380a811cbb3ae3c544/README.md",
+      "pass": true
+    },
+    {
+      "name": "fixed citation captured: https://github.com/OpenBMB/StaffDeck/blob/7adc7c84f61bd6cca13ff0380a811cbb3ae3c544/backend/app/core/agent_loop.py",
+      "pass": true
+    },
+    {
+      "name": "fixed citation captured: https://github.com/OpenBMB/StaffDeck/blob/7adc7c84f61bd6cca13ff0380a811cbb3ae3c544/backend/app/core/harness_v2_engine.py",
+      "pass": true
+    },
+    {
+      "name": "fixed citation captured: https://github.com/OpenBMB/StaffDeck/blob/7adc7c84f61bd6cca13ff0380a811cbb3ae3c544/backend/app/core/harness_session_lock.py",
+      "pass": true
+    },
+    {
+      "name": "fixed citation captured: https://github.com/OpenBMB/StaffDeck/blob/7adc7c84f61bd6cca13ff0380a811cbb3ae3c544/backend/app/core/harness_session_lease.py",
+      "pass": true
+    },
+    {
+      "name": "fixed citation captured: https://github.com/OpenBMB/StaffDeck/blob/7adc7c84f61bd6cca13ff0380a811cbb3ae3c544/backend/app/core/harness_recovery.py",
+      "pass": true
+    },
+    {
+      "name": "fixed citation captured: https://github.com/OpenBMB/StaffDeck/blob/7adc7c84f61bd6cca13ff0380a811cbb3ae3c544/backend/app/core/tool_replay_policy.py",
+      "pass": true
+    },
+    {
+      "name": "fixed citation captured: https://github.com/OpenBMB/StaffDeck/blob/7adc7c84f61bd6cca13ff0380a811cbb3ae3c544/backend/app/harness/sandbox.py",
+      "pass": true
+    },
+    {
+      "name": "fixed citation captured: https://github.com/OpenBMB/StaffDeck/blob/7adc7c84f61bd6cca13ff0380a811cbb3ae3c544/backend/app/harness/command.py",
+      "pass": true
+    },
+    {
+      "name": "fixed citation captured: https://github.com/OpenBMB/StaffDeck/blob/7adc7c84f61bd6cca13ff0380a811cbb3ae3c544/backend/app/evolution/service.py",
+      "pass": true
+    },
+    {
+      "name": "fixed citation captured: https://github.com/openai/codex/blob/6b9826e3aa83b1a5947db50f4332cb9c65f1b340/sdk/typescript/README.md",
+      "pass": true
+    },
+    {
+      "name": "fixed citation captured: https://github.com/openai/codex/blob/6b9826e3aa83b1a5947db50f4332cb9c65f1b340/sdk/typescript/src/thread.ts",
+      "pass": true
+    },
+    {
+      "name": "fixed citation captured: https://github.com/openai/codex/blob/6b9826e3aa83b1a5947db50f4332cb9c65f1b340/sdk/python/README.md",
+      "pass": true
+    },
+    {
+      "name": "fixed citation captured: https://github.com/openai/codex/blob/6b9826e3aa83b1a5947db50f4332cb9c65f1b340/codex-rs/app-server-daemon/README.md",
+      "pass": true
+    },
+    {
+      "name": "fixed citation captured: https://github.com/openai/codex/blob/6b9826e3aa83b1a5947db50f4332cb9c65f1b340/codex-rs/app-server-protocol/src/protocol/v2/turn.rs",
+      "pass": true
+    },
+    {
+      "name": "fixed citation captured: https://github.com/openai/codex/blob/6b9826e3aa83b1a5947db50f4332cb9c65f1b340/LICENSE",
+      "pass": true
+    },
+    {
+      "name": "balanced fences: 58-Agent技术架构与性能实施设计.md",
+      "pass": true
+    },
+    {
+      "name": "local target: 58-Agent技术架构与性能实施设计.md:57-Agent运行框架最新源码研究.md",
+      "pass": true
+    },
+    {
+      "name": "balanced fences: 54-开源二开与完整商用准入.md",
+      "pass": true
+    },
+    {
+      "name": "local target: 54-开源二开与完整商用准入.md:36-开源底座源码研究与技术选型.md",
+      "pass": true
+    },
+    {
+      "name": "local target: 54-开源二开与完整商用准入.md:57-Agent运行框架最新源码研究.md",
+      "pass": true
+    },
+    {
+      "name": "local target: 54-开源二开与完整商用准入.md:55-知识库与记忆开源方案深度研究.md",
+      "pass": true
+    },
+    {
+      "name": "local target: 54-开源二开与完整商用准入.md:../../contracts/commercial-component-register.json",
+      "pass": true
+    },
+    {
+      "name": "balanced fences: dsh-pi-research.md",
+      "pass": true
+    },
+    {
+      "name": "local target: dsh-pi-research.md:dsh-pi-sources/manifest.json",
+      "pass": true
+    },
+    {
+      "name": "local target: dsh-pi-research.md:dsh-pi-sources/dsh-refs.txt",
+      "pass": true
+    },
+    {
+      "name": "local target: dsh-pi-research.md:dsh-pi-sources/pi-refs.txt",
+      "pass": true
+    },
+    {
+      "name": "local target: dsh-pi-research.md:dsh-pi-sources/dsh-npm-latest.source",
+      "pass": true
+    },
+    {
+      "name": "local target: dsh-pi-research.md:dsh-pi-sources/pi-npm-latest.source",
+      "pass": true
+    },
+    {
+      "name": "fixed citation captured: https://github.com/deepseek-ai/deepseek-harness/blob/c291e7961a515f6d7af9304e7fd1d257929aef26/packages/core/agent-loop/src/agent.ts",
+      "pass": true
+    },
+    {
+      "name": "fixed citation captured: https://github.com/deepseek-ai/deepseek-harness/blob/c291e7961a515f6d7af9304e7fd1d257929aef26/docs/agent-lifecycle.md",
+      "pass": true
+    },
+    {
+      "name": "fixed citation captured: https://github.com/earendil-works/pi/blob/d981de1229ef899957bbe968bc8dcda02a21f477/packages/agent/src/agent-loop.ts",
+      "pass": true
+    },
+    {
+      "name": "fixed citation captured: https://github.com/earendil-works/pi/blob/d981de1229ef899957bbe968bc8dcda02a21f477/packages/coding-agent/src/core/session-manager.ts",
+      "pass": true
+    },
+    {
+      "name": "fixed citation captured: https://github.com/deepseek-ai/deepseek-harness/blob/c291e7961a515f6d7af9304e7fd1d257929aef26/packages/api/gateway/src/stream-protocol.ts",
+      "pass": true
+    },
+    {
+      "name": "fixed citation captured: https://github.com/deepseek-ai/deepseek-harness/blob/c291e7961a515f6d7af9304e7fd1d257929aef26/docs/api-gateway.md",
+      "pass": true
+    },
+    {
+      "name": "fixed citation captured: https://github.com/earendil-works/pi/blob/d981de1229ef899957bbe968bc8dcda02a21f477/packages/coding-agent/docs/rpc.md",
+      "pass": true
+    },
+    {
+      "name": "fixed citation captured: https://github.com/earendil-works/pi/blob/d981de1229ef899957bbe968bc8dcda02a21f477/packages/coding-agent/package.json",
+      "pass": true
+    },
+    {
+      "name": "fixed citation captured: https://github.com/deepseek-ai/deepseek-harness/blob/c291e7961a515f6d7af9304e7fd1d257929aef26/docs/subsystems/persistence.md",
+      "pass": true
+    },
+    {
+      "name": "fixed citation captured: https://github.com/deepseek-ai/deepseek-harness/blob/c291e7961a515f6d7af9304e7fd1d257929aef26/packages/session/session-persistence-jsonl/src/lease.ts",
+      "pass": true
+    },
+    {
+      "name": "fixed citation captured: https://github.com/deepseek-ai/deepseek-harness/blob/c291e7961a515f6d7af9304e7fd1d257929aef26/packages/session/session-persistence-jsonl/src/storage.ts",
+      "pass": true
+    },
+    {
+      "name": "fixed citation captured: https://github.com/earendil-works/pi/blob/d981de1229ef899957bbe968bc8dcda02a21f477/packages/coding-agent/src/core/session-manager.ts",
+      "pass": true
+    },
+    {
+      "name": "fixed citation captured: https://github.com/earendil-works/pi/blob/d981de1229ef899957bbe968bc8dcda02a21f477/packages/coding-agent/docs/sdk.md",
+      "pass": true
+    },
+    {
+      "name": "fixed citation captured: https://github.com/earendil-works/pi/blob/d981de1229ef899957bbe968bc8dcda02a21f477/packages/coding-agent/src/core/agent-session.ts",
+      "pass": true
+    },
+    {
+      "name": "fixed citation captured: https://github.com/deepseek-ai/deepseek-harness/blob/c291e7961a515f6d7af9304e7fd1d257929aef26/packages/core/agent-loop/src/tool-calls.ts",
+      "pass": true
+    },
+    {
+      "name": "fixed citation captured: https://github.com/deepseek-ai/deepseek-harness/blob/c291e7961a515f6d7af9304e7fd1d257929aef26/packages/core/agent-loop/src/constants.ts",
+      "pass": true
+    },
+    {
+      "name": "fixed citation captured: https://github.com/deepseek-ai/deepseek-harness/blob/c291e7961a515f6d7af9304e7fd1d257929aef26/packages/core/agent-loop/src/tool-calls.ts",
+      "pass": true
+    },
+    {
+      "name": "fixed citation captured: https://github.com/earendil-works/pi/blob/d981de1229ef899957bbe968bc8dcda02a21f477/packages/agent/src/agent-loop.ts",
+      "pass": true
+    },
+    {
+      "name": "fixed citation captured: https://github.com/earendil-works/pi/blob/d981de1229ef899957bbe968bc8dcda02a21f477/packages/coding-agent/src/core/tools/file-mutation-queue.ts",
+      "pass": true
+    },
+    {
+      "name": "fixed citation captured: https://github.com/deepseek-ai/deepseek-harness/blob/c291e7961a515f6d7af9304e7fd1d257929aef26/packages/core/tools/src/index.ts",
+      "pass": true
+    },
+    {
+      "name": "fixed citation captured: https://github.com/deepseek-ai/deepseek-harness/blob/c291e7961a515f6d7af9304e7fd1d257929aef26/packages/interaction/user-approval/src/index.ts",
+      "pass": true
+    },
+    {
+      "name": "fixed citation captured: https://github.com/earendil-works/pi/blob/d981de1229ef899957bbe968bc8dcda02a21f477/packages/coding-agent/docs/extensions.md",
+      "pass": true
+    },
+    {
+      "name": "fixed citation captured: https://github.com/earendil-works/pi/blob/d981de1229ef899957bbe968bc8dcda02a21f477/packages/coding-agent/docs/security.md",
+      "pass": true
+    },
+    {
+      "name": "fixed citation captured: https://github.com/deepseek-ai/deepseek-harness/blob/c291e7961a515f6d7af9304e7fd1d257929aef26/docs/subsystems/sandbox.md",
+      "pass": true
+    },
+    {
+      "name": "fixed citation captured: https://github.com/deepseek-ai/deepseek-harness/blob/c291e7961a515f6d7af9304e7fd1d257929aef26/SAFETY.md",
+      "pass": true
+    },
+    {
+      "name": "fixed citation captured: https://github.com/deepseek-ai/deepseek-harness/blob/c291e7961a515f6d7af9304e7fd1d257929aef26/LICENSE",
+      "pass": true
+    },
+    {
+      "name": "fixed citation captured: https://github.com/deepseek-ai/deepseek-harness/blob/c291e7961a515f6d7af9304e7fd1d257929aef26/THIRD_PARTY_NOTICES.md",
+      "pass": true
+    },
+    {
+      "name": "fixed citation captured: https://github.com/earendil-works/pi/blob/d981de1229ef899957bbe968bc8dcda02a21f477/LICENSE",
+      "pass": true
+    },
+    {
+      "name": "30 distinct runtime POC cases",
+      "pass": true
+    },
+    {
+      "name": "runtime cases explicitly unrun",
+      "pass": true
+    },
+    {
+      "name": "two architecture and sequence diagrams",
+      "pass": true
+    },
+    {
+      "name": "comparison topic: DSH",
+      "pass": true
+    },
+    {
+      "name": "comparison topic: pi",
+      "pass": true
+    },
+    {
+      "name": "comparison topic: Codex",
+      "pass": true
+    },
+    {
+      "name": "comparison topic: QoderWake",
+      "pass": true
+    },
+    {
+      "name": "comparison topic: StaffDeck",
+      "pass": true
+    },
+    {
+      "name": "comparison topic: LangChain4j",
+      "pass": true
+    },
+    {
+      "name": "design topic (not behavior proof): logical_action_id",
+      "pass": true
+    },
+    {
+      "name": "design topic (not behavior proof): fence",
+      "pass": true
+    },
+    {
+      "name": "design topic (not behavior proof): RESULT_UNKNOWN",
+      "pass": true
+    },
+    {
+      "name": "design topic (not behavior proof): policyRevision",
+      "pass": true
+    },
+    {
+      "name": "design topic (not behavior proof): model_request_count",
+      "pass": true
+    },
+    {
+      "name": "design topic (not behavior proof): 审批Promise",
+      "pass": true
+    },
+    {
+      "name": "design topic (not behavior proof): 锁已释放",
+      "pass": true
+    },
+    {
+      "name": "design topic (not behavior proof): 父Attempt",
+      "pass": true
+    },
+    {
+      "name": "design topic (not behavior proof): viewRevision",
+      "pass": true
+    },
+    {
+      "name": "design topic (not behavior proof): 预算",
+      "pass": true
+    },
+    {
+      "name": "design topic (not behavior proof): Little",
+      "pass": true
+    },
+    {
+      "name": "design topic (not behavior proof): C09—C12",
+      "pass": true
+    },
+    {
+      "name": "implementation boundary: 57-Agent运行框架最新源码研究.md",
+      "pass": true
+    },
+    {
+      "name": "implementation boundary: 58-Agent技术架构与性能实施设计.md",
+      "pass": true
+    },
+    {
+      "name": "performance explicitly not measured",
+      "pass": true
+    },
+    {
+      "name": "DSH release channels separated",
+      "pass": true
+    },
+    {
+      "name": "DSH local lock not distributed lease",
+      "pass": true
+    },
+    {
+      "name": "pi npm prefix corrected",
+      "pass": true
+    },
+    {
+      "name": "StaffDeck actual AGPL",
+      "pass": true
+    },
+    {
+      "name": "StaffDeck license disclosed",
+      "pass": true
+    },
+    {
+      "name": "Codex actual Apache license",
+      "pass": true
+    },
+    {
+      "name": "Codex daemon isolation caveat captured",
+      "pass": true
+    },
+    {
+      "name": "Codex remote caveat disclosed",
+      "pass": true
+    }
+  ],
+  "sourceRecordsVerified": 139,
+  "sources": [
+    {
+      "path": "validation/agent-runtime/sources/qoder-changelog.html",
+      "url": "https://docs.qoder.cn/product-overview/qoderwake-cn-update-log",
+      "sha256": "57c75e1659d426e02632688dc34616b1a725dee93c533ca7ed6e0c23f90c9d88"
+    },
+    {
+      "path": "validation/agent-runtime/sources/qoder-wakerflow.html",
+      "url": "https://docs.qoder.cn/qoderwake/wakerflow",
+      "sha256": "68010c5c63cb33419706705d213f3e100506f846ee7edac139a5f8126ebab60d"
+    },
+    {
+      "path": "validation/agent-runtime/sources/qoder-automated.html",
+      "url": "https://docs.qoder.cn/qoderwake/automated-tasks",
+      "sha256": "fc275b9ba40876f877804b441129139ea0f1f322c93ac7aee3fad6661b422dad"
+    },
+    {
+      "path": "validation/agent-runtime/sources/qoder-cli.html",
+      "url": "https://docs.qoder.cn/qoderwake/cli-reference",
+      "sha256": "af4ced00230c25f9939d5faf8459edbd1912ef017d92c5b478cbdca83ffe9cc1"
+    },
+    {
+      "path": "validation/agent-runtime/sources/codex-appserver.html",
+      "url": "https://developers.openai.com/codex/app-server",
+      "sha256": "31f6925517b9e9b4c87b2a19664cb7ba58fc6c096ec31f95d08c39cc21892195"
+    },
+    {
+      "path": "validation/agent-runtime/sources/staffdeck-latest-release.html",
+      "url": "https://github.com/OpenBMB/StaffDeck/releases/latest",
+      "sha256": "a200b6c2288986b12c041069c08d7ced4d64aaae1216f5ad57b004377b846aa1"
+    },
+    {
+      "path": "validation/agent-runtime/sources/codex-latest-release.html",
+      "url": "https://github.com/openai/codex/releases/latest",
+      "sha256": "d9480e33563d345cc6f0eaf723d9bf555afaca5c698c9003e3c6be109cca6e41"
+    },
+    {
+      "path": "validation/agent-runtime/sources/staffdeck.tar.gz",
+      "url": "https://codeload.github.com/OpenBMB/StaffDeck/tar.gz/7adc7c84f61bd6cca13ff0380a811cbb3ae3c544",
+      "sha256": "15b96d12f44a487a0f6556fcd68e11b3490bc4ddc3a1ea35bf3fd5edc6914924"
+    },
+    {
+      "path": "validation/agent-runtime/sources/codex.tar.gz",
+      "url": "https://codeload.github.com/openai/codex/tar.gz/6b9826e3aa83b1a5947db50f4332cb9c65f1b340",
+      "sha256": "848c7ffac62e21b14edc2048d2e5b7c82b31c556afa4b0d305da0f7d5aa794f4"
+    },
+    {
+      "path": "validation/agent-runtime/sources/openai-latency.html",
+      "url": "https://developers.openai.com/api/docs/guides/latency-optimization",
+      "sha256": "908bca34662efeb955941825ba0077c77a4070d1ce17d83d4331a8e4a5a40d8a"
+    },
+    {
+      "path": "validation/agent-runtime/sources/anthropic-multiagent.html",
+      "url": "https://www.anthropic.com/engineering/multi-agent-research-system",
+      "sha256": "f9c100a871797c9c5550dd91260d48f13429ead23d89d8cafd6b091451aa71fe"
+    },
+    {
+      "path": "validation/agent-runtime/sources/harness-convergence.html",
+      "url": "https://arxiv.org/abs/2608.23953",
+      "sha256": "22318059782a55c8742ed41247c19fa2ad8114931689f1d88c1f7fbf9698d2ce"
+    },
+    {
+      "path": "validation/agent-runtime/sources/harness-of-harness.html",
+      "url": "https://arxiv.org/abs/2609.01481",
+      "sha256": "ae400509ef317b3388305c799cdcc22738ed84f4c203327b72e3d9a492b8d5e7"
+    },
+    {
+      "path": "validation/agent-runtime/sources/staffdeck-refs.txt",
+      "url": "https://github.com/OpenBMB/StaffDeck.git",
+      "sha256": "77d28dea3a934d9dc5d987902b569b11d677653d57b8a4808ab3dacb2f8ba8a9"
+    },
+    {
+      "path": "validation/agent-runtime/sources/codex-refs.txt",
+      "url": "https://github.com/openai/codex.git",
+      "sha256": "3345cd53b5767897f74e3829f80b6ecd0139e5b8be4e53b4c9a59ca66332ae70"
+    },
+    {
+      "path": "validation/agent-runtime/staffdeck-source/LICENSE",
+      "url": "https://github.com/OpenBMB/StaffDeck/blob/7adc7c84f61bd6cca13ff0380a811cbb3ae3c544/LICENSE",
+      "sha256": "8486a10c4393cee1c25392769ddd3b2d6c242d6ec7928e1414efff7dfb2f07ef"
+    },
+    {
+      "path": "validation/agent-runtime/staffdeck-source/README.md",
+      "url": "https://github.com/OpenBMB/StaffDeck/blob/7adc7c84f61bd6cca13ff0380a811cbb3ae3c544/README.md",
+      "sha256": "29b03141f2f0814d0f8ff2b0fa52f272a6e981ceb6ec02001856ff561686f7df"
+    },
+    {
+      "path": "validation/agent-runtime/staffdeck-source/backend/app/api/sessions.py",
+      "url": "https://github.com/OpenBMB/StaffDeck/blob/7adc7c84f61bd6cca13ff0380a811cbb3ae3c544/backend/app/api/sessions.py",
+      "sha256": "514be657142e8db9ec51f1d1972551d239fbddec63f823f94a4165f458851247"
+    },
+    {
+      "path": "validation/agent-runtime/staffdeck-source/backend/app/core/agent_loop.py",
+      "url": "https://github.com/OpenBMB/StaffDeck/blob/7adc7c84f61bd6cca13ff0380a811cbb3ae3c544/backend/app/core/agent_loop.py",
+      "sha256": "bdd48926156a3c814179c3181d35a5b674a71e950f567b872270cf32f29e9916"
+    },
+    {
+      "path": "validation/agent-runtime/staffdeck-source/backend/app/harness/__init__.py",
+      "url": "https://github.com/OpenBMB/StaffDeck/blob/7adc7c84f61bd6cca13ff0380a811cbb3ae3c544/backend/app/harness/__init__.py",
+      "sha256": "794c0b9284fd9d3beff1ac41ed55cd60ec2aef47414c0a75983136d22bcdeedc"
+    },
+    {
+      "path": "validation/agent-runtime/staffdeck-source/backend/app/harness/artifacts.py",
+      "url": "https://github.com/OpenBMB/StaffDeck/blob/7adc7c84f61bd6cca13ff0380a811cbb3ae3c544/backend/app/harness/artifacts.py",
+      "sha256": "133fd1880b6cc3a84a6df3e7811d1f5334192ccf8d3747121dc3d6bb3a0d0d3c"
+    },
+    {
+      "path": "validation/agent-runtime/staffdeck-source/backend/app/harness/command.py",
+      "url": "https://github.com/OpenBMB/StaffDeck/blob/7adc7c84f61bd6cca13ff0380a811cbb3ae3c544/backend/app/harness/command.py",
+      "sha256": "ee7af7dad35d4a05a88e8f416b1d01fe607a65e9299594c7dca33bb5a2035c10"
+    },
+    {
+      "path": "validation/agent-runtime/staffdeck-source/backend/app/harness/contracts.py",
+      "url": "https://github.com/OpenBMB/StaffDeck/blob/7adc7c84f61bd6cca13ff0380a811cbb3ae3c544/backend/app/harness/contracts.py",
+      "sha256": "956c686e5a450443b5466893d630f16825039b66f64574d224f8d7002215e4ee"
+    },
+    {
+      "path": "validation/agent-runtime/staffdeck-source/backend/app/harness/errors.py",
+      "url": "https://github.com/OpenBMB/StaffDeck/blob/7adc7c84f61bd6cca13ff0380a811cbb3ae3c544/backend/app/harness/errors.py",
+      "sha256": "83ad29376228f5a367e235f4f58d3624beecb04af04bd28b35167a481b85269e"
+    },
+    {
+      "path": "validation/agent-runtime/staffdeck-source/backend/app/harness/execution_context.py",
+      "url": "https://github.com/OpenBMB/StaffDeck/blob/7adc7c84f61bd6cca13ff0380a811cbb3ae3c544/backend/app/harness/execution_context.py",
+      "sha256": "97aa6a1f3c8e2af262c06edbb61d8c2f537badf97e3170bcc2d4d9eadfb42bb1"
+    },
+    {
+      "path": "validation/agent-runtime/staffdeck-source/backend/app/harness/executor.py",
+      "url": "https://github.com/OpenBMB/StaffDeck/blob/7adc7c84f61bd6cca13ff0380a811cbb3ae3c544/backend/app/harness/executor.py",
+      "sha256": "b0c47c46987a3c5ed4e8975be73b7333320d6f59e0c00293f3088da196e0dba9"
+    },
+    {
+      "path": "validation/agent-runtime/staffdeck-source/backend/app/harness/filesystem.py",
+      "url": "https://github.com/OpenBMB/StaffDeck/blob/7adc7c84f61bd6cca13ff0380a811cbb3ae3c544/backend/app/harness/filesystem.py",
+      "sha256": "822d740d4ce94e11c33aaf0d04e210654f58302a2cf4eda4dc9c5bf2898cf991"
+    },
+    {
+      "path": "validation/agent-runtime/staffdeck-source/backend/app/harness/registry.py",
+      "url": "https://github.com/OpenBMB/StaffDeck/blob/7adc7c84f61bd6cca13ff0380a811cbb3ae3c544/backend/app/harness/registry.py",
+      "sha256": "e284e5bcb1581ca129e659609a2d6882507f99ba71a62c0fe1d91ea72f679d35"
+    },
+    {
+      "path": "validation/agent-runtime/staffdeck-source/backend/app/harness/sandbox.py",
+      "url": "https://github.com/OpenBMB/StaffDeck/blob/7adc7c84f61bd6cca13ff0380a811cbb3ae3c544/backend/app/harness/sandbox.py",
+      "sha256": "1bcf6ea9d0891cc793d8b4c7f76a97d3d179cc42c89c17992416495cf869879c"
+    },
+    {
+      "path": "validation/agent-runtime/staffdeck-source/backend/app/harness/skill_script.py",
+      "url": "https://github.com/OpenBMB/StaffDeck/blob/7adc7c84f61bd6cca13ff0380a811cbb3ae3c544/backend/app/harness/skill_script.py",
+      "sha256": "cd968bfda2ed33a9e8f52292c48713a1274c731240ee36ab5828eab15854d93c"
+    },
+    {
+      "path": "validation/agent-runtime/staffdeck-source/backend/app/runtime_lock.py",
+      "url": "https://github.com/OpenBMB/StaffDeck/blob/7adc7c84f61bd6cca13ff0380a811cbb3ae3c544/backend/app/runtime_lock.py",
+      "sha256": "1822c177a68a85ef7e8213bbfed804c67d57d2f4b01f9083eb9fa723539609da"
+    },
+    {
+      "path": "validation/agent-runtime/staffdeck-source/backend/app/session/session_schema.py",
+      "url": "https://github.com/OpenBMB/StaffDeck/blob/7adc7c84f61bd6cca13ff0380a811cbb3ae3c544/backend/app/session/session_schema.py",
+      "sha256": "4cd2f2b65ca21efea5f016826dfeeeff2fa74715fa1ae5f8de9de903ed55f0c3"
+    },
+    {
+      "path": "validation/agent-runtime/staffdeck-source/backend/pyproject.toml",
+      "url": "https://github.com/OpenBMB/StaffDeck/blob/7adc7c84f61bd6cca13ff0380a811cbb3ae3c544/backend/pyproject.toml",
+      "sha256": "2c70c54c5b43319186b31dd3db08dc2edfbd22a7a6b1b27991ee156e3213b8e4"
+    },
+    {
+      "path": "validation/agent-runtime/staffdeck-source/backend/app/core/cancellation.py",
+      "url": "https://github.com/OpenBMB/StaffDeck/blob/7adc7c84f61bd6cca13ff0380a811cbb3ae3c544/backend/app/core/cancellation.py",
+      "sha256": "f1f11132cb714b1cce0b02dcd264a31d4688ff5edd532ff3dc501a51ca11ddeb"
+    },
+    {
+      "path": "validation/agent-runtime/staffdeck-source/backend/app/core/context_projection.py",
+      "url": "https://github.com/OpenBMB/StaffDeck/blob/7adc7c84f61bd6cca13ff0380a811cbb3ae3c544/backend/app/core/context_projection.py",
+      "sha256": "c4a2291f2b0b7febfa73838a11ca40cd161a99d7d46ad93cb2029d08b4a95411"
+    },
+    {
+      "path": "validation/agent-runtime/staffdeck-source/backend/app/core/harness_agent.py",
+      "url": "https://github.com/OpenBMB/StaffDeck/blob/7adc7c84f61bd6cca13ff0380a811cbb3ae3c544/backend/app/core/harness_agent.py",
+      "sha256": "623f8a3946209ef56cc5b0b2b9a48bfba8540c8d48278f80b209feffe62510c4"
+    },
+    {
+      "path": "validation/agent-runtime/staffdeck-source/backend/app/core/harness_recovery.py",
+      "url": "https://github.com/OpenBMB/StaffDeck/blob/7adc7c84f61bd6cca13ff0380a811cbb3ae3c544/backend/app/core/harness_recovery.py",
+      "sha256": "eb73924f7fd7c2ff9088c0ea8798d3b883376048fad2283e8e9b9a2d7e8711e3"
+    },
+    {
+      "path": "validation/agent-runtime/staffdeck-source/backend/app/core/harness_session_lease.py",
+      "url": "https://github.com/OpenBMB/StaffDeck/blob/7adc7c84f61bd6cca13ff0380a811cbb3ae3c544/backend/app/core/harness_session_lease.py",
+      "sha256": "f2a677a09df9d95a7b7bc558abcd291d864fac51a7a3ab47e19125de3224cd9a"
+    },
+    {
+      "path": "validation/agent-runtime/staffdeck-source/backend/app/core/harness_session_lock.py",
+      "url": "https://github.com/OpenBMB/StaffDeck/blob/7adc7c84f61bd6cca13ff0380a811cbb3ae3c544/backend/app/core/harness_session_lock.py",
+      "sha256": "10db302dbcaeea1d4138f3079507a0a3b83c738e4a692d328138e332498b439d"
+    },
+    {
+      "path": "validation/agent-runtime/staffdeck-source/backend/app/core/harness_turn_store.py",
+      "url": "https://github.com/OpenBMB/StaffDeck/blob/7adc7c84f61bd6cca13ff0380a811cbb3ae3c544/backend/app/core/harness_turn_store.py",
+      "sha256": "17e4d3fdda5c76ebd8f25e9afc5a5a9b8eee85f387332b083e2b02a7e6e7f4aa"
+    },
+    {
+      "path": "validation/agent-runtime/staffdeck-source/backend/app/core/harness_v2_engine.py",
+      "url": "https://github.com/OpenBMB/StaffDeck/blob/7adc7c84f61bd6cca13ff0380a811cbb3ae3c544/backend/app/core/harness_v2_engine.py",
+      "sha256": "d1b51e6e843b4365c9ff63c9599a37e43b7b3c35b3f69e3e8c2171b0f34e7cfe"
+    },
+    {
+      "path": "validation/agent-runtime/staffdeck-source/backend/app/core/human_handoff_service.py",
+      "url": "https://github.com/OpenBMB/StaffDeck/blob/7adc7c84f61bd6cca13ff0380a811cbb3ae3c544/backend/app/core/human_handoff_service.py",
+      "sha256": "238a087b29fc09e98d54789a05bf7be53c667d789100e506b4345b6199e74a4d"
+    },
+    {
+      "path": "validation/agent-runtime/staffdeck-source/backend/app/core/task_frame_store.py",
+      "url": "https://github.com/OpenBMB/StaffDeck/blob/7adc7c84f61bd6cca13ff0380a811cbb3ae3c544/backend/app/core/task_frame_store.py",
+      "sha256": "8c057f4a2391de5a361cee5518663be52252d52114c5c3617aa7f09e1acc7cd4"
+    },
+    {
+      "path": "validation/agent-runtime/staffdeck-source/backend/app/core/tool_replay_policy.py",
+      "url": "https://github.com/OpenBMB/StaffDeck/blob/7adc7c84f61bd6cca13ff0380a811cbb3ae3c544/backend/app/core/tool_replay_policy.py",
+      "sha256": "cd792581b5cc43e0c300b0be74fc7f8058ee11219339aefb7e35e26b00759670"
+    },
+    {
+      "path": "validation/agent-runtime/staffdeck-source/backend/app/core/turn_finalizer.py",
+      "url": "https://github.com/OpenBMB/StaffDeck/blob/7adc7c84f61bd6cca13ff0380a811cbb3ae3c544/backend/app/core/turn_finalizer.py",
+      "sha256": "b374d6b2330347969d01bd322fb767ccb70383148b032359615c0373192c2be8"
+    },
+    {
+      "path": "validation/agent-runtime/staffdeck-source/backend/app/evolution/service.py",
+      "url": "https://github.com/OpenBMB/StaffDeck/blob/7adc7c84f61bd6cca13ff0380a811cbb3ae3c544/backend/app/evolution/service.py",
+      "sha256": "5f4debc87fa7595ab047a566a6a505280fa8a78db1a04ae198a74f65672fa9ce"
+    },
+    {
+      "path": "validation/agent-runtime/staffdeck-source/backend/app/session/message_visibility.py",
+      "url": "https://github.com/OpenBMB/StaffDeck/blob/7adc7c84f61bd6cca13ff0380a811cbb3ae3c544/backend/app/session/message_visibility.py",
+      "sha256": "9885da020ea70c14d6d6d3636e9f994629effa0e3b61e009128fd22302e830d5"
+    },
+    {
+      "path": "validation/agent-runtime/codex-source/LICENSE",
+      "url": "https://github.com/openai/codex/blob/6b9826e3aa83b1a5947db50f4332cb9c65f1b340/LICENSE",
+      "sha256": "d17f227e4df5da1600391338865ce0f3055211760a36688f816941d58232d8dc"
+    },
+    {
+      "path": "validation/agent-runtime/codex-source/NOTICE",
+      "url": "https://github.com/openai/codex/blob/6b9826e3aa83b1a5947db50f4332cb9c65f1b340/NOTICE",
+      "sha256": "9d71575ecfd9a843fc1677b0efb08053c6ba9fd686a0de1a6f5382fd3c220915"
+    },
+    {
+      "path": "validation/agent-runtime/codex-source/README.md",
+      "url": "https://github.com/openai/codex/blob/6b9826e3aa83b1a5947db50f4332cb9c65f1b340/README.md",
+      "sha256": "ba4e1f69ff48386e72a9c5e1edaf76aad64a475c2d51af79ccba6d1128261ba7"
+    },
+    {
+      "path": "validation/agent-runtime/codex-source/codex-rs/app-server-client/README.md",
+      "url": "https://github.com/openai/codex/blob/6b9826e3aa83b1a5947db50f4332cb9c65f1b340/codex-rs/app-server-client/README.md",
+      "sha256": "8ced7c68ae2f21a9d650b3c71250bf9d7c710b3172c524016dd03c5fe8630491"
+    },
+    {
+      "path": "validation/agent-runtime/codex-source/codex-rs/app-server-daemon/README.md",
+      "url": "https://github.com/openai/codex/blob/6b9826e3aa83b1a5947db50f4332cb9c65f1b340/codex-rs/app-server-daemon/README.md",
+      "sha256": "bece45bd49a288e2b64da66e8f1844c5cb860ee0344c73a55800eccd452c80cb"
+    },
+    {
+      "path": "validation/agent-runtime/codex-source/codex-rs/app-server-protocol/src/protocol/v2/thread.rs",
+      "url": "https://github.com/openai/codex/blob/6b9826e3aa83b1a5947db50f4332cb9c65f1b340/codex-rs/app-server-protocol/src/protocol/v2/thread.rs",
+      "sha256": "ffc2f432bc7d0dadf9ae10db832035c8b75d7b709462bfed3c83d33ea89c526a"
+    },
+    {
+      "path": "validation/agent-runtime/codex-source/codex-rs/app-server-protocol/src/protocol/v2/turn.rs",
+      "url": "https://github.com/openai/codex/blob/6b9826e3aa83b1a5947db50f4332cb9c65f1b340/codex-rs/app-server-protocol/src/protocol/v2/turn.rs",
+      "sha256": "49098e1b594835e6376952c35a0b13cfacd1316eb68bd8a46553842534a86bb2"
+    },
+    {
+      "path": "validation/agent-runtime/codex-source/codex-rs/app-server-transport/src/outgoing_message.rs",
+      "url": "https://github.com/openai/codex/blob/6b9826e3aa83b1a5947db50f4332cb9c65f1b340/codex-rs/app-server-transport/src/outgoing_message.rs",
+      "sha256": "bf66cbcd78a92152312d09270cd6cedfa52b935d825e47ac4f8f1ee584dccad3"
+    },
+    {
+      "path": "validation/agent-runtime/codex-source/codex-rs/app-server/src/message_processor.rs",
+      "url": "https://github.com/openai/codex/blob/6b9826e3aa83b1a5947db50f4332cb9c65f1b340/codex-rs/app-server/src/message_processor.rs",
+      "sha256": "2186e5e1ec407c66ff8627008c7f319d22aa76f68bccb6c04ed454b0b8f22fa8"
+    },
+    {
+      "path": "validation/agent-runtime/codex-source/codex-rs/app-server/src/outgoing_message.rs",
+      "url": "https://github.com/openai/codex/blob/6b9826e3aa83b1a5947db50f4332cb9c65f1b340/codex-rs/app-server/src/outgoing_message.rs",
+      "sha256": "033eb1b47d0a21a6001d8e865458e27681120a9cb05768193e86c9306b39d595"
+    },
+    {
+      "path": "validation/agent-runtime/codex-source/codex-rs/app-server/src/transport.rs",
+      "url": "https://github.com/openai/codex/blob/6b9826e3aa83b1a5947db50f4332cb9c65f1b340/codex-rs/app-server/src/transport.rs",
+      "sha256": "b869fab855d1538ac97f56515d5f0d820dc066ab0374ca04d44f170ec65793d8"
+    },
+    {
+      "path": "validation/agent-runtime/codex-source/docs/authentication.md",
+      "url": "https://github.com/openai/codex/blob/6b9826e3aa83b1a5947db50f4332cb9c65f1b340/docs/authentication.md",
+      "sha256": "3fe4a065894ac5c1c212432a2c35b9e16a39a79377ea4c9521122a28ae0f7aef"
+    },
+    {
+      "path": "validation/agent-runtime/codex-source/docs/sandbox.md",
+      "url": "https://github.com/openai/codex/blob/6b9826e3aa83b1a5947db50f4332cb9c65f1b340/docs/sandbox.md",
+      "sha256": "61d4dd0ccda2a0cbbde78832e752cdf56b1eb8cf7a54f1d46b52a2824c911249"
+    },
+    {
+      "path": "validation/agent-runtime/codex-source/sdk/python/README.md",
+      "url": "https://github.com/openai/codex/blob/6b9826e3aa83b1a5947db50f4332cb9c65f1b340/sdk/python/README.md",
+      "sha256": "a2b0ca0160239ad8b816067df782d68be0831cbaa7a80bf85d2e39e8f2bf0cb7"
+    },
+    {
+      "path": "validation/agent-runtime/codex-source/sdk/typescript/README.md",
+      "url": "https://github.com/openai/codex/blob/6b9826e3aa83b1a5947db50f4332cb9c65f1b340/sdk/typescript/README.md",
+      "sha256": "bc454b26a6920efb1826912be6b6ba96348ab39d9f4e70078465deb586dbbfe7"
+    },
+    {
+      "path": "validation/agent-runtime/codex-source/sdk/typescript/src/codex.ts",
+      "url": "https://github.com/openai/codex/blob/6b9826e3aa83b1a5947db50f4332cb9c65f1b340/sdk/typescript/src/codex.ts",
+      "sha256": "25a5b9ccb6a485f3aaa474d6e39f3d48ad72903d9e3a2f02e7b6218228d6a470"
+    },
+    {
+      "path": "validation/agent-runtime/codex-source/sdk/typescript/src/thread.ts",
+      "url": "https://github.com/openai/codex/blob/6b9826e3aa83b1a5947db50f4332cb9c65f1b340/sdk/typescript/src/thread.ts",
+      "sha256": "cc0dda041278e007ed5114da5081a45f14f01ad931601c026628b8c5cc8c534c"
+    },
+    {
+      "path": "validation/agent-runtime/dsh-pi-sources/pi-repository.json",
+      "url": "https://api.github.com/repos/badlogic/pi-mono",
+      "sha256": "b897c7fc5d4912c7dd96b8574f0576b463cc40a7f29ce699b614d1b5de9b905f"
+    },
+    {
+      "path": "validation/agent-runtime/dsh-pi-sources/dsh-refs.txt",
+      "url": "https://github.com/deepseek-ai/deepseek-harness.git",
+      "sha256": "6235320cdfd76660783eb54bf6d481bc146909200c82e4db8f844e5ebc89dfd8"
+    },
+    {
+      "path": "validation/agent-runtime/dsh-pi-sources/pi-refs.txt",
+      "url": "https://github.com/earendil-works/pi.git",
+      "sha256": "e6d57519418ab66ed577d77e635980bfa28e09c9dbf7ef7aa75286e28fb6d912"
+    },
+    {
+      "path": "validation/agent-runtime/dsh-pi-sources/dsh-c291e7961a515f6d7af9304e7fd1d257929aef26.tar.gz",
+      "url": "https://codeload.github.com/deepseek-ai/deepseek-harness/tar.gz/c291e7961a515f6d7af9304e7fd1d257929aef26",
+      "sha256": "f08cfc86cb05d4186be3319670e2756375cb2788b3d2164dd7f30b885f350860"
+    },
+    {
+      "path": "validation/agent-runtime/dsh-pi-sources/pi-d981de1229ef899957bbe968bc8dcda02a21f477.tar.gz",
+      "url": "https://codeload.github.com/earendil-works/pi/tar.gz/d981de1229ef899957bbe968bc8dcda02a21f477",
+      "sha256": "d2a04b35e57f59873d67f667f22e681e93c78a46ba8e2cdedf9d4c323b1ae8dc"
+    },
+    {
+      "path": "validation/agent-runtime/dsh-pi-sources/dsh/README.md",
+      "url": "https://github.com/deepseek-ai/deepseek-harness/blob/c291e7961a515f6d7af9304e7fd1d257929aef26/README.md",
+      "sha256": "b43a2af65d10028e5de61e4603f946bfce9b777df079e92745491c7700a6d58e"
+    },
+    {
+      "path": "validation/agent-runtime/dsh-pi-sources/dsh/LICENSE",
+      "url": "https://github.com/deepseek-ai/deepseek-harness/blob/c291e7961a515f6d7af9304e7fd1d257929aef26/LICENSE",
+      "sha256": "ebb4f09972aee8608be255debaf78451a68e95c290f55c240dec2ecfa16ea6be"
+    },
+    {
+      "path": "validation/agent-runtime/dsh-pi-sources/dsh/SAFETY.md",
+      "url": "https://github.com/deepseek-ai/deepseek-harness/blob/c291e7961a515f6d7af9304e7fd1d257929aef26/SAFETY.md",
+      "sha256": "62075bb51e0f7790441e7722ff12063107b4866019332e71ef01b63b6f880fee"
+    },
+    {
+      "path": "validation/agent-runtime/dsh-pi-sources/dsh/THIRD_PARTY_NOTICES.md",
+      "url": "https://github.com/deepseek-ai/deepseek-harness/blob/c291e7961a515f6d7af9304e7fd1d257929aef26/THIRD_PARTY_NOTICES.md",
+      "sha256": "9951dcb5acfc3bd280e441ad0543fff26541173baaab11e89d7d3858f7330532"
+    },
+    {
+      "path": "validation/agent-runtime/dsh-pi-sources/dsh/package.json",
+      "url": "https://github.com/deepseek-ai/deepseek-harness/blob/c291e7961a515f6d7af9304e7fd1d257929aef26/package.json",
+      "sha256": "766b5a990aca5d203457c11937f543256725d4a11487a85df5976c2e55a8e967"
+    },
+    {
+      "path": "validation/agent-runtime/dsh-pi-sources/dsh/docs__architecture.md",
+      "url": "https://github.com/deepseek-ai/deepseek-harness/blob/c291e7961a515f6d7af9304e7fd1d257929aef26/docs/architecture.md",
+      "sha256": "5bccea88701324e87ddec0aaa1d09925e574dd6d9be4567d60bcdad2c65f018e"
+    },
+    {
+      "path": "validation/agent-runtime/dsh-pi-sources/dsh/docs__agent-lifecycle.md",
+      "url": "https://github.com/deepseek-ai/deepseek-harness/blob/c291e7961a515f6d7af9304e7fd1d257929aef26/docs/agent-lifecycle.md",
+      "sha256": "3f4a7e406d7e150752680f6b8a1ebc7b823c5c0bab3afca052e64bc7055e32e8"
+    },
+    {
+      "path": "validation/agent-runtime/dsh-pi-sources/dsh/docs__api-gateway.md",
+      "url": "https://github.com/deepseek-ai/deepseek-harness/blob/c291e7961a515f6d7af9304e7fd1d257929aef26/docs/api-gateway.md",
+      "sha256": "6cde35f152087a3294da192f161718e21115091e1743aa29a4fdb7d8acbe35d7"
+    },
+    {
+      "path": "validation/agent-runtime/dsh-pi-sources/dsh/docs__tool-execution-pipeline.md",
+      "url": "https://github.com/deepseek-ai/deepseek-harness/blob/c291e7961a515f6d7af9304e7fd1d257929aef26/docs/tool-execution-pipeline.md",
+      "sha256": "48ad4292cd8af76411ce9ce9ea2a89056f06b55efc7959f11489d10f771c4b97"
+    },
+    {
+      "path": "validation/agent-runtime/dsh-pi-sources/dsh/docs__subsystems__core.md",
+      "url": "https://github.com/deepseek-ai/deepseek-harness/blob/c291e7961a515f6d7af9304e7fd1d257929aef26/docs/subsystems/core.md",
+      "sha256": "0c6d520485db9098e01a56536a24c153f283ee135adc9df93acad08cec19fdf1"
+    },
+    {
+      "path": "validation/agent-runtime/dsh-pi-sources/dsh/docs__subsystems__session.md",
+      "url": "https://github.com/deepseek-ai/deepseek-harness/blob/c291e7961a515f6d7af9304e7fd1d257929aef26/docs/subsystems/session.md",
+      "sha256": "dfabaaf8c1dae793e1ee6752c53b50a575c5d8b1cbc86a0b824e98c4e55d665f"
+    },
+    {
+      "path": "validation/agent-runtime/dsh-pi-sources/dsh/docs__subsystems__approval.md",
+      "url": "https://github.com/deepseek-ai/deepseek-harness/blob/c291e7961a515f6d7af9304e7fd1d257929aef26/docs/subsystems/approval.md",
+      "sha256": "5a427a89d2c7b3edb8dd67db25545a915f6869f57e627fdd1c80dc51d8065d98"
+    },
+    {
+      "path": "validation/agent-runtime/dsh-pi-sources/dsh/docs__subsystems__sandbox.md",
+      "url": "https://github.com/deepseek-ai/deepseek-harness/blob/c291e7961a515f6d7af9304e7fd1d257929aef26/docs/subsystems/sandbox.md",
+      "sha256": "f682eae7cc2b64c4eb2b35dcb7c3a7759f84c1c1da99fed900fd57ff5c346c95"
+    },
+    {
+      "path": "validation/agent-runtime/dsh-pi-sources/dsh/docs__subsystems__persistence.md",
+      "url": "https://github.com/deepseek-ai/deepseek-harness/blob/c291e7961a515f6d7af9304e7fd1d257929aef26/docs/subsystems/persistence.md",
+      "sha256": "d63d197460090bf8d473dc2804545ab75d1d0d2d15adffa8062ddbe7400e362d"
+    },
+    {
+      "path": "validation/agent-runtime/dsh-pi-sources/dsh/docs__subsystems__extensions.md",
+      "url": "https://github.com/deepseek-ai/deepseek-harness/blob/c291e7961a515f6d7af9304e7fd1d257929aef26/docs/subsystems/extensions.md",
+      "sha256": "bb8aabe3ac9dea2b2f46f6ef81a4365fad30627a7381775763bcc509e8bb75ba"
+    },
+    {
+      "path": "validation/agent-runtime/dsh-pi-sources/dsh/docs__subsystems__subagent.md",
+      "url": "https://github.com/deepseek-ai/deepseek-harness/blob/c291e7961a515f6d7af9304e7fd1d257929aef26/docs/subsystems/subagent.md",
+      "sha256": "91b88872ae87347edd3b9905a8df70419e169ddc0d528ce036b1255da3b7fa86"
+    },
+    {
+      "path": "validation/agent-runtime/dsh-pi-sources/dsh/docs__subsystems__compaction.md",
+      "url": "https://github.com/deepseek-ai/deepseek-harness/blob/c291e7961a515f6d7af9304e7fd1d257929aef26/docs/subsystems/compaction.md",
+      "sha256": "4f430d1525c055f441bdb7948f11158a95e9c3aa998994fe61d5fb527d5915dc"
+    },
+    {
+      "path": "validation/agent-runtime/dsh-pi-sources/dsh/packages__core__agent-loop__src__agent.ts",
+      "url": "https://github.com/deepseek-ai/deepseek-harness/blob/c291e7961a515f6d7af9304e7fd1d257929aef26/packages/core/agent-loop/src/agent.ts",
+      "sha256": "bbc3c4f34076e81596af855eddb1bf66f6362278730f7c4db24ea96a990e3cb3"
+    },
+    {
+      "path": "validation/agent-runtime/dsh-pi-sources/dsh/packages__core__agent-loop__src__index.ts",
+      "url": "https://github.com/deepseek-ai/deepseek-harness/blob/c291e7961a515f6d7af9304e7fd1d257929aef26/packages/core/agent-loop/src/index.ts",
+      "sha256": "9cbee4cdf159df1a6562edfaaf47a41aea055224fc6a67fbc7e07029a91aeca1"
+    },
+    {
+      "path": "validation/agent-runtime/dsh-pi-sources/dsh/packages__core__agent__src__index.ts",
+      "url": "https://github.com/deepseek-ai/deepseek-harness/blob/c291e7961a515f6d7af9304e7fd1d257929aef26/packages/core/agent/src/index.ts",
+      "sha256": "50f0bb7642b47a0f43322c26ca9c91613cf7c148084342727e372b36d1b0dcc2"
+    },
+    {
+      "path": "validation/agent-runtime/dsh-pi-sources/dsh/packages__core__tools__src__index.ts",
+      "url": "https://github.com/deepseek-ai/deepseek-harness/blob/c291e7961a515f6d7af9304e7fd1d257929aef26/packages/core/tools/src/index.ts",
+      "sha256": "cc8d54b6a0d6005a26871e84ce3390ba0bbd7fa61a8c65d4b9cc2fbd86126ac2"
+    },
+    {
+      "path": "validation/agent-runtime/dsh-pi-sources/dsh/packages__core__session__src__index.ts",
+      "url": "https://github.com/deepseek-ai/deepseek-harness/blob/c291e7961a515f6d7af9304e7fd1d257929aef26/packages/core/session/src/index.ts",
+      "sha256": "688aafe3897fdf6f8dc5da1f7ec57d6af0c8484e6afda06d05ff7ecfb932cc1c"
+    },
+    {
+      "path": "validation/agent-runtime/dsh-pi-sources/pi/README.md",
+      "url": "https://github.com/earendil-works/pi/blob/d981de1229ef899957bbe968bc8dcda02a21f477/README.md",
+      "sha256": "57b4f386caacb74a2eaacbcc71b996a7c61e176ca1a342e897c420843b025d10"
+    },
+    {
+      "path": "validation/agent-runtime/dsh-pi-sources/pi/LICENSE",
+      "url": "https://github.com/earendil-works/pi/blob/d981de1229ef899957bbe968bc8dcda02a21f477/LICENSE",
+      "sha256": "0457f5bcec3b3b211605dfb5d1a49042fd638f3686a410fe099c24a25af13c48"
+    },
+    {
+      "path": "validation/agent-runtime/dsh-pi-sources/pi/package.json",
+      "url": "https://github.com/earendil-works/pi/blob/d981de1229ef899957bbe968bc8dcda02a21f477/package.json",
+      "sha256": "7e305a4e6382517028f3b6fdf2b2350c38fa89a24e2cbec6ac84e8d99f99ba1d"
+    },
+    {
+      "path": "validation/agent-runtime/dsh-pi-sources/pi/packages__agent__README.md",
+      "url": "https://github.com/earendil-works/pi/blob/d981de1229ef899957bbe968bc8dcda02a21f477/packages/agent/README.md",
+      "sha256": "04e44bb21db2894ed77b13c0fb63a5e9f619df633abd1b8f9fe4a04472040c3b"
+    },
+    {
+      "path": "validation/agent-runtime/dsh-pi-sources/pi/packages__agent__package.json",
+      "url": "https://github.com/earendil-works/pi/blob/d981de1229ef899957bbe968bc8dcda02a21f477/packages/agent/package.json",
+      "sha256": "f4c388363706ae0eb8eca4e7663f85f231bf0882d7e32c16f7cfd98153b26551"
+    },
+    {
+      "path": "validation/agent-runtime/dsh-pi-sources/pi/packages__agent__src__agent-loop.ts",
+      "url": "https://github.com/earendil-works/pi/blob/d981de1229ef899957bbe968bc8dcda02a21f477/packages/agent/src/agent-loop.ts",
+      "sha256": "1e16404a231912fbd7643d8317b15ec4cc6245ed8cedc37582a31d430a1cc6ac"
+    },
+    {
+      "path": "validation/agent-runtime/dsh-pi-sources/pi/packages__agent__src__agent.ts",
+      "url": "https://github.com/earendil-works/pi/blob/d981de1229ef899957bbe968bc8dcda02a21f477/packages/agent/src/agent.ts",
+      "sha256": "25b52fda7c8fa09d4d5cc8bcbb04db63e9d785b978c846d8c59a367ba91fe045"
+    },
+    {
+      "path": "validation/agent-runtime/dsh-pi-sources/pi/packages__agent__src__types.ts",
+      "url": "https://github.com/earendil-works/pi/blob/d981de1229ef899957bbe968bc8dcda02a21f477/packages/agent/src/types.ts",
+      "sha256": "640b6703badd73303f9c3c7e903a1269793493499d23e379894cbcb22338a4db"
+    },
+    {
+      "path": "validation/agent-runtime/dsh-pi-sources/pi/packages__coding-agent__README.md",
+      "url": "https://github.com/earendil-works/pi/blob/d981de1229ef899957bbe968bc8dcda02a21f477/packages/coding-agent/README.md",
+      "sha256": "a63ba45d9c16ad63631c9bbeb13699a39c1d097174324e03c784fa8fb3a7b5d8"
+    },
+    {
+      "path": "validation/agent-runtime/dsh-pi-sources/pi/packages__coding-agent__CHANGELOG.md",
+      "url": "https://github.com/earendil-works/pi/blob/d981de1229ef899957bbe968bc8dcda02a21f477/packages/coding-agent/CHANGELOG.md",
+      "sha256": "6816d95d45858b54627d02681339e9b9fe6345bc0a58bddea50586cc2e3c3cca"
+    },
+    {
+      "path": "validation/agent-runtime/dsh-pi-sources/pi/packages__coding-agent__package.json",
+      "url": "https://github.com/earendil-works/pi/blob/d981de1229ef899957bbe968bc8dcda02a21f477/packages/coding-agent/package.json",
+      "sha256": "f1738e4b42203e5f22bcb513f13fb2fb224f1e98d1f129ff042f87048665a94c"
+    },
+    {
+      "path": "validation/agent-runtime/dsh-pi-sources/pi/packages__coding-agent__docs__extensions.md",
+      "url": "https://github.com/earendil-works/pi/blob/d981de1229ef899957bbe968bc8dcda02a21f477/packages/coding-agent/docs/extensions.md",
+      "sha256": "39c54b91faabd76a17ab07f7ae85b274e941f36aacfaa6fe304281f697671faf"
+    },
+    {
+      "path": "validation/agent-runtime/dsh-pi-sources/pi/packages__coding-agent__docs__rpc.md",
+      "url": "https://github.com/earendil-works/pi/blob/d981de1229ef899957bbe968bc8dcda02a21f477/packages/coding-agent/docs/rpc.md",
+      "sha256": "15fcd26bee72777b373fd5f2edd77091a01cadd4de95e48b08422ced0552a28d"
+    },
+    {
+      "path": "validation/agent-runtime/dsh-pi-sources/pi/packages__coding-agent__docs__sdk.md",
+      "url": "https://github.com/earendil-works/pi/blob/d981de1229ef899957bbe968bc8dcda02a21f477/packages/coding-agent/docs/sdk.md",
+      "sha256": "3c575c006043769bdb85d01fdbd9e86468f45160deedc2519db3464387eaffbf"
+    },
+    {
+      "path": "validation/agent-runtime/dsh-pi-sources/pi/packages__coding-agent__docs__security.md",
+      "url": "https://github.com/earendil-works/pi/blob/d981de1229ef899957bbe968bc8dcda02a21f477/packages/coding-agent/docs/security.md",
+      "sha256": "5df4b27e7b0db49f50807f0e5d8a77e6dc099c76adab6edf21c5b705ede6efab"
+    },
+    {
+      "path": "validation/agent-runtime/dsh-pi-sources/pi/packages__coding-agent__docs__sessions.md",
+      "url": "https://github.com/earendil-works/pi/blob/d981de1229ef899957bbe968bc8dcda02a21f477/packages/coding-agent/docs/sessions.md",
+      "sha256": "b4ed96521936b5b4ba464496d096bd6c345803f3fa63b5a647674af068cd83b2"
+    },
+    {
+      "path": "validation/agent-runtime/dsh-pi-sources/pi/packages__coding-agent__src__core__session-manager.ts",
+      "url": "https://github.com/earendil-works/pi/blob/d981de1229ef899957bbe968bc8dcda02a21f477/packages/coding-agent/src/core/session-manager.ts",
+      "sha256": "57bc70a751567b96c057535766240ae52d9b76d9013ea78049d74dc3b654e915"
+    },
+    {
+      "path": "validation/agent-runtime/dsh-pi-sources/pi/packages__coding-agent__src__core__agent-session.ts",
+      "url": "https://github.com/earendil-works/pi/blob/d981de1229ef899957bbe968bc8dcda02a21f477/packages/coding-agent/src/core/agent-session.ts",
+      "sha256": "23e4acac844638fb0ae60047130f8e1050e4c729c1b8e80d37e359ac9c0eef9a"
+    },
+    {
+      "path": "validation/agent-runtime/dsh-pi-sources/pi/packages__coding-agent__src__core__agent-session-runtime.ts",
+      "url": "https://github.com/earendil-works/pi/blob/d981de1229ef899957bbe968bc8dcda02a21f477/packages/coding-agent/src/core/agent-session-runtime.ts",
+      "sha256": "5b348a4db837a2564367dd93b343c67f3b0c28a2f753ff71adcb48d08b5644e7"
+    },
+    {
+      "path": "validation/agent-runtime/dsh-pi-sources/pi/packages__coding-agent__src__core__tools__bash.ts",
+      "url": "https://github.com/earendil-works/pi/blob/d981de1229ef899957bbe968bc8dcda02a21f477/packages/coding-agent/src/core/tools/bash.ts",
+      "sha256": "1f1130cdb33b9c7a74f81aeac9d3bb0208a8a30d65a0bf238f8ec30d39e21778"
+    },
+    {
+      "path": "validation/agent-runtime/dsh-pi-sources/pi/packages__coding-agent__src__core__tools__path-utils.ts",
+      "url": "https://github.com/earendil-works/pi/blob/d981de1229ef899957bbe968bc8dcda02a21f477/packages/coding-agent/src/core/tools/path-utils.ts",
+      "sha256": "ab6f420d2388a41366113c17a25e356867820b87b02a169d044cfcf83e1997d3"
+    },
+    {
+      "path": "validation/agent-runtime/dsh-pi-sources/pi/packages__coding-agent__src__core__tools__file-mutation-queue.ts",
+      "url": "https://github.com/earendil-works/pi/blob/d981de1229ef899957bbe968bc8dcda02a21f477/packages/coding-agent/src/core/tools/file-mutation-queue.ts",
+      "sha256": "33cb06ac9bcdf32c8b84d9d12e33be44c503a7670f668e003a3262cd34294d11"
+    },
+    {
+      "path": "validation/agent-runtime/dsh-pi-sources/pi/packages__coding-agent__src__core__project-trust.ts",
+      "url": "https://github.com/earendil-works/pi/blob/d981de1229ef899957bbe968bc8dcda02a21f477/packages/coding-agent/src/core/project-trust.ts",
+      "sha256": "39d5874a2a001ae7ac797ea297e31bf061eff07f9b2883f3eeaf6d3e1f5637ba"
+    },
+    {
+      "path": "validation/agent-runtime/dsh-pi-sources/pi/packages__coding-agent__src__core__extensions__wrapper.ts",
+      "url": "https://github.com/earendil-works/pi/blob/d981de1229ef899957bbe968bc8dcda02a21f477/packages/coding-agent/src/core/extensions/wrapper.ts",
+      "sha256": "c89397e268ccf27aa465fa1307fdbe324a3457966803e3fc6ec4d982ae2d379d"
+    },
+    {
+      "path": "validation/agent-runtime/dsh-pi-sources/pi/packages__coding-agent__examples__extensions__sandbox__index.ts",
+      "url": "https://github.com/earendil-works/pi/blob/d981de1229ef899957bbe968bc8dcda02a21f477/packages/coding-agent/examples/extensions/sandbox/index.ts",
+      "sha256": "b5e527aac27254002f27b8bb9de7bc62e242e39eeb7c963683096039e0aa173e"
+    },
+    {
+      "path": "validation/agent-runtime/dsh-pi-sources/dsh/packages__core__agent-loop__src__tool-calls.ts",
+      "url": "https://github.com/deepseek-ai/deepseek-harness/blob/c291e7961a515f6d7af9304e7fd1d257929aef26/packages/core/agent-loop/src/tool-calls.ts",
+      "sha256": "1f8984127d4245b6a08c1e4b0c8b9d8fa7ce30ffcf08184187f16dc1bf57ae6d"
+    },
+    {
+      "path": "validation/agent-runtime/dsh-pi-sources/dsh/packages__core__agent-loop__src__constants.ts",
+      "url": "https://github.com/deepseek-ai/deepseek-harness/blob/c291e7961a515f6d7af9304e7fd1d257929aef26/packages/core/agent-loop/src/constants.ts",
+      "sha256": "435d31d3c8740f5ebaefa5c12f22d7cda8ea8c6d018e6fcda459161174ecc971"
+    },
+    {
+      "path": "validation/agent-runtime/dsh-pi-sources/dsh/packages__core__agent__src__types.ts",
+      "url": "https://github.com/deepseek-ai/deepseek-harness/blob/c291e7961a515f6d7af9304e7fd1d257929aef26/packages/core/agent/src/types.ts",
+      "sha256": "1ea78487371e0c64719bce27615e16be7efb729d5a45bb514c318d74546b0b0a"
+    },
+    {
+      "path": "validation/agent-runtime/dsh-pi-sources/dsh/packages__interaction__user-approval__src__index.ts",
+      "url": "https://github.com/deepseek-ai/deepseek-harness/blob/c291e7961a515f6d7af9304e7fd1d257929aef26/packages/interaction/user-approval/src/index.ts",
+      "sha256": "ff1e010e8ff914e9fcd6500dadcee4d41253b2d148cf12858a000d06bda76ddd"
+    },
+    {
+      "path": "validation/agent-runtime/dsh-pi-sources/dsh/packages__session__session-persistence-jsonl__src__lease.ts",
+      "url": "https://github.com/deepseek-ai/deepseek-harness/blob/c291e7961a515f6d7af9304e7fd1d257929aef26/packages/session/session-persistence-jsonl/src/lease.ts",
+      "sha256": "377f24b1446382d703d5f1346f44e15a25368a0e7967e5bd41db700a919d7ad8"
+    },
+    {
+      "path": "validation/agent-runtime/dsh-pi-sources/dsh/packages__session__session-persistence-jsonl__src__index.ts",
+      "url": "https://github.com/deepseek-ai/deepseek-harness/blob/c291e7961a515f6d7af9304e7fd1d257929aef26/packages/session/session-persistence-jsonl/src/index.ts",
+      "sha256": "69931beb012cde8453d46589bb83703552cb7c8e19438e67b3548042882ab861"
+    },
+    {
+      "path": "validation/agent-runtime/dsh-pi-sources/dsh/packages__session__session-persistence-jsonl__src__storage.ts",
+      "url": "https://github.com/deepseek-ai/deepseek-harness/blob/c291e7961a515f6d7af9304e7fd1d257929aef26/packages/session/session-persistence-jsonl/src/storage.ts",
+      "sha256": "41d6e4af01d3f613eb9d4e89e3d8ddded5070b4e73c7b3f858a61cbbd3b43b33"
+    },
+    {
+      "path": "validation/agent-runtime/dsh-pi-sources/dsh/packages__sandbox__sandbox-local__src__index.ts",
+      "url": "https://github.com/deepseek-ai/deepseek-harness/blob/c291e7961a515f6d7af9304e7fd1d257929aef26/packages/sandbox/sandbox-local/src/index.ts",
+      "sha256": "e3c2aae0d9623e12ea6c78af32f84ddd06f448b652d591baa09f3cbf143a313b"
+    },
+    {
+      "path": "validation/agent-runtime/dsh-pi-sources/dsh/packages__api__gateway__src__stream-protocol.ts",
+      "url": "https://github.com/deepseek-ai/deepseek-harness/blob/c291e7961a515f6d7af9304e7fd1d257929aef26/packages/api/gateway/src/stream-protocol.ts",
+      "sha256": "24bc63f54b5fdd31d6eac7c19306f539bdde2d5848ada2471b46c6ce32036f3b"
+    },
+    {
+      "path": "validation/agent-runtime/dsh-pi-sources/dsh/packages__api__session-controller__src__remote-events.ts",
+      "url": "https://github.com/deepseek-ai/deepseek-harness/blob/c291e7961a515f6d7af9304e7fd1d257929aef26/packages/api/session-controller/src/remote-events.ts",
+      "sha256": "c44915bb22ce3bb812932fa3901de01b69da03a82e9aac3f14d92a906e226fb5"
+    },
+    {
+      "path": "validation/agent-runtime/dsh-pi-sources/pi/packages__coding-agent__src__modes__rpc__rpc-mode.ts",
+      "url": "https://github.com/earendil-works/pi/blob/d981de1229ef899957bbe968bc8dcda02a21f477/packages/coding-agent/src/modes/rpc/rpc-mode.ts",
+      "sha256": "088f2c89f6c16189d74f92a7dd2a361778fc3d3a235c689c4b03ee54bf64622e"
+    },
+    {
+      "path": "validation/agent-runtime/dsh-pi-sources/pi/packages__coding-agent__src__core__agent-session-services.ts",
+      "url": "https://github.com/earendil-works/pi/blob/d981de1229ef899957bbe968bc8dcda02a21f477/packages/coding-agent/src/core/agent-session-services.ts",
+      "sha256": "831c56842c394969567199a9e5ccdaebb9a3df7bdde825aa677935b825afedd6"
+    },
+    {
+      "path": "validation/agent-runtime/dsh-pi-sources/pi/packages__coding-agent__src__core__sdk.ts",
+      "url": "https://github.com/earendil-works/pi/blob/d981de1229ef899957bbe968bc8dcda02a21f477/packages/coding-agent/src/core/sdk.ts",
+      "sha256": "938f9f3d484544040e7a06e6f89a07adb72ab007ea660bcaf4a8c1846d20a021"
+    },
+    {
+      "path": "validation/agent-runtime/dsh-pi-sources/pi/packages__coding-agent__docs__containerization.md",
+      "url": "https://github.com/earendil-works/pi/blob/d981de1229ef899957bbe968bc8dcda02a21f477/packages/coding-agent/docs/containerization.md",
+      "sha256": "08c73601853f124668f311e03cf31e6413512fa08814acb11f5810d31f56c0c2"
+    },
+    {
+      "path": "validation/agent-runtime/dsh-pi-sources/pi/packages__agent__benchmark__session__README.md",
+      "url": "https://github.com/earendil-works/pi/blob/d981de1229ef899957bbe968bc8dcda02a21f477/packages/agent/benchmark/session/README.md",
+      "sha256": "eccbaea04d574880b788495309230a952b1622bd6167b4e7cf2d5d8bfd6788c8"
+    },
+    {
+      "path": "validation/agent-runtime/dsh-pi-sources/dsh-npm-latest.source",
+      "url": "https://registry.npmjs.org/@deepseek-ai%2fdsh/latest",
+      "sha256": "75445da027499cc59f56629f6066cc4397dda35e4d5b9c90f153a01003ab89d9"
+    },
+    {
+      "path": "validation/agent-runtime/dsh-pi-sources/pi-npm-latest.source",
+      "url": "https://registry.npmjs.org/@earendil-works%2fpi-coding-agent/latest",
+      "sha256": "3f6f840ec6df9cc731e6c9d1dca4ca31ffa609797fb8b0ee78aaf34e2981c3c0"
+    },
+    {
+      "path": "validation/agent-runtime/dsh-pi-sources/dsh-head-patch.source",
+      "url": "https://github.com/deepseek-ai/deepseek-harness/commit/c291e7961a515f6d7af9304e7fd1d257929aef26.patch",
+      "sha256": "ef2aede1f7fdb5fe84c19ff6e3d6a92408643f4167d4ba82e08bd1c4379102d5"
+    },
+    {
+      "path": "validation/agent-runtime/dsh-pi-sources/dsh-tag-patch.source",
+      "url": "https://github.com/deepseek-ai/deepseek-harness/commit/fb2c4b9e698e30edb738bca4cf0618587db7d203.patch",
+      "sha256": "d0d97ba65d295f451015bff1df5ad582c48dbcd532c10b77af58b24b11582dd8"
+    },
+    {
+      "path": "validation/agent-runtime/dsh-pi-sources/pi-release-page.source",
+      "url": "https://github.com/earendil-works/pi/releases/tag/v0.85.1",
+      "sha256": "9cf4ed194b7500a201b2ecb0948beb96260f19f469052788081ee287f04fce9f"
+    },
+    {
+      "path": "validation/agent-runtime/dsh-pi-sources/dsh-official.source",
+      "url": "https://www.deepseek.com/harness/",
+      "sha256": "740dff92a020aee6ceccc1b3ffa1c4a5234cf05fcdb8cdb0eb1e00bb451df6ea"
+    },
+    {
+      "path": "validation/agent-runtime/dsh-pi-sources/paper-convergence.source",
+      "url": "https://arxiv.org/abs/2608.23953",
+      "sha256": "22318059782a55c8742ed41247c19fa2ad8114931689f1d88c1f7fbf9698d2ce"
+    },
+    {
+      "path": "validation/agent-runtime/dsh-pi-sources/paper-injection.source",
+      "url": "https://arxiv.org/abs/2608.16393v2",
+      "sha256": "2afe261ae666af3d7b0c3e1a3055cc0412e39eef15f1a21c73e0cd94ece9e15a"
+    }
+  ],
+  "failedFetches": [
+    {
+      "url": "https://api.github.com/repos/OpenBMB/StaffDeck/commits/main",
+      "exit": 56,
+      "error": "curl: (56) The requested URL returned error: 403"
+    },
+    {
+      "url": "https://api.github.com/repos/OpenBMB/StaffDeck/releases/latest",
+      "exit": 56,
+      "error": "curl: (56) The requested URL returned error: 403"
+    },
+    {
+      "url": "https://api.github.com/repos/openai/codex/commits/main",
+      "exit": 56,
+      "error": "curl: (56) The requested URL returned error: 403"
+    },
+    {
+      "url": "https://api.github.com/repos/openai/codex/releases/latest",
+      "exit": 56,
+      "error": "curl: (56) The requested URL returned error: 403"
+    },
+    {
+      "url": "https://openai.com/index/harness-engineering/",
+      "exit": 56,
+      "error": "curl: (56) The requested URL returned error: 403"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/openai/codex/e8271aa8b482f917b2e62dca0e51e29b8d5ec156/codex-rs/app-server/README.md",
+      "exit": 35,
+      "error": "curl: (35) LibreSSL SSL_connect: SSL_ERROR_SYSCALL in connection to raw.githubusercontent.com:443"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/openai/codex/e8271aa8b482f917b2e62dca0e51e29b8d5ec156/LICENSE",
+      "exit": 35,
+      "error": "curl: (35) LibreSSL SSL_connect: SSL_ERROR_SYSCALL in connection to raw.githubusercontent.com:443"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/openai/codex/e8271aa8b482f917b2e62dca0e51e29b8d5ec156/sdk/typescript/README.md",
+      "exit": 35,
+      "error": "curl: (35) LibreSSL SSL_connect: SSL_ERROR_SYSCALL in connection to raw.githubusercontent.com:443"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/openai/codex/e8271aa8b482f917b2e62dca0e51e29b8d5ec156/docs/security.md",
+      "exit": 35,
+      "error": "curl: (35) LibreSSL SSL_connect: SSL_ERROR_SYSCALL in connection to raw.githubusercontent.com:443"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/openai/codex/e8271aa8b482f917b2e62dca0e51e29b8d5ec156/codex-rs/app-server-protocol/src/protocol/v2.rs",
+      "exit": 35,
+      "error": "curl: (35) LibreSSL SSL_connect: SSL_ERROR_SYSCALL in connection to raw.githubusercontent.com:443"
+    },
+    {
+      "url": "https://api.github.com/repos/deepseek-ai/deepseek-harness",
+      "exit": 56,
+      "error": "curl: (56) The requested URL returned error: 403\n"
+    },
+    {
+      "url": "https://api.github.com/repos/deepseek-ai/deepseek-harness/releases/latest",
+      "exit": 56,
+      "error": "curl: (56) The requested URL returned error: 404\n"
+    },
+    {
+      "url": "https://api.github.com/repos/deepseek-ai/deepseek-harness/commits/HEAD",
+      "exit": 56,
+      "error": "curl: (56) The requested URL returned error: 403\n"
+    },
+    {
+      "url": "https://api.github.com/repos/badlogic/pi-mono/releases/latest",
+      "exit": 56,
+      "error": "curl: (56) The requested URL returned error: 403\n"
+    },
+    {
+      "url": "https://api.github.com/repos/badlogic/pi-mono/commits/HEAD",
+      "exit": 56,
+      "error": "curl: (56) The requested URL returned error: 403\n"
+    }
+  ],
+  "documents": [
+    {
+      "path": "README.md",
+      "sha256": "52a05307d7298b57265acefd4b64c2062e90b6c034edf67b3aa43e74633176c7"
+    },
+    {
+      "path": "CONTEXT.md",
+      "sha256": "5e21873ee116f29e903429a8b7f70334746aae9970464f8355c1600de20b8e41"
+    },
+    {
+      "path": "docs/设计包/37-技术架构总设计与决策.md",
+      "sha256": "5b48431cb80c2d1efc84128c3ebb83d920ec163a58820ccc25eadfdb5241dd35"
+    },
+    {
+      "path": "docs/设计包/41-AI运行知识分析与安全设计.md",
+      "sha256": "fd4e043d5a973d23888e75d845be1f73b029abbae07d6d9c3e635ef3d63083dc"
+    },
+    {
+      "path": "docs/设计包/46-开发基线与低代码插件化决策.md",
+      "sha256": "0c4012eb89a5ea48968aa845049905f76cb3226ee222e904fa7bee15d7601106"
+    },
+    {
+      "path": "docs/设计包/53-AI运行工具与效果评测规范.md",
+      "sha256": "e86970cdef94b3dc728e71c0386e94ef965838c1f1026d75f935cb355de3a010"
+    },
+    {
+      "path": "docs/设计包/56-知识记忆技术栈与实施决策.md",
+      "sha256": "5b21de893137d2367f01ebd2dc407fe9a1a3207fc78ec39a89dbdc9a009b96af"
+    },
+    {
+      "path": "docs/设计包/57-Agent运行框架最新源码研究.md",
+      "sha256": "c006f540dae9202bbd7589fe1ec05bffd265304971225008ce94bd169ce1ef23"
+    },
+    {
+      "path": "docs/设计包/58-Agent技术架构与性能实施设计.md",
+      "sha256": "9f87d31b4d4c889c77fd662cf689873293dd2517e6d5af99dda6f573667cd3d5"
+    },
+    {
+      "path": "docs/设计包/54-开源二开与完整商用准入.md",
+      "sha256": "ebbf37fd05e3cbb4b1dcaaac80025dc9dfdaa4c0116735e206b1a32e8aa45bb7"
+    },
+    {
+      "path": "validation/agent-runtime/dsh-pi-research.md",
+      "sha256": "80660267f226be5bf96a5f01ee9f3c45052a975e23b09475f3830d0197f3c20b"
+    }
+  ],
+  "runtimeCases": [
+    {
+      "id": "AR-P01",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "AR-P02",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "AR-P03",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "AR-P04",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "AR-P05",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "AR-P06",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "AR-P07",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "AR-P08",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "AR-P09",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "AR-P10",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "AR-P11",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "AR-P12",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "AR-P13",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "AR-P14",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "AR-P15",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "AR-P16",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "AR-P17",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "AR-P18",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "AR-P19",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "AR-P20",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "AR-P21",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "AR-P22",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "AR-P23",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "AR-P24",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "AR-P25",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "AR-P26",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "AR-P27",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "AR-P28",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "AR-P29",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "AR-P30",
+      "status": "NOT_RUN"
+    }
+  ],
+  "productTestsRun": false,
+  "benchmarkRun": false,
+  "commercialReleaseCleared": false,
+  "limitations": [
+    "Saved source integrity and document structure only; no candidate execution or model calls.",
+    "Semantic conclusions were reviewed against source separately; keyword checks are not safety proof.",
+    "New Mermaid source blocks were structurally checked, not browser-rendered.",
+    "Performance formula and targets are design assumptions, not measurements.",
+    "Public source archives are research evidence and are not approved product distribution contents."
+  ]
+}

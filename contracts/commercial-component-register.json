@@ -1,0 +1,149 @@
+{
+  "scope": "CANDIDATE_FINDINGS_NOT_FINAL_SBOM",
+  "finalStackSelected": false,
+  "commercialReleaseCleared": false,
+  "requirements": "开源二开优先；闭源商业部署/托管/客户交付及适用义务",
+  "source": "docs/设计包/36-开源底座源码研究与技术选型.md",
+  "components": [
+    {
+      "name": "RuoYi-AI backend",
+      "version": "cca30905778357e3aeb42b6adb65ef2384e75e60",
+      "licenseFinding": "MIT with separately licensed subdirectories",
+      "sourceUrl": "https://github.com/ageerle/ruoyi-ai/blob/cca30905778357e3aeb42b6adb65ef2384e75e60/LICENSE",
+      "decision": "UNKNOWN",
+      "closure": "排除受限Skills并验证替代、全依赖和实际产物",
+      "shipped": false,
+      "closureStatus": "NOT_DONE"
+    },
+    {
+      "name": "RuoYi-AI admin frontend",
+      "version": "5155f43861c974770bc04bce0b11dc21f3142e04",
+      "licenseFinding": "MIT root",
+      "sourceUrl": "https://github.com/ageerle/ruoyi-admin/blob/5155f43861c974770bc04bce0b11dc21f3142e04/LICENSE",
+      "decision": "UNKNOWN",
+      "closure": "完整依赖与实际启用前端核验",
+      "shipped": false,
+      "closureStatus": "NOT_DONE"
+    },
+    {
+      "name": "RuoYi-AI user frontend",
+      "version": "d920a210ea4d24098711507913a70ff444a0c8e6",
+      "licenseFinding": "MIT root",
+      "sourceUrl": "https://github.com/ageerle/ruoyi-web/blob/d920a210ea4d24098711507913a70ff444a0c8e6/license",
+      "decision": "UNKNOWN",
+      "closure": "完整依赖与双前端整合",
+      "shipped": false,
+      "closureStatus": "NOT_DONE"
+    },
+    {
+      "name": "RuoYi-AI bundled docx skill",
+      "version": "cca30905778357e3aeb42b6adb65ef2384e75e60",
+      "licenseFinding": "separate restricted terms",
+      "sourceUrl": "https://github.com/ageerle/ruoyi-ai/blob/cca30905778357e3aeb42b6adb65ef2384e75e60/ruoyi-admin/src/main/resources/skills/docx/LICENSE.txt",
+      "decision": "EXCLUDE",
+      "closure": "排除内容和打包引用；以合格实现补齐文档能力",
+      "shipped": false,
+      "closureStatus": "NOT_DONE"
+    },
+    {
+      "name": "RuoYi-AI bundled pdf skill",
+      "version": "cca30905778357e3aeb42b6adb65ef2384e75e60",
+      "licenseFinding": "separate restricted terms",
+      "sourceUrl": "https://github.com/ageerle/ruoyi-ai/blob/cca30905778357e3aeb42b6adb65ef2384e75e60/ruoyi-admin/src/main/resources/skills/pdf/LICENSE.txt",
+      "decision": "EXCLUDE",
+      "closure": "同上",
+      "shipped": false,
+      "closureStatus": "NOT_DONE"
+    },
+    {
+      "name": "RuoYi-AI bundled xlsx skill",
+      "version": "cca30905778357e3aeb42b6adb65ef2384e75e60",
+      "licenseFinding": "separate restricted terms",
+      "sourceUrl": "https://github.com/ageerle/ruoyi-ai/blob/cca30905778357e3aeb42b6adb65ef2384e75e60/ruoyi-admin/src/main/resources/skills/xlsx/LICENSE.txt",
+      "decision": "EXCLUDE",
+      "closure": "同上",
+      "shipped": false,
+      "closureStatus": "NOT_DONE"
+    },
+    {
+      "name": "Yudao backend",
+      "version": "8e43004cf68a405cd3485f98f8a539b97ca6544a",
+      "licenseFinding": "MIT root",
+      "sourceUrl": "https://github.com/YunaiV/ruoyi-vue-pro/blob/8e43004cf68a405cd3485f98f8a539b97ca6544a/LICENSE",
+      "decision": "UNKNOWN",
+      "closure": "BOM兼容/合法初始化/传递依赖",
+      "shipped": false,
+      "closureStatus": "NOT_DONE"
+    },
+    {
+      "name": "Yudao frontend",
+      "version": "aab14fb0e74720dd09e964ae066f8bbde9f9012e",
+      "licenseFinding": "MIT root with dependency obligations",
+      "sourceUrl": "https://github.com/yudaocode/yudao-ui-admin-vue3/blob/aab14fb0e74720dd09e964ae066f8bbde9f9012e/LICENSE",
+      "decision": "UNKNOWN",
+      "closure": "dhtmlx/Tinyflow等实际产物核验",
+      "shipped": false,
+      "closureStatus": "NOT_DONE"
+    },
+    {
+      "name": "dhtmlx-gantt",
+      "version": "9.1.4",
+      "licenseFinding": "GPL-2.0 published metadata",
+      "sourceUrl": "https://registry.npmjs.org/dhtmlx-gantt/9.1.4",
+      "decision": "REPLACE",
+      "closure": "保持原功能并验证合格替代；未完成",
+      "shipped": false,
+      "closureStatus": "NOT_DONE"
+    },
+    {
+      "name": "Tinyflow Java",
+      "version": "1.2.6",
+      "licenseFinding": "LGPL-3.0 declared POM",
+      "sourceUrl": "https://repo.maven.apache.org/maven2/dev/tinyflow/tinyflow-java/1.2.6/tinyflow-java-1.2.6.pom",
+      "decision": "UNKNOWN",
+      "closure": "优先复用SDK及合格界面，或明确具体分发义务",
+      "shipped": false,
+      "closureStatus": "NOT_DONE"
+    },
+    {
+      "name": "Tinyflow vendored UI",
+      "version": "upstream mapping unresolved",
+      "licenseFinding": "LGPL-3.0 upstream",
+      "sourceUrl": "https://github.com/tinyflow-ai/tinyflow/blob/1defc45654951b498bb8b2df7671af30b1a5b5ec/LICENSE",
+      "decision": "UNKNOWN",
+      "closure": "确切来源/修改链及义务未关闭",
+      "shipped": false,
+      "closureStatus": "NOT_DONE"
+    },
+    {
+      "name": "bpmn-js",
+      "version": "18.16.1",
+      "licenseFinding": "bpmn.io license with watermark condition",
+      "sourceUrl": "https://github.com/bpmn-io/bpmn-js/blob/v18.16.1/LICENSE",
+      "decision": "UNKNOWN",
+      "closure": "保留适用标识并核最终界面",
+      "shipped": false,
+      "closureStatus": "NOT_DONE"
+    },
+    {
+      "name": "Warm-Flow",
+      "version": "1.8.2",
+      "licenseFinding": "Apache-2.0",
+      "sourceUrl": "https://github.com/dromara/warm-flow/blob/dcb7e523d6d4cd6fcd2216161778b708c408b137/LICENSE",
+      "decision": "UNKNOWN",
+      "closure": "具体starter、传递依赖与NOTICE核验",
+      "shipped": false,
+      "closureStatus": "NOT_DONE"
+    },
+    {
+      "name": "RuoYi-Vue-Plus",
+      "version": "4d1448b4b46453aff9f2521e2b9b8f44fe0db624",
+      "licenseFinding": "MIT root",
+      "sourceUrl": "https://github.com/dromara/RuoYi-Vue-Plus/blob/4d1448b4b46453aff9f2521e2b9b8f44fe0db624/LICENSE",
+      "decision": "UNKNOWN",
+      "closure": "Java21/Boot4与完整产物核验",
+      "shipped": false,
+      "closureStatus": "NOT_DONE"
+    }
+  ]
+}

@@ -1,0 +1,46 @@
+{
+  "sourceRevision": "v2.5",
+  "status": "PRESERVED",
+  "artifacts": [
+    {
+      "file": "09-协作扩展候选.schema.json",
+      "baselineSha256": "1febdcd56897f76aaf29087ab7919710397f1c87a6b859fd14fc96e92fe48f45",
+      "currentSha256": "1febdcd56897f76aaf29087ab7919710397f1c87a6b859fd14fc96e92fe48f45"
+    },
+    {
+      "file": "10-需求追踪数据.json",
+      "baselineSha256": "f462eedd02e8b0168cacfcf5d2e7cc9a2135b710021e4598e2c8e73ca7c0c002",
+      "currentSha256": "f462eedd02e8b0168cacfcf5d2e7cc9a2135b710021e4598e2c8e73ca7c0c002"
+    },
+    {
+      "file": "11-存量合同字段字典.md",
+      "baselineSha256": "2027f594acf10075a62f802b50a7addb33992318a050755563b0da40bc67dea9",
+      "currentSha256": "2027f594acf10075a62f802b50a7addb33992318a050755563b0da40bc67dea9"
+    },
+    {
+      "file": "12-员工市场复制与使用设计.md",
+      "baselineSha256": "3dd288d28b31cf43629ef9878916742078c3f893b99a9862bf7bd5eeca43ef8d",
+      "currentSha256": "3dd288d28b31cf43629ef9878916742078c3f893b99a9862bf7bd5eeca43ef8d"
+    },
+    {
+      "file": "13-市场采用候选.schema.json",
+      "baselineSha256": "3297a6a8f331f54b368a561148ec48a2bc27fe2b482033dffbadcfb684738ffd",
+      "currentSha256": "3297a6a8f331f54b368a561148ec48a2bc27fe2b482033dffbadcfb684738ffd"
+    },
+    {
+      "file": "16-角色视角与权限演示数据.json",
+      "baselineSha256": "fd3ac843ab53c5ce94f5f70214e735ff85501cc3f34f1bb9d52f36fbdfa35791",
+      "currentSha256": "fd3ac843ab53c5ce94f5f70214e735ff85501cc3f34f1bb9d52f36fbdfa35791"
+    },
+    {
+      "file": "17-角色需求与验收追踪.json",
+      "baselineSha256": "72913aac3eb6dce0e7047fa51f56460d717d51d8eccc04ecb986549a5eddbbb8",
+      "currentSha256": "72913aac3eb6dce0e7047fa51f56460d717d51d8eccc04ecb986549a5eddbbb8"
+    },
+    {
+      "file": "ZKER-staff-完整优化清单-v2-人员数字员工与上下文对齐.md",
+      "baselineSha256": "698183a16c0ee189d21ca9b18de8e73a5394b0358e5b9d94abac3a5f66b91874",
+      "currentSha256": "698183a16c0ee189d21ca9b18de8e73a5394b0358e5b9d94abac3a5f66b91874"
+    }
+  ]
+}

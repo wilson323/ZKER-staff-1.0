@@ -1,0 +1,149 @@
+{
+  "sha": "6ab21cac18ebb6f4ae29102c7f8f5cc11affd5de",
+  "node_id": "C_kwDOD_vaGdoAKDZhYjIxY2FjMThlYmI2ZjRhZTI5MTAyYzdmOGY1Y2MxMWFmZmQ1ZGU",
+  "commit": {
+    "author": {
+      "name": "Tim Visée",
+      "email": "tim+github@visee.me",
+      "date": "2026-09-03T12:36:18Z"
+    },
+    "committer": {
+      "name": "GitHub",
+      "email": "noreply@github.com",
+      "date": "2026-09-03T12:36:18Z"
+    },
+    "message": "Bump version to 1.19.1 (#10463)\n\n* Bump version to 1.19.1\n\n* Update missed cherry picks",
+    "tree": {
+      "sha": "08b3c04d4bef7b4ca57cc40b2bedac29ea7bc3e8",
+      "url": "https://api.github.com/repos/qdrant/qdrant/git/trees/08b3c04d4bef7b4ca57cc40b2bedac29ea7bc3e8"
+    },
+    "url": "https://api.github.com/repos/qdrant/qdrant/git/commits/6ab21cac18ebb6f4ae29102c7f8f5cc11affd5de",
+    "comment_count": 0,
+    "verification": {
+      "verified": true,
+      "reason": "valid",
+      "signature": "-----BEGIN PGP SIGNATURE-----\n\nwsFcBAABCAAQBQJqmWnCCRC1aQ7uu5UhlAAAyy8QADQwUz+AjWw+2mi06AHvtN+y\nq0mq9LX6EJqYFJG1Q0WvSzNfHAyaVZnU4gPwnLbnTFVJ/ZxHivlE4bEQjZlvGaPK\nioESrH2bLGpknJhEz0TwC/HCRUwWdcUmfgue/PQC3d0unWXd2z+MAA3pLLm+Ulhq\n2zLeEHzC6h/F+B8nGaK/XmFqXMB3j24MpZaUcFF65OaXydBD0cnHgfBTl53v76xp\nJz6khU/xfvJCZTAH68EbJMTKum6y7WVzcYGWsRHHwTUzFfD5qCVKFDxC2cMdBDIp\ny+4b5da6OAA/JVUuwwCH2DJEvR1EFs94utlfrGANMEeIdp5DMmp4SJwyU4jnix4t\nTwWNcn0DKQA6WERyKy1zsDbohesYFui1BkBfT2U0tD1JJjMJ3sb5SCzQAl4mQOBE\nZbxLTH2DYAdHsDqspeT3IDFzHAH4p7HaT0nCgQU9jakXw29lq7bnRP3N3+1cbwc1\nLM9qgIp2JRF2b73uWOLpLe+OpCziPGLGPvDl06wYPTaFduXIeUJ9Ao640J+a659B\n/aYba6zzIR9+kDMSocOlWTNv1cXUV7VIIyV3KGT5f4CN9VG7pfBuv7/vfWqzyLa9\noxnSd6gY30i7Ov4Vyh0nExRJLJvbTbn0ltFVxlSd7x4ENOSfHmPr76Z38uVv8ffb\nCpjceucpsE6JsT+VrRKy\n=Z895\n-----END PGP SIGNATURE-----\n",
+      "payload": "tree 08b3c04d4bef7b4ca57cc40b2bedac29ea7bc3e8\nparent b58a35004a1b5fb5fa5afcce064a5aca740f8d8c\nauthor Tim Visée <tim+github@visee.me> 1788438978 +0200\ncommitter GitHub <noreply@github.com> 1788438978 +0200\n\nBump version to 1.19.1 (#10463)\n\n* Bump version to 1.19.1\n\n* Update missed cherry picks",
+      "verified_at": "2026-09-03T12:36:18Z"
+    }
+  },
+  "url": "https://api.github.com/repos/qdrant/qdrant/commits/6ab21cac18ebb6f4ae29102c7f8f5cc11affd5de",
+  "html_url": "https://github.com/qdrant/qdrant/commit/6ab21cac18ebb6f4ae29102c7f8f5cc11affd5de",
+  "comments_url": "https://api.github.com/repos/qdrant/qdrant/commits/6ab21cac18ebb6f4ae29102c7f8f5cc11affd5de/comments",
+  "author": {
+    "login": "timvisee",
+    "id": 856222,
+    "node_id": "MDQ6VXNlcjg1NjIyMg==",
+    "avatar_url": "https://avatars.githubusercontent.com/u/856222?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/timvisee",
+    "html_url": "https://github.com/timvisee",
+    "followers_url": "https://api.github.com/users/timvisee/followers",
+    "following_url": "https://api.github.com/users/timvisee/following{/other_user}",
+    "gists_url": "https://api.github.com/users/timvisee/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/timvisee/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/timvisee/subscriptions",
+    "organizations_url": "https://api.github.com/users/timvisee/orgs",
+    "repos_url": "https://api.github.com/users/timvisee/repos",
+    "events_url": "https://api.github.com/users/timvisee/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/timvisee/received_events",
+    "type": "User",
+    "user_view_type": "public",
+    "site_admin": false
+  },
+  "committer": {
+    "login": "web-flow",
+    "id": 19864447,
+    "node_id": "MDQ6VXNlcjE5ODY0NDQ3",
+    "avatar_url": "https://avatars.githubusercontent.com/u/19864447?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/web-flow",
+    "html_url": "https://github.com/web-flow",
+    "followers_url": "https://api.github.com/users/web-flow/followers",
+    "following_url": "https://api.github.com/users/web-flow/following{/other_user}",
+    "gists_url": "https://api.github.com/users/web-flow/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/web-flow/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/web-flow/subscriptions",
+    "organizations_url": "https://api.github.com/users/web-flow/orgs",
+    "repos_url": "https://api.github.com/users/web-flow/repos",
+    "events_url": "https://api.github.com/users/web-flow/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/web-flow/received_events",
+    "type": "User",
+    "user_view_type": "public",
+    "site_admin": false
+  },
+  "parents": [
+    {
+      "sha": "b58a35004a1b5fb5fa5afcce064a5aca740f8d8c",
+      "url": "https://api.github.com/repos/qdrant/qdrant/commits/b58a35004a1b5fb5fa5afcce064a5aca740f8d8c",
+      "html_url": "https://github.com/qdrant/qdrant/commit/b58a35004a1b5fb5fa5afcce064a5aca740f8d8c"
+    }
+  ],
+  "stats": {
+    "total": 12,
+    "additions": 6,
+    "deletions": 6
+  },
+  "files": [
+    {
+      "sha": "030349c5b0fb3684bed5de1e9417139bd8573a53",
+      "filename": "Cargo.lock",
+      "status": "modified",
+      "additions": 2,
+      "deletions": 2,
+      "changes": 4,
+      "blob_url": "https://github.com/qdrant/qdrant/blob/6ab21cac18ebb6f4ae29102c7f8f5cc11affd5de/Cargo.lock",
+      "raw_url": "https://github.com/qdrant/qdrant/raw/6ab21cac18ebb6f4ae29102c7f8f5cc11affd5de/Cargo.lock",
+      "contents_url": "https://api.github.com/repos/qdrant/qdrant/contents/Cargo.lock?ref=6ab21cac18ebb6f4ae29102c7f8f5cc11affd5de",
+      "patch": "@@ -494,7 +494,7 @@ checksum = \"330a5ed07fa54e4702c9d6c4174f74427fc0ef6e214bbd677ae50a5099946470\"\n \n [[package]]\n name = \"api\"\n-version = \"1.19.0\"\n+version = \"1.19.1\"\n dependencies = [\n  \"ahash\",\n  \"chrono\",\n@@ -6005,7 +6005,7 @@ dependencies = [\n \n [[package]]\n name = \"qdrant\"\n-version = \"1.19.0\"\n+version = \"1.19.1\"\n dependencies = [\n  \"actix-cors\",\n  \"actix-files\","
+    },
+    {
+      "sha": "5d291ef1adb6a44b3b5c640f6662e4f349743280",
+      "filename": "Cargo.toml",
+      "status": "modified",
+      "additions": 1,
+      "deletions": 1,
+      "changes": 2,
+      "blob_url": "https://github.com/qdrant/qdrant/blob/6ab21cac18ebb6f4ae29102c7f8f5cc11affd5de/Cargo.toml",
+      "raw_url": "https://github.com/qdrant/qdrant/raw/6ab21cac18ebb6f4ae29102c7f8f5cc11affd5de/Cargo.toml",
+      "contents_url": "https://api.github.com/repos/qdrant/qdrant/contents/Cargo.toml?ref=6ab21cac18ebb6f4ae29102c7f8f5cc11affd5de",
+      "patch": "@@ -1,6 +1,6 @@\n [package]\n name = \"qdrant\"\n-version = \"1.19.0\"\n+version = \"1.19.1\"\n description = \"Qdrant - Vector Search engine\"\n authors = [\n     \"Andrey Vasnetsov <andrey@vasnetsov.com>\","
+    },
+    {
+      "sha": "effaf2a5bf8740af9ea52ba49eaa1778e87d33be",
+      "filename": "lib/api/Cargo.toml",
+      "status": "modified",
+      "additions": 1,
+      "deletions": 1,
+      "changes": 2,
+      "blob_url": "https://github.com/qdrant/qdrant/blob/6ab21cac18ebb6f4ae29102c7f8f5cc11affd5de/lib%2Fapi%2FCargo.toml",
+      "raw_url": "https://github.com/qdrant/qdrant/raw/6ab21cac18ebb6f4ae29102c7f8f5cc11affd5de/lib%2Fapi%2FCargo.toml",
+      "contents_url": "https://api.github.com/repos/qdrant/qdrant/contents/lib%2Fapi%2FCargo.toml?ref=6ab21cac18ebb6f4ae29102c7f8f5cc11affd5de",
+      "patch": "@@ -1,6 +1,6 @@\n [package]\n name = \"api\"\n-version = \"1.19.0\"\n+version = \"1.19.1\"\n authors = [\n     \"Andrey Vasnetsov <andrey@vasnetsov.com>\",\n     \"Qdrant Team <info@qdrant.tech>\","
+    },
+    {
+      "sha": "ee40d8c361e6b2a8f7e8659890134e39214d4bdd",
+      "filename": "lib/common/common/src/defaults.rs",
+      "status": "modified",
+      "additions": 1,
+      "deletions": 1,
+      "changes": 2,
+      "blob_url": "https://github.com/qdrant/qdrant/blob/6ab21cac18ebb6f4ae29102c7f8f5cc11affd5de/lib%2Fcommon%2Fcommon%2Fsrc%2Fdefaults.rs",
+      "raw_url": "https://github.com/qdrant/qdrant/raw/6ab21cac18ebb6f4ae29102c7f8f5cc11affd5de/lib%2Fcommon%2Fcommon%2Fsrc%2Fdefaults.rs",
+      "contents_url": "https://api.github.com/repos/qdrant/qdrant/contents/lib%2Fcommon%2Fcommon%2Fsrc%2Fdefaults.rs?ref=6ab21cac18ebb6f4ae29102c7f8f5cc11affd5de",
+      "patch": "@@ -7,7 +7,7 @@ use semver::Version;\n use crate::cpu;\n \n /// Current Qdrant version string\n-pub const QDRANT_VERSION_STRING: &str = \"1.19.0\";\n+pub const QDRANT_VERSION_STRING: &str = \"1.19.1\";\n \n /// Current Qdrant semver version\n pub static QDRANT_VERSION: LazyLock<Version> ="
+    },
+    {
+      "sha": "d93aa6eb7507d4ac77c627c0c605f57de326e32a",
+      "filename": "tools/missed_cherry_picks.sh",
+      "status": "modified",
+      "additions": 1,
+      "deletions": 1,
+      "changes": 2,
+      "blob_url": "https://github.com/qdrant/qdrant/blob/6ab21cac18ebb6f4ae29102c7f8f5cc11affd5de/tools%2Fmissed_cherry_picks.sh",
+      "raw_url": "https://github.com/qdrant/qdrant/raw/6ab21cac18ebb6f4ae29102c7f8f5cc11affd5de/tools%2Fmissed_cherry_picks.sh",
+      "contents_url": "https://api.github.com/repos/qdrant/qdrant/contents/tools%2Fmissed_cherry_picks.sh?ref=6ab21cac18ebb6f4ae29102c7f8f5cc11affd5de",
+      "patch": "@@ -8,7 +8,7 @@\n set -euo pipefail\n \n # Ignore all commits upto and including this commit hash on dev\n-IGNORE_UPTO=8ce8e3ad4a983d917e7b28621bd700b0cb815821\n+IGNORE_UPTO=20391cac08f211268e26d138ff4e9d35e9d5e668\n \n # Fetch latest branch info from remote\n git fetch -q origin master"
+    }
+  ]
+}

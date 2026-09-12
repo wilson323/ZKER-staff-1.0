@@ -1,0 +1,48 @@
+{
+  "schemaVersion": 1,
+  "projectId": "oa-digital-employee-collaboration",
+  "currentTask": "validation/development-task-article-architecture-review-20260911.json",
+  "designTrace": "docs/设计包/30-产品设计追踪数据.json",
+  "designValidator": "validation/validate_product_design_documents.py",
+  "product": {
+    "status": "NOT_CONFIGURED",
+    "stackDecision": null,
+    "commands": []
+  },
+  "agentEvaluation": {
+    "status": "PARTIAL",
+    "cases": "validation/development-agent-evals.json",
+    "reason": "原20项项目行为案例仍未逐项回放；新增Python与Node两个隔离真实Agent试用，经独立结果核验。无基线对照，不推断收益或全部覆盖。",
+    "additionalTrials": [
+      "validation/development-portable-forward-results.json"
+    ]
+  },
+  "sharedSkills": [
+    {
+      "name": "ai-native-sdlc",
+      "root": "~/.agents/skills/ai-native-sdlc",
+      "files": [
+        "SKILL.md",
+        "agents/openai.yaml",
+        "assets/eval-cases.json",
+        "assets/evidence-template.json",
+        "assets/project-profile.template.json",
+        "assets/task.md",
+        "references/evaluation.md",
+        "references/evidence-evals.md",
+        "references/lifecycle.md",
+        "references/project-adapters.md",
+        "references/research.md",
+        "references/security-review.md",
+        "references/sources.json",
+        "references/sources.md",
+        "references/workflow.md",
+        "scripts/probe_project.py",
+        "scripts/project_probe.py",
+        "scripts/test_probe_project.py",
+        "scripts/verify_evidence.py",
+        "tests/test_helpers.py"
+      ]
+    }
+  ]
+}

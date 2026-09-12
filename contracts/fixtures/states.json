@@ -1,0 +1,69 @@
+{
+  "scope": "TRANSITION_TABLE_VALIDATION_ONLY",
+  "cases": [
+    {
+      "id": "STATE-01",
+      "machine": "Attempt",
+      "before": "RESULT_UNKNOWN",
+      "after": "RUNNING",
+      "allowed": false,
+      "reason": "不能把查证改为重跑"
+    },
+    {
+      "id": "STATE-02",
+      "machine": "Attempt",
+      "before": "CANCEL_REQUESTED",
+      "after": "SUCCEEDED",
+      "allowed": false,
+      "reason": "迟到结果不能自行成功"
+    },
+    {
+      "id": "STATE-03",
+      "machine": "Attempt",
+      "before": "RESULT_UNKNOWN",
+      "after": "SUCCEEDED",
+      "allowed": true,
+      "reason": "合法边，但必须查证真实回执"
+    },
+    {
+      "id": "STATE-04",
+      "machine": "HumanTask",
+      "before": "COMPLETED",
+      "after": "AVAILABLE",
+      "allowed": false,
+      "reason": "新任务新轮次，原记录不倒流"
+    },
+    {
+      "id": "STATE-05",
+      "machine": "WorkItem",
+      "before": "READY_TO_COMMIT",
+      "after": "COMMITTED",
+      "allowed": true,
+      "reason": "实际交付事务通过全部守卫"
+    },
+    {
+      "id": "STATE-06",
+      "machine": "WorkItem",
+      "before": "COMMITTED",
+      "after": "IN_PROGRESS",
+      "allowed": false,
+      "reason": "不能覆盖已交付事实"
+    },
+    {
+      "id": "STATE-07",
+      "machine": "Handoff",
+      "before": "BLOCKED",
+      "after": "ACCEPTED",
+      "allowed": false,
+      "reason": "先重新预检进入PENDING"
+    },
+    {
+      "id": "STATE-08",
+      "machine": "Review",
+      "before": "APPROVED",
+      "after": "OBSOLETE",
+      "allowed": true,
+      "reason": "目标版本变化废弃审批"
+    }
+  ]
+}

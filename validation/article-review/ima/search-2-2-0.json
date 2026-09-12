@@ -1,0 +1,60 @@
+{
+  "retrievedAt": "2026-09-11T23:55:13.132760+00:00",
+  "operation": "search_knowledge",
+  "request": {
+    "knowledge_base_id": "zkNpMBlsldSUzjVy341WpV2n17XNTEqZIL6VCUn5WM8=",
+    "cursor": "",
+    "query": "智能体"
+  },
+  "exitCode": 0,
+  "response": {
+    "code": 0,
+    "msg": "success",
+    "data": {
+      "info_list": [
+        {
+          "media_id": "folder_7497578996312202",
+          "title": "🤖 AI Agent与编程智能体",
+          "parent_folder_id": "0019d010dc0025f8",
+          "highlight_content": "",
+          "media_type": 99
+        },
+        {
+          "media_id": "wechatarticle_8189f7408df6364eae772ea1fe3507df_297919fc0b9da17a6d6075f44a82e27b",
+          "title": "构建多智能体RAG应用程序：全面指南！",
+          "parent_folder_id": "folder_7497578996312202",
+          "highlight_content": "",
+          "media_type": 6
+        },
+        {
+          "media_id": "wechatarticle_8189f7408df6364eae772ea1fe3507df_8bb84fef8b2a7105fc7cb5ad19ecfc41",
+          "title": "LangMem 发布：任何人都能轻松构建智能体记忆！",
+          "parent_folder_id": "folder_7497578996312202",
+          "highlight_content": "",
+          "media_type": 6
+        },
+        {
+          "media_id": "wechatarticle_8189f7408df6364eae772ea1fe3507df_f51f454f62d259ef18da3357d623e374",
+          "title": "一键部署 Dify + MCP Server，高效开发 AI 智能体应用",
+          "parent_folder_id": "folder_7497578996312202",
+          "highlight_content": "",
+          "media_type": 6
+        },
+        {
+          "media_id": "wechatarticle_8189f7408df6364eae772ea1fe3507df_8fba19aeb902c24a2ba5a39cd6de47a6",
+          "title": "CODESIM：多智能体代码生成与问题解决的新思路",
+          "parent_folder_id": "folder_7497578996312202",
+          "highlight_content": "",
+          "media_type": 6
+        },
+        {
+          "media_id": "wechatarticle_8189f7408df6364eae772ea1fe3507df_a1d24606fb06c88a5bfe172ddb4129d3",
+          "title": "认知篇五——人机交互&小白上手Ai可以直接套用的提示词框架（下*智能体快捷生成与倒推提示词）",
+          "parent_folder_id": "folder_7497578996312202",
+          "highlight_content": "",
+          "media_type": 6
+        }
+      ]
+    }
+  }
+}

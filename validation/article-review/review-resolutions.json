@@ -1,0 +1,70 @@
+{
+  "status": "REVIEW_FINDINGS_ADDRESSED",
+  "scope": "DOCUMENT_REVIEW_ONLY",
+  "checkedAt": "2026-09-12T00:27:42.366519+00:00",
+  "items": [
+    {
+      "id": "K1",
+      "review": "validation/article-review/primary-simplification-review.md",
+      "document": "docs/设计包/60-最小技术方案与验证决策.md",
+      "line": 91,
+      "resolution": "失效/撤权禁止以旧索引降级",
+      "status": "ADDRESSED_TEXT_REVIEW_ONLY",
+      "verifiedBy": "root direct reread + deterministic anchor check"
+    },
+    {
+      "id": "K2",
+      "review": "validation/article-review/primary-simplification-review.md",
+      "document": "docs/设计包/60-最小技术方案与验证决策.md",
+      "line": 109,
+      "resolution": "显式本人偏好直接保存；推断/共享/执行策略分级处理",
+      "status": "ADDRESSED_TEXT_REVIEW_ONLY",
+      "verifiedBy": "root direct reread + deterministic anchor check"
+    },
+    {
+      "id": "K3",
+      "review": "validation/article-review/primary-simplification-review.md",
+      "document": "docs/设计包/59-智能体文章证据复核与全栈优化.md",
+      "line": 68,
+      "resolution": "移动不自动扩大权限，复制校验目标受众",
+      "status": "ADDRESSED_TEXT_REVIEW_ONLY",
+      "verifiedBy": "root direct reread + deterministic anchor check"
+    },
+    {
+      "id": "R1",
+      "review": "validation/article-review/runtime-article-review.md",
+      "document": "docs/设计包/59-智能体文章证据复核与全栈优化.md",
+      "line": 100,
+      "resolution": "区分建议阈值与真实实验门槛，不推断同一门槛被违反",
+      "status": "ADDRESSED_TEXT_REVIEW_ONLY",
+      "verifiedBy": "root direct reread + deterministic anchor check"
+    },
+    {
+      "id": "R2",
+      "review": "validation/article-review/runtime-article-review.md",
+      "document": "docs/设计包/60-最小技术方案与验证决策.md",
+      "line": 144,
+      "resolution": "usage缺失不编造费用，保留预留并对账",
+      "status": "ADDRESSED_TEXT_REVIEW_ONLY",
+      "verifiedBy": "root direct reread + deterministic anchor check"
+    },
+    {
+      "id": "R3",
+      "review": "validation/article-review/runtime-article-review.md",
+      "document": "docs/设计包/60-最小技术方案与验证决策.md",
+      "line": 83,
+      "resolution": "基线也过门槛；同步53/57/58候选顺序",
+      "status": "ADDRESSED_TEXT_REVIEW_ONLY",
+      "verifiedBy": "root direct reread + deterministic anchor check"
+    }
+  ],
+  "finalDocumentHashes": {
+    "docs/设计包/59-智能体文章证据复核与全栈优化.md": "4c46ec80cd3583f701e2900306f4074c64b3dca1b8fbf3edeb7075e4b9be3c94",
+    "docs/设计包/60-最小技术方案与验证决策.md": "33185e22038e11b08639afd2c2f8a4598f5d42e71c5ec46e8532a9e84a59d686"
+  },
+  "notes": [
+    "Independent reviewers examined original document snapshots; root applied six local clarifications and rechecked them.",
+    "Runtime source review-check predates appended independent review; current report hashes are captured by consolidated review-check.json.",
+    "No product behavior or benchmark was tested."
+  ]
+}

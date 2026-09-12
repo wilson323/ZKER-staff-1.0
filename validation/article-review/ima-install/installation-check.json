@@ -1,0 +1,17 @@
+{
+  "status": "VERIFIED_ALREADY_INSTALLED",
+  "version": "1.1.9",
+  "officialFiles": 12,
+  "byteIdentical": 11,
+  "retainedLocalFix": "ima_api.cjs compares semver correctly; regression 1/1 PASS",
+  "skillFilesChanged": false,
+  "providedCredentialsMatchExisting": true,
+  "credentialFileMode": "0600",
+  "credentialDirectoryMode": "0700",
+  "authentication": "PASS: business code 0",
+  "limits": [
+    "Subscriber knowledge-base body access is separately restricted",
+    "Existing installation is available in current session; no new host reload was claimed"
+  ],
+  "source": "https://app-dl.ima.qq.com/skills/ima-skills-1.1.9.zip"
+}

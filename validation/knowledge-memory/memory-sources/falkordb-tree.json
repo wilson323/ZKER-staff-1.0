@@ -1,0 +1,281 @@
+{
+  "sha": "ed5b31553987c44ed516829631a9379b4589bc74",
+  "url": "https://api.github.com/repos/FalkorDB/FalkorDB/git/trees/ed5b31553987c44ed516829631a9379b4589bc74",
+  "tree": [
+    {
+      "path": ".cargo",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "9cbaea900a83310008cbf321e7026e183f9e2866",
+      "url": "https://api.github.com/repos/FalkorDB/FalkorDB/git/trees/9cbaea900a83310008cbf321e7026e183f9e2866"
+    },
+    {
+      "path": ".claude",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "2d6db3f2ee9abc3450f5d41bf6e0deaf73981243",
+      "url": "https://api.github.com/repos/FalkorDB/FalkorDB/git/trees/2d6db3f2ee9abc3450f5d41bf6e0deaf73981243"
+    },
+    {
+      "path": ".devcontainer",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "c5e3a32ac04f74a74ad730da3478a8911f8ece45",
+      "url": "https://api.github.com/repos/FalkorDB/FalkorDB/git/trees/c5e3a32ac04f74a74ad730da3478a8911f8ece45"
+    },
+    {
+      "path": ".dockerignore",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0f47df865974bfd5d56b645d688632d04fa4d622",
+      "size": 1493,
+      "url": "https://api.github.com/repos/FalkorDB/FalkorDB/git/blobs/0f47df865974bfd5d56b645d688632d04fa4d622"
+    },
+    {
+      "path": ".gitattributes",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c1965c2162ac1bd298260f1379c76c7f0bf97eff",
+      "size": 63,
+      "url": "https://api.github.com/repos/FalkorDB/FalkorDB/git/blobs/c1965c2162ac1bd298260f1379c76c7f0bf97eff"
+    },
+    {
+      "path": ".github",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "bbfbf5d9153bb965a81a7e0158b8685d9bcc1591",
+      "url": "https://api.github.com/repos/FalkorDB/FalkorDB/git/trees/bbfbf5d9153bb965a81a7e0158b8685d9bcc1591"
+    },
+    {
+      "path": ".gitignore",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d362b194162fe1219947b8fee1591dab95677575",
+      "size": 1297,
+      "url": "https://api.github.com/repos/FalkorDB/FalkorDB/git/blobs/d362b194162fe1219947b8fee1591dab95677575"
+    },
+    {
+      "path": ".gitmodules",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a3ebff0c1b3f97de1621b8ea9117e18b081bc425",
+      "size": 104,
+      "url": "https://api.github.com/repos/FalkorDB/FalkorDB/git/blobs/a3ebff0c1b3f97de1621b8ea9117e18b081bc425"
+    },
+    {
+      "path": ".vscode",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "3a4b6f87d88ddda9b4d90064493683b5bdfb2666",
+      "url": "https://api.github.com/repos/FalkorDB/FalkorDB/git/trees/3a4b6f87d88ddda9b4d90064493683b5bdfb2666"
+    },
+    {
+      "path": "CLAUDE.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "85b98ca34e74638f0039462e883e66b62377cc46",
+      "size": 8023,
+      "url": "https://api.github.com/repos/FalkorDB/FalkorDB/git/blobs/85b98ca34e74638f0039462e883e66b62377cc46"
+    },
+    {
+      "path": "Cargo.lock",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "31d8d1b0fcd1ae6df518dc875827a99204649b34",
+      "size": 47928,
+      "url": "https://api.github.com/repos/FalkorDB/FalkorDB/git/blobs/31d8d1b0fcd1ae6df518dc875827a99204649b34"
+    },
+    {
+      "path": "Cargo.toml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "efa9b53d471758a0efeb17f5a22cba5de9229818",
+      "size": 2811,
+      "url": "https://api.github.com/repos/FalkorDB/FalkorDB/git/blobs/efa9b53d471758a0efeb17f5a22cba5de9229818"
+    },
+    {
+      "path": "LICENSE",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5851192fd8d4a440dc9d815959a3587fc2e375c3",
+      "size": 34447,
+      "url": "https://api.github.com/repos/FalkorDB/FalkorDB/git/blobs/5851192fd8d4a440dc9d815959a3587fc2e375c3"
+    },
+    {
+      "path": "README.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9e11ac599a25fab53620dae2313d4293a87ee1f0",
+      "size": 22685,
+      "url": "https://api.github.com/repos/FalkorDB/FalkorDB/git/blobs/9e11ac599a25fab53620dae2313d4293a87ee1f0"
+    },
+    {
+      "path": "bench",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "a17e527acf432cb42aae6c406c5b68bf634f5dd6",
+      "url": "https://api.github.com/repos/FalkorDB/FalkorDB/git/trees/a17e527acf432cb42aae6c406c5b68bf634f5dd6"
+    },
+    {
+      "path": "build.rs",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "decbe23a442b0a1ea4c4896c3ec865f40dabedce",
+      "size": 985,
+      "url": "https://api.github.com/repos/FalkorDB/FalkorDB/git/blobs/decbe23a442b0a1ea4c4896c3ec865f40dabedce"
+    },
+    {
+      "path": "build",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "0ee26cb653e7a913dfdac485d8fa5f29f0925bf7",
+      "url": "https://api.github.com/repos/FalkorDB/FalkorDB/git/trees/0ee26cb653e7a913dfdac485d8fa5f29f0925bf7"
+    },
+    {
+      "path": "codecov.yml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8e4aa4569b45b8674fb8797bd79bb05378f0d63e",
+      "size": 239,
+      "url": "https://api.github.com/repos/FalkorDB/FalkorDB/git/blobs/8e4aa4569b45b8674fb8797bd79bb05378f0d63e"
+    },
+    {
+      "path": "deps",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "84f61f651ceb12483899b7a3bd118c02b69fded8",
+      "url": "https://api.github.com/repos/FalkorDB/FalkorDB/git/trees/84f61f651ceb12483899b7a3bd118c02b69fded8"
+    },
+    {
+      "path": "docs",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "846459d8cb5da1548f4e3a850477dface12cf9b5",
+      "url": "https://api.github.com/repos/FalkorDB/FalkorDB/git/trees/846459d8cb5da1548f4e3a850477dface12cf9b5"
+    },
+    {
+      "path": "flow.sh",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "a493f2fe82002a87a65cdce120a3838b097c7236",
+      "size": 3249,
+      "url": "https://api.github.com/repos/FalkorDB/FalkorDB/git/blobs/a493f2fe82002a87a65cdce120a3838b097c7236"
+    },
+    {
+      "path": "flow_tests_done.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "40f55de3c7b2b60bbcaf691758e44dfd5e2cab4f",
+      "size": 3585,
+      "url": "https://api.github.com/repos/FalkorDB/FalkorDB/git/blobs/40f55de3c7b2b60bbcaf691758e44dfd5e2cab4f"
+    },
+    {
+      "path": "flow_tests_todo.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a30c7c47f431dbedabab939f07ad59210bc84de4",
+      "size": 57,
+      "url": "https://api.github.com/repos/FalkorDB/FalkorDB/git/blobs/a30c7c47f431dbedabab939f07ad59210bc84de4"
+    },
+    {
+      "path": "fuzz.sh",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "5aa54abedc04b9fe6b683f98b989d644cf08ba0a",
+      "size": 1242,
+      "url": "https://api.github.com/repos/FalkorDB/FalkorDB/git/blobs/5aa54abedc04b9fe6b683f98b989d644cf08ba0a"
+    },
+    {
+      "path": "fuzz",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "1e396d62d1a5430e66dfd919d5ade8154e0facb7",
+      "url": "https://api.github.com/repos/FalkorDB/FalkorDB/git/trees/1e396d62d1a5430e66dfd919d5ade8154e0facb7"
+    },
+    {
+      "path": "gen_prejit.sh",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "495b8dd901648d622a746b82b874e2f2f933dd4a",
+      "size": 18253,
+      "url": "https://api.github.com/repos/FalkorDB/FalkorDB/git/blobs/495b8dd901648d622a746b82b874e2f2f933dd4a"
+    },
+    {
+      "path": "graph",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "17dd2baa323a4fc340dc3b807bb37b0f8362b63c",
+      "url": "https://api.github.com/repos/FalkorDB/FalkorDB/git/trees/17dd2baa323a4fc340dc3b807bb37b0f8362b63c"
+    },
+    {
+      "path": "graphblas.sh",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "552efa30938cd27bb8515232f1c27fa727c8356c",
+      "size": 13418,
+      "url": "https://api.github.com/repos/FalkorDB/FalkorDB/git/blobs/552efa30938cd27bb8515232f1c27fa727c8356c"
+    },
+    {
+      "path": "input.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2ba53cf768aa32e949fe3c839f8e3403751d2924",
+      "size": 10,
+      "url": "https://api.github.com/repos/FalkorDB/FalkorDB/git/blobs/2ba53cf768aa32e949fe3c839f8e3403751d2924"
+    },
+    {
+      "path": "pytest.ini",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b9a69a5661b325ccd1313879448352e396a4f3d7",
+      "size": 76,
+      "url": "https://api.github.com/repos/FalkorDB/FalkorDB/git/blobs/b9a69a5661b325ccd1313879448352e396a4f3d7"
+    },
+    {
+      "path": "redisearch.sh",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "7077f4f96c40176d32dc7c869172096b4821502a",
+      "size": 4594,
+      "url": "https://api.github.com/repos/FalkorDB/FalkorDB/git/blobs/7077f4f96c40176d32dc7c869172096b4821502a"
+    },
+    {
+      "path": "runtime-fuzz-target",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "a030ea6a690db697661f19819cba50bb6691b74e",
+      "url": "https://api.github.com/repos/FalkorDB/FalkorDB/git/trees/a030ea6a690db697661f19819cba50bb6691b74e"
+    },
+    {
+      "path": "rustfmt.toml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "99c6dedf500031c75fc9ae5692397ea97f33e2e7",
+      "size": 29,
+      "url": "https://api.github.com/repos/FalkorDB/FalkorDB/git/blobs/99c6dedf500031c75fc9ae5692397ea97f33e2e7"
+    },
+    {
+      "path": "src",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "dc510e4170cb5791a20271aa03eebf98393f411c",
+      "url": "https://api.github.com/repos/FalkorDB/FalkorDB/git/trees/dc510e4170cb5791a20271aa03eebf98393f411c"
+    },
+    {
+      "path": "tck_done.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "60489340111648386028327bc42e75576f67289c",
+      "size": 21,
+      "url": "https://api.github.com/repos/FalkorDB/FalkorDB/git/blobs/60489340111648386028327bc42e75576f67289c"
+    },
+    {
+      "path": "tests",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "938d00009e831079843209f38e4384081b9e3e7b",
+      "url": "https://api.github.com/repos/FalkorDB/FalkorDB/git/trees/938d00009e831079843209f38e4384081b9e3e7b"
+    }
+  ],
+  "truncated": false
+}

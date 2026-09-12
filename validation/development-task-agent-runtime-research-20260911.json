@@ -1,0 +1,621 @@
+{
+  "schemaVersion": 1,
+  "id": "agent-runtime-research-20260911",
+  "goal": "结合DSH、pi、Codex、QoderWake、StaffDeck及最新一手资料，基于OA多角色多实例业务与性能约束输出Agent技术最佳实践及实施设计",
+  "scope": {
+    "allowed": [
+      "README.md",
+      "CONTEXT.md",
+      "docs/设计包/37-技术架构总设计与决策.md",
+      "docs/设计包/41-AI运行知识分析与安全设计.md",
+      "docs/设计包/46-开发基线与低代码插件化决策.md",
+      "docs/设计包/53-AI运行工具与效果评测规范.md",
+      "docs/设计包/56-知识记忆技术栈与实施决策.md",
+      "docs/设计包/57-Agent运行框架最新源码研究.md",
+      "docs/设计包/58-Agent技术架构与性能实施设计.md",
+      "validation/agent-runtime/",
+      "validation/check_agent_runtime_research.py",
+      "validation/development-task-agent-runtime-research-20260911.json",
+      "validation/development-workflow.json",
+      "validation/technical-design-check.json",
+      "docs/设计包/54-开源二开与完整商用准入.md"
+    ],
+    "excluded": [
+      "原30/31与contracts不改",
+      "相邻仓库只读；不执行其命令/读取凭据",
+      "不安装或运行候选、不调用真实模型或生产",
+      "不更改长期记忆/全局技能；无Git操作"
+    ]
+  },
+  "acceptance_criteria": [
+    "明确DSH/pi/Codex/QoderWake/StaffDeck的层次、版本、来源和商用边界",
+    "核对一手源码并对照OA业务责任、身份授权、版本、正式交付和多实例",
+    "给出单一推荐运行方案和条件备选，避免第二业务权威或嵌套循环",
+    "设计事件、流式通道、持久恢复、取消/未知外部效果、上下文和插件边界",
+    "给出有假设的性能模型、排队公平、预算、测量方案与运行验收，不伪造性能",
+    "保留原173需求/22页/72项AC并更新原文档引用，真实完成文档与来源检查"
+  ],
+  "current_node": "N3",
+  "final_node": "N3",
+  "completed_nodes": [
+    "N1",
+    "N2",
+    "N3"
+  ],
+  "failed_nodes": [],
+  "artifacts": [
+    "docs/设计包/57-Agent运行框架最新源码研究.md",
+    "docs/设计包/58-Agent技术架构与性能实施设计.md",
+    "validation/agent-runtime/dsh-pi-research.md",
+    "validation/agent-runtime/review-notes.md",
+    "validation/check_agent_runtime_research.py"
+  ],
+  "evidence": [
+    "validation/agent-runtime/source-manifest.json",
+    "validation/agent-runtime/git-source-manifest.json",
+    "validation/agent-runtime/dsh-pi-sources/source-check.json",
+    "validation/agent-runtime/codex-source-manifest.json",
+    "validation/agent-runtime/staffdeck-source-manifest.json",
+    "validation/agent-runtime/research-check.json",
+    "validation/technical-design-check.json",
+    "validation/development-system-check.json"
+  ],
+  "risks": [
+    "本次仅完成公开源码研究和实施设计；候选均未安装运行、未调用真实模型、未压测。",
+    "30项AR-P与原72项产品AC仍NOT_RUN；产品保持NOT_CONFIGURED。",
+    "最终依赖构建闭包、模型服务条款、商业交付制品未放行。",
+    "两幅Mermaid图只做文本结构检查，未进行浏览器渲染验收。"
+  ],
+  "approvals": [],
+  "status": "VERIFIED",
+  "intent": {
+    "source": "当前用户要求：agent技术方案结合DSH/pi/codex/Qoderwake/staffdeck，业务逻辑和性能，全网深度研究最佳实践；沿用前轮要最新的约束",
+    "users": [
+      "产品负责人",
+      "架构师",
+      "AI编程人员"
+    ],
+    "outcome": "57源码研究+58实施设计及同步入口；非底座采用或性能实测"
+  },
+  "spec": {
+    "refs": [
+      "docs/设计包/37-技术架构总设计与决策.md",
+      "docs/设计包/41-AI运行知识分析与安全设计.md",
+      "docs/设计包/53-AI运行工具与效果评测规范.md",
+      "docs/设计包/56-知识记忆技术栈与实施决策.md"
+    ],
+    "behavior": "OA连接人，人员配置数字员工；每个Attempt仅一个模型工具执行循环，服务端权限与交付独立",
+    "negativeCases": [
+      "SDK成功不等于业务完成",
+      "运行时session和企业任务不等价",
+      "暂停/撤权后迟到输出不可发布",
+      "新库/根许可不等于最终商用放行"
+    ]
+  },
+  "plan": {
+    "files": [
+      "README.md",
+      "CONTEXT.md",
+      "docs/设计包/37-技术架构总设计与决策.md",
+      "docs/设计包/41-AI运行知识分析与安全设计.md",
+      "docs/设计包/46-开发基线与低代码插件化决策.md",
+      "docs/设计包/53-AI运行工具与效果评测规范.md",
+      "docs/设计包/56-知识记忆技术栈与实施决策.md",
+      "docs/设计包/57-Agent运行框架最新源码研究.md",
+      "docs/设计包/58-Agent技术架构与性能实施设计.md",
+      "docs/设计包/54-开源二开与完整商用准入.md"
+    ],
+    "checks": [
+      "python3 validation/check_agent_runtime_research.py",
+      "python3 validation/validate_technical_design.py",
+      "make verify"
+    ],
+    "highestRisk": "将同名产品、最新但未兼容的版本、局部权限机制当完整企业执行能力",
+    "rollback": "按before.zip只恢复本轮导航和文档增量，保留研究为候选，不覆盖后续编辑"
+  },
+  "requirementIds": [],
+  "caseIds": [],
+  "review": {
+    "mode": "SOURCE_REVIEW_AND_INDEPENDENT_DESIGN_REVIEW",
+    "findings": [
+      {
+        "finding": "DSH的OS文件锁不能由业务租约或fence释放",
+        "resolution": "57/58明确旧进程退出与锁释放门槛，禁止强删锁",
+        "status": "RESOLVED_IN_DESIGN"
+      },
+      {
+        "finding": "持久化业务待办不等于原生审批Promise可恢复",
+        "resolution": "58明确重验动作、权限及未知效果后关联新执行",
+        "status": "RESOLVED_IN_DESIGN"
+      },
+      {
+        "finding": "原生Turn口径不同，直接横比会误算预算",
+        "resolution": "58统一按实际model_request_count并归集父子预算树",
+        "status": "RESOLVED_IN_DESIGN"
+      },
+      {
+        "finding": "pi旧npm前缀与仓库所有者不同",
+        "resolution": "57修正为旧@mariozechner及新@earendil-works",
+        "status": "RESOLVED_IN_DESIGN"
+      },
+      {
+        "finding": "DSH发布渠道与根MIT不能代表整包",
+        "resolution": "54/57区分Git rc.2与npm rc.1及第三方依赖条款",
+        "status": "RESOLVED_IN_DESIGN"
+      },
+      {
+        "finding": "StaffDeck公开最新AGPL及自身Python运行器不能误归为DSH",
+        "resolution": "54/57及导航更新许可和来源边界",
+        "status": "RESOLVED_IN_DESIGN"
+      }
+    ],
+    "checklist": [
+      {
+        "id": "AR-01",
+        "aspect": "身份与商用 / 需求",
+        "status": "REVIEWED_DESIGN_ONLY",
+        "evidence": [
+          "docs/设计包/57-Agent运行框架最新源码研究.md#2-名称时间与层次",
+          "docs/设计包/54-开源二开与完整商用准入.md",
+          "validation/agent-runtime/source-manifest.json"
+        ],
+        "limit": "源码与设计复核；AR-P运行案例及产品AC均NOT_RUN"
+      },
+      {
+        "id": "AR-02",
+        "aspect": "身份与商用 / 一手证据",
+        "status": "REVIEWED_DESIGN_ONLY",
+        "evidence": [
+          "docs/设计包/57-Agent运行框架最新源码研究.md#2-名称时间与层次",
+          "docs/设计包/54-开源二开与完整商用准入.md",
+          "validation/agent-runtime/source-manifest.json"
+        ],
+        "limit": "源码与设计复核；AR-P运行案例及产品AC均NOT_RUN"
+      },
+      {
+        "id": "AR-03",
+        "aspect": "身份与商用 / 适配决定",
+        "status": "REVIEWED_DESIGN_ONLY",
+        "evidence": [
+          "docs/设计包/57-Agent运行框架最新源码研究.md#2-名称时间与层次",
+          "docs/设计包/54-开源二开与完整商用准入.md",
+          "validation/agent-runtime/source-manifest.json"
+        ],
+        "limit": "源码与设计复核；AR-P运行案例及产品AC均NOT_RUN"
+      },
+      {
+        "id": "AR-04",
+        "aspect": "身份与商用 / 失败反例",
+        "status": "REVIEWED_DESIGN_ONLY",
+        "evidence": [
+          "docs/设计包/57-Agent运行框架最新源码研究.md#2-名称时间与层次",
+          "docs/设计包/54-开源二开与完整商用准入.md",
+          "validation/agent-runtime/source-manifest.json"
+        ],
+        "limit": "源码与设计复核；AR-P运行案例及产品AC均NOT_RUN"
+      },
+      {
+        "id": "AR-05",
+        "aspect": "身份与商用 / 验收",
+        "status": "REVIEWED_DESIGN_ONLY",
+        "evidence": [
+          "docs/设计包/57-Agent运行框架最新源码研究.md#2-名称时间与层次",
+          "docs/设计包/54-开源二开与完整商用准入.md",
+          "validation/agent-runtime/source-manifest.json"
+        ],
+        "limit": "源码与设计复核；AR-P运行案例及产品AC均NOT_RUN"
+      },
+      {
+        "id": "AR-06",
+        "aspect": "业务与运行 / 需求",
+        "status": "REVIEWED_DESIGN_ONLY",
+        "evidence": [
+          "docs/设计包/58-Agent技术架构与性能实施设计.md#2-责任分层",
+          "docs/设计包/58-Agent技术架构与性能实施设计.md#5-一次工作如何完成",
+          "docs/设计包/57-Agent运行框架最新源码研究.md"
+        ],
+        "limit": "源码与设计复核；AR-P运行案例及产品AC均NOT_RUN"
+      },
+      {
+        "id": "AR-07",
+        "aspect": "业务与运行 / 一手证据",
+        "status": "REVIEWED_DESIGN_ONLY",
+        "evidence": [
+          "docs/设计包/58-Agent技术架构与性能实施设计.md#2-责任分层",
+          "docs/设计包/58-Agent技术架构与性能实施设计.md#5-一次工作如何完成",
+          "docs/设计包/57-Agent运行框架最新源码研究.md"
+        ],
+        "limit": "源码与设计复核；AR-P运行案例及产品AC均NOT_RUN"
+      },
+      {
+        "id": "AR-08",
+        "aspect": "业务与运行 / 适配决定",
+        "status": "REVIEWED_DESIGN_ONLY",
+        "evidence": [
+          "docs/设计包/58-Agent技术架构与性能实施设计.md#2-责任分层",
+          "docs/设计包/58-Agent技术架构与性能实施设计.md#5-一次工作如何完成",
+          "docs/设计包/57-Agent运行框架最新源码研究.md"
+        ],
+        "limit": "源码与设计复核；AR-P运行案例及产品AC均NOT_RUN"
+      },
+      {
+        "id": "AR-09",
+        "aspect": "业务与运行 / 失败反例",
+        "status": "REVIEWED_DESIGN_ONLY",
+        "evidence": [
+          "docs/设计包/58-Agent技术架构与性能实施设计.md#2-责任分层",
+          "docs/设计包/58-Agent技术架构与性能实施设计.md#5-一次工作如何完成",
+          "docs/设计包/57-Agent运行框架最新源码研究.md"
+        ],
+        "limit": "源码与设计复核；AR-P运行案例及产品AC均NOT_RUN"
+      },
+      {
+        "id": "AR-10",
+        "aspect": "业务与运行 / 验收",
+        "status": "REVIEWED_DESIGN_ONLY",
+        "evidence": [
+          "docs/设计包/58-Agent技术架构与性能实施设计.md#2-责任分层",
+          "docs/设计包/58-Agent技术架构与性能实施设计.md#5-一次工作如何完成",
+          "docs/设计包/57-Agent运行框架最新源码研究.md"
+        ],
+        "limit": "源码与设计复核；AR-P运行案例及产品AC均NOT_RUN"
+      },
+      {
+        "id": "AR-11",
+        "aspect": "会话与上下文 / 需求",
+        "status": "REVIEWED_DESIGN_ONLY",
+        "evidence": [
+          "docs/设计包/58-Agent技术架构与性能实施设计.md#3-对象与标识映射",
+          "docs/设计包/58-Agent技术架构与性能实施设计.md#8-多员工协作与上下文",
+          "docs/设计包/56-知识记忆技术栈与实施决策.md"
+        ],
+        "limit": "源码与设计复核；AR-P运行案例及产品AC均NOT_RUN"
+      },
+      {
+        "id": "AR-12",
+        "aspect": "会话与上下文 / 一手证据",
+        "status": "REVIEWED_DESIGN_ONLY",
+        "evidence": [
+          "docs/设计包/58-Agent技术架构与性能实施设计.md#3-对象与标识映射",
+          "docs/设计包/58-Agent技术架构与性能实施设计.md#8-多员工协作与上下文",
+          "docs/设计包/56-知识记忆技术栈与实施决策.md"
+        ],
+        "limit": "源码与设计复核；AR-P运行案例及产品AC均NOT_RUN"
+      },
+      {
+        "id": "AR-13",
+        "aspect": "会话与上下文 / 适配决定",
+        "status": "REVIEWED_DESIGN_ONLY",
+        "evidence": [
+          "docs/设计包/58-Agent技术架构与性能实施设计.md#3-对象与标识映射",
+          "docs/设计包/58-Agent技术架构与性能实施设计.md#8-多员工协作与上下文",
+          "docs/设计包/56-知识记忆技术栈与实施决策.md"
+        ],
+        "limit": "源码与设计复核；AR-P运行案例及产品AC均NOT_RUN"
+      },
+      {
+        "id": "AR-14",
+        "aspect": "会话与上下文 / 失败反例",
+        "status": "REVIEWED_DESIGN_ONLY",
+        "evidence": [
+          "docs/设计包/58-Agent技术架构与性能实施设计.md#3-对象与标识映射",
+          "docs/设计包/58-Agent技术架构与性能实施设计.md#8-多员工协作与上下文",
+          "docs/设计包/56-知识记忆技术栈与实施决策.md"
+        ],
+        "limit": "源码与设计复核；AR-P运行案例及产品AC均NOT_RUN"
+      },
+      {
+        "id": "AR-15",
+        "aspect": "会话与上下文 / 验收",
+        "status": "REVIEWED_DESIGN_ONLY",
+        "evidence": [
+          "docs/设计包/58-Agent技术架构与性能实施设计.md#3-对象与标识映射",
+          "docs/设计包/58-Agent技术架构与性能实施设计.md#8-多员工协作与上下文",
+          "docs/设计包/56-知识记忆技术栈与实施决策.md"
+        ],
+        "limit": "源码与设计复核；AR-P运行案例及产品AC均NOT_RUN"
+      },
+      {
+        "id": "AR-16",
+        "aspect": "工具与权限 / 需求",
+        "status": "REVIEWED_DESIGN_ONLY",
+        "evidence": [
+          "docs/设计包/58-Agent技术架构与性能实施设计.md#7-权限与工具安全",
+          "docs/设计包/58-Agent技术架构与性能实施设计.md#9-流式展示事件与观测",
+          "validation/agent-runtime/review-notes.md"
+        ],
+        "limit": "源码与设计复核；AR-P运行案例及产品AC均NOT_RUN"
+      },
+      {
+        "id": "AR-17",
+        "aspect": "工具与权限 / 一手证据",
+        "status": "REVIEWED_DESIGN_ONLY",
+        "evidence": [
+          "docs/设计包/58-Agent技术架构与性能实施设计.md#7-权限与工具安全",
+          "docs/设计包/58-Agent技术架构与性能实施设计.md#9-流式展示事件与观测",
+          "validation/agent-runtime/review-notes.md"
+        ],
+        "limit": "源码与设计复核；AR-P运行案例及产品AC均NOT_RUN"
+      },
+      {
+        "id": "AR-18",
+        "aspect": "工具与权限 / 适配决定",
+        "status": "REVIEWED_DESIGN_ONLY",
+        "evidence": [
+          "docs/设计包/58-Agent技术架构与性能实施设计.md#7-权限与工具安全",
+          "docs/设计包/58-Agent技术架构与性能实施设计.md#9-流式展示事件与观测",
+          "validation/agent-runtime/review-notes.md"
+        ],
+        "limit": "源码与设计复核；AR-P运行案例及产品AC均NOT_RUN"
+      },
+      {
+        "id": "AR-19",
+        "aspect": "工具与权限 / 失败反例",
+        "status": "REVIEWED_DESIGN_ONLY",
+        "evidence": [
+          "docs/设计包/58-Agent技术架构与性能实施设计.md#7-权限与工具安全",
+          "docs/设计包/58-Agent技术架构与性能实施设计.md#9-流式展示事件与观测",
+          "validation/agent-runtime/review-notes.md"
+        ],
+        "limit": "源码与设计复核；AR-P运行案例及产品AC均NOT_RUN"
+      },
+      {
+        "id": "AR-20",
+        "aspect": "工具与权限 / 验收",
+        "status": "REVIEWED_DESIGN_ONLY",
+        "evidence": [
+          "docs/设计包/58-Agent技术架构与性能实施设计.md#7-权限与工具安全",
+          "docs/设计包/58-Agent技术架构与性能实施设计.md#9-流式展示事件与观测",
+          "validation/agent-runtime/review-notes.md"
+        ],
+        "limit": "源码与设计复核；AR-P运行案例及产品AC均NOT_RUN"
+      },
+      {
+        "id": "AR-21",
+        "aspect": "恢复与协作 / 需求",
+        "status": "REVIEWED_DESIGN_ONLY",
+        "evidence": [
+          "docs/设计包/58-Agent技术架构与性能实施设计.md#6-持久化恢复与取消",
+          "docs/设计包/58-Agent技术架构与性能实施设计.md#8-多员工协作与上下文",
+          "validation/agent-runtime/review-notes.md"
+        ],
+        "limit": "源码与设计复核；AR-P运行案例及产品AC均NOT_RUN"
+      },
+      {
+        "id": "AR-22",
+        "aspect": "恢复与协作 / 一手证据",
+        "status": "REVIEWED_DESIGN_ONLY",
+        "evidence": [
+          "docs/设计包/58-Agent技术架构与性能实施设计.md#6-持久化恢复与取消",
+          "docs/设计包/58-Agent技术架构与性能实施设计.md#8-多员工协作与上下文",
+          "validation/agent-runtime/review-notes.md"
+        ],
+        "limit": "源码与设计复核；AR-P运行案例及产品AC均NOT_RUN"
+      },
+      {
+        "id": "AR-23",
+        "aspect": "恢复与协作 / 适配决定",
+        "status": "REVIEWED_DESIGN_ONLY",
+        "evidence": [
+          "docs/设计包/58-Agent技术架构与性能实施设计.md#6-持久化恢复与取消",
+          "docs/设计包/58-Agent技术架构与性能实施设计.md#8-多员工协作与上下文",
+          "validation/agent-runtime/review-notes.md"
+        ],
+        "limit": "源码与设计复核；AR-P运行案例及产品AC均NOT_RUN"
+      },
+      {
+        "id": "AR-24",
+        "aspect": "恢复与协作 / 失败反例",
+        "status": "REVIEWED_DESIGN_ONLY",
+        "evidence": [
+          "docs/设计包/58-Agent技术架构与性能实施设计.md#6-持久化恢复与取消",
+          "docs/设计包/58-Agent技术架构与性能实施设计.md#8-多员工协作与上下文",
+          "validation/agent-runtime/review-notes.md"
+        ],
+        "limit": "源码与设计复核；AR-P运行案例及产品AC均NOT_RUN"
+      },
+      {
+        "id": "AR-25",
+        "aspect": "恢复与协作 / 验收",
+        "status": "REVIEWED_DESIGN_ONLY",
+        "evidence": [
+          "docs/设计包/58-Agent技术架构与性能实施设计.md#6-持久化恢复与取消",
+          "docs/设计包/58-Agent技术架构与性能实施设计.md#8-多员工协作与上下文",
+          "validation/agent-runtime/review-notes.md"
+        ],
+        "limit": "源码与设计复核；AR-P运行案例及产品AC均NOT_RUN"
+      },
+      {
+        "id": "AR-26",
+        "aspect": "性能与验证 / 需求",
+        "status": "REVIEWED_DESIGN_ONLY",
+        "evidence": [
+          "docs/设计包/58-Agent技术架构与性能实施设计.md#10-性能模型与资源策略",
+          "docs/设计包/58-Agent技术架构与性能实施设计.md#11-对照验证与采用出口",
+          "validation/agent-runtime/research-check.json"
+        ],
+        "limit": "源码与设计复核；AR-P运行案例及产品AC均NOT_RUN"
+      },
+      {
+        "id": "AR-27",
+        "aspect": "性能与验证 / 一手证据",
+        "status": "REVIEWED_DESIGN_ONLY",
+        "evidence": [
+          "docs/设计包/58-Agent技术架构与性能实施设计.md#10-性能模型与资源策略",
+          "docs/设计包/58-Agent技术架构与性能实施设计.md#11-对照验证与采用出口",
+          "validation/agent-runtime/research-check.json"
+        ],
+        "limit": "源码与设计复核；AR-P运行案例及产品AC均NOT_RUN"
+      },
+      {
+        "id": "AR-28",
+        "aspect": "性能与验证 / 适配决定",
+        "status": "REVIEWED_DESIGN_ONLY",
+        "evidence": [
+          "docs/设计包/58-Agent技术架构与性能实施设计.md#10-性能模型与资源策略",
+          "docs/设计包/58-Agent技术架构与性能实施设计.md#11-对照验证与采用出口",
+          "validation/agent-runtime/research-check.json"
+        ],
+        "limit": "源码与设计复核；AR-P运行案例及产品AC均NOT_RUN"
+      },
+      {
+        "id": "AR-29",
+        "aspect": "性能与验证 / 失败反例",
+        "status": "REVIEWED_DESIGN_ONLY",
+        "evidence": [
+          "docs/设计包/58-Agent技术架构与性能实施设计.md#10-性能模型与资源策略",
+          "docs/设计包/58-Agent技术架构与性能实施设计.md#11-对照验证与采用出口",
+          "validation/agent-runtime/research-check.json"
+        ],
+        "limit": "源码与设计复核；AR-P运行案例及产品AC均NOT_RUN"
+      },
+      {
+        "id": "AR-30",
+        "aspect": "性能与验证 / 验收",
+        "status": "REVIEWED_DESIGN_ONLY",
+        "evidence": [
+          "docs/设计包/58-Agent技术架构与性能实施设计.md#10-性能模型与资源策略",
+          "docs/设计包/58-Agent技术架构与性能实施设计.md#11-对照验证与采用出口",
+          "validation/agent-runtime/research-check.json"
+        ],
+        "limit": "源码与设计复核；AR-P运行案例及产品AC均NOT_RUN"
+      }
+    ]
+  },
+  "nodes": [
+    {
+      "id": "N1",
+      "objective": "核对当前项目和最新源码/许可",
+      "dependsOn": [],
+      "preconditions": [
+        "既有业务资料已读取"
+      ],
+      "action": "官方来源/固定源码研究；DSH/pi后台独立分支",
+      "tool_or_skill": "research / production-grade-task-methodology / 项目开发体系",
+      "expected_output": "原始来源与独立笔记",
+      "validation": "以来源和原始文件核验",
+      "success_condition": "覆盖对应验收且不伪造运行结论",
+      "failure_path": "换一手来源或标明证据缺口，有限修复",
+      "rollback_or_compensation": "无候选执行；局部文档恢复",
+      "status": "VERIFIED"
+    },
+    {
+      "id": "N2",
+      "objective": "业务、运行与性能设计并反例复核",
+      "dependsOn": [
+        "N1"
+      ],
+      "preconditions": [
+        "前序研究产物可复核"
+      ],
+      "action": "综合为57/58并同步原文档",
+      "tool_or_skill": "research / production-grade-task-methodology / 项目开发体系",
+      "expected_output": "57/58与更新入口",
+      "validation": "以来源和原始文件核验",
+      "success_condition": "覆盖对应验收且不伪造运行结论",
+      "failure_path": "换一手来源或标明证据缺口，有限修复",
+      "rollback_or_compensation": "无候选执行；局部文档恢复",
+      "status": "VERIFIED"
+    },
+    {
+      "id": "N3",
+      "objective": "文档/证据验证与交付",
+      "dependsOn": [
+        "N2"
+      ],
+      "preconditions": [
+        "前序研究产物可复核"
+      ],
+      "action": "源码快照/引用/边界检查及make verify",
+      "tool_or_skill": "research / production-grade-task-methodology / 项目开发体系",
+      "expected_output": "真实检查报告",
+      "validation": "以来源和原始文件核验",
+      "success_condition": "覆盖对应验收且不伪造运行结论",
+      "failure_path": "换一手来源或标明证据缺口，有限修复",
+      "rollback_or_compensation": "无候选执行；局部文档恢复",
+      "status": "VERIFIED"
+    }
+  ],
+  "projectRoot": "/Users/mac/Documents/OA数字员工协作平台",
+  "createdAt": "2026-09-11T23:15:52.512135+00:00",
+  "baseline": {
+    "README.md": "d9eb49514e1e1ea4918f82d0b303d31afa25952b3b5f605bac4b2c8579a77025",
+    "CONTEXT.md": "269d2e00600883015561ff84382fdf1fd3fef9fb7142c00993510eacda6f9a47",
+    "docs/设计包/37-技术架构总设计与决策.md": "d2392b269d920861084a9d3cbdf82b31499b23ec5c8a309b54e0d1018f52a79b",
+    "docs/设计包/41-AI运行知识分析与安全设计.md": "1e3ffefd229d118ae7b8f9c5fe9a6388a5c9d01d29a523398d1adbe4548d6398",
+    "docs/设计包/46-开发基线与低代码插件化决策.md": "48160413b7eedd785ca1557646597616105b995e678337df9cbdc7666ab7aa3a",
+    "docs/设计包/53-AI运行工具与效果评测规范.md": "5d2579157f0241e0cb36288670dc32d020f7f1f2e437bc6030af7e66fbd57bde",
+    "docs/设计包/56-知识记忆技术栈与实施决策.md": "fe5ef5404652ae9e1f60ce150d61bce9d0d85e7a48a454b0624a967e69e93cc6",
+    "docs/设计包/30-产品设计追踪数据.json": "5dbbe41a1e6853cfca898094a5e98ed929c9e4e8fe0c2d49da4cf213363b2fa8",
+    "docs/设计包/31-完整产品交互原型.html": "59a4d8948c86292bb3562218d534ae37154fb8d6317bcfd97883dfc98e7e5cbe",
+    "docs/设计包/54-开源二开与完整商用准入.md": "334168c445aad9327c820bf4a45e0b8ef6d2dea083cc501681079cfc66541a45"
+  },
+  "notes": [
+    "语义检索Transport closed，未建索引，按精确锚点rg继续",
+    "官方GitHub API 403及部分raw TLS失败后改Git refs和固定codeload源码包；未执行候选代码",
+    "发现StaffDeck最新根AGPLv3，补入54号许可同步范围"
+  ],
+  "updatedAt": "2026-09-11T23:41:46.778734+00:00",
+  "verificationScope": "PUBLIC_SOURCE_RESEARCH_AND_DESIGN_ONLY",
+  "acceptanceEvidence": [
+    {
+      "criterion": 1,
+      "status": "VERIFIED_RESEARCH_AND_DESIGN_ONLY",
+      "evidence": [
+        "docs/设计包/57-Agent运行框架最新源码研究.md",
+        "validation/agent-runtime/source-manifest.json",
+        "validation/agent-runtime/dsh-pi-sources/source-check.json"
+      ]
+    },
+    {
+      "criterion": 2,
+      "status": "VERIFIED_RESEARCH_AND_DESIGN_ONLY",
+      "evidence": [
+        "docs/设计包/57-Agent运行框架最新源码研究.md",
+        "docs/设计包/58-Agent技术架构与性能实施设计.md",
+        "validation/agent-runtime/review-notes.md"
+      ]
+    },
+    {
+      "criterion": 3,
+      "status": "VERIFIED_RESEARCH_AND_DESIGN_ONLY",
+      "evidence": [
+        "docs/设计包/58-Agent技术架构与性能实施设计.md",
+        "docs/设计包/46-开发基线与低代码插件化决策.md"
+      ]
+    },
+    {
+      "criterion": 4,
+      "status": "VERIFIED_RESEARCH_AND_DESIGN_ONLY",
+      "evidence": [
+        "docs/设计包/58-Agent技术架构与性能实施设计.md",
+        "validation/agent-runtime/review-notes.md"
+      ]
+    },
+    {
+      "criterion": 5,
+      "status": "VERIFIED_RESEARCH_AND_DESIGN_ONLY",
+      "evidence": [
+        "docs/设计包/58-Agent技术架构与性能实施设计.md",
+        "validation/agent-runtime/research-check.json"
+      ]
+    },
+    {
+      "criterion": 6,
+      "status": "VERIFIED_RESEARCH_AND_DESIGN_ONLY",
+      "evidence": [
+        "validation/agent-runtime/research-check.json",
+        "validation/technical-design-check.json",
+        "validation/development-system-check.json"
+      ]
+    }
+  ],
+  "artifactHashes": {
+    "docs/设计包/57-Agent运行框架最新源码研究.md": "c006f540dae9202bbd7589fe1ec05bffd265304971225008ce94bd169ce1ef23",
+    "docs/设计包/58-Agent技术架构与性能实施设计.md": "9f87d31b4d4c889c77fd662cf689873293dd2517e6d5af99dda6f573667cd3d5",
+    "validation/agent-runtime/dsh-pi-research.md": "80660267f226be5bf96a5f01ee9f3c45052a975e23b09475f3830d0197f3c20b",
+    "validation/agent-runtime/review-notes.md": "5956978efd442bbcda234bc1c3eb89fb472e68e980834dbc8a715f540b973c9d",
+    "validation/check_agent_runtime_research.py": "89502412536e7af2ac595ab76f342b85dc8ab3da34d2093a9059a68ec4e35996"
+  },
+  "completedAt": "2026-09-11T23:41:46.778734+00:00"
+}

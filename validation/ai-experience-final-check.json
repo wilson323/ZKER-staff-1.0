@@ -1,0 +1,23 @@
+{
+  "checkedAt": "2026-09-11T17:27:27.616348+00:00",
+  "status": "PASS",
+  "scope": "DESIGN_DELIVERY_TASK_GRAPH_AND_ARTIFACT_READBACK",
+  "topologicalOrder": [
+    "N1",
+    "N6",
+    "N2",
+    "N3",
+    "N5",
+    "N4",
+    "W1",
+    "W2",
+    "W3",
+    "A13-1",
+    "A13-2",
+    "A13-3"
+  ],
+  "artifactCount": 27,
+  "preservedSourceCount": 28,
+  "failures": [],
+  "note": "Node array is a display order, not execution order; dependency graph is checked by topological traversal."
+}

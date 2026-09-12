@@ -1,0 +1,48 @@
+{
+  "scope": "IMAGE_CAPABLE_REVIEW_NOT_PRODUCT_ACCEPTANCE",
+  "reviewer": "Codex root; rendered images inspected through view_image",
+  "reviewedAt": "2026-09-11T18:00:04.468587+00:00",
+  "diagram_type": "architecture",
+  "artifactSha256": "2d306f81e493018a85b1fb5525686a422595dc4f4181f177535040ab83bc1dc7",
+  "artifactBytes": 712424,
+  "browser_evidence": "passed",
+  "visual_review": "passed",
+  "correction_rounds": 2,
+  "inspectedImages": [
+    {
+      "path": "docs/设计包/44-技术架构交互图.visual-check.1440x900.light.png",
+      "sha256": "d0151af95a6ced667dd662188a8c633fb34d84dc49987d203ec98f9557445c5b"
+    },
+    {
+      "path": "docs/设计包/44-技术架构交互图.visual-check.2048x1320.dark.png",
+      "sha256": "e7267078c1a045defc0168d56fa988663f31e401efca0639f3a05d58766e98b6"
+    },
+    {
+      "path": "validation/technical-architecture-focus.png",
+      "sha256": "6e19dbafcd4050d0e402c30a7299e6b1197e3884af2b98615de8c3d935a76d2b"
+    },
+    {
+      "path": "validation/technical-architecture-export.png",
+      "sha256": "fa343b74de791919f19b57e1e903c6c1861a7f51f383443423a6114e64a5ba43"
+    }
+  ],
+  "observations": [
+    "READ view has no clipped nodes, cards or toolbar at the two inspected endpoint theme/size combinations.",
+    "Application to database transaction connection is present; worker queue lease and credential proxy paths remain distinct.",
+    "Default small desktop node sublabels are small; SVG/PNG export and viewer zoom provide enlarged reading. No extra font reduction was used to force fit.",
+    "Light/dark structure, line labels and bottom cards remain discernible; largest viewport has balanced usable height.",
+    "Worker semantic passport is readable with reachable close action; focus intentionally dims unrelated nodes.",
+    "PNG export contains the graph and legend without viewer controls or local paths; SVG structural cleanliness has independent interaction evidence."
+  ],
+  "boundaries": [
+    "Four viewport measurements and four captured endpoint themes belong to automated browser evidence; this image review covers the four listed files only.",
+    "No mobile architecture-viewer or WebM/JPEG/WebP/clipboard acceptance was performed.",
+    "This diagram models a proposed system, not a deployed service."
+  ],
+  "recoveredIssues": [
+    "Initial vertical labels were moved clear of routes.",
+    "Semantic reread added missing application/database transaction edge; the affected object-relation label was moved below its route.",
+    "A suggested channelX control was rejected by architecture schema and removed; delivered candidate uses supported labelDy only.",
+    "Supplementary export test first used an incorrect exact accessible name; the observed menu item text selector repaired the check without modifying the viewer."
+  ]
+}

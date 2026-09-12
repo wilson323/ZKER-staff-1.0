@@ -1,0 +1,288 @@
+{
+  "schemaVersion": 1,
+  "id": "dev-system-20260911",
+  "goal": "研究Anthropic相关一手文章，升级适用于所有后续项目的通用Skill并实际验证；OA保留本地适配",
+  "scope": {
+    "allowed": [
+      "AGENTS.md",
+      "CLAUDE.md",
+      "REVIEW.md",
+      "README.md",
+      "CONTEXT.md",
+      "项目接续提示词.md",
+      "Makefile",
+      ".claude/",
+      ".github/",
+      "docs/开发体系.md",
+      "validation/development",
+      "validation/test_development",
+      "history/开发体系优化需求-2026-09-11.md",
+      ".agents/skills/oa-development-system/",
+      "docs/Anthropic开发体系研究-2026-09-11.md",
+      "/Users/mac/.agents/skills/ai-native-sdlc/",
+      "/Users/mac/.codex/AGENTS.md",
+      "/Users/mac/.codex/skills/ai-native-sdlc",
+      "/Users/mac/.claude/skills/ai-native-sdlc",
+      "validation/ai-native-sdlc-2.0.0.zip"
+    ],
+    "excluded": [
+      "产品实现及原型变更",
+      "框架选定或安装",
+      "旧仓、生产、真实凭据、外部发送、Git写入",
+      "系统权限/密钥/其他项目批量配置修改"
+    ]
+  },
+  "acceptance_criteria": [
+    "统一入口可运行且保留原需求",
+    "任务图与范围有真实校验",
+    "旧证据、失败或空产品检查不得变绿",
+    "回归及hook协议在隔离目录验证",
+    "文档指向同一入口且披露尚未接入的能力",
+    "通用Skill不依赖OA路径或业务术语",
+    "全局导航接续且不覆盖项目工作流",
+    "至少两类项目的真实隔离试用"
+  ],
+  "current_node": "D4",
+  "completed_nodes": [
+    "D1",
+    "D2",
+    "D3",
+    "D4"
+  ],
+  "failed_nodes": [],
+  "artifacts": [
+    ".agents/skills/oa-development-system/SKILL.md",
+    "docs/开发体系.md",
+    "docs/Anthropic开发体系研究-2026-09-11.md",
+    "validation/development-workflow.json",
+    "validation/ai-native-sdlc-2.0.0.zip",
+    "validation/development-ai-native-sdlc-v2.0.0.zip"
+  ],
+  "evidence": [
+    "validation/development-global-skill-check.json",
+    "validation/development-skill-check.json",
+    "validation/development-system-check.json",
+    "validation/development-anthropic-sources.json",
+    "validation/development-portable-forward-results.json",
+    "validation/development-portable-forward-artifacts.zip",
+    "validation/development-portable-check.json",
+    "validation/development-portable-review-fix.json",
+    "validation/development-portable-package-manifest.json"
+  ],
+  "risks": [
+    "技术底座未定，产品/CI/生产不可宣称验收",
+    "提示词与项目hook不能替代平台权限"
+  ],
+  "approvals": [
+    {
+      "source": "当前用户请求",
+      "text": "结合以上全部内容完整优化开发体系确保后续持续应用",
+      "scope": "本项目局部可逆开发体系改进；不含Git、生产和系统权限变更"
+    },
+    {
+      "source": "本轮用户补充",
+      "text": "生成完整的skill并充分应用",
+      "scope": "创建并实际应用本项目Skill；添加该Skill发现入口",
+      "installedSkillLinks": [
+        "/Users/mac/.codex/skills/oa-development-system",
+        ".claude/skills/oa-development-system"
+      ]
+    },
+    {
+      "source": "用户最新补充",
+      "text": "全网搜索该公司的相关的文章内容深度研究优化开发体系确保后续所有项目均可用生成完整的skill并充分应用",
+      "scope": "通用ai-native-sdlc升级与发现入口；Codex全局AGENTS添加软件工程导航；本项目适配与隔离测试；不批量改写其他项目"
+    }
+  ],
+  "status": "VERIFIED",
+  "createdAt": "2026-09-11T17:10:56.668268+00:00",
+  "updatedAt": "2026-09-11T17:49:28.174794+00:00",
+  "projectRoot": "/Users/mac/Documents/OA数字员工协作平台",
+  "intent": {
+    "source": "history/开发体系优化需求-2026-09-11.md"
+  },
+  "spec": {
+    "ref": "docs/开发体系.md",
+    "skill": ".agents/skills/oa-development-system/SKILL.md"
+  },
+  "plan": {
+    "nodes": "nodes",
+    "risk": "检查器假绿、旧证据和跨项目混用"
+  },
+  "requirementIds": [],
+  "caseIds": [],
+  "nodes": [
+    {
+      "id": "D1",
+      "objective": "锁定本项目需求、工具及一手资料",
+      "dependsOn": [],
+      "preconditions": [
+        "依赖完成且限定本目录"
+      ],
+      "action": "核对本地入口、文章和官方来源",
+      "tool_or_skill": "Python标准库 / ai-native-sdlc / 官方资料",
+      "expected_output": "现有153+12+8需求与72场景；无Git和已选底座",
+      "validation": "现有153+12+8需求与72场景；无Git和已选底座",
+      "success_condition": "现有153+12+8需求与72场景；无Git和已选底座",
+      "failure_path": "有新诊断时最多两次修复，否则交付阻塞",
+      "rollback_or_compensation": "按备份恢复本次修改；新增文件仅在授权后移除",
+      "status": "VERIFIED"
+    },
+    {
+      "id": "D2",
+      "objective": "落实统一开发入口与检查",
+      "dependsOn": [
+        "D1"
+      ],
+      "preconditions": [
+        "依赖完成且限定本目录"
+      ],
+      "action": "复用现有设计检查，新增任务/证据校验与入口",
+      "tool_or_skill": "Python标准库 / ai-native-sdlc / 官方资料",
+      "expected_output": "本地命令真实通过；缺配置时明确失败",
+      "validation": "本地命令真实通过；缺配置时明确失败",
+      "success_condition": "本地命令真实通过；缺配置时明确失败",
+      "failure_path": "有新诊断时最多两次修复，否则交付阻塞",
+      "rollback_or_compensation": "按备份恢复本次修改；新增文件仅在授权后移除",
+      "status": "VERIFIED"
+    },
+    {
+      "id": "D3",
+      "objective": "通用Skill、跨项目隔离及失败路径验证",
+      "dependsOn": [
+        "D2"
+      ],
+      "preconditions": [
+        "依赖完成且限定本目录"
+      ],
+      "action": "一手研究支撑通用Skill；在多种临时项目中前向试用与工具回归",
+      "tool_or_skill": "Python标准库 / ai-native-sdlc / 官方资料",
+      "expected_output": "确定性回归通过；不宣称模型行为评测",
+      "validation": "确定性回归通过；不宣称模型行为评测",
+      "success_condition": "确定性回归通过；不宣称模型行为评测",
+      "failure_path": "有新诊断时最多两次修复，否则交付阻塞",
+      "rollback_or_compensation": "按备份恢复本次修改；新增文件仅在授权后移除",
+      "status": "VERIFIED"
+    },
+    {
+      "id": "D4",
+      "objective": "完成验收和下一步交接",
+      "dependsOn": [
+        "D3"
+      ],
+      "preconditions": [
+        "依赖完成且限定本目录"
+      ],
+      "action": "核对原资料未变、最终证据新鲜和限制",
+      "tool_or_skill": "Python标准库 / ai-native-sdlc / 官方资料",
+      "expected_output": "检查报告及文件哈希匹配",
+      "validation": "检查报告及文件哈希匹配",
+      "success_condition": "检查报告及文件哈希匹配",
+      "failure_path": "有新诊断时最多两次修复，否则交付阻塞",
+      "rollback_or_compensation": "按备份恢复本次修改；新增文件仅在授权后移除",
+      "status": "VERIFIED"
+    }
+  ],
+  "baseline": {
+    "git": "NOT_A_GIT_REPOSITORY",
+    "backup": "validation/development-system-before-20260911.zip",
+    "files": {
+      "AGENTS.md": "17b8371dc9d02d427ac0fc9964bf61e900c5f79ad7c3e29b7040cb5caa742bbd",
+      "README.md": "53b0b441ec2292187b67a89f4b33ebe7577b2f58230cb3b3b1adc359e3652ce2",
+      "CONTEXT.md": "0d09d0eeca55951693dd882dc0f26d698855a6e23e4c70278db1ce504d2f64b4",
+      "项目接续提示词.md": "6a483705e880ff376ea4f397f374e0fdb38c8f65386f1c56971ceab7f1175fa7",
+      "validation/validate_product_design_documents.py": "c652d1043304ff50e03dc8863e9799f0d0edc907721514568b20ab3fc047eda0",
+      "validation/product-design-document-check.json": "03a0ffd26486cb08349a9f8fbc82269789347b909b5e1cf2da7fc6a1d364d84a"
+    }
+  },
+  "verificationScope": "GLOBAL_SKILL_LOCAL_INSTALLATION_TOOLS_AND_TWO_ISOLATED_TRIALS_PLUS_OA_ADAPTER",
+  "productStatus": "NOT_IMPLEMENTED",
+  "observations": [
+    {
+      "source": "首次make eval原始输出",
+      "result": "38 tests, 1 error",
+      "finding": "macOS /var与/private/var路径别名使new_task relative_to失败",
+      "repair": "在new_task入口统一resolve root",
+      "after": "38 tests pass"
+    },
+    {
+      "source": "validation/product-design-document-check.json",
+      "result": "3 failures",
+      "finding": "本轮其他文件变化：原型浏览器h1定位不唯一；工作台浏览器证据为旧哈希",
+      "action": "保留FAIL，不修改正在变化的原型或其测试"
+    },
+    {
+      "source": "17:25 UTC后新的原型与浏览器证据；本轮make verify",
+      "result": "PASS",
+      "finding": "此前原型校验失败已由本团队之外的后续修改修复；本轮未修改原型或浏览器脚本",
+      "action": "重新运行全局门禁通过；不将其他会话改动归为本轮实现"
+    },
+    {
+      "source": "共享Skill文件实时读取",
+      "result": "CONCURRENT_WRITER_DETECTED",
+      "finding": "SKILL.md及新增workflow/evidence-evals/probe_project等资源由其他会话改写",
+      "action": "保留并核对；本团队试用记录实际读取哈希；不覆盖他人改动"
+    },
+    {
+      "source": "本会话独立前向验收",
+      "result": "Python 8 tests + Node 6 tests + independent outcome assertions PASS",
+      "finding": "Whole-test-file hash check was too strict for permitted added tests; original assertions remain unchanged.",
+      "action": "Corrected grader; preserved initial error in development-portable-forward-results.json. No implementation change."
+    }
+  ],
+  "review": {
+    "mode": "independent research agent + two isolated forward trials + parent raw-artifact review and subprocess checks",
+    "findings": [
+      "macOS path alias issue fixed and regressed",
+      "underlying prototype failures detected without suppressing checks; later independently refreshed evidence passes",
+      "concurrent global Skill changes preserved; final references and canonical probe consolidated, all hashes stable in verification",
+      "Independent portable_review found empty-source false rejection and 16/20 source mirror mismatch; both reproduced/corrected, 25 helper regressions pass. See development-portable-review-fix.json."
+    ],
+    "outstanding": [
+      "自动加载尚未在所有宿主新会话逐一验证",
+      "未全面回放所有行为场景；无稳定性/效率提升结论",
+      "产品技术底座尚未选定，真实产品/CI/生产尚未验收"
+    ],
+    "portableIndependentReview": {
+      "reviewer": "portable_review",
+      "initialFindings": 2,
+      "closedFindings": 2,
+      "remainingActionableFindings": 0,
+      "evidence": "validation/development-portable-review-fix.json"
+    }
+  },
+  "verifiedAt": "2026-09-11T17:41:23.480200+00:00",
+  "globalSkill": {
+    "path": "/Users/mac/.agents/skills/ai-native-sdlc",
+    "sha256": "743508a73ab71722c71c91808d67ee8a0d7faa325badbfce97afdc046931a5a9",
+    "version": "2.0.0",
+    "portableArchive": "validation/ai-native-sdlc-2.0.0.zip",
+    "discovery": [
+      "/Users/mac/.codex/skills/ai-native-sdlc",
+      "/Users/mac/.claude/skills/ai-native-sdlc"
+    ],
+    "defaultNavigation": "/Users/mac/.codex/AGENTS.md"
+  },
+  "acceptanceEvidence": [
+    {
+      "criterion": "一手研究与适用边界",
+      "evidence": "16项官方来源，15篇正文+1介绍页；PDF失败明确披露"
+    },
+    {
+      "criterion": "通用Skill完整性",
+      "evidence": "quick_validate、全部本地引用和38项通用工具回归通过"
+    },
+    {
+      "criterion": "真实跨项目试用",
+      "evidence": "Python修复与文档导航两次隔离Agent试用，父进程独立复核通过"
+    },
+    {
+      "criterion": "本项目持续应用",
+      "evidence": "同源Skill/全局与项目入口、Make与hook协议已执行；40项本地回归通过"
+    },
+    {
+      "criterion": "默认接续与可移植性",
+      "evidence": "全局AGENTS导航和同源发现链接已核验；压缩包逐文件字节验证；不声称所有宿主已自动触发"
+    }
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "command": [
+    "python3",
+    "-m",
+    "unittest",
+    "discover",
+    "-s",
+    "tests",
+    "-v"
+  ],
+  "cwd": "/private/var/folders/8l/6tnv8ssd2vs0h8463rnv66b00000gn/T/ai-sdlc-forward-sud9bya_/python-project",
+  "startedAt": "2026-09-11T17:35:55.642054+00:00",
+  "finishedAt": "2026-09-11T17:35:55.681848+00:00",
+  "exitCode": 1,
+  "inputHashes": {
+    "labels.py": "5a21a11d00c8e8dbd5abc356fc2331534d97977e3f6b31dc18107084ca0a142f",
+    "tests/test_labels.py": "458150891e53cfd1da792061a5875dff9ceaab2542f9402198c6082459fda297"
+  },
+  "stdout": "evidence/baseline-tests.stdout.log",
+  "stderr": "evidence/baseline-tests.stderr.log"
+}

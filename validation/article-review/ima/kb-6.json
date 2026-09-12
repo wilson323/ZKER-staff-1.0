@@ -1,0 +1,75 @@
+{
+  "retrievedAt": "2026-09-11T23:53:53.630469+00:00",
+  "operation": "search_knowledge_base",
+  "request": {
+    "query": "",
+    "cursor": "CgUI6QcYAQoFCOoHGAEKBQjsBxgBCggI7QcSAzExMg==",
+    "limit": 20
+  },
+  "exitCode": 0,
+  "response": {
+    "code": 0,
+    "msg": "success",
+    "data": {
+      "info_list": [
+        {
+          "kb_id": "RUgU95YEOoO3jAILu4agr8e9v2bkN2GkJ1hsJtPNDLs=",
+          "kb_name": "AIGC提示词",
+          "cover_url": "",
+          "member_count": "102",
+          "content_count": "62",
+          "description": "AIGC提示词分享",
+          "creator": "技术控老李",
+          "role_type": "普通成员",
+          "base_type": "我加入的订阅知识库"
+        },
+        {
+          "kb_id": "9UAPXYxi1MawLcFZvwz-KGNO8nHnTmV1sJfc1WHfwwM=",
+          "kb_name": "即梦绘画提示词",
+          "cover_url": "",
+          "member_count": "1178",
+          "content_count": "125",
+          "description": "即梦绘画提示词整理，有自己写的也有在其他地方收集的，小伙伴要是想将自己的提示词添加到知识库请关注微信公众号“我与AI的那点事”进行留言，让我们打造强大的“即梦绘画提示词”知识库，该公众号里面也发布了提示词生成的图片",
+          "creator": "梦缘",
+          "role_type": "普通成员",
+          "base_type": "我加入的订阅知识库"
+        },
+        {
+          "kb_id": "bG0SxtWZTjzBpPit6Hy1tPbEpqjLJLk_LvEHTzwwap0=",
+          "kb_name": "Agent最全知识库",
+          "cover_url": "",
+          "member_count": "9422",
+          "content_count": "540",
+          "description": "AI、Agent、AIGC领域优质内容。公众号：萝卜Agent",
+          "creator": "萝卜Agent",
+          "role_type": "普通成员",
+          "base_type": "我加入的订阅知识库"
+        },
+        {
+          "kb_id": "GbPVqKuTfvY7nlquU2kEWNy9iGbO0PFupqVn154D50w=",
+          "kb_name": "Ai4S-Ai工具集🔥",
+          "cover_url": "",
+          "member_count": "4150",
+          "content_count": "3050",
+          "description": "收录2600+国内外最全AI工具AI tools收录，专注于收集和分享最新、最实用的 AI工具Deepseek，GPT-5等，涵盖生产力提升、智能写作、数据分析、编程辅助、设计创作、视频处理等多个领域。",
+          "creator": "Ai4Scholar",
+          "role_type": "普通成员",
+          "base_type": "我加入的订阅知识库"
+        },
+        {
+          "kb_id": "EXrlVC3U4lHingrGSkX7kX1c7e6DPnxVu4dQo_XHgqE=",
+          "kb_name": "DeepSeek全方位指南",
+          "cover_url": "",
+          "member_count": "24457",
+          "content_count": "45",
+          "description": "你可以直接向我提问，本知识库整合DeepSeek解读、攻略等各种信息。",
+          "creator": "Jane",
+          "role_type": "普通成员",
+          "base_type": "我加入的订阅知识库"
+        }
+      ],
+      "is_end": true,
+      "next_cursor": "CgUI6QcYAQoFCOoHGAEKBQjsBxgBCgUI7QcYAQ=="
+    }
+  }
+}

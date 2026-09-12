@@ -1,0 +1,4181 @@
+{
+  "status": "CANDIDATE_NOT_DATABASE_VALIDATED",
+  "dialect": "MySQL 8.4 / InnoDB / utf8mb4",
+  "baseTables": "NOT_INCLUDED_NOT_REPLACED",
+  "tables": [
+    {
+      "name": "oa_work_item",
+      "authority": "业务工作合同；流程运行和人员责任归选定OA引擎",
+      "phase": "M1",
+      "immutable": false,
+      "columns": [
+        {
+          "name": "tenant_id",
+          "type": "VARCHAR(64)",
+          "nullable": false,
+          "default": null,
+          "meaning": "可信租户；所有查询和关联必含"
+        },
+        {
+          "name": "id",
+          "type": "VARCHAR(64)",
+          "nullable": false,
+          "default": null,
+          "meaning": "服务端生成的本表ID"
+        },
+        {
+          "name": "scope",
+          "type": "VARCHAR(16)",
+          "nullable": false,
+          "default": null,
+          "meaning": "PROCESS或AD_HOC"
+        },
+        {
+          "name": "process_instance_id",
+          "type": "VARCHAR(64)",
+          "nullable": true,
+          "default": null,
+          "meaning": "OA引擎业务实例ID，不能当模板ID"
+        },
+        {
+          "name": "engine_node_ref",
+          "type": "VARCHAR(64)",
+          "nullable": true,
+          "default": null,
+          "meaning": "OA节点ID"
+        },
+        {
+          "name": "source_intent_id",
+          "type": "VARCHAR(64)",
+          "nullable": true,
+          "default": null,
+          "meaning": "独立任务的用户意图ID"
+        },
+        {
+          "name": "objective",
+          "type": "VARCHAR(2000)",
+          "nullable": false,
+          "default": null,
+          "meaning": "用户目标"
+        },
+        {
+          "name": "output_contract_json",
+          "type": "JSON",
+          "nullable": false,
+          "default": null,
+          "meaning": "按JSON Schema校验，不允许任意JSON",
+          "schemaRef": "domain.schema.json#/$defs/VersionedRef"
+        },
+        {
+          "name": "state",
+          "type": "VARCHAR(32)",
+          "nullable": false,
+          "default": null,
+          "meaning": "READY/IN_PROGRESS/AWAITING_REVIEW/READY_TO_COMMIT/COMMITTED/CANCELLED"
+        },
+        {
+          "name": "readiness",
+          "type": "VARCHAR(32)",
+          "nullable": false,
+          "default": null,
+          "meaning": "READY/BLOCKED/NEEDS_RECHECK"
+        },
+        {
+          "name": "responsibility_epoch",
+          "type": "BIGINT UNSIGNED",
+          "nullable": false,
+          "default": "1",
+          "meaning": "责任轮次；仅责任服务递增"
+        },
+        {
+          "name": "revision",
+          "type": "BIGINT UNSIGNED",
+          "nullable": false,
+          "default": "1",
+          "meaning": "本记录乐观并发版本；更新+1"
+        },
+        {
+          "name": "created_at",
+          "type": "DATETIME(6)",
+          "nullable": false,
+          "default": "CURRENT_TIMESTAMP(6)",
+          "meaning": "服务端UTC写入时间"
+        },
+        {
+          "name": "updated_at",
+          "type": "DATETIME(6)",
+          "nullable": false,
+          "default": "CURRENT_TIMESTAMP(6)",
+          "meaning": "服务端UTC更新时间"
+        }
+      ],
+      "primaryKey": [
+        "tenant_id",
+        "id"
+      ],
+      "unique": [],
+      "indexes": [
+        [
+          "tenant_id",
+          "process_instance_id",
+          "id"
+        ],
+        [
+          "tenant_id",
+          "state",
+          "updated_at",
+          "id"
+        ]
+      ],
+      "foreignKeys": [],
+      "checks": [
+        "scope IN ('PROCESS','AD_HOC')",
+        "(scope='PROCESS' AND process_instance_id IS NOT NULL AND engine_node_ref IS NOT NULL AND source_intent_id IS NULL) OR (scope='AD_HOC' AND source_intent_id IS NOT NULL AND process_instance_id IS NULL AND engine_node_ref IS NULL)",
+        "state IN ('READY','IN_PROGRESS','AWAITING_REVIEW','READY_TO_COMMIT','COMMITTED','CANCELLED')",
+        "readiness IN ('READY','BLOCKED','NEEDS_RECHECK')"
+      ]
+    },
+    {
+      "name": "oa_human_task",
+      "authority": "OA任务只读投影；写入必须经唯一OA适配器",
+      "phase": "M1",
+      "immutable": false,
+      "columns": [
+        {
+          "name": "tenant_id",
+          "type": "VARCHAR(64)",
+          "nullable": false,
+          "default": null,
+          "meaning": "可信租户；所有查询和关联必含"
+        },
+        {
+          "name": "id",
+          "type": "VARCHAR(64)",
+          "nullable": false,
+          "default": null,
+          "meaning": "服务端生成的本表ID"
+        },
+        {
+          "name": "work_id",
+          "type": "VARCHAR(64)",
+          "nullable": false,
+          "default": null,
+          "meaning": "对应工作"
+        },
+        {
+          "name": "engine_task_ref",
+          "type": "VARCHAR(64)",
+          "nullable": false,
+          "default": null,
+          "meaning": "底座人任务或其原生待办ID"
+        },
+        {
+          "name": "kind",
+          "type": "VARCHAR(24)",
+          "nullable": false,
+          "default": null,
+          "meaning": "EXECUTE/COLLABORATE/REVIEW/RECEIVE"
+        },
+        {
+          "name": "assignee_member_id",
+          "type": "VARCHAR(64)",
+          "nullable": true,
+          "default": null,
+          "meaning": "OA当前承担人投影，允许尚未领取"
+        },
+        {
+          "name": "candidate_policy_json",
+          "type": "JSON",
+          "nullable": false,
+          "default": null,
+          "meaning": "按JSON Schema校验，不允许任意JSON",
+          "schemaRef": "domain.schema.json#/$defs/VersionedRef"
+        },
+        {
+          "name": "responsibility_epoch",
+          "type": "BIGINT UNSIGNED",
+          "nullable": false,
+          "default": "1",
+          "meaning": "与OA轮次一致"
+        },
+        {
+          "name": "state",
+          "type": "VARCHAR(24)",
+          "nullable": false,
+          "default": null,
+          "meaning": "AVAILABLE/ASSIGNED/IN_PROGRESS/COMPLETED/CANCELLED/SUPERSEDED"
+        },
+        {
+          "name": "due_at",
+          "type": "DATETIME(6)",
+          "nullable": true,
+          "default": null,
+          "meaning": "责任截止"
+        },
+        {
+          "name": "engine_revision",
+          "type": "BIGINT UNSIGNED",
+          "nullable": false,
+          "default": "1",
+          "meaning": "原始OA版本或单调适配序号"
+        },
+        {
+          "name": "revision",
+          "type": "BIGINT UNSIGNED",
+          "nullable": false,
+          "default": "1",
+          "meaning": "本记录乐观并发版本；更新+1"
+        },
+        {
+          "name": "created_at",
+          "type": "DATETIME(6)",
+          "nullable": false,
+          "default": "CURRENT_TIMESTAMP(6)",
+          "meaning": "服务端UTC写入时间"
+        },
+        {
+          "name": "updated_at",
+          "type": "DATETIME(6)",
+          "nullable": false,
+          "default": "CURRENT_TIMESTAMP(6)",
+          "meaning": "服务端UTC更新时间"
+        }
+      ],
+      "primaryKey": [
+        "tenant_id",
+        "id"
+      ],
+      "unique": [
+        [
+          "tenant_id",
+          "engine_task_ref"
+        ]
+      ],
+      "indexes": [
+        [
+          "tenant_id",
+          "assignee_member_id",
+          "state",
+          "due_at",
+          "id"
+        ]
+      ],
+      "foreignKeys": [
+        {
+          "columns": [
+            "tenant_id",
+            "work_id"
+          ],
+          "target": "oa_work_item",
+          "targetColumns": [
+            "tenant_id",
+            "id"
+          ],
+          "onDelete": "RESTRICT",
+          "onUpdate": "RESTRICT"
+        }
+      ],
+      "checks": []
+    },
+    {
+      "name": "oa_binding",
+      "authority": "本任务数字员工配置元数据",
+      "phase": "M1",
+      "immutable": false,
+      "columns": [
+        {
+          "name": "tenant_id",
+          "type": "VARCHAR(64)",
+          "nullable": false,
+          "default": null,
+          "meaning": "可信租户；所有查询和关联必含"
+        },
+        {
+          "name": "id",
+          "type": "VARCHAR(64)",
+          "nullable": false,
+          "default": null,
+          "meaning": "服务端生成的本表ID"
+        },
+        {
+          "name": "work_id",
+          "type": "VARCHAR(64)",
+          "nullable": false,
+          "default": null,
+          "meaning": "当前工作"
+        },
+        {
+          "name": "human_task_id",
+          "type": "VARCHAR(64)",
+          "nullable": false,
+          "default": null,
+          "meaning": "当前责任"
+        },
+        {
+          "name": "configured_by",
+          "type": "VARCHAR(64)",
+          "nullable": false,
+          "default": null,
+          "meaning": "实际配置人"
+        },
+        {
+          "name": "responsibility_epoch",
+          "type": "BIGINT UNSIGNED",
+          "nullable": false,
+          "default": "1",
+          "meaning": "绑定所属轮次"
+        },
+        {
+          "name": "mode",
+          "type": "VARCHAR(16)",
+          "nullable": false,
+          "default": null,
+          "meaning": "MANUAL/ASSISTED/AUTONOMOUS"
+        },
+        {
+          "name": "config_version",
+          "type": "BIGINT UNSIGNED",
+          "nullable": false,
+          "default": "1",
+          "meaning": "当前不可变配置版本"
+        },
+        {
+          "name": "state",
+          "type": "VARCHAR(20)",
+          "nullable": false,
+          "default": null,
+          "meaning": "DRAFT/ACTIVE/SUPERSEDED/REVOKED/CLOSED"
+        },
+        {
+          "name": "revision",
+          "type": "BIGINT UNSIGNED",
+          "nullable": false,
+          "default": "1",
+          "meaning": "本记录乐观并发版本；更新+1"
+        },
+        {
+          "name": "created_at",
+          "type": "DATETIME(6)",
+          "nullable": false,
+          "default": "CURRENT_TIMESTAMP(6)",
+          "meaning": "服务端UTC写入时间"
+        },
+        {
+          "name": "updated_at",
+          "type": "DATETIME(6)",
+          "nullable": false,
+          "default": "CURRENT_TIMESTAMP(6)",
+          "meaning": "服务端UTC更新时间"
+        }
+      ],
+      "primaryKey": [
+        "tenant_id",
+        "id"
+      ],
+      "unique": [
+        [
+          "tenant_id",
+          "human_task_id",
+          "responsibility_epoch"
+        ]
+      ],
+      "indexes": [],
+      "foreignKeys": [
+        {
+          "columns": [
+            "tenant_id",
+            "work_id"
+          ],
+          "target": "oa_work_item",
+          "targetColumns": [
+            "tenant_id",
+            "id"
+          ],
+          "onDelete": "RESTRICT",
+          "onUpdate": "RESTRICT"
+        },
+        {
+          "columns": [
+            "tenant_id",
+            "human_task_id"
+          ],
+          "target": "oa_human_task",
+          "targetColumns": [
+            "tenant_id",
+            "id"
+          ],
+          "onDelete": "RESTRICT",
+          "onUpdate": "RESTRICT"
+        }
+      ],
+      "checks": [
+        "mode IN ('MANUAL','ASSISTED','AUTONOMOUS')"
+      ]
+    },
+    {
+      "name": "oa_binding_version",
+      "authority": "不可变配置快照",
+      "phase": "M1",
+      "immutable": true,
+      "columns": [
+        {
+          "name": "tenant_id",
+          "type": "VARCHAR(64)",
+          "nullable": false,
+          "default": null,
+          "meaning": "可信租户；所有查询和关联必含"
+        },
+        {
+          "name": "id",
+          "type": "VARCHAR(64)",
+          "nullable": false,
+          "default": null,
+          "meaning": "服务端生成的本表ID"
+        },
+        {
+          "name": "binding_id",
+          "type": "VARCHAR(64)",
+          "nullable": false,
+          "default": null,
+          "meaning": "配置主记录"
+        },
+        {
+          "name": "version",
+          "type": "BIGINT UNSIGNED",
+          "nullable": false,
+          "default": "1",
+          "meaning": "配置版本号"
+        },
+        {
+          "name": "config_json",
+          "type": "JSON",
+          "nullable": false,
+          "default": null,
+          "meaning": "按JSON Schema校验，不允许任意JSON",
+          "schemaRef": "domain.schema.json#/$defs/C04_saveTaskBindingRequest"
+        },
+        {
+          "name": "digest",
+          "type": "VARCHAR(71)",
+          "nullable": false,
+          "default": null,
+          "meaning": "规范化配置摘要"
+        },
+        {
+          "name": "revision",
+          "type": "BIGINT UNSIGNED",
+          "nullable": false,
+          "default": "1",
+          "meaning": "本记录乐观并发版本；更新+1"
+        },
+        {
+          "name": "created_at",
+          "type": "DATETIME(6)",
+          "nullable": false,
+          "default": "CURRENT_TIMESTAMP(6)",
+          "meaning": "服务端UTC写入时间"
+        },
+        {
+          "name": "updated_at",
+          "type": "DATETIME(6)",
+          "nullable": false,
+          "default": "CURRENT_TIMESTAMP(6)",
+          "meaning": "服务端UTC更新时间"
+        }
+      ],
+      "primaryKey": [
+        "tenant_id",
+        "id"
+      ],
+      "unique": [
+        [
+          "tenant_id",
+          "binding_id",
+          "version"
+        ]
+      ],
+      "indexes": [],
+      "foreignKeys": [
+        {
+          "columns": [
+            "tenant_id",
+            "binding_id"
+          ],
+          "target": "oa_binding",
+          "targetColumns": [
+            "tenant_id",
+            "id"
+          ],
+          "onDelete": "RESTRICT",
+          "onUpdate": "RESTRICT"
+        }
+      ],
+      "checks": []
+    },
+    {
+      "name": "oa_baseline",
+      "authority": "共同业务事实基线；确认后不可变",
+      "phase": "M1",
+      "immutable": true,
+      "columns": [
+        {
+          "name": "tenant_id",
+          "type": "VARCHAR(64)",
+          "nullable": false,
+          "default": null,
+          "meaning": "可信租户；所有查询和关联必含"
+        },
+        {
+          "name": "id",
+          "type": "VARCHAR(64)",
+          "nullable": false,
+          "default": null,
+          "meaning": "服务端生成的本表ID"
+        },
+        {
+          "name": "work_id",
+          "type": "VARCHAR(64)",
+          "nullable": false,
+          "default": null,
+          "meaning": "基线所属业务工作"
+        },
+        {
+          "name": "version",
+          "type": "BIGINT UNSIGNED",
+          "nullable": false,
+          "default": "1",
+          "meaning": "基线版本"
+        },
+        {
+          "name": "facts_json",
+          "type": "JSON",
+          "nullable": false,
+          "default": null,
+          "meaning": "按JSON Schema校验，不允许任意JSON",
+          "schemaRef": "domain.schema.json#/$defs/C16_confirmRequest"
+        },
+        {
+          "name": "confirmed_by",
+          "type": "VARCHAR(64)",
+          "nullable": false,
+          "default": null,
+          "meaning": "有权人员"
+        },
+        {
+          "name": "confirmed_at",
+          "type": "DATETIME(6)",
+          "nullable": false,
+          "default": null,
+          "meaning": "真实确认时间"
+        },
+        {
+          "name": "digest",
+          "type": "VARCHAR(71)",
+          "nullable": false,
+          "default": null,
+          "meaning": "基线摘要"
+        },
+        {
+          "name": "revision",
+          "type": "BIGINT UNSIGNED",
+          "nullable": false,
+          "default": "1",
+          "meaning": "本记录乐观并发版本；更新+1"
+        },
+        {
+          "name": "created_at",
+          "type": "DATETIME(6)",
+          "nullable": false,
+          "default": "CURRENT_TIMESTAMP(6)",
+          "meaning": "服务端UTC写入时间"
+        },
+        {
+          "name": "updated_at",
+          "type": "DATETIME(6)",
+          "nullable": false,
+          "default": "CURRENT_TIMESTAMP(6)",
+          "meaning": "服务端UTC更新时间"
+        }
+      ],
+      "primaryKey": [
+        "tenant_id",
+        "id"
+      ],
+      "unique": [
+        [
+          "tenant_id",
+          "work_id",
+          "version"
+        ]
+      ],
+      "indexes": [],
+      "foreignKeys": [
+        {
+          "columns": [
+            "tenant_id",
+            "work_id"
+          ],
+          "target": "oa_work_item",
+          "targetColumns": [
+            "tenant_id",
+            "id"
+          ],
+          "onDelete": "RESTRICT",
+          "onUpdate": "RESTRICT"
+        }
+      ],
+      "checks": []
+    },
+    {
+      "name": "oa_context_manifest",
+      "authority": "输入集合的不可变版本引用；不存公开对话",
+      "phase": "M1",
+      "immutable": true,
+      "columns": [
+        {
+          "name": "tenant_id",
+          "type": "VARCHAR(64)",
+          "nullable": false,
+          "default": null,
+          "meaning": "可信租户；所有查询和关联必含"
+        },
+        {
+          "name": "id",
+          "type": "VARCHAR(64)",
+          "nullable": false,
+          "default": null,
+          "meaning": "服务端生成的本表ID"
+        },
+        {
+          "name": "work_id",
+          "type": "VARCHAR(64)",
+          "nullable": false,
+          "default": null,
+          "meaning": "限定工作"
+        },
+        {
+          "name": "baseline_id",
+          "type": "VARCHAR(64)",
+          "nullable": false,
+          "default": null,
+          "meaning": "共同基线"
+        },
+        {
+          "name": "target_subject_id",
+          "type": "VARCHAR(64)",
+          "nullable": false,
+          "default": null,
+          "meaning": "精确使用主体"
+        },
+        {
+          "name": "purpose",
+          "type": "VARCHAR(200)",
+          "nullable": false,
+          "default": null,
+          "meaning": "限定用途"
+        },
+        {
+          "name": "source_refs_json",
+          "type": "JSON",
+          "nullable": false,
+          "default": null,
+          "meaning": "带purpose/required的来源引用数组",
+          "schemaRef": "internal.schema.json#/$defs/ContextSources"
+        },
+        {
+          "name": "policy_revision",
+          "type": "BIGINT UNSIGNED",
+          "nullable": false,
+          "default": "1",
+          "meaning": "来源校验时策略版本"
+        },
+        {
+          "name": "expires_at",
+          "type": "DATETIME(6)",
+          "nullable": false,
+          "default": null,
+          "meaning": "过期时必须重建"
+        },
+        {
+          "name": "digest",
+          "type": "VARCHAR(71)",
+          "nullable": false,
+          "default": null,
+          "meaning": "manifest摘要"
+        },
+        {
+          "name": "revision",
+          "type": "BIGINT UNSIGNED",
+          "nullable": false,
+          "default": "1",
+          "meaning": "本记录乐观并发版本；更新+1"
+        },
+        {
+          "name": "created_at",
+          "type": "DATETIME(6)",
+          "nullable": false,
+          "default": "CURRENT_TIMESTAMP(6)",
+          "meaning": "服务端UTC写入时间"
+        },
+        {
+          "name": "updated_at",
+          "type": "DATETIME(6)",
+          "nullable": false,
+          "default": "CURRENT_TIMESTAMP(6)",
+          "meaning": "服务端UTC更新时间"
+        }
+      ],
+      "primaryKey": [
+        "tenant_id",
+        "id"
+      ],
+      "unique": [],
+      "indexes": [],
+      "foreignKeys": [
+        {
+          "columns": [
+            "tenant_id",
+            "work_id"
+          ],
+          "target": "oa_work_item",
+          "targetColumns": [
+            "tenant_id",
+            "id"
+          ],
+          "onDelete": "RESTRICT",
+          "onUpdate": "RESTRICT"
+        },
+        {
+          "columns": [
+            "tenant_id",
+            "baseline_id"
+          ],
+          "target": "oa_baseline",
+          "targetColumns": [
+            "tenant_id",
+            "id"
+          ],
+          "onDelete": "RESTRICT",
+          "onUpdate": "RESTRICT"
+        }
+      ],
+      "checks": []
+    },
+    {
+      "name": "oa_execution_snapshot",
+      "authority": "真实执行时重验后形成；只供后台",
+      "phase": "M1",
+      "immutable": true,
+      "columns": [
+        {
+          "name": "tenant_id",
+          "type": "VARCHAR(64)",
+          "nullable": false,
+          "default": null,
+          "meaning": "可信租户；所有查询和关联必含"
+        },
+        {
+          "name": "id",
+          "type": "VARCHAR(64)",
+          "nullable": false,
+          "default": null,
+          "meaning": "服务端生成的本表ID"
+        },
+        {
+          "name": "work_id",
+          "type": "VARCHAR(64)",
+          "nullable": false,
+          "default": null,
+          "meaning": "执行工作"
+        },
+        {
+          "name": "binding_id",
+          "type": "VARCHAR(64)",
+          "nullable": false,
+          "default": null,
+          "meaning": "配置"
+        },
+        {
+          "name": "binding_version",
+          "type": "BIGINT UNSIGNED",
+          "nullable": false,
+          "default": "1",
+          "meaning": "锁定配置版本"
+        },
+        {
+          "name": "manifest_id",
+          "type": "VARCHAR(64)",
+          "nullable": false,
+          "default": null,
+          "meaning": "锁定上下文"
+        },
+        {
+          "name": "responsibility_epoch",
+          "type": "BIGINT UNSIGNED",
+          "nullable": false,
+          "default": "1",
+          "meaning": "创建轮次"
+        },
+        {
+          "name": "authz_epoch",
+          "type": "BIGINT UNSIGNED",
+          "nullable": false,
+          "default": "1",
+          "meaning": "执行授权代次"
+        },
+        {
+          "name": "policy_revision",
+          "type": "BIGINT UNSIGNED",
+          "nullable": false,
+          "default": "1",
+          "meaning": "策略版本"
+        },
+        {
+          "name": "expires_at",
+          "type": "DATETIME(6)",
+          "nullable": false,
+          "default": null,
+          "meaning": "到期拒绝新工具调用"
+        },
+        {
+          "name": "digest",
+          "type": "VARCHAR(71)",
+          "nullable": false,
+          "default": null,
+          "meaning": "全部执行输入摘要"
+        },
+        {
+          "name": "revision",
+          "type": "BIGINT UNSIGNED",
+          "nullable": false,
+          "default": "1",
+          "meaning": "本记录乐观并发版本；更新+1"
+        },
+        {
+          "name": "created_at",
+          "type": "DATETIME(6)",
+          "nullable": false,
+          "default": "CURRENT_TIMESTAMP(6)",
+          "meaning": "服务端UTC写入时间"
+        },
+        {
+          "name": "updated_at",
+          "type": "DATETIME(6)",
+          "nullable": false,
+          "default": "CURRENT_TIMESTAMP(6)",
+          "meaning": "服务端UTC更新时间"
+        }
+      ],
+      "primaryKey": [
+        "tenant_id",
+        "id"
+      ],
+      "unique": [],
+      "indexes": [],
+      "foreignKeys": [
+        {
+          "columns": [
+            "tenant_id",
+            "work_id"
+          ],
+          "target": "oa_work_item",
+          "targetColumns": [
+            "tenant_id",
+            "id"
+          ],
+          "onDelete": "RESTRICT",
+          "onUpdate": "RESTRICT"
+        },
+        {
+          "columns": [
+            "tenant_id",
+            "binding_id"
+          ],
+          "target": "oa_binding",
+          "targetColumns": [
+            "tenant_id",
+            "id"
+          ],
+          "onDelete": "RESTRICT",
+          "onUpdate": "RESTRICT"
+        },
+        {
+          "columns": [
+            "tenant_id",
+            "manifest_id"
+          ],
+          "target": "oa_context_manifest",
+          "targetColumns": [
+            "tenant_id",
+            "id"
+          ],
+          "onDelete": "RESTRICT",
+          "onUpdate": "RESTRICT"
+        }
+      ],
+      "checks": []
+    },
+    {
+      "name": "oa_execution_grant",
+      "authority": "复用底座Grant的任务用途扩展；不是第二套角色权限",
+      "phase": "M1",
+      "immutable": false,
+      "columns": [
+        {
+          "name": "tenant_id",
+          "type": "VARCHAR(64)",
+          "nullable": false,
+          "default": null,
+          "meaning": "可信租户；所有查询和关联必含"
+        },
+        {
+          "name": "id",
+          "type": "VARCHAR(64)",
+          "nullable": false,
+          "default": null,
+          "meaning": "服务端生成的本表ID"
+        },
+        {
+          "name": "base_grant_id",
+          "type": "VARCHAR(64)",
+          "nullable": false,
+          "default": null,
+          "meaning": "底座权威Grant ID"
+        },
+        {
+          "name": "work_id",
+          "type": "VARCHAR(64)",
+          "nullable": false,
+          "default": null,
+          "meaning": "唯一工作"
+        },
+        {
+          "name": "execution_subject_id",
+          "type": "VARCHAR(64)",
+          "nullable": false,
+          "default": null,
+          "meaning": "工作负载身份"
+        },
+        {
+          "name": "granted_by",
+          "type": "VARCHAR(64)",
+          "nullable": false,
+          "default": null,
+          "meaning": "有权来源授权人"
+        },
+        {
+          "name": "policy_json",
+          "type": "JSON",
+          "nullable": false,
+          "default": null,
+          "meaning": "按JSON Schema校验，不允许任意JSON",
+          "schemaRef": "domain.schema.json#/$defs/ExecutionGrant"
+        },
+        {
+          "name": "expires_at",
+          "type": "DATETIME(6)",
+          "nullable": false,
+          "default": null,
+          "meaning": "有效期"
+        },
+        {
+          "name": "authz_epoch",
+          "type": "BIGINT UNSIGNED",
+          "nullable": false,
+          "default": "1",
+          "meaning": "撤权后递增"
+        },
+        {
+          "name": "revision",
+          "type": "BIGINT UNSIGNED",
+          "nullable": false,
+          "default": "1",
+          "meaning": "本记录乐观并发版本；更新+1"
+        },
+        {
+          "name": "created_at",
+          "type": "DATETIME(6)",
+          "nullable": false,
+          "default": "CURRENT_TIMESTAMP(6)",
+          "meaning": "服务端UTC写入时间"
+        },
+        {
+          "name": "updated_at",
+          "type": "DATETIME(6)",
+          "nullable": false,
+          "default": "CURRENT_TIMESTAMP(6)",
+          "meaning": "服务端UTC更新时间"
+        }
+      ],
+      "primaryKey": [
+        "tenant_id",
+        "id"
+      ],
+      "unique": [],
+      "indexes": [],
+      "foreignKeys": [
+        {
+          "columns": [
+            "tenant_id",
+            "work_id"
+          ],
+          "target": "oa_work_item",
+          "targetColumns": [
+            "tenant_id",
+            "id"
+          ],
+          "onDelete": "RESTRICT",
+          "onUpdate": "RESTRICT"
+        }
+      ],
+      "checks": []
+    },
+    {
+      "name": "oa_attempt",
+      "authority": "SDK执行状态与其持久化引用；不另建循环",
+      "phase": "M1",
+      "immutable": false,
+      "columns": [
+        {
+          "name": "tenant_id",
+          "type": "VARCHAR(64)",
+          "nullable": false,
+          "default": null,
+          "meaning": "可信租户；所有查询和关联必含"
+        },
+        {
+          "name": "id",
+          "type": "VARCHAR(64)",
+          "nullable": false,
+          "default": null,
+          "meaning": "服务端生成的本表ID"
+        },
+        {
+          "name": "work_id",
+          "type": "VARCHAR(64)",
+          "nullable": false,
+          "default": null,
+          "meaning": "工作"
+        },
+        {
+          "name": "binding_id",
+          "type": "VARCHAR(64)",
+          "nullable": false,
+          "default": null,
+          "meaning": "本人配置"
+        },
+        {
+          "name": "snapshot_id",
+          "type": "VARCHAR(64)",
+          "nullable": false,
+          "default": null,
+          "meaning": "锁定输入"
+        },
+        {
+          "name": "attempt_number",
+          "type": "BIGINT UNSIGNED",
+          "nullable": false,
+          "default": "1",
+          "meaning": "工作内执行序号"
+        },
+        {
+          "name": "fence",
+          "type": "BIGINT UNSIGNED",
+          "nullable": false,
+          "default": "1",
+          "meaning": "唯一运行栅栏"
+        },
+        {
+          "name": "state",
+          "type": "VARCHAR(24)",
+          "nullable": false,
+          "default": null,
+          "meaning": "QUEUED/PREPARING/RUNNING/WAITING_HUMAN/PAUSED/SUCCEEDED/FAILED/CANCEL_REQUESTED/CANCELLED/RESULT_UNKNOWN"
+        },
+        {
+          "name": "operation_id",
+          "type": "VARCHAR(64)",
+          "nullable": false,
+          "default": null,
+          "meaning": "操作记录"
+        },
+        {
+          "name": "sdk_run_ref",
+          "type": "VARCHAR(64)",
+          "nullable": true,
+          "default": null,
+          "meaning": "底座SDK执行ID"
+        },
+        {
+          "name": "checkpoint_ref",
+          "type": "VARCHAR(255)",
+          "nullable": true,
+          "default": null,
+          "meaning": "SDK检查点引用，非私有正文"
+        },
+        {
+          "name": "started_at",
+          "type": "DATETIME(6)",
+          "nullable": true,
+          "default": null,
+          "meaning": "实际开始"
+        },
+        {
+          "name": "ended_at",
+          "type": "DATETIME(6)",
+          "nullable": true,
+          "default": null,
+          "meaning": "真实终结"
+        },
+        {
+          "name": "revision",
+          "type": "BIGINT UNSIGNED",
+          "nullable": false,
+          "default": "1",
+          "meaning": "本记录乐观并发版本；更新+1"
+        },
+        {
+          "name": "created_at",
+          "type": "DATETIME(6)",
+          "nullable": false,
+          "default": "CURRENT_TIMESTAMP(6)",
+          "meaning": "服务端UTC写入时间"
+        },
+        {
+          "name": "updated_at",
+          "type": "DATETIME(6)",
+          "nullable": false,
+          "default": "CURRENT_TIMESTAMP(6)",
+          "meaning": "服务端UTC更新时间"
+        }
+      ],
+      "primaryKey": [
+        "tenant_id",
+        "id"
+      ],
+      "unique": [
+        [
+          "tenant_id",
+          "work_id",
+          "attempt_number"
+        ]
+      ],
+      "indexes": [],
+      "foreignKeys": [
+        {
+          "columns": [
+            "tenant_id",
+            "work_id"
+          ],
+          "target": "oa_work_item",
+          "targetColumns": [
+            "tenant_id",
+            "id"
+          ],
+          "onDelete": "RESTRICT",
+          "onUpdate": "RESTRICT"
+        },
+        {
+          "columns": [
+            "tenant_id",
+            "binding_id"
+          ],
+          "target": "oa_binding",
+          "targetColumns": [
+            "tenant_id",
+            "id"
+          ],
+          "onDelete": "RESTRICT",
+          "onUpdate": "RESTRICT"
+        },
+        {
+          "columns": [
+            "tenant_id",
+            "snapshot_id"
+          ],
+          "target": "oa_execution_snapshot",
+          "targetColumns": [
+            "tenant_id",
+            "id"
+          ],
+          "onDelete": "RESTRICT",
+          "onUpdate": "RESTRICT"
+        }
+      ],
+      "checks": []
+    },
+    {
+      "name": "oa_artifact_version",
+      "authority": "不可变文件元数据；实际字节在私有存储",
+      "phase": "M1",
+      "immutable": true,
+      "columns": [
+        {
+          "name": "tenant_id",
+          "type": "VARCHAR(64)",
+          "nullable": false,
+          "default": null,
+          "meaning": "可信租户；所有查询和关联必含"
+        },
+        {
+          "name": "id",
+          "type": "VARCHAR(64)",
+          "nullable": false,
+          "default": null,
+          "meaning": "服务端生成的本表ID"
+        },
+        {
+          "name": "artifact_id",
+          "type": "VARCHAR(64)",
+          "nullable": false,
+          "default": null,
+          "meaning": "文件跨版本稳定ID"
+        },
+        {
+          "name": "version",
+          "type": "BIGINT UNSIGNED",
+          "nullable": false,
+          "default": "1",
+          "meaning": "文件版本"
+        },
+        {
+          "name": "work_id",
+          "type": "VARCHAR(64)",
+          "nullable": false,
+          "default": null,
+          "meaning": "所属工作"
+        },
+        {
+          "name": "source_attempt_id",
+          "type": "VARCHAR(64)",
+          "nullable": true,
+          "default": null,
+          "meaning": "人工上传可空"
+        },
+        {
+          "name": "storage_ref",
+          "type": "VARCHAR(512)",
+          "nullable": false,
+          "default": null,
+          "meaning": "私有对象键；不返回公网URL"
+        },
+        {
+          "name": "name",
+          "type": "VARCHAR(255)",
+          "nullable": false,
+          "default": null,
+          "meaning": "名称本身受读权限控制"
+        },
+        {
+          "name": "media_type",
+          "type": "VARCHAR(100)",
+          "nullable": false,
+          "default": null,
+          "meaning": "服务端嗅探MIME"
+        },
+        {
+          "name": "size_bytes",
+          "type": "BIGINT UNSIGNED",
+          "nullable": false,
+          "default": null,
+          "meaning": "实测大小"
+        },
+        {
+          "name": "digest",
+          "type": "VARCHAR(71)",
+          "nullable": false,
+          "default": null,
+          "meaning": "实际字节SHA256"
+        },
+        {
+          "name": "created_by",
+          "type": "VARCHAR(64)",
+          "nullable": false,
+          "default": null,
+          "meaning": "实际人员/服务主体"
+        },
+        {
+          "name": "scan_state",
+          "type": "VARCHAR(20)",
+          "nullable": false,
+          "default": null,
+          "meaning": "QUARANTINED/CLEAN/REJECTED"
+        },
+        {
+          "name": "revision",
+          "type": "BIGINT UNSIGNED",
+          "nullable": false,
+          "default": "1",
+          "meaning": "本记录乐观并发版本；更新+1"
+        },
+        {
+          "name": "created_at",
+          "type": "DATETIME(6)",
+          "nullable": false,
+          "default": "CURRENT_TIMESTAMP(6)",
+          "meaning": "服务端UTC写入时间"
+        },
+        {
+          "name": "updated_at",
+          "type": "DATETIME(6)",
+          "nullable": false,
+          "default": "CURRENT_TIMESTAMP(6)",
+          "meaning": "服务端UTC更新时间"
+        }
+      ],
+      "primaryKey": [
+        "tenant_id",
+        "id"
+      ],
+      "unique": [
+        [
+          "tenant_id",
+          "artifact_id",
+          "version"
+        ]
+      ],
+      "indexes": [],
+      "foreignKeys": [
+        {
+          "columns": [
+            "tenant_id",
+            "work_id"
+          ],
+          "target": "oa_work_item",
+          "targetColumns": [
+            "tenant_id",
+            "id"
+          ],
+          "onDelete": "RESTRICT",
+          "onUpdate": "RESTRICT"
+        },
+        {
+          "columns": [
+            "tenant_id",
+            "source_attempt_id"
+          ],
+          "target": "oa_attempt",
+          "targetColumns": [
+            "tenant_id",
+            "id"
+          ],
+          "onDelete": "RESTRICT",
+          "onUpdate": "RESTRICT"
+        }
+      ],
+      "checks": []
+    },
+    {
+      "name": "oa_collaboration",
+      "authority": "父子工作关系不隐含私有内容共享",
+      "phase": "M2",
+      "immutable": false,
+      "columns": [
+        {
+          "name": "tenant_id",
+          "type": "VARCHAR(64)",
+          "nullable": false,
+          "default": null,
+          "meaning": "可信租户；所有查询和关联必含"
+        },
+        {
+          "name": "id",
+          "type": "VARCHAR(64)",
+          "nullable": false,
+          "default": null,
+          "meaning": "服务端生成的本表ID"
+        },
+        {
+          "name": "parent_work_id",
+          "type": "VARCHAR(64)",
+          "nullable": false,
+          "default": null,
+          "meaning": "父工作"
+        },
+        {
+          "name": "child_work_id",
+          "type": "VARCHAR(64)",
+          "nullable": true,
+          "default": null,
+          "meaning": "接受后子工作"
+        },
+        {
+          "name": "recipient_member_id",
+          "type": "VARCHAR(64)",
+          "nullable": false,
+          "default": null,
+          "meaning": "候选接收人"
+        },
+        {
+          "name": "output_contract_json",
+          "type": "JSON",
+          "nullable": false,
+          "default": null,
+          "meaning": "按JSON Schema校验，不允许任意JSON",
+          "schemaRef": "domain.schema.json#/$defs/VersionedRef"
+        },
+        {
+          "name": "state",
+          "type": "VARCHAR(20)",
+          "nullable": false,
+          "default": null,
+          "meaning": "REQUESTED/ACCEPTED/DECLINED/EXPIRED/CANCELLED"
+        },
+        {
+          "name": "due_at",
+          "type": "DATETIME(6)",
+          "nullable": false,
+          "default": null,
+          "meaning": "约定期限"
+        },
+        {
+          "name": "revision",
+          "type": "BIGINT UNSIGNED",
+          "nullable": false,
+          "default": "1",
+          "meaning": "本记录乐观并发版本；更新+1"
+        },
+        {
+          "name": "created_at",
+          "type": "DATETIME(6)",
+          "nullable": false,
+          "default": "CURRENT_TIMESTAMP(6)",
+          "meaning": "服务端UTC写入时间"
+        },
+        {
+          "name": "updated_at",
+          "type": "DATETIME(6)",
+          "nullable": false,
+          "default": "CURRENT_TIMESTAMP(6)",
+          "meaning": "服务端UTC更新时间"
+        }
+      ],
+      "primaryKey": [
+        "tenant_id",
+        "id"
+      ],
+      "unique": [
+        [
+          "tenant_id",
+          "child_work_id"
+        ]
+      ],
+      "indexes": [],
+      "foreignKeys": [
+        {
+          "columns": [
+            "tenant_id",
+            "parent_work_id"
+          ],
+          "target": "oa_work_item",
+          "targetColumns": [
+            "tenant_id",
+            "id"
+          ],
+          "onDelete": "RESTRICT",
+          "onUpdate": "RESTRICT"
+        },
+        {
+          "columns": [
+            "tenant_id",
+            "child_work_id"
+          ],
+          "target": "oa_work_item",
+          "targetColumns": [
+            "tenant_id",
+            "id"
+          ],
+          "onDelete": "RESTRICT",
+          "onUpdate": "RESTRICT"
+        }
+      ],
+      "checks": []
+    },
+    {
+      "name": "oa_contribution_version",
+      "authority": "贡献版本不可变；决定独立记录",
+      "phase": "M2",
+      "immutable": true,
+      "columns": [
+        {
+          "name": "tenant_id",
+          "type": "VARCHAR(64)",
+          "nullable": false,
+          "default": null,
+          "meaning": "可信租户；所有查询和关联必含"
+        },
+        {
+          "name": "id",
+          "type": "VARCHAR(64)",
+          "nullable": false,
+          "default": null,
+          "meaning": "服务端生成的本表ID"
+        },
+        {
+          "name": "collaboration_id",
+          "type": "VARCHAR(64)",
+          "nullable": false,
+          "default": null,
+          "meaning": "分工关系"
+        },
+        {
+          "name": "version",
+          "type": "BIGINT UNSIGNED",
+          "nullable": false,
+          "default": "1",
+          "meaning": "贡献版本"
+        },
+        {
+          "name": "submission_json",
+          "type": "JSON",
+          "nullable": false,
+          "default": null,
+          "meaning": "按JSON Schema校验，不允许任意JSON",
+          "schemaRef": "domain.schema.json#/$defs/C09_submitRequest"
+        },
+        {
+          "name": "submitted_by",
+          "type": "VARCHAR(64)",
+          "nullable": false,
+          "default": null,
+          "meaning": "子当前承担人"
+        },
+        {
+          "name": "digest",
+          "type": "VARCHAR(71)",
+          "nullable": false,
+          "default": null,
+          "meaning": "候选摘要"
+        },
+        {
+          "name": "revision",
+          "type": "BIGINT UNSIGNED",
+          "nullable": false,
+          "default": "1",
+          "meaning": "本记录乐观并发版本；更新+1"
+        },
+        {
+          "name": "created_at",
+          "type": "DATETIME(6)",
+          "nullable": false,
+          "default": "CURRENT_TIMESTAMP(6)",
+          "meaning": "服务端UTC写入时间"
+        },
+        {
+          "name": "updated_at",
+          "type": "DATETIME(6)",
+          "nullable": false,
+          "default": "CURRENT_TIMESTAMP(6)",
+          "meaning": "服务端UTC更新时间"
+        }
+      ],
+      "primaryKey": [
+        "tenant_id",
+        "id"
+      ],
+      "unique": [
+        [
+          "tenant_id",
+          "collaboration_id",
+          "version"
+        ]
+      ],
+      "indexes": [],
+      "foreignKeys": [
+        {
+          "columns": [
+            "tenant_id",
+            "collaboration_id"
+          ],
+          "target": "oa_collaboration",
+          "targetColumns": [
+            "tenant_id",
+            "id"
+          ],
+          "onDelete": "RESTRICT",
+          "onUpdate": "RESTRICT"
+        }
+      ],
+      "checks": []
+    },
+    {
+      "name": "oa_review",
+      "authority": "审核请求及目标版本",
+      "phase": "M1",
+      "immutable": false,
+      "columns": [
+        {
+          "name": "tenant_id",
+          "type": "VARCHAR(64)",
+          "nullable": false,
+          "default": null,
+          "meaning": "可信租户；所有查询和关联必含"
+        },
+        {
+          "name": "id",
+          "type": "VARCHAR(64)",
+          "nullable": false,
+          "default": null,
+          "meaning": "服务端生成的本表ID"
+        },
+        {
+          "name": "work_id",
+          "type": "VARCHAR(64)",
+          "nullable": false,
+          "default": null,
+          "meaning": "被审工作"
+        },
+        {
+          "name": "reviewer_member_id",
+          "type": "VARCHAR(64)",
+          "nullable": false,
+          "default": null,
+          "meaning": "独立审核人"
+        },
+        {
+          "name": "requested_by",
+          "type": "VARCHAR(64)",
+          "nullable": false,
+          "default": null,
+          "meaning": "发起审核人"
+        },
+        {
+          "name": "candidate_digest",
+          "type": "VARCHAR(71)",
+          "nullable": false,
+          "default": null,
+          "meaning": "精确候选集"
+        },
+        {
+          "name": "baseline_id",
+          "type": "VARCHAR(64)",
+          "nullable": false,
+          "default": null,
+          "meaning": "基线版本"
+        },
+        {
+          "name": "state",
+          "type": "VARCHAR(20)",
+          "nullable": false,
+          "default": null,
+          "meaning": "PENDING/APPROVED/REJECTED/RETURNED/OBSOLETE/CANCELLED"
+        },
+        {
+          "name": "receipt_json",
+          "type": "JSON",
+          "nullable": true,
+          "default": null,
+          "meaning": "按JSON Schema校验，不允许任意JSON",
+          "schemaRef": "domain.schema.json#/$defs/C10_decideReviewRequest"
+        },
+        {
+          "name": "revision",
+          "type": "BIGINT UNSIGNED",
+          "nullable": false,
+          "default": "1",
+          "meaning": "本记录乐观并发版本；更新+1"
+        },
+        {
+          "name": "created_at",
+          "type": "DATETIME(6)",
+          "nullable": false,
+          "default": "CURRENT_TIMESTAMP(6)",
+          "meaning": "服务端UTC写入时间"
+        },
+        {
+          "name": "updated_at",
+          "type": "DATETIME(6)",
+          "nullable": false,
+          "default": "CURRENT_TIMESTAMP(6)",
+          "meaning": "服务端UTC更新时间"
+        }
+      ],
+      "primaryKey": [
+        "tenant_id",
+        "id"
+      ],
+      "unique": [],
+      "indexes": [],
+      "foreignKeys": [
+        {
+          "columns": [
+            "tenant_id",
+            "work_id"
+          ],
+          "target": "oa_work_item",
+          "targetColumns": [
+            "tenant_id",
+            "id"
+          ],
+          "onDelete": "RESTRICT",
+          "onUpdate": "RESTRICT"
+        },
+        {
+          "columns": [
+            "tenant_id",
+            "baseline_id"
+          ],
+          "target": "oa_baseline",
+          "targetColumns": [
+            "tenant_id",
+            "id"
+          ],
+          "onDelete": "RESTRICT",
+          "onUpdate": "RESTRICT"
+        }
+      ],
+      "checks": [
+        "reviewer_member_id <> requested_by"
+      ]
+    },
+    {
+      "name": "oa_completion_check",
+      "authority": "短期预检证据；交付事务仍重新校验",
+      "phase": "M1",
+      "immutable": true,
+      "columns": [
+        {
+          "name": "tenant_id",
+          "type": "VARCHAR(64)",
+          "nullable": false,
+          "default": null,
+          "meaning": "可信租户；所有查询和关联必含"
+        },
+        {
+          "name": "id",
+          "type": "VARCHAR(64)",
+          "nullable": false,
+          "default": null,
+          "meaning": "服务端生成的本表ID"
+        },
+        {
+          "name": "work_id",
+          "type": "VARCHAR(64)",
+          "nullable": false,
+          "default": null,
+          "meaning": "目标工作"
+        },
+        {
+          "name": "responsibility_epoch",
+          "type": "BIGINT UNSIGNED",
+          "nullable": false,
+          "default": "1",
+          "meaning": "目标轮次"
+        },
+        {
+          "name": "work_revision",
+          "type": "BIGINT UNSIGNED",
+          "nullable": false,
+          "default": "1",
+          "meaning": "预检版本"
+        },
+        {
+          "name": "candidate_digest",
+          "type": "VARCHAR(71)",
+          "nullable": false,
+          "default": null,
+          "meaning": "精确候选集"
+        },
+        {
+          "name": "baseline_digest",
+          "type": "VARCHAR(71)",
+          "nullable": false,
+          "default": null,
+          "meaning": "基线"
+        },
+        {
+          "name": "result_json",
+          "type": "JSON",
+          "nullable": false,
+          "default": null,
+          "meaning": "按JSON Schema校验，不允许任意JSON",
+          "schemaRef": "domain.schema.json#/$defs/CompletionCheck"
+        },
+        {
+          "name": "expires_at",
+          "type": "DATETIME(6)",
+          "nullable": false,
+          "default": null,
+          "meaning": "预检失效时刻"
+        },
+        {
+          "name": "revision",
+          "type": "BIGINT UNSIGNED",
+          "nullable": false,
+          "default": "1",
+          "meaning": "本记录乐观并发版本；更新+1"
+        },
+        {
+          "name": "created_at",
+          "type": "DATETIME(6)",
+          "nullable": false,
+          "default": "CURRENT_TIMESTAMP(6)",
+          "meaning": "服务端UTC写入时间"
+        },
+        {
+          "name": "updated_at",
+          "type": "DATETIME(6)",
+          "nullable": false,
+          "default": "CURRENT_TIMESTAMP(6)",
+          "meaning": "服务端UTC更新时间"
+        }
+      ],
+      "primaryKey": [
+        "tenant_id",
+        "id"
+      ],
+      "unique": [],
+      "indexes": [],
+      "foreignKeys": [
+        {
+          "columns": [
+            "tenant_id",
+            "work_id"
+          ],
+          "target": "oa_work_item",
+          "targetColumns": [
+            "tenant_id",
+            "id"
+          ],
+          "onDelete": "RESTRICT",
+          "onUpdate": "RESTRICT"
+        }
+      ],
+      "checks": []
+    },
+    {
+      "name": "oa_delivery",
+      "authority": "唯一正式交付；成功与OA推进对账",
+      "phase": "M1",
+      "immutable": false,
+      "columns": [
+        {
+          "name": "tenant_id",
+          "type": "VARCHAR(64)",
+          "nullable": false,
+          "default": null,
+          "meaning": "可信租户；所有查询和关联必含"
+        },
+        {
+          "name": "id",
+          "type": "VARCHAR(64)",
+          "nullable": false,
+          "default": null,
+          "meaning": "服务端生成的本表ID"
+        },
+        {
+          "name": "work_id",
+          "type": "VARCHAR(64)",
+          "nullable": false,
+          "default": null,
+          "meaning": "工作"
+        },
+        {
+          "name": "responsibility_epoch",
+          "type": "BIGINT UNSIGNED",
+          "nullable": false,
+          "default": "1",
+          "meaning": "交付轮次"
+        },
+        {
+          "name": "completion_check_id",
+          "type": "VARCHAR(64)",
+          "nullable": false,
+          "default": null,
+          "meaning": "引用预检"
+        },
+        {
+          "name": "submission_json",
+          "type": "JSON",
+          "nullable": false,
+          "default": null,
+          "meaning": "按JSON Schema校验，不允许任意JSON",
+          "schemaRef": "domain.schema.json#/$defs/C11_submitDeliveryRequest"
+        },
+        {
+          "name": "confirmed_by",
+          "type": "VARCHAR(64)",
+          "nullable": false,
+          "default": null,
+          "meaning": "承担人真实确认"
+        },
+        {
+          "name": "confirmed_at",
+          "type": "DATETIME(6)",
+          "nullable": false,
+          "default": null,
+          "meaning": "实际确认"
+        },
+        {
+          "name": "state",
+          "type": "VARCHAR(24)",
+          "nullable": false,
+          "default": null,
+          "meaning": "PENDING_COMMIT/CONFIRMED/FAILED/UNKNOWN"
+        },
+        {
+          "name": "digest",
+          "type": "VARCHAR(71)",
+          "nullable": false,
+          "default": null,
+          "meaning": "交付事实摘要"
+        },
+        {
+          "name": "revision",
+          "type": "BIGINT UNSIGNED",
+          "nullable": false,
+          "default": "1",
+          "meaning": "本记录乐观并发版本；更新+1"
+        },
+        {
+          "name": "created_at",
+          "type": "DATETIME(6)",
+          "nullable": false,
+          "default": "CURRENT_TIMESTAMP(6)",
+          "meaning": "服务端UTC写入时间"
+        },
+        {
+          "name": "updated_at",
+          "type": "DATETIME(6)",
+          "nullable": false,
+          "default": "CURRENT_TIMESTAMP(6)",
+          "meaning": "服务端UTC更新时间"
+        }
+      ],
+      "primaryKey": [
+        "tenant_id",
+        "id"
+      ],
+      "unique": [
+        [
+          "tenant_id",
+          "work_id",
+          "responsibility_epoch"
+        ]
+      ],
+      "indexes": [],
+      "foreignKeys": [
+        {
+          "columns": [
+            "tenant_id",
+            "work_id"
+          ],
+          "target": "oa_work_item",
+          "targetColumns": [
+            "tenant_id",
+            "id"
+          ],
+          "onDelete": "RESTRICT",
+          "onUpdate": "RESTRICT"
+        },
+        {
+          "columns": [
+            "tenant_id",
+            "completion_check_id"
+          ],
+          "target": "oa_completion_check",
+          "targetColumns": [
+            "tenant_id",
+            "id"
+          ],
+          "onDelete": "RESTRICT",
+          "onUpdate": "RESTRICT"
+        }
+      ],
+      "checks": []
+    },
+    {
+      "name": "oa_handoff",
+      "authority": "下游接手包版本",
+      "phase": "M1",
+      "immutable": false,
+      "columns": [
+        {
+          "name": "tenant_id",
+          "type": "VARCHAR(64)",
+          "nullable": false,
+          "default": null,
+          "meaning": "可信租户；所有查询和关联必含"
+        },
+        {
+          "name": "id",
+          "type": "VARCHAR(64)",
+          "nullable": false,
+          "default": null,
+          "meaning": "服务端生成的本表ID"
+        },
+        {
+          "name": "delivery_id",
+          "type": "VARCHAR(64)",
+          "nullable": false,
+          "default": null,
+          "meaning": "上游确认交付"
+        },
+        {
+          "name": "recipient_work_id",
+          "type": "VARCHAR(64)",
+          "nullable": false,
+          "default": null,
+          "meaning": "下游工作"
+        },
+        {
+          "name": "version",
+          "type": "BIGINT UNSIGNED",
+          "nullable": false,
+          "default": "1",
+          "meaning": "交接包版本"
+        },
+        {
+          "name": "state",
+          "type": "VARCHAR(20)",
+          "nullable": false,
+          "default": null,
+          "meaning": "PENDING/BLOCKED/ACCEPTED/CANCELLED"
+        },
+        {
+          "name": "required_refs_json",
+          "type": "JSON",
+          "nullable": false,
+          "default": null,
+          "meaning": "必需输入与用途",
+          "schemaRef": "internal.schema.json#/$defs/ContextSources"
+        },
+        {
+          "name": "revision",
+          "type": "BIGINT UNSIGNED",
+          "nullable": false,
+          "default": "1",
+          "meaning": "本记录乐观并发版本；更新+1"
+        },
+        {
+          "name": "created_at",
+          "type": "DATETIME(6)",
+          "nullable": false,
+          "default": "CURRENT_TIMESTAMP(6)",
+          "meaning": "服务端UTC写入时间"
+        },
+        {
+          "name": "updated_at",
+          "type": "DATETIME(6)",
+          "nullable": false,
+          "default": "CURRENT_TIMESTAMP(6)",
+          "meaning": "服务端UTC更新时间"
+        }
+      ],
+      "primaryKey": [
+        "tenant_id",
+        "id"
+      ],
+      "unique": [
+        [
+          "tenant_id",
+          "delivery_id",
+          "recipient_work_id",
+          "version"
+        ]
+      ],
+      "indexes": [],
+      "foreignKeys": [
+        {
+          "columns": [
+            "tenant_id",
+            "delivery_id"
+          ],
+          "target": "oa_delivery",
+          "targetColumns": [
+            "tenant_id",
+            "id"
+          ],
+          "onDelete": "RESTRICT",
+          "onUpdate": "RESTRICT"
+        },
+        {
+          "columns": [
+            "tenant_id",
+            "recipient_work_id"
+          ],
+          "target": "oa_work_item",
+          "targetColumns": [
+            "tenant_id",
+            "id"
+          ],
+          "onDelete": "RESTRICT",
+          "onUpdate": "RESTRICT"
+        }
+      ],
+      "checks": []
+    },
+    {
+      "name": "oa_handoff_receipt",
+      "authority": "下游真实接受回执",
+      "phase": "M1",
+      "immutable": true,
+      "columns": [
+        {
+          "name": "tenant_id",
+          "type": "VARCHAR(64)",
+          "nullable": false,
+          "default": null,
+          "meaning": "可信租户；所有查询和关联必含"
+        },
+        {
+          "name": "id",
+          "type": "VARCHAR(64)",
+          "nullable": false,
+          "default": null,
+          "meaning": "服务端生成的本表ID"
+        },
+        {
+          "name": "handoff_id",
+          "type": "VARCHAR(64)",
+          "nullable": false,
+          "default": null,
+          "meaning": "交接包"
+        },
+        {
+          "name": "package_version",
+          "type": "BIGINT UNSIGNED",
+          "nullable": false,
+          "default": "1",
+          "meaning": "接受版本"
+        },
+        {
+          "name": "accepted_by",
+          "type": "VARCHAR(64)",
+          "nullable": false,
+          "default": null,
+          "meaning": "下游承担人"
+        },
+        {
+          "name": "accepted_at",
+          "type": "DATETIME(6)",
+          "nullable": false,
+          "default": null,
+          "meaning": "实际接手"
+        },
+        {
+          "name": "receipt_json",
+          "type": "JSON",
+          "nullable": false,
+          "default": null,
+          "meaning": "按JSON Schema校验，不允许任意JSON",
+          "schemaRef": "domain.schema.json#/$defs/C12_receiveHandoffRequest"
+        },
+        {
+          "name": "revision",
+          "type": "BIGINT UNSIGNED",
+          "nullable": false,
+          "default": "1",
+          "meaning": "本记录乐观并发版本；更新+1"
+        },
+        {
+          "name": "created_at",
+          "type": "DATETIME(6)",
+          "nullable": false,
+          "default": "CURRENT_TIMESTAMP(6)",
+          "meaning": "服务端UTC写入时间"
+        },
+        {
+          "name": "updated_at",
+          "type": "DATETIME(6)",
+          "nullable": false,
+          "default": "CURRENT_TIMESTAMP(6)",
+          "meaning": "服务端UTC更新时间"
+        }
+      ],
+      "primaryKey": [
+        "tenant_id",
+        "id"
+      ],
+      "unique": [
+        [
+          "tenant_id",
+          "handoff_id",
+          "package_version"
+        ]
+      ],
+      "indexes": [],
+      "foreignKeys": [
+        {
+          "columns": [
+            "tenant_id",
+            "handoff_id"
+          ],
+          "target": "oa_handoff",
+          "targetColumns": [
+            "tenant_id",
+            "id"
+          ],
+          "onDelete": "RESTRICT",
+          "onUpdate": "RESTRICT"
+        }
+      ],
+      "checks": []
+    },
+    {
+      "name": "oa_operation",
+      "authority": "幂等意图与查证；不是任务状态权威",
+      "phase": "M1",
+      "immutable": false,
+      "columns": [
+        {
+          "name": "tenant_id",
+          "type": "VARCHAR(64)",
+          "nullable": false,
+          "default": null,
+          "meaning": "可信租户；所有查询和关联必含"
+        },
+        {
+          "name": "id",
+          "type": "VARCHAR(64)",
+          "nullable": false,
+          "default": null,
+          "meaning": "服务端生成的本表ID"
+        },
+        {
+          "name": "actor_id",
+          "type": "VARCHAR(64)",
+          "nullable": false,
+          "default": null,
+          "meaning": "原始请求主体"
+        },
+        {
+          "name": "command",
+          "type": "VARCHAR(64)",
+          "nullable": false,
+          "default": null,
+          "meaning": "精确命令动作"
+        },
+        {
+          "name": "idempotency_key",
+          "type": "VARCHAR(128)",
+          "nullable": false,
+          "default": null,
+          "meaning": "用户一次意图键"
+        },
+        {
+          "name": "request_digest",
+          "type": "VARCHAR(71)",
+          "nullable": false,
+          "default": null,
+          "meaning": "规范化方法/路径/正文摘要"
+        },
+        {
+          "name": "state",
+          "type": "VARCHAR(24)",
+          "nullable": false,
+          "default": null,
+          "meaning": "QUEUED/PENDING_COMMIT/CONFIRMED/FAILED/UNKNOWN"
+        },
+        {
+          "name": "response_json",
+          "type": "JSON",
+          "nullable": false,
+          "default": null,
+          "meaning": "按JSON Schema校验，不允许任意JSON",
+          "schemaRef": "domain.schema.json#/$defs/Operation"
+        },
+        {
+          "name": "expires_at",
+          "type": "DATETIME(6)",
+          "nullable": false,
+          "default": null,
+          "meaning": "至少7日；终态清理依保留策略"
+        },
+        {
+          "name": "revision",
+          "type": "BIGINT UNSIGNED",
+          "nullable": false,
+          "default": "1",
+          "meaning": "本记录乐观并发版本；更新+1"
+        },
+        {
+          "name": "created_at",
+          "type": "DATETIME(6)",
+          "nullable": false,
+          "default": "CURRENT_TIMESTAMP(6)",
+          "meaning": "服务端UTC写入时间"
+        },
+        {
+          "name": "updated_at",
+          "type": "DATETIME(6)",
+          "nullable": false,
+          "default": "CURRENT_TIMESTAMP(6)",
+          "meaning": "服务端UTC更新时间"
+        }
+      ],
+      "primaryKey": [
+        "tenant_id",
+        "id"
+      ],
+      "unique": [
+        [
+          "tenant_id",
+          "actor_id",
+          "command",
+          "idempotency_key"
+        ]
+      ],
+      "indexes": [
+        [
+          "tenant_id",
+          "state",
+          "updated_at",
+          "id"
+        ]
+      ],
+      "foreignKeys": [],
+      "checks": []
+    },
+    {
+      "name": "oa_invocation",
+      "authority": "外部副作用调用台账；未知只查证",
+      "phase": "M1",
+      "immutable": false,
+      "columns": [
+        {
+          "name": "tenant_id",
+          "type": "VARCHAR(64)",
+          "nullable": false,
+          "default": null,
+          "meaning": "可信租户；所有查询和关联必含"
+        },
+        {
+          "name": "id",
+          "type": "VARCHAR(64)",
+          "nullable": false,
+          "default": null,
+          "meaning": "服务端生成的本表ID"
+        },
+        {
+          "name": "attempt_id",
+          "type": "VARCHAR(64)",
+          "nullable": false,
+          "default": null,
+          "meaning": "SDK执行"
+        },
+        {
+          "name": "operation_id",
+          "type": "VARCHAR(64)",
+          "nullable": false,
+          "default": null,
+          "meaning": "唯一业务操作"
+        },
+        {
+          "name": "provider_id",
+          "type": "VARCHAR(64)",
+          "nullable": false,
+          "default": null,
+          "meaning": "工具提供者"
+        },
+        {
+          "name": "action",
+          "type": "VARCHAR(80)",
+          "nullable": false,
+          "default": null,
+          "meaning": "白名单工具动作"
+        },
+        {
+          "name": "effect_key",
+          "type": "VARCHAR(128)",
+          "nullable": false,
+          "default": null,
+          "meaning": "对端幂等或业务键"
+        },
+        {
+          "name": "state",
+          "type": "VARCHAR(24)",
+          "nullable": false,
+          "default": null,
+          "meaning": "PREPARED/WAITING_CONFIRMATION/DISPATCHED/SUCCEEDED/FAILED/RESULT_UNKNOWN"
+        },
+        {
+          "name": "provider_receipt_ref",
+          "type": "VARCHAR(255)",
+          "nullable": true,
+          "default": null,
+          "meaning": "脱敏回执定位"
+        },
+        {
+          "name": "input_digest",
+          "type": "VARCHAR(71)",
+          "nullable": false,
+          "default": null,
+          "meaning": "实际入参摘要"
+        },
+        {
+          "name": "revision",
+          "type": "BIGINT UNSIGNED",
+          "nullable": false,
+          "default": "1",
+          "meaning": "本记录乐观并发版本；更新+1"
+        },
+        {
+          "name": "created_at",
+          "type": "DATETIME(6)",
+          "nullable": false,
+          "default": "CURRENT_TIMESTAMP(6)",
+          "meaning": "服务端UTC写入时间"
+        },
+        {
+          "name": "updated_at",
+          "type": "DATETIME(6)",
+          "nullable": false,
+          "default": "CURRENT_TIMESTAMP(6)",
+          "meaning": "服务端UTC更新时间"
+        }
+      ],
+      "primaryKey": [
+        "tenant_id",
+        "id"
+      ],
+      "unique": [
+        [
+          "tenant_id",
+          "provider_id",
+          "action",
+          "effect_key"
+        ]
+      ],
+      "indexes": [],
+      "foreignKeys": [
+        {
+          "columns": [
+            "tenant_id",
+            "attempt_id"
+          ],
+          "target": "oa_attempt",
+          "targetColumns": [
+            "tenant_id",
+            "id"
+          ],
+          "onDelete": "RESTRICT",
+          "onUpdate": "RESTRICT"
+        },
+        {
+          "columns": [
+            "tenant_id",
+            "operation_id"
+          ],
+          "target": "oa_operation",
+          "targetColumns": [
+            "tenant_id",
+            "id"
+          ],
+          "onDelete": "RESTRICT",
+          "onUpdate": "RESTRICT"
+        }
+      ],
+      "checks": []
+    },
+    {
+      "name": "oa_outbox",
+      "authority": "同业务事务提交的事件",
+      "phase": "M1",
+      "immutable": false,
+      "columns": [
+        {
+          "name": "tenant_id",
+          "type": "VARCHAR(64)",
+          "nullable": false,
+          "default": null,
+          "meaning": "可信租户；所有查询和关联必含"
+        },
+        {
+          "name": "id",
+          "type": "VARCHAR(64)",
+          "nullable": false,
+          "default": null,
+          "meaning": "服务端生成的本表ID"
+        },
+        {
+          "name": "aggregate_id",
+          "type": "VARCHAR(64)",
+          "nullable": false,
+          "default": null,
+          "meaning": "聚合ID"
+        },
+        {
+          "name": "aggregate_kind",
+          "type": "VARCHAR(32)",
+          "nullable": false,
+          "default": null,
+          "meaning": "聚合类型"
+        },
+        {
+          "name": "aggregate_sequence",
+          "type": "BIGINT UNSIGNED",
+          "nullable": false,
+          "default": "1",
+          "meaning": "每聚合严格递增"
+        },
+        {
+          "name": "event_json",
+          "type": "JSON",
+          "nullable": false,
+          "default": null,
+          "meaning": "按JSON Schema校验，不允许任意JSON",
+          "schemaRef": "domain.schema.json#/$defs/InternalEvent"
+        },
+        {
+          "name": "state",
+          "type": "VARCHAR(16)",
+          "nullable": false,
+          "default": null,
+          "meaning": "PENDING/DELIVERED/DEAD"
+        },
+        {
+          "name": "available_at",
+          "type": "DATETIME(6)",
+          "nullable": false,
+          "default": null,
+          "meaning": "下一次投递时刻"
+        },
+        {
+          "name": "revision",
+          "type": "BIGINT UNSIGNED",
+          "nullable": false,
+          "default": "1",
+          "meaning": "本记录乐观并发版本；更新+1"
+        },
+        {
+          "name": "created_at",
+          "type": "DATETIME(6)",
+          "nullable": false,
+          "default": "CURRENT_TIMESTAMP(6)",
+          "meaning": "服务端UTC写入时间"
+        },
+        {
+          "name": "updated_at",
+          "type": "DATETIME(6)",
+          "nullable": false,
+          "default": "CURRENT_TIMESTAMP(6)",
+          "meaning": "服务端UTC更新时间"
+        }
+      ],
+      "primaryKey": [
+        "tenant_id",
+        "id"
+      ],
+      "unique": [
+        [
+          "tenant_id",
+          "aggregate_kind",
+          "aggregate_id",
+          "aggregate_sequence"
+        ]
+      ],
+      "indexes": [
+        [
+          "state",
+          "available_at",
+          "id"
+        ]
+      ],
+      "foreignKeys": [],
+      "checks": []
+    },
+    {
+      "name": "oa_inbox",
+      "authority": "每消费者去重与应用事务边界",
+      "phase": "M1",
+      "immutable": true,
+      "columns": [
+        {
+          "name": "tenant_id",
+          "type": "VARCHAR(64)",
+          "nullable": false,
+          "default": null,
+          "meaning": "可信租户；所有查询和关联必含"
+        },
+        {
+          "name": "id",
+          "type": "VARCHAR(64)",
+          "nullable": false,
+          "default": null,
+          "meaning": "服务端生成的本表ID"
+        },
+        {
+          "name": "consumer_id",
+          "type": "VARCHAR(64)",
+          "nullable": false,
+          "default": null,
+          "meaning": "消费者"
+        },
+        {
+          "name": "source_id",
+          "type": "VARCHAR(64)",
+          "nullable": false,
+          "default": null,
+          "meaning": "可信来源"
+        },
+        {
+          "name": "event_id",
+          "type": "VARCHAR(64)",
+          "nullable": false,
+          "default": null,
+          "meaning": "来源事件ID"
+        },
+        {
+          "name": "payload_digest",
+          "type": "VARCHAR(71)",
+          "nullable": false,
+          "default": null,
+          "meaning": "同ID异载荷必须拒绝"
+        },
+        {
+          "name": "processed_at",
+          "type": "DATETIME(6)",
+          "nullable": false,
+          "default": null,
+          "meaning": "处理成功提交时刻"
+        },
+        {
+          "name": "revision",
+          "type": "BIGINT UNSIGNED",
+          "nullable": false,
+          "default": "1",
+          "meaning": "本记录乐观并发版本；更新+1"
+        },
+        {
+          "name": "created_at",
+          "type": "DATETIME(6)",
+          "nullable": false,
+          "default": "CURRENT_TIMESTAMP(6)",
+          "meaning": "服务端UTC写入时间"
+        },
+        {
+          "name": "updated_at",
+          "type": "DATETIME(6)",
+          "nullable": false,
+          "default": "CURRENT_TIMESTAMP(6)",
+          "meaning": "服务端UTC更新时间"
+        }
+      ],
+      "primaryKey": [
+        "tenant_id",
+        "id"
+      ],
+      "unique": [
+        [
+          "tenant_id",
+          "consumer_id",
+          "source_id",
+          "event_id"
+        ]
+      ],
+      "indexes": [],
+      "foreignKeys": [],
+      "checks": []
+    },
+    {
+      "name": "oa_output_release",
+      "authority": "每受众和来源版本的展示发布决定",
+      "phase": "M1",
+      "immutable": false,
+      "columns": [
+        {
+          "name": "tenant_id",
+          "type": "VARCHAR(64)",
+          "nullable": false,
+          "default": null,
+          "meaning": "可信租户；所有查询和关联必含"
+        },
+        {
+          "name": "id",
+          "type": "VARCHAR(64)",
+          "nullable": false,
+          "default": null,
+          "meaning": "服务端生成的本表ID"
+        },
+        {
+          "name": "work_id",
+          "type": "VARCHAR(64)",
+          "nullable": false,
+          "default": null,
+          "meaning": "工作"
+        },
+        {
+          "name": "recipient_id",
+          "type": "VARCHAR(64)",
+          "nullable": false,
+          "default": null,
+          "meaning": "人员主体或受控受众引用"
+        },
+        {
+          "name": "source_ref_json",
+          "type": "JSON",
+          "nullable": false,
+          "default": null,
+          "meaning": "按JSON Schema校验，不允许任意JSON",
+          "schemaRef": "domain.schema.json#/$defs/VersionedRef"
+        },
+        {
+          "name": "policy_revision",
+          "type": "BIGINT UNSIGNED",
+          "nullable": false,
+          "default": "1",
+          "meaning": "发布策略"
+        },
+        {
+          "name": "authz_epoch",
+          "type": "BIGINT UNSIGNED",
+          "nullable": false,
+          "default": "1",
+          "meaning": "授权代次"
+        },
+        {
+          "name": "state",
+          "type": "VARCHAR(16)",
+          "nullable": false,
+          "default": null,
+          "meaning": "ALLOWED/DENIED/REVOKED"
+        },
+        {
+          "name": "expires_at",
+          "type": "DATETIME(6)",
+          "nullable": false,
+          "default": null,
+          "meaning": "展示授权到期"
+        },
+        {
+          "name": "public_artifact_version_id",
+          "type": "VARCHAR(64)",
+          "nullable": true,
+          "default": null,
+          "meaning": "已审查公开副本，可空"
+        },
+        {
+          "name": "revision",
+          "type": "BIGINT UNSIGNED",
+          "nullable": false,
+          "default": "1",
+          "meaning": "本记录乐观并发版本；更新+1"
+        },
+        {
+          "name": "created_at",
+          "type": "DATETIME(6)",
+          "nullable": false,
+          "default": "CURRENT_TIMESTAMP(6)",
+          "meaning": "服务端UTC写入时间"
+        },
+        {
+          "name": "updated_at",
+          "type": "DATETIME(6)",
+          "nullable": false,
+          "default": "CURRENT_TIMESTAMP(6)",
+          "meaning": "服务端UTC更新时间"
+        }
+      ],
+      "primaryKey": [
+        "tenant_id",
+        "id"
+      ],
+      "unique": [],
+      "indexes": [],
+      "foreignKeys": [
+        {
+          "columns": [
+            "tenant_id",
+            "work_id"
+          ],
+          "target": "oa_work_item",
+          "targetColumns": [
+            "tenant_id",
+            "id"
+          ],
+          "onDelete": "RESTRICT",
+          "onUpdate": "RESTRICT"
+        },
+        {
+          "columns": [
+            "tenant_id",
+            "public_artifact_version_id"
+          ],
+          "target": "oa_artifact_version",
+          "targetColumns": [
+            "tenant_id",
+            "id"
+          ],
+          "onDelete": "RESTRICT",
+          "onUpdate": "RESTRICT"
+        }
+      ],
+      "checks": []
+    },
+    {
+      "name": "oa_thread_entry",
+      "authority": "人员端获准内容索引；原始运行日志不入表",
+      "phase": "M1",
+      "immutable": true,
+      "columns": [
+        {
+          "name": "tenant_id",
+          "type": "VARCHAR(64)",
+          "nullable": false,
+          "default": null,
+          "meaning": "可信租户；所有查询和关联必含"
+        },
+        {
+          "name": "id",
+          "type": "VARCHAR(64)",
+          "nullable": false,
+          "default": null,
+          "meaning": "服务端生成的本表ID"
+        },
+        {
+          "name": "work_id",
+          "type": "VARCHAR(64)",
+          "nullable": false,
+          "default": null,
+          "meaning": "唯一工作"
+        },
+        {
+          "name": "actor_id",
+          "type": "VARCHAR(64)",
+          "nullable": false,
+          "default": null,
+          "meaning": "说话主体"
+        },
+        {
+          "name": "kind",
+          "type": "VARCHAR(24)",
+          "nullable": false,
+          "default": null,
+          "meaning": "USER_MESSAGE/RELEASED_SUMMARY/SYSTEM_STATUS/RELEASED_ARTIFACT"
+        },
+        {
+          "name": "release_id",
+          "type": "VARCHAR(64)",
+          "nullable": false,
+          "default": null,
+          "meaning": "当前发布决定"
+        },
+        {
+          "name": "entry_json",
+          "type": "JSON",
+          "nullable": false,
+          "default": null,
+          "meaning": "按JSON Schema校验，不允许任意JSON",
+          "schemaRef": "domain.schema.json#/$defs/ThreadEntry"
+        },
+        {
+          "name": "sequence",
+          "type": "BIGINT UNSIGNED",
+          "nullable": false,
+          "default": "1",
+          "meaning": "工作对话顺序"
+        },
+        {
+          "name": "revision",
+          "type": "BIGINT UNSIGNED",
+          "nullable": false,
+          "default": "1",
+          "meaning": "本记录乐观并发版本；更新+1"
+        },
+        {
+          "name": "created_at",
+          "type": "DATETIME(6)",
+          "nullable": false,
+          "default": "CURRENT_TIMESTAMP(6)",
+          "meaning": "服务端UTC写入时间"
+        },
+        {
+          "name": "updated_at",
+          "type": "DATETIME(6)",
+          "nullable": false,
+          "default": "CURRENT_TIMESTAMP(6)",
+          "meaning": "服务端UTC更新时间"
+        }
+      ],
+      "primaryKey": [
+        "tenant_id",
+        "id"
+      ],
+      "unique": [
+        [
+          "tenant_id",
+          "work_id",
+          "sequence"
+        ]
+      ],
+      "indexes": [],
+      "foreignKeys": [
+        {
+          "columns": [
+            "tenant_id",
+            "work_id"
+          ],
+          "target": "oa_work_item",
+          "targetColumns": [
+            "tenant_id",
+            "id"
+          ],
+          "onDelete": "RESTRICT",
+          "onUpdate": "RESTRICT"
+        },
+        {
+          "columns": [
+            "tenant_id",
+            "release_id"
+          ],
+          "target": "oa_output_release",
+          "targetColumns": [
+            "tenant_id",
+            "id"
+          ],
+          "onDelete": "RESTRICT",
+          "onUpdate": "RESTRICT"
+        }
+      ],
+      "checks": []
+    },
+    {
+      "name": "oa_draft",
+      "authority": "按主体和工作保存草稿；撤权停止访问",
+      "phase": "M1",
+      "immutable": false,
+      "columns": [
+        {
+          "name": "tenant_id",
+          "type": "VARCHAR(64)",
+          "nullable": false,
+          "default": null,
+          "meaning": "可信租户；所有查询和关联必含"
+        },
+        {
+          "name": "id",
+          "type": "VARCHAR(64)",
+          "nullable": false,
+          "default": null,
+          "meaning": "服务端生成的本表ID"
+        },
+        {
+          "name": "work_id",
+          "type": "VARCHAR(64)",
+          "nullable": false,
+          "default": null,
+          "meaning": "工作"
+        },
+        {
+          "name": "actor_id",
+          "type": "VARCHAR(64)",
+          "nullable": false,
+          "default": null,
+          "meaning": "草稿所有人"
+        },
+        {
+          "name": "kind",
+          "type": "VARCHAR(20)",
+          "nullable": false,
+          "default": null,
+          "meaning": "CHAT/BINDING/DELIVERY"
+        },
+        {
+          "name": "base_revision",
+          "type": "BIGINT UNSIGNED",
+          "nullable": false,
+          "default": "1",
+          "meaning": "起草时版本"
+        },
+        {
+          "name": "body",
+          "type": "VARCHAR(10000)",
+          "nullable": false,
+          "default": null,
+          "meaning": "仅草稿作者可读"
+        },
+        {
+          "name": "revision",
+          "type": "BIGINT UNSIGNED",
+          "nullable": false,
+          "default": "1",
+          "meaning": "本记录乐观并发版本；更新+1"
+        },
+        {
+          "name": "created_at",
+          "type": "DATETIME(6)",
+          "nullable": false,
+          "default": "CURRENT_TIMESTAMP(6)",
+          "meaning": "服务端UTC写入时间"
+        },
+        {
+          "name": "updated_at",
+          "type": "DATETIME(6)",
+          "nullable": false,
+          "default": "CURRENT_TIMESTAMP(6)",
+          "meaning": "服务端UTC更新时间"
+        }
+      ],
+      "primaryKey": [
+        "tenant_id",
+        "id"
+      ],
+      "unique": [
+        [
+          "tenant_id",
+          "work_id",
+          "actor_id",
+          "kind"
+        ]
+      ],
+      "indexes": [],
+      "foreignKeys": [
+        {
+          "columns": [
+            "tenant_id",
+            "work_id"
+          ],
+          "target": "oa_work_item",
+          "targetColumns": [
+            "tenant_id",
+            "id"
+          ],
+          "onDelete": "RESTRICT",
+          "onUpdate": "RESTRICT"
+        }
+      ],
+      "checks": []
+    },
+    {
+      "name": "oa_asset_revision",
+      "authority": "底座资源的版本扩展",
+      "phase": "M2",
+      "immutable": false,
+      "columns": [
+        {
+          "name": "tenant_id",
+          "type": "VARCHAR(64)",
+          "nullable": false,
+          "default": null,
+          "meaning": "可信租户；所有查询和关联必含"
+        },
+        {
+          "name": "id",
+          "type": "VARCHAR(64)",
+          "nullable": false,
+          "default": null,
+          "meaning": "服务端生成的本表ID"
+        },
+        {
+          "name": "owner_member_id",
+          "type": "VARCHAR(64)",
+          "nullable": false,
+          "default": null,
+          "meaning": "所有人不自动获得全部来源读权"
+        },
+        {
+          "name": "base_resource_id",
+          "type": "VARCHAR(64)",
+          "nullable": false,
+          "default": null,
+          "meaning": "底座权威资源ID"
+        },
+        {
+          "name": "version",
+          "type": "BIGINT UNSIGNED",
+          "nullable": false,
+          "default": "1",
+          "meaning": "扩展版本"
+        },
+        {
+          "name": "state",
+          "type": "VARCHAR(32)",
+          "nullable": false,
+          "default": null,
+          "meaning": "状态合法值见53号领域状态表"
+        },
+        {
+          "name": "payload_json",
+          "type": "JSON",
+          "nullable": false,
+          "default": null,
+          "meaning": "按JSON Schema校验，不允许任意JSON",
+          "schemaRef": "domain.schema.json#/$defs/AssetDraft"
+        },
+        {
+          "name": "digest",
+          "type": "VARCHAR(71)",
+          "nullable": false,
+          "default": null,
+          "meaning": "不可变内容摘要"
+        },
+        {
+          "name": "expires_at",
+          "type": "DATETIME(6)",
+          "nullable": true,
+          "default": null,
+          "meaning": "适用时有效期"
+        },
+        {
+          "name": "revision",
+          "type": "BIGINT UNSIGNED",
+          "nullable": false,
+          "default": "1",
+          "meaning": "本记录乐观并发版本；更新+1"
+        },
+        {
+          "name": "created_at",
+          "type": "DATETIME(6)",
+          "nullable": false,
+          "default": "CURRENT_TIMESTAMP(6)",
+          "meaning": "服务端UTC写入时间"
+        },
+        {
+          "name": "updated_at",
+          "type": "DATETIME(6)",
+          "nullable": false,
+          "default": "CURRENT_TIMESTAMP(6)",
+          "meaning": "服务端UTC更新时间"
+        }
+      ],
+      "primaryKey": [
+        "tenant_id",
+        "id"
+      ],
+      "unique": [
+        [
+          "tenant_id",
+          "base_resource_id",
+          "version"
+        ]
+      ],
+      "indexes": [
+        [
+          "tenant_id",
+          "owner_member_id",
+          "state",
+          "id"
+        ]
+      ],
+      "foreignKeys": [],
+      "checks": []
+    },
+    {
+      "name": "oa_market_adoption",
+      "authority": "复制/引用谱系及异步操作",
+      "phase": "M2",
+      "immutable": false,
+      "columns": [
+        {
+          "name": "tenant_id",
+          "type": "VARCHAR(64)",
+          "nullable": false,
+          "default": null,
+          "meaning": "可信租户；所有查询和关联必含"
+        },
+        {
+          "name": "id",
+          "type": "VARCHAR(64)",
+          "nullable": false,
+          "default": null,
+          "meaning": "服务端生成的本表ID"
+        },
+        {
+          "name": "owner_member_id",
+          "type": "VARCHAR(64)",
+          "nullable": false,
+          "default": null,
+          "meaning": "所有人不自动获得全部来源读权"
+        },
+        {
+          "name": "base_resource_id",
+          "type": "VARCHAR(64)",
+          "nullable": false,
+          "default": null,
+          "meaning": "底座权威资源ID"
+        },
+        {
+          "name": "version",
+          "type": "BIGINT UNSIGNED",
+          "nullable": false,
+          "default": "1",
+          "meaning": "扩展版本"
+        },
+        {
+          "name": "state",
+          "type": "VARCHAR(32)",
+          "nullable": false,
+          "default": null,
+          "meaning": "状态合法值见53号领域状态表"
+        },
+        {
+          "name": "payload_json",
+          "type": "JSON",
+          "nullable": false,
+          "default": null,
+          "meaning": "按JSON Schema校验，不允许任意JSON",
+          "schemaRef": "domain.schema.json#/$defs/C13_adoptMarketRequest"
+        },
+        {
+          "name": "digest",
+          "type": "VARCHAR(71)",
+          "nullable": false,
+          "default": null,
+          "meaning": "不可变内容摘要"
+        },
+        {
+          "name": "expires_at",
+          "type": "DATETIME(6)",
+          "nullable": true,
+          "default": null,
+          "meaning": "适用时有效期"
+        },
+        {
+          "name": "revision",
+          "type": "BIGINT UNSIGNED",
+          "nullable": false,
+          "default": "1",
+          "meaning": "本记录乐观并发版本；更新+1"
+        },
+        {
+          "name": "created_at",
+          "type": "DATETIME(6)",
+          "nullable": false,
+          "default": "CURRENT_TIMESTAMP(6)",
+          "meaning": "服务端UTC写入时间"
+        },
+        {
+          "name": "updated_at",
+          "type": "DATETIME(6)",
+          "nullable": false,
+          "default": "CURRENT_TIMESTAMP(6)",
+          "meaning": "服务端UTC更新时间"
+        }
+      ],
+      "primaryKey": [
+        "tenant_id",
+        "id"
+      ],
+      "unique": [
+        [
+          "tenant_id",
+          "base_resource_id",
+          "version"
+        ]
+      ],
+      "indexes": [
+        [
+          "tenant_id",
+          "owner_member_id",
+          "state",
+          "id"
+        ]
+      ],
+      "foreignKeys": [],
+      "checks": []
+    },
+    {
+      "name": "oa_knowledge_job",
+      "authority": "底座摄取作业与来源校验扩展",
+      "phase": "M3",
+      "immutable": false,
+      "columns": [
+        {
+          "name": "tenant_id",
+          "type": "VARCHAR(64)",
+          "nullable": false,
+          "default": null,
+          "meaning": "可信租户；所有查询和关联必含"
+        },
+        {
+          "name": "id",
+          "type": "VARCHAR(64)",
+          "nullable": false,
+          "default": null,
+          "meaning": "服务端生成的本表ID"
+        },
+        {
+          "name": "owner_member_id",
+          "type": "VARCHAR(64)",
+          "nullable": false,
+          "default": null,
+          "meaning": "所有人不自动获得全部来源读权"
+        },
+        {
+          "name": "base_resource_id",
+          "type": "VARCHAR(64)",
+          "nullable": false,
+          "default": null,
+          "meaning": "底座权威资源ID"
+        },
+        {
+          "name": "version",
+          "type": "BIGINT UNSIGNED",
+          "nullable": false,
+          "default": "1",
+          "meaning": "扩展版本"
+        },
+        {
+          "name": "state",
+          "type": "VARCHAR(32)",
+          "nullable": false,
+          "default": null,
+          "meaning": "状态合法值见53号领域状态表"
+        },
+        {
+          "name": "payload_json",
+          "type": "JSON",
+          "nullable": false,
+          "default": null,
+          "meaning": "按JSON Schema校验，不允许任意JSON",
+          "schemaRef": "domain.schema.json#/$defs/C19_ingestRequest"
+        },
+        {
+          "name": "digest",
+          "type": "VARCHAR(71)",
+          "nullable": false,
+          "default": null,
+          "meaning": "不可变内容摘要"
+        },
+        {
+          "name": "expires_at",
+          "type": "DATETIME(6)",
+          "nullable": true,
+          "default": null,
+          "meaning": "适用时有效期"
+        },
+        {
+          "name": "revision",
+          "type": "BIGINT UNSIGNED",
+          "nullable": false,
+          "default": "1",
+          "meaning": "本记录乐观并发版本；更新+1"
+        },
+        {
+          "name": "created_at",
+          "type": "DATETIME(6)",
+          "nullable": false,
+          "default": "CURRENT_TIMESTAMP(6)",
+          "meaning": "服务端UTC写入时间"
+        },
+        {
+          "name": "updated_at",
+          "type": "DATETIME(6)",
+          "nullable": false,
+          "default": "CURRENT_TIMESTAMP(6)",
+          "meaning": "服务端UTC更新时间"
+        }
+      ],
+      "primaryKey": [
+        "tenant_id",
+        "id"
+      ],
+      "unique": [
+        [
+          "tenant_id",
+          "base_resource_id",
+          "version"
+        ]
+      ],
+      "indexes": [
+        [
+          "tenant_id",
+          "owner_member_id",
+          "state",
+          "id"
+        ]
+      ],
+      "foreignKeys": [],
+      "checks": []
+    },
+    {
+      "name": "oa_team_configuration",
+      "authority": "底座Agent团队配置扩展",
+      "phase": "M3",
+      "immutable": false,
+      "columns": [
+        {
+          "name": "tenant_id",
+          "type": "VARCHAR(64)",
+          "nullable": false,
+          "default": null,
+          "meaning": "可信租户；所有查询和关联必含"
+        },
+        {
+          "name": "id",
+          "type": "VARCHAR(64)",
+          "nullable": false,
+          "default": null,
+          "meaning": "服务端生成的本表ID"
+        },
+        {
+          "name": "owner_member_id",
+          "type": "VARCHAR(64)",
+          "nullable": false,
+          "default": null,
+          "meaning": "所有人不自动获得全部来源读权"
+        },
+        {
+          "name": "base_resource_id",
+          "type": "VARCHAR(64)",
+          "nullable": false,
+          "default": null,
+          "meaning": "底座权威资源ID"
+        },
+        {
+          "name": "version",
+          "type": "BIGINT UNSIGNED",
+          "nullable": false,
+          "default": "1",
+          "meaning": "扩展版本"
+        },
+        {
+          "name": "state",
+          "type": "VARCHAR(32)",
+          "nullable": false,
+          "default": null,
+          "meaning": "状态合法值见53号领域状态表"
+        },
+        {
+          "name": "payload_json",
+          "type": "JSON",
+          "nullable": false,
+          "default": null,
+          "meaning": "按JSON Schema校验，不允许任意JSON",
+          "schemaRef": "domain.schema.json#/$defs/C21_configureRequest"
+        },
+        {
+          "name": "digest",
+          "type": "VARCHAR(71)",
+          "nullable": false,
+          "default": null,
+          "meaning": "不可变内容摘要"
+        },
+        {
+          "name": "expires_at",
+          "type": "DATETIME(6)",
+          "nullable": true,
+          "default": null,
+          "meaning": "适用时有效期"
+        },
+        {
+          "name": "revision",
+          "type": "BIGINT UNSIGNED",
+          "nullable": false,
+          "default": "1",
+          "meaning": "本记录乐观并发版本；更新+1"
+        },
+        {
+          "name": "created_at",
+          "type": "DATETIME(6)",
+          "nullable": false,
+          "default": "CURRENT_TIMESTAMP(6)",
+          "meaning": "服务端UTC写入时间"
+        },
+        {
+          "name": "updated_at",
+          "type": "DATETIME(6)",
+          "nullable": false,
+          "default": "CURRENT_TIMESTAMP(6)",
+          "meaning": "服务端UTC更新时间"
+        }
+      ],
+      "primaryKey": [
+        "tenant_id",
+        "id"
+      ],
+      "unique": [
+        [
+          "tenant_id",
+          "base_resource_id",
+          "version"
+        ]
+      ],
+      "indexes": [
+        [
+          "tenant_id",
+          "owner_member_id",
+          "state",
+          "id"
+        ]
+      ],
+      "foreignKeys": [],
+      "checks": []
+    },
+    {
+      "name": "oa_automation_plan",
+      "authority": "底座调度计划扩展",
+      "phase": "M4",
+      "immutable": false,
+      "columns": [
+        {
+          "name": "tenant_id",
+          "type": "VARCHAR(64)",
+          "nullable": false,
+          "default": null,
+          "meaning": "可信租户；所有查询和关联必含"
+        },
+        {
+          "name": "id",
+          "type": "VARCHAR(64)",
+          "nullable": false,
+          "default": null,
+          "meaning": "服务端生成的本表ID"
+        },
+        {
+          "name": "owner_member_id",
+          "type": "VARCHAR(64)",
+          "nullable": false,
+          "default": null,
+          "meaning": "所有人不自动获得全部来源读权"
+        },
+        {
+          "name": "base_resource_id",
+          "type": "VARCHAR(64)",
+          "nullable": false,
+          "default": null,
+          "meaning": "底座权威资源ID"
+        },
+        {
+          "name": "version",
+          "type": "BIGINT UNSIGNED",
+          "nullable": false,
+          "default": "1",
+          "meaning": "扩展版本"
+        },
+        {
+          "name": "state",
+          "type": "VARCHAR(32)",
+          "nullable": false,
+          "default": null,
+          "meaning": "状态合法值见53号领域状态表"
+        },
+        {
+          "name": "payload_json",
+          "type": "JSON",
+          "nullable": false,
+          "default": null,
+          "meaning": "按JSON Schema校验，不允许任意JSON",
+          "schemaRef": "domain.schema.json#/$defs/C22_createRequest"
+        },
+        {
+          "name": "digest",
+          "type": "VARCHAR(71)",
+          "nullable": false,
+          "default": null,
+          "meaning": "不可变内容摘要"
+        },
+        {
+          "name": "expires_at",
+          "type": "DATETIME(6)",
+          "nullable": true,
+          "default": null,
+          "meaning": "适用时有效期"
+        },
+        {
+          "name": "revision",
+          "type": "BIGINT UNSIGNED",
+          "nullable": false,
+          "default": "1",
+          "meaning": "本记录乐观并发版本；更新+1"
+        },
+        {
+          "name": "created_at",
+          "type": "DATETIME(6)",
+          "nullable": false,
+          "default": "CURRENT_TIMESTAMP(6)",
+          "meaning": "服务端UTC写入时间"
+        },
+        {
+          "name": "updated_at",
+          "type": "DATETIME(6)",
+          "nullable": false,
+          "default": "CURRENT_TIMESTAMP(6)",
+          "meaning": "服务端UTC更新时间"
+        }
+      ],
+      "primaryKey": [
+        "tenant_id",
+        "id"
+      ],
+      "unique": [
+        [
+          "tenant_id",
+          "base_resource_id",
+          "version"
+        ]
+      ],
+      "indexes": [
+        [
+          "tenant_id",
+          "owner_member_id",
+          "state",
+          "id"
+        ]
+      ],
+      "foreignKeys": [],
+      "checks": []
+    },
+    {
+      "name": "oa_config_proposal",
+      "authority": "只引用原配置，不成为配置权威",
+      "phase": "M3",
+      "immutable": false,
+      "columns": [
+        {
+          "name": "tenant_id",
+          "type": "VARCHAR(64)",
+          "nullable": false,
+          "default": null,
+          "meaning": "可信租户；所有查询和关联必含"
+        },
+        {
+          "name": "id",
+          "type": "VARCHAR(64)",
+          "nullable": false,
+          "default": null,
+          "meaning": "服务端生成的本表ID"
+        },
+        {
+          "name": "owner_member_id",
+          "type": "VARCHAR(64)",
+          "nullable": false,
+          "default": null,
+          "meaning": "所有人不自动获得全部来源读权"
+        },
+        {
+          "name": "base_resource_id",
+          "type": "VARCHAR(64)",
+          "nullable": false,
+          "default": null,
+          "meaning": "底座权威资源ID"
+        },
+        {
+          "name": "version",
+          "type": "BIGINT UNSIGNED",
+          "nullable": false,
+          "default": "1",
+          "meaning": "扩展版本"
+        },
+        {
+          "name": "state",
+          "type": "VARCHAR(32)",
+          "nullable": false,
+          "default": null,
+          "meaning": "状态合法值见53号领域状态表"
+        },
+        {
+          "name": "payload_json",
+          "type": "JSON",
+          "nullable": false,
+          "default": null,
+          "meaning": "按JSON Schema校验，不允许任意JSON",
+          "schemaRef": "domain.schema.json#/$defs/C27_proposeConfigRequest"
+        },
+        {
+          "name": "digest",
+          "type": "VARCHAR(71)",
+          "nullable": false,
+          "default": null,
+          "meaning": "不可变内容摘要"
+        },
+        {
+          "name": "expires_at",
+          "type": "DATETIME(6)",
+          "nullable": true,
+          "default": null,
+          "meaning": "适用时有效期"
+        },
+        {
+          "name": "revision",
+          "type": "BIGINT UNSIGNED",
+          "nullable": false,
+          "default": "1",
+          "meaning": "本记录乐观并发版本；更新+1"
+        },
+        {
+          "name": "created_at",
+          "type": "DATETIME(6)",
+          "nullable": false,
+          "default": "CURRENT_TIMESTAMP(6)",
+          "meaning": "服务端UTC写入时间"
+        },
+        {
+          "name": "updated_at",
+          "type": "DATETIME(6)",
+          "nullable": false,
+          "default": "CURRENT_TIMESTAMP(6)",
+          "meaning": "服务端UTC更新时间"
+        }
+      ],
+      "primaryKey": [
+        "tenant_id",
+        "id"
+      ],
+      "unique": [
+        [
+          "tenant_id",
+          "base_resource_id",
+          "version"
+        ]
+      ],
+      "indexes": [
+        [
+          "tenant_id",
+          "owner_member_id",
+          "state",
+          "id"
+        ]
+      ],
+      "foreignKeys": [],
+      "checks": []
+    },
+    {
+      "name": "oa_analysis_plan",
+      "authority": "只读分析计划；结果存在私有ArtifactVersion",
+      "phase": "M3",
+      "immutable": false,
+      "columns": [
+        {
+          "name": "tenant_id",
+          "type": "VARCHAR(64)",
+          "nullable": false,
+          "default": null,
+          "meaning": "可信租户；所有查询和关联必含"
+        },
+        {
+          "name": "id",
+          "type": "VARCHAR(64)",
+          "nullable": false,
+          "default": null,
+          "meaning": "服务端生成的本表ID"
+        },
+        {
+          "name": "owner_member_id",
+          "type": "VARCHAR(64)",
+          "nullable": false,
+          "default": null,
+          "meaning": "所有人不自动获得全部来源读权"
+        },
+        {
+          "name": "base_resource_id",
+          "type": "VARCHAR(64)",
+          "nullable": false,
+          "default": null,
+          "meaning": "底座权威资源ID"
+        },
+        {
+          "name": "version",
+          "type": "BIGINT UNSIGNED",
+          "nullable": false,
+          "default": "1",
+          "meaning": "扩展版本"
+        },
+        {
+          "name": "state",
+          "type": "VARCHAR(32)",
+          "nullable": false,
+          "default": null,
+          "meaning": "状态合法值见53号领域状态表"
+        },
+        {
+          "name": "payload_json",
+          "type": "JSON",
+          "nullable": false,
+          "default": null,
+          "meaning": "按JSON Schema校验，不允许任意JSON",
+          "schemaRef": "domain.schema.json#/$defs/AnalysisQuery"
+        },
+        {
+          "name": "digest",
+          "type": "VARCHAR(71)",
+          "nullable": false,
+          "default": null,
+          "meaning": "不可变内容摘要"
+        },
+        {
+          "name": "expires_at",
+          "type": "DATETIME(6)",
+          "nullable": true,
+          "default": null,
+          "meaning": "适用时有效期"
+        },
+        {
+          "name": "revision",
+          "type": "BIGINT UNSIGNED",
+          "nullable": false,
+          "default": "1",
+          "meaning": "本记录乐观并发版本；更新+1"
+        },
+        {
+          "name": "created_at",
+          "type": "DATETIME(6)",
+          "nullable": false,
+          "default": "CURRENT_TIMESTAMP(6)",
+          "meaning": "服务端UTC写入时间"
+        },
+        {
+          "name": "updated_at",
+          "type": "DATETIME(6)",
+          "nullable": false,
+          "default": "CURRENT_TIMESTAMP(6)",
+          "meaning": "服务端UTC更新时间"
+        }
+      ],
+      "primaryKey": [
+        "tenant_id",
+        "id"
+      ],
+      "unique": [
+        [
+          "tenant_id",
+          "base_resource_id",
+          "version"
+        ]
+      ],
+      "indexes": [
+        [
+          "tenant_id",
+          "owner_member_id",
+          "state",
+          "id"
+        ]
+      ],
+      "foreignKeys": [],
+      "checks": []
+    },
+    {
+      "name": "oa_relation_assertion",
+      "authority": "来源有据的关系断言扩展",
+      "phase": "M3",
+      "immutable": false,
+      "columns": [
+        {
+          "name": "tenant_id",
+          "type": "VARCHAR(64)",
+          "nullable": false,
+          "default": null,
+          "meaning": "可信租户；所有查询和关联必含"
+        },
+        {
+          "name": "id",
+          "type": "VARCHAR(64)",
+          "nullable": false,
+          "default": null,
+          "meaning": "服务端生成的本表ID"
+        },
+        {
+          "name": "owner_member_id",
+          "type": "VARCHAR(64)",
+          "nullable": false,
+          "default": null,
+          "meaning": "所有人不自动获得全部来源读权"
+        },
+        {
+          "name": "base_resource_id",
+          "type": "VARCHAR(64)",
+          "nullable": false,
+          "default": null,
+          "meaning": "底座权威资源ID"
+        },
+        {
+          "name": "version",
+          "type": "BIGINT UNSIGNED",
+          "nullable": false,
+          "default": "1",
+          "meaning": "扩展版本"
+        },
+        {
+          "name": "state",
+          "type": "VARCHAR(32)",
+          "nullable": false,
+          "default": null,
+          "meaning": "状态合法值见53号领域状态表"
+        },
+        {
+          "name": "payload_json",
+          "type": "JSON",
+          "nullable": false,
+          "default": null,
+          "meaning": "按JSON Schema校验，不允许任意JSON",
+          "schemaRef": "domain.schema.json#/$defs/RelationAssertion"
+        },
+        {
+          "name": "digest",
+          "type": "VARCHAR(71)",
+          "nullable": false,
+          "default": null,
+          "meaning": "不可变内容摘要"
+        },
+        {
+          "name": "expires_at",
+          "type": "DATETIME(6)",
+          "nullable": true,
+          "default": null,
+          "meaning": "适用时有效期"
+        },
+        {
+          "name": "revision",
+          "type": "BIGINT UNSIGNED",
+          "nullable": false,
+          "default": "1",
+          "meaning": "本记录乐观并发版本；更新+1"
+        },
+        {
+          "name": "created_at",
+          "type": "DATETIME(6)",
+          "nullable": false,
+          "default": "CURRENT_TIMESTAMP(6)",
+          "meaning": "服务端UTC写入时间"
+        },
+        {
+          "name": "updated_at",
+          "type": "DATETIME(6)",
+          "nullable": false,
+          "default": "CURRENT_TIMESTAMP(6)",
+          "meaning": "服务端UTC更新时间"
+        }
+      ],
+      "primaryKey": [
+        "tenant_id",
+        "id"
+      ],
+      "unique": [
+        [
+          "tenant_id",
+          "base_resource_id",
+          "version"
+        ]
+      ],
+      "indexes": [
+        [
+          "tenant_id",
+          "owner_member_id",
+          "state",
+          "id"
+        ]
+      ],
+      "foreignKeys": [],
+      "checks": []
+    },
+    {
+      "name": "oa_opportunity",
+      "authority": "有界主动建议与用户反馈",
+      "phase": "M4",
+      "immutable": false,
+      "columns": [
+        {
+          "name": "tenant_id",
+          "type": "VARCHAR(64)",
+          "nullable": false,
+          "default": null,
+          "meaning": "可信租户；所有查询和关联必含"
+        },
+        {
+          "name": "id",
+          "type": "VARCHAR(64)",
+          "nullable": false,
+          "default": null,
+          "meaning": "服务端生成的本表ID"
+        },
+        {
+          "name": "owner_member_id",
+          "type": "VARCHAR(64)",
+          "nullable": false,
+          "default": null,
+          "meaning": "所有人不自动获得全部来源读权"
+        },
+        {
+          "name": "base_resource_id",
+          "type": "VARCHAR(64)",
+          "nullable": false,
+          "default": null,
+          "meaning": "底座权威资源ID"
+        },
+        {
+          "name": "version",
+          "type": "BIGINT UNSIGNED",
+          "nullable": false,
+          "default": "1",
+          "meaning": "扩展版本"
+        },
+        {
+          "name": "state",
+          "type": "VARCHAR(32)",
+          "nullable": false,
+          "default": null,
+          "meaning": "状态合法值见53号领域状态表"
+        },
+        {
+          "name": "payload_json",
+          "type": "JSON",
+          "nullable": false,
+          "default": null,
+          "meaning": "按JSON Schema校验，不允许任意JSON",
+          "schemaRef": "domain.schema.json#/$defs/Opportunity"
+        },
+        {
+          "name": "digest",
+          "type": "VARCHAR(71)",
+          "nullable": false,
+          "default": null,
+          "meaning": "不可变内容摘要"
+        },
+        {
+          "name": "expires_at",
+          "type": "DATETIME(6)",
+          "nullable": true,
+          "default": null,
+          "meaning": "适用时有效期"
+        },
+        {
+          "name": "revision",
+          "type": "BIGINT UNSIGNED",
+          "nullable": false,
+          "default": "1",
+          "meaning": "本记录乐观并发版本；更新+1"
+        },
+        {
+          "name": "created_at",
+          "type": "DATETIME(6)",
+          "nullable": false,
+          "default": "CURRENT_TIMESTAMP(6)",
+          "meaning": "服务端UTC写入时间"
+        },
+        {
+          "name": "updated_at",
+          "type": "DATETIME(6)",
+          "nullable": false,
+          "default": "CURRENT_TIMESTAMP(6)",
+          "meaning": "服务端UTC更新时间"
+        }
+      ],
+      "primaryKey": [
+        "tenant_id",
+        "id"
+      ],
+      "unique": [
+        [
+          "tenant_id",
+          "base_resource_id",
+          "version"
+        ]
+      ],
+      "indexes": [
+        [
+          "tenant_id",
+          "owner_member_id",
+          "state",
+          "id"
+        ]
+      ],
+      "foreignKeys": [],
+      "checks": []
+    },
+    {
+      "name": "oa_evolution_proposal",
+      "authority": "原资源版本的评估/试用/发布证据扩展",
+      "phase": "M5",
+      "immutable": false,
+      "columns": [
+        {
+          "name": "tenant_id",
+          "type": "VARCHAR(64)",
+          "nullable": false,
+          "default": null,
+          "meaning": "可信租户；所有查询和关联必含"
+        },
+        {
+          "name": "id",
+          "type": "VARCHAR(64)",
+          "nullable": false,
+          "default": null,
+          "meaning": "服务端生成的本表ID"
+        },
+        {
+          "name": "owner_member_id",
+          "type": "VARCHAR(64)",
+          "nullable": false,
+          "default": null,
+          "meaning": "所有人不自动获得全部来源读权"
+        },
+        {
+          "name": "base_resource_id",
+          "type": "VARCHAR(64)",
+          "nullable": false,
+          "default": null,
+          "meaning": "底座权威资源ID"
+        },
+        {
+          "name": "version",
+          "type": "BIGINT UNSIGNED",
+          "nullable": false,
+          "default": "1",
+          "meaning": "扩展版本"
+        },
+        {
+          "name": "state",
+          "type": "VARCHAR(32)",
+          "nullable": false,
+          "default": null,
+          "meaning": "状态合法值见53号领域状态表"
+        },
+        {
+          "name": "payload_json",
+          "type": "JSON",
+          "nullable": false,
+          "default": null,
+          "meaning": "按JSON Schema校验，不允许任意JSON",
+          "schemaRef": "domain.schema.json#/$defs/EvolutionProposal"
+        },
+        {
+          "name": "digest",
+          "type": "VARCHAR(71)",
+          "nullable": false,
+          "default": null,
+          "meaning": "不可变内容摘要"
+        },
+        {
+          "name": "expires_at",
+          "type": "DATETIME(6)",
+          "nullable": true,
+          "default": null,
+          "meaning": "适用时有效期"
+        },
+        {
+          "name": "revision",
+          "type": "BIGINT UNSIGNED",
+          "nullable": false,
+          "default": "1",
+          "meaning": "本记录乐观并发版本；更新+1"
+        },
+        {
+          "name": "created_at",
+          "type": "DATETIME(6)",
+          "nullable": false,
+          "default": "CURRENT_TIMESTAMP(6)",
+          "meaning": "服务端UTC写入时间"
+        },
+        {
+          "name": "updated_at",
+          "type": "DATETIME(6)",
+          "nullable": false,
+          "default": "CURRENT_TIMESTAMP(6)",
+          "meaning": "服务端UTC更新时间"
+        }
+      ],
+      "primaryKey": [
+        "tenant_id",
+        "id"
+      ],
+      "unique": [
+        [
+          "tenant_id",
+          "base_resource_id",
+          "version"
+        ]
+      ],
+      "indexes": [
+        [
+          "tenant_id",
+          "owner_member_id",
+          "state",
+          "id"
+        ]
+      ],
+      "foreignKeys": [],
+      "checks": []
+    }
+  ]
+}

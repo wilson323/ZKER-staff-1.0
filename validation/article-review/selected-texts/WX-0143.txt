@@ -1,0 +1,145 @@
+AI 编码助手在个人场景下效率提升明显，但直接引入团队会遇到一系列问题：每个人维护一套提示词、每个项目一套规则、人员变动时上下文无法传承。最终结果是 AI 输出质量不稳定，规范靠口头传达，无法沉淀。
+经过半年多的实践，介绍一套 Harness 落地方案。整个系列分三篇：这是第一篇·打地基，讲如何把规范、Rules、AGENTS.md 、知识库 落到代码仓库；第二篇讲 MCP 与 Skills 的接入实践，让 AI 具备连接外部系统的能力；第三篇讲持续优化，如何基于度量数据迭代整套体系。
+一、整体架构：五层闭环
+我们整理了一张 AI 编码助手系统架构图，从上到下分五层，数据自上而下流动，度量层的结果反馈回配置中心，形成闭环：
+
+▲ Code Agent 编码助手系统架构
+五层职责如下：
+层级
+组件
+职责
+输入层
+Spec 文档（requirement.md）/ 自然语言 / 代码上下文
+把人的想法转成 AI 能理解的结构化输入
+配置中心
+Rules / Skills / Docs / Commands / Memories
+加载 Harness 约束，让 AI 行为可控
+模式引擎
+Plan 模式 / Agent 模式
+根据任务复杂度选执行策略
+Agent 核心
+代码生成 / 审查 / 测试 / 重构
+执行具体的开发任务
+MCP 层
+DB / API / Wiki / CI/CD / Monitor
+连接外部系统，突破代码仓库边界
+输出层
+代码 / 测试 / 文档 / 日志
+交付可运行的工程产物
+度量层
+AI 代码占比 / 交付量 / Bug 率
+量化 AI 辅助开发的效果
+需要强调的是，这不是单向流水线，而是闭环——度量层的数据会反馈回配置中心，推动 Rules 和 Skills 的持续迭代：
+
+▲ 数据流转闭环
+例如度量发现某类 Bug 率上升，团队就应该评估是否需要补充新的 Rules 约束，或优化现有 Skills。这套体系的核心思路是：不把 AI 当成不可控的黑盒，而是当成可以被规则约束、可以被度量反馈的工程单元。
+二、操作实战：从 0 到 1 落地 Harness
+架构讲完，进入落地环节。第一步是搭建团队规范仓库，简单命名为 team-harness。
+第 1 步：创建 team-harness 仓库
+初始化仓库并建立标准目录结构：
+
+# 创建仓库mkdir team-harness && cd team-harnessgit init# 创建标准目录结构mkdir -p rules/{global,golang,python,frontend}mkdir -p skills/{common,business}mkdir -p templatesmkdir -p docs# 创建核心文件touch rules/global/base.mdtouch rules/golang/go-backend.mdtouch templates/AGENTS.mdtouch templates/project.mdtouch README.md
+建好的目录结构如下：
+team-harness/
+├── rules/                        # 团队 Rules 集合
+│   ├── global/                   # 全局通用规则
+│   │   └── base.md               # 所有项目必须加载
+│   ├── golang/                   # Go 语言专用规则
+│   │   └── go-backend.md
+│   ├── python/                   # Python 专用规则
+│   └── frontend/                 # 前端专用规则
+├── skills/                       # 团队 Skills 集合
+│   ├── common/                   # 通用 Skills
+│   │   ├── skill-creator/        # Skill 创建器
+│   │   └── find-skills/          # Skill 搜索器
+│   └── business/                 # 业务 Skills
+│       └── sayhi app/            # sayhi配置接入
+├── templates/                    # 模板文件
+│   ├── AGENTS.md                 # AI 说明书模板
+│   └── project.md                # 项目描述模板
+├── docs/                         # 使用文档
+│   └── architecture.md           #架构说明
+└── README.md
+各目录职责：rules/ 存放强制规范，skills/ 存放场景化技能包，templates/ 存放模板（AGENTS.md 等），docs/ 存放知识库。
+仅有仓库还不够，每个业务项目需要能把规范同步过去。可以写一个同步脚本来干这事：
+
+#!/bin/bash# sync-harness.sh - 同步团队规范到当前项目HARNESS_REPO="git@xxx.com"HARNESS_DIR=".harness-upstream"# 拉取最新规范if [ -d "$HARNESS_DIR" ]; then    cd $HARNESS_DIR && git pull && cd ..else    git clone $HARNESS_REPO $HARNESS_DIRfi# 同步 Rules 到项目mkdir -p .codebuddy/rulescp $HARNESS_DIR/rules/global/*.md .codebuddy/rules/cp $HARNESS_DIR/rules/golang/*.md .codebuddy/rules/  # 按语言选择# 同步 Skills 到项目mkdir -p .codebuddy/skillscp -r $HARNESS_DIR/skills/common/* .codebuddy/skills/echo "✅ 团队规范同步完成"
+每个项目执行一次该脚本，Rules 和 Skills 即同步到位。后续规范变更只需修改 team-harness 仓库，业务项目通过 git pull 加执行脚本完成更新。
+三、Rules 配置：分层约束
+Rules 是 AI 在每次交互中必须加载的全局约束，相当于 AI 必须遵守的「法规」。这里介绍三层体系：
+
+▲ Rules 分层体系
+层级
+作用域
+管理方式
+User Rules
+全局个人偏好
+设置页面配置，跨项目生效
+Team Rules
+团队统一标准
+Git 平台管理，团队统一下发
+Project Rules
+项目级约束
+.agent/rules/ 目录，总是生效或手动引用
+实际落地时，个人偏好层一般不需要配置，直接使用项目级 Rule 即可。项目级 Rule 内部再区分 global 与具体语言两类。
+global rule 的最小示例：
+
+---type: always---# 团队 Go 后端开发规范## 架构约束1. 严格遵循分层架构：Controller → Service → Repository → Model2. 禁止在 Controller 层编写业务逻辑
+项目级 Rule 更为具体，一般一种语言一份：
+
+---description: "Go 后端开发通用规范"globs: "**/*.go"alwaysApply: true---# Go 后端开发规范## 一、架构约束（硬性红线）1. 严格遵循分层架构：Controller → Service → Repository → Model2. 禁止在 Controller 层编写业务逻辑，Controller 只负责参数校验和响应封装3. 所有数据库操作必须通过 Repository 层，禁止在 Service 中直接写 SQL4. 所有对外 API 必须包含 Swagger 注解## 二、代码风格1. 函数/方法必须有简要注释说明用途2. 错误处理不允许使用 _ 忽略，必须显式处理或向上传递3. 变量命名使用 camelCase，常量使用 ALL_CAPS4. 单个函数不超过 80 行，超过则拆分## 三、安全策略1. 涉及数据库变更时，优先生成 SQL 变更脚本，而非直接执行2. 删除、移动文件等操作无需额外确认，但涉及数据库结构修改必须确认3. 所有敏感配置（密钥、连接串）必须通过配置中心读取，禁止硬编码## 四、开发行为1. 添加新功能前，必须先分析现有代码库，优先复用已有模块2. 代码变更范围最小化，一次 PR 只解决一个问题3. 每次变更必须附带清晰的 commit 信息4. 新增功能必须同步编写单元测试
+编写 Rule 的几条原则：
+结构化表述
+：使用「禁止」「必须」「不允许」等强约束词，避免「建议」「可以考虑」等模糊表述——AI 会按字面理解执行
+可验证
+：每条规则应能通过具体场景判断是否违反
+分级管理
+：「硬性红线」与「风格建议」分开，让 AI 明确知道哪些约束不可逾越
+持续演进
+：每次踩坑后新增一条 Rule，逐步将团队经验固化为规范
+四、Rules 从团队仓库到业务项目的流转
+规范写好后，需要一套机制将其同步到各业务项目，否则只是静态文档。我们采用「修改 → 评审 → 自动同步」的流程：
+
+▲ Rules 同步流程
+四个环节：
+开发者提交 Rules 变更 PR
+——任何成员都可以对 team-harness 提出规范修改
+团队 Review 并合并
+——PR 必须经过评审，保证规范质量
+自动同步到各业务项目
+——业务项目通过 CI/CD 或 sync-harness.sh 拉取最新规范
+AI 下次交互自动加载新规则
+——.agent/rules/ 更新后，AI 后续输出自动遵守新规范
+整套流程不需要修改任何代码即可生效，变更的是规则文档本身。这正是 Harness 体系的核心价值——规范可沉淀、可追溯、可演进。
+五、AGENTS.md：AI 的项目说明书
+如果说 Rules 是「法规」，AGENTS.md 就是 AI 的「项目说明书」。它放在每个项目根目录，控制在 100 行以内，定位是目录索引，指向更细分的文档。同步脚本会自动将该文件从 team-harness 同步到项目根目录。
+模板如下：
+
+# AI 开发助手说明书## 项目概述本项目是 [项目名称]，基于 Go 微服务架构，使用 [框架名] 框架。## 架构说明- 分层架构：Controller → Service → Repository → Model- 详细架构文档：参见 `docs/ARCHITECTURE.md`## 目录结构- `internal/` - 业务逻辑（按服务拆分子目录）- `pkg/` - 公共工具库- `api/` - API 定义（Proto/Swagger）- `configs/` - 配置文件- `scripts/` - 脚本工具## 开发规范- 代码规范：参见 `.codebuddy/rules/go-backend.md`- 数据库规范：所有查询走 Repository 层- 错误处理：统一使用 `pkg/errors` 包装错误## 常用命令- 编译：`go build ./...`- 测试：`go test ./...`- Lint：`golangci-lint run`## 当前进行中的需求- 参见 `.codebuddy/plan/` 目录下的活跃需求## 注意事项- 添加新功能前，先检查 `pkg/` 下是否已有可复用的工具- 数据库变更必须先生成 SQL 脚本- 所有 API 变更需要更新 Swagger 文档
+编写 AGENTS.md 的几条原则：
+控制在 100 行内
+——超出部分拆分到 docs/ 目录，AGENTS.md 只保留索引
+项目相关上下文写在这里
+（如当前进行的需求），通用规范写在 Rules 里，职责分离
+每个新项目初始化时更新
+——保证 AI 进入项目即具备完整背景
+六、知识库：为 AI 补充业务上下文
+Rules 解决「AI 行为可控」，知识库解决「AI 有业务上下文」。挂载团队内部文档、代码库和业务知识后，AI 能从「通用智能」转变为「懂业务的专家」。
+最直接的做法：将团队文档链接提供给 agent，由它生成文档的 metadata 和摘要，存放到 docs 目录。例如架构知识放入 architecture.md，问题与 Bug 记录放入 issue.md。AI 进入项目前先读取这些文件，即具备完整的业务背景。
+更进一步的做法是接入 Wiki MCP，让 AI 实时检索业务文档，免去手动同步的环节——这属于工具接入的内容，将在第二篇展开。
+小结
+第一篇初步介绍团队在AI coding初期的摸索模式，并完成以下六项工作：
+
+建立五层架构认知与数据流转闭环
+
+搭建 team-harness 仓库及同步脚本
+
+完成 Rules 分层配置（global + 语言级）
+
+跑通 Rules 同步流程（PR → Review → 自动同步 → AI 自动加载）
+
+为每个项目编写 AGENTS.md 索引
+
+初步接入知识库（文档摘要）
+这套基础设施完成后，团队每个成员打开 IDE，AI 助手加载的规则完全一致。「地基」的意义在于：规范从口口相传变为代码可读、版本可管理。
+第二篇 将讲 MCP 与 Skills 的接入实践——DB、API、Wiki、CI/CD、Monitor 如何变成 AI 可调用的能力，以及团队 Skills如何沉淀复用。第三篇讲持续优化——如何基于度量数据迭代 Rules、Skills 与整个体系。

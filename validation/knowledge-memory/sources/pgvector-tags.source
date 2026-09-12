@@ -1,0 +1,52 @@
+[
+  {
+    "name": "v0.8.6",
+    "zipball_url": "https://api.github.com/repos/pgvector/pgvector/zipball/refs/tags/v0.8.6",
+    "tarball_url": "https://api.github.com/repos/pgvector/pgvector/tarball/refs/tags/v0.8.6",
+    "commit": {
+      "sha": "8ee86c96f0fd72390f890aa8a336fda6d3ab4c6c",
+      "url": "https://api.github.com/repos/pgvector/pgvector/commits/8ee86c96f0fd72390f890aa8a336fda6d3ab4c6c"
+    },
+    "node_id": "MDM6UmVmMzU5OTUyNjAxOnJlZnMvdGFncy92MC44LjY="
+  },
+  {
+    "name": "v0.8.5",
+    "zipball_url": "https://api.github.com/repos/pgvector/pgvector/zipball/refs/tags/v0.8.5",
+    "tarball_url": "https://api.github.com/repos/pgvector/pgvector/tarball/refs/tags/v0.8.5",
+    "commit": {
+      "sha": "159b79aaad5983fb7459c1e3df2897fbb2d11788",
+      "url": "https://api.github.com/repos/pgvector/pgvector/commits/159b79aaad5983fb7459c1e3df2897fbb2d11788"
+    },
+    "node_id": "MDM6UmVmMzU5OTUyNjAxOnJlZnMvdGFncy92MC44LjU="
+  },
+  {
+    "name": "v0.8.4",
+    "zipball_url": "https://api.github.com/repos/pgvector/pgvector/zipball/refs/tags/v0.8.4",
+    "tarball_url": "https://api.github.com/repos/pgvector/pgvector/tarball/refs/tags/v0.8.4",
+    "commit": {
+      "sha": "1d458ad5d73731241e8b912cacc2079beb643d30",
+      "url": "https://api.github.com/repos/pgvector/pgvector/commits/1d458ad5d73731241e8b912cacc2079beb643d30"
+    },
+    "node_id": "MDM6UmVmMzU5OTUyNjAxOnJlZnMvdGFncy92MC44LjQ="
+  },
+  {
+    "name": "v0.8.3",
+    "zipball_url": "https://api.github.com/repos/pgvector/pgvector/zipball/refs/tags/v0.8.3",
+    "tarball_url": "https://api.github.com/repos/pgvector/pgvector/tarball/refs/tags/v0.8.3",
+    "commit": {
+      "sha": "586e7515bafe6912c425164d186d56550657c349",
+      "url": "https://api.github.com/repos/pgvector/pgvector/commits/586e7515bafe6912c425164d186d56550657c349"
+    },
+    "node_id": "MDM6UmVmMzU5OTUyNjAxOnJlZnMvdGFncy92MC44LjM="
+  },
+  {
+    "name": "v0.8.2",
+    "zipball_url": "https://api.github.com/repos/pgvector/pgvector/zipball/refs/tags/v0.8.2",
+    "tarball_url": "https://api.github.com/repos/pgvector/pgvector/tarball/refs/tags/v0.8.2",
+    "commit": {
+      "sha": "cab9da72c04353f143bb06b42ab70a403daac64a",
+      "url": "https://api.github.com/repos/pgvector/pgvector/commits/cab9da72c04353f143bb06b42ab70a403daac64a"
+    },
+    "node_id": "MDM6UmVmMzU5OTUyNjAxOnJlZnMvdGFncy92MC44LjI="
+  }
+]

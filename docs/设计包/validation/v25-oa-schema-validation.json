@@ -1,0 +1,99 @@
+{
+  "passed": true,
+  "validExamples": 3,
+  "invalidExamples": 9,
+  "checks": [
+    {
+      "name": "Work entry",
+      "expectation": "valid",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "name": "Approval entry",
+      "expectation": "valid",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "name": "CC entry",
+      "expectation": "valid",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "name": "CC cannot approve",
+      "expectation": "invalid",
+      "passed": true,
+      "errors": [
+        "'APPROVE' is not one of ['OPEN', 'MARK_READ']"
+      ]
+    },
+    {
+      "name": "WORK cannot approve",
+      "expectation": "invalid",
+      "passed": true,
+      "errors": [
+        "'APPROVE' is not one of ['OPEN', 'CLAIM', 'SAVE_DRAFT', 'SUBMIT']"
+      ]
+    },
+    {
+      "name": "APPROVAL requires request reference",
+      "expectation": "invalid",
+      "passed": true,
+      "errors": [
+        "None is not of type 'string'"
+      ]
+    },
+    {
+      "name": "WORK requires work item",
+      "expectation": "invalid",
+      "passed": true,
+      "errors": [
+        "None is not of type 'string'"
+      ]
+    },
+    {
+      "name": "Positive round required",
+      "expectation": "invalid",
+      "passed": true,
+      "errors": [
+        "0 is less than the minimum of 1"
+      ]
+    },
+    {
+      "name": "Unknown business terminal forbidden",
+      "expectation": "invalid",
+      "passed": true,
+      "errors": [
+        "'AI_SUCCESS' is not one of ['created', 'running', 'awaiting_human', 'awaiting_approval', 'completed', 'failed', 'cancelled', 'reconciling']"
+      ]
+    },
+    {
+      "name": "Stale approval cannot act",
+      "expectation": "invalid",
+      "passed": true,
+      "errors": [
+        "'OPEN' was expected",
+        "'OPEN' was expected"
+      ]
+    },
+    {
+      "name": "No secret fields",
+      "expectation": "invalid",
+      "passed": true,
+      "errors": [
+        "Additional properties are not allowed ('accessToken' was unexpected)"
+      ]
+    },
+    {
+      "name": "Date must parse",
+      "expectation": "invalid",
+      "passed": true,
+      "errors": [
+        "'bad-time' is not a 'date-time'"
+      ]
+    }
+  ],
+  "limitations": "Structure only; not cross-record authorization or persistence validation."
+}

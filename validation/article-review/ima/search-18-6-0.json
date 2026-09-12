@@ -1,0 +1,354 @@
+{
+  "retrievedAt": "2026-09-11T23:55:15.449447+00:00",
+  "operation": "search_knowledge",
+  "request": {
+    "knowledge_base_id": "tt7Hn9iH7TNPH-ip_qwndO33thfrfbK5FAo4_BUjUwg=",
+    "cursor": "",
+    "query": "上下文"
+  },
+  "exitCode": 0,
+  "response": {
+    "code": 0,
+    "msg": "success",
+    "data": {
+      "info_list": [
+        {
+          "media_id": "wechatarticle_8063fdd1b44b6b1cc34019dc46a067c0_c68350fc8a93bab139acac4e45444a177314120386811241",
+          "title": "Agent上下文工程Overview",
+          "parent_folder_id": "7314120386811241",
+          "highlight_content": "",
+          "media_type": 6
+        },
+        {
+          "media_id": "wechatarticle_8063fdd1b44b6b1cc34019dc46a067c0_d333459536b8328379b2df17527826f17314120386811241",
+          "title": "从上下文工程到 Harness Engineering",
+          "parent_folder_id": "folder_7353352786546831",
+          "highlight_content": "",
+          "media_type": 6
+        },
+        {
+          "media_id": "wechatarticle_8063fdd1b44b6b1cc34019dc46a067c0_bd4d94352dd9d48428aa957f1c9913647314120386811241",
+          "title": "AgentScope AutoContextMemory：告别Agent上下文焦虑",
+          "parent_folder_id": "7314120386811241",
+          "highlight_content": "",
+          "media_type": 6
+        },
+        {
+          "media_id": "wechatarticle_8063fdd1b44b6b1cc34019dc46a067c0_5886172b313d8de40ab08fa0edb50dbb7314120386811241",
+          "title": "从氛围编程到上下文工程：2025软件开发者必须理解的上下文工程革命",
+          "parent_folder_id": "7314120386811241",
+          "highlight_content": "",
+          "media_type": 6
+        },
+        {
+          "media_id": "wechatarticle_8063fdd1b44b6b1cc34019dc46a067c0_e3dbf8576913cb9eda76cbd3ff04d4c17314120386811241",
+          "title": "浅谈上下文工程｜从 Claude Code 、Manus 和 Kiro 看提示工程到上下文工程的转变",
+          "parent_folder_id": "7314120386811241",
+          "highlight_content": "",
+          "media_type": 6
+        },
+        {
+          "media_id": "wechatarticle_8063fdd1b44b6b1cc34019dc46a067c0_a99858cceefc994249ee592b0ff3fa2c7314120386811241",
+          "title": "从提示词工程到上下文工程",
+          "parent_folder_id": "folder_7353352786546831",
+          "highlight_content": "",
+          "media_type": 6
+        },
+        {
+          "media_id": "pdf_8063fdd1b44b6b1cc34019dc46a067c0_6ffade587e1f1f02111a7cb226a694167314120386811241",
+          "title": "大模型上下文工程(ContextEngineering)指南.pdf",
+          "parent_folder_id": "folder_7353352786546831",
+          "highlight_content": "",
+          "media_type": 1
+        },
+        {
+          "media_id": "wechatarticle_8063fdd1b44b6b1cc34019dc46a067c0_f383729dea19f748560846ee8b2f03ec7314120386811241",
+          "title": "今年AI界大火的「上下文工程」",
+          "parent_folder_id": "7314120386811241",
+          "highlight_content": "",
+          "media_type": 6
+        },
+        {
+          "media_id": "wechatarticle_8063fdd1b44b6b1cc34019dc46a067c0_f7109aef044f58cd83a6b595d81736737314120386811241",
+          "title": "人的本质是其上下文的总和！上海交大重磅研究预测上下文工程的4个时代",
+          "parent_folder_id": "7314120386811241",
+          "highlight_content": "",
+          "media_type": 6
+        },
+        {
+          "media_id": "wechatarticle_8063fdd1b44b6b1cc34019dc46a067c0_a3595d1d25c7fe4a9d63ee24b5a071f37314120386811241",
+          "title": "我来彻底说说AI上下文工程（上）",
+          "parent_folder_id": "folder_7331591844031445",
+          "highlight_content": "",
+          "media_type": 6
+        },
+        {
+          "media_id": "wechatarticle_8063fdd1b44b6b1cc34019dc46a067c0_91ce2c4c560beecdfa82ee59377a2a547314120386811241",
+          "title": "我来彻底说说 AI 上下文工程（下）",
+          "parent_folder_id": "folder_7331591844031445",
+          "highlight_content": "",
+          "media_type": 6
+        },
+        {
+          "media_id": "wechatarticle_8063fdd1b44b6b1cc34019dc46a067c0_311c2cbbbb45e2680e46095e63e59b317314120386811241",
+          "title": "我来彻底说说AI上下文工程（中）",
+          "parent_folder_id": "folder_7331591844031445",
+          "highlight_content": "",
+          "media_type": 6
+        },
+        {
+          "media_id": "wechatarticle_8063fdd1b44b6b1cc34019dc46a067c0_7549280093abdd159332b2e7905944187314120386811241",
+          "title": "AI智能体的上下文工程：完整指南",
+          "parent_folder_id": "folder_7331591844031445",
+          "highlight_content": "",
+          "media_type": 6
+        },
+        {
+          "media_id": "wechatarticle_8063fdd1b44b6b1cc34019dc46a067c0_a6033f77c5c50fae9c0e681f862134cd7314120386811241",
+          "title": "想要更好的 AI 输出？试试上下文工程",
+          "parent_folder_id": "folder_7331591844031445",
+          "highlight_content": "",
+          "media_type": 6
+        },
+        {
+          "media_id": "wechatarticle_8063fdd1b44b6b1cc34019dc46a067c0_bf5cb3d8b94b9cf80bd611331622db937314120386811241",
+          "title": "垂直和领域 Agent 的护城河：上下文工程",
+          "parent_folder_id": "7314120386811241",
+          "highlight_content": "",
+          "media_type": 6
+        },
+        {
+          "media_id": "wechatarticle_8063fdd1b44b6b1cc34019dc46a067c0_08200c52ab1091e464310d625050894d7314120386811241",
+          "title": "Context is All You Need: 深入理解上下文工程",
+          "parent_folder_id": "7314120386811241",
+          "highlight_content": "",
+          "media_type": 6
+        },
+        {
+          "media_id": "wechatarticle_8063fdd1b44b6b1cc34019dc46a067c0_531ec15c3e5edb47fdf98cc144386e897314120386811241",
+          "title": "为 AI 智能体打造高效的上下文工程 -- Anthropic",
+          "parent_folder_id": "folder_7362290588345872",
+          "highlight_content": "",
+          "media_type": 6
+        },
+        {
+          "media_id": "wechatarticle_8063fdd1b44b6b1cc34019dc46a067c0_e49c388b03526724e8544f895aecc7677314120386811241",
+          "title": "智能体架构，利用文件系统重塑上下文工程",
+          "parent_folder_id": "7314120386811241",
+          "highlight_content": "",
+          "media_type": 6
+        },
+        {
+          "media_id": "wechatarticle_8063fdd1b44b6b1cc34019dc46a067c0_acf306e27d7a5b9862d07f190c2330b97314120386811241",
+          "title": "Prompt、Skills、MCP：大模型上下文工程核心链路",
+          "parent_folder_id": "folder_7353352786546831",
+          "highlight_content": "",
+          "media_type": 6
+        },
+        {
+          "media_id": "wechatarticle_8063fdd1b44b6b1cc34019dc46a067c0_cc48c39397c297075b1ee8f08fea50467314120386811241",
+          "title": "Claude Code 工程实践：上下文才是真正的战场",
+          "parent_folder_id": "7314120386811241",
+          "highlight_content": "",
+          "media_type": 6
+        },
+        {
+          "media_id": "wechatarticle_8063fdd1b44b6b1cc34019dc46a067c0_7e6b525a15972fc7258930f79235af397314120386811241",
+          "title": "为什么说上下文工程是AI产品成功的关键？",
+          "parent_folder_id": "7314120386811241",
+          "highlight_content": "",
+          "media_type": 6
+        },
+        {
+          "media_id": "wechatarticle_8063fdd1b44b6b1cc34019dc46a067c0_2b99126c56bdd247be1432bfab0c18be7314120386811241",
+          "title": "Context Engineering（上下文工程）是 AI Agent 成功的关键吗？",
+          "parent_folder_id": "7314120386811241",
+          "highlight_content": "",
+          "media_type": 6
+        },
+        {
+          "media_id": "wechatarticle_8063fdd1b44b6b1cc34019dc46a067c0_73b02030295edbc33b2896bc8db613257314120386811241",
+          "title": "CodeGenius Memory：构建面向代码生成的可控上下文系统",
+          "parent_folder_id": "7314120386811241",
+          "highlight_content": "",
+          "media_type": 6
+        },
+        {
+          "media_id": "wechatarticle_8063fdd1b44b6b1cc34019dc46a067c0_2bf346b4edad690588ca1ebd6c3f650d7314120386811241",
+          "title": "AI Agent 上下文管理：六大厂方案对比",
+          "parent_folder_id": "7314120386811241",
+          "highlight_content": "",
+          "media_type": 6
+        },
+        {
+          "media_id": "wechatarticle_8063fdd1b44b6b1cc34019dc46a067c0_d3b3f611309a70b1ec4298abf8cf7d107314120386811241",
+          "title": "Agent全面爆发！万字长文详解上下文工程",
+          "parent_folder_id": "7314120386811241",
+          "highlight_content": "",
+          "media_type": 6
+        },
+        {
+          "media_id": "wechatarticle_8063fdd1b44b6b1cc34019dc46a067c0_9d1e680be474e22506630b05b57a815d7314120386811241",
+          "title": "Cursor这篇文章揭开了他们上下文管理的秘密",
+          "parent_folder_id": "7314120386811241",
+          "highlight_content": "",
+          "media_type": 6
+        },
+        {
+          "media_id": "wechatarticle_8063fdd1b44b6b1cc34019dc46a067c0_b66b30e8e0279558c7b50b7aee43090e7314120386811241",
+          "title": "AI上下文工程：让大模型真正\"懂\"你的完整指南",
+          "parent_folder_id": "7314120386811241",
+          "highlight_content": "",
+          "media_type": 6
+        },
+        {
+          "media_id": "note_8063fdd1b44b6b1cc34019dc46a067c0_74382408438543257314120386811241",
+          "title": "提示词工程、上下文工程、SDD 与 Skill 驱动开发的关...",
+          "parent_folder_id": "folder_7362290588345872",
+          "highlight_content": "",
+          "media_type": 11
+        },
+        {
+          "media_id": "note_8063fdd1b44b6b1cc34019dc46a067c0_74380169393014997314120386811241",
+          "title": "上下文工程：AI认知架构的演进路径与商业未来",
+          "parent_folder_id": "7314120386811241",
+          "highlight_content": "",
+          "media_type": 11
+        },
+        {
+          "media_id": "note_8063fdd1b44b6b1cc34019dc46a067c0_74381460022525587314120386811241",
+          "title": "提示词工程、上下文工程、SDD 与 Skill 驱动开发的关...",
+          "parent_folder_id": "7314120386811241",
+          "highlight_content": "",
+          "media_type": 11
+        },
+        {
+          "media_id": "wechatarticle_8063fdd1b44b6b1cc34019dc46a067c0_c1ec653782d6d914bcab563d5b193c4c7314120386811241",
+          "title": "Agentic Coding场景下基于职责分离的上下文管理思路分享",
+          "parent_folder_id": "7314120386811241",
+          "highlight_content": "",
+          "media_type": 6
+        },
+        {
+          "media_id": "wechatarticle_8063fdd1b44b6b1cc34019dc46a067c0_cb0a5da2772004a0ac47b5455d7c3b047314120386811241",
+          "title": "AI编程新范式：Qoder如何用“上下文工程”破解真实工程挑战",
+          "parent_folder_id": "7314120386811241",
+          "highlight_content": "",
+          "media_type": 6
+        },
+        {
+          "media_id": "wechatarticle_8063fdd1b44b6b1cc34019dc46a067c0_b8d3c605eff4260d85a9b763384520527314120386811241",
+          "title": "Gemini CLI + Conductor：让Vibe Coding从SDD升级为CDD（上下文驱动开发）",
+          "parent_folder_id": "7314120386811241",
+          "highlight_content": "",
+          "media_type": 6
+        },
+        {
+          "media_id": "wechatarticle_8063fdd1b44b6b1cc34019dc46a067c0_6fef1eb7afa454953d70c9f9f44968727314120386811241",
+          "title": "提示词工程、上下文工程都过时了，现在是 Harness Engineering 的时代",
+          "parent_folder_id": "folder_7353352786546831",
+          "highlight_content": "",
+          "media_type": 6
+        },
+        {
+          "media_id": "wechatarticle_8063fdd1b44b6b1cc34019dc46a067c0_5dc2bb3988c89e069ee0e6d16eccc6d17314120386811241",
+          "title": "上下文工程的六大组件：构建高性能AI应用的核心指南",
+          "parent_folder_id": "folder_7331591844031445",
+          "highlight_content": "",
+          "media_type": 6
+        },
+        {
+          "media_id": "wechatarticle_8063fdd1b44b6b1cc34019dc46a067c0_0d7064cbd901df7efcc2adb794fb7f8c7314120386811241",
+          "title": "上下文工程的第一性原理：一场“恰到好处”的驾驭艺术",
+          "parent_folder_id": "7314120386811241",
+          "highlight_content": "",
+          "media_type": 6
+        },
+        {
+          "media_id": "note_8063fdd1b44b6b1cc34019dc46a067c0_74348516700367437314120386811241",
+          "title": "2026年智能化软件工程进展：上下文工程的核心突破与产业应用...",
+          "parent_folder_id": "7314120386811241",
+          "highlight_content": "",
+          "media_type": 11
+        },
+        {
+          "media_id": "wechatarticle_8063fdd1b44b6b1cc34019dc46a067c0_f4fb287c62a2575ab3da69be3626bc897314120386811241",
+          "title": "让每一个 Token 发挥更大价值：Copilot 如何优化上下文处理与模型路由",
+          "parent_folder_id": "7314120386811241",
+          "highlight_content": "",
+          "media_type": 6
+        },
+        {
+          "media_id": "wechatarticle_8063fdd1b44b6b1cc34019dc46a067c0_5419124384acdc3628d195d6626b226a7314120386811241",
+          "title": "Claude一夜拆掉AI编程天花板！百万token上下文登场，吞下整个代码库",
+          "parent_folder_id": "folder_7362289086766122",
+          "highlight_content": "",
+          "media_type": 6
+        },
+        {
+          "media_id": "wechatarticle_8063fdd1b44b6b1cc34019dc46a067c0_df72666ac3721bbf259e992648fbd9017314120386811241",
+          "title": "Pi harness 的极简主义：代码即真理、Bash is All You Need、构建上下文高效的工具",
+          "parent_folder_id": "7314120386811241",
+          "highlight_content": "",
+          "media_type": 6
+        },
+        {
+          "media_id": "wechatarticle_8063fdd1b44b6b1cc34019dc46a067c0_7a550036774913c4a4f1820bb0028a307314120386811241",
+          "title": "从 OpenCode 升级到 V2，我们看到上下文工程与驾驭工程的三个趋势",
+          "parent_folder_id": "7314120386811241",
+          "highlight_content": "",
+          "media_type": 6
+        },
+        {
+          "media_id": "wechatarticle_8063fdd1b44b6b1cc34019dc46a067c0_35150aaccb35b05554cb5f3739aeaa0d7314120386811241",
+          "title": "别再往上下文硬塞Token 了！Claude「高级工具三件套」到底有多狠？",
+          "parent_folder_id": "folder_7331591844031445",
+          "highlight_content": "",
+          "media_type": 6
+        },
+        {
+          "media_id": "wechatarticle_8063fdd1b44b6b1cc34019dc46a067c0_ab83ae9cf2f44dbf0543cefe0bed1a777314120386811241",
+          "title": "AI在测试自动化中的实际应用 — 上下文、UI-Tars LLM、Midscene（第二部分）",
+          "parent_folder_id": "folder_7331591642682077",
+          "highlight_content": "",
+          "media_type": 6
+        },
+        {
+          "media_id": "wechatarticle_8063fdd1b44b6b1cc34019dc46a067c0_c9bc2d92172ae01ee54bd6712c3bd16c7314120386811241",
+          "title": "这个编程上下文管理开源项目“Context Engineering”，让技术小白实现从\"随意编程\"到\"系统工程\"的AI开发革命",
+          "parent_folder_id": "folder_7362289086766122",
+          "highlight_content": "",
+          "media_type": 6
+        },
+        {
+          "media_id": "wechatarticle_8063fdd1b44b6b1cc34019dc46a067c0_0c0c145ab418921eccad8a11b39d3d497314120386811241",
+          "title": "AI在测试自动化中的实际应用 — 上下文、UI-Tars LLM、Midscene（第一部分）",
+          "parent_folder_id": "folder_7331591642682077",
+          "highlight_content": "",
+          "media_type": 6
+        },
+        {
+          "media_id": "wechatarticle_8063fdd1b44b6b1cc34019dc46a067c0_b63fb0e0e65a088016880d5d9ec623d37314120386811241",
+          "title": "AI Coding 生死局：Spec 正在蚕食人类编码，Agent 造轮子拖垮效率，Token成本失控后上下文工程成胜负手",
+          "parent_folder_id": "folder_7362289086766122",
+          "highlight_content": "",
+          "media_type": 6
+        },
+        {
+          "media_id": "wechatarticle_8063fdd1b44b6b1cc34019dc46a067c0_735dad54b1b6f65024d19ff04e2d75657314120386811241",
+          "title": "架构师需要懂的知识 | 提示词工程、上下文工程、Harness工程、AI工程、数据工程、知识工程、平台工程、软件工程、系统工程的区别和联系",
+          "parent_folder_id": "folder_7353352786546831",
+          "highlight_content": "",
+          "media_type": 6
+        },
+        {
+          "media_id": "wechatarticle_8063fdd1b44b6b1cc34019dc46a067c0_66b04dcb700d55bde9430018a72810fa7314120386811241",
+          "title": "无限代码危机！奈飞AI工程师曝自家上下文工程秘诀：三阶段方法论！AI不能理解软件为什么会失败！每一代工程师都会撞上一堵墙！",
+          "parent_folder_id": "7314120386811241",
+          "highlight_content": "",
+          "media_type": 6
+        }
+      ]
+    }
+  }
+}

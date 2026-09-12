@@ -1,0 +1,181 @@
+{
+  "revision": "v2.4",
+  "passed": true,
+  "checks": [
+    {
+      "name": "All 44 human role keys covered by 41 explicit views",
+      "passed": true,
+      "detail": {
+        "humanKeys": 44,
+        "profiles": 41,
+        "missing": [],
+        "extra": []
+      }
+    },
+    {
+      "name": "Embedded role catalog matches delivered JSON",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "Canonical seven fixtures preserve exact membership",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "Service role cannot be selected as a human",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "Current platform role source hash matches fixture",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "All 153 original requirements mapped without extra IDs",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "Original requirements digest unchanged",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "Every role has a journey, negative case and valid page mapping",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "Every requirement has valid roles and original acceptance",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "41 role-specific Given When Then stories present",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "21 domains and 22 page groups preserved",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "Unchanged business models, schemas, requirement map and checklist preserve v2.3 digests",
+      "passed": true,
+      "detail": {
+        "checked": [
+          "02-数据模型与ER设计.md",
+          "03-业务流程与状态机.md",
+          "04-接口与契约变更设计.md",
+          "06-用户故事与153项追踪矩阵.md",
+          "09-协作扩展候选.schema.json",
+          "10-需求追踪数据.json",
+          "11-存量合同字段字典.md",
+          "12-员工市场复制与使用设计.md",
+          "13-市场采用候选.schema.json",
+          "ZKER-staff-完整优化清单-v2-人员数字员工与上下文对齐.md",
+          "附录-QoderWake竞品分析-初版快照.md"
+        ],
+        "drift": []
+      }
+    },
+    {
+      "name": "Both browser suites pass all recorded cases",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "Browser result refers to current HTML digest",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "All role views checked on all three widths",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "No browser errors or external requests",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "All 85 screenshots exist and are nonempty",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "Actual case counts match recorded totals",
+      "passed": true,
+      "detail": {
+        "layouts": 882,
+        "interactions": 373
+      }
+    },
+    {
+      "name": "Toolbar reports current role count",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "00-开发设计包导读.md agrees with actual coverage",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "05-UI与交互设计.md agrees with actual coverage",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "07-开发分解与验收方案.md agrees with actual coverage",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "15-全角色界面与操作覆盖矩阵.md agrees with actual coverage",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "All local Markdown links and line anchors resolve",
+      "passed": true,
+      "detail": {
+        "count": 419,
+        "errors": []
+      }
+    },
+    {
+      "name": "Role source hashes match current source files",
+      "passed": true,
+      "detail": null
+    }
+  ],
+  "localLinks": 419,
+  "sourceHead": "5f6e355eb5a5251d3d0d83a1de7289582787926b",
+  "sourceHashes": {
+    "contracts/authz/platform-roles.yaml": "12263586cd56b40c21416249eafac41b3ba715454ec679e78671a372afe31228",
+    "contracts/authz/actions.yaml": "e7cccbd31a78d49716661f7a7ac08155de1506768c20ab71114340630d80f721",
+    "docs/security/business-role-ui-projection-matrix.md": "025ba1ab98bf525c372f10fe848df27c4348196b342aa87a60ec6064872ea061",
+    "docs/ui/information-architecture.md": "2a827b844054a167b05c455d6a0a07dd190e426f11f7837a37cb13489e296ca8",
+    "docs/ui/prototype-screenshot-acceptance-matrix.md": "3714a374f989b1d80885a9b13a541e13672140ca84ebc272a55263c79221a1e6"
+  },
+  "coverage": {
+    "profiles": 41,
+    "humanRoleKeys": 44,
+    "serviceRoleKeys": 1,
+    "requirements": 153,
+    "domains": 21,
+    "pageGroups": 22,
+    "layoutChecks": 882,
+    "interactionChecks": 373,
+    "screenshots": 85
+  },
+  "htmlSha256": "1663cdcedad1ce6779f6071d6ec219783b986f309648715cee9474106ef977ce",
+  "limitations": [
+    "Local prototype and documentation validation; no production permission verification, real role login, model/runtime execution or deployment."
+  ]
+}

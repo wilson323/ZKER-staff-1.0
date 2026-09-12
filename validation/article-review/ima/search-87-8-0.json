@@ -1,0 +1,46 @@
+{
+  "retrievedAt": "2026-09-11T23:55:16.410113+00:00",
+  "operation": "search_knowledge",
+  "request": {
+    "knowledge_base_id": "n0MwVp2eklMxS02bwq57AwEVut4kGOc8LcR1pE5iCLs=",
+    "cursor": "",
+    "query": "权限"
+  },
+  "exitCode": 0,
+  "response": {
+    "code": 0,
+    "msg": "success",
+    "data": {
+      "info_list": [
+        {
+          "media_id": "wechatarticle_0965810169bffd8606dec4fbe528269d_75de7716128c787843fc549ee0aac0467309037133652424",
+          "title": "KnowFlow v2.0.4 发布：重构 RAGFlow 权限管理，支持 RBAC 用户、团队权限管理，精准管控知识库权限",
+          "parent_folder_id": "7309037133652424",
+          "highlight_content": "",
+          "media_type": 6
+        },
+        {
+          "media_id": "wechatarticle_0965810169bffd8606dec4fbe528269d_475e60f104d21d10da1e60095f7106077309037133652424",
+          "title": "一文吃透Dify账户系统：多租户 + 多登录方式 + 权限模型全揭底",
+          "parent_folder_id": "7309037133652424",
+          "highlight_content": "",
+          "media_type": 6
+        },
+        {
+          "media_id": "wechatarticle_0965810169bffd8606dec4fbe528269d_95aea5943600995affaacbc30a5076d27309037133652424",
+          "title": "Dify元数据商业应用，知识库权限分级实战（内附全流程配置手册，建议收藏）",
+          "parent_folder_id": "7309037133652424",
+          "highlight_content": "",
+          "media_type": 6
+        },
+        {
+          "media_id": "wechatarticle_0965810169bffd8606dec4fbe528269d_b905357e6cbda6472b4bb2f4e495d2847309037133652424",
+          "title": "Dify v1.1.0新版杀器，用元数据过滤给知识库加权限管理，RAG 检索效率翻倍，含保姆级操作教程",
+          "parent_folder_id": "7309037133652424",
+          "highlight_content": "",
+          "media_type": 6
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,7408 @@
+{
+  "source": "docs/设计包/30-产品设计追踪数据.json",
+  "sourceSha256": "5dbbe41a1e6853cfca898094a5e98ed929c9e4e8fe0c2d49da4cf213363b2fa8",
+  "status": "IMPLEMENTATION_DESIGN_MAPPING_ONLY",
+  "requirements": [
+    {
+      "requirementId": "WD-01",
+      "domain": "WD",
+      "sliceId": "SL-WD",
+      "pageIds": [
+        "P01",
+        "P02"
+      ],
+      "commandIds": [
+        "C01",
+        "C02",
+        "C03",
+        "C15"
+      ],
+      "operationIds": [
+        "C01_listInbox",
+        "C01_getWork",
+        "C01_readVersionResource",
+        "C02_startProcess",
+        "C03_claim",
+        "C03_release",
+        "C03_transfer",
+        "C03_delegate",
+        "C15_read",
+        "C15_remind",
+        "C15_withdraw",
+        "C15_appendWorkMessage",
+        "C15_saveMessageDraft"
+      ],
+      "dataTables": [
+        "oa_work_item",
+        "oa_human_task"
+      ],
+      "originalCaseIds": [
+        "AC-01",
+        "AC-02",
+        "AC-03",
+        "AC-04",
+        "AC-07",
+        "AC-51",
+        "AC-57"
+      ],
+      "normativeAcceptance": "typecheck 通过；普通员工从首页进入自己的节点，按钮触发真实动作，刷新可恢复",
+      "negative": "他人任务不得混入本人列表",
+      "specRef": "docs/设计包/47-全产品实施切片与首期开发规格.md#sl-wd",
+      "uiRef": "docs/设计包/52-UI实现与页面状态规格.md",
+      "contractRef": "contracts/openapi.json",
+      "implementationStatus": "NOT_IMPLEMENTED",
+      "mappingLevel": "REQUIREMENT_TO_DOMAIN_SLICE_AND_TYPED_ACTIONS_NOT_CODE_LINE_TRACE"
+    },
+    {
+      "requirementId": "WD-02",
+      "domain": "WD",
+      "sliceId": "SL-WD",
+      "pageIds": [
+        "P01",
+        "P02",
+        "P22"
+      ],
+      "commandIds": [
+        "C01",
+        "C02",
+        "C03",
+        "C15"
+      ],
+      "operationIds": [
+        "C01_listInbox",
+        "C01_getWork",
+        "C01_readVersionResource",
+        "C02_startProcess",
+        "C03_claim",
+        "C03_release",
+        "C03_transfer",
+        "C03_delegate",
+        "C15_read",
+        "C15_remind",
+        "C15_withdraw",
+        "C15_appendWorkMessage",
+        "C15_saveMessageDraft"
+      ],
+      "dataTables": [
+        "oa_work_item",
+        "oa_human_task"
+      ],
+      "originalCaseIds": [
+        "AC-01",
+        "AC-02",
+        "AC-03",
+        "AC-04",
+        "AC-07",
+        "AC-51",
+        "AC-57"
+      ],
+      "normativeAcceptance": "从任务卡可完成配置、执行、检查和提交；全程保持同一业务任务关联",
+      "negative": "他人任务不得混入本人列表",
+      "specRef": "docs/设计包/47-全产品实施切片与首期开发规格.md#sl-wd",
+      "uiRef": "docs/设计包/52-UI实现与页面状态规格.md",
+      "contractRef": "contracts/openapi.json",
+      "implementationStatus": "NOT_IMPLEMENTED",
+      "mappingLevel": "REQUIREMENT_TO_DOMAIN_SLICE_AND_TYPED_ACTIONS_NOT_CODE_LINE_TRACE"
+    },
+    {
+      "requirementId": "WD-03",
+      "domain": "WD",
+      "sliceId": "SL-WD",
+      "pageIds": [
+        "P01",
+        "P02"
+      ],
+      "commandIds": [
+        "C01",
+        "C02",
+        "C03",
+        "C15"
+      ],
+      "operationIds": [
+        "C01_listInbox",
+        "C01_getWork",
+        "C01_readVersionResource",
+        "C02_startProcess",
+        "C03_claim",
+        "C03_release",
+        "C03_transfer",
+        "C03_delegate",
+        "C15_read",
+        "C15_remind",
+        "C15_withdraw",
+        "C15_appendWorkMessage",
+        "C15_saveMessageDraft"
+      ],
+      "dataTables": [
+        "oa_work_item",
+        "oa_human_task"
+      ],
+      "originalCaseIds": [
+        "AC-01",
+        "AC-02",
+        "AC-03",
+        "AC-04",
+        "AC-07",
+        "AC-51",
+        "AC-57"
+      ],
+      "normativeAcceptance": "每个状态对应权威记录；同一任务在切换视图后状态一致，无重复计数",
+      "negative": "他人任务不得混入本人列表",
+      "specRef": "docs/设计包/47-全产品实施切片与首期开发规格.md#sl-wd",
+      "uiRef": "docs/设计包/52-UI实现与页面状态规格.md",
+      "contractRef": "contracts/openapi.json",
+      "implementationStatus": "NOT_IMPLEMENTED",
+      "mappingLevel": "REQUIREMENT_TO_DOMAIN_SLICE_AND_TYPED_ACTIONS_NOT_CODE_LINE_TRACE"
+    },
+    {
+      "requirementId": "WD-04",
+      "domain": "WD",
+      "sliceId": "SL-WD",
+      "pageIds": [
+        "P01",
+        "P02"
+      ],
+      "commandIds": [
+        "C01",
+        "C02",
+        "C03",
+        "C15"
+      ],
+      "operationIds": [
+        "C01_listInbox",
+        "C01_getWork",
+        "C01_readVersionResource",
+        "C02_startProcess",
+        "C03_claim",
+        "C03_release",
+        "C03_transfer",
+        "C03_delegate",
+        "C15_read",
+        "C15_remind",
+        "C15_withdraw",
+        "C15_appendWorkMessage",
+        "C15_saveMessageDraft"
+      ],
+      "dataTables": [
+        "oa_work_item",
+        "oa_human_task"
+      ],
+      "originalCaseIds": [
+        "AC-01",
+        "AC-02",
+        "AC-03",
+        "AC-04",
+        "AC-07",
+        "AC-51",
+        "AC-57"
+      ],
+      "normativeAcceptance": "用户无需打开流程后台即可回答“做什么、为什么是我、交给谁”",
+      "negative": "他人任务不得混入本人列表",
+      "specRef": "docs/设计包/47-全产品实施切片与首期开发规格.md#sl-wd",
+      "uiRef": "docs/设计包/52-UI实现与页面状态规格.md",
+      "contractRef": "contracts/openapi.json",
+      "implementationStatus": "NOT_IMPLEMENTED",
+      "mappingLevel": "REQUIREMENT_TO_DOMAIN_SLICE_AND_TYPED_ACTIONS_NOT_CODE_LINE_TRACE"
+    },
+    {
+      "requirementId": "WD-05",
+      "domain": "WD",
+      "sliceId": "SL-WD",
+      "pageIds": [
+        "P01",
+        "P02"
+      ],
+      "commandIds": [
+        "C01",
+        "C02",
+        "C03",
+        "C15"
+      ],
+      "operationIds": [
+        "C01_listInbox",
+        "C01_getWork",
+        "C01_readVersionResource",
+        "C02_startProcess",
+        "C03_claim",
+        "C03_release",
+        "C03_transfer",
+        "C03_delegate",
+        "C15_read",
+        "C15_remind",
+        "C15_withdraw",
+        "C15_appendWorkMessage",
+        "C15_saveMessageDraft"
+      ],
+      "dataTables": [
+        "oa_work_item",
+        "oa_human_task"
+      ],
+      "originalCaseIds": [
+        "AC-01",
+        "AC-02",
+        "AC-03",
+        "AC-04",
+        "AC-07",
+        "AC-51",
+        "AC-57"
+      ],
+      "normativeAcceptance": "普通员工仅查询可见集合；筛选与返回导航保留，不暴露全租户总数",
+      "negative": "他人任务不得混入本人列表",
+      "specRef": "docs/设计包/47-全产品实施切片与首期开发规格.md#sl-wd",
+      "uiRef": "docs/设计包/52-UI实现与页面状态规格.md",
+      "contractRef": "contracts/openapi.json",
+      "implementationStatus": "NOT_IMPLEMENTED",
+      "mappingLevel": "REQUIREMENT_TO_DOMAIN_SLICE_AND_TYPED_ACTIONS_NOT_CODE_LINE_TRACE"
+    },
+    {
+      "requirementId": "WD-06",
+      "domain": "WD",
+      "sliceId": "SL-WD",
+      "pageIds": [
+        "P01",
+        "P02"
+      ],
+      "commandIds": [
+        "C01",
+        "C02",
+        "C03",
+        "C15"
+      ],
+      "operationIds": [
+        "C01_listInbox",
+        "C01_getWork",
+        "C01_readVersionResource",
+        "C02_startProcess",
+        "C03_claim",
+        "C03_release",
+        "C03_transfer",
+        "C03_delegate",
+        "C15_read",
+        "C15_remind",
+        "C15_withdraw",
+        "C15_appendWorkMessage",
+        "C15_saveMessageDraft"
+      ],
+      "dataTables": [
+        "oa_work_item",
+        "oa_human_task"
+      ],
+      "originalCaseIds": [
+        "AC-01",
+        "AC-02",
+        "AC-03",
+        "AC-04",
+        "AC-07",
+        "AC-51",
+        "AC-57"
+      ],
+      "normativeAcceptance": "通知能直接定位任务内待处理项；已解决项自动消失并保留处理历史",
+      "negative": "他人任务不得混入本人列表",
+      "specRef": "docs/设计包/47-全产品实施切片与首期开发规格.md#sl-wd",
+      "uiRef": "docs/设计包/52-UI实现与页面状态规格.md",
+      "contractRef": "contracts/openapi.json",
+      "implementationStatus": "NOT_IMPLEMENTED",
+      "mappingLevel": "REQUIREMENT_TO_DOMAIN_SLICE_AND_TYPED_ACTIONS_NOT_CODE_LINE_TRACE"
+    },
+    {
+      "requirementId": "HR-01",
+      "domain": "HR",
+      "sliceId": "SL-HR",
+      "pageIds": [
+        "P02",
+        "P03",
+        "P18"
+      ],
+      "commandIds": [
+        "C03",
+        "C08",
+        "C24"
+      ],
+      "operationIds": [
+        "C03_claim",
+        "C03_release",
+        "C03_transfer",
+        "C03_delegate",
+        "C08_request",
+        "C08_accept",
+        "C08_decline",
+        "C24_identity",
+        "C24_grant",
+        "C24_revoke",
+        "C24_transfer",
+        "C24_privacy"
+      ],
+      "dataTables": [
+        "oa_human_task",
+        "oa_collaboration"
+      ],
+      "originalCaseIds": [
+        "AC-03",
+        "AC-06",
+        "AC-07",
+        "AC-08",
+        "AC-46",
+        "AC-47"
+      ],
+      "normativeAcceptance": "同一实例能查到各角色与解析来源；模板岗位变更不覆写已发生责任记录",
+      "negative": "转派后的旧执行权必须失效",
+      "specRef": "docs/设计包/47-全产品实施切片与首期开发规格.md#sl-hr",
+      "uiRef": "docs/设计包/52-UI实现与页面状态规格.md",
+      "contractRef": "contracts/openapi.json",
+      "implementationStatus": "NOT_IMPLEMENTED",
+      "mappingLevel": "REQUIREMENT_TO_DOMAIN_SLICE_AND_TYPED_ACTIONS_NOT_CODE_LINE_TRACE"
+    },
+    {
+      "requirementId": "HR-02",
+      "domain": "HR",
+      "sliceId": "SL-HR",
+      "pageIds": [
+        "P02",
+        "P03",
+        "P18"
+      ],
+      "commandIds": [
+        "C03",
+        "C08",
+        "C24"
+      ],
+      "operationIds": [
+        "C03_claim",
+        "C03_release",
+        "C03_transfer",
+        "C03_delegate",
+        "C08_request",
+        "C08_accept",
+        "C08_decline",
+        "C24_identity",
+        "C24_grant",
+        "C24_revoke",
+        "C24_transfer",
+        "C24_privacy"
+      ],
+      "dataTables": [
+        "oa_human_task",
+        "oa_collaboration"
+      ],
+      "originalCaseIds": [
+        "AC-03",
+        "AC-06",
+        "AC-07",
+        "AC-08",
+        "AC-46",
+        "AC-47"
+      ],
+      "normativeAcceptance": "两人同时领取只有一人成功；失败者看到最新归属；转派后旧执行权失效",
+      "negative": "转派后的旧执行权必须失效",
+      "specRef": "docs/设计包/47-全产品实施切片与首期开发规格.md#sl-hr",
+      "uiRef": "docs/设计包/52-UI实现与页面状态规格.md",
+      "contractRef": "contracts/openapi.json",
+      "implementationStatus": "NOT_IMPLEMENTED",
+      "mappingLevel": "REQUIREMENT_TO_DOMAIN_SLICE_AND_TYPED_ACTIONS_NOT_CODE_LINE_TRACE"
+    },
+    {
+      "requirementId": "HR-03",
+      "domain": "HR",
+      "sliceId": "SL-HR",
+      "pageIds": [
+        "P02",
+        "P03",
+        "P18"
+      ],
+      "commandIds": [
+        "C03",
+        "C08",
+        "C24"
+      ],
+      "operationIds": [
+        "C03_claim",
+        "C03_release",
+        "C03_transfer",
+        "C03_delegate",
+        "C08_request",
+        "C08_accept",
+        "C08_decline",
+        "C24_identity",
+        "C24_grant",
+        "C24_revoke",
+        "C24_transfer",
+        "C24_privacy"
+      ],
+      "dataTables": [
+        "oa_human_task",
+        "oa_collaboration"
+      ],
+      "originalCaseIds": [
+        "AC-03",
+        "AC-06",
+        "AC-07",
+        "AC-08",
+        "AC-46",
+        "AC-47"
+      ],
+      "normativeAcceptance": "无合格人员时产生明确异常任务；不悄悄分给无权限人员",
+      "negative": "转派后的旧执行权必须失效",
+      "specRef": "docs/设计包/47-全产品实施切片与首期开发规格.md#sl-hr",
+      "uiRef": "docs/设计包/52-UI实现与页面状态规格.md",
+      "contractRef": "contracts/openapi.json",
+      "implementationStatus": "NOT_IMPLEMENTED",
+      "mappingLevel": "REQUIREMENT_TO_DOMAIN_SLICE_AND_TYPED_ACTIONS_NOT_CODE_LINE_TRACE"
+    },
+    {
+      "requirementId": "HR-04",
+      "domain": "HR",
+      "sliceId": "SL-HR",
+      "pageIds": [
+        "P02",
+        "P03",
+        "P18"
+      ],
+      "commandIds": [
+        "C03",
+        "C08",
+        "C24"
+      ],
+      "operationIds": [
+        "C03_claim",
+        "C03_release",
+        "C03_transfer",
+        "C03_delegate",
+        "C08_request",
+        "C08_accept",
+        "C08_decline",
+        "C24_identity",
+        "C24_grant",
+        "C24_revoke",
+        "C24_transfer",
+        "C24_privacy"
+      ],
+      "dataTables": [
+        "oa_human_task",
+        "oa_collaboration"
+      ],
+      "originalCaseIds": [
+        "AC-03",
+        "AC-06",
+        "AC-07",
+        "AC-08",
+        "AC-46",
+        "AC-47"
+      ],
+      "normativeAcceptance": "专家给意见不自动批准；节点执行人不能借“确认完成”替代独立审批",
+      "negative": "转派后的旧执行权必须失效",
+      "specRef": "docs/设计包/47-全产品实施切片与首期开发规格.md#sl-hr",
+      "uiRef": "docs/设计包/52-UI实现与页面状态规格.md",
+      "contractRef": "contracts/openapi.json",
+      "implementationStatus": "NOT_IMPLEMENTED",
+      "mappingLevel": "REQUIREMENT_TO_DOMAIN_SLICE_AND_TYPED_ACTIONS_NOT_CODE_LINE_TRACE"
+    },
+    {
+      "requirementId": "HR-05",
+      "domain": "HR",
+      "sliceId": "SL-HR",
+      "pageIds": [
+        "P02",
+        "P03",
+        "P18"
+      ],
+      "commandIds": [
+        "C03",
+        "C08",
+        "C24"
+      ],
+      "operationIds": [
+        "C03_claim",
+        "C03_release",
+        "C03_transfer",
+        "C03_delegate",
+        "C08_request",
+        "C08_accept",
+        "C08_decline",
+        "C24_identity",
+        "C24_grant",
+        "C24_revoke",
+        "C24_transfer",
+        "C24_privacy"
+      ],
+      "dataTables": [
+        "oa_human_task",
+        "oa_collaboration"
+      ],
+      "originalCaseIds": [
+        "AC-03",
+        "AC-06",
+        "AC-07",
+        "AC-08",
+        "AC-46",
+        "AC-47"
+      ],
+      "normativeAcceptance": "每次处理保留理由、接收人、期限与结果；返回原节点继续而非丢失上下文",
+      "negative": "转派后的旧执行权必须失效",
+      "specRef": "docs/设计包/47-全产品实施切片与首期开发规格.md#sl-hr",
+      "uiRef": "docs/设计包/52-UI实现与页面状态规格.md",
+      "contractRef": "contracts/openapi.json",
+      "implementationStatus": "NOT_IMPLEMENTED",
+      "mappingLevel": "REQUIREMENT_TO_DOMAIN_SLICE_AND_TYPED_ACTIONS_NOT_CODE_LINE_TRACE"
+    },
+    {
+      "requirementId": "HR-06",
+      "domain": "HR",
+      "sliceId": "SL-HR",
+      "pageIds": [
+        "P02",
+        "P03",
+        "P18"
+      ],
+      "commandIds": [
+        "C03",
+        "C08",
+        "C24"
+      ],
+      "operationIds": [
+        "C03_claim",
+        "C03_release",
+        "C03_transfer",
+        "C03_delegate",
+        "C08_request",
+        "C08_accept",
+        "C08_decline",
+        "C24_identity",
+        "C24_grant",
+        "C24_revoke",
+        "C24_transfer",
+        "C24_privacy"
+      ],
+      "dataTables": [
+        "oa_human_task",
+        "oa_collaboration"
+      ],
+      "originalCaseIds": [
+        "AC-03",
+        "AC-06",
+        "AC-07",
+        "AC-08",
+        "AC-46",
+        "AC-47"
+      ],
+      "normativeAcceptance": "未完成任务有接收人；旧会话/授权不能继续写；个人私有材料按范围处理",
+      "negative": "转派后的旧执行权必须失效",
+      "specRef": "docs/设计包/47-全产品实施切片与首期开发规格.md#sl-hr",
+      "uiRef": "docs/设计包/52-UI实现与页面状态规格.md",
+      "contractRef": "contracts/openapi.json",
+      "implementationStatus": "NOT_IMPLEMENTED",
+      "mappingLevel": "REQUIREMENT_TO_DOMAIN_SLICE_AND_TYPED_ACTIONS_NOT_CODE_LINE_TRACE"
+    },
+    {
+      "requirementId": "NC-01",
+      "domain": "NC",
+      "sliceId": "SL-NC",
+      "pageIds": [
+        "P04"
+      ],
+      "commandIds": [
+        "C04",
+        "C05",
+        "C06",
+        "C07"
+      ],
+      "operationIds": [
+        "C04_saveDraft",
+        "C04_saveTaskBinding",
+        "C05_previewContext",
+        "C05_eligibleResources",
+        "C06_startAttempt",
+        "C07_pause",
+        "C07_resume",
+        "C07_cancel"
+      ],
+      "dataTables": [
+        "oa_binding",
+        "oa_binding_version"
+      ],
+      "originalCaseIds": [
+        "AC-09",
+        "AC-10",
+        "AC-11",
+        "AC-12",
+        "AC-59"
+      ],
+      "normativeAcceptance": "保存后重开节点配置仍在；真实执行读取相同版本，不只显示摘要",
+      "negative": "个人偏好不得覆盖节点必需能力",
+      "specRef": "docs/设计包/47-全产品实施切片与首期开发规格.md#sl-nc",
+      "uiRef": "docs/设计包/52-UI实现与页面状态规格.md",
+      "contractRef": "contracts/openapi.json",
+      "implementationStatus": "NOT_IMPLEMENTED",
+      "mappingLevel": "REQUIREMENT_TO_DOMAIN_SLICE_AND_TYPED_ACTIONS_NOT_CODE_LINE_TRACE"
+    },
+    {
+      "requirementId": "NC-02",
+      "domain": "NC",
+      "sliceId": "SL-NC",
+      "pageIds": [
+        "P04",
+        "P22"
+      ],
+      "commandIds": [
+        "C04",
+        "C05",
+        "C06",
+        "C07"
+      ],
+      "operationIds": [
+        "C04_saveDraft",
+        "C04_saveTaskBinding",
+        "C05_previewContext",
+        "C05_eligibleResources",
+        "C06_startAttempt",
+        "C07_pause",
+        "C07_resume",
+        "C07_cancel"
+      ],
+      "dataTables": [
+        "oa_binding",
+        "oa_binding_version"
+      ],
+      "originalCaseIds": [
+        "AC-09",
+        "AC-10",
+        "AC-11",
+        "AC-12",
+        "AC-59"
+      ],
+      "normativeAcceptance": "可搜索可见候选，显示名称/用途/可用状态；普通用户无需知道内部 ID",
+      "negative": "个人偏好不得覆盖节点必需能力",
+      "specRef": "docs/设计包/47-全产品实施切片与首期开发规格.md#sl-nc",
+      "uiRef": "docs/设计包/52-UI实现与页面状态规格.md",
+      "contractRef": "contracts/openapi.json",
+      "implementationStatus": "NOT_IMPLEMENTED",
+      "mappingLevel": "REQUIREMENT_TO_DOMAIN_SLICE_AND_TYPED_ACTIONS_NOT_CODE_LINE_TRACE"
+    },
+    {
+      "requirementId": "NC-03",
+      "domain": "NC",
+      "sliceId": "SL-NC",
+      "pageIds": [
+        "P04",
+        "P22"
+      ],
+      "commandIds": [
+        "C04",
+        "C05",
+        "C06",
+        "C07"
+      ],
+      "operationIds": [
+        "C04_saveDraft",
+        "C04_saveTaskBinding",
+        "C05_previewContext",
+        "C05_eligibleResources",
+        "C06_startAttempt",
+        "C07_pause",
+        "C07_resume",
+        "C07_cancel"
+      ],
+      "dataTables": [
+        "oa_binding",
+        "oa_binding_version"
+      ],
+      "originalCaseIds": [
+        "AC-09",
+        "AC-10",
+        "AC-11",
+        "AC-12",
+        "AC-59"
+      ],
+      "normativeAcceptance": "选择自己的 Agent 可完成任务；所有候选均通过节点资格和当前用户权限校验",
+      "negative": "个人偏好不得覆盖节点必需能力",
+      "specRef": "docs/设计包/47-全产品实施切片与首期开发规格.md#sl-nc",
+      "uiRef": "docs/设计包/52-UI实现与页面状态规格.md",
+      "contractRef": "contracts/openapi.json",
+      "implementationStatus": "NOT_IMPLEMENTED",
+      "mappingLevel": "REQUIREMENT_TO_DOMAIN_SLICE_AND_TYPED_ACTIONS_NOT_CODE_LINE_TRACE"
+    },
+    {
+      "requirementId": "NC-04",
+      "domain": "NC",
+      "sliceId": "SL-NC",
+      "pageIds": [
+        "P04",
+        "P22"
+      ],
+      "commandIds": [
+        "C04",
+        "C05",
+        "C06",
+        "C07"
+      ],
+      "operationIds": [
+        "C04_saveDraft",
+        "C04_saveTaskBinding",
+        "C05_previewContext",
+        "C05_eligibleResources",
+        "C06_startAttempt",
+        "C07_pause",
+        "C07_resume",
+        "C07_cancel"
+      ],
+      "dataTables": [
+        "oa_binding",
+        "oa_binding_version"
+      ],
+      "originalCaseIds": [
+        "AC-09",
+        "AC-10",
+        "AC-11",
+        "AC-12",
+        "AC-59"
+      ],
+      "normativeAcceptance": "已授权替换可直接执行；不满足要求时显示可理解的缺项与下一步",
+      "negative": "个人偏好不得覆盖节点必需能力",
+      "specRef": "docs/设计包/47-全产品实施切片与首期开发规格.md#sl-nc",
+      "uiRef": "docs/设计包/52-UI实现与页面状态规格.md",
+      "contractRef": "contracts/openapi.json",
+      "implementationStatus": "NOT_IMPLEMENTED",
+      "mappingLevel": "REQUIREMENT_TO_DOMAIN_SLICE_AND_TYPED_ACTIONS_NOT_CODE_LINE_TRACE"
+    },
+    {
+      "requirementId": "NC-05",
+      "domain": "NC",
+      "sliceId": "SL-NC",
+      "pageIds": [
+        "P04"
+      ],
+      "commandIds": [
+        "C04",
+        "C05",
+        "C06",
+        "C07"
+      ],
+      "operationIds": [
+        "C04_saveDraft",
+        "C04_saveTaskBinding",
+        "C05_previewContext",
+        "C05_eligibleResources",
+        "C06_startAttempt",
+        "C07_pause",
+        "C07_resume",
+        "C07_cancel"
+      ],
+      "dataTables": [
+        "oa_binding",
+        "oa_binding_version"
+      ],
+      "originalCaseIds": [
+        "AC-09",
+        "AC-10",
+        "AC-11",
+        "AC-12",
+        "AC-59"
+      ],
+      "normativeAcceptance": "本次替换不改变别人或其他节点；个人偏好重用时重新做资格校验",
+      "negative": "个人偏好不得覆盖节点必需能力",
+      "specRef": "docs/设计包/47-全产品实施切片与首期开发规格.md#sl-nc",
+      "uiRef": "docs/设计包/52-UI实现与页面状态规格.md",
+      "contractRef": "contracts/openapi.json",
+      "implementationStatus": "NOT_IMPLEMENTED",
+      "mappingLevel": "REQUIREMENT_TO_DOMAIN_SLICE_AND_TYPED_ACTIONS_NOT_CODE_LINE_TRACE"
+    },
+    {
+      "requirementId": "NC-06",
+      "domain": "NC",
+      "sliceId": "SL-NC",
+      "pageIds": [
+        "P04"
+      ],
+      "commandIds": [
+        "C04",
+        "C05",
+        "C06",
+        "C07"
+      ],
+      "operationIds": [
+        "C04_saveDraft",
+        "C04_saveTaskBinding",
+        "C05_previewContext",
+        "C05_eligibleResources",
+        "C06_startAttempt",
+        "C07_pause",
+        "C07_resume",
+        "C07_cancel"
+      ],
+      "dataTables": [
+        "oa_binding",
+        "oa_binding_version"
+      ],
+      "originalCaseIds": [
+        "AC-09",
+        "AC-10",
+        "AC-11",
+        "AC-12",
+        "AC-59"
+      ],
+      "normativeAcceptance": "人工模式仍能提交交付物；协助模式由人确认；自动模式遵守既定风险合同",
+      "negative": "个人偏好不得覆盖节点必需能力",
+      "specRef": "docs/设计包/47-全产品实施切片与首期开发规格.md#sl-nc",
+      "uiRef": "docs/设计包/52-UI实现与页面状态规格.md",
+      "contractRef": "contracts/openapi.json",
+      "implementationStatus": "NOT_IMPLEMENTED",
+      "mappingLevel": "REQUIREMENT_TO_DOMAIN_SLICE_AND_TYPED_ACTIONS_NOT_CODE_LINE_TRACE"
+    },
+    {
+      "requirementId": "NC-07",
+      "domain": "NC",
+      "sliceId": "SL-NC",
+      "pageIds": [
+        "P04",
+        "P22"
+      ],
+      "commandIds": [
+        "C04",
+        "C05",
+        "C06",
+        "C07"
+      ],
+      "operationIds": [
+        "C04_saveDraft",
+        "C04_saveTaskBinding",
+        "C05_previewContext",
+        "C05_eligibleResources",
+        "C06_startAttempt",
+        "C07_pause",
+        "C07_resume",
+        "C07_cancel"
+      ],
+      "dataTables": [
+        "oa_binding",
+        "oa_binding_version"
+      ],
+      "originalCaseIds": [
+        "AC-09",
+        "AC-10",
+        "AC-11",
+        "AC-12",
+        "AC-59"
+      ],
+      "normativeAcceptance": "数据库关联可回读；重启仍有效；执行证据能证明实际使用的 Agent/技能/连接器版本",
+      "negative": "个人偏好不得覆盖节点必需能力",
+      "specRef": "docs/设计包/47-全产品实施切片与首期开发规格.md#sl-nc",
+      "uiRef": "docs/设计包/52-UI实现与页面状态规格.md",
+      "contractRef": "contracts/openapi.json",
+      "implementationStatus": "NOT_IMPLEMENTED",
+      "mappingLevel": "REQUIREMENT_TO_DOMAIN_SLICE_AND_TYPED_ACTIONS_NOT_CODE_LINE_TRACE"
+    },
+    {
+      "requirementId": "NC-08",
+      "domain": "NC",
+      "sliceId": "SL-NC",
+      "pageIds": [
+        "P04",
+        "P22"
+      ],
+      "commandIds": [
+        "C04",
+        "C05",
+        "C06",
+        "C07"
+      ],
+      "operationIds": [
+        "C04_saveDraft",
+        "C04_saveTaskBinding",
+        "C05_previewContext",
+        "C05_eligibleResources",
+        "C06_startAttempt",
+        "C07_pause",
+        "C07_resume",
+        "C07_cancel"
+      ],
+      "dataTables": [
+        "oa_binding",
+        "oa_binding_version"
+      ],
+      "originalCaseIds": [
+        "AC-09",
+        "AC-10",
+        "AC-11",
+        "AC-12",
+        "AC-59"
+      ],
+      "normativeAcceptance": "已运行结果可追溯旧配置；替换后旧尝试不可提交，新尝试从明确输入继续",
+      "negative": "个人偏好不得覆盖节点必需能力",
+      "specRef": "docs/设计包/47-全产品实施切片与首期开发规格.md#sl-nc",
+      "uiRef": "docs/设计包/52-UI实现与页面状态规格.md",
+      "contractRef": "contracts/openapi.json",
+      "implementationStatus": "NOT_IMPLEMENTED",
+      "mappingLevel": "REQUIREMENT_TO_DOMAIN_SLICE_AND_TYPED_ACTIONS_NOT_CODE_LINE_TRACE"
+    },
+    {
+      "requirementId": "AG-01",
+      "domain": "AG",
+      "sliceId": "SL-AG",
+      "pageIds": [
+        "P05"
+      ],
+      "commandIds": [
+        "C13",
+        "C17"
+      ],
+      "operationIds": [
+        "C13_listMarket",
+        "C13_adoptMarket",
+        "C17_draft",
+        "C17_test",
+        "C17_publish",
+        "C17_disable",
+        "C17_import",
+        "C17_export",
+        "C17_diff",
+        "C17_promote"
+      ],
+      "dataTables": [
+        "oa_asset_revision",
+        "oa_market_adoption"
+      ],
+      "originalCaseIds": [
+        "AC-24",
+        "AC-25",
+        "AC-27",
+        "AC-28",
+        "AC-29"
+      ],
+      "normativeAcceptance": "修改配置产生对应版本差异和摘要；版本读取、发布、执行所用内容一致",
+      "negative": "共享使用权不自动包含编辑权或私人凭据",
+      "specRef": "docs/设计包/47-全产品实施切片与首期开发规格.md#sl-ag",
+      "uiRef": "docs/设计包/52-UI实现与页面状态规格.md",
+      "contractRef": "contracts/openapi.json",
+      "implementationStatus": "NOT_IMPLEMENTED",
+      "mappingLevel": "REQUIREMENT_TO_DOMAIN_SLICE_AND_TYPED_ACTIONS_NOT_CODE_LINE_TRACE"
+    },
+    {
+      "requirementId": "AG-02",
+      "domain": "AG",
+      "sliceId": "SL-AG",
+      "pageIds": [
+        "P05",
+        "P22"
+      ],
+      "commandIds": [
+        "C13",
+        "C17"
+      ],
+      "operationIds": [
+        "C13_listMarket",
+        "C13_adoptMarket",
+        "C17_draft",
+        "C17_test",
+        "C17_publish",
+        "C17_disable",
+        "C17_import",
+        "C17_export",
+        "C17_diff",
+        "C17_promote"
+      ],
+      "dataTables": [
+        "oa_asset_revision",
+        "oa_market_adoption"
+      ],
+      "originalCaseIds": [
+        "AC-24",
+        "AC-25",
+        "AC-27",
+        "AC-28",
+        "AC-29"
+      ],
+      "normativeAcceptance": "可选择授权对象/范围并预览影响；只有已有权限允许的动作出现，服务端同样拒绝越权",
+      "negative": "共享使用权不自动包含编辑权或私人凭据",
+      "specRef": "docs/设计包/47-全产品实施切片与首期开发规格.md#sl-ag",
+      "uiRef": "docs/设计包/52-UI实现与页面状态规格.md",
+      "contractRef": "contracts/openapi.json",
+      "implementationStatus": "NOT_IMPLEMENTED",
+      "mappingLevel": "REQUIREMENT_TO_DOMAIN_SLICE_AND_TYPED_ACTIONS_NOT_CODE_LINE_TRACE"
+    },
+    {
+      "requirementId": "AG-03",
+      "domain": "AG",
+      "sliceId": "SL-AG",
+      "pageIds": [
+        "P05"
+      ],
+      "commandIds": [
+        "C13",
+        "C17"
+      ],
+      "operationIds": [
+        "C13_listMarket",
+        "C13_adoptMarket",
+        "C17_draft",
+        "C17_test",
+        "C17_publish",
+        "C17_disable",
+        "C17_import",
+        "C17_export",
+        "C17_diff",
+        "C17_promote"
+      ],
+      "dataTables": [
+        "oa_asset_revision",
+        "oa_market_adoption"
+      ],
+      "originalCaseIds": [
+        "AC-24",
+        "AC-25",
+        "AC-27",
+        "AC-28",
+        "AC-29"
+      ],
+      "normativeAcceptance": "能完成名称、职责、输入、交付、风格、边界配置，并试运行后保存",
+      "negative": "共享使用权不自动包含编辑权或私人凭据",
+      "specRef": "docs/设计包/47-全产品实施切片与首期开发规格.md#sl-ag",
+      "uiRef": "docs/设计包/52-UI实现与页面状态规格.md",
+      "contractRef": "contracts/openapi.json",
+      "implementationStatus": "NOT_IMPLEMENTED",
+      "mappingLevel": "REQUIREMENT_TO_DOMAIN_SLICE_AND_TYPED_ACTIONS_NOT_CODE_LINE_TRACE"
+    },
+    {
+      "requirementId": "AG-04",
+      "domain": "AG",
+      "sliceId": "SL-AG",
+      "pageIds": [
+        "P05",
+        "P22"
+      ],
+      "commandIds": [
+        "C13",
+        "C17"
+      ],
+      "operationIds": [
+        "C13_listMarket",
+        "C13_adoptMarket",
+        "C17_draft",
+        "C17_test",
+        "C17_publish",
+        "C17_disable",
+        "C17_import",
+        "C17_export",
+        "C17_diff",
+        "C17_promote"
+      ],
+      "dataTables": [
+        "oa_asset_revision",
+        "oa_market_adoption"
+      ],
+      "originalCaseIds": [
+        "AC-24",
+        "AC-25",
+        "AC-27",
+        "AC-28",
+        "AC-29"
+      ],
+      "normativeAcceptance": "每个标签来自同一 Agent；资源变化、版本与任务历史可以互相定位",
+      "negative": "共享使用权不自动包含编辑权或私人凭据",
+      "specRef": "docs/设计包/47-全产品实施切片与首期开发规格.md#sl-ag",
+      "uiRef": "docs/设计包/52-UI实现与页面状态规格.md",
+      "contractRef": "contracts/openapi.json",
+      "implementationStatus": "NOT_IMPLEMENTED",
+      "mappingLevel": "REQUIREMENT_TO_DOMAIN_SLICE_AND_TYPED_ACTIONS_NOT_CODE_LINE_TRACE"
+    },
+    {
+      "requirementId": "AG-05",
+      "domain": "AG",
+      "sliceId": "SL-AG",
+      "pageIds": [
+        "P05",
+        "P22"
+      ],
+      "commandIds": [
+        "C13",
+        "C17"
+      ],
+      "operationIds": [
+        "C13_listMarket",
+        "C13_adoptMarket",
+        "C17_draft",
+        "C17_test",
+        "C17_publish",
+        "C17_disable",
+        "C17_import",
+        "C17_export",
+        "C17_diff",
+        "C17_promote"
+      ],
+      "dataTables": [
+        "oa_asset_revision",
+        "oa_market_adoption"
+      ],
+      "originalCaseIds": [
+        "AC-24",
+        "AC-25",
+        "AC-27",
+        "AC-28",
+        "AC-29"
+      ],
+      "normativeAcceptance": "相同 Agent 不因多种关系重复；可用权限清楚，私有资产不被其他用户枚举",
+      "negative": "共享使用权不自动包含编辑权或私人凭据",
+      "specRef": "docs/设计包/47-全产品实施切片与首期开发规格.md#sl-ag",
+      "uiRef": "docs/设计包/52-UI实现与页面状态规格.md",
+      "contractRef": "contracts/openapi.json",
+      "implementationStatus": "NOT_IMPLEMENTED",
+      "mappingLevel": "REQUIREMENT_TO_DOMAIN_SLICE_AND_TYPED_ACTIONS_NOT_CODE_LINE_TRACE"
+    },
+    {
+      "requirementId": "AG-06",
+      "domain": "AG",
+      "sliceId": "SL-AG",
+      "pageIds": [
+        "P05",
+        "P22"
+      ],
+      "commandIds": [
+        "C13",
+        "C17"
+      ],
+      "operationIds": [
+        "C13_listMarket",
+        "C13_adoptMarket",
+        "C17_draft",
+        "C17_test",
+        "C17_publish",
+        "C17_disable",
+        "C17_import",
+        "C17_export",
+        "C17_diff",
+        "C17_promote"
+      ],
+      "dataTables": [
+        "oa_asset_revision",
+        "oa_market_adoption"
+      ],
+      "originalCaseIds": [
+        "AC-24",
+        "AC-25",
+        "AC-27",
+        "AC-28",
+        "AC-29"
+      ],
+      "normativeAcceptance": "草稿作者能回到草稿继续；停用有依赖影响，历史仍能还原原版本",
+      "negative": "共享使用权不自动包含编辑权或私人凭据",
+      "specRef": "docs/设计包/47-全产品实施切片与首期开发规格.md#sl-ag",
+      "uiRef": "docs/设计包/52-UI实现与页面状态规格.md",
+      "contractRef": "contracts/openapi.json",
+      "implementationStatus": "NOT_IMPLEMENTED",
+      "mappingLevel": "REQUIREMENT_TO_DOMAIN_SLICE_AND_TYPED_ACTIONS_NOT_CODE_LINE_TRACE"
+    },
+    {
+      "requirementId": "AG-07",
+      "domain": "AG",
+      "sliceId": "SL-AG",
+      "pageIds": [
+        "P05",
+        "P22"
+      ],
+      "commandIds": [
+        "C13",
+        "C17"
+      ],
+      "operationIds": [
+        "C13_listMarket",
+        "C13_adoptMarket",
+        "C17_draft",
+        "C17_test",
+        "C17_publish",
+        "C17_disable",
+        "C17_import",
+        "C17_export",
+        "C17_diff",
+        "C17_promote"
+      ],
+      "dataTables": [
+        "oa_asset_revision",
+        "oa_market_adoption"
+      ],
+      "originalCaseIds": [
+        "AC-24",
+        "AC-25",
+        "AC-27",
+        "AC-28",
+        "AC-29"
+      ],
+      "normativeAcceptance": "包不含个人凭据/隐私；导入先预览，缺依赖明确提示，升级不修改在途实例",
+      "negative": "共享使用权不自动包含编辑权或私人凭据",
+      "specRef": "docs/设计包/47-全产品实施切片与首期开发规格.md#sl-ag",
+      "uiRef": "docs/设计包/52-UI实现与页面状态规格.md",
+      "contractRef": "contracts/openapi.json",
+      "implementationStatus": "NOT_IMPLEMENTED",
+      "mappingLevel": "REQUIREMENT_TO_DOMAIN_SLICE_AND_TYPED_ACTIONS_NOT_CODE_LINE_TRACE"
+    },
+    {
+      "requirementId": "SK-01",
+      "domain": "SK",
+      "sliceId": "SL-SK",
+      "pageIds": [
+        "P06",
+        "P04",
+        "P22"
+      ],
+      "commandIds": [
+        "C05",
+        "C13",
+        "C17"
+      ],
+      "operationIds": [
+        "C05_previewContext",
+        "C05_eligibleResources",
+        "C13_listMarket",
+        "C13_adoptMarket",
+        "C17_draft",
+        "C17_test",
+        "C17_publish",
+        "C17_disable",
+        "C17_import",
+        "C17_export",
+        "C17_diff",
+        "C17_promote"
+      ],
+      "dataTables": [
+        "oa_asset_revision"
+      ],
+      "originalCaseIds": [
+        "AC-10",
+        "AC-26",
+        "AC-27",
+        "AC-29"
+      ],
+      "normativeAcceptance": "新建后可返回继续编辑；已发布版本能在合格节点被发现和选用",
+      "negative": "未经发布和批准的技能不得成为正式运行资源",
+      "specRef": "docs/设计包/47-全产品实施切片与首期开发规格.md#sl-sk",
+      "uiRef": "docs/设计包/52-UI实现与页面状态规格.md",
+      "contractRef": "contracts/openapi.json",
+      "implementationStatus": "NOT_IMPLEMENTED",
+      "mappingLevel": "REQUIREMENT_TO_DOMAIN_SLICE_AND_TYPED_ACTIONS_NOT_CODE_LINE_TRACE"
+    },
+    {
+      "requirementId": "SK-02",
+      "domain": "SK",
+      "sliceId": "SL-SK",
+      "pageIds": [
+        "P06",
+        "P04"
+      ],
+      "commandIds": [
+        "C05",
+        "C13",
+        "C17"
+      ],
+      "operationIds": [
+        "C05_previewContext",
+        "C05_eligibleResources",
+        "C13_listMarket",
+        "C13_adoptMarket",
+        "C17_draft",
+        "C17_test",
+        "C17_publish",
+        "C17_disable",
+        "C17_import",
+        "C17_export",
+        "C17_diff",
+        "C17_promote"
+      ],
+      "dataTables": [
+        "oa_asset_revision"
+      ],
+      "originalCaseIds": [
+        "AC-10",
+        "AC-26",
+        "AC-27",
+        "AC-29"
+      ],
+      "normativeAcceptance": "员工能据业务说明判断是否适用；不依赖阅读脚本或 Manifest",
+      "negative": "未经发布和批准的技能不得成为正式运行资源",
+      "specRef": "docs/设计包/47-全产品实施切片与首期开发规格.md#sl-sk",
+      "uiRef": "docs/设计包/52-UI实现与页面状态规格.md",
+      "contractRef": "contracts/openapi.json",
+      "implementationStatus": "NOT_IMPLEMENTED",
+      "mappingLevel": "REQUIREMENT_TO_DOMAIN_SLICE_AND_TYPED_ACTIONS_NOT_CODE_LINE_TRACE"
+    },
+    {
+      "requirementId": "SK-03",
+      "domain": "SK",
+      "sliceId": "SL-SK",
+      "pageIds": [
+        "P06",
+        "P04",
+        "P22"
+      ],
+      "commandIds": [
+        "C05",
+        "C13",
+        "C17"
+      ],
+      "operationIds": [
+        "C05_previewContext",
+        "C05_eligibleResources",
+        "C13_listMarket",
+        "C13_adoptMarket",
+        "C17_draft",
+        "C17_test",
+        "C17_publish",
+        "C17_disable",
+        "C17_import",
+        "C17_export",
+        "C17_diff",
+        "C17_promote"
+      ],
+      "dataTables": [
+        "oa_asset_revision"
+      ],
+      "originalCaseIds": [
+        "AC-10",
+        "AC-26",
+        "AC-27",
+        "AC-29"
+      ],
+      "normativeAcceptance": "缺依赖/参数错误在执行前发现；有效参数实际传到技能调用",
+      "negative": "未经发布和批准的技能不得成为正式运行资源",
+      "specRef": "docs/设计包/47-全产品实施切片与首期开发规格.md#sl-sk",
+      "uiRef": "docs/设计包/52-UI实现与页面状态规格.md",
+      "contractRef": "contracts/openapi.json",
+      "implementationStatus": "NOT_IMPLEMENTED",
+      "mappingLevel": "REQUIREMENT_TO_DOMAIN_SLICE_AND_TYPED_ACTIONS_NOT_CODE_LINE_TRACE"
+    },
+    {
+      "requirementId": "SK-04",
+      "domain": "SK",
+      "sliceId": "SL-SK",
+      "pageIds": [
+        "P06",
+        "P04",
+        "P22"
+      ],
+      "commandIds": [
+        "C05",
+        "C13",
+        "C17"
+      ],
+      "operationIds": [
+        "C05_previewContext",
+        "C05_eligibleResources",
+        "C13_listMarket",
+        "C13_adoptMarket",
+        "C17_draft",
+        "C17_test",
+        "C17_publish",
+        "C17_disable",
+        "C17_import",
+        "C17_export",
+        "C17_diff",
+        "C17_promote"
+      ],
+      "dataTables": [
+        "oa_asset_revision"
+      ],
+      "originalCaseIds": [
+        "AC-10",
+        "AC-26",
+        "AC-27",
+        "AC-29"
+      ],
+      "normativeAcceptance": "解析错误可定位；导入不立即执行；发布版本有对应测试和内容摘要",
+      "negative": "未经发布和批准的技能不得成为正式运行资源",
+      "specRef": "docs/设计包/47-全产品实施切片与首期开发规格.md#sl-sk",
+      "uiRef": "docs/设计包/52-UI实现与页面状态规格.md",
+      "contractRef": "contracts/openapi.json",
+      "implementationStatus": "NOT_IMPLEMENTED",
+      "mappingLevel": "REQUIREMENT_TO_DOMAIN_SLICE_AND_TYPED_ACTIONS_NOT_CODE_LINE_TRACE"
+    },
+    {
+      "requirementId": "SK-05",
+      "domain": "SK",
+      "sliceId": "SL-SK",
+      "pageIds": [
+        "P06",
+        "P04"
+      ],
+      "commandIds": [
+        "C05",
+        "C13",
+        "C17"
+      ],
+      "operationIds": [
+        "C05_previewContext",
+        "C05_eligibleResources",
+        "C13_listMarket",
+        "C13_adoptMarket",
+        "C17_draft",
+        "C17_test",
+        "C17_publish",
+        "C17_disable",
+        "C17_import",
+        "C17_export",
+        "C17_diff",
+        "C17_promote"
+      ],
+      "dataTables": [
+        "oa_asset_revision"
+      ],
+      "originalCaseIds": [
+        "AC-10",
+        "AC-26",
+        "AC-27",
+        "AC-29"
+      ],
+      "normativeAcceptance": "试用输入与真实业务隔离；员工能比较结果，试用不擅自产生正式副作用",
+      "negative": "未经发布和批准的技能不得成为正式运行资源",
+      "specRef": "docs/设计包/47-全产品实施切片与首期开发规格.md#sl-sk",
+      "uiRef": "docs/设计包/52-UI实现与页面状态规格.md",
+      "contractRef": "contracts/openapi.json",
+      "implementationStatus": "NOT_IMPLEMENTED",
+      "mappingLevel": "REQUIREMENT_TO_DOMAIN_SLICE_AND_TYPED_ACTIONS_NOT_CODE_LINE_TRACE"
+    },
+    {
+      "requirementId": "SK-06",
+      "domain": "SK",
+      "sliceId": "SL-SK",
+      "pageIds": [
+        "P06",
+        "P04",
+        "P22"
+      ],
+      "commandIds": [
+        "C05",
+        "C13",
+        "C17"
+      ],
+      "operationIds": [
+        "C05_previewContext",
+        "C05_eligibleResources",
+        "C13_listMarket",
+        "C13_adoptMarket",
+        "C17_draft",
+        "C17_test",
+        "C17_publish",
+        "C17_disable",
+        "C17_import",
+        "C17_export",
+        "C17_diff",
+        "C17_promote"
+      ],
+      "dataTables": [
+        "oa_asset_revision"
+      ],
+      "originalCaseIds": [
+        "AC-10",
+        "AC-26",
+        "AC-27",
+        "AC-29"
+      ],
+      "normativeAcceptance": "受影响对象可定位；历史运行仍引用旧版；失效不被报告为已生效",
+      "negative": "未经发布和批准的技能不得成为正式运行资源",
+      "specRef": "docs/设计包/47-全产品实施切片与首期开发规格.md#sl-sk",
+      "uiRef": "docs/设计包/52-UI实现与页面状态规格.md",
+      "contractRef": "contracts/openapi.json",
+      "implementationStatus": "NOT_IMPLEMENTED",
+      "mappingLevel": "REQUIREMENT_TO_DOMAIN_SLICE_AND_TYPED_ACTIONS_NOT_CODE_LINE_TRACE"
+    },
+    {
+      "requirementId": "SK-07",
+      "domain": "SK",
+      "sliceId": "SL-SK",
+      "pageIds": [
+        "P06",
+        "P04"
+      ],
+      "commandIds": [
+        "C05",
+        "C13",
+        "C17"
+      ],
+      "operationIds": [
+        "C05_previewContext",
+        "C05_eligibleResources",
+        "C13_listMarket",
+        "C13_adoptMarket",
+        "C17_draft",
+        "C17_test",
+        "C17_publish",
+        "C17_disable",
+        "C17_import",
+        "C17_export",
+        "C17_diff",
+        "C17_promote"
+      ],
+      "dataTables": [
+        "oa_asset_revision"
+      ],
+      "originalCaseIds": [
+        "AC-10",
+        "AC-26",
+        "AC-27",
+        "AC-29"
+      ],
+      "normativeAcceptance": "指标能回溯到任务；安装量不冒充成功率；不因推荐扩大授权",
+      "negative": "未经发布和批准的技能不得成为正式运行资源",
+      "specRef": "docs/设计包/47-全产品实施切片与首期开发规格.md#sl-sk",
+      "uiRef": "docs/设计包/52-UI实现与页面状态规格.md",
+      "contractRef": "contracts/openapi.json",
+      "implementationStatus": "NOT_IMPLEMENTED",
+      "mappingLevel": "REQUIREMENT_TO_DOMAIN_SLICE_AND_TYPED_ACTIONS_NOT_CODE_LINE_TRACE"
+    },
+    {
+      "requirementId": "CN-01",
+      "domain": "CN",
+      "sliceId": "SL-CN",
+      "pageIds": [
+        "P07",
+        "P04"
+      ],
+      "commandIds": [
+        "C07",
+        "C14",
+        "C18"
+      ],
+      "operationIds": [
+        "C07_pause",
+        "C07_resume",
+        "C07_cancel",
+        "C14_queryOperation",
+        "C14_reconcile",
+        "C18_discover",
+        "C18_health",
+        "C18_authorize",
+        "C18_revoke"
+      ],
+      "dataTables": [
+        "oa_execution_grant",
+        "oa_invocation"
+      ],
+      "originalCaseIds": [
+        "AC-30",
+        "AC-31",
+        "AC-32",
+        "AC-38",
+        "AC-56"
+      ],
+      "normativeAcceptance": "绑定后查询可见且 Runtime 实际可用；解绑后未来调用被拒绝；重启保持一致",
+      "negative": "连接状态、授权、调用回执不得互相替代",
+      "specRef": "docs/设计包/47-全产品实施切片与首期开发规格.md#sl-cn",
+      "uiRef": "docs/设计包/52-UI实现与页面状态规格.md",
+      "contractRef": "contracts/openapi.json",
+      "implementationStatus": "NOT_IMPLEMENTED",
+      "mappingLevel": "REQUIREMENT_TO_DOMAIN_SLICE_AND_TYPED_ACTIONS_NOT_CODE_LINE_TRACE"
+    },
+    {
+      "requirementId": "CN-02",
+      "domain": "CN",
+      "sliceId": "SL-CN",
+      "pageIds": [
+        "P07",
+        "P04",
+        "P22"
+      ],
+      "commandIds": [
+        "C07",
+        "C14",
+        "C18"
+      ],
+      "operationIds": [
+        "C07_pause",
+        "C07_resume",
+        "C07_cancel",
+        "C14_queryOperation",
+        "C14_reconcile",
+        "C18_discover",
+        "C18_health",
+        "C18_authorize",
+        "C18_revoke"
+      ],
+      "dataTables": [
+        "oa_execution_grant",
+        "oa_invocation"
+      ],
+      "originalCaseIds": [
+        "AC-30",
+        "AC-31",
+        "AC-32",
+        "AC-38",
+        "AC-56"
+      ],
+      "normativeAcceptance": "每一状态有真实来源；“允许启用”不被展示成“已连接”；异常能定位到对应阶段",
+      "negative": "连接状态、授权、调用回执不得互相替代",
+      "specRef": "docs/设计包/47-全产品实施切片与首期开发规格.md#sl-cn",
+      "uiRef": "docs/设计包/52-UI实现与页面状态规格.md",
+      "contractRef": "contracts/openapi.json",
+      "implementationStatus": "NOT_IMPLEMENTED",
+      "mappingLevel": "REQUIREMENT_TO_DOMAIN_SLICE_AND_TYPED_ACTIONS_NOT_CODE_LINE_TRACE"
+    },
+    {
+      "requirementId": "CN-03",
+      "domain": "CN",
+      "sliceId": "SL-CN",
+      "pageIds": [
+        "P07",
+        "P04",
+        "P22"
+      ],
+      "commandIds": [
+        "C07",
+        "C14",
+        "C18"
+      ],
+      "operationIds": [
+        "C07_pause",
+        "C07_resume",
+        "C07_cancel",
+        "C14_queryOperation",
+        "C14_reconcile",
+        "C18_discover",
+        "C18_health",
+        "C18_authorize",
+        "C18_revoke"
+      ],
+      "dataTables": [
+        "oa_execution_grant",
+        "oa_invocation"
+      ],
+      "originalCaseIds": [
+        "AC-30",
+        "AC-31",
+        "AC-32",
+        "AC-38",
+        "AC-56"
+      ],
+      "normativeAcceptance": "完成一次授权范围内查询无需填写标识或协议字段；技术调试仍从管理端可达",
+      "negative": "连接状态、授权、调用回执不得互相替代",
+      "specRef": "docs/设计包/47-全产品实施切片与首期开发规格.md#sl-cn",
+      "uiRef": "docs/设计包/52-UI实现与页面状态规格.md",
+      "contractRef": "contracts/openapi.json",
+      "implementationStatus": "NOT_IMPLEMENTED",
+      "mappingLevel": "REQUIREMENT_TO_DOMAIN_SLICE_AND_TYPED_ACTIONS_NOT_CODE_LINE_TRACE"
+    },
+    {
+      "requirementId": "CN-04",
+      "domain": "CN",
+      "sliceId": "SL-CN",
+      "pageIds": [
+        "P07",
+        "P04",
+        "P22"
+      ],
+      "commandIds": [
+        "C07",
+        "C14",
+        "C18"
+      ],
+      "operationIds": [
+        "C07_pause",
+        "C07_resume",
+        "C07_cancel",
+        "C14_queryOperation",
+        "C14_reconcile",
+        "C18_discover",
+        "C18_health",
+        "C18_authorize",
+        "C18_revoke"
+      ],
+      "dataTables": [
+        "oa_execution_grant",
+        "oa_invocation"
+      ],
+      "originalCaseIds": [
+        "AC-30",
+        "AC-31",
+        "AC-32",
+        "AC-38",
+        "AC-56"
+      ],
+      "normativeAcceptance": "员工明确知道“以谁的账号执行”；分享 Agent 不附带分享原作者外部账号",
+      "negative": "连接状态、授权、调用回执不得互相替代",
+      "specRef": "docs/设计包/47-全产品实施切片与首期开发规格.md#sl-cn",
+      "uiRef": "docs/设计包/52-UI实现与页面状态规格.md",
+      "contractRef": "contracts/openapi.json",
+      "implementationStatus": "NOT_IMPLEMENTED",
+      "mappingLevel": "REQUIREMENT_TO_DOMAIN_SLICE_AND_TYPED_ACTIONS_NOT_CODE_LINE_TRACE"
+    },
+    {
+      "requirementId": "CN-05",
+      "domain": "CN",
+      "sliceId": "SL-CN",
+      "pageIds": [
+        "P07",
+        "P04",
+        "P22"
+      ],
+      "commandIds": [
+        "C07",
+        "C14",
+        "C18"
+      ],
+      "operationIds": [
+        "C07_pause",
+        "C07_resume",
+        "C07_cancel",
+        "C14_queryOperation",
+        "C14_reconcile",
+        "C18_discover",
+        "C18_health",
+        "C18_authorize",
+        "C18_revoke"
+      ],
+      "dataTables": [
+        "oa_execution_grant",
+        "oa_invocation"
+      ],
+      "originalCaseIds": [
+        "AC-30",
+        "AC-31",
+        "AC-32",
+        "AC-38",
+        "AC-56"
+      ],
+      "normativeAcceptance": "失效可修复后回到原任务；密钥不进入对话、导出或前端普通字段",
+      "negative": "连接状态、授权、调用回执不得互相替代",
+      "specRef": "docs/设计包/47-全产品实施切片与首期开发规格.md#sl-cn",
+      "uiRef": "docs/设计包/52-UI实现与页面状态规格.md",
+      "contractRef": "contracts/openapi.json",
+      "implementationStatus": "NOT_IMPLEMENTED",
+      "mappingLevel": "REQUIREMENT_TO_DOMAIN_SLICE_AND_TYPED_ACTIONS_NOT_CODE_LINE_TRACE"
+    },
+    {
+      "requirementId": "CN-06",
+      "domain": "CN",
+      "sliceId": "SL-CN",
+      "pageIds": [
+        "P07",
+        "P04"
+      ],
+      "commandIds": [
+        "C07",
+        "C14",
+        "C18"
+      ],
+      "operationIds": [
+        "C07_pause",
+        "C07_resume",
+        "C07_cancel",
+        "C14_queryOperation",
+        "C14_reconcile",
+        "C18_discover",
+        "C18_health",
+        "C18_authorize",
+        "C18_revoke"
+      ],
+      "dataTables": [
+        "oa_execution_grant",
+        "oa_invocation"
+      ],
+      "originalCaseIds": [
+        "AC-30",
+        "AC-31",
+        "AC-32",
+        "AC-38",
+        "AC-56"
+      ],
+      "normativeAcceptance": "显示实际发现的工具及参数；服务不可达/零工具/版本不兼容有不同处理",
+      "negative": "连接状态、授权、调用回执不得互相替代",
+      "specRef": "docs/设计包/47-全产品实施切片与首期开发规格.md#sl-cn",
+      "uiRef": "docs/设计包/52-UI实现与页面状态规格.md",
+      "contractRef": "contracts/openapi.json",
+      "implementationStatus": "NOT_IMPLEMENTED",
+      "mappingLevel": "REQUIREMENT_TO_DOMAIN_SLICE_AND_TYPED_ACTIONS_NOT_CODE_LINE_TRACE"
+    },
+    {
+      "requirementId": "CN-07",
+      "domain": "CN",
+      "sliceId": "SL-CN",
+      "pageIds": [
+        "P07",
+        "P04"
+      ],
+      "commandIds": [
+        "C07",
+        "C14",
+        "C18"
+      ],
+      "operationIds": [
+        "C07_pause",
+        "C07_resume",
+        "C07_cancel",
+        "C14_queryOperation",
+        "C14_reconcile",
+        "C18_discover",
+        "C18_health",
+        "C18_authorize",
+        "C18_revoke"
+      ],
+      "dataTables": [
+        "oa_execution_grant",
+        "oa_invocation"
+      ],
+      "originalCaseIds": [
+        "AC-30",
+        "AC-31",
+        "AC-32",
+        "AC-38",
+        "AC-56"
+      ],
+      "normativeAcceptance": "员工能确认目标网页/设备/目录；读写边界、当前任务和实际执行对象一致",
+      "negative": "连接状态、授权、调用回执不得互相替代",
+      "specRef": "docs/设计包/47-全产品实施切片与首期开发规格.md#sl-cn",
+      "uiRef": "docs/设计包/52-UI实现与页面状态规格.md",
+      "contractRef": "contracts/openapi.json",
+      "implementationStatus": "NOT_IMPLEMENTED",
+      "mappingLevel": "REQUIREMENT_TO_DOMAIN_SLICE_AND_TYPED_ACTIONS_NOT_CODE_LINE_TRACE"
+    },
+    {
+      "requirementId": "CN-08",
+      "domain": "CN",
+      "sliceId": "SL-CN",
+      "pageIds": [
+        "P07",
+        "P04",
+        "P22"
+      ],
+      "commandIds": [
+        "C07",
+        "C14",
+        "C18"
+      ],
+      "operationIds": [
+        "C07_pause",
+        "C07_resume",
+        "C07_cancel",
+        "C14_queryOperation",
+        "C14_reconcile",
+        "C18_discover",
+        "C18_health",
+        "C18_authorize",
+        "C18_revoke"
+      ],
+      "dataTables": [
+        "oa_execution_grant",
+        "oa_invocation"
+      ],
+      "originalCaseIds": [
+        "AC-30",
+        "AC-31",
+        "AC-32",
+        "AC-38",
+        "AC-56"
+      ],
+      "normativeAcceptance": "同一提交重试不重复创建外部对象；超时显示待确认，确认后可恢复任务",
+      "negative": "连接状态、授权、调用回执不得互相替代",
+      "specRef": "docs/设计包/47-全产品实施切片与首期开发规格.md#sl-cn",
+      "uiRef": "docs/设计包/52-UI实现与页面状态规格.md",
+      "contractRef": "contracts/openapi.json",
+      "implementationStatus": "NOT_IMPLEMENTED",
+      "mappingLevel": "REQUIREMENT_TO_DOMAIN_SLICE_AND_TYPED_ACTIONS_NOT_CODE_LINE_TRACE"
+    },
+    {
+      "requirementId": "CN-09",
+      "domain": "CN",
+      "sliceId": "SL-CN",
+      "pageIds": [
+        "P07",
+        "P04",
+        "P22"
+      ],
+      "commandIds": [
+        "C07",
+        "C14",
+        "C18"
+      ],
+      "operationIds": [
+        "C07_pause",
+        "C07_resume",
+        "C07_cancel",
+        "C14_queryOperation",
+        "C14_reconcile",
+        "C18_discover",
+        "C18_health",
+        "C18_authorize",
+        "C18_revoke"
+      ],
+      "dataTables": [
+        "oa_execution_grant",
+        "oa_invocation"
+      ],
+      "originalCaseIds": [
+        "AC-30",
+        "AC-31",
+        "AC-32",
+        "AC-38",
+        "AC-56"
+      ],
+      "normativeAcceptance": "每个宣称可用的连接器有独立实例调用证据；停止维护/撤回后依赖任务有替代方案",
+      "negative": "连接状态、授权、调用回执不得互相替代",
+      "specRef": "docs/设计包/47-全产品实施切片与首期开发规格.md#sl-cn",
+      "uiRef": "docs/设计包/52-UI实现与页面状态规格.md",
+      "contractRef": "contracts/openapi.json",
+      "implementationStatus": "NOT_IMPLEMENTED",
+      "mappingLevel": "REQUIREMENT_TO_DOMAIN_SLICE_AND_TYPED_ACTIONS_NOT_CODE_LINE_TRACE"
+    },
+    {
+      "requirementId": "KB-01",
+      "domain": "KB",
+      "sliceId": "SL-KB",
+      "pageIds": [
+        "P08",
+        "P20"
+      ],
+      "commandIds": [
+        "C05",
+        "C19"
+      ],
+      "operationIds": [
+        "C05_previewContext",
+        "C05_eligibleResources",
+        "C19_ingest",
+        "C19_process",
+        "C19_search",
+        "C19_publish",
+        "C19_reviseMemory"
+      ],
+      "dataTables": [
+        "oa_knowledge_job",
+        "oa_artifact_version"
+      ],
+      "originalCaseIds": [
+        "AC-16",
+        "AC-17",
+        "AC-33",
+        "AC-34"
+      ],
+      "normativeAcceptance": "作者可找到草稿；使用者只见被授权的可用知识；绑定 Agent 与共享给人分别生效",
+      "negative": "拥有索引不能绕过源文件读取权",
+      "specRef": "docs/设计包/47-全产品实施切片与首期开发规格.md#sl-kb",
+      "uiRef": "docs/设计包/52-UI实现与页面状态规格.md",
+      "contractRef": "contracts/openapi.json",
+      "implementationStatus": "NOT_IMPLEMENTED",
+      "mappingLevel": "REQUIREMENT_TO_DOMAIN_SLICE_AND_TYPED_ACTIONS_NOT_CODE_LINE_TRACE"
+    },
+    {
+      "requirementId": "KB-02",
+      "domain": "KB",
+      "sliceId": "SL-KB",
+      "pageIds": [
+        "P08",
+        "P20"
+      ],
+      "commandIds": [
+        "C05",
+        "C19"
+      ],
+      "operationIds": [
+        "C05_previewContext",
+        "C05_eligibleResources",
+        "C19_ingest",
+        "C19_process",
+        "C19_search",
+        "C19_publish",
+        "C19_reviseMemory"
+      ],
+      "dataTables": [
+        "oa_knowledge_job",
+        "oa_artifact_version"
+      ],
+      "originalCaseIds": [
+        "AC-16",
+        "AC-17",
+        "AC-33",
+        "AC-34"
+      ],
+      "normativeAcceptance": "上传成功与可检索分开显示；错误页/空页/失败文档不能显示可用于回答",
+      "negative": "拥有索引不能绕过源文件读取权",
+      "specRef": "docs/设计包/47-全产品实施切片与首期开发规格.md#sl-kb",
+      "uiRef": "docs/设计包/52-UI实现与页面状态规格.md",
+      "contractRef": "contracts/openapi.json",
+      "implementationStatus": "NOT_IMPLEMENTED",
+      "mappingLevel": "REQUIREMENT_TO_DOMAIN_SLICE_AND_TYPED_ACTIONS_NOT_CODE_LINE_TRACE"
+    },
+    {
+      "requirementId": "KB-03",
+      "domain": "KB",
+      "sliceId": "SL-KB",
+      "pageIds": [
+        "P08",
+        "P20"
+      ],
+      "commandIds": [
+        "C05",
+        "C19"
+      ],
+      "operationIds": [
+        "C05_previewContext",
+        "C05_eligibleResources",
+        "C19_ingest",
+        "C19_process",
+        "C19_search",
+        "C19_publish",
+        "C19_reviseMemory"
+      ],
+      "dataTables": [
+        "oa_knowledge_job",
+        "oa_artifact_version"
+      ],
+      "originalCaseIds": [
+        "AC-16",
+        "AC-17",
+        "AC-33",
+        "AC-34"
+      ],
+      "normativeAcceptance": "加工条目能回到原文；更新产生可追溯版本，失败可重试且不重复导入",
+      "negative": "拥有索引不能绕过源文件读取权",
+      "specRef": "docs/设计包/47-全产品实施切片与首期开发规格.md#sl-kb",
+      "uiRef": "docs/设计包/52-UI实现与页面状态规格.md",
+      "contractRef": "contracts/openapi.json",
+      "implementationStatus": "NOT_IMPLEMENTED",
+      "mappingLevel": "REQUIREMENT_TO_DOMAIN_SLICE_AND_TYPED_ACTIONS_NOT_CODE_LINE_TRACE"
+    },
+    {
+      "requirementId": "KB-04",
+      "domain": "KB",
+      "sliceId": "SL-KB",
+      "pageIds": [
+        "P08",
+        "P20"
+      ],
+      "commandIds": [
+        "C05",
+        "C19"
+      ],
+      "operationIds": [
+        "C05_previewContext",
+        "C05_eligibleResources",
+        "C19_ingest",
+        "C19_process",
+        "C19_search",
+        "C19_publish",
+        "C19_reviseMemory"
+      ],
+      "dataTables": [
+        "oa_knowledge_job",
+        "oa_artifact_version"
+      ],
+      "originalCaseIds": [
+        "AC-16",
+        "AC-17",
+        "AC-33",
+        "AC-34"
+      ],
+      "normativeAcceptance": "同义问题、无答案问题、更新后问题有固定评测集；报告真实召回与引用结果",
+      "negative": "拥有索引不能绕过源文件读取权",
+      "specRef": "docs/设计包/47-全产品实施切片与首期开发规格.md#sl-kb",
+      "uiRef": "docs/设计包/52-UI实现与页面状态规格.md",
+      "contractRef": "contracts/openapi.json",
+      "implementationStatus": "NOT_IMPLEMENTED",
+      "mappingLevel": "REQUIREMENT_TO_DOMAIN_SLICE_AND_TYPED_ACTIONS_NOT_CODE_LINE_TRACE"
+    },
+    {
+      "requirementId": "KB-05",
+      "domain": "KB",
+      "sliceId": "SL-KB",
+      "pageIds": [
+        "P08",
+        "P20"
+      ],
+      "commandIds": [
+        "C05",
+        "C19"
+      ],
+      "operationIds": [
+        "C05_previewContext",
+        "C05_eligibleResources",
+        "C19_ingest",
+        "C19_process",
+        "C19_search",
+        "C19_publish",
+        "C19_reviseMemory"
+      ],
+      "dataTables": [
+        "oa_knowledge_job",
+        "oa_artifact_version"
+      ],
+      "originalCaseIds": [
+        "AC-16",
+        "AC-17",
+        "AC-33",
+        "AC-34"
+      ],
+      "normativeAcceptance": "引用确实支持结论；用户失去原文权限后不能借引用继续读取",
+      "negative": "拥有索引不能绕过源文件读取权",
+      "specRef": "docs/设计包/47-全产品实施切片与首期开发规格.md#sl-kb",
+      "uiRef": "docs/设计包/52-UI实现与页面状态规格.md",
+      "contractRef": "contracts/openapi.json",
+      "implementationStatus": "NOT_IMPLEMENTED",
+      "mappingLevel": "REQUIREMENT_TO_DOMAIN_SLICE_AND_TYPED_ACTIONS_NOT_CODE_LINE_TRACE"
+    },
+    {
+      "requirementId": "KB-06",
+      "domain": "KB",
+      "sliceId": "SL-KB",
+      "pageIds": [
+        "P08",
+        "P20"
+      ],
+      "commandIds": [
+        "C05",
+        "C19"
+      ],
+      "operationIds": [
+        "C05_previewContext",
+        "C05_eligibleResources",
+        "C19_ingest",
+        "C19_process",
+        "C19_search",
+        "C19_publish",
+        "C19_reviseMemory"
+      ],
+      "dataTables": [
+        "oa_knowledge_job",
+        "oa_artifact_version"
+      ],
+      "originalCaseIds": [
+        "AC-16",
+        "AC-17",
+        "AC-33",
+        "AC-34"
+      ],
+      "normativeAcceptance": "必需版本无法误删；资料互相矛盾时提示来源与有效期，不静默混用",
+      "negative": "拥有索引不能绕过源文件读取权",
+      "specRef": "docs/设计包/47-全产品实施切片与首期开发规格.md#sl-kb",
+      "uiRef": "docs/设计包/52-UI实现与页面状态规格.md",
+      "contractRef": "contracts/openapi.json",
+      "implementationStatus": "NOT_IMPLEMENTED",
+      "mappingLevel": "REQUIREMENT_TO_DOMAIN_SLICE_AND_TYPED_ACTIONS_NOT_CODE_LINE_TRACE"
+    },
+    {
+      "requirementId": "KB-07",
+      "domain": "KB",
+      "sliceId": "SL-KB",
+      "pageIds": [
+        "P08",
+        "P20"
+      ],
+      "commandIds": [
+        "C05",
+        "C19"
+      ],
+      "operationIds": [
+        "C05_previewContext",
+        "C05_eligibleResources",
+        "C19_ingest",
+        "C19_process",
+        "C19_search",
+        "C19_publish",
+        "C19_reviseMemory"
+      ],
+      "dataTables": [
+        "oa_knowledge_job",
+        "oa_artifact_version"
+      ],
+      "originalCaseIds": [
+        "AC-16",
+        "AC-17",
+        "AC-33",
+        "AC-34"
+      ],
+      "normativeAcceptance": "能预览受影响范围；历史交付保留原引用事实，未来使用遵守当前授权",
+      "negative": "拥有索引不能绕过源文件读取权",
+      "specRef": "docs/设计包/47-全产品实施切片与首期开发规格.md#sl-kb",
+      "uiRef": "docs/设计包/52-UI实现与页面状态规格.md",
+      "contractRef": "contracts/openapi.json",
+      "implementationStatus": "NOT_IMPLEMENTED",
+      "mappingLevel": "REQUIREMENT_TO_DOMAIN_SLICE_AND_TYPED_ACTIONS_NOT_CODE_LINE_TRACE"
+    },
+    {
+      "requirementId": "MM-01",
+      "domain": "MM",
+      "sliceId": "SL-MM",
+      "pageIds": [
+        "P09",
+        "P20",
+        "P22"
+      ],
+      "commandIds": [
+        "C16",
+        "C19"
+      ],
+      "operationIds": [
+        "C16_propose",
+        "C16_confirm",
+        "C19_ingest",
+        "C19_process",
+        "C19_search",
+        "C19_publish",
+        "C19_reviseMemory"
+      ],
+      "dataTables": [
+        "oa_knowledge_job",
+        "oa_evolution_proposal"
+      ],
+      "originalCaseIds": [
+        "AC-17",
+        "AC-28",
+        "AC-35",
+        "AC-36"
+      ],
+      "normativeAcceptance": "相同 Agent 服务不同员工时，私人记忆不会进入他人的任务或群聊",
+      "negative": "私人记忆不能自动进入团队上下文",
+      "specRef": "docs/设计包/47-全产品实施切片与首期开发规格.md#sl-mm",
+      "uiRef": "docs/设计包/52-UI实现与页面状态规格.md",
+      "contractRef": "contracts/openapi.json",
+      "implementationStatus": "NOT_IMPLEMENTED",
+      "mappingLevel": "REQUIREMENT_TO_DOMAIN_SLICE_AND_TYPED_ACTIONS_NOT_CODE_LINE_TRACE"
+    },
+    {
+      "requirementId": "MM-02",
+      "domain": "MM",
+      "sliceId": "SL-MM",
+      "pageIds": [
+        "P09",
+        "P20"
+      ],
+      "commandIds": [
+        "C16",
+        "C19"
+      ],
+      "operationIds": [
+        "C16_propose",
+        "C16_confirm",
+        "C19_ingest",
+        "C19_process",
+        "C19_search",
+        "C19_publish",
+        "C19_reviseMemory"
+      ],
+      "dataTables": [
+        "oa_knowledge_job",
+        "oa_evolution_proposal"
+      ],
+      "originalCaseIds": [
+        "AC-17",
+        "AC-28",
+        "AC-35",
+        "AC-36"
+      ],
+      "normativeAcceptance": "用户能回答一条记忆从哪来、在哪里生效；修改和失效有回读结果",
+      "negative": "私人记忆不能自动进入团队上下文",
+      "specRef": "docs/设计包/47-全产品实施切片与首期开发规格.md#sl-mm",
+      "uiRef": "docs/设计包/52-UI实现与页面状态规格.md",
+      "contractRef": "contracts/openapi.json",
+      "implementationStatus": "NOT_IMPLEMENTED",
+      "mappingLevel": "REQUIREMENT_TO_DOMAIN_SLICE_AND_TYPED_ACTIONS_NOT_CODE_LINE_TRACE"
+    },
+    {
+      "requirementId": "MM-03",
+      "domain": "MM",
+      "sliceId": "SL-MM",
+      "pageIds": [
+        "P09",
+        "P20"
+      ],
+      "commandIds": [
+        "C16",
+        "C19"
+      ],
+      "operationIds": [
+        "C16_propose",
+        "C16_confirm",
+        "C19_ingest",
+        "C19_process",
+        "C19_search",
+        "C19_publish",
+        "C19_reviseMemory"
+      ],
+      "dataTables": [
+        "oa_knowledge_job",
+        "oa_evolution_proposal"
+      ],
+      "originalCaseIds": [
+        "AC-17",
+        "AC-28",
+        "AC-35",
+        "AC-36"
+      ],
+      "normativeAcceptance": "本节点禁用的记忆不进入执行上下文；更正不被旧缓存再次带回",
+      "negative": "私人记忆不能自动进入团队上下文",
+      "specRef": "docs/设计包/47-全产品实施切片与首期开发规格.md#sl-mm",
+      "uiRef": "docs/设计包/52-UI实现与页面状态规格.md",
+      "contractRef": "contracts/openapi.json",
+      "implementationStatus": "NOT_IMPLEMENTED",
+      "mappingLevel": "REQUIREMENT_TO_DOMAIN_SLICE_AND_TYPED_ACTIONS_NOT_CODE_LINE_TRACE"
+    },
+    {
+      "requirementId": "MM-04",
+      "domain": "MM",
+      "sliceId": "SL-MM",
+      "pageIds": [
+        "P09",
+        "P20"
+      ],
+      "commandIds": [
+        "C16",
+        "C19"
+      ],
+      "operationIds": [
+        "C16_propose",
+        "C16_confirm",
+        "C19_ingest",
+        "C19_process",
+        "C19_search",
+        "C19_publish",
+        "C19_reviseMemory"
+      ],
+      "dataTables": [
+        "oa_knowledge_job",
+        "oa_evolution_proposal"
+      ],
+      "originalCaseIds": [
+        "AC-17",
+        "AC-28",
+        "AC-35",
+        "AC-36"
+      ],
+      "normativeAcceptance": "只有可复用且有依据的内容进入长期经验；未验收结果不自动变成规则",
+      "negative": "私人记忆不能自动进入团队上下文",
+      "specRef": "docs/设计包/47-全产品实施切片与首期开发规格.md#sl-mm",
+      "uiRef": "docs/设计包/52-UI实现与页面状态规格.md",
+      "contractRef": "contracts/openapi.json",
+      "implementationStatus": "NOT_IMPLEMENTED",
+      "mappingLevel": "REQUIREMENT_TO_DOMAIN_SLICE_AND_TYPED_ACTIONS_NOT_CODE_LINE_TRACE"
+    },
+    {
+      "requirementId": "MM-05",
+      "domain": "MM",
+      "sliceId": "SL-MM",
+      "pageIds": [
+        "P09",
+        "P20"
+      ],
+      "commandIds": [
+        "C16",
+        "C19"
+      ],
+      "operationIds": [
+        "C16_propose",
+        "C16_confirm",
+        "C19_ingest",
+        "C19_process",
+        "C19_search",
+        "C19_publish",
+        "C19_reviseMemory"
+      ],
+      "dataTables": [
+        "oa_knowledge_job",
+        "oa_evolution_proposal"
+      ],
+      "originalCaseIds": [
+        "AC-17",
+        "AC-28",
+        "AC-35",
+        "AC-36"
+      ],
+      "normativeAcceptance": "新方法能通过不同输入的相似任务；不能仅复制一次聊天就标为成熟技能",
+      "negative": "私人记忆不能自动进入团队上下文",
+      "specRef": "docs/设计包/47-全产品实施切片与首期开发规格.md#sl-mm",
+      "uiRef": "docs/设计包/52-UI实现与页面状态规格.md",
+      "contractRef": "contracts/openapi.json",
+      "implementationStatus": "NOT_IMPLEMENTED",
+      "mappingLevel": "REQUIREMENT_TO_DOMAIN_SLICE_AND_TYPED_ACTIONS_NOT_CODE_LINE_TRACE"
+    },
+    {
+      "requirementId": "MM-06",
+      "domain": "MM",
+      "sliceId": "SL-MM",
+      "pageIds": [
+        "P09",
+        "P20"
+      ],
+      "commandIds": [
+        "C16",
+        "C19"
+      ],
+      "operationIds": [
+        "C16_propose",
+        "C16_confirm",
+        "C19_ingest",
+        "C19_process",
+        "C19_search",
+        "C19_publish",
+        "C19_reviseMemory"
+      ],
+      "dataTables": [
+        "oa_knowledge_job",
+        "oa_evolution_proposal"
+      ],
+      "originalCaseIds": [
+        "AC-17",
+        "AC-28",
+        "AC-35",
+        "AC-36"
+      ],
+      "normativeAcceptance": "回滚目标与范围明确；回滚内容不声称撤销已发生外部操作",
+      "negative": "私人记忆不能自动进入团队上下文",
+      "specRef": "docs/设计包/47-全产品实施切片与首期开发规格.md#sl-mm",
+      "uiRef": "docs/设计包/52-UI实现与页面状态规格.md",
+      "contractRef": "contracts/openapi.json",
+      "implementationStatus": "NOT_IMPLEMENTED",
+      "mappingLevel": "REQUIREMENT_TO_DOMAIN_SLICE_AND_TYPED_ACTIONS_NOT_CODE_LINE_TRACE"
+    },
+    {
+      "requirementId": "MM-07",
+      "domain": "MM",
+      "sliceId": "SL-MM",
+      "pageIds": [
+        "P09",
+        "P20"
+      ],
+      "commandIds": [
+        "C16",
+        "C19"
+      ],
+      "operationIds": [
+        "C16_propose",
+        "C16_confirm",
+        "C19_ingest",
+        "C19_process",
+        "C19_search",
+        "C19_publish",
+        "C19_reviseMemory"
+      ],
+      "dataTables": [
+        "oa_knowledge_job",
+        "oa_evolution_proposal"
+      ],
+      "originalCaseIds": [
+        "AC-17",
+        "AC-28",
+        "AC-35",
+        "AC-36"
+      ],
+      "normativeAcceptance": "私人偏好不会自动变团队知识；删除/保留动作满足既定策略并可验证",
+      "negative": "私人记忆不能自动进入团队上下文",
+      "specRef": "docs/设计包/47-全产品实施切片与首期开发规格.md#sl-mm",
+      "uiRef": "docs/设计包/52-UI实现与页面状态规格.md",
+      "contractRef": "contracts/openapi.json",
+      "implementationStatus": "NOT_IMPLEMENTED",
+      "mappingLevel": "REQUIREMENT_TO_DOMAIN_SLICE_AND_TYPED_ACTIONS_NOT_CODE_LINE_TRACE"
+    },
+    {
+      "requirementId": "WS-01",
+      "domain": "WS",
+      "sliceId": "SL-WS",
+      "pageIds": [
+        "P10",
+        "P02"
+      ],
+      "commandIds": [
+        "C20",
+        "C25"
+      ],
+      "operationIds": [
+        "C20_prepareUpload",
+        "C20_uploadComplete",
+        "C20_parse",
+        "C20_merge",
+        "C20_readContent",
+        "C25_readInsights"
+      ],
+      "dataTables": [
+        "oa_artifact_version",
+        "oa_output_release"
+      ],
+      "originalCaseIds": [
+        "AC-11",
+        "AC-37",
+        "AC-38",
+        "AC-56"
+      ],
+      "normativeAcceptance": "打开任务就知道实际工作位置；同名项目不能造成跨租户/跨客户混用",
+      "negative": "文件同名不等于相同版本或合法写入位置",
+      "specRef": "docs/设计包/47-全产品实施切片与首期开发规格.md#sl-ws",
+      "uiRef": "docs/设计包/52-UI实现与页面状态规格.md",
+      "contractRef": "contracts/openapi.json",
+      "implementationStatus": "NOT_IMPLEMENTED",
+      "mappingLevel": "REQUIREMENT_TO_DOMAIN_SLICE_AND_TYPED_ACTIONS_NOT_CODE_LINE_TRACE"
+    },
+    {
+      "requirementId": "WS-02",
+      "domain": "WS",
+      "sliceId": "SL-WS",
+      "pageIds": [
+        "P10",
+        "P02"
+      ],
+      "commandIds": [
+        "C20",
+        "C25"
+      ],
+      "operationIds": [
+        "C20_prepareUpload",
+        "C20_uploadComplete",
+        "C20_parse",
+        "C20_merge",
+        "C20_readContent",
+        "C25_readInsights"
+      ],
+      "dataTables": [
+        "oa_artifact_version",
+        "oa_output_release"
+      ],
+      "originalCaseIds": [
+        "AC-11",
+        "AC-37",
+        "AC-38",
+        "AC-56"
+      ],
+      "normativeAcceptance": "文件上传完成、已解析、可用于执行分别明确；引用在刷新后仍指向原文件版本",
+      "negative": "文件同名不等于相同版本或合法写入位置",
+      "specRef": "docs/设计包/47-全产品实施切片与首期开发规格.md#sl-ws",
+      "uiRef": "docs/设计包/52-UI实现与页面状态规格.md",
+      "contractRef": "contracts/openapi.json",
+      "implementationStatus": "NOT_IMPLEMENTED",
+      "mappingLevel": "REQUIREMENT_TO_DOMAIN_SLICE_AND_TYPED_ACTIONS_NOT_CODE_LINE_TRACE"
+    },
+    {
+      "requirementId": "WS-03",
+      "domain": "WS",
+      "sliceId": "SL-WS",
+      "pageIds": [
+        "P10",
+        "P02"
+      ],
+      "commandIds": [
+        "C20",
+        "C25"
+      ],
+      "operationIds": [
+        "C20_prepareUpload",
+        "C20_uploadComplete",
+        "C20_parse",
+        "C20_merge",
+        "C20_readContent",
+        "C25_readInsights"
+      ],
+      "dataTables": [
+        "oa_artifact_version",
+        "oa_output_release"
+      ],
+      "originalCaseIds": [
+        "AC-11",
+        "AC-37",
+        "AC-38",
+        "AC-56"
+      ],
+      "normativeAcceptance": "用户先授权具体设备与范围；设备离线能识别；不假设网页服务器能读用户本机路径",
+      "negative": "文件同名不等于相同版本或合法写入位置",
+      "specRef": "docs/设计包/47-全产品实施切片与首期开发规格.md#sl-ws",
+      "uiRef": "docs/设计包/52-UI实现与页面状态规格.md",
+      "contractRef": "contracts/openapi.json",
+      "implementationStatus": "NOT_IMPLEMENTED",
+      "mappingLevel": "REQUIREMENT_TO_DOMAIN_SLICE_AND_TYPED_ACTIONS_NOT_CODE_LINE_TRACE"
+    },
+    {
+      "requirementId": "WS-04",
+      "domain": "WS",
+      "sliceId": "SL-WS",
+      "pageIds": [
+        "P10",
+        "P02"
+      ],
+      "commandIds": [
+        "C20",
+        "C25"
+      ],
+      "operationIds": [
+        "C20_prepareUpload",
+        "C20_uploadComplete",
+        "C20_parse",
+        "C20_merge",
+        "C20_readContent",
+        "C25_readInsights"
+      ],
+      "dataTables": [
+        "oa_artifact_version",
+        "oa_output_release"
+      ],
+      "originalCaseIds": [
+        "AC-11",
+        "AC-37",
+        "AC-38",
+        "AC-56"
+      ],
+      "normativeAcceptance": "测试越界文件访问被真实阻止；路径预览与实际访问位置一致",
+      "negative": "文件同名不等于相同版本或合法写入位置",
+      "specRef": "docs/设计包/47-全产品实施切片与首期开发规格.md#sl-ws",
+      "uiRef": "docs/设计包/52-UI实现与页面状态规格.md",
+      "contractRef": "contracts/openapi.json",
+      "implementationStatus": "NOT_IMPLEMENTED",
+      "mappingLevel": "REQUIREMENT_TO_DOMAIN_SLICE_AND_TYPED_ACTIONS_NOT_CODE_LINE_TRACE"
+    },
+    {
+      "requirementId": "WS-05",
+      "domain": "WS",
+      "sliceId": "SL-WS",
+      "pageIds": [
+        "P10",
+        "P02"
+      ],
+      "commandIds": [
+        "C20",
+        "C25"
+      ],
+      "operationIds": [
+        "C20_prepareUpload",
+        "C20_uploadComplete",
+        "C20_parse",
+        "C20_merge",
+        "C20_readContent",
+        "C25_readInsights"
+      ],
+      "dataTables": [
+        "oa_artifact_version",
+        "oa_output_release"
+      ],
+      "originalCaseIds": [
+        "AC-11",
+        "AC-37",
+        "AC-38",
+        "AC-56"
+      ],
+      "normativeAcceptance": "报告、表格、图片或代码在约定位置真实存在；查看权限与任务一致",
+      "negative": "文件同名不等于相同版本或合法写入位置",
+      "specRef": "docs/设计包/47-全产品实施切片与首期开发规格.md#sl-ws",
+      "uiRef": "docs/设计包/52-UI实现与页面状态规格.md",
+      "contractRef": "contracts/openapi.json",
+      "implementationStatus": "NOT_IMPLEMENTED",
+      "mappingLevel": "REQUIREMENT_TO_DOMAIN_SLICE_AND_TYPED_ACTIONS_NOT_CODE_LINE_TRACE"
+    },
+    {
+      "requirementId": "WS-06",
+      "domain": "WS",
+      "sliceId": "SL-WS",
+      "pageIds": [
+        "P10",
+        "P02"
+      ],
+      "commandIds": [
+        "C20",
+        "C25"
+      ],
+      "operationIds": [
+        "C20_prepareUpload",
+        "C20_uploadComplete",
+        "C20_parse",
+        "C20_merge",
+        "C20_readContent",
+        "C25_readInsights"
+      ],
+      "dataTables": [
+        "oa_artifact_version",
+        "oa_output_release"
+      ],
+      "originalCaseIds": [
+        "AC-11",
+        "AC-37",
+        "AC-38",
+        "AC-56"
+      ],
+      "normativeAcceptance": "并行工作不覆盖他人产物；合并有明确结果；归档后历史仍可定位",
+      "negative": "文件同名不等于相同版本或合法写入位置",
+      "specRef": "docs/设计包/47-全产品实施切片与首期开发规格.md#sl-ws",
+      "uiRef": "docs/设计包/52-UI实现与页面状态规格.md",
+      "contractRef": "contracts/openapi.json",
+      "implementationStatus": "NOT_IMPLEMENTED",
+      "mappingLevel": "REQUIREMENT_TO_DOMAIN_SLICE_AND_TYPED_ACTIONS_NOT_CODE_LINE_TRACE"
+    },
+    {
+      "requirementId": "CV-01",
+      "domain": "CV",
+      "sliceId": "SL-CV",
+      "pageIds": [
+        "P11",
+        "P02"
+      ],
+      "commandIds": [
+        "C05",
+        "C06",
+        "C07",
+        "C14",
+        "C23"
+      ],
+      "operationIds": [
+        "C05_previewContext",
+        "C05_eligibleResources",
+        "C06_startAttempt",
+        "C07_pause",
+        "C07_resume",
+        "C07_cancel",
+        "C14_queryOperation",
+        "C14_reconcile",
+        "C23_receiveEvent"
+      ],
+      "dataTables": [
+        "oa_thread_entry",
+        "oa_attempt"
+      ],
+      "originalCaseIds": [
+        "AC-11",
+        "AC-12",
+        "AC-16",
+        "AC-19",
+        "AC-45"
+      ],
+      "normativeAcceptance": "Runtime 接收内容与节点一致；缺业务输入时明确拒绝，不以 attempt ID 充当任务",
+      "negative": "对话成功不能直接改变业务完成状态",
+      "specRef": "docs/设计包/47-全产品实施切片与首期开发规格.md#sl-cv",
+      "uiRef": "docs/设计包/52-UI实现与页面状态规格.md",
+      "contractRef": "contracts/openapi.json",
+      "implementationStatus": "NOT_IMPLEMENTED",
+      "mappingLevel": "REQUIREMENT_TO_DOMAIN_SLICE_AND_TYPED_ACTIONS_NOT_CODE_LINE_TRACE"
+    },
+    {
+      "requirementId": "CV-02",
+      "domain": "CV",
+      "sliceId": "SL-CV",
+      "pageIds": [
+        "P11",
+        "P02"
+      ],
+      "commandIds": [
+        "C05",
+        "C06",
+        "C07",
+        "C14",
+        "C23"
+      ],
+      "operationIds": [
+        "C05_previewContext",
+        "C05_eligibleResources",
+        "C06_startAttempt",
+        "C07_pause",
+        "C07_resume",
+        "C07_cancel",
+        "C14_queryOperation",
+        "C14_reconcile",
+        "C23_receiveEvent"
+      ],
+      "dataTables": [
+        "oa_thread_entry",
+        "oa_attempt"
+      ],
+      "originalCaseIds": [
+        "AC-11",
+        "AC-12",
+        "AC-16",
+        "AC-19",
+        "AC-45"
+      ],
+      "normativeAcceptance": "第一条进度在任务结束前可见；断线重连不丢消息、不重复回复、不重跑业务",
+      "negative": "对话成功不能直接改变业务完成状态",
+      "specRef": "docs/设计包/47-全产品实施切片与首期开发规格.md#sl-cv",
+      "uiRef": "docs/设计包/52-UI实现与页面状态规格.md",
+      "contractRef": "contracts/openapi.json",
+      "implementationStatus": "NOT_IMPLEMENTED",
+      "mappingLevel": "REQUIREMENT_TO_DOMAIN_SLICE_AND_TYPED_ACTIONS_NOT_CODE_LINE_TRACE"
+    },
+    {
+      "requirementId": "CV-03",
+      "domain": "CV",
+      "sliceId": "SL-CV",
+      "pageIds": [
+        "P11",
+        "P02"
+      ],
+      "commandIds": [
+        "C05",
+        "C06",
+        "C07",
+        "C14",
+        "C23"
+      ],
+      "operationIds": [
+        "C05_previewContext",
+        "C05_eligibleResources",
+        "C06_startAttempt",
+        "C07_pause",
+        "C07_resume",
+        "C07_cancel",
+        "C14_queryOperation",
+        "C14_reconcile",
+        "C23_receiveEvent"
+      ],
+      "dataTables": [
+        "oa_thread_entry",
+        "oa_attempt"
+      ],
+      "originalCaseIds": [
+        "AC-11",
+        "AC-12",
+        "AC-16",
+        "AC-19",
+        "AC-45"
+      ],
+      "normativeAcceptance": "不支持的 Runtime 操作不显示为成功；支持时对实际任务生效并能查到恢复点",
+      "negative": "对话成功不能直接改变业务完成状态",
+      "specRef": "docs/设计包/47-全产品实施切片与首期开发规格.md#sl-cv",
+      "uiRef": "docs/设计包/52-UI实现与页面状态规格.md",
+      "contractRef": "contracts/openapi.json",
+      "implementationStatus": "NOT_IMPLEMENTED",
+      "mappingLevel": "REQUIREMENT_TO_DOMAIN_SLICE_AND_TYPED_ACTIONS_NOT_CODE_LINE_TRACE"
+    },
+    {
+      "requirementId": "CV-04",
+      "domain": "CV",
+      "sliceId": "SL-CV",
+      "pageIds": [
+        "P11",
+        "P02"
+      ],
+      "commandIds": [
+        "C05",
+        "C06",
+        "C07",
+        "C14",
+        "C23"
+      ],
+      "operationIds": [
+        "C05_previewContext",
+        "C05_eligibleResources",
+        "C06_startAttempt",
+        "C07_pause",
+        "C07_resume",
+        "C07_cancel",
+        "C14_queryOperation",
+        "C14_reconcile",
+        "C23_receiveEvent"
+      ],
+      "dataTables": [
+        "oa_thread_entry",
+        "oa_attempt"
+      ],
+      "originalCaseIds": [
+        "AC-11",
+        "AC-12",
+        "AC-16",
+        "AC-19",
+        "AC-45"
+      ],
+      "normativeAcceptance": "返工与原结果有关联；新目标/项目切换有明确新任务或新尝试边界",
+      "negative": "对话成功不能直接改变业务完成状态",
+      "specRef": "docs/设计包/47-全产品实施切片与首期开发规格.md#sl-cv",
+      "uiRef": "docs/设计包/52-UI实现与页面状态规格.md",
+      "contractRef": "contracts/openapi.json",
+      "implementationStatus": "NOT_IMPLEMENTED",
+      "mappingLevel": "REQUIREMENT_TO_DOMAIN_SLICE_AND_TYPED_ACTIONS_NOT_CODE_LINE_TRACE"
+    },
+    {
+      "requirementId": "CV-05",
+      "domain": "CV",
+      "sliceId": "SL-CV",
+      "pageIds": [
+        "P11",
+        "P02"
+      ],
+      "commandIds": [
+        "C05",
+        "C06",
+        "C07",
+        "C14",
+        "C23"
+      ],
+      "operationIds": [
+        "C05_previewContext",
+        "C05_eligibleResources",
+        "C06_startAttempt",
+        "C07_pause",
+        "C07_resume",
+        "C07_cancel",
+        "C14_queryOperation",
+        "C14_reconcile",
+        "C23_receiveEvent"
+      ],
+      "dataTables": [
+        "oa_thread_entry",
+        "oa_attempt"
+      ],
+      "originalCaseIds": [
+        "AC-11",
+        "AC-12",
+        "AC-16",
+        "AC-19",
+        "AC-45"
+      ],
+      "normativeAcceptance": "用户能看到操作对象、所需决定和结果；协议字段在诊断中展开",
+      "negative": "对话成功不能直接改变业务完成状态",
+      "specRef": "docs/设计包/47-全产品实施切片与首期开发规格.md#sl-cv",
+      "uiRef": "docs/设计包/52-UI实现与页面状态规格.md",
+      "contractRef": "contracts/openapi.json",
+      "implementationStatus": "NOT_IMPLEMENTED",
+      "mappingLevel": "REQUIREMENT_TO_DOMAIN_SLICE_AND_TYPED_ACTIONS_NOT_CODE_LINE_TRACE"
+    },
+    {
+      "requirementId": "CV-06",
+      "domain": "CV",
+      "sliceId": "SL-CV",
+      "pageIds": [
+        "P11",
+        "P02"
+      ],
+      "commandIds": [
+        "C05",
+        "C06",
+        "C07",
+        "C14",
+        "C23"
+      ],
+      "operationIds": [
+        "C05_previewContext",
+        "C05_eligibleResources",
+        "C06_startAttempt",
+        "C07_pause",
+        "C07_resume",
+        "C07_cancel",
+        "C14_queryOperation",
+        "C14_reconcile",
+        "C23_receiveEvent"
+      ],
+      "dataTables": [
+        "oa_thread_entry",
+        "oa_attempt"
+      ],
+      "originalCaseIds": [
+        "AC-11",
+        "AC-12",
+        "AC-16",
+        "AC-19",
+        "AC-45"
+      ],
+      "normativeAcceptance": "转换保留授权上下文及来源；不重复创建业务实例，不自动判定节点完成",
+      "negative": "对话成功不能直接改变业务完成状态",
+      "specRef": "docs/设计包/47-全产品实施切片与首期开发规格.md#sl-cv",
+      "uiRef": "docs/设计包/52-UI实现与页面状态规格.md",
+      "contractRef": "contracts/openapi.json",
+      "implementationStatus": "NOT_IMPLEMENTED",
+      "mappingLevel": "REQUIREMENT_TO_DOMAIN_SLICE_AND_TYPED_ACTIONS_NOT_CODE_LINE_TRACE"
+    },
+    {
+      "requirementId": "CV-07",
+      "domain": "CV",
+      "sliceId": "SL-CV",
+      "pageIds": [
+        "P11",
+        "P02"
+      ],
+      "commandIds": [
+        "C05",
+        "C06",
+        "C07",
+        "C14",
+        "C23"
+      ],
+      "operationIds": [
+        "C05_previewContext",
+        "C05_eligibleResources",
+        "C06_startAttempt",
+        "C07_pause",
+        "C07_resume",
+        "C07_cancel",
+        "C14_queryOperation",
+        "C14_reconcile",
+        "C23_receiveEvent"
+      ],
+      "dataTables": [
+        "oa_thread_entry",
+        "oa_attempt"
+      ],
+      "originalCaseIds": [
+        "AC-11",
+        "AC-12",
+        "AC-16",
+        "AC-19",
+        "AC-45"
+      ],
+      "normativeAcceptance": "模型额度不足、网络中断、连接器失效均有不同恢复方法；重试不复制副作用",
+      "negative": "对话成功不能直接改变业务完成状态",
+      "specRef": "docs/设计包/47-全产品实施切片与首期开发规格.md#sl-cv",
+      "uiRef": "docs/设计包/52-UI实现与页面状态规格.md",
+      "contractRef": "contracts/openapi.json",
+      "implementationStatus": "NOT_IMPLEMENTED",
+      "mappingLevel": "REQUIREMENT_TO_DOMAIN_SLICE_AND_TYPED_ACTIONS_NOT_CODE_LINE_TRACE"
+    },
+    {
+      "requirementId": "TM-01",
+      "domain": "TM",
+      "sliceId": "SL-TM",
+      "pageIds": [
+        "P12",
+        "P02"
+      ],
+      "commandIds": [
+        "C06",
+        "C07",
+        "C21"
+      ],
+      "operationIds": [
+        "C06_startAttempt",
+        "C07_pause",
+        "C07_resume",
+        "C07_cancel",
+        "C21_configure",
+        "C21_execute",
+        "C21_replace",
+        "C21_control"
+      ],
+      "dataTables": [
+        "oa_team_configuration",
+        "oa_attempt"
+      ],
+      "originalCaseIds": [
+        "AC-14",
+        "AC-19",
+        "AC-39",
+        "AC-58"
+      ],
+      "normativeAcceptance": "团队资格按成员能力、权限及整体需求核验；仍有明确人类责任人",
+      "negative": "团队能力启用仍服从现有可用性门，成员不得互相扩大权限",
+      "specRef": "docs/设计包/47-全产品实施切片与首期开发规格.md#sl-tm",
+      "uiRef": "docs/设计包/52-UI实现与页面状态规格.md",
+      "contractRef": "contracts/openapi.json",
+      "implementationStatus": "NOT_IMPLEMENTED",
+      "mappingLevel": "REQUIREMENT_TO_DOMAIN_SLICE_AND_TYPED_ACTIONS_NOT_CODE_LINE_TRACE"
+    },
+    {
+      "requirementId": "TM-02",
+      "domain": "TM",
+      "sliceId": "SL-TM",
+      "pageIds": [
+        "P12",
+        "P02"
+      ],
+      "commandIds": [
+        "C06",
+        "C07",
+        "C21"
+      ],
+      "operationIds": [
+        "C06_startAttempt",
+        "C07_pause",
+        "C07_resume",
+        "C07_cancel",
+        "C21_configure",
+        "C21_execute",
+        "C21_replace",
+        "C21_control"
+      ],
+      "dataTables": [
+        "oa_team_configuration",
+        "oa_attempt"
+      ],
+      "originalCaseIds": [
+        "AC-14",
+        "AC-19",
+        "AC-39",
+        "AC-58"
+      ],
+      "normativeAcceptance": "每个子任务有目标与输出；员工从一个节点工作区找到成员产物及最终结论",
+      "negative": "团队能力启用仍服从现有可用性门，成员不得互相扩大权限",
+      "specRef": "docs/设计包/47-全产品实施切片与首期开发规格.md#sl-tm",
+      "uiRef": "docs/设计包/52-UI实现与页面状态规格.md",
+      "contractRef": "contracts/openapi.json",
+      "implementationStatus": "NOT_IMPLEMENTED",
+      "mappingLevel": "REQUIREMENT_TO_DOMAIN_SLICE_AND_TYPED_ACTIONS_NOT_CODE_LINE_TRACE"
+    },
+    {
+      "requirementId": "TM-03",
+      "domain": "TM",
+      "sliceId": "SL-TM",
+      "pageIds": [
+        "P12",
+        "P02"
+      ],
+      "commandIds": [
+        "C06",
+        "C07",
+        "C21"
+      ],
+      "operationIds": [
+        "C06_startAttempt",
+        "C07_pause",
+        "C07_resume",
+        "C07_cancel",
+        "C21_configure",
+        "C21_execute",
+        "C21_replace",
+        "C21_control"
+      ],
+      "dataTables": [
+        "oa_team_configuration",
+        "oa_attempt"
+      ],
+      "originalCaseIds": [
+        "AC-14",
+        "AC-19",
+        "AC-39",
+        "AC-58"
+      ],
+      "normativeAcceptance": "共享配置不能扩大成员数据权限；团队输出不会泄漏其他成员私人上下文",
+      "negative": "团队能力启用仍服从现有可用性门，成员不得互相扩大权限",
+      "specRef": "docs/设计包/47-全产品实施切片与首期开发规格.md#sl-tm",
+      "uiRef": "docs/设计包/52-UI实现与页面状态规格.md",
+      "contractRef": "contracts/openapi.json",
+      "implementationStatus": "NOT_IMPLEMENTED",
+      "mappingLevel": "REQUIREMENT_TO_DOMAIN_SLICE_AND_TYPED_ACTIONS_NOT_CODE_LINE_TRACE"
+    },
+    {
+      "requirementId": "TM-04",
+      "domain": "TM",
+      "sliceId": "SL-TM",
+      "pageIds": [
+        "P12",
+        "P02"
+      ],
+      "commandIds": [
+        "C06",
+        "C07",
+        "C21"
+      ],
+      "operationIds": [
+        "C06_startAttempt",
+        "C07_pause",
+        "C07_resume",
+        "C07_cancel",
+        "C21_configure",
+        "C21_execute",
+        "C21_replace",
+        "C21_control"
+      ],
+      "dataTables": [
+        "oa_team_configuration",
+        "oa_attempt"
+      ],
+      "originalCaseIds": [
+        "AC-14",
+        "AC-19",
+        "AC-39",
+        "AC-58"
+      ],
+      "normativeAcceptance": "单个成员失败不会无说明地将团队标为成功；替代成员有记录",
+      "negative": "团队能力启用仍服从现有可用性门，成员不得互相扩大权限",
+      "specRef": "docs/设计包/47-全产品实施切片与首期开发规格.md#sl-tm",
+      "uiRef": "docs/设计包/52-UI实现与页面状态规格.md",
+      "contractRef": "contracts/openapi.json",
+      "implementationStatus": "NOT_IMPLEMENTED",
+      "mappingLevel": "REQUIREMENT_TO_DOMAIN_SLICE_AND_TYPED_ACTIONS_NOT_CODE_LINE_TRACE"
+    },
+    {
+      "requirementId": "TM-05",
+      "domain": "TM",
+      "sliceId": "SL-TM",
+      "pageIds": [
+        "P12",
+        "P02"
+      ],
+      "commandIds": [
+        "C06",
+        "C07",
+        "C21"
+      ],
+      "operationIds": [
+        "C06_startAttempt",
+        "C07_pause",
+        "C07_resume",
+        "C07_cancel",
+        "C21_configure",
+        "C21_execute",
+        "C21_replace",
+        "C21_control"
+      ],
+      "dataTables": [
+        "oa_team_configuration",
+        "oa_attempt"
+      ],
+      "originalCaseIds": [
+        "AC-14",
+        "AC-19",
+        "AC-39",
+        "AC-58"
+      ],
+      "normativeAcceptance": "无无限相互委派；额度与子任务可对账；停止后无新的下游副作用",
+      "negative": "团队能力启用仍服从现有可用性门，成员不得互相扩大权限",
+      "specRef": "docs/设计包/47-全产品实施切片与首期开发规格.md#sl-tm",
+      "uiRef": "docs/设计包/52-UI实现与页面状态规格.md",
+      "contractRef": "contracts/openapi.json",
+      "implementationStatus": "NOT_IMPLEMENTED",
+      "mappingLevel": "REQUIREMENT_TO_DOMAIN_SLICE_AND_TYPED_ACTIONS_NOT_CODE_LINE_TRACE"
+    },
+    {
+      "requirementId": "TM-06",
+      "domain": "TM",
+      "sliceId": "SL-TM",
+      "pageIds": [
+        "P12",
+        "P02"
+      ],
+      "commandIds": [
+        "C06",
+        "C07",
+        "C21"
+      ],
+      "operationIds": [
+        "C06_startAttempt",
+        "C07_pause",
+        "C07_resume",
+        "C07_cancel",
+        "C21_configure",
+        "C21_execute",
+        "C21_replace",
+        "C21_control"
+      ],
+      "dataTables": [
+        "oa_team_configuration",
+        "oa_attempt"
+      ],
+      "originalCaseIds": [
+        "AC-14",
+        "AC-19",
+        "AC-39",
+        "AC-58"
+      ],
+      "normativeAcceptance": "子任务结束不直接推动企业下一节点；汇总结果通过同一业务完成标准",
+      "negative": "团队能力启用仍服从现有可用性门，成员不得互相扩大权限",
+      "specRef": "docs/设计包/47-全产品实施切片与首期开发规格.md#sl-tm",
+      "uiRef": "docs/设计包/52-UI实现与页面状态规格.md",
+      "contractRef": "contracts/openapi.json",
+      "implementationStatus": "NOT_IMPLEMENTED",
+      "mappingLevel": "REQUIREMENT_TO_DOMAIN_SLICE_AND_TYPED_ACTIONS_NOT_CODE_LINE_TRACE"
+    },
+    {
+      "requirementId": "FL-01",
+      "domain": "FL",
+      "sliceId": "SL-FL",
+      "pageIds": [
+        "P13",
+        "P04"
+      ],
+      "commandIds": [
+        "C06",
+        "C07",
+        "C17"
+      ],
+      "operationIds": [
+        "C06_startAttempt",
+        "C07_pause",
+        "C07_resume",
+        "C07_cancel",
+        "C17_draft",
+        "C17_test",
+        "C17_publish",
+        "C17_disable",
+        "C17_import",
+        "C17_export",
+        "C17_diff",
+        "C17_promote"
+      ],
+      "dataTables": [
+        "oa_asset_revision",
+        "oa_attempt"
+      ],
+      "originalCaseIds": [
+        "AC-10",
+        "AC-12",
+        "AC-19",
+        "AC-40"
+      ],
+      "normativeAcceptance": "方案能解释用途、所需输入、资源和交付；选择后准确绑定节点实例",
+      "negative": "技术流程完成仅生成业务结果候选",
+      "specRef": "docs/设计包/47-全产品实施切片与首期开发规格.md#sl-fl",
+      "uiRef": "docs/设计包/52-UI实现与页面状态规格.md",
+      "contractRef": "contracts/openapi.json",
+      "implementationStatus": "NOT_IMPLEMENTED",
+      "mappingLevel": "REQUIREMENT_TO_DOMAIN_SLICE_AND_TYPED_ACTIONS_NOT_CODE_LINE_TRACE"
+    },
+    {
+      "requirementId": "FL-02",
+      "domain": "FL",
+      "sliceId": "SL-FL",
+      "pageIds": [
+        "P13",
+        "P04"
+      ],
+      "commandIds": [
+        "C06",
+        "C07",
+        "C17"
+      ],
+      "operationIds": [
+        "C06_startAttempt",
+        "C07_pause",
+        "C07_resume",
+        "C07_cancel",
+        "C17_draft",
+        "C17_test",
+        "C17_publish",
+        "C17_disable",
+        "C17_import",
+        "C17_export",
+        "C17_diff",
+        "C17_promote"
+      ],
+      "dataTables": [
+        "oa_asset_revision",
+        "oa_attempt"
+      ],
+      "originalCaseIds": [
+        "AC-10",
+        "AC-12",
+        "AC-19",
+        "AC-40"
+      ],
+      "normativeAcceptance": "三种视图从同一有效定义生成；修改可预览，不能把画布显示当执行定义",
+      "negative": "技术流程完成仅生成业务结果候选",
+      "specRef": "docs/设计包/47-全产品实施切片与首期开发规格.md#sl-fl",
+      "uiRef": "docs/设计包/52-UI实现与页面状态规格.md",
+      "contractRef": "contracts/openapi.json",
+      "implementationStatus": "NOT_IMPLEMENTED",
+      "mappingLevel": "REQUIREMENT_TO_DOMAIN_SLICE_AND_TYPED_ACTIONS_NOT_CODE_LINE_TRACE"
+    },
+    {
+      "requirementId": "FL-03",
+      "domain": "FL",
+      "sliceId": "SL-FL",
+      "pageIds": [
+        "P13",
+        "P04"
+      ],
+      "commandIds": [
+        "C06",
+        "C07",
+        "C17"
+      ],
+      "operationIds": [
+        "C06_startAttempt",
+        "C07_pause",
+        "C07_resume",
+        "C07_cancel",
+        "C17_draft",
+        "C17_test",
+        "C17_publish",
+        "C17_disable",
+        "C17_import",
+        "C17_export",
+        "C17_diff",
+        "C17_promote"
+      ],
+      "dataTables": [
+        "oa_asset_revision",
+        "oa_attempt"
+      ],
+      "originalCaseIds": [
+        "AC-10",
+        "AC-12",
+        "AC-19",
+        "AC-40"
+      ],
+      "normativeAcceptance": "缺输入和无出口分支在运行前报错；分支选择有可追溯依据",
+      "negative": "技术流程完成仅生成业务结果候选",
+      "specRef": "docs/设计包/47-全产品实施切片与首期开发规格.md#sl-fl",
+      "uiRef": "docs/设计包/52-UI实现与页面状态规格.md",
+      "contractRef": "contracts/openapi.json",
+      "implementationStatus": "NOT_IMPLEMENTED",
+      "mappingLevel": "REQUIREMENT_TO_DOMAIN_SLICE_AND_TYPED_ACTIONS_NOT_CODE_LINE_TRACE"
+    },
+    {
+      "requirementId": "FL-04",
+      "domain": "FL",
+      "sliceId": "SL-FL",
+      "pageIds": [
+        "P13",
+        "P04"
+      ],
+      "commandIds": [
+        "C06",
+        "C07",
+        "C17"
+      ],
+      "operationIds": [
+        "C06_startAttempt",
+        "C07_pause",
+        "C07_resume",
+        "C07_cancel",
+        "C17_draft",
+        "C17_test",
+        "C17_publish",
+        "C17_disable",
+        "C17_import",
+        "C17_export",
+        "C17_diff",
+        "C17_promote"
+      ],
+      "dataTables": [
+        "oa_asset_revision",
+        "oa_attempt"
+      ],
+      "originalCaseIds": [
+        "AC-10",
+        "AC-12",
+        "AC-19",
+        "AC-40"
+      ],
+      "normativeAcceptance": "已运行节点仍指向原版本；输入变化能定位受影响 SOP 和自动化",
+      "negative": "技术流程完成仅生成业务结果候选",
+      "specRef": "docs/设计包/47-全产品实施切片与首期开发规格.md#sl-fl",
+      "uiRef": "docs/设计包/52-UI实现与页面状态规格.md",
+      "contractRef": "contracts/openapi.json",
+      "implementationStatus": "NOT_IMPLEMENTED",
+      "mappingLevel": "REQUIREMENT_TO_DOMAIN_SLICE_AND_TYPED_ACTIONS_NOT_CODE_LINE_TRACE"
+    },
+    {
+      "requirementId": "FL-05",
+      "domain": "FL",
+      "sliceId": "SL-FL",
+      "pageIds": [
+        "P13",
+        "P04"
+      ],
+      "commandIds": [
+        "C06",
+        "C07",
+        "C17"
+      ],
+      "operationIds": [
+        "C06_startAttempt",
+        "C07_pause",
+        "C07_resume",
+        "C07_cancel",
+        "C17_draft",
+        "C17_test",
+        "C17_publish",
+        "C17_disable",
+        "C17_import",
+        "C17_export",
+        "C17_diff",
+        "C17_promote"
+      ],
+      "dataTables": [
+        "oa_asset_revision",
+        "oa_attempt"
+      ],
+      "originalCaseIds": [
+        "AC-10",
+        "AC-12",
+        "AC-19",
+        "AC-40"
+      ],
+      "normativeAcceptance": "捕获异常后返回的业务失败仍显示失败/待处理；跳过阶段有原因",
+      "negative": "技术流程完成仅生成业务结果候选",
+      "specRef": "docs/设计包/47-全产品实施切片与首期开发规格.md#sl-fl",
+      "uiRef": "docs/设计包/52-UI实现与页面状态规格.md",
+      "contractRef": "contracts/openapi.json",
+      "implementationStatus": "NOT_IMPLEMENTED",
+      "mappingLevel": "REQUIREMENT_TO_DOMAIN_SLICE_AND_TYPED_ACTIONS_NOT_CODE_LINE_TRACE"
+    },
+    {
+      "requirementId": "FL-06",
+      "domain": "FL",
+      "sliceId": "SL-FL",
+      "pageIds": [
+        "P13",
+        "P04"
+      ],
+      "commandIds": [
+        "C06",
+        "C07",
+        "C17"
+      ],
+      "operationIds": [
+        "C06_startAttempt",
+        "C07_pause",
+        "C07_resume",
+        "C07_cancel",
+        "C17_draft",
+        "C17_test",
+        "C17_publish",
+        "C17_disable",
+        "C17_import",
+        "C17_export",
+        "C17_diff",
+        "C17_promote"
+      ],
+      "dataTables": [
+        "oa_asset_revision",
+        "oa_attempt"
+      ],
+      "originalCaseIds": [
+        "AC-10",
+        "AC-12",
+        "AC-19",
+        "AC-40"
+      ],
+      "normativeAcceptance": "无平行 Agent Loop；方案完成只生成结果候选，交由业务层校验与推进",
+      "negative": "技术流程完成仅生成业务结果候选",
+      "specRef": "docs/设计包/47-全产品实施切片与首期开发规格.md#sl-fl",
+      "uiRef": "docs/设计包/52-UI实现与页面状态规格.md",
+      "contractRef": "contracts/openapi.json",
+      "implementationStatus": "NOT_IMPLEMENTED",
+      "mappingLevel": "REQUIREMENT_TO_DOMAIN_SLICE_AND_TYPED_ACTIONS_NOT_CODE_LINE_TRACE"
+    },
+    {
+      "requirementId": "AT-01",
+      "domain": "AT",
+      "sliceId": "SL-AT",
+      "pageIds": [
+        "P14"
+      ],
+      "commandIds": [
+        "C22"
+      ],
+      "operationIds": [
+        "C22_create",
+        "C22_preview",
+        "C22_test",
+        "C22_pause",
+        "C22_resume",
+        "C22_trigger"
+      ],
+      "dataTables": [
+        "oa_automation_plan",
+        "oa_operation"
+      ],
+      "originalCaseIds": [
+        "AC-18",
+        "AC-41",
+        "AC-42",
+        "AC-58",
+        "AC-59"
+      ],
+      "normativeAcceptance": "不同入口编辑同一对象；明确创建的是新任务、当前节点步骤还是新业务实例",
+      "negative": "重复触发不能创建重复业务副作用",
+      "specRef": "docs/设计包/47-全产品实施切片与首期开发规格.md#sl-at",
+      "uiRef": "docs/设计包/52-UI实现与页面状态规格.md",
+      "contractRef": "contracts/openapi.json",
+      "implementationStatus": "NOT_IMPLEMENTED",
+      "mappingLevel": "REQUIREMENT_TO_DOMAIN_SLICE_AND_TYPED_ACTIONS_NOT_CODE_LINE_TRACE"
+    },
+    {
+      "requirementId": "AT-02",
+      "domain": "AT",
+      "sliceId": "SL-AT",
+      "pageIds": [
+        "P14"
+      ],
+      "commandIds": [
+        "C22"
+      ],
+      "operationIds": [
+        "C22_create",
+        "C22_preview",
+        "C22_test",
+        "C22_pause",
+        "C22_resume",
+        "C22_trigger"
+      ],
+      "dataTables": [
+        "oa_automation_plan",
+        "oa_operation"
+      ],
+      "originalCaseIds": [
+        "AC-18",
+        "AC-41",
+        "AC-42",
+        "AC-58",
+        "AC-59"
+      ],
+      "normativeAcceptance": "每种宣布支持的触发方式都有独立真实触发证据，不能只靠手动运行验收",
+      "negative": "重复触发不能创建重复业务副作用",
+      "specRef": "docs/设计包/47-全产品实施切片与首期开发规格.md#sl-at",
+      "uiRef": "docs/设计包/52-UI实现与页面状态规格.md",
+      "contractRef": "contracts/openapi.json",
+      "implementationStatus": "NOT_IMPLEMENTED",
+      "mappingLevel": "REQUIREMENT_TO_DOMAIN_SLICE_AND_TYPED_ACTIONS_NOT_CODE_LINE_TRACE"
+    },
+    {
+      "requirementId": "AT-03",
+      "domain": "AT",
+      "sliceId": "SL-AT",
+      "pageIds": [
+        "P14"
+      ],
+      "commandIds": [
+        "C22"
+      ],
+      "operationIds": [
+        "C22_create",
+        "C22_preview",
+        "C22_test",
+        "C22_pause",
+        "C22_resume",
+        "C22_trigger"
+      ],
+      "dataTables": [
+        "oa_automation_plan",
+        "oa_operation"
+      ],
+      "originalCaseIds": [
+        "AC-18",
+        "AC-41",
+        "AC-42",
+        "AC-58",
+        "AC-59"
+      ],
+      "normativeAcceptance": "跨时区与夏令时行为明确；过期/暂停不再自动启动",
+      "negative": "重复触发不能创建重复业务副作用",
+      "specRef": "docs/设计包/47-全产品实施切片与首期开发规格.md#sl-at",
+      "uiRef": "docs/设计包/52-UI实现与页面状态规格.md",
+      "contractRef": "contracts/openapi.json",
+      "implementationStatus": "NOT_IMPLEMENTED",
+      "mappingLevel": "REQUIREMENT_TO_DOMAIN_SLICE_AND_TYPED_ACTIONS_NOT_CODE_LINE_TRACE"
+    },
+    {
+      "requirementId": "AT-04",
+      "domain": "AT",
+      "sliceId": "SL-AT",
+      "pageIds": [
+        "P14"
+      ],
+      "commandIds": [
+        "C22"
+      ],
+      "operationIds": [
+        "C22_create",
+        "C22_preview",
+        "C22_test",
+        "C22_pause",
+        "C22_resume",
+        "C22_trigger"
+      ],
+      "dataTables": [
+        "oa_automation_plan",
+        "oa_operation"
+      ],
+      "originalCaseIds": [
+        "AC-18",
+        "AC-41",
+        "AC-42",
+        "AC-58",
+        "AC-59"
+      ],
+      "normativeAcceptance": "同一事件重复投递不重复办事；补跑有明确策略和记录",
+      "negative": "重复触发不能创建重复业务副作用",
+      "specRef": "docs/设计包/47-全产品实施切片与首期开发规格.md#sl-at",
+      "uiRef": "docs/设计包/52-UI实现与页面状态规格.md",
+      "contractRef": "contracts/openapi.json",
+      "implementationStatus": "NOT_IMPLEMENTED",
+      "mappingLevel": "REQUIREMENT_TO_DOMAIN_SLICE_AND_TYPED_ACTIONS_NOT_CODE_LINE_TRACE"
+    },
+    {
+      "requirementId": "AT-05",
+      "domain": "AT",
+      "sliceId": "SL-AT",
+      "pageIds": [
+        "P14"
+      ],
+      "commandIds": [
+        "C22"
+      ],
+      "operationIds": [
+        "C22_create",
+        "C22_preview",
+        "C22_test",
+        "C22_pause",
+        "C22_resume",
+        "C22_trigger"
+      ],
+      "dataTables": [
+        "oa_automation_plan",
+        "oa_operation"
+      ],
+      "originalCaseIds": [
+        "AC-18",
+        "AC-41",
+        "AC-42",
+        "AC-58",
+        "AC-59"
+      ],
+      "normativeAcceptance": "节点已交付后不继续生成无归属结果；身份失效时停止受影响动作",
+      "negative": "重复触发不能创建重复业务副作用",
+      "specRef": "docs/设计包/47-全产品实施切片与首期开发规格.md#sl-at",
+      "uiRef": "docs/设计包/52-UI实现与页面状态规格.md",
+      "contractRef": "contracts/openapi.json",
+      "implementationStatus": "NOT_IMPLEMENTED",
+      "mappingLevel": "REQUIREMENT_TO_DOMAIN_SLICE_AND_TYPED_ACTIONS_NOT_CODE_LINE_TRACE"
+    },
+    {
+      "requirementId": "AT-06",
+      "domain": "AT",
+      "sliceId": "SL-AT",
+      "pageIds": [
+        "P14"
+      ],
+      "commandIds": [
+        "C22"
+      ],
+      "operationIds": [
+        "C22_create",
+        "C22_preview",
+        "C22_test",
+        "C22_pause",
+        "C22_resume",
+        "C22_trigger"
+      ],
+      "dataTables": [
+        "oa_automation_plan",
+        "oa_operation"
+      ],
+      "originalCaseIds": [
+        "AC-18",
+        "AC-41",
+        "AC-42",
+        "AC-58",
+        "AC-59"
+      ],
+      "normativeAcceptance": "用户知道“为何触发/为何未触发”；可用测试对象验证且不污染正式统计",
+      "negative": "重复触发不能创建重复业务副作用",
+      "specRef": "docs/设计包/47-全产品实施切片与首期开发规格.md#sl-at",
+      "uiRef": "docs/设计包/52-UI实现与页面状态规格.md",
+      "contractRef": "contracts/openapi.json",
+      "implementationStatus": "NOT_IMPLEMENTED",
+      "mappingLevel": "REQUIREMENT_TO_DOMAIN_SLICE_AND_TYPED_ACTIONS_NOT_CODE_LINE_TRACE"
+    },
+    {
+      "requirementId": "IM-01",
+      "domain": "IM",
+      "sliceId": "SL-IM",
+      "pageIds": [
+        "P15",
+        "P21"
+      ],
+      "commandIds": [
+        "C15",
+        "C23"
+      ],
+      "operationIds": [
+        "C15_read",
+        "C15_remind",
+        "C15_withdraw",
+        "C15_appendWorkMessage",
+        "C15_saveMessageDraft",
+        "C23_receiveEvent"
+      ],
+      "dataTables": [
+        "oa_inbox",
+        "oa_outbox",
+        "oa_operation"
+      ],
+      "originalCaseIds": [
+        "AC-43",
+        "AC-44",
+        "AC-45",
+        "AC-57"
+      ],
+      "normativeAcceptance": "未绑定身份/未授权群无法使用任务能力；已绑定者消息定位到正确租户和人员",
+      "negative": "群成员身份不能被当作工作项授权",
+      "specRef": "docs/设计包/47-全产品实施切片与首期开发规格.md#sl-im",
+      "uiRef": "docs/设计包/52-UI实现与页面状态规格.md",
+      "contractRef": "contracts/openapi.json",
+      "implementationStatus": "NOT_IMPLEMENTED",
+      "mappingLevel": "REQUIREMENT_TO_DOMAIN_SLICE_AND_TYPED_ACTIONS_NOT_CODE_LINE_TRACE"
+    },
+    {
+      "requirementId": "IM-02",
+      "domain": "IM",
+      "sliceId": "SL-IM",
+      "pageIds": [
+        "P15",
+        "P21"
+      ],
+      "commandIds": [
+        "C15",
+        "C23"
+      ],
+      "operationIds": [
+        "C15_read",
+        "C15_remind",
+        "C15_withdraw",
+        "C15_appendWorkMessage",
+        "C15_saveMessageDraft",
+        "C23_receiveEvent"
+      ],
+      "dataTables": [
+        "oa_inbox",
+        "oa_outbox",
+        "oa_operation"
+      ],
+      "originalCaseIds": [
+        "AC-43",
+        "AC-44",
+        "AC-45",
+        "AC-57"
+      ],
+      "normativeAcceptance": "Web 与 IM 显示同一任务状态；引用继续原任务不产生重复节点",
+      "negative": "群成员身份不能被当作工作项授权",
+      "specRef": "docs/设计包/47-全产品实施切片与首期开发规格.md#sl-im",
+      "uiRef": "docs/设计包/52-UI实现与页面状态规格.md",
+      "contractRef": "contracts/openapi.json",
+      "implementationStatus": "NOT_IMPLEMENTED",
+      "mappingLevel": "REQUIREMENT_TO_DOMAIN_SLICE_AND_TYPED_ACTIONS_NOT_CODE_LINE_TRACE"
+    },
+    {
+      "requirementId": "IM-03",
+      "domain": "IM",
+      "sliceId": "SL-IM",
+      "pageIds": [
+        "P15",
+        "P21"
+      ],
+      "commandIds": [
+        "C15",
+        "C23"
+      ],
+      "operationIds": [
+        "C15_read",
+        "C15_remind",
+        "C15_withdraw",
+        "C15_appendWorkMessage",
+        "C15_saveMessageDraft",
+        "C23_receiveEvent"
+      ],
+      "dataTables": [
+        "oa_inbox",
+        "oa_outbox",
+        "oa_operation"
+      ],
+      "originalCaseIds": [
+        "AC-43",
+        "AC-44",
+        "AC-45",
+        "AC-57"
+      ],
+      "normativeAcceptance": "明确任务路由正确；歧义进入澄清；不因群内发话获得新资源权限",
+      "negative": "群成员身份不能被当作工作项授权",
+      "specRef": "docs/设计包/47-全产品实施切片与首期开发规格.md#sl-im",
+      "uiRef": "docs/设计包/52-UI实现与页面状态规格.md",
+      "contractRef": "contracts/openapi.json",
+      "implementationStatus": "NOT_IMPLEMENTED",
+      "mappingLevel": "REQUIREMENT_TO_DOMAIN_SLICE_AND_TYPED_ACTIONS_NOT_CODE_LINE_TRACE"
+    },
+    {
+      "requirementId": "IM-04",
+      "domain": "IM",
+      "sliceId": "SL-IM",
+      "pageIds": [
+        "P15",
+        "P21"
+      ],
+      "commandIds": [
+        "C15",
+        "C23"
+      ],
+      "operationIds": [
+        "C15_read",
+        "C15_remind",
+        "C15_withdraw",
+        "C15_appendWorkMessage",
+        "C15_saveMessageDraft",
+        "C23_receiveEvent"
+      ],
+      "dataTables": [
+        "oa_inbox",
+        "oa_outbox",
+        "oa_operation"
+      ],
+      "originalCaseIds": [
+        "AC-43",
+        "AC-44",
+        "AC-45",
+        "AC-57"
+      ],
+      "normativeAcceptance": "专家能看到被授权的必要背景，意见返回原节点；咨询不替代审批回执",
+      "negative": "群成员身份不能被当作工作项授权",
+      "specRef": "docs/设计包/47-全产品实施切片与首期开发规格.md#sl-im",
+      "uiRef": "docs/设计包/52-UI实现与页面状态规格.md",
+      "contractRef": "contracts/openapi.json",
+      "implementationStatus": "NOT_IMPLEMENTED",
+      "mappingLevel": "REQUIREMENT_TO_DOMAIN_SLICE_AND_TYPED_ACTIONS_NOT_CODE_LINE_TRACE"
+    },
+    {
+      "requirementId": "IM-05",
+      "domain": "IM",
+      "sliceId": "SL-IM",
+      "pageIds": [
+        "P15",
+        "P21"
+      ],
+      "commandIds": [
+        "C15",
+        "C23"
+      ],
+      "operationIds": [
+        "C15_read",
+        "C15_remind",
+        "C15_withdraw",
+        "C15_appendWorkMessage",
+        "C15_saveMessageDraft",
+        "C23_receiveEvent"
+      ],
+      "dataTables": [
+        "oa_inbox",
+        "oa_outbox",
+        "oa_operation"
+      ],
+      "originalCaseIds": [
+        "AC-43",
+        "AC-44",
+        "AC-45",
+        "AC-57"
+      ],
+      "normativeAcceptance": "群规则只在配置范围生效；防重复响应；群/成员/单聊记忆分别隔离",
+      "negative": "群成员身份不能被当作工作项授权",
+      "specRef": "docs/设计包/47-全产品实施切片与首期开发规格.md#sl-im",
+      "uiRef": "docs/设计包/52-UI实现与页面状态规格.md",
+      "contractRef": "contracts/openapi.json",
+      "implementationStatus": "NOT_IMPLEMENTED",
+      "mappingLevel": "REQUIREMENT_TO_DOMAIN_SLICE_AND_TYPED_ACTIONS_NOT_CODE_LINE_TRACE"
+    },
+    {
+      "requirementId": "IM-06",
+      "domain": "IM",
+      "sliceId": "SL-IM",
+      "pageIds": [
+        "P15",
+        "P21"
+      ],
+      "commandIds": [
+        "C15",
+        "C23"
+      ],
+      "operationIds": [
+        "C15_read",
+        "C15_remind",
+        "C15_withdraw",
+        "C15_appendWorkMessage",
+        "C15_saveMessageDraft",
+        "C23_receiveEvent"
+      ],
+      "dataTables": [
+        "oa_inbox",
+        "oa_outbox",
+        "oa_operation"
+      ],
+      "originalCaseIds": [
+        "AC-43",
+        "AC-44",
+        "AC-45",
+        "AC-57"
+      ],
+      "normativeAcceptance": "停用立即停止新接入；失败消息可查证/重投；不重复发送已确认内容",
+      "negative": "群成员身份不能被当作工作项授权",
+      "specRef": "docs/设计包/47-全产品实施切片与首期开发规格.md#sl-im",
+      "uiRef": "docs/设计包/52-UI实现与页面状态规格.md",
+      "contractRef": "contracts/openapi.json",
+      "implementationStatus": "NOT_IMPLEMENTED",
+      "mappingLevel": "REQUIREMENT_TO_DOMAIN_SLICE_AND_TYPED_ACTIONS_NOT_CODE_LINE_TRACE"
+    },
+    {
+      "requirementId": "RS-01",
+      "domain": "RS",
+      "sliceId": "SL-RS",
+      "pageIds": [
+        "P16",
+        "P02"
+      ],
+      "commandIds": [
+        "C09",
+        "C10",
+        "C11",
+        "C12",
+        "C14"
+      ],
+      "operationIds": [
+        "C09_submit",
+        "C09_decide",
+        "C10_requestReview",
+        "C10_decideReview",
+        "C11_checkCompletion",
+        "C11_submitDelivery",
+        "C12_receiveHandoff",
+        "C14_queryOperation",
+        "C14_reconcile"
+      ],
+      "dataTables": [
+        "oa_review",
+        "oa_completion_check",
+        "oa_delivery",
+        "oa_handoff",
+        "oa_handoff_receipt"
+      ],
+      "originalCaseIds": [
+        "AC-19",
+        "AC-20",
+        "AC-21",
+        "AC-22",
+        "AC-23",
+        "AC-31"
+      ],
+      "normativeAcceptance": "产物可打开；业务条件、必要审批和当前执行权全部成立才接受提交",
+      "negative": "子任务或运行完成不直接激活下游",
+      "specRef": "docs/设计包/47-全产品实施切片与首期开发规格.md#sl-rs",
+      "uiRef": "docs/设计包/52-UI实现与页面状态规格.md",
+      "contractRef": "contracts/openapi.json",
+      "implementationStatus": "NOT_IMPLEMENTED",
+      "mappingLevel": "REQUIREMENT_TO_DOMAIN_SLICE_AND_TYPED_ACTIONS_NOT_CODE_LINE_TRACE"
+    },
+    {
+      "requirementId": "RS-02",
+      "domain": "RS",
+      "sliceId": "SL-RS",
+      "pageIds": [
+        "P16",
+        "P02"
+      ],
+      "commandIds": [
+        "C09",
+        "C10",
+        "C11",
+        "C12",
+        "C14"
+      ],
+      "operationIds": [
+        "C09_submit",
+        "C09_decide",
+        "C10_requestReview",
+        "C10_decideReview",
+        "C11_checkCompletion",
+        "C11_submitDelivery",
+        "C12_receiveHandoff",
+        "C14_queryOperation",
+        "C14_reconcile"
+      ],
+      "dataTables": [
+        "oa_review",
+        "oa_completion_check",
+        "oa_delivery",
+        "oa_handoff",
+        "oa_handoff_receipt"
+      ],
+      "originalCaseIds": [
+        "AC-19",
+        "AC-20",
+        "AC-21",
+        "AC-22",
+        "AC-23",
+        "AC-31"
+      ],
+      "normativeAcceptance": "运行成功无产物/检查不通过不能显示业务完成；计数与详情一致",
+      "negative": "子任务或运行完成不直接激活下游",
+      "specRef": "docs/设计包/47-全产品实施切片与首期开发规格.md#sl-rs",
+      "uiRef": "docs/设计包/52-UI实现与页面状态规格.md",
+      "contractRef": "contracts/openapi.json",
+      "implementationStatus": "NOT_IMPLEMENTED",
+      "mappingLevel": "REQUIREMENT_TO_DOMAIN_SLICE_AND_TYPED_ACTIONS_NOT_CODE_LINE_TRACE"
+    },
+    {
+      "requirementId": "RS-03",
+      "domain": "RS",
+      "sliceId": "SL-RS",
+      "pageIds": [
+        "P16",
+        "P02"
+      ],
+      "commandIds": [
+        "C09",
+        "C10",
+        "C11",
+        "C12",
+        "C14"
+      ],
+      "operationIds": [
+        "C09_submit",
+        "C09_decide",
+        "C10_requestReview",
+        "C10_decideReview",
+        "C11_checkCompletion",
+        "C11_submitDelivery",
+        "C12_receiveHandoff",
+        "C14_queryOperation",
+        "C14_reconcile"
+      ],
+      "dataTables": [
+        "oa_review",
+        "oa_completion_check",
+        "oa_delivery",
+        "oa_handoff",
+        "oa_handoff_receipt"
+      ],
+      "originalCaseIds": [
+        "AC-19",
+        "AC-20",
+        "AC-21",
+        "AC-22",
+        "AC-23",
+        "AC-31"
+      ],
+      "normativeAcceptance": "接收人无需复制上游聊天即可继续；只收到其被授权的业务上下文",
+      "negative": "子任务或运行完成不直接激活下游",
+      "specRef": "docs/设计包/47-全产品实施切片与首期开发规格.md#sl-rs",
+      "uiRef": "docs/设计包/52-UI实现与页面状态规格.md",
+      "contractRef": "contracts/openapi.json",
+      "implementationStatus": "NOT_IMPLEMENTED",
+      "mappingLevel": "REQUIREMENT_TO_DOMAIN_SLICE_AND_TYPED_ACTIONS_NOT_CODE_LINE_TRACE"
+    },
+    {
+      "requirementId": "RS-04",
+      "domain": "RS",
+      "sliceId": "SL-RS",
+      "pageIds": [
+        "P16",
+        "P02"
+      ],
+      "commandIds": [
+        "C09",
+        "C10",
+        "C11",
+        "C12",
+        "C14"
+      ],
+      "operationIds": [
+        "C09_submit",
+        "C09_decide",
+        "C10_requestReview",
+        "C10_decideReview",
+        "C11_checkCompletion",
+        "C11_submitDelivery",
+        "C12_receiveHandoff",
+        "C14_queryOperation",
+        "C14_reconcile"
+      ],
+      "dataTables": [
+        "oa_review",
+        "oa_completion_check",
+        "oa_delivery",
+        "oa_handoff",
+        "oa_handoff_receipt"
+      ],
+      "originalCaseIds": [
+        "AC-19",
+        "AC-20",
+        "AC-21",
+        "AC-22",
+        "AC-23",
+        "AC-31"
+      ],
+      "normativeAcceptance": "重复提交/服务重启只激活一次下一节点；中间失败可定位并调和",
+      "negative": "子任务或运行完成不直接激活下游",
+      "specRef": "docs/设计包/47-全产品实施切片与首期开发规格.md#sl-rs",
+      "uiRef": "docs/设计包/52-UI实现与页面状态规格.md",
+      "contractRef": "contracts/openapi.json",
+      "implementationStatus": "NOT_IMPLEMENTED",
+      "mappingLevel": "REQUIREMENT_TO_DOMAIN_SLICE_AND_TYPED_ACTIONS_NOT_CODE_LINE_TRACE"
+    },
+    {
+      "requirementId": "RS-05",
+      "domain": "RS",
+      "sliceId": "SL-RS",
+      "pageIds": [
+        "P16",
+        "P02"
+      ],
+      "commandIds": [
+        "C09",
+        "C10",
+        "C11",
+        "C12",
+        "C14"
+      ],
+      "operationIds": [
+        "C09_submit",
+        "C09_decide",
+        "C10_requestReview",
+        "C10_decideReview",
+        "C11_checkCompletion",
+        "C11_submitDelivery",
+        "C12_receiveHandoff",
+        "C14_queryOperation",
+        "C14_reconcile"
+      ],
+      "dataTables": [
+        "oa_review",
+        "oa_completion_check",
+        "oa_delivery",
+        "oa_handoff",
+        "oa_handoff_receipt"
+      ],
+      "originalCaseIds": [
+        "AC-19",
+        "AC-20",
+        "AC-21",
+        "AC-22",
+        "AC-23",
+        "AC-31"
+      ],
+      "normativeAcceptance": "退回理由绑定交付项；原执行人收到明确返工任务，历史版本保留",
+      "negative": "子任务或运行完成不直接激活下游",
+      "specRef": "docs/设计包/47-全产品实施切片与首期开发规格.md#sl-rs",
+      "uiRef": "docs/设计包/52-UI实现与页面状态规格.md",
+      "contractRef": "contracts/openapi.json",
+      "implementationStatus": "NOT_IMPLEMENTED",
+      "mappingLevel": "REQUIREMENT_TO_DOMAIN_SLICE_AND_TYPED_ACTIONS_NOT_CODE_LINE_TRACE"
+    },
+    {
+      "requirementId": "RS-06",
+      "domain": "RS",
+      "sliceId": "SL-RS",
+      "pageIds": [
+        "P16",
+        "P02"
+      ],
+      "commandIds": [
+        "C09",
+        "C10",
+        "C11",
+        "C12",
+        "C14"
+      ],
+      "operationIds": [
+        "C09_submit",
+        "C09_decide",
+        "C10_requestReview",
+        "C10_decideReview",
+        "C11_checkCompletion",
+        "C11_submitDelivery",
+        "C12_receiveHandoff",
+        "C14_queryOperation",
+        "C14_reconcile"
+      ],
+      "dataTables": [
+        "oa_review",
+        "oa_completion_check",
+        "oa_delivery",
+        "oa_handoff",
+        "oa_handoff_receipt"
+      ],
+      "originalCaseIds": [
+        "AC-19",
+        "AC-20",
+        "AC-21",
+        "AC-22",
+        "AC-23",
+        "AC-31"
+      ],
+      "normativeAcceptance": "回执指向真实外部对象及当前状态；失败/不确定/部分成功均可表达",
+      "negative": "子任务或运行完成不直接激活下游",
+      "specRef": "docs/设计包/47-全产品实施切片与首期开发规格.md#sl-rs",
+      "uiRef": "docs/设计包/52-UI实现与页面状态规格.md",
+      "contractRef": "contracts/openapi.json",
+      "implementationStatus": "NOT_IMPLEMENTED",
+      "mappingLevel": "REQUIREMENT_TO_DOMAIN_SLICE_AND_TYPED_ACTIONS_NOT_CODE_LINE_TRACE"
+    },
+    {
+      "requirementId": "RS-07",
+      "domain": "RS",
+      "sliceId": "SL-RS",
+      "pageIds": [
+        "P16",
+        "P02"
+      ],
+      "commandIds": [
+        "C09",
+        "C10",
+        "C11",
+        "C12",
+        "C14"
+      ],
+      "operationIds": [
+        "C09_submit",
+        "C09_decide",
+        "C10_requestReview",
+        "C10_decideReview",
+        "C11_checkCompletion",
+        "C11_submitDelivery",
+        "C12_receiveHandoff",
+        "C14_queryOperation",
+        "C14_reconcile"
+      ],
+      "dataTables": [
+        "oa_review",
+        "oa_completion_check",
+        "oa_delivery",
+        "oa_handoff",
+        "oa_handoff_receipt"
+      ],
+      "originalCaseIds": [
+        "AC-19",
+        "AC-20",
+        "AC-21",
+        "AC-22",
+        "AC-23",
+        "AC-31"
+      ],
+      "normativeAcceptance": "下游无法读取交付物时不静默继续；取消/补偿有责任人和可追踪结果",
+      "negative": "子任务或运行完成不直接激活下游",
+      "specRef": "docs/设计包/47-全产品实施切片与首期开发规格.md#sl-rs",
+      "uiRef": "docs/设计包/52-UI实现与页面状态规格.md",
+      "contractRef": "contracts/openapi.json",
+      "implementationStatus": "NOT_IMPLEMENTED",
+      "mappingLevel": "REQUIREMENT_TO_DOMAIN_SLICE_AND_TYPED_ACTIONS_NOT_CODE_LINE_TRACE"
+    },
+    {
+      "requirementId": "SD-01",
+      "domain": "SD",
+      "sliceId": "SL-SD",
+      "pageIds": [
+        "P17"
+      ],
+      "commandIds": [
+        "C02",
+        "C26"
+      ],
+      "operationIds": [
+        "C02_startProcess",
+        "C26_draft",
+        "C26_check",
+        "C26_preview",
+        "C26_review",
+        "C26_publish"
+      ],
+      "dataTables": [
+        "oa_work_item",
+        "oa_asset_revision"
+      ],
+      "originalCaseIds": [
+        "AC-04",
+        "AC-05",
+        "AC-06",
+        "AC-48",
+        "AC-52"
+      ],
+      "normativeAcceptance": "画布保存、版本读取、员工待办和 Runtime 有相同节点配置；不维护两套脱节表单",
+      "negative": "已发布版本和在途实例不得被草稿静默覆盖",
+      "specRef": "docs/设计包/47-全产品实施切片与首期开发规格.md#sl-sd",
+      "uiRef": "docs/设计包/52-UI实现与页面状态规格.md",
+      "contractRef": "contracts/openapi.json",
+      "implementationStatus": "NOT_IMPLEMENTED",
+      "mappingLevel": "REQUIREMENT_TO_DOMAIN_SLICE_AND_TYPED_ACTIONS_NOT_CODE_LINE_TRACE"
+    },
+    {
+      "requirementId": "SD-02",
+      "domain": "SD",
+      "sliceId": "SL-SD",
+      "pageIds": [
+        "P17"
+      ],
+      "commandIds": [
+        "C02",
+        "C26"
+      ],
+      "operationIds": [
+        "C02_startProcess",
+        "C26_draft",
+        "C26_check",
+        "C26_preview",
+        "C26_review",
+        "C26_publish"
+      ],
+      "dataTables": [
+        "oa_work_item",
+        "oa_asset_revision"
+      ],
+      "originalCaseIds": [
+        "AC-04",
+        "AC-05",
+        "AC-06",
+        "AC-48",
+        "AC-52"
+      ],
+      "normativeAcceptance": "设计者能完成一个业务节点而无需手写角色/能力字符串",
+      "negative": "已发布版本和在途实例不得被草稿静默覆盖",
+      "specRef": "docs/设计包/47-全产品实施切片与首期开发规格.md#sl-sd",
+      "uiRef": "docs/设计包/52-UI实现与页面状态规格.md",
+      "contractRef": "contracts/openapi.json",
+      "implementationStatus": "NOT_IMPLEMENTED",
+      "mappingLevel": "REQUIREMENT_TO_DOMAIN_SLICE_AND_TYPED_ACTIONS_NOT_CODE_LINE_TRACE"
+    },
+    {
+      "requirementId": "SD-03",
+      "domain": "SD",
+      "sliceId": "SL-SD",
+      "pageIds": [
+        "P17"
+      ],
+      "commandIds": [
+        "C02",
+        "C26"
+      ],
+      "operationIds": [
+        "C02_startProcess",
+        "C26_draft",
+        "C26_check",
+        "C26_preview",
+        "C26_review",
+        "C26_publish"
+      ],
+      "dataTables": [
+        "oa_work_item",
+        "oa_asset_revision"
+      ],
+      "originalCaseIds": [
+        "AC-04",
+        "AC-05",
+        "AC-06",
+        "AC-48",
+        "AC-52"
+      ],
+      "normativeAcceptance": "设计预览和员工实际可选集合一致；更严格节点要求不可被个人默认覆盖",
+      "negative": "已发布版本和在途实例不得被草稿静默覆盖",
+      "specRef": "docs/设计包/47-全产品实施切片与首期开发规格.md#sl-sd",
+      "uiRef": "docs/设计包/52-UI实现与页面状态规格.md",
+      "contractRef": "contracts/openapi.json",
+      "implementationStatus": "NOT_IMPLEMENTED",
+      "mappingLevel": "REQUIREMENT_TO_DOMAIN_SLICE_AND_TYPED_ACTIONS_NOT_CODE_LINE_TRACE"
+    },
+    {
+      "requirementId": "SD-04",
+      "domain": "SD",
+      "sliceId": "SL-SD",
+      "pageIds": [
+        "P17"
+      ],
+      "commandIds": [
+        "C02",
+        "C26"
+      ],
+      "operationIds": [
+        "C02_startProcess",
+        "C26_draft",
+        "C26_check",
+        "C26_preview",
+        "C26_review",
+        "C26_publish"
+      ],
+      "dataTables": [
+        "oa_work_item",
+        "oa_asset_revision"
+      ],
+      "originalCaseIds": [
+        "AC-04",
+        "AC-05",
+        "AC-06",
+        "AC-48",
+        "AC-52"
+      ],
+      "normativeAcceptance": "发布前能看到每种责任人的待办内容；空候选、缺资料、无输出映射被发现",
+      "negative": "已发布版本和在途实例不得被草稿静默覆盖",
+      "specRef": "docs/设计包/47-全产品实施切片与首期开发规格.md#sl-sd",
+      "uiRef": "docs/设计包/52-UI实现与页面状态规格.md",
+      "contractRef": "contracts/openapi.json",
+      "implementationStatus": "NOT_IMPLEMENTED",
+      "mappingLevel": "REQUIREMENT_TO_DOMAIN_SLICE_AND_TYPED_ACTIONS_NOT_CODE_LINE_TRACE"
+    },
+    {
+      "requirementId": "SD-05",
+      "domain": "SD",
+      "sliceId": "SL-SD",
+      "pageIds": [
+        "P17"
+      ],
+      "commandIds": [
+        "C02",
+        "C26"
+      ],
+      "operationIds": [
+        "C02_startProcess",
+        "C26_draft",
+        "C26_check",
+        "C26_preview",
+        "C26_review",
+        "C26_publish"
+      ],
+      "dataTables": [
+        "oa_work_item",
+        "oa_asset_revision"
+      ],
+      "originalCaseIds": [
+        "AC-04",
+        "AC-05",
+        "AC-06",
+        "AC-48",
+        "AC-52"
+      ],
+      "normativeAcceptance": "发布检查可定位断路/无出口/循环无停止条件；异常有明确接手者",
+      "negative": "已发布版本和在途实例不得被草稿静默覆盖",
+      "specRef": "docs/设计包/47-全产品实施切片与首期开发规格.md#sl-sd",
+      "uiRef": "docs/设计包/52-UI实现与页面状态规格.md",
+      "contractRef": "contracts/openapi.json",
+      "implementationStatus": "NOT_IMPLEMENTED",
+      "mappingLevel": "REQUIREMENT_TO_DOMAIN_SLICE_AND_TYPED_ACTIONS_NOT_CODE_LINE_TRACE"
+    },
+    {
+      "requirementId": "SD-06",
+      "domain": "SD",
+      "sliceId": "SL-SD",
+      "pageIds": [
+        "P17"
+      ],
+      "commandIds": [
+        "C02",
+        "C26"
+      ],
+      "operationIds": [
+        "C02_startProcess",
+        "C26_draft",
+        "C26_check",
+        "C26_preview",
+        "C26_review",
+        "C26_publish"
+      ],
+      "dataTables": [
+        "oa_work_item",
+        "oa_asset_revision"
+      ],
+      "originalCaseIds": [
+        "AC-04",
+        "AC-05",
+        "AC-06",
+        "AC-48",
+        "AC-52"
+      ],
+      "normativeAcceptance": "旧实例不被静默改写；新版本清楚影响哪些岗位、资源和调用方",
+      "negative": "已发布版本和在途实例不得被草稿静默覆盖",
+      "specRef": "docs/设计包/47-全产品实施切片与首期开发规格.md#sl-sd",
+      "uiRef": "docs/设计包/52-UI实现与页面状态规格.md",
+      "contractRef": "contracts/openapi.json",
+      "implementationStatus": "NOT_IMPLEMENTED",
+      "mappingLevel": "REQUIREMENT_TO_DOMAIN_SLICE_AND_TYPED_ACTIONS_NOT_CODE_LINE_TRACE"
+    },
+    {
+      "requirementId": "AD-01",
+      "domain": "AD",
+      "sliceId": "SL-AD",
+      "pageIds": [
+        "P18",
+        "P07",
+        "P22"
+      ],
+      "commandIds": [
+        "C18",
+        "C24",
+        "C25"
+      ],
+      "operationIds": [
+        "C18_discover",
+        "C18_health",
+        "C18_authorize",
+        "C18_revoke",
+        "C24_identity",
+        "C24_grant",
+        "C24_revoke",
+        "C24_transfer",
+        "C24_privacy",
+        "C25_readInsights"
+      ],
+      "dataTables": [
+        "oa_execution_grant",
+        "oa_output_release"
+      ],
+      "originalCaseIds": [
+        "AC-08",
+        "AC-28",
+        "AC-32",
+        "AC-46",
+        "AC-47",
+        "AC-56",
+        "AC-59"
+      ],
+      "normativeAcceptance": "七类 canonical 登录夹具逐项验证；HR、身份、流程、审计、权限管理面互不误开放/误隐藏",
+      "negative": "不存在万能管理员读取全部私人内容的默认权限",
+      "specRef": "docs/设计包/47-全产品实施切片与首期开发规格.md#sl-ad",
+      "uiRef": "docs/设计包/52-UI实现与页面状态规格.md",
+      "contractRef": "contracts/openapi.json",
+      "implementationStatus": "NOT_IMPLEMENTED",
+      "mappingLevel": "REQUIREMENT_TO_DOMAIN_SLICE_AND_TYPED_ACTIONS_NOT_CODE_LINE_TRACE"
+    },
+    {
+      "requirementId": "AD-02",
+      "domain": "AD",
+      "sliceId": "SL-AD",
+      "pageIds": [
+        "P18",
+        "P07"
+      ],
+      "commandIds": [
+        "C18",
+        "C24",
+        "C25"
+      ],
+      "operationIds": [
+        "C18_discover",
+        "C18_health",
+        "C18_authorize",
+        "C18_revoke",
+        "C24_identity",
+        "C24_grant",
+        "C24_revoke",
+        "C24_transfer",
+        "C24_privacy",
+        "C25_readInsights"
+      ],
+      "dataTables": [
+        "oa_execution_grant",
+        "oa_output_release"
+      ],
+      "originalCaseIds": [
+        "AC-08",
+        "AC-28",
+        "AC-32",
+        "AC-46",
+        "AC-47",
+        "AC-56",
+        "AC-59"
+      ],
+      "normativeAcceptance": "被指定的普通业务审批人可完成自己的审批；其他请求仍不可见，自批仍拒绝",
+      "negative": "不存在万能管理员读取全部私人内容的默认权限",
+      "specRef": "docs/设计包/47-全产品实施切片与首期开发规格.md#sl-ad",
+      "uiRef": "docs/设计包/52-UI实现与页面状态规格.md",
+      "contractRef": "contracts/openapi.json",
+      "implementationStatus": "NOT_IMPLEMENTED",
+      "mappingLevel": "REQUIREMENT_TO_DOMAIN_SLICE_AND_TYPED_ACTIONS_NOT_CODE_LINE_TRACE"
+    },
+    {
+      "requirementId": "AD-03",
+      "domain": "AD",
+      "sliceId": "SL-AD",
+      "pageIds": [
+        "P18",
+        "P07"
+      ],
+      "commandIds": [
+        "C18",
+        "C24",
+        "C25"
+      ],
+      "operationIds": [
+        "C18_discover",
+        "C18_health",
+        "C18_authorize",
+        "C18_revoke",
+        "C24_identity",
+        "C24_grant",
+        "C24_revoke",
+        "C24_transfer",
+        "C24_privacy",
+        "C25_readInsights"
+      ],
+      "dataTables": [
+        "oa_execution_grant",
+        "oa_output_release"
+      ],
+      "originalCaseIds": [
+        "AC-08",
+        "AC-28",
+        "AC-32",
+        "AC-46",
+        "AC-47",
+        "AC-56",
+        "AC-59"
+      ],
+      "normativeAcceptance": "调岗不会自动自授高权；每个授权可说明来源、用途、到期与撤销影响",
+      "negative": "不存在万能管理员读取全部私人内容的默认权限",
+      "specRef": "docs/设计包/47-全产品实施切片与首期开发规格.md#sl-ad",
+      "uiRef": "docs/设计包/52-UI实现与页面状态规格.md",
+      "contractRef": "contracts/openapi.json",
+      "implementationStatus": "NOT_IMPLEMENTED",
+      "mappingLevel": "REQUIREMENT_TO_DOMAIN_SLICE_AND_TYPED_ACTIONS_NOT_CODE_LINE_TRACE"
+    },
+    {
+      "requirementId": "AD-04",
+      "domain": "AD",
+      "sliceId": "SL-AD",
+      "pageIds": [
+        "P18",
+        "P07",
+        "P22"
+      ],
+      "commandIds": [
+        "C18",
+        "C24",
+        "C25"
+      ],
+      "operationIds": [
+        "C18_discover",
+        "C18_health",
+        "C18_authorize",
+        "C18_revoke",
+        "C24_identity",
+        "C24_grant",
+        "C24_revoke",
+        "C24_transfer",
+        "C24_privacy",
+        "C25_readInsights"
+      ],
+      "dataTables": [
+        "oa_execution_grant",
+        "oa_output_release"
+      ],
+      "originalCaseIds": [
+        "AC-08",
+        "AC-28",
+        "AC-32",
+        "AC-46",
+        "AC-47",
+        "AC-56",
+        "AC-59"
+      ],
+      "normativeAcceptance": "已批准资源用户能自助选用；超范围申请精确到资源/动作，不默认要求全租户权限",
+      "negative": "不存在万能管理员读取全部私人内容的默认权限",
+      "specRef": "docs/设计包/47-全产品实施切片与首期开发规格.md#sl-ad",
+      "uiRef": "docs/设计包/52-UI实现与页面状态规格.md",
+      "contractRef": "contracts/openapi.json",
+      "implementationStatus": "NOT_IMPLEMENTED",
+      "mappingLevel": "REQUIREMENT_TO_DOMAIN_SLICE_AND_TYPED_ACTIONS_NOT_CODE_LINE_TRACE"
+    },
+    {
+      "requirementId": "AD-05",
+      "domain": "AD",
+      "sliceId": "SL-AD",
+      "pageIds": [
+        "P18",
+        "P07"
+      ],
+      "commandIds": [
+        "C18",
+        "C24",
+        "C25"
+      ],
+      "operationIds": [
+        "C18_discover",
+        "C18_health",
+        "C18_authorize",
+        "C18_revoke",
+        "C24_identity",
+        "C24_grant",
+        "C24_revoke",
+        "C24_transfer",
+        "C24_privacy",
+        "C25_readInsights"
+      ],
+      "dataTables": [
+        "oa_execution_grant",
+        "oa_output_release"
+      ],
+      "originalCaseIds": [
+        "AC-08",
+        "AC-28",
+        "AC-32",
+        "AC-46",
+        "AC-47",
+        "AC-56",
+        "AC-59"
+      ],
+      "normativeAcceptance": "员工能看实际继承配置及不可更改原因；管理员变更不覆写历史执行证据",
+      "negative": "不存在万能管理员读取全部私人内容的默认权限",
+      "specRef": "docs/设计包/47-全产品实施切片与首期开发规格.md#sl-ad",
+      "uiRef": "docs/设计包/52-UI实现与页面状态规格.md",
+      "contractRef": "contracts/openapi.json",
+      "implementationStatus": "NOT_IMPLEMENTED",
+      "mappingLevel": "REQUIREMENT_TO_DOMAIN_SLICE_AND_TYPED_ACTIONS_NOT_CODE_LINE_TRACE"
+    },
+    {
+      "requirementId": "AD-06",
+      "domain": "AD",
+      "sliceId": "SL-AD",
+      "pageIds": [
+        "P18",
+        "P07"
+      ],
+      "commandIds": [
+        "C18",
+        "C24",
+        "C25"
+      ],
+      "operationIds": [
+        "C18_discover",
+        "C18_health",
+        "C18_authorize",
+        "C18_revoke",
+        "C24_identity",
+        "C24_grant",
+        "C24_revoke",
+        "C24_transfer",
+        "C24_privacy",
+        "C25_readInsights"
+      ],
+      "dataTables": [
+        "oa_execution_grant",
+        "oa_output_release"
+      ],
+      "originalCaseIds": [
+        "AC-08",
+        "AC-28",
+        "AC-32",
+        "AC-46",
+        "AC-47",
+        "AC-56",
+        "AC-59"
+      ],
+      "normativeAcceptance": "管理员看状态、范围、到期和引用；私人凭据及聊天内容不因管理员身份直接可见",
+      "negative": "不存在万能管理员读取全部私人内容的默认权限",
+      "specRef": "docs/设计包/47-全产品实施切片与首期开发规格.md#sl-ad",
+      "uiRef": "docs/设计包/52-UI实现与页面状态规格.md",
+      "contractRef": "contracts/openapi.json",
+      "implementationStatus": "NOT_IMPLEMENTED",
+      "mappingLevel": "REQUIREMENT_TO_DOMAIN_SLICE_AND_TYPED_ACTIONS_NOT_CODE_LINE_TRACE"
+    },
+    {
+      "requirementId": "AD-07",
+      "domain": "AD",
+      "sliceId": "SL-AD",
+      "pageIds": [
+        "P18",
+        "P07"
+      ],
+      "commandIds": [
+        "C18",
+        "C24",
+        "C25"
+      ],
+      "operationIds": [
+        "C18_discover",
+        "C18_health",
+        "C18_authorize",
+        "C18_revoke",
+        "C24_identity",
+        "C24_grant",
+        "C24_revoke",
+        "C24_transfer",
+        "C24_privacy",
+        "C25_readInsights"
+      ],
+      "dataTables": [
+        "oa_execution_grant",
+        "oa_output_release"
+      ],
+      "originalCaseIds": [
+        "AC-08",
+        "AC-28",
+        "AC-32",
+        "AC-46",
+        "AC-47",
+        "AC-56",
+        "AC-59"
+      ],
+      "normativeAcceptance": "能列出受影响任务和资源；执行后授权与运行中动作及时复判",
+      "negative": "不存在万能管理员读取全部私人内容的默认权限",
+      "specRef": "docs/设计包/47-全产品实施切片与首期开发规格.md#sl-ad",
+      "uiRef": "docs/设计包/52-UI实现与页面状态规格.md",
+      "contractRef": "contracts/openapi.json",
+      "implementationStatus": "NOT_IMPLEMENTED",
+      "mappingLevel": "REQUIREMENT_TO_DOMAIN_SLICE_AND_TYPED_ACTIONS_NOT_CODE_LINE_TRACE"
+    },
+    {
+      "requirementId": "AD-08",
+      "domain": "AD",
+      "sliceId": "SL-AD",
+      "pageIds": [
+        "P18",
+        "P07",
+        "P22"
+      ],
+      "commandIds": [
+        "C18",
+        "C24",
+        "C25"
+      ],
+      "operationIds": [
+        "C18_discover",
+        "C18_health",
+        "C18_authorize",
+        "C18_revoke",
+        "C24_identity",
+        "C24_grant",
+        "C24_revoke",
+        "C24_transfer",
+        "C24_privacy",
+        "C25_readInsights"
+      ],
+      "dataTables": [
+        "oa_execution_grant",
+        "oa_output_release"
+      ],
+      "originalCaseIds": [
+        "AC-08",
+        "AC-28",
+        "AC-32",
+        "AC-46",
+        "AC-47",
+        "AC-56",
+        "AC-59"
+      ],
+      "normativeAcceptance": "批量操作有预览和分批结果；失败可恢复，不改在途快照，不把未验证资源标可用",
+      "negative": "不存在万能管理员读取全部私人内容的默认权限",
+      "specRef": "docs/设计包/47-全产品实施切片与首期开发规格.md#sl-ad",
+      "uiRef": "docs/设计包/52-UI实现与页面状态规格.md",
+      "contractRef": "contracts/openapi.json",
+      "implementationStatus": "NOT_IMPLEMENTED",
+      "mappingLevel": "REQUIREMENT_TO_DOMAIN_SLICE_AND_TYPED_ACTIONS_NOT_CODE_LINE_TRACE"
+    },
+    {
+      "requirementId": "OP-01",
+      "domain": "OP",
+      "sliceId": "SL-OP",
+      "pageIds": [
+        "P19",
+        "P21"
+      ],
+      "commandIds": [
+        "C14",
+        "C25"
+      ],
+      "operationIds": [
+        "C14_queryOperation",
+        "C14_reconcile",
+        "C25_readInsights"
+      ],
+      "dataTables": [
+        "oa_operation",
+        "oa_invocation",
+        "oa_outbox"
+      ],
+      "originalCaseIds": [
+        "AC-01",
+        "AC-49",
+        "AC-50",
+        "AC-51",
+        "AC-53",
+        "AC-54",
+        "AC-55",
+        "AC-56",
+        "AC-58",
+        "AC-60"
+      ],
+      "normativeAcceptance": "指定 8765 页面可访问；版本可对应；真实租户、人、Agent、依赖共同完成首条链",
+      "negative": "运行成功率不能冒充业务完成率",
+      "specRef": "docs/设计包/47-全产品实施切片与首期开发规格.md#sl-op",
+      "uiRef": "docs/设计包/52-UI实现与页面状态规格.md",
+      "contractRef": "contracts/openapi.json",
+      "implementationStatus": "NOT_IMPLEMENTED",
+      "mappingLevel": "REQUIREMENT_TO_DOMAIN_SLICE_AND_TYPED_ACTIONS_NOT_CODE_LINE_TRACE"
+    },
+    {
+      "requirementId": "OP-02",
+      "domain": "OP",
+      "sliceId": "SL-OP",
+      "pageIds": [
+        "P19",
+        "P21",
+        "P22"
+      ],
+      "commandIds": [
+        "C14",
+        "C25"
+      ],
+      "operationIds": [
+        "C14_queryOperation",
+        "C14_reconcile",
+        "C25_readInsights"
+      ],
+      "dataTables": [
+        "oa_operation",
+        "oa_invocation",
+        "oa_outbox"
+      ],
+      "originalCaseIds": [
+        "AC-01",
+        "AC-49",
+        "AC-50",
+        "AC-51",
+        "AC-53",
+        "AC-54",
+        "AC-55",
+        "AC-56",
+        "AC-58",
+        "AC-60"
+      ],
+      "normativeAcceptance": "能从一条业务任务逐级追到原始记录；不以接口 200 或单测通过替代运行完成",
+      "negative": "运行成功率不能冒充业务完成率",
+      "specRef": "docs/设计包/47-全产品实施切片与首期开发规格.md#sl-op",
+      "uiRef": "docs/设计包/52-UI实现与页面状态规格.md",
+      "contractRef": "contracts/openapi.json",
+      "implementationStatus": "NOT_IMPLEMENTED",
+      "mappingLevel": "REQUIREMENT_TO_DOMAIN_SLICE_AND_TYPED_ACTIONS_NOT_CODE_LINE_TRACE"
+    },
+    {
+      "requirementId": "OP-03",
+      "domain": "OP",
+      "sliceId": "SL-OP",
+      "pageIds": [
+        "P19",
+        "P21"
+      ],
+      "commandIds": [
+        "C14",
+        "C25"
+      ],
+      "operationIds": [
+        "C14_queryOperation",
+        "C14_reconcile",
+        "C25_readInsights"
+      ],
+      "dataTables": [
+        "oa_operation",
+        "oa_invocation",
+        "oa_outbox"
+      ],
+      "originalCaseIds": [
+        "AC-01",
+        "AC-49",
+        "AC-50",
+        "AC-51",
+        "AC-53",
+        "AC-54",
+        "AC-55",
+        "AC-56",
+        "AC-58",
+        "AC-60"
+      ],
+      "normativeAcceptance": "相同异常两种视图关联；普通页面没有 Cookie、UUID、实现状态等探测文案",
+      "negative": "运行成功率不能冒充业务完成率",
+      "specRef": "docs/设计包/47-全产品实施切片与首期开发规格.md#sl-op",
+      "uiRef": "docs/设计包/52-UI实现与页面状态规格.md",
+      "contractRef": "contracts/openapi.json",
+      "implementationStatus": "NOT_IMPLEMENTED",
+      "mappingLevel": "REQUIREMENT_TO_DOMAIN_SLICE_AND_TYPED_ACTIONS_NOT_CODE_LINE_TRACE"
+    },
+    {
+      "requirementId": "OP-04",
+      "domain": "OP",
+      "sliceId": "SL-OP",
+      "pageIds": [
+        "P19",
+        "P21"
+      ],
+      "commandIds": [
+        "C14",
+        "C25"
+      ],
+      "operationIds": [
+        "C14_queryOperation",
+        "C14_reconcile",
+        "C25_readInsights"
+      ],
+      "dataTables": [
+        "oa_operation",
+        "oa_invocation",
+        "oa_outbox"
+      ],
+      "originalCaseIds": [
+        "AC-01",
+        "AC-49",
+        "AC-50",
+        "AC-51",
+        "AC-53",
+        "AC-54",
+        "AC-55",
+        "AC-56",
+        "AC-58",
+        "AC-60"
+      ],
+      "normativeAcceptance": "费用/指标可对账；空数据明确无数据；不把 AI 运行数冒充岗位工作成果",
+      "negative": "运行成功率不能冒充业务完成率",
+      "specRef": "docs/设计包/47-全产品实施切片与首期开发规格.md#sl-op",
+      "uiRef": "docs/设计包/52-UI实现与页面状态规格.md",
+      "contractRef": "contracts/openapi.json",
+      "implementationStatus": "NOT_IMPLEMENTED",
+      "mappingLevel": "REQUIREMENT_TO_DOMAIN_SLICE_AND_TYPED_ACTIONS_NOT_CODE_LINE_TRACE"
+    },
+    {
+      "requirementId": "OP-05",
+      "domain": "OP",
+      "sliceId": "SL-OP",
+      "pageIds": [
+        "P19",
+        "P21"
+      ],
+      "commandIds": [
+        "C14",
+        "C25"
+      ],
+      "operationIds": [
+        "C14_queryOperation",
+        "C14_reconcile",
+        "C25_readInsights"
+      ],
+      "dataTables": [
+        "oa_operation",
+        "oa_invocation",
+        "oa_outbox"
+      ],
+      "originalCaseIds": [
+        "AC-01",
+        "AC-49",
+        "AC-50",
+        "AC-51",
+        "AC-53",
+        "AC-54",
+        "AC-55",
+        "AC-56",
+        "AC-58",
+        "AC-60"
+      ],
+      "normativeAcceptance": "中文长文本、键盘/读屏、窄屏、加载/空/错/权限态均按实际覆盖矩阵验收",
+      "negative": "运行成功率不能冒充业务完成率",
+      "specRef": "docs/设计包/47-全产品实施切片与首期开发规格.md#sl-op",
+      "uiRef": "docs/设计包/52-UI实现与页面状态规格.md",
+      "contractRef": "contracts/openapi.json",
+      "implementationStatus": "NOT_IMPLEMENTED",
+      "mappingLevel": "REQUIREMENT_TO_DOMAIN_SLICE_AND_TYPED_ACTIONS_NOT_CODE_LINE_TRACE"
+    },
+    {
+      "requirementId": "OP-06",
+      "domain": "OP",
+      "sliceId": "SL-OP",
+      "pageIds": [
+        "P19",
+        "P21"
+      ],
+      "commandIds": [
+        "C14",
+        "C25"
+      ],
+      "operationIds": [
+        "C14_queryOperation",
+        "C14_reconcile",
+        "C25_readInsights"
+      ],
+      "dataTables": [
+        "oa_operation",
+        "oa_invocation",
+        "oa_outbox"
+      ],
+      "originalCaseIds": [
+        "AC-01",
+        "AC-49",
+        "AC-50",
+        "AC-51",
+        "AC-53",
+        "AC-54",
+        "AC-55",
+        "AC-56",
+        "AC-58",
+        "AC-60"
+      ],
+      "normativeAcceptance": "本地任务不依赖浏览器持续在线；不可用环境明确排队/失败，恢复无重复执行",
+      "negative": "运行成功率不能冒充业务完成率",
+      "specRef": "docs/设计包/47-全产品实施切片与首期开发规格.md#sl-op",
+      "uiRef": "docs/设计包/52-UI实现与页面状态规格.md",
+      "contractRef": "contracts/openapi.json",
+      "implementationStatus": "NOT_IMPLEMENTED",
+      "mappingLevel": "REQUIREMENT_TO_DOMAIN_SLICE_AND_TYPED_ACTIONS_NOT_CODE_LINE_TRACE"
+    },
+    {
+      "requirementId": "OP-07",
+      "domain": "OP",
+      "sliceId": "SL-OP",
+      "pageIds": [
+        "P19",
+        "P21"
+      ],
+      "commandIds": [
+        "C14",
+        "C25"
+      ],
+      "operationIds": [
+        "C14_queryOperation",
+        "C14_reconcile",
+        "C25_readInsights"
+      ],
+      "dataTables": [
+        "oa_operation",
+        "oa_invocation",
+        "oa_outbox"
+      ],
+      "originalCaseIds": [
+        "AC-01",
+        "AC-49",
+        "AC-50",
+        "AC-51",
+        "AC-53",
+        "AC-54",
+        "AC-55",
+        "AC-56",
+        "AC-58",
+        "AC-60"
+      ],
+      "normativeAcceptance": "同一变更各入口一致；扩展事件有来源和去重；导出默认脱敏且可支持排错",
+      "negative": "运行成功率不能冒充业务完成率",
+      "specRef": "docs/设计包/47-全产品实施切片与首期开发规格.md#sl-op",
+      "uiRef": "docs/设计包/52-UI实现与页面状态规格.md",
+      "contractRef": "contracts/openapi.json",
+      "implementationStatus": "NOT_IMPLEMENTED",
+      "mappingLevel": "REQUIREMENT_TO_DOMAIN_SLICE_AND_TYPED_ACTIONS_NOT_CODE_LINE_TRACE"
+    },
+    {
+      "requirementId": "OP-08",
+      "domain": "OP",
+      "sliceId": "SL-OP",
+      "pageIds": [
+        "P19",
+        "P21"
+      ],
+      "commandIds": [
+        "C14",
+        "C25"
+      ],
+      "operationIds": [
+        "C14_queryOperation",
+        "C14_reconcile",
+        "C25_readInsights"
+      ],
+      "dataTables": [
+        "oa_operation",
+        "oa_invocation",
+        "oa_outbox"
+      ],
+      "originalCaseIds": [
+        "AC-01",
+        "AC-49",
+        "AC-50",
+        "AC-51",
+        "AC-53",
+        "AC-54",
+        "AC-55",
+        "AC-56",
+        "AC-58",
+        "AC-60"
+      ],
+      "normativeAcceptance": "升级后关键任务回归通过；备份恢复后的任务、版本、产物关联完整；业务收益由实际试点测量",
+      "negative": "运行成功率不能冒充业务完成率",
+      "specRef": "docs/设计包/47-全产品实施切片与首期开发规格.md#sl-op",
+      "uiRef": "docs/设计包/52-UI实现与页面状态规格.md",
+      "contractRef": "contracts/openapi.json",
+      "implementationStatus": "NOT_IMPLEMENTED",
+      "mappingLevel": "REQUIREMENT_TO_DOMAIN_SLICE_AND_TYPED_ACTIONS_NOT_CODE_LINE_TRACE"
+    },
+    {
+      "requirementId": "HC-01",
+      "domain": "HC",
+      "sliceId": "SL-HC",
+      "pageIds": [
+        "P03",
+        "P02"
+      ],
+      "commandIds": [
+        "C08",
+        "C09",
+        "C21",
+        "C23"
+      ],
+      "operationIds": [
+        "C08_request",
+        "C08_accept",
+        "C08_decline",
+        "C09_submit",
+        "C09_decide",
+        "C21_configure",
+        "C21_execute",
+        "C21_replace",
+        "C21_control",
+        "C23_receiveEvent"
+      ],
+      "dataTables": [
+        "oa_human_task",
+        "oa_binding"
+      ],
+      "originalCaseIds": [
+        "AC-06",
+        "AC-13",
+        "AC-14",
+        "AC-15",
+        "AC-39",
+        "AC-45"
+      ],
+      "normativeAcceptance": "同一共享 Agent 被 A/B 使用时，可追溯每次调用由谁发起、为哪项分工服务、谁负责结果；不误转移资产归属",
+      "negative": "多人不得覆盖同一个工作项的当前Agent分配",
+      "specRef": "docs/设计包/47-全产品实施切片与首期开发规格.md#sl-hc",
+      "uiRef": "docs/设计包/52-UI实现与页面状态规格.md",
+      "contractRef": "contracts/openapi.json",
+      "implementationStatus": "NOT_IMPLEMENTED",
+      "mappingLevel": "REQUIREMENT_TO_DOMAIN_SLICE_AND_TYPED_ACTIONS_NOT_CODE_LINE_TRACE"
+    },
+    {
+      "requirementId": "HC-02",
+      "domain": "HC",
+      "sliceId": "SL-HC",
+      "pageIds": [
+        "P03",
+        "P02"
+      ],
+      "commandIds": [
+        "C08",
+        "C09",
+        "C21",
+        "C23"
+      ],
+      "operationIds": [
+        "C08_request",
+        "C08_accept",
+        "C08_decline",
+        "C09_submit",
+        "C09_decide",
+        "C21_configure",
+        "C21_execute",
+        "C21_replace",
+        "C21_control",
+        "C23_receiveEvent"
+      ],
+      "dataTables": [
+        "oa_human_task",
+        "oa_binding"
+      ],
+      "originalCaseIds": [
+        "AC-06",
+        "AC-13",
+        "AC-14",
+        "AC-15",
+        "AC-39",
+        "AC-45"
+      ],
+      "normativeAcceptance": "A/B 同时选择不同 Agent 不竞争覆盖主任务 current_assignment_id；每项贡献能回到唯一主任务",
+      "negative": "多人不得覆盖同一个工作项的当前Agent分配",
+      "specRef": "docs/设计包/47-全产品实施切片与首期开发规格.md#sl-hc",
+      "uiRef": "docs/设计包/52-UI实现与页面状态规格.md",
+      "contractRef": "contracts/openapi.json",
+      "implementationStatus": "NOT_IMPLEMENTED",
+      "mappingLevel": "REQUIREMENT_TO_DOMAIN_SLICE_AND_TYPED_ACTIONS_NOT_CODE_LINE_TRACE"
+    },
+    {
+      "requirementId": "HC-03",
+      "domain": "HC",
+      "sliceId": "SL-HC",
+      "pageIds": [
+        "P03",
+        "P02",
+        "P22"
+      ],
+      "commandIds": [
+        "C08",
+        "C09",
+        "C21",
+        "C23"
+      ],
+      "operationIds": [
+        "C08_request",
+        "C08_accept",
+        "C08_decline",
+        "C09_submit",
+        "C09_decide",
+        "C21_configure",
+        "C21_execute",
+        "C21_replace",
+        "C21_control",
+        "C23_receiveEvent"
+      ],
+      "dataTables": [
+        "oa_human_task",
+        "oa_binding"
+      ],
+      "originalCaseIds": [
+        "AC-06",
+        "AC-13",
+        "AC-14",
+        "AC-15",
+        "AC-39",
+        "AC-45"
+      ],
+      "normativeAcceptance": "发送共享消息不能获得修改他人 Agent、运行私人连接器或代替对方审批的权力",
+      "negative": "多人不得覆盖同一个工作项的当前Agent分配",
+      "specRef": "docs/设计包/47-全产品实施切片与首期开发规格.md#sl-hc",
+      "uiRef": "docs/设计包/52-UI实现与页面状态规格.md",
+      "contractRef": "contracts/openapi.json",
+      "implementationStatus": "NOT_IMPLEMENTED",
+      "mappingLevel": "REQUIREMENT_TO_DOMAIN_SLICE_AND_TYPED_ACTIONS_NOT_CODE_LINE_TRACE"
+    },
+    {
+      "requirementId": "HC-04",
+      "domain": "HC",
+      "sliceId": "SL-HC",
+      "pageIds": [
+        "P03",
+        "P02"
+      ],
+      "commandIds": [
+        "C08",
+        "C09",
+        "C21",
+        "C23"
+      ],
+      "operationIds": [
+        "C08_request",
+        "C08_accept",
+        "C08_decline",
+        "C09_submit",
+        "C09_decide",
+        "C21_configure",
+        "C21_execute",
+        "C21_replace",
+        "C21_control",
+        "C23_receiveEvent"
+      ],
+      "dataTables": [
+        "oa_human_task",
+        "oa_binding"
+      ],
+      "originalCaseIds": [
+        "AC-06",
+        "AC-13",
+        "AC-14",
+        "AC-15",
+        "AC-39",
+        "AC-45"
+      ],
+      "normativeAcceptance": "人能知道接下什么；拒绝/超时有回路；自动分派有已存在的合法依据",
+      "negative": "多人不得覆盖同一个工作项的当前Agent分配",
+      "specRef": "docs/设计包/47-全产品实施切片与首期开发规格.md#sl-hc",
+      "uiRef": "docs/设计包/52-UI实现与页面状态规格.md",
+      "contractRef": "contracts/openapi.json",
+      "implementationStatus": "NOT_IMPLEMENTED",
+      "mappingLevel": "REQUIREMENT_TO_DOMAIN_SLICE_AND_TYPED_ACTIONS_NOT_CODE_LINE_TRACE"
+    },
+    {
+      "requirementId": "HC-05",
+      "domain": "HC",
+      "sliceId": "SL-HC",
+      "pageIds": [
+        "P03",
+        "P02"
+      ],
+      "commandIds": [
+        "C08",
+        "C09",
+        "C21",
+        "C23"
+      ],
+      "operationIds": [
+        "C08_request",
+        "C08_accept",
+        "C08_decline",
+        "C09_submit",
+        "C09_decide",
+        "C21_configure",
+        "C21_execute",
+        "C21_replace",
+        "C21_control",
+        "C23_receiveEvent"
+      ],
+      "dataTables": [
+        "oa_human_task",
+        "oa_binding"
+      ],
+      "originalCaseIds": [
+        "AC-06",
+        "AC-13",
+        "AC-14",
+        "AC-15",
+        "AC-39",
+        "AC-45"
+      ],
+      "normativeAcceptance": "新成员得到当前允许的上下文；退出者不能继续提交；在途贡献有清楚接收人",
+      "negative": "多人不得覆盖同一个工作项的当前Agent分配",
+      "specRef": "docs/设计包/47-全产品实施切片与首期开发规格.md#sl-hc",
+      "uiRef": "docs/设计包/52-UI实现与页面状态规格.md",
+      "contractRef": "contracts/openapi.json",
+      "implementationStatus": "NOT_IMPLEMENTED",
+      "mappingLevel": "REQUIREMENT_TO_DOMAIN_SLICE_AND_TYPED_ACTIONS_NOT_CODE_LINE_TRACE"
+    },
+    {
+      "requirementId": "HC-06",
+      "domain": "HC",
+      "sliceId": "SL-HC",
+      "pageIds": [
+        "P03",
+        "P02"
+      ],
+      "commandIds": [
+        "C08",
+        "C09",
+        "C21",
+        "C23"
+      ],
+      "operationIds": [
+        "C08_request",
+        "C08_accept",
+        "C08_decline",
+        "C09_submit",
+        "C09_decide",
+        "C21_configure",
+        "C21_execute",
+        "C21_replace",
+        "C21_control",
+        "C23_receiveEvent"
+      ],
+      "dataTables": [
+        "oa_human_task",
+        "oa_binding"
+      ],
+      "originalCaseIds": [
+        "AC-06",
+        "AC-13",
+        "AC-14",
+        "AC-15",
+        "AC-39",
+        "AC-45"
+      ],
+      "normativeAcceptance": "协作人确认专业贡献、主执行人汇总、责任人/审核者履职均可追溯；子任务完成不自动关闭主节点",
+      "negative": "多人不得覆盖同一个工作项的当前Agent分配",
+      "specRef": "docs/设计包/47-全产品实施切片与首期开发规格.md#sl-hc",
+      "uiRef": "docs/设计包/52-UI实现与页面状态规格.md",
+      "contractRef": "contracts/openapi.json",
+      "implementationStatus": "NOT_IMPLEMENTED",
+      "mappingLevel": "REQUIREMENT_TO_DOMAIN_SLICE_AND_TYPED_ACTIONS_NOT_CODE_LINE_TRACE"
+    },
+    {
+      "requirementId": "HC-07",
+      "domain": "HC",
+      "sliceId": "SL-HC",
+      "pageIds": [
+        "P03",
+        "P02"
+      ],
+      "commandIds": [
+        "C08",
+        "C09",
+        "C21",
+        "C23"
+      ],
+      "operationIds": [
+        "C08_request",
+        "C08_accept",
+        "C08_decline",
+        "C09_submit",
+        "C09_decide",
+        "C21_configure",
+        "C21_execute",
+        "C21_replace",
+        "C21_control",
+        "C23_receiveEvent"
+      ],
+      "dataTables": [
+        "oa_human_task",
+        "oa_binding"
+      ],
+      "originalCaseIds": [
+        "AC-06",
+        "AC-13",
+        "AC-14",
+        "AC-15",
+        "AC-39",
+        "AC-45"
+      ],
+      "normativeAcceptance": "回复返回正确协作工作；不能借自由消息生成无责任归属的任务或无限跨人委派",
+      "negative": "多人不得覆盖同一个工作项的当前Agent分配",
+      "specRef": "docs/设计包/47-全产品实施切片与首期开发规格.md#sl-hc",
+      "uiRef": "docs/设计包/52-UI实现与页面状态规格.md",
+      "contractRef": "contracts/openapi.json",
+      "implementationStatus": "NOT_IMPLEMENTED",
+      "mappingLevel": "REQUIREMENT_TO_DOMAIN_SLICE_AND_TYPED_ACTIONS_NOT_CODE_LINE_TRACE"
+    },
+    {
+      "requirementId": "HC-08",
+      "domain": "HC",
+      "sliceId": "SL-HC",
+      "pageIds": [
+        "P03",
+        "P02",
+        "P22"
+      ],
+      "commandIds": [
+        "C08",
+        "C09",
+        "C21",
+        "C23"
+      ],
+      "operationIds": [
+        "C08_request",
+        "C08_accept",
+        "C08_decline",
+        "C09_submit",
+        "C09_decide",
+        "C21_configure",
+        "C21_execute",
+        "C21_replace",
+        "C21_control",
+        "C23_receiveEvent"
+      ],
+      "dataTables": [
+        "oa_human_task",
+        "oa_binding"
+      ],
+      "originalCaseIds": [
+        "AC-06",
+        "AC-13",
+        "AC-14",
+        "AC-15",
+        "AC-39",
+        "AC-45"
+      ],
+      "normativeAcceptance": "A 看得到 B 的协作进度与可见 Agent 信息，但不能浏览 B 私人记忆/凭据；B 能独立配置自己的执行组合",
+      "negative": "多人不得覆盖同一个工作项的当前Agent分配",
+      "specRef": "docs/设计包/47-全产品实施切片与首期开发规格.md#sl-hc",
+      "uiRef": "docs/设计包/52-UI实现与页面状态规格.md",
+      "contractRef": "contracts/openapi.json",
+      "implementationStatus": "NOT_IMPLEMENTED",
+      "mappingLevel": "REQUIREMENT_TO_DOMAIN_SLICE_AND_TYPED_ACTIONS_NOT_CODE_LINE_TRACE"
+    },
+    {
+      "requirementId": "CX-01",
+      "domain": "CX",
+      "sliceId": "SL-CX",
+      "pageIds": [
+        "P20",
+        "P04"
+      ],
+      "commandIds": [
+        "C05",
+        "C06",
+        "C16"
+      ],
+      "operationIds": [
+        "C05_previewContext",
+        "C05_eligibleResources",
+        "C06_startAttempt",
+        "C16_propose",
+        "C16_confirm"
+      ],
+      "dataTables": [
+        "oa_context_manifest",
+        "oa_execution_snapshot",
+        "oa_baseline"
+      ],
+      "originalCaseIds": [
+        "AC-15",
+        "AC-16",
+        "AC-17",
+        "AC-18",
+        "AC-59"
+      ],
+      "normativeAcceptance": "A/B 的共同事实指向相同有效版本；不是分别由两个 Agent 从聊天猜测任务要求",
+      "negative": "写入上下文文件不能单独证明数字员工已读取",
+      "specRef": "docs/设计包/47-全产品实施切片与首期开发规格.md#sl-cx",
+      "uiRef": "docs/设计包/52-UI实现与页面状态规格.md",
+      "contractRef": "contracts/openapi.json",
+      "implementationStatus": "NOT_IMPLEMENTED",
+      "mappingLevel": "REQUIREMENT_TO_DOMAIN_SLICE_AND_TYPED_ACTIONS_NOT_CODE_LINE_TRACE"
+    },
+    {
+      "requirementId": "CX-02",
+      "domain": "CX",
+      "sliceId": "SL-CX",
+      "pageIds": [
+        "P20",
+        "P04"
+      ],
+      "commandIds": [
+        "C05",
+        "C06",
+        "C16"
+      ],
+      "operationIds": [
+        "C05_previewContext",
+        "C05_eligibleResources",
+        "C06_startAttempt",
+        "C16_propose",
+        "C16_confirm"
+      ],
+      "dataTables": [
+        "oa_context_manifest",
+        "oa_execution_snapshot",
+        "oa_baseline"
+      ],
+      "originalCaseIds": [
+        "AC-15",
+        "AC-16",
+        "AC-17",
+        "AC-18",
+        "AC-59"
+      ],
+      "normativeAcceptance": "每项内容可追溯作者、序列、来源、用途和可见范围；读写/重连是可运行链路",
+      "negative": "写入上下文文件不能单独证明数字员工已读取",
+      "specRef": "docs/设计包/47-全产品实施切片与首期开发规格.md#sl-cx",
+      "uiRef": "docs/设计包/52-UI实现与页面状态规格.md",
+      "contractRef": "contracts/openapi.json",
+      "implementationStatus": "NOT_IMPLEMENTED",
+      "mappingLevel": "REQUIREMENT_TO_DOMAIN_SLICE_AND_TYPED_ACTIONS_NOT_CODE_LINE_TRACE"
+    },
+    {
+      "requirementId": "CX-03",
+      "domain": "CX",
+      "sliceId": "SL-CX",
+      "pageIds": [
+        "P20",
+        "P04"
+      ],
+      "commandIds": [
+        "C05",
+        "C06",
+        "C16"
+      ],
+      "operationIds": [
+        "C05_previewContext",
+        "C05_eligibleResources",
+        "C06_startAttempt",
+        "C16_propose",
+        "C16_confirm"
+      ],
+      "dataTables": [
+        "oa_context_manifest",
+        "oa_execution_snapshot",
+        "oa_baseline"
+      ],
+      "originalCaseIds": [
+        "AC-15",
+        "AC-16",
+        "AC-17",
+        "AC-18",
+        "AC-59"
+      ],
+      "normativeAcceptance": "相同任务可有不同授权投影，必要共同约束一致；投影不足时明确缺项",
+      "negative": "写入上下文文件不能单独证明数字员工已读取",
+      "specRef": "docs/设计包/47-全产品实施切片与首期开发规格.md#sl-cx",
+      "uiRef": "docs/设计包/52-UI实现与页面状态规格.md",
+      "contractRef": "contracts/openapi.json",
+      "implementationStatus": "NOT_IMPLEMENTED",
+      "mappingLevel": "REQUIREMENT_TO_DOMAIN_SLICE_AND_TYPED_ACTIONS_NOT_CODE_LINE_TRACE"
+    },
+    {
+      "requirementId": "CX-04",
+      "domain": "CX",
+      "sliceId": "SL-CX",
+      "pageIds": [
+        "P20",
+        "P04"
+      ],
+      "commandIds": [
+        "C05",
+        "C06",
+        "C16"
+      ],
+      "operationIds": [
+        "C05_previewContext",
+        "C05_eligibleResources",
+        "C06_startAttempt",
+        "C16_propose",
+        "C16_confirm"
+      ],
+      "dataTables": [
+        "oa_context_manifest",
+        "oa_execution_snapshot",
+        "oa_baseline"
+      ],
+      "originalCaseIds": [
+        "AC-15",
+        "AC-16",
+        "AC-17",
+        "AC-18",
+        "AC-59"
+      ],
+      "normativeAcceptance": "关键规则在第 8 条消息以前或正文第 512 字符之后仍能影响后续执行；摘要可回查原文",
+      "negative": "写入上下文文件不能单独证明数字员工已读取",
+      "specRef": "docs/设计包/47-全产品实施切片与首期开发规格.md#sl-cx",
+      "uiRef": "docs/设计包/52-UI实现与页面状态规格.md",
+      "contractRef": "contracts/openapi.json",
+      "implementationStatus": "NOT_IMPLEMENTED",
+      "mappingLevel": "REQUIREMENT_TO_DOMAIN_SLICE_AND_TYPED_ACTIONS_NOT_CODE_LINE_TRACE"
+    },
+    {
+      "requirementId": "CX-05",
+      "domain": "CX",
+      "sliceId": "SL-CX",
+      "pageIds": [
+        "P20",
+        "P04"
+      ],
+      "commandIds": [
+        "C05",
+        "C06",
+        "C16"
+      ],
+      "operationIds": [
+        "C05_previewContext",
+        "C05_eligibleResources",
+        "C06_startAttempt",
+        "C16_propose",
+        "C16_confirm"
+      ],
+      "dataTables": [
+        "oa_context_manifest",
+        "oa_execution_snapshot",
+        "oa_baseline"
+      ],
+      "originalCaseIds": [
+        "AC-15",
+        "AC-16",
+        "AC-17",
+        "AC-18",
+        "AC-59"
+      ],
+      "normativeAcceptance": "自由咨询可明确降级；节点缺必需资料时拒绝相关执行或请求补齐，并在用户界面显示原因",
+      "negative": "写入上下文文件不能单独证明数字员工已读取",
+      "specRef": "docs/设计包/47-全产品实施切片与首期开发规格.md#sl-cx",
+      "uiRef": "docs/设计包/52-UI实现与页面状态规格.md",
+      "contractRef": "contracts/openapi.json",
+      "implementationStatus": "NOT_IMPLEMENTED",
+      "mappingLevel": "REQUIREMENT_TO_DOMAIN_SLICE_AND_TYPED_ACTIONS_NOT_CODE_LINE_TRACE"
+    },
+    {
+      "requirementId": "CX-06",
+      "domain": "CX",
+      "sliceId": "SL-CX",
+      "pageIds": [
+        "P20",
+        "P04"
+      ],
+      "commandIds": [
+        "C05",
+        "C06",
+        "C16"
+      ],
+      "operationIds": [
+        "C05_previewContext",
+        "C05_eligibleResources",
+        "C06_startAttempt",
+        "C16_propose",
+        "C16_confirm"
+      ],
+      "dataTables": [
+        "oa_context_manifest",
+        "oa_execution_snapshot",
+        "oa_baseline"
+      ],
+      "originalCaseIds": [
+        "AC-15",
+        "AC-16",
+        "AC-17",
+        "AC-18",
+        "AC-59"
+      ],
+      "normativeAcceptance": "不能仅凭 written=true 验收；受控真实任务能依照仅在授权上下文中的条件行动并提供可核验证据",
+      "negative": "写入上下文文件不能单独证明数字员工已读取",
+      "specRef": "docs/设计包/47-全产品实施切片与首期开发规格.md#sl-cx",
+      "uiRef": "docs/设计包/52-UI实现与页面状态规格.md",
+      "contractRef": "contracts/openapi.json",
+      "implementationStatus": "NOT_IMPLEMENTED",
+      "mappingLevel": "REQUIREMENT_TO_DOMAIN_SLICE_AND_TYPED_ACTIONS_NOT_CODE_LINE_TRACE"
+    },
+    {
+      "requirementId": "CX-07",
+      "domain": "CX",
+      "sliceId": "SL-CX",
+      "pageIds": [
+        "P20",
+        "P04",
+        "P22"
+      ],
+      "commandIds": [
+        "C05",
+        "C06",
+        "C16"
+      ],
+      "operationIds": [
+        "C05_previewContext",
+        "C05_eligibleResources",
+        "C06_startAttempt",
+        "C16_propose",
+        "C16_confirm"
+      ],
+      "dataTables": [
+        "oa_context_manifest",
+        "oa_execution_snapshot",
+        "oa_baseline"
+      ],
+      "originalCaseIds": [
+        "AC-15",
+        "AC-16",
+        "AC-17",
+        "AC-18",
+        "AC-59"
+      ],
+      "normativeAcceptance": "共用 Agent 不串上下文；私人偏好不覆盖业务硬条件；只把明确发布的贡献共享给其他人",
+      "negative": "写入上下文文件不能单独证明数字员工已读取",
+      "specRef": "docs/设计包/47-全产品实施切片与首期开发规格.md#sl-cx",
+      "uiRef": "docs/设计包/52-UI实现与页面状态规格.md",
+      "contractRef": "contracts/openapi.json",
+      "implementationStatus": "NOT_IMPLEMENTED",
+      "mappingLevel": "REQUIREMENT_TO_DOMAIN_SLICE_AND_TYPED_ACTIONS_NOT_CODE_LINE_TRACE"
+    },
+    {
+      "requirementId": "CX-08",
+      "domain": "CX",
+      "sliceId": "SL-CX",
+      "pageIds": [
+        "P20",
+        "P04"
+      ],
+      "commandIds": [
+        "C05",
+        "C06",
+        "C16"
+      ],
+      "operationIds": [
+        "C05_previewContext",
+        "C05_eligibleResources",
+        "C06_startAttempt",
+        "C16_propose",
+        "C16_confirm"
+      ],
+      "dataTables": [
+        "oa_context_manifest",
+        "oa_execution_snapshot",
+        "oa_baseline"
+      ],
+      "originalCaseIds": [
+        "AC-15",
+        "AC-16",
+        "AC-17",
+        "AC-18",
+        "AC-59"
+      ],
+      "normativeAcceptance": "同名文件被替换后可发现变化；所有必需引用能按接收者权限解析，不能只有无内容的 digest",
+      "negative": "写入上下文文件不能单独证明数字员工已读取",
+      "specRef": "docs/设计包/47-全产品实施切片与首期开发规格.md#sl-cx",
+      "uiRef": "docs/设计包/52-UI实现与页面状态规格.md",
+      "contractRef": "contracts/openapi.json",
+      "implementationStatus": "NOT_IMPLEMENTED",
+      "mappingLevel": "REQUIREMENT_TO_DOMAIN_SLICE_AND_TYPED_ACTIONS_NOT_CODE_LINE_TRACE"
+    },
+    {
+      "requirementId": "CX-09",
+      "domain": "CX",
+      "sliceId": "SL-CX",
+      "pageIds": [
+        "P20",
+        "P04"
+      ],
+      "commandIds": [
+        "C05",
+        "C06",
+        "C16"
+      ],
+      "operationIds": [
+        "C05_previewContext",
+        "C05_eligibleResources",
+        "C06_startAttempt",
+        "C16_propose",
+        "C16_confirm"
+      ],
+      "dataTables": [
+        "oa_context_manifest",
+        "oa_execution_snapshot",
+        "oa_baseline"
+      ],
+      "originalCaseIds": [
+        "AC-15",
+        "AC-16",
+        "AC-17",
+        "AC-18",
+        "AC-59"
+      ],
+      "normativeAcceptance": "能定位遗漏或误解；模型自述“理解”不独立通过验收，不要求保存模型内部思维过程",
+      "negative": "写入上下文文件不能单独证明数字员工已读取",
+      "specRef": "docs/设计包/47-全产品实施切片与首期开发规格.md#sl-cx",
+      "uiRef": "docs/设计包/52-UI实现与页面状态规格.md",
+      "contractRef": "contracts/openapi.json",
+      "implementationStatus": "NOT_IMPLEMENTED",
+      "mappingLevel": "REQUIREMENT_TO_DOMAIN_SLICE_AND_TYPED_ACTIONS_NOT_CODE_LINE_TRACE"
+    },
+    {
+      "requirementId": "CX-10",
+      "domain": "CX",
+      "sliceId": "SL-CX",
+      "pageIds": [
+        "P20",
+        "P04"
+      ],
+      "commandIds": [
+        "C05",
+        "C06",
+        "C16"
+      ],
+      "operationIds": [
+        "C05_previewContext",
+        "C05_eligibleResources",
+        "C06_startAttempt",
+        "C16_propose",
+        "C16_confirm"
+      ],
+      "dataTables": [
+        "oa_context_manifest",
+        "oa_execution_snapshot",
+        "oa_baseline"
+      ],
+      "originalCaseIds": [
+        "AC-15",
+        "AC-16",
+        "AC-17",
+        "AC-18",
+        "AC-59"
+      ],
+      "normativeAcceptance": "版本标识不是简单按字典序判断新旧；撤权/过期后不继续读写，最低版本来自可信服务端事实",
+      "negative": "写入上下文文件不能单独证明数字员工已读取",
+      "specRef": "docs/设计包/47-全产品实施切片与首期开发规格.md#sl-cx",
+      "uiRef": "docs/设计包/52-UI实现与页面状态规格.md",
+      "contractRef": "contracts/openapi.json",
+      "implementationStatus": "NOT_IMPLEMENTED",
+      "mappingLevel": "REQUIREMENT_TO_DOMAIN_SLICE_AND_TYPED_ACTIONS_NOT_CODE_LINE_TRACE"
+    },
+    {
+      "requirementId": "CX-11",
+      "domain": "CX",
+      "sliceId": "SL-CX",
+      "pageIds": [
+        "P20",
+        "P04"
+      ],
+      "commandIds": [
+        "C05",
+        "C06",
+        "C16"
+      ],
+      "operationIds": [
+        "C05_previewContext",
+        "C05_eligibleResources",
+        "C06_startAttempt",
+        "C16_propose",
+        "C16_confirm"
+      ],
+      "dataTables": [
+        "oa_context_manifest",
+        "oa_execution_snapshot",
+        "oa_baseline"
+      ],
+      "originalCaseIds": [
+        "AC-15",
+        "AC-16",
+        "AC-17",
+        "AC-18",
+        "AC-59"
+      ],
+      "normativeAcceptance": "用当前 Schema/消费者校验整组引用；不添加未声明字段，不重复发明事实源",
+      "negative": "写入上下文文件不能单独证明数字员工已读取",
+      "specRef": "docs/设计包/47-全产品实施切片与首期开发规格.md#sl-cx",
+      "uiRef": "docs/设计包/52-UI实现与页面状态规格.md",
+      "contractRef": "contracts/openapi.json",
+      "implementationStatus": "NOT_IMPLEMENTED",
+      "mappingLevel": "REQUIREMENT_TO_DOMAIN_SLICE_AND_TYPED_ACTIONS_NOT_CODE_LINE_TRACE"
+    },
+    {
+      "requirementId": "CX-12",
+      "domain": "CX",
+      "sliceId": "SL-CX",
+      "pageIds": [
+        "P20",
+        "P04"
+      ],
+      "commandIds": [
+        "C05",
+        "C06",
+        "C16"
+      ],
+      "operationIds": [
+        "C05_previewContext",
+        "C05_eligibleResources",
+        "C06_startAttempt",
+        "C16_propose",
+        "C16_confirm"
+      ],
+      "dataTables": [
+        "oa_context_manifest",
+        "oa_execution_snapshot",
+        "oa_baseline"
+      ],
+      "originalCaseIds": [
+        "AC-15",
+        "AC-16",
+        "AC-17",
+        "AC-18",
+        "AC-59"
+      ],
+      "normativeAcceptance": "已读通知不被显示成 Agent 已应用新版；状态能对应真实服务端记录与恢复动作",
+      "negative": "写入上下文文件不能单独证明数字员工已读取",
+      "specRef": "docs/设计包/47-全产品实施切片与首期开发规格.md#sl-cx",
+      "uiRef": "docs/设计包/52-UI实现与页面状态规格.md",
+      "contractRef": "contracts/openapi.json",
+      "implementationStatus": "NOT_IMPLEMENTED",
+      "mappingLevel": "REQUIREMENT_TO_DOMAIN_SLICE_AND_TYPED_ACTIONS_NOT_CODE_LINE_TRACE"
+    },
+    {
+      "requirementId": "SY-01",
+      "domain": "SY",
+      "sliceId": "SL-SY",
+      "pageIds": [
+        "P20",
+        "P02",
+        "P16"
+      ],
+      "commandIds": [
+        "C09",
+        "C10",
+        "C11",
+        "C12",
+        "C16"
+      ],
+      "operationIds": [
+        "C09_submit",
+        "C09_decide",
+        "C10_requestReview",
+        "C10_decideReview",
+        "C11_checkCompletion",
+        "C11_submitDelivery",
+        "C12_receiveHandoff",
+        "C16_propose",
+        "C16_confirm"
+      ],
+      "dataTables": [
+        "oa_baseline",
+        "oa_context_manifest",
+        "oa_output_release"
+      ],
+      "originalCaseIds": [
+        "AC-15",
+        "AC-17",
+        "AC-18",
+        "AC-20",
+        "AC-21",
+        "AC-22",
+        "AC-23",
+        "AC-50",
+        "AC-59"
+      ],
+      "normativeAcceptance": "重复/乱序/离线后各方收敛到同一可见业务版本，不漏决定、不重复执行",
+      "negative": "旧版本贡献不得作为最新依据提交",
+      "specRef": "docs/设计包/47-全产品实施切片与首期开发规格.md#sl-sy",
+      "uiRef": "docs/设计包/52-UI实现与页面状态规格.md",
+      "contractRef": "contracts/openapi.json",
+      "implementationStatus": "NOT_IMPLEMENTED",
+      "mappingLevel": "REQUIREMENT_TO_DOMAIN_SLICE_AND_TYPED_ACTIONS_NOT_CODE_LINE_TRACE"
+    },
+    {
+      "requirementId": "SY-02",
+      "domain": "SY",
+      "sliceId": "SL-SY",
+      "pageIds": [
+        "P20",
+        "P02",
+        "P16"
+      ],
+      "commandIds": [
+        "C09",
+        "C10",
+        "C11",
+        "C12",
+        "C16"
+      ],
+      "operationIds": [
+        "C09_submit",
+        "C09_decide",
+        "C10_requestReview",
+        "C10_decideReview",
+        "C11_checkCompletion",
+        "C11_submitDelivery",
+        "C12_receiveHandoff",
+        "C16_propose",
+        "C16_confirm"
+      ],
+      "dataTables": [
+        "oa_baseline",
+        "oa_context_manifest",
+        "oa_output_release"
+      ],
+      "originalCaseIds": [
+        "AC-15",
+        "AC-17",
+        "AC-18",
+        "AC-20",
+        "AC-21",
+        "AC-22",
+        "AC-23",
+        "AC-50",
+        "AC-59"
+      ],
+      "normativeAcceptance": "一般聊天不全局停工；关键输入变化使相关贡献待重核；撤权在下一使用点阻止动作",
+      "negative": "旧版本贡献不得作为最新依据提交",
+      "specRef": "docs/设计包/47-全产品实施切片与首期开发规格.md#sl-sy",
+      "uiRef": "docs/设计包/52-UI实现与页面状态规格.md",
+      "contractRef": "contracts/openapi.json",
+      "implementationStatus": "NOT_IMPLEMENTED",
+      "mappingLevel": "REQUIREMENT_TO_DOMAIN_SLICE_AND_TYPED_ACTIONS_NOT_CODE_LINE_TRACE"
+    },
+    {
+      "requirementId": "SY-03",
+      "domain": "SY",
+      "sliceId": "SL-SY",
+      "pageIds": [
+        "P20",
+        "P02",
+        "P16",
+        "P22"
+      ],
+      "commandIds": [
+        "C09",
+        "C10",
+        "C11",
+        "C12",
+        "C16"
+      ],
+      "operationIds": [
+        "C09_submit",
+        "C09_decide",
+        "C10_requestReview",
+        "C10_decideReview",
+        "C11_checkCompletion",
+        "C11_submitDelivery",
+        "C12_receiveHandoff",
+        "C16_propose",
+        "C16_confirm"
+      ],
+      "dataTables": [
+        "oa_baseline",
+        "oa_context_manifest",
+        "oa_output_release"
+      ],
+      "originalCaseIds": [
+        "AC-15",
+        "AC-17",
+        "AC-18",
+        "AC-20",
+        "AC-21",
+        "AC-22",
+        "AC-23",
+        "AC-50",
+        "AC-59"
+      ],
+      "normativeAcceptance": "旧预算不能在设备清单更新后作为最新结果提交；重复或旧 Agent 尝试不能抢占终态",
+      "negative": "旧版本贡献不得作为最新依据提交",
+      "specRef": "docs/设计包/47-全产品实施切片与首期开发规格.md#sl-sy",
+      "uiRef": "docs/设计包/52-UI实现与页面状态规格.md",
+      "contractRef": "contracts/openapi.json",
+      "implementationStatus": "NOT_IMPLEMENTED",
+      "mappingLevel": "REQUIREMENT_TO_DOMAIN_SLICE_AND_TYPED_ACTIONS_NOT_CODE_LINE_TRACE"
+    },
+    {
+      "requirementId": "SY-04",
+      "domain": "SY",
+      "sliceId": "SL-SY",
+      "pageIds": [
+        "P20",
+        "P02",
+        "P16"
+      ],
+      "commandIds": [
+        "C09",
+        "C10",
+        "C11",
+        "C12",
+        "C16"
+      ],
+      "operationIds": [
+        "C09_submit",
+        "C09_decide",
+        "C10_requestReview",
+        "C10_decideReview",
+        "C11_checkCompletion",
+        "C11_submitDelivery",
+        "C12_receiveHandoff",
+        "C16_propose",
+        "C16_confirm"
+      ],
+      "dataTables": [
+        "oa_baseline",
+        "oa_context_manifest",
+        "oa_output_release"
+      ],
+      "originalCaseIds": [
+        "AC-15",
+        "AC-17",
+        "AC-18",
+        "AC-20",
+        "AC-21",
+        "AC-22",
+        "AC-23",
+        "AC-50",
+        "AC-59"
+      ],
+      "normativeAcceptance": "不用最后写入静默覆盖；有权维护事实的人接受变更，文件合并可审阅",
+      "negative": "旧版本贡献不得作为最新依据提交",
+      "specRef": "docs/设计包/47-全产品实施切片与首期开发规格.md#sl-sy",
+      "uiRef": "docs/设计包/52-UI实现与页面状态规格.md",
+      "contractRef": "contracts/openapi.json",
+      "implementationStatus": "NOT_IMPLEMENTED",
+      "mappingLevel": "REQUIREMENT_TO_DOMAIN_SLICE_AND_TYPED_ACTIONS_NOT_CODE_LINE_TRACE"
+    },
+    {
+      "requirementId": "SY-05",
+      "domain": "SY",
+      "sliceId": "SL-SY",
+      "pageIds": [
+        "P20",
+        "P02",
+        "P16"
+      ],
+      "commandIds": [
+        "C09",
+        "C10",
+        "C11",
+        "C12",
+        "C16"
+      ],
+      "operationIds": [
+        "C09_submit",
+        "C09_decide",
+        "C10_requestReview",
+        "C10_decideReview",
+        "C11_checkCompletion",
+        "C11_submitDelivery",
+        "C12_receiveHandoff",
+        "C16_propose",
+        "C16_confirm"
+      ],
+      "dataTables": [
+        "oa_baseline",
+        "oa_context_manifest",
+        "oa_output_release"
+      ],
+      "originalCaseIds": [
+        "AC-15",
+        "AC-17",
+        "AC-18",
+        "AC-20",
+        "AC-21",
+        "AC-22",
+        "AC-23",
+        "AC-50",
+        "AC-59"
+      ],
+      "normativeAcceptance": "UI、通知、统计的状态含义一致；单个 Agent/协作人的完成不冒充全节点完成",
+      "negative": "旧版本贡献不得作为最新依据提交",
+      "specRef": "docs/设计包/47-全产品实施切片与首期开发规格.md#sl-sy",
+      "uiRef": "docs/设计包/52-UI实现与页面状态规格.md",
+      "contractRef": "contracts/openapi.json",
+      "implementationStatus": "NOT_IMPLEMENTED",
+      "mappingLevel": "REQUIREMENT_TO_DOMAIN_SLICE_AND_TYPED_ACTIONS_NOT_CODE_LINE_TRACE"
+    },
+    {
+      "requirementId": "SY-06",
+      "domain": "SY",
+      "sliceId": "SL-SY",
+      "pageIds": [
+        "P20",
+        "P02",
+        "P16"
+      ],
+      "commandIds": [
+        "C09",
+        "C10",
+        "C11",
+        "C12",
+        "C16"
+      ],
+      "operationIds": [
+        "C09_submit",
+        "C09_decide",
+        "C10_requestReview",
+        "C10_decideReview",
+        "C11_checkCompletion",
+        "C11_submitDelivery",
+        "C12_receiveHandoff",
+        "C16_propose",
+        "C16_confirm"
+      ],
+      "dataTables": [
+        "oa_baseline",
+        "oa_context_manifest",
+        "oa_output_release"
+      ],
+      "originalCaseIds": [
+        "AC-15",
+        "AC-17",
+        "AC-18",
+        "AC-20",
+        "AC-21",
+        "AC-22",
+        "AC-23",
+        "AC-50",
+        "AC-59"
+      ],
+      "normativeAcceptance": "纠正已采纳事实后，旧摘要/旧缓存不能继续把错误结论当有效依据",
+      "negative": "旧版本贡献不得作为最新依据提交",
+      "specRef": "docs/设计包/47-全产品实施切片与首期开发规格.md#sl-sy",
+      "uiRef": "docs/设计包/52-UI实现与页面状态规格.md",
+      "contractRef": "contracts/openapi.json",
+      "implementationStatus": "NOT_IMPLEMENTED",
+      "mappingLevel": "REQUIREMENT_TO_DOMAIN_SLICE_AND_TYPED_ACTIONS_NOT_CODE_LINE_TRACE"
+    },
+    {
+      "requirementId": "SY-07",
+      "domain": "SY",
+      "sliceId": "SL-SY",
+      "pageIds": [
+        "P20",
+        "P02",
+        "P16"
+      ],
+      "commandIds": [
+        "C09",
+        "C10",
+        "C11",
+        "C12",
+        "C16"
+      ],
+      "operationIds": [
+        "C09_submit",
+        "C09_decide",
+        "C10_requestReview",
+        "C10_decideReview",
+        "C11_checkCompletion",
+        "C11_submitDelivery",
+        "C12_receiveHandoff",
+        "C16_propose",
+        "C16_confirm"
+      ],
+      "dataTables": [
+        "oa_baseline",
+        "oa_context_manifest",
+        "oa_output_release"
+      ],
+      "originalCaseIds": [
+        "AC-15",
+        "AC-17",
+        "AC-18",
+        "AC-20",
+        "AC-21",
+        "AC-22",
+        "AC-23",
+        "AC-50",
+        "AC-59"
+      ],
+      "normativeAcceptance": "恢复时知道已完成/未完成/待查证部分；不重复外部操作，不假装热注入不支持的输入",
+      "negative": "旧版本贡献不得作为最新依据提交",
+      "specRef": "docs/设计包/47-全产品实施切片与首期开发规格.md#sl-sy",
+      "uiRef": "docs/设计包/52-UI实现与页面状态规格.md",
+      "contractRef": "contracts/openapi.json",
+      "implementationStatus": "NOT_IMPLEMENTED",
+      "mappingLevel": "REQUIREMENT_TO_DOMAIN_SLICE_AND_TYPED_ACTIONS_NOT_CODE_LINE_TRACE"
+    },
+    {
+      "requirementId": "SY-08",
+      "domain": "SY",
+      "sliceId": "SL-SY",
+      "pageIds": [
+        "P20",
+        "P02",
+        "P16"
+      ],
+      "commandIds": [
+        "C09",
+        "C10",
+        "C11",
+        "C12",
+        "C16"
+      ],
+      "operationIds": [
+        "C09_submit",
+        "C09_decide",
+        "C10_requestReview",
+        "C10_decideReview",
+        "C11_checkCompletion",
+        "C11_submitDelivery",
+        "C12_receiveHandoff",
+        "C16_propose",
+        "C16_confirm"
+      ],
+      "dataTables": [
+        "oa_baseline",
+        "oa_context_manifest",
+        "oa_output_release"
+      ],
+      "originalCaseIds": [
+        "AC-15",
+        "AC-17",
+        "AC-18",
+        "AC-20",
+        "AC-21",
+        "AC-22",
+        "AC-23",
+        "AC-50",
+        "AC-59"
+      ],
+      "normativeAcceptance": "历史交接包不可静默改写；通过新版本、返工或补充流程处理，并通知实际受影响方",
+      "negative": "旧版本贡献不得作为最新依据提交",
+      "specRef": "docs/设计包/47-全产品实施切片与首期开发规格.md#sl-sy",
+      "uiRef": "docs/设计包/52-UI实现与页面状态规格.md",
+      "contractRef": "contracts/openapi.json",
+      "implementationStatus": "NOT_IMPLEMENTED",
+      "mappingLevel": "REQUIREMENT_TO_DOMAIN_SLICE_AND_TYPED_ACTIONS_NOT_CODE_LINE_TRACE"
+    },
+    {
+      "requirementId": "SY-09",
+      "domain": "SY",
+      "sliceId": "SL-SY",
+      "pageIds": [
+        "P20",
+        "P02",
+        "P16"
+      ],
+      "commandIds": [
+        "C09",
+        "C10",
+        "C11",
+        "C12",
+        "C16"
+      ],
+      "operationIds": [
+        "C09_submit",
+        "C09_decide",
+        "C10_requestReview",
+        "C10_decideReview",
+        "C11_checkCompletion",
+        "C11_submitDelivery",
+        "C12_receiveHandoff",
+        "C16_propose",
+        "C16_confirm"
+      ],
+      "dataTables": [
+        "oa_baseline",
+        "oa_context_manifest",
+        "oa_output_release"
+      ],
+      "originalCaseIds": [
+        "AC-15",
+        "AC-17",
+        "AC-18",
+        "AC-20",
+        "AC-21",
+        "AC-22",
+        "AC-23",
+        "AC-50",
+        "AC-59"
+      ],
+      "normativeAcceptance": "收到包不等于可执行；无法解析必需资料时明确阻塞原因并保持可恢复状态",
+      "negative": "旧版本贡献不得作为最新依据提交",
+      "specRef": "docs/设计包/47-全产品实施切片与首期开发规格.md#sl-sy",
+      "uiRef": "docs/设计包/52-UI实现与页面状态规格.md",
+      "contractRef": "contracts/openapi.json",
+      "implementationStatus": "NOT_IMPLEMENTED",
+      "mappingLevel": "REQUIREMENT_TO_DOMAIN_SLICE_AND_TYPED_ACTIONS_NOT_CODE_LINE_TRACE"
+    },
+    {
+      "requirementId": "SY-10",
+      "domain": "SY",
+      "sliceId": "SL-SY",
+      "pageIds": [
+        "P20",
+        "P02",
+        "P16"
+      ],
+      "commandIds": [
+        "C09",
+        "C10",
+        "C11",
+        "C12",
+        "C16"
+      ],
+      "operationIds": [
+        "C09_submit",
+        "C09_decide",
+        "C10_requestReview",
+        "C10_decideReview",
+        "C11_checkCompletion",
+        "C11_submitDelivery",
+        "C12_receiveHandoff",
+        "C16_propose",
+        "C16_confirm"
+      ],
+      "dataTables": [
+        "oa_baseline",
+        "oa_context_manifest",
+        "oa_output_release"
+      ],
+      "originalCaseIds": [
+        "AC-15",
+        "AC-17",
+        "AC-18",
+        "AC-20",
+        "AC-21",
+        "AC-22",
+        "AC-23",
+        "AC-50",
+        "AC-59"
+      ],
+      "normativeAcceptance": "指标有真实分母与事件来源；不以消息数、token 数或同步次数宣称协作质量提升",
+      "negative": "旧版本贡献不得作为最新依据提交",
+      "specRef": "docs/设计包/47-全产品实施切片与首期开发规格.md#sl-sy",
+      "uiRef": "docs/设计包/52-UI实现与页面状态规格.md",
+      "contractRef": "contracts/openapi.json",
+      "implementationStatus": "NOT_IMPLEMENTED",
+      "mappingLevel": "REQUIREMENT_TO_DOMAIN_SLICE_AND_TYPED_ACTIONS_NOT_CODE_LINE_TRACE"
+    },
+    {
+      "requirementId": "AI-01",
+      "domain": "WD",
+      "sliceId": "SL-WD",
+      "pageIds": [
+        "P01",
+        "P02",
+        "P04",
+        "P21",
+        "P22"
+      ],
+      "commandIds": [
+        "C01",
+        "C04"
+      ],
+      "operationIds": [
+        "C01_listInbox",
+        "C01_getWork",
+        "C01_readVersionResource",
+        "C04_saveDraft",
+        "C04_saveTaskBinding"
+      ],
+      "dataTables": [
+        "oa_work_item",
+        "oa_human_task"
+      ],
+      "originalCaseIds": [
+        "AC-61"
+      ],
+      "normativeAcceptance": "常见任务无需打开高级设置；全部原能力仍可达",
+      "negative": "不能靠删功能或隐藏必要责任减少点击",
+      "specRef": "docs/设计包/47-全产品实施切片与首期开发规格.md#sl-wd",
+      "uiRef": "docs/设计包/52-UI实现与页面状态规格.md",
+      "contractRef": "contracts/openapi.json",
+      "implementationStatus": "NOT_IMPLEMENTED",
+      "mappingLevel": "REQUIREMENT_TO_DOMAIN_SLICE_AND_TYPED_ACTIONS_NOT_CODE_LINE_TRACE"
+    },
+    {
+      "requirementId": "AI-02",
+      "domain": "NC",
+      "sliceId": "SL-NC",
+      "pageIds": [
+        "P02",
+        "P04",
+        "P05",
+        "P22"
+      ],
+      "commandIds": [
+        "C05",
+        "C27"
+      ],
+      "operationIds": [
+        "C05_previewContext",
+        "C05_eligibleResources",
+        "C27_proposeConfig",
+        "C27_applyProposal",
+        "C27_undo"
+      ],
+      "dataTables": [
+        "oa_binding",
+        "oa_binding_version"
+      ],
+      "originalCaseIds": [
+        "AC-62"
+      ],
+      "normativeAcceptance": "不重复询问已有信息，只补影响结果的缺项",
+      "negative": "缺模型或连接时保留人工路径，不伪报就绪",
+      "specRef": "docs/设计包/47-全产品实施切片与首期开发规格.md#sl-nc",
+      "uiRef": "docs/设计包/52-UI实现与页面状态规格.md",
+      "contractRef": "contracts/openapi.json",
+      "implementationStatus": "NOT_IMPLEMENTED",
+      "mappingLevel": "REQUIREMENT_TO_DOMAIN_SLICE_AND_TYPED_ACTIONS_NOT_CODE_LINE_TRACE"
+    },
+    {
+      "requirementId": "AI-03",
+      "domain": "NC",
+      "sliceId": "SL-NC",
+      "pageIds": [
+        "P04",
+        "P14",
+        "P21"
+      ],
+      "commandIds": [
+        "C04",
+        "C27"
+      ],
+      "operationIds": [
+        "C04_saveDraft",
+        "C04_saveTaskBinding",
+        "C27_proposeConfig",
+        "C27_applyProposal",
+        "C27_undo"
+      ],
+      "dataTables": [
+        "oa_binding",
+        "oa_binding_version"
+      ],
+      "originalCaseIds": [
+        "AC-63"
+      ],
+      "normativeAcceptance": "来源、Diff、作用域可见，仅写获选字段并校验版本",
+      "negative": "并发冲突不覆盖，保存不自动运行",
+      "specRef": "docs/设计包/47-全产品实施切片与首期开发规格.md#sl-nc",
+      "uiRef": "docs/设计包/52-UI实现与页面状态规格.md",
+      "contractRef": "contracts/openapi.json",
+      "implementationStatus": "NOT_IMPLEMENTED",
+      "mappingLevel": "REQUIREMENT_TO_DOMAIN_SLICE_AND_TYPED_ACTIONS_NOT_CODE_LINE_TRACE"
+    },
+    {
+      "requirementId": "AI-04",
+      "domain": "CN",
+      "sliceId": "SL-CN",
+      "pageIds": [
+        "P01",
+        "P02",
+        "P19"
+      ],
+      "commandIds": [
+        "C28"
+      ],
+      "operationIds": [
+        "C28_plan",
+        "C28_execute",
+        "C28_readResult"
+      ],
+      "dataTables": [
+        "oa_execution_grant",
+        "oa_invocation"
+      ],
+      "originalCaseIds": [
+        "AC-64"
+      ],
+      "normativeAcceptance": "口径、粒度、时间、权限、来源及明细可复核",
+      "negative": "越权/超时不当成零，不运行任意写SQL",
+      "specRef": "docs/设计包/47-全产品实施切片与首期开发规格.md#sl-cn",
+      "uiRef": "docs/设计包/52-UI实现与页面状态规格.md",
+      "contractRef": "contracts/openapi.json",
+      "implementationStatus": "NOT_IMPLEMENTED",
+      "mappingLevel": "REQUIREMENT_TO_DOMAIN_SLICE_AND_TYPED_ACTIONS_NOT_CODE_LINE_TRACE"
+    },
+    {
+      "requirementId": "AI-05",
+      "domain": "OP",
+      "sliceId": "SL-OP",
+      "pageIds": [
+        "P08",
+        "P20"
+      ],
+      "commandIds": [
+        "C19",
+        "C29"
+      ],
+      "operationIds": [
+        "C19_ingest",
+        "C19_process",
+        "C19_search",
+        "C19_publish",
+        "C19_reviseMemory",
+        "C29_suggest",
+        "C29_confirm",
+        "C29_readRelated"
+      ],
+      "dataTables": [
+        "oa_operation",
+        "oa_invocation",
+        "oa_outbox"
+      ],
+      "originalCaseIds": [
+        "AC-65"
+      ],
+      "normativeAcceptance": "来源、版本、有效期、确认方式和ACL完整",
+      "negative": "推断不得直接改OA责任、批准或权限，路径计数也不泄密",
+      "specRef": "docs/设计包/47-全产品实施切片与首期开发规格.md#sl-op",
+      "uiRef": "docs/设计包/52-UI实现与页面状态规格.md",
+      "contractRef": "contracts/openapi.json",
+      "implementationStatus": "NOT_IMPLEMENTED",
+      "mappingLevel": "REQUIREMENT_TO_DOMAIN_SLICE_AND_TYPED_ACTIONS_NOT_CODE_LINE_TRACE"
+    },
+    {
+      "requirementId": "AI-06",
+      "domain": "OP",
+      "sliceId": "SL-OP",
+      "pageIds": [
+        "P01",
+        "P14",
+        "P21"
+      ],
+      "commandIds": [
+        "C15",
+        "C30"
+      ],
+      "operationIds": [
+        "C15_read",
+        "C15_remind",
+        "C15_withdraw",
+        "C15_appendWorkMessage",
+        "C15_saveMessageDraft",
+        "C30_listOpportunities",
+        "C30_accept",
+        "C30_dismiss",
+        "C30_snooze"
+      ],
+      "dataTables": [
+        "oa_operation",
+        "oa_invocation",
+        "oa_outbox"
+      ],
+      "originalCaseIds": [
+        "AC-66"
+      ],
+      "normativeAcceptance": "理由与来源可见，重复事件一张有效卡，忽略进入冷却",
+      "negative": "忽略不等于完成业务，不重复打扰",
+      "specRef": "docs/设计包/47-全产品实施切片与首期开发规格.md#sl-op",
+      "uiRef": "docs/设计包/52-UI实现与页面状态规格.md",
+      "contractRef": "contracts/openapi.json",
+      "implementationStatus": "NOT_IMPLEMENTED",
+      "mappingLevel": "REQUIREMENT_TO_DOMAIN_SLICE_AND_TYPED_ACTIONS_NOT_CODE_LINE_TRACE"
+    },
+    {
+      "requirementId": "AI-07",
+      "domain": "KB",
+      "sliceId": "SL-KB",
+      "pageIds": [
+        "P02",
+        "P14",
+        "P16"
+      ],
+      "commandIds": [
+        "C06",
+        "C22",
+        "C30"
+      ],
+      "operationIds": [
+        "C06_startAttempt",
+        "C22_create",
+        "C22_preview",
+        "C22_test",
+        "C22_pause",
+        "C22_resume",
+        "C22_trigger",
+        "C30_listOpportunities",
+        "C30_accept",
+        "C30_dismiss",
+        "C30_snooze"
+      ],
+      "dataTables": [
+        "oa_knowledge_job",
+        "oa_artifact_version"
+      ],
+      "originalCaseIds": [
+        "AC-67"
+      ],
+      "normativeAcceptance": "运行前及副作用前重验，暂停提醒/触发/运行分别处理",
+      "negative": "不代审批/正式交付，不盲重试未知外部结果",
+      "specRef": "docs/设计包/47-全产品实施切片与首期开发规格.md#sl-kb",
+      "uiRef": "docs/设计包/52-UI实现与页面状态规格.md",
+      "contractRef": "contracts/openapi.json",
+      "implementationStatus": "NOT_IMPLEMENTED",
+      "mappingLevel": "REQUIREMENT_TO_DOMAIN_SLICE_AND_TYPED_ACTIONS_NOT_CODE_LINE_TRACE"
+    },
+    {
+      "requirementId": "AI-08",
+      "domain": "KB",
+      "sliceId": "SL-KB",
+      "pageIds": [
+        "P06",
+        "P09",
+        "P19"
+      ],
+      "commandIds": [
+        "C17",
+        "C31"
+      ],
+      "operationIds": [
+        "C17_draft",
+        "C17_test",
+        "C17_publish",
+        "C17_disable",
+        "C17_import",
+        "C17_export",
+        "C17_diff",
+        "C17_promote",
+        "C31_propose",
+        "C31_evaluate",
+        "C31_trial",
+        "C31_publish",
+        "C31_rollback"
+      ],
+      "dataTables": [
+        "oa_knowledge_job",
+        "oa_artifact_version"
+      ],
+      "originalCaseIds": [
+        "AC-68"
+      ],
+      "normativeAcceptance": "原业务与安全验收不得退化，试用范围及回退点可追溯",
+      "negative": "结构检查不代替业务评估，不改安全策略或在途快照",
+      "specRef": "docs/设计包/47-全产品实施切片与首期开发规格.md#sl-kb",
+      "uiRef": "docs/设计包/52-UI实现与页面状态规格.md",
+      "contractRef": "contracts/openapi.json",
+      "implementationStatus": "NOT_IMPLEMENTED",
+      "mappingLevel": "REQUIREMENT_TO_DOMAIN_SLICE_AND_TYPED_ACTIONS_NOT_CODE_LINE_TRACE"
+    },
+    {
+      "requirementId": "AI-09",
+      "domain": "AT",
+      "sliceId": "SL-AT",
+      "pageIds": [
+        "P09",
+        "P11",
+        "P21"
+      ],
+      "commandIds": [
+        "C19",
+        "C27"
+      ],
+      "operationIds": [
+        "C19_ingest",
+        "C19_process",
+        "C19_search",
+        "C19_publish",
+        "C19_reviseMemory",
+        "C27_proposeConfig",
+        "C27_applyProposal",
+        "C27_undo"
+      ],
+      "dataTables": [
+        "oa_automation_plan",
+        "oa_operation"
+      ],
+      "originalCaseIds": [
+        "AC-69"
+      ],
+      "normativeAcceptance": "来源、范围、版本和实际消费变化可查看",
+      "negative": "模糊反馈不自动写全局规则，私人内容不自动共享",
+      "specRef": "docs/设计包/47-全产品实施切片与首期开发规格.md#sl-at",
+      "uiRef": "docs/设计包/52-UI实现与页面状态规格.md",
+      "contractRef": "contracts/openapi.json",
+      "implementationStatus": "NOT_IMPLEMENTED",
+      "mappingLevel": "REQUIREMENT_TO_DOMAIN_SLICE_AND_TYPED_ACTIONS_NOT_CODE_LINE_TRACE"
+    },
+    {
+      "requirementId": "AI-10",
+      "domain": "CV",
+      "sliceId": "SL-CV",
+      "pageIds": [
+        "P01",
+        "P02",
+        "P08",
+        "P11",
+        "P19",
+        "P20"
+      ],
+      "commandIds": [
+        "C01",
+        "C05",
+        "C28"
+      ],
+      "operationIds": [
+        "C01_listInbox",
+        "C01_getWork",
+        "C01_readVersionResource",
+        "C05_previewContext",
+        "C05_eligibleResources",
+        "C28_plan",
+        "C28_execute",
+        "C28_readResult"
+      ],
+      "dataTables": [
+        "oa_thread_entry",
+        "oa_attempt"
+      ],
+      "originalCaseIds": [
+        "AC-70"
+      ],
+      "normativeAcceptance": "当前业务对象明确，同任务上下文合法连续",
+      "negative": "不得串实例、私人历史、工作空间或连接身份",
+      "specRef": "docs/设计包/47-全产品实施切片与首期开发规格.md#sl-cv",
+      "uiRef": "docs/设计包/52-UI实现与页面状态规格.md",
+      "contractRef": "contracts/openapi.json",
+      "implementationStatus": "NOT_IMPLEMENTED",
+      "mappingLevel": "REQUIREMENT_TO_DOMAIN_SLICE_AND_TYPED_ACTIONS_NOT_CODE_LINE_TRACE"
+    },
+    {
+      "requirementId": "AI-11",
+      "domain": "SY",
+      "sliceId": "SL-SY",
+      "pageIds": [
+        "P02",
+        "P04",
+        "P16",
+        "P19",
+        "P20"
+      ],
+      "commandIds": [
+        "C07",
+        "C14",
+        "C24"
+      ],
+      "operationIds": [
+        "C07_pause",
+        "C07_resume",
+        "C07_cancel",
+        "C14_queryOperation",
+        "C14_reconcile",
+        "C24_identity",
+        "C24_grant",
+        "C24_revoke",
+        "C24_transfer",
+        "C24_privacy"
+      ],
+      "dataTables": [
+        "oa_baseline",
+        "oa_context_manifest",
+        "oa_output_release"
+      ],
+      "originalCaseIds": [
+        "AC-71"
+      ],
+      "normativeAcceptance": "保留草稿、普通表单/人工路径与合法恢复任务",
+      "negative": "无处理人进入待分配异常，不自动续跑旧尝试或复用过期批准",
+      "specRef": "docs/设计包/47-全产品实施切片与首期开发规格.md#sl-sy",
+      "uiRef": "docs/设计包/52-UI实现与页面状态规格.md",
+      "contractRef": "contracts/openapi.json",
+      "implementationStatus": "NOT_IMPLEMENTED",
+      "mappingLevel": "REQUIREMENT_TO_DOMAIN_SLICE_AND_TYPED_ACTIONS_NOT_CODE_LINE_TRACE"
+    },
+    {
+      "requirementId": "AI-12",
+      "domain": "MM",
+      "sliceId": "SL-MM",
+      "pageIds": [
+        "P01",
+        "P19",
+        "P21"
+      ],
+      "commandIds": [
+        "C25"
+      ],
+      "operationIds": [
+        "C25_readInsights"
+      ],
+      "dataTables": [
+        "oa_knowledge_job",
+        "oa_evolution_proposal"
+      ],
+      "originalCaseIds": [
+        "AC-72"
+      ],
+      "normativeAcceptance": "记录样本量、任务难度、帮助次数、正确率与干扰成本",
+      "negative": "不得把虚构原型数值、点击数或建议采纳率当真实收益",
+      "specRef": "docs/设计包/47-全产品实施切片与首期开发规格.md#sl-mm",
+      "uiRef": "docs/设计包/52-UI实现与页面状态规格.md",
+      "contractRef": "contracts/openapi.json",
+      "implementationStatus": "NOT_IMPLEMENTED",
+      "mappingLevel": "REQUIREMENT_TO_DOMAIN_SLICE_AND_TYPED_ACTIONS_NOT_CODE_LINE_TRACE"
+    },
+    {
+      "requirementId": "EW-01",
+      "domain": "CV",
+      "sliceId": "SL-CV",
+      "pageIds": [
+        "P02",
+        "P10",
+        "P11"
+      ],
+      "commandIds": [
+        "C01",
+        "C15"
+      ],
+      "operationIds": [
+        "C01_listInbox",
+        "C01_getWork",
+        "C01_readVersionResource",
+        "C15_read",
+        "C15_remind",
+        "C15_withdraw",
+        "C15_appendWorkMessage",
+        "C15_saveMessageDraft"
+      ],
+      "dataTables": [
+        "oa_thread_entry",
+        "oa_attempt"
+      ],
+      "originalCaseIds": [],
+      "normativeAcceptance": "同任务定位与草稿保留，右侧为主要展示区域",
+      "negative": "不得混入其他实例或建立第二会话",
+      "specRef": "docs/设计包/47-全产品实施切片与首期开发规格.md#sl-cv",
+      "uiRef": "docs/设计包/52-UI实现与页面状态规格.md",
+      "contractRef": "contracts/openapi.json",
+      "implementationStatus": "NOT_IMPLEMENTED",
+      "mappingLevel": "REQUIREMENT_TO_DOMAIN_SLICE_AND_TYPED_ACTIONS_NOT_CODE_LINE_TRACE"
+    },
+    {
+      "requirementId": "EW-02",
+      "domain": "CV",
+      "sliceId": "SL-CV",
+      "pageIds": [
+        "P02",
+        "P10",
+        "P11"
+      ],
+      "commandIds": [
+        "C01",
+        "C15",
+        "C20"
+      ],
+      "operationIds": [
+        "C01_listInbox",
+        "C01_getWork",
+        "C01_readVersionResource",
+        "C15_read",
+        "C15_remind",
+        "C15_withdraw",
+        "C15_appendWorkMessage",
+        "C15_saveMessageDraft",
+        "C20_prepareUpload",
+        "C20_uploadComplete",
+        "C20_parse",
+        "C20_merge",
+        "C20_readContent"
+      ],
+      "dataTables": [
+        "oa_thread_entry",
+        "oa_attempt"
+      ],
+      "originalCaseIds": [],
+      "normativeAcceptance": "定位同实例、节点、轮次和精确版本",
+      "negative": "无发现权节点、私有边和隐藏计数不返回",
+      "specRef": "docs/设计包/47-全产品实施切片与首期开发规格.md#sl-cv",
+      "uiRef": "docs/设计包/52-UI实现与页面状态规格.md",
+      "contractRef": "contracts/openapi.json",
+      "implementationStatus": "NOT_IMPLEMENTED",
+      "mappingLevel": "REQUIREMENT_TO_DOMAIN_SLICE_AND_TYPED_ACTIONS_NOT_CODE_LINE_TRACE"
+    },
+    {
+      "requirementId": "EW-03",
+      "domain": "CV",
+      "sliceId": "SL-CV",
+      "pageIds": [
+        "P02",
+        "P10",
+        "P11"
+      ],
+      "commandIds": [
+        "C20"
+      ],
+      "operationIds": [
+        "C20_prepareUpload",
+        "C20_uploadComplete",
+        "C20_parse",
+        "C20_merge",
+        "C20_readContent"
+      ],
+      "dataTables": [
+        "oa_thread_entry",
+        "oa_attempt"
+      ],
+      "originalCaseIds": [],
+      "normativeAcceptance": "仅返回获准字段、文件名、路径和版本",
+      "negative": "无权直链、对象猜测、缩略图和导出均拒绝",
+      "specRef": "docs/设计包/47-全产品实施切片与首期开发规格.md#sl-cv",
+      "uiRef": "docs/设计包/52-UI实现与页面状态规格.md",
+      "contractRef": "contracts/openapi.json",
+      "implementationStatus": "NOT_IMPLEMENTED",
+      "mappingLevel": "REQUIREMENT_TO_DOMAIN_SLICE_AND_TYPED_ACTIONS_NOT_CODE_LINE_TRACE"
+    },
+    {
+      "requirementId": "EW-04",
+      "domain": "CV",
+      "sliceId": "SL-CV",
+      "pageIds": [
+        "P02",
+        "P10",
+        "P11"
+      ],
+      "commandIds": [
+        "C01",
+        "C05",
+        "C24"
+      ],
+      "operationIds": [
+        "C01_listInbox",
+        "C01_getWork",
+        "C01_readVersionResource",
+        "C05_previewContext",
+        "C05_eligibleResources",
+        "C24_identity",
+        "C24_grant",
+        "C24_revoke",
+        "C24_transfer",
+        "C24_privacy"
+      ],
+      "dataTables": [
+        "oa_thread_entry",
+        "oa_attempt"
+      ],
+      "originalCaseIds": [],
+      "normativeAcceptance": "分别判定动作与任务关系，获准摘要不开放源文档",
+      "negative": "部门名称、管理身份和设计总览不扩权",
+      "specRef": "docs/设计包/47-全产品实施切片与首期开发规格.md#sl-cv",
+      "uiRef": "docs/设计包/52-UI实现与页面状态规格.md",
+      "contractRef": "contracts/openapi.json",
+      "implementationStatus": "NOT_IMPLEMENTED",
+      "mappingLevel": "REQUIREMENT_TO_DOMAIN_SLICE_AND_TYPED_ACTIONS_NOT_CODE_LINE_TRACE"
+    },
+    {
+      "requirementId": "EW-05",
+      "domain": "CV",
+      "sliceId": "SL-CV",
+      "pageIds": [
+        "P02",
+        "P10",
+        "P11"
+      ],
+      "commandIds": [
+        "C05",
+        "C06",
+        "C07"
+      ],
+      "operationIds": [
+        "C05_previewContext",
+        "C05_eligibleResources",
+        "C06_startAttempt",
+        "C07_pause",
+        "C07_resume",
+        "C07_cancel"
+      ],
+      "dataTables": [
+        "oa_thread_entry",
+        "oa_attempt"
+      ],
+      "originalCaseIds": [],
+      "normativeAcceptance": "实际执行主体按目的消费，人员读取范围保持独立",
+      "negative": "无授权不能运行，已消费外部输入不能宣称收回",
+      "specRef": "docs/设计包/47-全产品实施切片与首期开发规格.md#sl-cv",
+      "uiRef": "docs/设计包/52-UI实现与页面状态规格.md",
+      "contractRef": "contracts/openapi.json",
+      "implementationStatus": "NOT_IMPLEMENTED",
+      "mappingLevel": "REQUIREMENT_TO_DOMAIN_SLICE_AND_TYPED_ACTIONS_NOT_CODE_LINE_TRACE"
+    },
+    {
+      "requirementId": "EW-06",
+      "domain": "CV",
+      "sliceId": "SL-CV",
+      "pageIds": [
+        "P02",
+        "P10",
+        "P11"
+      ],
+      "commandIds": [
+        "C09",
+        "C10",
+        "C15",
+        "C20"
+      ],
+      "operationIds": [
+        "C09_submit",
+        "C09_decide",
+        "C10_requestReview",
+        "C10_decideReview",
+        "C15_read",
+        "C15_remind",
+        "C15_withdraw",
+        "C15_appendWorkMessage",
+        "C15_saveMessageDraft",
+        "C20_prepareUpload",
+        "C20_uploadComplete",
+        "C20_parse",
+        "C20_merge",
+        "C20_readContent"
+      ],
+      "dataTables": [
+        "oa_thread_entry",
+        "oa_attempt"
+      ],
+      "originalCaseIds": [],
+      "normativeAcceptance": "进入人员通道前检查具体接收者、版本和发布条件",
+      "negative": "不靠提示词或关键词过滤单独防止间接输出",
+      "specRef": "docs/设计包/47-全产品实施切片与首期开发规格.md#sl-cv",
+      "uiRef": "docs/设计包/52-UI实现与页面状态规格.md",
+      "contractRef": "contracts/openapi.json",
+      "implementationStatus": "NOT_IMPLEMENTED",
+      "mappingLevel": "REQUIREMENT_TO_DOMAIN_SLICE_AND_TYPED_ACTIONS_NOT_CODE_LINE_TRACE"
+    },
+    {
+      "requirementId": "EW-07",
+      "domain": "CV",
+      "sliceId": "SL-CV",
+      "pageIds": [
+        "P02",
+        "P10",
+        "P11"
+      ],
+      "commandIds": [
+        "C01",
+        "C07",
+        "C24"
+      ],
+      "operationIds": [
+        "C01_listInbox",
+        "C01_getWork",
+        "C01_readVersionResource",
+        "C07_pause",
+        "C07_resume",
+        "C07_cancel",
+        "C24_identity",
+        "C24_grant",
+        "C24_revoke",
+        "C24_transfer",
+        "C24_privacy"
+      ],
+      "dataTables": [
+        "oa_thread_entry",
+        "oa_attempt"
+      ],
+      "originalCaseIds": [],
+      "normativeAcceptance": "清除旧内容，分开草稿，丢弃过期授权和请求代次",
+      "negative": "不能由隐藏DOM、离线缓存或旧订阅恢复已撤权内容",
+      "specRef": "docs/设计包/47-全产品实施切片与首期开发规格.md#sl-cv",
+      "uiRef": "docs/设计包/52-UI实现与页面状态规格.md",
+      "contractRef": "contracts/openapi.json",
+      "implementationStatus": "NOT_IMPLEMENTED",
+      "mappingLevel": "REQUIREMENT_TO_DOMAIN_SLICE_AND_TYPED_ACTIONS_NOT_CODE_LINE_TRACE"
+    },
+    {
+      "requirementId": "EW-08",
+      "domain": "CV",
+      "sliceId": "SL-CV",
+      "pageIds": [
+        "P02",
+        "P10",
+        "P11"
+      ],
+      "commandIds": [
+        "C07",
+        "C14",
+        "C24"
+      ],
+      "operationIds": [
+        "C07_pause",
+        "C07_resume",
+        "C07_cancel",
+        "C14_queryOperation",
+        "C14_reconcile",
+        "C24_identity",
+        "C24_grant",
+        "C24_revoke",
+        "C24_transfer",
+        "C24_privacy"
+      ],
+      "dataTables": [
+        "oa_thread_entry",
+        "oa_attempt"
+      ],
+      "originalCaseIds": [],
+      "normativeAcceptance": "复用现有人员任务路由到有权负责人，恢复后重查",
+      "negative": "申请不自动授权，修复不自动完成原业务",
+      "specRef": "docs/设计包/47-全产品实施切片与首期开发规格.md#sl-cv",
+      "uiRef": "docs/设计包/52-UI实现与页面状态规格.md",
+      "contractRef": "contracts/openapi.json",
+      "implementationStatus": "NOT_IMPLEMENTED",
+      "mappingLevel": "REQUIREMENT_TO_DOMAIN_SLICE_AND_TYPED_ACTIONS_NOT_CODE_LINE_TRACE"
+    }
+  ]
+}

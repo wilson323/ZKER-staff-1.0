@@ -1,0 +1,52 @@
+{
+  "schema_version": 1,
+  "project_root": "/private/var/folders/8l/6tnv8ssd2vs0h8463rnv66b00000gn/T/ai-sdlc-forward-sud9bya_/python-project",
+  "scope": "STATIC",
+  "status": "PASS",
+  "started_at": "2026-09-11T17:40:17.429306+00:00",
+  "finished_at": "2026-09-11T17:40:17.475728+00:00",
+  "inputs": [
+    {
+      "path": "labels.py",
+      "sha256": "a4507011f8a36a81d0f4a9906d882ae6c7b93a904c455a61e635b9df36805be2"
+    },
+    {
+      "path": "tests/test_labels.py",
+      "sha256": "458150891e53cfd1da792061a5875dff9ceaab2542f9402198c6082459fda297"
+    }
+  ],
+  "artifacts": [
+    {
+      "path": "labels.py",
+      "sha256": "a4507011f8a36a81d0f4a9906d882ae6c7b93a904c455a61e635b9df36805be2"
+    },
+    {
+      "path": "TASKS.md",
+      "sha256": "2f74551d161c1872d34e7506a37ab2e9eff7be370b44915744026d91fee06f71"
+    }
+  ],
+  "checks": [
+    {
+      "id": "parent-validation",
+      "argv": [
+        "python3",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-v"
+      ],
+      "exit_code": 0,
+      "assertions": 4,
+      "simulated": true,
+      "log": {
+        "path": "parent-validation.log",
+        "sha256": "6596e3a0f86d1b8098ec1265af663e0319db282a5b938ae91347271af9d9d8f0"
+      }
+    }
+  ],
+  "limitations": [
+    "Isolated fixture only; not production or cross-model reliability evidence."
+  ]
+}

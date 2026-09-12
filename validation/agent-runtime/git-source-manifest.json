@@ -1,0 +1,24 @@
+[
+  {
+    "repo": "OpenBMB/StaffDeck",
+    "url": "https://github.com/OpenBMB/StaffDeck.git",
+    "exit": 0,
+    "file": "validation/agent-runtime/sources/staffdeck-refs.txt",
+    "sha256": "77d28dea3a934d9dc5d987902b569b11d677653d57b8a4808ab3dacb2f8ba8a9",
+    "heads": [
+      "7adc7c84f61bd6cca13ff0380a811cbb3ae3c544\tHEAD"
+    ],
+    "error": ""
+  },
+  {
+    "repo": "openai/codex",
+    "url": "https://github.com/openai/codex.git",
+    "exit": 0,
+    "file": "validation/agent-runtime/sources/codex-refs.txt",
+    "sha256": "3345cd53b5767897f74e3829f80b6ecd0139e5b8be4e53b4c9a59ca66332ae70",
+    "heads": [
+      "e8271aa8b482f917b2e62dca0e51e29b8d5ec156\tHEAD"
+    ],
+    "error": ""
+  }
+]

@@ -1,0 +1,757 @@
+{
+  "url": "file:///Users/mac/Documents/New%20project%202/08-%E4%BA%BA%E5%91%98%E6%95%B0%E5%AD%97%E5%91%98%E5%B7%A5%E5%8D%8F%E4%BD%9C%E4%BA%A4%E4%BA%92%E5%8E%9F%E5%9E%8B.html",
+  "layoutChecks": 54,
+  "interactionChecks": 8,
+  "checks": [
+    {
+      "type": "layout",
+      "width": 1440,
+      "role": "main",
+      "tab": 0,
+      "passed": true,
+      "measure": {
+        "doc": 1440,
+        "width": 1440,
+        "text": 326,
+        "h1": "方案编制与汇总"
+      }
+    },
+    {
+      "type": "layout",
+      "width": 1440,
+      "role": "main",
+      "tab": 1,
+      "passed": true,
+      "measure": {
+        "doc": 1440,
+        "width": 1440,
+        "text": 302,
+        "h1": "方案编制与汇总"
+      }
+    },
+    {
+      "type": "layout",
+      "width": 1440,
+      "role": "main",
+      "tab": 2,
+      "passed": true,
+      "measure": {
+        "doc": 1440,
+        "width": 1440,
+        "text": 335,
+        "h1": "方案编制与汇总"
+      }
+    },
+    {
+      "type": "layout",
+      "width": 1440,
+      "role": "main",
+      "tab": 3,
+      "passed": true,
+      "measure": {
+        "doc": 1440,
+        "width": 1440,
+        "text": 158,
+        "h1": "方案编制与汇总"
+      }
+    },
+    {
+      "type": "layout",
+      "width": 1440,
+      "role": "collab",
+      "tab": 0,
+      "passed": true,
+      "measure": {
+        "doc": 1440,
+        "width": 1440,
+        "text": 328,
+        "h1": "编制设备预算"
+      }
+    },
+    {
+      "type": "layout",
+      "width": 1440,
+      "role": "collab",
+      "tab": 1,
+      "passed": true,
+      "measure": {
+        "doc": 1440,
+        "width": 1440,
+        "text": 302,
+        "h1": "编制设备预算"
+      }
+    },
+    {
+      "type": "layout",
+      "width": 1440,
+      "role": "collab",
+      "tab": 2,
+      "passed": true,
+      "measure": {
+        "doc": 1440,
+        "width": 1440,
+        "text": 335,
+        "h1": "编制设备预算"
+      }
+    },
+    {
+      "type": "layout",
+      "width": 1440,
+      "role": "collab",
+      "tab": 3,
+      "passed": true,
+      "measure": {
+        "doc": 1440,
+        "width": 1440,
+        "text": 151,
+        "h1": "编制设备预算"
+      }
+    },
+    {
+      "type": "layout",
+      "width": 1440,
+      "role": "review",
+      "tab": 0,
+      "passed": true,
+      "measure": {
+        "doc": 1440,
+        "width": 1440,
+        "text": 329,
+        "h1": "审核采购方案"
+      }
+    },
+    {
+      "type": "layout",
+      "width": 1440,
+      "role": "review",
+      "tab": 1,
+      "passed": true,
+      "measure": {
+        "doc": 1440,
+        "width": 1440,
+        "text": 305,
+        "h1": "审核采购方案"
+      }
+    },
+    {
+      "type": "layout",
+      "width": 1440,
+      "role": "review",
+      "tab": 2,
+      "passed": true,
+      "measure": {
+        "doc": 1440,
+        "width": 1440,
+        "text": 335,
+        "h1": "审核采购方案"
+      }
+    },
+    {
+      "type": "layout",
+      "width": 1440,
+      "role": "review",
+      "tab": 3,
+      "passed": true,
+      "measure": {
+        "doc": 1440,
+        "width": 1440,
+        "text": 153,
+        "h1": "审核采购方案"
+      }
+    },
+    {
+      "type": "layout",
+      "width": 1440,
+      "role": "designer",
+      "tab": 0,
+      "passed": true,
+      "measure": {
+        "doc": 1440,
+        "width": 1440,
+        "text": 132,
+        "h1": "采购流程 · 节点设计"
+      }
+    },
+    {
+      "type": "layout",
+      "width": 1440,
+      "role": "designer",
+      "tab": 1,
+      "passed": true,
+      "measure": {
+        "doc": 1440,
+        "width": 1440,
+        "text": 55,
+        "h1": "采购流程 · 节点设计"
+      }
+    },
+    {
+      "type": "layout",
+      "width": 1440,
+      "role": "designer",
+      "tab": 2,
+      "passed": true,
+      "measure": {
+        "doc": 1440,
+        "width": 1440,
+        "text": 70,
+        "h1": "采购流程 · 节点设计"
+      }
+    },
+    {
+      "type": "layout",
+      "width": 1440,
+      "role": "resource",
+      "tab": 0,
+      "passed": true,
+      "measure": {
+        "doc": 1440,
+        "width": 1440,
+        "text": 168,
+        "h1": "数字员工与能力"
+      }
+    },
+    {
+      "type": "layout",
+      "width": 1440,
+      "role": "resource",
+      "tab": 1,
+      "passed": true,
+      "measure": {
+        "doc": 1440,
+        "width": 1440,
+        "text": 111,
+        "h1": "数字员工与能力"
+      }
+    },
+    {
+      "type": "layout",
+      "width": 1440,
+      "role": "resource",
+      "tab": 2,
+      "passed": true,
+      "measure": {
+        "doc": 1440,
+        "width": 1440,
+        "text": 98,
+        "h1": "数字员工与能力"
+      }
+    },
+    {
+      "type": "layout",
+      "width": 1024,
+      "role": "main",
+      "tab": 0,
+      "passed": true,
+      "measure": {
+        "doc": 1024,
+        "width": 1024,
+        "text": 326,
+        "h1": "方案编制与汇总"
+      }
+    },
+    {
+      "type": "layout",
+      "width": 1024,
+      "role": "main",
+      "tab": 1,
+      "passed": true,
+      "measure": {
+        "doc": 1024,
+        "width": 1024,
+        "text": 302,
+        "h1": "方案编制与汇总"
+      }
+    },
+    {
+      "type": "layout",
+      "width": 1024,
+      "role": "main",
+      "tab": 2,
+      "passed": true,
+      "measure": {
+        "doc": 1024,
+        "width": 1024,
+        "text": 335,
+        "h1": "方案编制与汇总"
+      }
+    },
+    {
+      "type": "layout",
+      "width": 1024,
+      "role": "main",
+      "tab": 3,
+      "passed": true,
+      "measure": {
+        "doc": 1024,
+        "width": 1024,
+        "text": 158,
+        "h1": "方案编制与汇总"
+      }
+    },
+    {
+      "type": "layout",
+      "width": 1024,
+      "role": "collab",
+      "tab": 0,
+      "passed": true,
+      "measure": {
+        "doc": 1024,
+        "width": 1024,
+        "text": 328,
+        "h1": "编制设备预算"
+      }
+    },
+    {
+      "type": "layout",
+      "width": 1024,
+      "role": "collab",
+      "tab": 1,
+      "passed": true,
+      "measure": {
+        "doc": 1024,
+        "width": 1024,
+        "text": 302,
+        "h1": "编制设备预算"
+      }
+    },
+    {
+      "type": "layout",
+      "width": 1024,
+      "role": "collab",
+      "tab": 2,
+      "passed": true,
+      "measure": {
+        "doc": 1024,
+        "width": 1024,
+        "text": 335,
+        "h1": "编制设备预算"
+      }
+    },
+    {
+      "type": "layout",
+      "width": 1024,
+      "role": "collab",
+      "tab": 3,
+      "passed": true,
+      "measure": {
+        "doc": 1024,
+        "width": 1024,
+        "text": 151,
+        "h1": "编制设备预算"
+      }
+    },
+    {
+      "type": "layout",
+      "width": 1024,
+      "role": "review",
+      "tab": 0,
+      "passed": true,
+      "measure": {
+        "doc": 1024,
+        "width": 1024,
+        "text": 329,
+        "h1": "审核采购方案"
+      }
+    },
+    {
+      "type": "layout",
+      "width": 1024,
+      "role": "review",
+      "tab": 1,
+      "passed": true,
+      "measure": {
+        "doc": 1024,
+        "width": 1024,
+        "text": 305,
+        "h1": "审核采购方案"
+      }
+    },
+    {
+      "type": "layout",
+      "width": 1024,
+      "role": "review",
+      "tab": 2,
+      "passed": true,
+      "measure": {
+        "doc": 1024,
+        "width": 1024,
+        "text": 335,
+        "h1": "审核采购方案"
+      }
+    },
+    {
+      "type": "layout",
+      "width": 1024,
+      "role": "review",
+      "tab": 3,
+      "passed": true,
+      "measure": {
+        "doc": 1024,
+        "width": 1024,
+        "text": 153,
+        "h1": "审核采购方案"
+      }
+    },
+    {
+      "type": "layout",
+      "width": 1024,
+      "role": "designer",
+      "tab": 0,
+      "passed": true,
+      "measure": {
+        "doc": 1024,
+        "width": 1024,
+        "text": 132,
+        "h1": "采购流程 · 节点设计"
+      }
+    },
+    {
+      "type": "layout",
+      "width": 1024,
+      "role": "designer",
+      "tab": 1,
+      "passed": true,
+      "measure": {
+        "doc": 1024,
+        "width": 1024,
+        "text": 55,
+        "h1": "采购流程 · 节点设计"
+      }
+    },
+    {
+      "type": "layout",
+      "width": 1024,
+      "role": "designer",
+      "tab": 2,
+      "passed": true,
+      "measure": {
+        "doc": 1024,
+        "width": 1024,
+        "text": 70,
+        "h1": "采购流程 · 节点设计"
+      }
+    },
+    {
+      "type": "layout",
+      "width": 1024,
+      "role": "resource",
+      "tab": 0,
+      "passed": true,
+      "measure": {
+        "doc": 1024,
+        "width": 1024,
+        "text": 168,
+        "h1": "数字员工与能力"
+      }
+    },
+    {
+      "type": "layout",
+      "width": 1024,
+      "role": "resource",
+      "tab": 1,
+      "passed": true,
+      "measure": {
+        "doc": 1024,
+        "width": 1024,
+        "text": 111,
+        "h1": "数字员工与能力"
+      }
+    },
+    {
+      "type": "layout",
+      "width": 1024,
+      "role": "resource",
+      "tab": 2,
+      "passed": true,
+      "measure": {
+        "doc": 1024,
+        "width": 1024,
+        "text": 98,
+        "h1": "数字员工与能力"
+      }
+    },
+    {
+      "type": "layout",
+      "width": 390,
+      "role": "main",
+      "tab": 0,
+      "passed": true,
+      "measure": {
+        "doc": 390,
+        "width": 390,
+        "text": 326,
+        "h1": "方案编制与汇总"
+      }
+    },
+    {
+      "type": "layout",
+      "width": 390,
+      "role": "main",
+      "tab": 1,
+      "passed": true,
+      "measure": {
+        "doc": 390,
+        "width": 390,
+        "text": 302,
+        "h1": "方案编制与汇总"
+      }
+    },
+    {
+      "type": "layout",
+      "width": 390,
+      "role": "main",
+      "tab": 2,
+      "passed": true,
+      "measure": {
+        "doc": 390,
+        "width": 390,
+        "text": 335,
+        "h1": "方案编制与汇总"
+      }
+    },
+    {
+      "type": "layout",
+      "width": 390,
+      "role": "main",
+      "tab": 3,
+      "passed": true,
+      "measure": {
+        "doc": 390,
+        "width": 390,
+        "text": 158,
+        "h1": "方案编制与汇总"
+      }
+    },
+    {
+      "type": "layout",
+      "width": 390,
+      "role": "collab",
+      "tab": 0,
+      "passed": true,
+      "measure": {
+        "doc": 390,
+        "width": 390,
+        "text": 328,
+        "h1": "编制设备预算"
+      }
+    },
+    {
+      "type": "layout",
+      "width": 390,
+      "role": "collab",
+      "tab": 1,
+      "passed": true,
+      "measure": {
+        "doc": 390,
+        "width": 390,
+        "text": 302,
+        "h1": "编制设备预算"
+      }
+    },
+    {
+      "type": "layout",
+      "width": 390,
+      "role": "collab",
+      "tab": 2,
+      "passed": true,
+      "measure": {
+        "doc": 390,
+        "width": 390,
+        "text": 335,
+        "h1": "编制设备预算"
+      }
+    },
+    {
+      "type": "layout",
+      "width": 390,
+      "role": "collab",
+      "tab": 3,
+      "passed": true,
+      "measure": {
+        "doc": 390,
+        "width": 390,
+        "text": 151,
+        "h1": "编制设备预算"
+      }
+    },
+    {
+      "type": "layout",
+      "width": 390,
+      "role": "review",
+      "tab": 0,
+      "passed": true,
+      "measure": {
+        "doc": 390,
+        "width": 390,
+        "text": 329,
+        "h1": "审核采购方案"
+      }
+    },
+    {
+      "type": "layout",
+      "width": 390,
+      "role": "review",
+      "tab": 1,
+      "passed": true,
+      "measure": {
+        "doc": 390,
+        "width": 390,
+        "text": 305,
+        "h1": "审核采购方案"
+      }
+    },
+    {
+      "type": "layout",
+      "width": 390,
+      "role": "review",
+      "tab": 2,
+      "passed": true,
+      "measure": {
+        "doc": 390,
+        "width": 390,
+        "text": 335,
+        "h1": "审核采购方案"
+      }
+    },
+    {
+      "type": "layout",
+      "width": 390,
+      "role": "review",
+      "tab": 3,
+      "passed": true,
+      "measure": {
+        "doc": 390,
+        "width": 390,
+        "text": 153,
+        "h1": "审核采购方案"
+      }
+    },
+    {
+      "type": "layout",
+      "width": 390,
+      "role": "designer",
+      "tab": 0,
+      "passed": true,
+      "measure": {
+        "doc": 390,
+        "width": 390,
+        "text": 132,
+        "h1": "采购流程 · 节点设计"
+      }
+    },
+    {
+      "type": "layout",
+      "width": 390,
+      "role": "designer",
+      "tab": 1,
+      "passed": true,
+      "measure": {
+        "doc": 390,
+        "width": 390,
+        "text": 55,
+        "h1": "采购流程 · 节点设计"
+      }
+    },
+    {
+      "type": "layout",
+      "width": 390,
+      "role": "designer",
+      "tab": 2,
+      "passed": true,
+      "measure": {
+        "doc": 390,
+        "width": 390,
+        "text": 70,
+        "h1": "采购流程 · 节点设计"
+      }
+    },
+    {
+      "type": "layout",
+      "width": 390,
+      "role": "resource",
+      "tab": 0,
+      "passed": true,
+      "measure": {
+        "doc": 390,
+        "width": 390,
+        "text": 168,
+        "h1": "数字员工与能力"
+      }
+    },
+    {
+      "type": "layout",
+      "width": 390,
+      "role": "resource",
+      "tab": 1,
+      "passed": true,
+      "measure": {
+        "doc": 390,
+        "width": 390,
+        "text": 111,
+        "h1": "数字员工与能力"
+      }
+    },
+    {
+      "type": "layout",
+      "width": 390,
+      "role": "resource",
+      "tab": 2,
+      "passed": true,
+      "measure": {
+        "doc": 390,
+        "width": 390,
+        "text": 98,
+        "h1": "数字员工与能力"
+      }
+    },
+    {
+      "type": "interaction",
+      "name": "stale input disables parent commit",
+      "passed": true
+    },
+    {
+      "type": "interaction",
+      "name": "collaborator configuration isolated",
+      "passed": true
+    },
+    {
+      "type": "interaction",
+      "name": "recheck produces new matching basis draft",
+      "passed": true
+    },
+    {
+      "type": "interaction",
+      "name": "contribution submitted separately",
+      "passed": true
+    },
+    {
+      "type": "interaction",
+      "name": "acceptance still requires approval",
+      "passed": true
+    },
+    {
+      "type": "interaction",
+      "name": "reviewer configuration read only",
+      "passed": true
+    },
+    {
+      "type": "interaction",
+      "name": "review creates separate decision",
+      "passed": true
+    },
+    {
+      "type": "interaction",
+      "name": "parent commit after accepted current contribution and approval",
+      "passed": true
+    }
+  ],
+  "pageErrors": [],
+  "screenshots": [
+    "/Users/mac/Documents/New project 2/validation/prototype-1440.png",
+    "/Users/mac/Documents/New project 2/validation/prototype-1024.png",
+    "/Users/mac/Documents/New project 2/validation/prototype-390.png"
+  ],
+  "passed": true,
+  "limitations": "Local HTML demonstration only. No product server, DSH, real dependency, complete a11y audit, or production verification."
+}

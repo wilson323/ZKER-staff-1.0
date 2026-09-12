@@ -1,0 +1,58 @@
+{
+  "scope": "SUPPLEMENTARY_DIAGRAM_UI_ONLY",
+  "artifactSha256": "2d306f81e493018a85b1fb5525686a422595dc4f4181f177535040ab83bc1dc7",
+  "checks": [
+    {
+      "name": "search finds one intended node",
+      "pass": true
+    },
+    {
+      "name": "selection opens semantic passport",
+      "pass": true
+    },
+    {
+      "name": "passport can close",
+      "pass": true
+    },
+    {
+      "name": "search can close",
+      "pass": true
+    },
+    {
+      "name": "guided view selected",
+      "pass": true
+    },
+    {
+      "name": "svg export produces bytes",
+      "pass": true
+    },
+    {
+      "name": "png export produces bytes",
+      "pass": true
+    },
+    {
+      "name": "SVG is standalone without scripts or local workspace paths",
+      "pass": true
+    },
+    {
+      "name": "no page errors",
+      "pass": true
+    }
+  ],
+  "errors": [],
+  "productTestsRun": false,
+  "exports": [
+    {
+      "path": "validation/technical-architecture-export.svg",
+      "sha256": "7ba2f1f2aad9ef38f4ef88f1b80ffffa517583d6cd7f22642db26133d9edcc6a",
+      "bytes": 55322
+    },
+    {
+      "path": "validation/technical-architecture-export.png",
+      "sha256": "fa343b74de791919f19b57e1e903c6c1861a7f51f383443423a6114e64a5ba43",
+      "bytes": 592934
+    }
+  ],
+  "status": "PASS",
+  "checkedAt": "2026-09-11T17:56:05.664Z"
+}

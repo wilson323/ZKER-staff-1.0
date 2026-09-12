@@ -1,0 +1,256 @@
+{
+  "retrievedAt": "2026-09-11T23:55:15.420779+00:00",
+  "operation": "search_knowledge",
+  "request": {
+    "knowledge_base_id": "r6lzPxGxzxyth5lBOQsMcdFExktysIJuZSXtkWUmPtU=",
+    "cursor": "",
+    "query": "Harness"
+  },
+  "exitCode": 0,
+  "response": {
+    "code": 0,
+    "msg": "success",
+    "data": {
+      "info_list": [
+        {
+          "media_id": "wechatarticle_0ce7f07d83516512247a723823ac9ad6_ae5619605069921b18846dfccc2b93bb7447205136853569",
+          "title": "Meta-Harness：让AI 改进自己的Harness",
+          "parent_folder_id": "7447205136853569",
+          "highlight_content": "",
+          "media_type": 6
+        },
+        {
+          "media_id": "wechatarticle_0ce7f07d83516512247a723823ac9ad6_4835cb5d4b520656d5e79a1c31f9cc267447205136853569",
+          "title": "开箱即用的AI Harness工程：Wow-harness开源啦！",
+          "parent_folder_id": "7447205136853569",
+          "highlight_content": "",
+          "media_type": 6
+        },
+        {
+          "media_id": "wechatarticle_0ce7f07d83516512247a723823ac9ad6_b849bf3a3af14725b79c1e9b019e62ac7447205136853569",
+          "title": "刚刚，一篇最全Agent Harness综述来了！",
+          "parent_folder_id": "7447205136853569",
+          "highlight_content": "",
+          "media_type": 6
+        },
+        {
+          "media_id": "wechatarticle_0ce7f07d83516512247a723823ac9ad6_daca68aaca5648d6746493bb2db59f367447205136853569",
+          "title": "大家都在讲 Harness，但它到底该怎么理解",
+          "parent_folder_id": "7447205136853569",
+          "highlight_content": "",
+          "media_type": 6
+        },
+        {
+          "media_id": "wechatarticle_0ce7f07d83516512247a723823ac9ad6_a03aa4893fd7db88881decb62b78d1cb7447205136853569",
+          "title": "OpenAI团队编程Agent的Harness工程实践",
+          "parent_folder_id": "7447205136853569",
+          "highlight_content": "",
+          "media_type": 6
+        },
+        {
+          "media_id": "wechatarticle_0ce7f07d83516512247a723823ac9ad6_644ca40a3e54edc392480f558b1cfa3b7447205136853569",
+          "title": "AI 不缺智商缺纪律：我的 Harness 工程化实践",
+          "parent_folder_id": "7447205136853569",
+          "highlight_content": "",
+          "media_type": 6
+        },
+        {
+          "media_id": "wechatarticle_0ce7f07d83516512247a723823ac9ad6_6f7845e9ebc1e8f2dde6f4d84bf20bf57447205136853569",
+          "title": "Anthropic 官方 Harness 发布：全面解读 Managed Agents",
+          "parent_folder_id": "7447205136853569",
+          "highlight_content": "",
+          "media_type": 6
+        },
+        {
+          "media_id": "wechatarticle_0ce7f07d83516512247a723823ac9ad6_05344be7414693d8447ea3dfe13144547447205136853569",
+          "title": "AI 写完代码以后，需要一个 Verification Harness",
+          "parent_folder_id": "7447205136853569",
+          "highlight_content": "",
+          "media_type": 6
+        },
+        {
+          "media_id": "wechatarticle_0ce7f07d83516512247a723823ac9ad6_0ed3e73ae3766e8750dc4a80d9c89d727447205136853569",
+          "title": "一文讲透如何构建Harness——六大组件全解析",
+          "parent_folder_id": "7447205136853569",
+          "highlight_content": "",
+          "media_type": 6
+        },
+        {
+          "media_id": "wechatarticle_0ce7f07d83516512247a723823ac9ad6_b870f3eb47473f40725cf2ba644f266d7447205136853569",
+          "title": "Harness Engineering在硅谷爆火，一文带你搞懂！",
+          "parent_folder_id": "7447205136853569",
+          "highlight_content": "",
+          "media_type": 6
+        },
+        {
+          "media_id": "wechatarticle_0ce7f07d83516512247a723823ac9ad6_ee71427b6476f2aa8d69e38f17d5f1e37447205136853569",
+          "title": "代码从失控到可控 | 阿里云Qoder开源Better Harness",
+          "parent_folder_id": "7447205136853569",
+          "highlight_content": "",
+          "media_type": 6
+        },
+        {
+          "media_id": "wechatarticle_e5315c762097466743dc1bc435bd4178_375d05c8c1223497a4102fa870e230607447205136853569",
+          "title": "从 Rule、Spec 到 Harness：AI Coding 的渐进式建设路径",
+          "parent_folder_id": "7447205136853569",
+          "highlight_content": "",
+          "media_type": 6
+        },
+        {
+          "media_id": "wechatarticle_0ce7f07d83516512247a723823ac9ad6_065ce3fd7b103cb48338bd420bfccbf37447205136853569",
+          "title": "万字干货：理解 Harness Engineering，看这一篇就够了",
+          "parent_folder_id": "7447205136853569",
+          "highlight_content": "",
+          "media_type": 6
+        },
+        {
+          "media_id": "wechatarticle_e5315c762097466743dc1bc435bd4178_fd31a43ce494e9e2211584c58d28ba9d7447205136853569",
+          "title": "3天破5K stars！ OpenHarness：港大团队面向开放式智能体系统开源的轻量级 Agent Harness 框架",
+          "parent_folder_id": "7447205136853569",
+          "highlight_content": "",
+          "media_type": 6
+        },
+        {
+          "media_id": "wechatarticle_0ce7f07d83516512247a723823ac9ad6_a6a39c012b97024b3ec19f50df364fe57447205136853569",
+          "title": "Harness 工程可视化：在 Vibe Coding 中重建工程可控性",
+          "parent_folder_id": "7447205136853569",
+          "highlight_content": "",
+          "media_type": 6
+        },
+        {
+          "media_id": "wechatarticle_0ce7f07d83516512247a723823ac9ad6_ad8f35e4f5da116dff0b57aec82362c77447205136853569",
+          "title": "Harness项目推荐丨CLI-Anything 、CrewAI、LangGraph、EigenFlux....",
+          "parent_folder_id": "7447205136853569",
+          "highlight_content": "",
+          "media_type": 6
+        },
+        {
+          "media_id": "wechatarticle_0ce7f07d83516512247a723823ac9ad6_fcfe1f71620cb6c7e68b6805ad1c87a07447205136853569",
+          "title": "驾驭AI Coding：一份面向团队的Harness Engineering落地规范",
+          "parent_folder_id": "7447205136853569",
+          "highlight_content": "",
+          "media_type": 6
+        },
+        {
+          "media_id": "wechatarticle_0ce7f07d83516512247a723823ac9ad6_2911e30b206dadb6f6aae248346029d77447205136853569",
+          "title": "OpenSpec、Superpowers 和 Harness：AI 工程化开发的三层拼图",
+          "parent_folder_id": "7447205136853569",
+          "highlight_content": "",
+          "media_type": 6
+        },
+        {
+          "media_id": "wechatarticle_0ce7f07d83516512247a723823ac9ad6_ce5c0541c4d5277c66bba892bc7af2027447205136853569",
+          "title": "一文看懂 Harness engineering：智能体时代的 AI 编程驾驭之道",
+          "parent_folder_id": "7447205136853569",
+          "highlight_content": "",
+          "media_type": 6
+        },
+        {
+          "media_id": "wechatarticle_0ce7f07d83516512247a723823ac9ad6_36190f9e13da8d95c486c8808cf8c78a7447205136853569",
+          "title": "Harness 工程 Skill：使用 Entrix 技能开始你的代码熵治理",
+          "parent_folder_id": "7447205136853569",
+          "highlight_content": "",
+          "media_type": 6
+        },
+        {
+          "media_id": "wechatarticle_0ce7f07d83516512247a723823ac9ad6_f80d8f177d92454031acd3405bb6a0537447205136853569",
+          "title": "腾讯开源Harness管理工具，WorkBuddy和Codex共享Skill和规则！",
+          "parent_folder_id": "7447205136853569",
+          "highlight_content": "",
+          "media_type": 6
+        },
+        {
+          "media_id": "wechatarticle_e5315c762097466743dc1bc435bd4178_2ca79e5c8619be0c78c19083f34a54307447205136853569",
+          "title": "【万字】拆完 Claude Code 51万行源码后，我才明白什么叫 Harness",
+          "parent_folder_id": "7447205136853569",
+          "highlight_content": "",
+          "media_type": 6
+        },
+        {
+          "media_id": "wechatarticle_0ce7f07d83516512247a723823ac9ad6_5eb11e0c77015be6f9db3028467ada017447205136853569",
+          "title": "Anthropic说：网传的Harness思路过时了，做这3件事就够！",
+          "parent_folder_id": "7447205136853569",
+          "highlight_content": "",
+          "media_type": 6
+        },
+        {
+          "media_id": "wechatarticle_0ce7f07d83516512247a723823ac9ad6_0b2fc782f253527f1b706b270557d60f7447205136853569",
+          "title": "Harness Engineering 和 SDD：AI工程化时代的双轮驱动，还是规范冲突？",
+          "parent_folder_id": "7447205136853569",
+          "highlight_content": "",
+          "media_type": 6
+        },
+        {
+          "media_id": "wechatarticle_0ce7f07d83516512247a723823ac9ad6_115e5bbde5ded3ad15f8a8857fd8f8f57447205136853569",
+          "title": "Harness 到底是什么：一匹马、一辆车、一个 AI 时代的操作系统",
+          "parent_folder_id": "7447205136853569",
+          "highlight_content": "",
+          "media_type": 6
+        },
+        {
+          "media_id": "wechatarticle_0ce7f07d83516512247a723823ac9ad6_d2efca6a07aa97d24cfa0b7ee19f1f087447205136853569",
+          "title": "Brainstorming 之后，还缺什么？从 Superpowers 到 Harness Engineering 的一次观察",
+          "parent_folder_id": "7447205136853569",
+          "highlight_content": "",
+          "media_type": 6
+        },
+        {
+          "media_id": "wechatarticle_0ce7f07d83516512247a723823ac9ad6_5af65e103605fdec021b6fa9eb370c027447205136853569",
+          "title": "深度解析 OpenClaw 在 Prompt / Context / Harness 三个维度中的设计哲学与实践",
+          "parent_folder_id": "7447205136853569",
+          "highlight_content": "",
+          "media_type": 6
+        },
+        {
+          "media_id": "wechatarticle_0ce7f07d83516512247a723823ac9ad6_6e75eb9f20f03b7a7ae105660c0a54177447205136853569",
+          "title": "拆解京东海博 AI-Native 落地保障：Harness、双 Loop、知识库与技能自主迭代实践",
+          "parent_folder_id": "7447205136853569",
+          "highlight_content": "",
+          "media_type": 6
+        },
+        {
+          "media_id": "wechatarticle_e5315c762097466743dc1bc435bd4178_2b93aebe901e49be67f29237c28cb7fe7447205136853569",
+          "title": "重磅！Anthropic又一个平台级产品炸场:Harness难题一次性解决，把Agent宠物变成牲口",
+          "parent_folder_id": "7447205136853569",
+          "highlight_content": "",
+          "media_type": 6
+        },
+        {
+          "media_id": "wechatarticle_0ce7f07d83516512247a723823ac9ad6_9b733de784aa7147266f80d789bac4097447205136853569",
+          "title": "当自治阈值被跨越：Agent跑通开发闭环-openai《Harness engineering: leveraging Codex in an agent-first world》⑥",
+          "parent_folder_id": "7447205136853569",
+          "highlight_content": "",
+          "media_type": 6
+        },
+        {
+          "media_id": "wechatarticle_0ce7f07d83516512247a723823ac9ad6_b1df5da94e7c4ca59e2a5de5171ac71f7447205136853569",
+          "title": "6 个代表性 AI 编程 Harness 工程化框架拆解：OpenSpec、Superpowers、GSD、OMC、ECC、Trellis 怎么选？",
+          "parent_folder_id": "7447205136853569",
+          "highlight_content": "",
+          "media_type": 6
+        },
+        {
+          "media_id": "wechatarticle_0ce7f07d83516512247a723823ac9ad6_d3468bd5f78e20156429e167eafd64037447205136853569",
+          "title": "工程师不再写代码，而是为agent搭建工作环境：《Harness engineering: leveraging Codex in an agent-first world》①",
+          "parent_folder_id": "7447205136853569",
+          "highlight_content": "",
+          "media_type": 6
+        },
+        {
+          "media_id": "wechatarticle_0ce7f07d83516512247a723823ac9ad6_ded3fced9a1f548cde4533fb01c6b0e47447205136853569",
+          "title": "如何构建你自己的 Agent Harness？超越 Cursor / Codex / Claude Code，告别一次性 SDK 选型，15 项职责独立各自可替换升级",
+          "parent_folder_id": "7447205136853569",
+          "highlight_content": "",
+          "media_type": 6
+        },
+        {
+          "media_id": "wechatarticle_e5315c762097466743dc1bc435bd4178_a7ee4a600150a303b9f3b015be8723287447205136853569",
+          "title": "Hermes Agent vs OpenHarness实测：工程实现的两条路径",
+          "parent_folder_id": "7447205136853569",
+          "highlight_content": "",
+          "media_type": 6
+        }
+      ]
+    }
+  }
+}

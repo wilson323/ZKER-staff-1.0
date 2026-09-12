@@ -1,0 +1,1436 @@
+#  DeepSeek Harness 真能让 Agent 修改自己吗？
+
+原创  羊角大仙  羊角大仙  羊角大仙
+
+_2026年08月18日 21:35_ __ _ _ _ _ _ 四川  _
+
+在小说阅读器读本章
+
+去阅读
+
+#  上一篇扒 DeepSeek Harness 的时候，我提到过一个很容易被吹大的能力：  Self-modification。
+
+简单说，DSH 允许 Agent 在运行过程中修改自己所在的 Harness。
+
+这也是最容易继续加工成一句话的地方：
+
+> Agent 已经开始自我进化了。
+
+但这个结论到底能不能成立，不能看宣传词。
+
+得一路往源码下面扒。
+
+这篇只查四件事：
+
+它到底能改什么？修改怎么发生？第三方真的有人用吗？现有证据最多能把结论推到哪一步？
+
+还是说明一下，文里的“我们”指我 + GPT。
+
+GPT 负责大规模翻源码、查资料和交叉验证，我主要负责提问题、找茬，以及在旁边喊 666。
+
+* * *
+
+##  1\. 先看一个源码反转：Self-mod 的 API 自己已经换过一代
+
+先看 DeepSeek 自己留下的一份 Agent Note：
+
+  *   * 
+
+    
+    
+    .agents/notes/implemented/feature/2026-07-08-self-referential-cordis-toolset.md
+
+里面描述的第一代 Self-mod 很简单。
+
+核心就是：
+
+  *   *   * 
+
+    
+    
+    cordis_inspectcordis_mountcordis_unmount
+
+也就是：
+
+  *   *   *   *   * 
+
+    
+    
+    看看当前 Runtime        ↓现场 Mount 一个临时 Plugin        ↓不用了再 Unmount
+
+当时的问题定义也非常直接：
+
+Agent 明明就活在 Cordis Plugin Runtime 里，却看不到这个 Runtime，也不能在 Session
+中途扩展自己，更不能组合自己临时创造出来的新能力。
+
+所以第一版答案就是：
+
+把 Runtime 本身暴露给 Agent。
+
+但接下来有意思了。
+
+我们研究时冻结的源码版本是：
+
+  *   * 
+
+    
+    
+    deepseek-ai/deepseek-harness47f943859bef60e4160492346772ded9b24f765a
+
+就在这个版本真正的：
+
+  * 
+
+    
+    
+    packages/extensions/tool-cordis/src/index.ts
+
+里，已经不是这三个 Tool 了。
+
+实际变成了：
+
+  *   *   *   *   *   *   *   * 
+
+    
+    
+    cordis_inspect_listcordis_inspect_querycordis_inspect_self cordis_definecordis_runcordis_stopcordis_undefine
+
+也就是说，设计已经从：
+
+  *   *   * 
+
+    
+    
+    mount↓unmount
+
+演化成：
+
+  *   *   *   *   *   *   *   *   * 
+
+    
+    
+    inspect↓define↓run / update↓stop↓undefine
+
+源码里还开始显式管理：
+
+  *   *   *   *   *   * 
+
+    
+    
+    Plugin IDPackage IDRun ID currentPackageIdnextPackageId
+
+这已经不是简单的 Tool 重命名。
+
+旧设计的核心单位更像是“一次 Mount”。
+
+当前实现里，结构已经变成：
+
+  *   *   * 
+
+    
+    
+    Plugin  └─ Package version        └─ Run
+
+也就是说，DSH 已经开始显式管理：
+
+定义、版本、激活、更新和停止。
+
+不是只有一次性的：
+
+  *   * 
+
+    
+    
+    mount(...)unmount(...)
+
+这也是第一件只有真的往源码里翻，才容易看见的东西。
+
+甚至同一个冻结快照里，历史设计说明都可能已经落后于真实实现。
+
+* * *
+
+##  2\. cordis_define 根本不会执行代码
+
+再顺着真实执行路径往下看。
+
+cordis_define 最关键的调用，压缩下来类似：
+
+  *   *   *   *   *   *   * 
+
+    
+    
+    const receipt = ctx.dynamicCordisRunner.define({  sessionId: requireAgent(exec).id,  plugin,  name: args.name,  purpose: args.purpose,  code: args.code,})
+
+这里有个很重要的细节：
+
+define不等于run。
+
+它不会因为模型刚写完一段代码，就立刻把这段代码塞进当前 Runtime。
+
+这一阶段主要做的是：
+
+  *   *   *   *   *   *   * 
+
+    
+    
+    校验参数↓校验代码↓建立 Plugin / Package 身份↓保存这个 Package version
+
+真正执行，是另一条路径：
+
+  *   *   *   *   *   *   * 
+
+    
+    
+    await ctx.dynamicCordisRunner.run(  agent,  pluginId,  packageId,  args.mode,  exec.signal)
+
+所以实际流程更接近：
+
+  *   *   *   *   *   *   *   *   * 
+
+    
+    
+    模型写代码       ↓cordis_define       ↓产生一个 Package version       ↓cordis_run       ↓真正尝试激活
+
+这已经和最粗暴的：
+
+  *   *   * 
+
+    
+    
+    模型生成 JS↓eval()
+
+不是一回事了。
+
+更有意思的是，run 还区分：
+
+  *   * 
+
+    
+    
+    runupdate
+
+假设现在有：
+
+  *   *   *   * 
+
+    
+    
+    plugin: foo-1 pkg-1  ← 当前版本pkg-2  ← 刚刚 define 的新版本
+
+Agent 可以请求：
+
+  * 
+
+    
+    
+    cordis_run(foo-1, pkg-2, update)
+
+但新的 Package 不是一提交，旧的就先被干掉。
+
+真实设计考虑的是：
+
+  *   *   *   *   *   *   * 
+
+    
+    
+    pkg-2 尝试激活        ↓成功？   ↙          ↘ YES          NO ↓             ↓切到 pkg-2    pkg-1 继续
+
+也就是说：
+
+新版本完整激活成功以后，currentPackageId才真正切过去。
+
+到这里，Self-mod 已经不只是：
+
+> Agent 能给自己加代码。
+
+它开始拥有最基本的：
+
+  *   *   *   *   * 
+
+    
+    
+    DefinitionVersionActivationUpdateFailure containment
+
+语义。
+
+* * *
+
+##  3\. Agent 到底能改什么？不只是临时加一个函数
+
+如果 Self-mod 只是：
+
+> 动态注册一个 JavaScript Function。
+
+其实没那么稀奇。
+
+继续看：
+
+  * 
+
+    
+    
+    packages/extensions/cordis-host-runner/src/sandbox.ts
+
+Dynamic Package 能接触到的东西包括类似：
+
+  *   *   *   * 
+
+    
+    
+    ctx.get(...)ctx.on(...)ctx.provide(...)ctx.effect(...)
+
+还有 Harness Surface：
+
+  *   *   * 
+
+    
+    
+    harness.handle(...)harness.defineTool(...)harness.registerTool(...)
+
+这就不只是“写个小函数”了。
+
+模型写出来的 Package 可以真正参与 Cordis Runtime。
+
+它可以：
+
+  *   *   *   *   *   * 
+
+    
+    
+    注册 Tool注册 Event Listener提供 Service声明 Dependency注册 Effect增加 Runtime Handler
+
+换句话说：
+
+Agent 改的是自己的 Runtime Composition。
+
+这也是为什么 Cordis 在这里开始真正重要。
+
+举个官方设计里就出现过的例子。
+
+假设 Agent 动态创造两个 Package。
+
+Package A：
+
+  *   *   * 
+
+    
+    
+    apply(ctx) {  return ctx.provide(”foo”, value)}
+
+它负责提供：
+
+  * 
+
+    
+    
+    foo
+
+Package B：
+
+  * 
+
+    
+    
+    inject = [”foo”]
+
+它依赖 foo。
+
+如果先加载 B：
+
+  *   *   *   *   * 
+
+    
+    
+    B↓找不到 foo↓pending
+
+然后再加载 A：
+
+  *   *   *   *   * 
+
+    
+    
+    A provide foo↓Dependency 满足↓B activate
+
+这时候再把 A 停掉：
+
+  *   *   *   *   * 
+
+    
+    
+    foo 消失↓B 的 effects unwind↓B 回到 pending
+
+以后重新有人：
+
+  * 
+
+    
+    
+    provide(”foo”)
+
+B 又可以重新满足依赖，再次激活。
+
+所以这里真正发生的不是：
+
+> Agent 临时给自己装了一个 Tool。
+
+而是：
+
+> Agent 可以修改自己所处 Runtime 的 Service Graph 和 Dependency Graph。
+
+这已经是真正意义上的 Runtime Composition Mutation。
+
+* * *
+
+##  4\. 但翻到 Registry，“自我进化”这个词马上要先砍掉一半
+
+接下来问一个特别关键的问题：
+
+> Agent 新创造的这些东西，到底保存在哪里？
+
+看：
+
+  * 
+
+    
+    
+    packages/extensions/cordis-host-runner/src/registry.ts
+
+这里直接就是一个：
+
+Process-local Dynamic Plugin Registry。
+
+内部存储也很直接：
+
+  *   * 
+
+    
+    
+    private readonly plugins = new Map(...)private readonly pendingRequests = new Map(...)
+
+Plugin ID、Package ID、Run ID、Approval ID，也是在这个 Process-local Registry 里面 Mint
+出来的。
+
+类似：
+
+  *   *   *   * 
+
+    
+    
+    foo-1pkg-1run-1approval-1
+
+这意味着：
+
+#  这些 Self-mod Package 首先是进程内对象。
+
+不是某种持久化的：
+
+> Agent Genome。
+
+也不是：
+
+> Agent 修改了自己，以后每次启动都继承。
+
+实际边界非常清楚。
+
+动态 Package 默认不会自动：
+
+  *   *   *   *   * 
+
+    
+    
+    写 Plugin 文件安装 Package修改 cordis.yml修改 Profile进入长期 Preset
+
+也没有：
+
+  *   *   *   *   * 
+
+    
+    
+    这次实验很好↓自动 Promote↓永久变成下一代 Agent
+
+这种机制。
+
+进程重启以后：
+
+  *   *   * 
+
+    
+    
+    刚刚 define 出来的动态 Package↓合法消失
+
+所以这时候，代码已经替我们把两个概念彻底分开：
+
+  *   *   * 
+
+    
+    
+    Live Self-modification        ≠Durable Self-evolution
+
+Agent 确实可以修改：
+
+当前正在活着的自己。
+
+但它不会因为这次实验成功，就自动把修改遗传给：
+
+下一次启动后的自己。
+
+真要长期留下，还是要回到：
+
+  *   *   *   * 
+
+    
+    
+    正式 PluginPresetProfile / BundleRepo Engineering
+
+另一条路径。
+
+* * *
+
+##  5\. 再看 Sandbox：名字叫 Sandbox，但源码自己先提醒你别误会
+
+然后就是最绕不开的问题：
+
+> 模型都能现场写 Package 了，这安全吗？
+
+cordis-host-runner 确实做了 Sandbox。
+
+里面用了：
+
+  * 
+
+    
+    
+    createContext(...)
+
+也就是 Node 的 VM Realm。
+
+而且确实会控制一些原生 API。
+
+例如把能力尽量重定向到 Harness 自己控制的 Service：
+
+  *   *   *   *   *   *   *   *   *   *   * 
+
+    
+    
+    文件访问→ ctx.fs 网络→ ctx.web 进程执行→ ctx.bash Timer→ Cordis timer service
+
+乍一看很像：
+
+> 那已经隔离好了。
+
+但继续看，同一套设计自己就明确否认了这个结论。
+
+node:vm / façade：
+
+不是 Security Boundary。
+
+它的作用更接近：
+
+> 让 Cooperative Package 的能力有明确 Surface、可以被观察、可以被 Dispose。
+
+不是：
+
+> 给不可信恶意代码建立强隔离。
+
+更关键的是，Dynamic Package 接触的本来就是  真的 Capability  。
+
+它可以碰：
+
+  *   *   * 
+
+    
+    
+    ctx.shellfilesystemweb
+
+而官方 Self-referential Cordis Toolset 自己还明确承认：
+
+> Temporary Plugin 运行在 Shared DSH Runtime 中，并且可能影响同一 Process 里的其他 Session。
+
+这时候，代码已经替我们排除了一种说法：
+
+> 这不是一个 Least-privilege、强隔离的“Agent 自我进化舱”。
+
+官方给它的 Trust Posture 其实说得非常直白：
+
+  *   *   *   * 
+
+    
+    
+    opt-in development toolbash-equivalent trustnot a security boundarynot product default
+
+其中最有信息量的是：
+
+#  bash-equivalent trust
+
+可以粗暴理解：
+
+> 如果你本来就不敢让这个 Agent 在当前环境里跑 Bash，大概率也不应该让它 Self-mod。
+
+这不是我们看见“动态代码”以后自己脑补出来的安全警告。
+
+是：
+
+Runtime 权限结构 + 官方设计说明共同给出的边界。
+
+* * *
+
+##  6\. Self-mod 甚至不总能自己决定执行：Browser Half 要真人批准
+
+继续翻：
+
+  * 
+
+    
+    
+    packages/extensions/cordis-host-runner/README.md
+
+还会看到另外一个很现实的限制。
+
+如果只是 Host-side Dynamic Package，流程可以类似：
+
+  *   *   *   *   * 
+
+    
+    
+    define↓run↓Host Runtime 激活
+
+但如果这个 Package 还包含 Browser Half：
+
+  *   *   *   *   *   *   * 
+
+    
+    
+    cordis_run↓cordis/request-run↓等待 Browser↓Allow / Decline
+
+源码里的 Run State 也能看到：
+
+  *   *   * 
+
+    
+    
+    awaiting-approvalstartingrunning
+
+而且这个 Approval 不是“Agent 自己批准自己”。
+
+需要有人在 Browser 页面上回应。
+
+没有页面处理：
+
+  *   *   * 
+
+    
+    
+    Allow/Decline
+
+请求就可能一直挂着，直到发起询问的 Turn 被 Cancel。
+
+所以真实形态并不是：
+
+  *   *   *   *   * 
+
+    
+    
+    Agent↓想修改自己↓直接修改
+
+至少带 Browser Contribution 时，真实路径是：
+
+  *   *   *   *   *   *   *   *   * 
+
+    
+    
+    Agent 写 Package        ↓Define        ↓请求 Run        ↓Human Allow / Decline        ↓真正激活
+
+到这里：
+
+> Autonomous Self-evolution
+
+这个 Claim 又必须再往下缩一级。
+
+* * *
+
+##  7\. 官方自己做出来还不算，我们后来专门去找：第三方真的有人用吗？
+
+到这里，我们其实只证明了：
+
+> DeepSeek 自己真的实现了 Self-mod。
+
+但这是一个内部能力。
+
+另一个完全不同的问题是：
+
+> 有没有人真的把它接进外部产品？
+
+这个问题我们后来专门做了一轮 External Validation。
+
+而且为了防止：
+
+> 先想证明有人用，再满世界挑成功案例。
+
+我们提前冻结了 Self-mod Adoption 的搜索规则。
+
+固定查类似：
+
+  *   *   * 
+
+    
+    
+    ”cordis_mount” ”deepseek-harness” ”Creator” ”deepseek-harness”
+
+同时提前规定：
+
+  *   *   *   * 
+
+    
+    
+    官方文档官方 Agent Note教程课程
+
+都不能算 Third-party Adoption。
+
+真正能算的必须是：
+
+> 非官方产品里有真实代码 / 运行路径依赖。
+
+有意思的是：
+
+第一轮结果其实不好看。
+
+我们当时真的把状态记录成：
+
+> E3 / Current-Agent Self-mod 的第三方采用证据明显偏弱。
+
+并没有因为不喜欢这个结果，就继续换 Query 搜“支持我们结论”的项目。
+
+后来继续跑同一套冻结 Query，才出现了两个真正改变判断的样本。
+
+第一个就是：
+
+#  OpenClaw。
+
+* * *
+
+##  8\. OpenClaw：不是 README 写一句“支持 DSH”，源码真把 Host Runner 塞进去了
+
+项目：
+
+  * 
+
+    
+    
+    ZRui-C/openclaw-plugin-dsh
+
+直接看：
+
+  * 
+
+    
+    
+    src/host.ts
+
+其中有一段非常硬：
+
+  *   *   *   *   *   * 
+
+    
+    
+    if (config.allowDynamicPlugins !== false) {  insertedRows.push({    id: ”cordis-host-runner”,    name: ”@deepseek-ai/dsh-cordis-host-runner”,  });}
+
+这已经不是：
+
+> 我们兼容 DeepSeek Harness。
+
+而是：
+
+#  真的把 DSH Dynamic Cordis Runtime 插进 OpenClaw Host。
+
+它还不只是加载一个 Package。
+
+源码里有真实 Preset Resolve / Mount 路径，逻辑类似：
+
+  *   *   *   *   *   * 
+
+    
+    
+    const resolved = await presets.resolve(presetId) await presets.mount(  agentCtx,  resolved.id)
+
+再往下还有 Session 映射。
+
+一个 OpenClaw Session：
+
+  *   *   * 
+
+    
+    
+    OpenClaw Session        ↓DSH Session
+
+如果以前已经 Persist：
+
+  *   *   * 
+
+    
+    
+    sessionPersistence.inspect(...)↓agents.resume(...)
+
+如果没有：
+
+  * 
+
+    
+    
+    agents.create(...)
+
+所以它最后形成的是一条真正的 Product Path：
+
+  *   *   *   *   *   *   *   *   *   *   * 
+
+    
+    
+    OpenClaw Session        ↓Embedded DSH Host        ↓Stable DSH Session        ↓Preset        ↓Cordis Host Runner        ↓Dynamic Plugin Lifecycle
+
+项目自己的 E2E 还验证过 Agent 在  同一个 Turn  里完成：
+
+  *   *   *   *   * 
+
+    
+    
+    define↓run↓stop
+
+这条证据解决了一个很具体的问题：
+
+> 有没有第三方真的把 Self-mod 放进产品执行路径？
+
+答案已经不是“不知道”。
+
+而是：
+
+#  有。
+
+OpenClaw 足够把我们之前：
+
+> “可能还是官方 Creator / Demo 为主”
+
+的旧判断推翻。
+
+但它只证明：
+
+> Adoption exists。
+
+还没有证明：
+
+> 这种机制更优。
+
+这是下一层问题。
+
+* * *
+
+##  9\. DexThemes 更有信息量：真用 Self-mod 的人，反而主动把它关起来
+
+第二个改变判断的项目：
+
+  * 
+
+    
+    
+    daeshawnballard/dexthemes
+
+关键路径：
+
+  * 
+
+    
+    
+    packages/deepseek-harness-plugin/
+
+这个案例甚至比 OpenClaw 更有意思。
+
+因为同一个产品里面，恰好同时存在：
+
+不用 Self-mod 的路径
+
+和：
+
+使用 Self-mod 的路径。
+
+普通 Theme Apply 可以走稳定的 Service：
+
+  *   *   * 
+
+    
+    
+    theme.overrideTokens(...)↓返回 Revert disposer
+
+换个主题而已。
+
+根本不需要修改整个 Agent Harness。
+
+但如果用户进入 Creator Mode，希望 Agent：
+
+> 自己生成 Theme Package，并现场把它装进 Harness 看效果。
+
+才进入：
+
+  *   *   *   *   * 
+
+    
+    
+    cordis_define↓cordis_run↓cordis_stop
+
+更关键的是：
+
+###  Standard Mode
+
+故意不暴露这些 Self-mod Tool。
+
+###  Creator Mode
+
+才开放：
+
+  *   *   * 
+
+    
+    
+    cordis_definecordis_runcordis_stop
+
+并允许 Revert。
+
+也就是说，同一个真实产品自己已经完成了一次选择：
+
+  *   *   *   *   * 
+
+    
+    
+    普通稳定需求→ 不用 Self-mod 需要 Agent 现场创造 Runtime Contribution→ 才开放 Self-mod
+
+这条证据解决的已经不是：
+
+> 有没有人用？
+
+OpenClaw 已经回答了。
+
+DexThemes 回答的是：
+
+> 真的用的人，到底怎么给这项能力划边界？
+
+而它给出的答案恰好是：
+
+#  按任务选择。
+
+不是：
+
+> Agent 越高级，就越应该默认 Self-mod。
+
+而是：
+
+> 只有 Task Outcome 真的需要修改当前 Harness 时，才进入这条高权限 Lane。
+
+有意思的是，它和 DeepSeek 官方自己的：
+
+  *   *   * 
+
+    
+    
+    opt-inbash-equivalentnot product default
+
+正好独立收敛到同一个方向。
+
+* * *
+
+##  10\. 第三个实例：第三方 UI 已经开始专门识别 Self-mod Lifecycle
+
+再看：
+
+  * 
+
+    
+    
+    dingyi222666/dsh-focus-chat
+
+里面的：
+
+  * 
+
+    
+    
+    src/client/model/tools.ts
+
+会明确把：
+
+  *   *   *   * 
+
+    
+    
+    cordis_define: 'code',cordis_run: 'code',cordis_stop: 'code',cordis_undefine: 'code',
+
+识别成一组特殊行为。
+
+有意思的是，它还保留对旧 Tool 的识别：
+
+  *   * 
+
+    
+    
+    cordis_mount: 'code',cordis_unmount: 'others',
+
+对应 UI 文案甚至包括：
+
+  *   *   *   *   *   *   * 
+
+    
+    
+    Define PluginRun PluginStop PluginUndefine Plugin Mount temporary PluginUnmount temporary Plugin
+
+这个案例不能像 OpenClaw 一样算：
+
+> 核心产品依赖 Self-mod。
+
+但它能证明另外两件事。
+
+第一：
+
+Self-mod 已经成为第三方 Client 需要单独展示的一类 Agent Action。
+
+第二：
+
+这个第三方 Client 同时认识：
+
+  *   *   *   *   * 
+
+    
+    
+    旧：mount / unmount 新：define / run / stop / undefine
+
+这正好和我们在：
+
+  *   *   * 
+
+    
+    
+    官方旧 Agent NoteVS当前实际源码
+
+里看到的 API 演化对上了。
+
+* * *
+
+##  11\. 第四个实例来自完全相反的方向：社区安全工具已经开始盯它
+
+再看：
+
+  * 
+
+    
+    
+    cclank/dsh-plugin-hub
+
+关键文件：
+
+  * 
+
+    
+    
+    lib/plugin-screening.mjs
+
+里面有一条很直接的源码扫描规则：
+
+  *   *   *   *   *   * 
+
+    
+    
+    {  id: ”dynamic-code”,  severity: ”high”,  pattern:    /\beval\s*\(|new\s+Function\s*\(|cordis_mount\b/iu,}
+
+也就是说：
+
+  *   *   * 
+
+    
+    
+    eval(...)new Function(...)cordis_mount
+
+都会触发：
+
+  *   * 
+
+    
+    
+    high-severitydynamic-code
+
+这里一定不能过度解释。
+
+这条代码  不能证明  ：
+
+> ` cordis_mount  ` 和  ` eval()  ` 的实际风险完全相同。
+
+证据不够。
+
+但它可以明确证明：
+
+> 至少一个独立 DSH 生态治理者，已经把 Dynamic Cordis Mount 当成值得 High Severity Review 的信号。
+
+于是现在把三个互相独立的方向放在一起：
+
+  *   *   *   *   *   *   *   *   * 
+
+    
+    
+    DeepSeek 官方→ opt-in / bash-equivalent DexThemes→ Standard 不给→ Creator 才给 Plugin Hub→ high-severity screening
+
+这时候：
+
+> Self-mod 是一个 Elevated Capability。
+
+已经不再只是我们的主观判断。
+
+因为三个完全不同角色：
+
+  *   *   * 
+
+    
+    
+    框架作者产品消费者生态治理者
+
+都在独立地给它加边界。
+
+* * *
+
+##  12\. 到这里，我们原来的判断其实已经被证据推翻过一次
+
+这段过程我觉得值得留下。
+
+因为它能说明：
+
+结论不是先写好了再去找证据。
+
+第一轮研究的时候，我们得到的状态是：
+
+  *   *   *   *   * 
+
+    
+    
+    Self-mod mechanism→ 官方明确存在 第三方 Product Adoption→ 没找到足够硬证据
+
+所以旧判断是：
+
+> E3 外部采用明显弱。
+
+然后按照提前冻结的 Query 继续找。
+
+OpenClaw 出来了。
+
+DexThemes 出来了。
+
+那么旧结论就只能作废。
+
+最后，我们把 Self-mod Evidence 分成了不同问题：
+
+问题  |  结果  
+---|---  
+DSH 有没有真实 Self-mod Mechanism？  |  有  
+第三方生态是否已经识别这种行为？  |  有  
+有没有真实第三方产品消费？  |  有，至少两条独立路径  
+是否证明所有 Agent 都需要？  |  没有  
+是否证明默认开放更好？  |  没有，现有实例反而主动 Gating  
+是否证明优于 Generation / Isolated Validation？  |  没有  
+  
+所以最终研究状态从：
+
+  * 
+
+    
+    
+    weak / absent
+
+被改成：
+
+  *   *   *   *   *   *   *   * 
+
+    
+    
+    existence / adoption→ CONDITIONAL-REAL broad necessity / prevalence→ INSUFFICIENT comparative outcome superiority→ INSUFFICIENT
+
+这个区别很重要。
+
+研究不是：
+
+> 找到 OpenClaw，所以 Self-mod 牛逼。
+
+而是：
+
+> OpenClaw 推翻了“没人真正用”的旧判断，但它没有自动证明后面那三件事。
+
+* * *
+
+##  13\. 最后再加一道闸门：Harness 能进化，不等于 Live Self-mod 就是最佳方案
+
+还有最后一个最容易偷换的问题：
+
+> 既然已经有人用了，而且 Agent Harness 本身确实可以被优化，那么 Current-Agent Live Self-mod
+> 是不是就是未来答案？
+
+这里也不能直接跳。
+
+因为有一个很强的竞争方案。
+
+假设 Agent 想创造一个新 Capability。
+
+DSH 当前的 Live 方案大概是：
+
+  *   *   *   *   *   *   * 
+
+    
+    
+    当前 Agent↓define↓run↓直接修改 Current Runtime
+
+但完全可以有另一套世界：
+
+  *   *   *   *   *   *   *   *   *   *   *   *   * 
+
+    
+    
+    Agent 写正式 Plugin / Preset        ↓启动 isolated child DSH        ↓用真实 Composition Mount 验证        ↓跑测试        ↓成功        ↓保留文件        ↓New Generation 生效
+
+这条路明显更慢。
+
+需要支付：
+
+  *   *   * 
+
+    
+    
+    Process StartupIPC / TransportCandidate Validation
+
+但是它天然得到：
+
+  *   *   *   * 
+
+    
+    
+    Durable更小 Blast Radius实验环境更接近 Deployment失败不直接污染 Current Runtime
+
+所以真正的竞争不是：
+
+  *   *   * 
+
+    
+    
+    Self-modVS完全不能修改
+
+而是：
+
+  *   * 
+
+    
+    
+    Current-AgentLive Runtime Mutation
+
+对：
+
+  *   *   *   *   * 
+
+    
+    
+    Author↓Isolated Validation↓New Generation
+
+这才是公平比较。
+
+* * *
+
+独立 Harness Evolution 研究也刚好提醒了同一个问题。
+
+已经有受控实验表明：
+
+Harness 本身确实可以成为独立于 Model Weight 的优化杠杆。
+
+也就是说：
+
+  *   * 
+
+    
+    
+    不换模型只改 Harness
+
+确实可能提高任务结果。
+
+这件事值得认真研究。
+
+但另一边，在匹配 Feedback / Inference Budget、看 Held-out Generalization 的实验里，自动 Harness
+Evolution 又并不稳定优于更简单的 Search / Test-time Scaling。
+
+所以最后必须把至少三个问题拆开：
+
+  *   *   *   *   *   *   *   *   * 
+
+    
+    
+    Harness 值不值得改？→ 有正面实证 自动优化 Harness 有没有价值？→ 部分场景成立 当前执行 Agent 在 Shared Runtime 里原地 Live Self-mod 是不是最优？→ 目前证据不足
+
+这一步特别关键。
+
+否则很容易从：
+
+> Harness Evolution 有价值。
+
+一路偷换成：
+
+> DSH 当前这种 Same-session Live Mutation 就是最佳 Mechanism。
+
+证据根本没有走到那里。
+
+* * *
+
+#  最后
+
+所以现在再问：
+
+##  DeepSeek Harness 真能让 Agent 修改自己吗？
+
+答案是：
+
+#  真能。
+
+源码里有：
+
+  *   *   *   *   * 
+
+    
+    
+    inspectdefinerun / updatestopundefine
+
+有：
+
+  *   *   *   *   *   * 
+
+    
+    
+    Plugin IDPackage VersionRunApprovalDependency LifecycleEffect Cleanup
+
+OpenClaw 真的把 Dynamic Host Runner 塞进了第三方 Agent Host。
+
+DexThemes 真的拿：
+
+  *   *   * 
+
+    
+    
+    cordis_definecordis_runcordis_stop
+
+做 Creator Workflow。
+
+第三方 Client 已经开始专门识别这些行为。
+
+社区 Security Screening 也已经开始单独盯 Dynamic Mount。
+
+这些都不是 PPT。
+
+但同一批源码同时还告诉我们：
+
+  *   *   *   *   *   *   *   *   *   *   * 
+
+    
+    
+    Process-local Shared Runtime Bash-equivalent trust Not a security boundary No automatic promotion Restart 后不恢复
+
+DexThemes 真正使用它时，又主动把它关进 Creator Mode。
+
+Plugin Hub 则从安全治理方向，把 Dynamic Mount 提升到 High Severity Screening。
+
+所以现有证据真正支持的结论不是：
+
+> Agent 已经开始安全、持久、自治地自我进化。
+
+而是：
+
+> DSH 已经把 Model-authored Live Self-modification 做成了一个真实可用的 Runtime
+> Capability，而且第三方已经开始消费它；但现实中的使用方式仍然是专用、显式选择、可撤销、受治理的高权限 Lane。
+
+至于它是不是比：
+
+  *   *   *   *   * 
+
+    
+    
+    Author↓Isolated Validation↓New Generation
+
+更好的 Agent Evolution 机制，
+
+目前证据还没有走到那里。
+
+反而是把源码一路扒开以后，我觉得 Self-mod 真正困难的地方才刚刚露出来：
+
+让模型执行一段新代码并不难。
+
+难的是系统改完自己以后，还能准确回答：
+
+  *   *   *   *   *   *   *   *   *   *   *   *   * 
+
+    
+    
+    谁改了什么？ 哪一版正在生效？ 失败以后怎么退？ 重启以后还剩什么？ 这次修改影响到了谁？ 以及—— 它到底有没有资格留下来？
+
+* * *
+
+##  研究版本说明
+
+本文对 DeepSeek Harness 本体的源码判断，以研究时冻结的仓库版本为基线：
+
+  *   * 
+
+    
+    
+    deepseek-ai/deepseek-harness47f943859bef60e4160492346772ded9b24f765a
+
+主要核对的官方源码：
+
+  *   *   *   *   *   *   *   *   * 
+
+    
+    
+    packages/extensions/tool-cordis/src/index.ts packages/extensions/cordis-host-runner/├─ src/registry.ts├─ src/sandbox.ts└─ README.md .agents/notes/implemented/feature/└─ 2026-07-08-self-referential-cordis-toolset.md
+
+第三方实证主要核对：
+
+  *   *   *   *   *   *   *   *   *   *   * 
+
+    
+    
+    ZRui-C/openclaw-plugin-dsh└─ src/host.ts daeshawnballard/dexthemes└─ packages/deepseek-harness-plugin/ dingyi222666/dsh-focus-chat└─ src/client/model/tools.ts cclank/dsh-plugin-hub└─ lib/plugin-screening.mjs
+
+DSH 仍在快速迭代。
+
+因此文中涉及“当前没有”“当前实现”“当前只做”的判断，都限定在上述冻结版本。
+
+  
+
+预览时标签不可点
+
+作者提示:  内容由AI生成
+
+微信扫一扫  
+关注该公众号
+
+知道了
+
+微信扫一扫  
+使用小程序
+
+****
+
+取消  允许
+
+****
+
+取消  允许
+
+****
+
+取消  允许
+
+×  分析
+
+__
+
+![作者头像](http://mmbiz.qpic.cn/mmbiz_png/vCBmUMvZEC4eQQ0uujkliaicoIbt0hdGwibdyLDVrBFDibpfibvKcJBEJPoqeeOREjpwM5ibor3n24f1epiamO0WEsN7w/0?wx_fmt=png)
+
+微信扫一扫可打开此内容，  
+使用完整服务
+
+：  ，  ，  ，  ，  ，  ，  ，  ，  ，  ，  ，  ，  。  视频  小程序  赞  ，轻点两下取消赞  在看  ，轻点两下取消在看
+分享  留言  收藏  听过
+

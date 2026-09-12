@@ -1,0 +1,139 @@
+{
+  "revision": "v2.5",
+  "passed": true,
+  "checks": [
+    {
+      "name": "41 role profiles still map exactly to 44 human keys",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "Seven canonical fixtures unchanged",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "Embedded role catalog unchanged",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "Original 153 requirements and 22 pages preserved",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "Protected original requirement, schema and role artifacts retain baseline digests",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "28 OA refinements trace to actual requirement IDs and role/page groups",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "Demonstrated versus design-only scope explicit",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "Three browser suites passed all actual cases",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "Role and OA browser suites match current HTML digest",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "OA layouts cover all roles, five queues and task detail at three widths",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "No browser errors or external requests",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "OA Schema has tested valid and invalid examples",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "Seven initial instances have unique IDs and business numbers",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "Same published process runs three times on same date",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "Each profile has distinct task references across processes and two nodes in same instance",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "Task IDs and work item references are unique in fixture",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "Fixture has at most one named initiator per instance",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "Current UI version visible",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "All local links and anchors resolve",
+      "passed": true,
+      "detail": {
+        "count": 464,
+        "failures": []
+      }
+    },
+    {
+      "name": "All current screenshots exist and are unique",
+      "passed": true,
+      "detail": 97
+    },
+    {
+      "name": "Canonical role source remains current",
+      "passed": true,
+      "detail": null
+    }
+  ],
+  "coverage": {
+    "roleProfiles": 41,
+    "humanRoleKeys": 44,
+    "requirements": 153,
+    "oaRefinements": 28,
+    "initialInstances": 7,
+    "initialFixtureTasks": 369,
+    "layoutChecks": 1620,
+    "interactionChecks": 482,
+    "screenshots": 97
+  },
+  "localLinks": 464,
+  "htmlSha256": "83a267df7095e3af43d6bf876d9f4764d3beb8300bbeba11fd76b9ac711385f7",
+  "sourceHead": "9a1e74b5e056ec3101f0c1c701d6c4e6320c4d23",
+  "sourceHashes": {
+    "docs/ui/information-architecture.md": "2a827b844054a167b05c455d6a0a07dd190e426f11f7837a37cb13489e296ca8",
+    "docs/ui/ui-interaction-spec.md": "7a78acc95e492149a4befbee998e4e4e8657ca9e53f84d34d295b2384f1a14c2",
+    "apps/web/src/pages/work/MyWorkPage.tsx": "8f4fcf4f6492e380bf72e27225f2122fe6ebda8fa627a921a2ea413edcd59839",
+    "apps/web/src/list-human-tasks-api.ts": "a5d00a29a33b260df920ca9a1ce4c7dcc0eed4571a5b7741ef53cd413d3d4f6d",
+    "contracts/jsonschema/work-execution-history-item.schema.json": "723e06f1779a5a656cf6976435654f9a4b09645cb85e1793b9290cc6a73ce5f4",
+    "contracts/authz/platform-roles.yaml": "12263586cd56b40c21416249eafac41b3ba715454ec679e78671a372afe31228"
+  },
+  "limitations": [
+    "Local fictional prototype, schema and documentation only; no production database, real-role authentication, cross-browser concurrency, calendar engine or actual Agent runtime verification."
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "status": "PASS",
+  "scope": "RESEARCH_SOURCE_AND_REPORT_STRUCTURE_ONLY",
+  "verifiedSourceFiles": 56,
+  "hashFailures": [],
+  "missingArticleSections": [],
+  "articles": 12,
+  "fullTextRead": 11,
+  "partialLongCodeRead": 1,
+  "benchmarksRun": false,
+  "productValidationRun": false,
+  "reportSha256": "f1ceaa4532ea2f0b42012b166cca9f57f7a71c09520b1951b5cbf9dc05fab208"
+}

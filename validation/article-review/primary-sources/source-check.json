@@ -1,0 +1,144 @@
+{
+  "scope": "PRIMARY_SOURCE_INTEGRITY_AND_ARTICLE_COVERAGE_ONLY",
+  "status": "PASS",
+  "checks": [
+    {
+      "id": "qdrant-text-filtering",
+      "pass": true
+    },
+    {
+      "id": "qdrant-hybrid",
+      "pass": true
+    },
+    {
+      "id": "qdrant-multitenancy",
+      "pass": true
+    },
+    {
+      "id": "pgvector-readme-fixed",
+      "pass": true
+    },
+    {
+      "id": "pgvector-license-fixed",
+      "pass": true
+    },
+    {
+      "id": "mysql84-ngram",
+      "pass": true
+    },
+    {
+      "id": "docling-advanced",
+      "pass": true
+    },
+    {
+      "id": "docling-pipeline-options",
+      "pass": true
+    },
+    {
+      "id": "anthropic-contextual-retrieval",
+      "pass": true
+    },
+    {
+      "id": "anthropic-context-engineering",
+      "pass": true
+    },
+    {
+      "id": "qdrant-license-v1.19.1",
+      "pass": true
+    },
+    {
+      "id": "docling-license-v2.126.0",
+      "pass": true
+    },
+    {
+      "id": "postgres-rls",
+      "pass": true
+    },
+    {
+      "id": "wikicreator-skillhub",
+      "pass": true
+    },
+    {
+      "id": "semantica-readme-rolling",
+      "pass": true
+    },
+    {
+      "id": "semantica-license-rolling",
+      "pass": true
+    },
+    {
+      "id": "semantica-pyproject-rolling",
+      "pass": true
+    },
+    {
+      "id": "palantir-ontology-overview",
+      "pass": true
+    },
+    {
+      "id": "palantir-action-permissions",
+      "pass": true
+    },
+    {
+      "id": "w3c-owl-overview",
+      "pass": true
+    },
+    {
+      "id": "w3c-prov-o",
+      "pass": true
+    },
+    {
+      "id": "company-brain-original",
+      "pass": true
+    },
+    {
+      "id": "semantica-readme-fixed",
+      "pass": true
+    },
+    {
+      "id": "semantica-license-fixed",
+      "pass": true
+    },
+    {
+      "id": "semantica-pyproject-fixed",
+      "pass": true
+    },
+    {
+      "id": "semantica-context-graph-fixed",
+      "pass": true
+    },
+    {
+      "id": "semantica-release-pypi",
+      "pass": true
+    },
+    {
+      "id": "ragflow-readme-v0.27.2",
+      "pass": true
+    },
+    {
+      "id": "ragflow-compose-v0.27.2",
+      "pass": true
+    },
+    {
+      "id": "openviking-license-rolling",
+      "pass": true
+    },
+    {
+      "id": "openviking-readme-rolling",
+      "pass": true
+    },
+    {
+      "id": "semantica-git-refs",
+      "pass": true
+    }
+  ],
+  "sourceRecordCount": 32,
+  "articlesRead": 8,
+  "runtimeTestsRun": false,
+  "benchmarksRun": false,
+  "limitations": [
+    "WikiCreator page returned site shell; specific skill source/license not verified",
+    "Rolling pages are captured snapshots, not adopted versions",
+    "This branch did not query IMA",
+    "No full corpus reading claim"
+  ]
+}

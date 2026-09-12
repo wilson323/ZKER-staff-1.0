@@ -1,0 +1,417 @@
+{
+  "retrievedAt": "2026-09-11T23:55:16.615615+00:00",
+  "operation": "search_knowledge",
+  "request": {
+    "knowledge_base_id": "n0MwVp2eklMxS02bwq57AwEVut4kGOc8LcR1pE5iCLs=",
+    "cursor": "",
+    "query": "知识"
+  },
+  "exitCode": 0,
+  "response": {
+    "code": 0,
+    "msg": "success",
+    "data": {
+      "info_list": [
+        {
+          "media_id": "wechatarticle_0965810169bffd8606dec4fbe528269d_63771afdd96e7e37040fb4ac69c54f6a7309037133652424",
+          "title": "图像也能通过 RAG 加入知识库啦",
+          "parent_folder_id": "7309037133652424",
+          "highlight_content": "",
+          "media_type": 6
+        },
+        {
+          "media_id": "wechatarticle_0965810169bffd8606dec4fbe528269d_2f73d1b8072c07b0835194349271b5217309037133652424",
+          "title": "dify+mineru 构建知识库",
+          "parent_folder_id": "7309037133652424",
+          "highlight_content": "",
+          "media_type": 6
+        },
+        {
+          "media_id": "pdf_0965810169bffd8606dec4fbe528269d_f76a0dc39b54096eb12d66aad4eb484f7309037133652424",
+          "title": "ima知识库使用指南.pdf",
+          "parent_folder_id": "7309037133652424",
+          "highlight_content": "",
+          "media_type": 1
+        },
+        {
+          "media_id": "wechatarticle_0965810169bffd8606dec4fbe528269d_2538fe9a788875a9575088ca0b2a6f3a7309037133652424",
+          "title": "Dify知识库调优浅聊",
+          "parent_folder_id": "7309037133652424",
+          "highlight_content": "",
+          "media_type": 6
+        },
+        {
+          "media_id": "wechatarticle_0965810169bffd8606dec4fbe528269d_5311a6acee1064c478d7ff00794c57277309037133652424",
+          "title": "腾讯IMA知识库高阶玩法：咨询公司必备！3步打造政策咨询知识库，客户满意度提升90%！",
+          "parent_folder_id": "7309037133652424",
+          "highlight_content": "",
+          "media_type": 6
+        },
+        {
+          "media_id": "wechatarticle_0965810169bffd8606dec4fbe528269d_871b89615e9fcb5da5f79ed4ee0b2b127309037133652424",
+          "title": "OlmOCR如何成为搭建RAG 知识库的\"智能中枢\"？",
+          "parent_folder_id": "7309037133652424",
+          "highlight_content": "",
+          "media_type": 6
+        },
+        {
+          "media_id": "wechatarticle_0965810169bffd8606dec4fbe528269d_9f511dadba0cd993e05aed80472e09ca7309037133652424",
+          "title": "Dify知识流水线，父子模式怎么玩",
+          "parent_folder_id": "7309037133652424",
+          "highlight_content": "",
+          "media_type": 6
+        },
+        {
+          "media_id": "pdf_0965810169bffd8606dec4fbe528269d_f009236689d323f08a6788fe8b345d407309037133652424",
+          "title": "《知识图谱与大模型融合实践研究报告》.pdf",
+          "parent_folder_id": "7309037133652424",
+          "highlight_content": "",
+          "media_type": 1
+        },
+        {
+          "media_id": "wechatarticle_0965810169bffd8606dec4fbe528269d_6217a598326848c5e7119ee46e41c0677309037133652424",
+          "title": "本地知识库框架深度对比：Dify vs MaxKB vs FastGPT",
+          "parent_folder_id": "7309037133652424",
+          "highlight_content": "",
+          "media_type": 6
+        },
+        {
+          "media_id": "wechatarticle_0965810169bffd8606dec4fbe528269d_432dd1cf19484e13d8f5bf7e8edf913d7309037133652424",
+          "title": "AI研发自动化：Wiki知识库+技能包",
+          "parent_folder_id": "7309037133652424",
+          "highlight_content": "",
+          "media_type": 6
+        },
+        {
+          "media_id": "wechatarticle_0965810169bffd8606dec4fbe528269d_7527288df70e7688e3419ba8eeecbd317309037133652424",
+          "title": "Dify 平台知识库实战｜基于excel 格式的问答调优",
+          "parent_folder_id": "7309037133652424",
+          "highlight_content": "",
+          "media_type": 6
+        },
+        {
+          "media_id": "wechatarticle_0965810169bffd8606dec4fbe528269d_c9bba7b33e7f840f18441933f715fde57309037133652424",
+          "title": "RAG+QWQ 私有化知识库检索模型组合对比",
+          "parent_folder_id": "7309037133652424",
+          "highlight_content": "",
+          "media_type": 6
+        },
+        {
+          "media_id": "wechatarticle_0965810169bffd8606dec4fbe528269d_4c92c53d6dee4a8dc8949ee83662ed087309037133652424",
+          "title": "大揭秘：DeepSeek从知识库究竟获取到了什么内容",
+          "parent_folder_id": "7309037133652424",
+          "highlight_content": "",
+          "media_type": 6
+        },
+        {
+          "media_id": "wechatarticle_0965810169bffd8606dec4fbe528269d_c9310f1769e60aa13a4a87bef3fff5b77309037133652424",
+          "title": "LLM如何将杂乱文本变为可视化知识图谱？",
+          "parent_folder_id": "7309037133652424",
+          "highlight_content": "",
+          "media_type": 6
+        },
+        {
+          "media_id": "wechatarticle_0965810169bffd8606dec4fbe528269d_886b058d2fe30e51d82aa3eac758bcbc7309037133652424",
+          "title": "AI 基础知识从 0.3 到 0.4——如何选对深度学习模型？",
+          "parent_folder_id": "7309037133652424",
+          "highlight_content": "",
+          "media_type": 6
+        },
+        {
+          "media_id": "wechatarticle_0965810169bffd8606dec4fbe528269d_6cbeaf1900252708f639e9ec5ad6ffc37309037133652424",
+          "title": "Dify知识流水线，搞定复杂 PDF（含MinerU本地部署教程）",
+          "parent_folder_id": "7309037133652424",
+          "highlight_content": "",
+          "media_type": 6
+        },
+        {
+          "media_id": "wechatarticle_0965810169bffd8606dec4fbe528269d_289edb4e49d7202755d4845a778686767309037133652424",
+          "title": "知识库Dify和cherry无法解析影印pdf word解决方案",
+          "parent_folder_id": "7309037133652424",
+          "highlight_content": "",
+          "media_type": 6
+        },
+        {
+          "media_id": "wechatarticle_0965810169bffd8606dec4fbe528269d_397922dbc7d56fcfa6ce2fe5130a2cd87309037133652424",
+          "title": "AI 基础知识从-1到0.1：带你走进机器学习的世界",
+          "parent_folder_id": "7309037133652424",
+          "highlight_content": "",
+          "media_type": 6
+        },
+        {
+          "media_id": "word_0965810169bffd8606dec4fbe528269d_42ce0038851518c50ca76e5d8b2c64637309037133652424",
+          "title": "AI产品经理需了解的技术知识：语音识别技术1740900736.docx",
+          "parent_folder_id": "7309037133652424",
+          "highlight_content": "",
+          "media_type": 3
+        },
+        {
+          "media_id": "wechatarticle_0965810169bffd8606dec4fbe528269d_eca68c702cf263dbfafc5b09067496617309037133652424",
+          "title": "制造业如何打造企业知识库？DeepSeek + RAG 真的适合你吗？",
+          "parent_folder_id": "7309037133652424",
+          "highlight_content": "",
+          "media_type": 6
+        },
+        {
+          "media_id": "wechatarticle_0965810169bffd8606dec4fbe528269d_ca221675f538efbe202e150d53b26dcd7309037133652424",
+          "title": "Embedding模型选型思路：决定知识库与RAG的准确率上限！",
+          "parent_folder_id": "7309037133652424",
+          "highlight_content": "",
+          "media_type": 6
+        },
+        {
+          "media_id": "pdf_0965810169bffd8606dec4fbe528269d_f9753fbd30a449dbf1c21418ea5531c77309037133652424",
+          "title": "20-大模型外挂知识库优化——负样本样本挖掘篇.pdf",
+          "parent_folder_id": "7309037133652424",
+          "highlight_content": "",
+          "media_type": 1
+        },
+        {
+          "media_id": "wechatarticle_0965810169bffd8606dec4fbe528269d_0b32a17f7f0f6bc9f75740f4902e29077309037133652424",
+          "title": "让Dify知识库“看懂”图片！一款MinerU 工作流解决方案",
+          "parent_folder_id": "7309037133652424",
+          "highlight_content": "",
+          "media_type": 6
+        },
+        {
+          "media_id": "wechatarticle_0965810169bffd8606dec4fbe528269d_0e99fcc66ab1466b89122a862ffac5587309037133652424",
+          "title": "AI 基础知识从 0.5 到 0.6—— Transformer 架构为何能统治AI领域？",
+          "parent_folder_id": "7309037133652424",
+          "highlight_content": "",
+          "media_type": 6
+        },
+        {
+          "media_id": "wechatarticle_0965810169bffd8606dec4fbe528269d_0630073acc4b1bd9526cc2884b6121407309037133652424",
+          "title": "从代码逆向RAGFlow架构：藏在18张表里的AI知识库设计哲学",
+          "parent_folder_id": "7309037133652424",
+          "highlight_content": "",
+          "media_type": 6
+        },
+        {
+          "media_id": "wechatarticle_0965810169bffd8606dec4fbe528269d_137d99eb821c4c81c29a27422883b6a07309037133652424",
+          "title": "DeepSeek QwQ32B：解锁RAG知识库问答准确率提升秘籍！",
+          "parent_folder_id": "7309037133652424",
+          "highlight_content": "",
+          "media_type": 6
+        },
+        {
+          "media_id": "wechatarticle_0965810169bffd8606dec4fbe528269d_983e9ec908edb97d80f60cba9b5f960d7309037133652424",
+          "title": "dify+新版DeepSeek V3，知识库再次起飞！确实可以封神了",
+          "parent_folder_id": "7309037133652424",
+          "highlight_content": "",
+          "media_type": 6
+        },
+        {
+          "media_id": "pdf_0965810169bffd8606dec4fbe528269d_251a6ffbbcadec8101233416dfe765a87309037133652424",
+          "title": "19-大模型外挂知识库优化——如何利用大模型辅助召回？.pdf",
+          "parent_folder_id": "7309037133652424",
+          "highlight_content": "",
+          "media_type": 1
+        },
+        {
+          "media_id": "wechatarticle_0965810169bffd8606dec4fbe528269d_68246129c8152ee038f11cad60f7eafd7309037133652424",
+          "title": "从代码逆向RAGFlow架构：藏在18张表里的AI知识库设计哲学",
+          "parent_folder_id": "7309037133652424",
+          "highlight_content": "",
+          "media_type": 6
+        },
+        {
+          "media_id": "wechatarticle_0965810169bffd8606dec4fbe528269d_369b7123d188db67f1b27da42786ef487309037133652424",
+          "title": "升级Dify版本并修改配置文件使Dify知识库突破单文件15MB限制",
+          "parent_folder_id": "7309037133652424",
+          "highlight_content": "",
+          "media_type": 6
+        },
+        {
+          "media_id": "wechatarticle_0965810169bffd8606dec4fbe528269d_1a3c67d7f4924b94c1723582b2fcebeb7309037133652424",
+          "title": "构建可靠AI Agent：从提示词、工作流到知识库的实战指南",
+          "parent_folder_id": "7309037133652424",
+          "highlight_content": "",
+          "media_type": 6
+        },
+        {
+          "media_id": "pdf_0965810169bffd8606dec4fbe528269d_11aa616a36c2655d9c486df1be1785897309037133652424",
+          "title": "教大家如何使用Deepseek AI进行超级降维知识输出V1.0版.pdf",
+          "parent_folder_id": "7309037133652424",
+          "highlight_content": "",
+          "media_type": 1
+        },
+        {
+          "media_id": "wechatarticle_0965810169bffd8606dec4fbe528269d_f4b3d9cb49cc93c55f982d1cb99cacf07309037133652424",
+          "title": "MinerU本地化部署教程——一款AI知识库建站的必备工具",
+          "parent_folder_id": "7309037133652424",
+          "highlight_content": "",
+          "media_type": 6
+        },
+        {
+          "media_id": "wechatarticle_0965810169bffd8606dec4fbe528269d_ef78ce9c3b8354090716927592f510317309037133652424",
+          "title": "AI问数（八）：构建数据库知识图谱的实战经验与步骤",
+          "parent_folder_id": "7309037133652424",
+          "highlight_content": "",
+          "media_type": 6
+        },
+        {
+          "media_id": "wechatarticle_0965810169bffd8606dec4fbe528269d_48a3c90cf13f029d34353211a47aa9467309037133652424",
+          "title": "AI 基础知识从0.1到0.2——用“房价预测”入门机器学习全流程",
+          "parent_folder_id": "7309037133652424",
+          "highlight_content": "",
+          "media_type": 6
+        },
+        {
+          "media_id": "wechatarticle_0965810169bffd8606dec4fbe528269d_202a324018e129769eed390701474b677309037133652424",
+          "title": "Kimi上线了OpenClaw手机版，给大家分享5种知识管理的神级技巧",
+          "parent_folder_id": "7309037133652424",
+          "highlight_content": "",
+          "media_type": 6
+        },
+        {
+          "media_id": "wechatarticle_0965810169bffd8606dec4fbe528269d_5e102e7bbc7928ad33643a0cc15a34fa7309037133652424",
+          "title": "10万+之后，我用 WorkBuddy + Obsidian + Claude 重新搭了一遍个人知识库",
+          "parent_folder_id": "7309037133652424",
+          "highlight_content": "",
+          "media_type": 6
+        },
+        {
+          "media_id": "word_0965810169bffd8606dec4fbe528269d_51e29a1c30a420238b8cbdc59176df1b7309037133652424",
+          "title": "19-大模型外挂知识库优化——如何利用大模型辅助召回？1740903952.docx",
+          "parent_folder_id": "7309037133652424",
+          "highlight_content": "",
+          "media_type": 3
+        },
+        {
+          "media_id": "word_0965810169bffd8606dec4fbe528269d_df56b631a9a3172685fca3792aa511f37309037133652424",
+          "title": "20-大模型外挂知识库优化——负样本样本挖掘篇_20250302_1630271740904240.docx",
+          "parent_folder_id": "7309037133652424",
+          "highlight_content": "",
+          "media_type": 3
+        },
+        {
+          "media_id": "wechatarticle_0965810169bffd8606dec4fbe528269d_c441244f58dc3db877b83e529f2b6ce87309037133652424",
+          "title": "10分钟搞定，DeepSeek+Ollama+AnythingLLM 本地部署完全指南，打造专属知识库",
+          "parent_folder_id": "7309037133652424",
+          "highlight_content": "",
+          "media_type": 6
+        },
+        {
+          "media_id": "wechatarticle_0965810169bffd8606dec4fbe528269d_449e9d6ca404f7c2c0d8946a689111057309037133652424",
+          "title": "基于 Trae 开发的校园二手仓小程序｜AI编程社知识库精选",
+          "parent_folder_id": "7309037133652424",
+          "highlight_content": "",
+          "media_type": 6
+        },
+        {
+          "media_id": "pdf_0965810169bffd8606dec4fbe528269d_9a394bfccaa7038fc3c0cb47a7e8cf587309037133652424",
+          "title": "黄鸿波-大语言模型结合企业知识库的私有化部署[1].pdf",
+          "parent_folder_id": "7309037133652424",
+          "highlight_content": "",
+          "media_type": 1
+        },
+        {
+          "media_id": "wechatarticle_0965810169bffd8606dec4fbe528269d_3214852c5fdeebca8ca8933626f91c357309037133652424",
+          "title": "PandaWiki：更轻量的开源知识库，问答效果到底如何？（本地部署教程+效果实测）",
+          "parent_folder_id": "7309037133652424",
+          "highlight_content": "",
+          "media_type": 6
+        },
+        {
+          "media_id": "wechatarticle_0965810169bffd8606dec4fbe528269d_95aea5943600995affaacbc30a5076d27309037133652424",
+          "title": "Dify元数据商业应用，知识库权限分级实战（内附全流程配置手册，建议收藏）",
+          "parent_folder_id": "7309037133652424",
+          "highlight_content": "",
+          "media_type": 6
+        },
+        {
+          "media_id": "wechatarticle_0965810169bffd8606dec4fbe528269d_5b514a7a7a1a221d8c531f6a3b1a35317309037133652424",
+          "title": "万元级边缘算力方案：Mac Mini在几个知识库项目的部署实践",
+          "parent_folder_id": "7309037133652424",
+          "highlight_content": "",
+          "media_type": 6
+        },
+        {
+          "media_id": "pdf_0965810169bffd8606dec4fbe528269d_c8530e94a95a81603611090d25eb24207309037133652424",
+          "title": "25-Graph RAG 面 — 一种 基于知识图谱的大模型检索增强实现策略.pdf",
+          "parent_folder_id": "7309037133652424",
+          "highlight_content": "",
+          "media_type": 1
+        },
+        {
+          "media_id": "wechatarticle_0965810169bffd8606dec4fbe528269d_267551912ec10887fe1856c0bb5a14497309037133652424",
+          "title": "dify案例分享-0 代码搭建 Text2SQL 智能查询！用 Dify + 知识库 + Agent 实现自然语言秒变 SQL",
+          "parent_folder_id": "7309037133652424",
+          "highlight_content": "",
+          "media_type": 6
+        },
+        {
+          "media_id": "wechatarticle_0965810169bffd8606dec4fbe528269d_75de7716128c787843fc549ee0aac0467309037133652424",
+          "title": "KnowFlow v2.0.4 发布：重构 RAGFlow 权限管理，支持 RBAC 用户、团队权限管理，精准管控知识库权限",
+          "parent_folder_id": "7309037133652424",
+          "highlight_content": "",
+          "media_type": 6
+        },
+        {
+          "media_id": "word_0965810169bffd8606dec4fbe528269d_34b440afef6d037fb5af5953c5f014cb7309037133652424",
+          "title": "25-Graph+RAG+面+—+一种+基于知识图谱的大模型检索增强实现策略1740903972.docx",
+          "parent_folder_id": "7309037133652424",
+          "highlight_content": "",
+          "media_type": 3
+        },
+        {
+          "media_id": "pdf_0965810169bffd8606dec4fbe528269d_5f321af378375e8b103e021579f29cf97309037133652424",
+          "title": "一个简单的中文版教程-ChatGLM实战 基于LangChain构建自己的私有知识库.pdf",
+          "parent_folder_id": "7309037133652424",
+          "highlight_content": "",
+          "media_type": 1
+        },
+        {
+          "media_id": "wechatarticle_0965810169bffd8606dec4fbe528269d_54fa7d913dbaf320fb1a2faa318e04467309037133652424",
+          "title": "基于本体建模和LLM-Wiki的思路构建AI智能知识库-完成完整方案和长文写作",
+          "parent_folder_id": "7309037133652424",
+          "highlight_content": "",
+          "media_type": 6
+        },
+        {
+          "media_id": "wechatarticle_0965810169bffd8606dec4fbe528269d_0795d89496ee105711add2b29bf0c7b37309037133652424",
+          "title": "这个国产开源RAG项目ChatWiki厉害了，可以搭建企业级AI知识库和微信机器人",
+          "parent_folder_id": "7309037133652424",
+          "highlight_content": "",
+          "media_type": 6
+        },
+        {
+          "media_id": "wechatarticle_0965810169bffd8606dec4fbe528269d_645c5847bab6a9927d8f2efdf9c493117309037133652424",
+          "title": "670次问答、108个差评：一个工控知识库POC根因分析与优化方向（新书预售）",
+          "parent_folder_id": "7309037133652424",
+          "highlight_content": "",
+          "media_type": 6
+        },
+        {
+          "media_id": "wechatarticle_0965810169bffd8606dec4fbe528269d_903708f89e3e6cd33dfdd69d43d965b37309037133652424",
+          "title": "腾讯ima知识库掀桌：打工人1人开公司时代降临！这5个AI神技正在重构职场生存法则。",
+          "parent_folder_id": "7309037133652424",
+          "highlight_content": "",
+          "media_type": 6
+        },
+        {
+          "media_id": "wechatarticle_0965810169bffd8606dec4fbe528269d_58b583951cef33eda6c4208a170781f57309037133652424",
+          "title": "从8550秒到608秒！RAGFlow最新版本让知识图谱生成效率狂飙，终于不用通宵等结果了",
+          "parent_folder_id": "7309037133652424",
+          "highlight_content": "",
+          "media_type": 6
+        },
+        {
+          "media_id": "wechatarticle_0965810169bffd8606dec4fbe528269d_b905357e6cbda6472b4bb2f4e495d2847309037133652424",
+          "title": "Dify v1.1.0新版杀器，用元数据过滤给知识库加权限管理，RAG 检索效率翻倍，含保姆级操作教程",
+          "parent_folder_id": "7309037133652424",
+          "highlight_content": "",
+          "media_type": 6
+        },
+        {
+          "media_id": "wechatarticle_0965810169bffd8606dec4fbe528269d_8153b042ba009c5dcd059e1487f4c0017309037133652424",
+          "title": "2025最强开源RAG横评！五大知识库引擎+Agent平台实战测评：Dify、RAGFlow、FastGPT谁是你的AI外挂大脑",
+          "parent_folder_id": "7309037133652424",
+          "highlight_content": "",
+          "media_type": 6
+        }
+      ]
+    }
+  }
+}

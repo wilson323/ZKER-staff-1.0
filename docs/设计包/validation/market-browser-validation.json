@@ -1,0 +1,1009 @@
+{
+  "passed": true,
+  "layoutChecks": 75,
+  "interactionChecks": 19,
+  "pageErrors": [],
+  "checks": [
+    {
+      "type": "layout",
+      "width": 1440,
+      "role": "main",
+      "tab": 0,
+      "passed": true,
+      "measure": {
+        "width": 1440,
+        "scroll": 1440,
+        "text": 522
+      }
+    },
+    {
+      "type": "layout",
+      "width": 1440,
+      "role": "main",
+      "tab": 1,
+      "passed": true,
+      "measure": {
+        "width": 1440,
+        "scroll": 1440,
+        "text": 173
+      }
+    },
+    {
+      "type": "layout",
+      "width": 1440,
+      "role": "main",
+      "tab": 2,
+      "passed": true,
+      "measure": {
+        "width": 1440,
+        "scroll": 1440,
+        "text": 163
+      }
+    },
+    {
+      "type": "layout",
+      "width": 1440,
+      "role": "main",
+      "tab": 3,
+      "passed": true,
+      "measure": {
+        "width": 1440,
+        "scroll": 1440,
+        "text": 184
+      }
+    },
+    {
+      "type": "layout",
+      "width": 1440,
+      "role": "main",
+      "tab": 4,
+      "passed": true,
+      "measure": {
+        "width": 1440,
+        "scroll": 1440,
+        "text": 36
+      }
+    },
+    {
+      "type": "layout",
+      "width": 1440,
+      "role": "collab",
+      "tab": 0,
+      "passed": true,
+      "measure": {
+        "width": 1440,
+        "scroll": 1440,
+        "text": 335
+      }
+    },
+    {
+      "type": "layout",
+      "width": 1440,
+      "role": "collab",
+      "tab": 1,
+      "passed": true,
+      "measure": {
+        "width": 1440,
+        "scroll": 1440,
+        "text": 85
+      }
+    },
+    {
+      "type": "layout",
+      "width": 1440,
+      "role": "collab",
+      "tab": 2,
+      "passed": true,
+      "measure": {
+        "width": 1440,
+        "scroll": 1440,
+        "text": 163
+      }
+    },
+    {
+      "type": "layout",
+      "width": 1440,
+      "role": "collab",
+      "tab": 3,
+      "passed": true,
+      "measure": {
+        "width": 1440,
+        "scroll": 1440,
+        "text": 85
+      }
+    },
+    {
+      "type": "layout",
+      "width": 1440,
+      "role": "collab",
+      "tab": 4,
+      "passed": true,
+      "measure": {
+        "width": 1440,
+        "scroll": 1440,
+        "text": 36
+      }
+    },
+    {
+      "type": "layout",
+      "width": 1440,
+      "role": "review",
+      "tab": 0,
+      "passed": true,
+      "measure": {
+        "width": 1440,
+        "scroll": 1440,
+        "text": 173
+      }
+    },
+    {
+      "type": "layout",
+      "width": 1440,
+      "role": "review",
+      "tab": 1,
+      "passed": true,
+      "measure": {
+        "width": 1440,
+        "scroll": 1440,
+        "text": 86
+      }
+    },
+    {
+      "type": "layout",
+      "width": 1440,
+      "role": "review",
+      "tab": 2,
+      "passed": true,
+      "measure": {
+        "width": 1440,
+        "scroll": 1440,
+        "text": 86
+      }
+    },
+    {
+      "type": "layout",
+      "width": 1440,
+      "role": "review",
+      "tab": 3,
+      "passed": true,
+      "measure": {
+        "width": 1440,
+        "scroll": 1440,
+        "text": 42
+      }
+    },
+    {
+      "type": "layout",
+      "width": 1440,
+      "role": "review",
+      "tab": 4,
+      "passed": true,
+      "measure": {
+        "width": 1440,
+        "scroll": 1440,
+        "text": 36
+      }
+    },
+    {
+      "type": "layout",
+      "width": 1440,
+      "role": "designer",
+      "tab": 0,
+      "passed": true,
+      "measure": {
+        "width": 1440,
+        "scroll": 1440,
+        "text": 257
+      }
+    },
+    {
+      "type": "layout",
+      "width": 1440,
+      "role": "designer",
+      "tab": 1,
+      "passed": true,
+      "measure": {
+        "width": 1440,
+        "scroll": 1440,
+        "text": 91
+      }
+    },
+    {
+      "type": "layout",
+      "width": 1440,
+      "role": "designer",
+      "tab": 2,
+      "passed": true,
+      "measure": {
+        "width": 1440,
+        "scroll": 1440,
+        "text": 165
+      }
+    },
+    {
+      "type": "layout",
+      "width": 1440,
+      "role": "designer",
+      "tab": 3,
+      "passed": true,
+      "measure": {
+        "width": 1440,
+        "scroll": 1440,
+        "text": 42
+      }
+    },
+    {
+      "type": "layout",
+      "width": 1440,
+      "role": "designer",
+      "tab": 4,
+      "passed": true,
+      "measure": {
+        "width": 1440,
+        "scroll": 1440,
+        "text": 36
+      }
+    },
+    {
+      "type": "layout",
+      "width": 1440,
+      "role": "resource",
+      "tab": 0,
+      "passed": true,
+      "measure": {
+        "width": 1440,
+        "scroll": 1440,
+        "text": 618
+      }
+    },
+    {
+      "type": "layout",
+      "width": 1440,
+      "role": "resource",
+      "tab": 1,
+      "passed": true,
+      "measure": {
+        "width": 1440,
+        "scroll": 1440,
+        "text": 265
+      }
+    },
+    {
+      "type": "layout",
+      "width": 1440,
+      "role": "resource",
+      "tab": 2,
+      "passed": true,
+      "measure": {
+        "width": 1440,
+        "scroll": 1440,
+        "text": 165
+      }
+    },
+    {
+      "type": "layout",
+      "width": 1440,
+      "role": "resource",
+      "tab": 3,
+      "passed": true,
+      "measure": {
+        "width": 1440,
+        "scroll": 1440,
+        "text": 186
+      }
+    },
+    {
+      "type": "layout",
+      "width": 1440,
+      "role": "resource",
+      "tab": 4,
+      "passed": true,
+      "measure": {
+        "width": 1440,
+        "scroll": 1440,
+        "text": 36
+      }
+    },
+    {
+      "type": "layout",
+      "width": 1024,
+      "role": "main",
+      "tab": 0,
+      "passed": true,
+      "measure": {
+        "width": 1024,
+        "scroll": 1024,
+        "text": 522
+      }
+    },
+    {
+      "type": "layout",
+      "width": 1024,
+      "role": "main",
+      "tab": 1,
+      "passed": true,
+      "measure": {
+        "width": 1024,
+        "scroll": 1024,
+        "text": 173
+      }
+    },
+    {
+      "type": "layout",
+      "width": 1024,
+      "role": "main",
+      "tab": 2,
+      "passed": true,
+      "measure": {
+        "width": 1024,
+        "scroll": 1024,
+        "text": 163
+      }
+    },
+    {
+      "type": "layout",
+      "width": 1024,
+      "role": "main",
+      "tab": 3,
+      "passed": true,
+      "measure": {
+        "width": 1024,
+        "scroll": 1024,
+        "text": 184
+      }
+    },
+    {
+      "type": "layout",
+      "width": 1024,
+      "role": "main",
+      "tab": 4,
+      "passed": true,
+      "measure": {
+        "width": 1024,
+        "scroll": 1024,
+        "text": 36
+      }
+    },
+    {
+      "type": "layout",
+      "width": 1024,
+      "role": "collab",
+      "tab": 0,
+      "passed": true,
+      "measure": {
+        "width": 1024,
+        "scroll": 1024,
+        "text": 335
+      }
+    },
+    {
+      "type": "layout",
+      "width": 1024,
+      "role": "collab",
+      "tab": 1,
+      "passed": true,
+      "measure": {
+        "width": 1024,
+        "scroll": 1024,
+        "text": 85
+      }
+    },
+    {
+      "type": "layout",
+      "width": 1024,
+      "role": "collab",
+      "tab": 2,
+      "passed": true,
+      "measure": {
+        "width": 1024,
+        "scroll": 1024,
+        "text": 163
+      }
+    },
+    {
+      "type": "layout",
+      "width": 1024,
+      "role": "collab",
+      "tab": 3,
+      "passed": true,
+      "measure": {
+        "width": 1024,
+        "scroll": 1024,
+        "text": 85
+      }
+    },
+    {
+      "type": "layout",
+      "width": 1024,
+      "role": "collab",
+      "tab": 4,
+      "passed": true,
+      "measure": {
+        "width": 1024,
+        "scroll": 1024,
+        "text": 36
+      }
+    },
+    {
+      "type": "layout",
+      "width": 1024,
+      "role": "review",
+      "tab": 0,
+      "passed": true,
+      "measure": {
+        "width": 1024,
+        "scroll": 1024,
+        "text": 173
+      }
+    },
+    {
+      "type": "layout",
+      "width": 1024,
+      "role": "review",
+      "tab": 1,
+      "passed": true,
+      "measure": {
+        "width": 1024,
+        "scroll": 1024,
+        "text": 86
+      }
+    },
+    {
+      "type": "layout",
+      "width": 1024,
+      "role": "review",
+      "tab": 2,
+      "passed": true,
+      "measure": {
+        "width": 1024,
+        "scroll": 1024,
+        "text": 86
+      }
+    },
+    {
+      "type": "layout",
+      "width": 1024,
+      "role": "review",
+      "tab": 3,
+      "passed": true,
+      "measure": {
+        "width": 1024,
+        "scroll": 1024,
+        "text": 42
+      }
+    },
+    {
+      "type": "layout",
+      "width": 1024,
+      "role": "review",
+      "tab": 4,
+      "passed": true,
+      "measure": {
+        "width": 1024,
+        "scroll": 1024,
+        "text": 36
+      }
+    },
+    {
+      "type": "layout",
+      "width": 1024,
+      "role": "designer",
+      "tab": 0,
+      "passed": true,
+      "measure": {
+        "width": 1024,
+        "scroll": 1024,
+        "text": 257
+      }
+    },
+    {
+      "type": "layout",
+      "width": 1024,
+      "role": "designer",
+      "tab": 1,
+      "passed": true,
+      "measure": {
+        "width": 1024,
+        "scroll": 1024,
+        "text": 91
+      }
+    },
+    {
+      "type": "layout",
+      "width": 1024,
+      "role": "designer",
+      "tab": 2,
+      "passed": true,
+      "measure": {
+        "width": 1024,
+        "scroll": 1024,
+        "text": 165
+      }
+    },
+    {
+      "type": "layout",
+      "width": 1024,
+      "role": "designer",
+      "tab": 3,
+      "passed": true,
+      "measure": {
+        "width": 1024,
+        "scroll": 1024,
+        "text": 42
+      }
+    },
+    {
+      "type": "layout",
+      "width": 1024,
+      "role": "designer",
+      "tab": 4,
+      "passed": true,
+      "measure": {
+        "width": 1024,
+        "scroll": 1024,
+        "text": 36
+      }
+    },
+    {
+      "type": "layout",
+      "width": 1024,
+      "role": "resource",
+      "tab": 0,
+      "passed": true,
+      "measure": {
+        "width": 1024,
+        "scroll": 1024,
+        "text": 618
+      }
+    },
+    {
+      "type": "layout",
+      "width": 1024,
+      "role": "resource",
+      "tab": 1,
+      "passed": true,
+      "measure": {
+        "width": 1024,
+        "scroll": 1024,
+        "text": 265
+      }
+    },
+    {
+      "type": "layout",
+      "width": 1024,
+      "role": "resource",
+      "tab": 2,
+      "passed": true,
+      "measure": {
+        "width": 1024,
+        "scroll": 1024,
+        "text": 165
+      }
+    },
+    {
+      "type": "layout",
+      "width": 1024,
+      "role": "resource",
+      "tab": 3,
+      "passed": true,
+      "measure": {
+        "width": 1024,
+        "scroll": 1024,
+        "text": 186
+      }
+    },
+    {
+      "type": "layout",
+      "width": 1024,
+      "role": "resource",
+      "tab": 4,
+      "passed": true,
+      "measure": {
+        "width": 1024,
+        "scroll": 1024,
+        "text": 36
+      }
+    },
+    {
+      "type": "layout",
+      "width": 390,
+      "role": "main",
+      "tab": 0,
+      "passed": true,
+      "measure": {
+        "width": 390,
+        "scroll": 390,
+        "text": 522
+      }
+    },
+    {
+      "type": "layout",
+      "width": 390,
+      "role": "main",
+      "tab": 1,
+      "passed": true,
+      "measure": {
+        "width": 390,
+        "scroll": 390,
+        "text": 173
+      }
+    },
+    {
+      "type": "layout",
+      "width": 390,
+      "role": "main",
+      "tab": 2,
+      "passed": true,
+      "measure": {
+        "width": 390,
+        "scroll": 390,
+        "text": 163
+      }
+    },
+    {
+      "type": "layout",
+      "width": 390,
+      "role": "main",
+      "tab": 3,
+      "passed": true,
+      "measure": {
+        "width": 390,
+        "scroll": 390,
+        "text": 184
+      }
+    },
+    {
+      "type": "layout",
+      "width": 390,
+      "role": "main",
+      "tab": 4,
+      "passed": true,
+      "measure": {
+        "width": 390,
+        "scroll": 390,
+        "text": 36
+      }
+    },
+    {
+      "type": "layout",
+      "width": 390,
+      "role": "collab",
+      "tab": 0,
+      "passed": true,
+      "measure": {
+        "width": 390,
+        "scroll": 390,
+        "text": 335
+      }
+    },
+    {
+      "type": "layout",
+      "width": 390,
+      "role": "collab",
+      "tab": 1,
+      "passed": true,
+      "measure": {
+        "width": 390,
+        "scroll": 390,
+        "text": 85
+      }
+    },
+    {
+      "type": "layout",
+      "width": 390,
+      "role": "collab",
+      "tab": 2,
+      "passed": true,
+      "measure": {
+        "width": 390,
+        "scroll": 390,
+        "text": 163
+      }
+    },
+    {
+      "type": "layout",
+      "width": 390,
+      "role": "collab",
+      "tab": 3,
+      "passed": true,
+      "measure": {
+        "width": 390,
+        "scroll": 390,
+        "text": 85
+      }
+    },
+    {
+      "type": "layout",
+      "width": 390,
+      "role": "collab",
+      "tab": 4,
+      "passed": true,
+      "measure": {
+        "width": 390,
+        "scroll": 390,
+        "text": 36
+      }
+    },
+    {
+      "type": "layout",
+      "width": 390,
+      "role": "review",
+      "tab": 0,
+      "passed": true,
+      "measure": {
+        "width": 390,
+        "scroll": 390,
+        "text": 173
+      }
+    },
+    {
+      "type": "layout",
+      "width": 390,
+      "role": "review",
+      "tab": 1,
+      "passed": true,
+      "measure": {
+        "width": 390,
+        "scroll": 390,
+        "text": 86
+      }
+    },
+    {
+      "type": "layout",
+      "width": 390,
+      "role": "review",
+      "tab": 2,
+      "passed": true,
+      "measure": {
+        "width": 390,
+        "scroll": 390,
+        "text": 86
+      }
+    },
+    {
+      "type": "layout",
+      "width": 390,
+      "role": "review",
+      "tab": 3,
+      "passed": true,
+      "measure": {
+        "width": 390,
+        "scroll": 390,
+        "text": 42
+      }
+    },
+    {
+      "type": "layout",
+      "width": 390,
+      "role": "review",
+      "tab": 4,
+      "passed": true,
+      "measure": {
+        "width": 390,
+        "scroll": 390,
+        "text": 36
+      }
+    },
+    {
+      "type": "layout",
+      "width": 390,
+      "role": "designer",
+      "tab": 0,
+      "passed": true,
+      "measure": {
+        "width": 390,
+        "scroll": 390,
+        "text": 257
+      }
+    },
+    {
+      "type": "layout",
+      "width": 390,
+      "role": "designer",
+      "tab": 1,
+      "passed": true,
+      "measure": {
+        "width": 390,
+        "scroll": 390,
+        "text": 91
+      }
+    },
+    {
+      "type": "layout",
+      "width": 390,
+      "role": "designer",
+      "tab": 2,
+      "passed": true,
+      "measure": {
+        "width": 390,
+        "scroll": 390,
+        "text": 165
+      }
+    },
+    {
+      "type": "layout",
+      "width": 390,
+      "role": "designer",
+      "tab": 3,
+      "passed": true,
+      "measure": {
+        "width": 390,
+        "scroll": 390,
+        "text": 42
+      }
+    },
+    {
+      "type": "layout",
+      "width": 390,
+      "role": "designer",
+      "tab": 4,
+      "passed": true,
+      "measure": {
+        "width": 390,
+        "scroll": 390,
+        "text": 36
+      }
+    },
+    {
+      "type": "layout",
+      "width": 390,
+      "role": "resource",
+      "tab": 0,
+      "passed": true,
+      "measure": {
+        "width": 390,
+        "scroll": 390,
+        "text": 618
+      }
+    },
+    {
+      "type": "layout",
+      "width": 390,
+      "role": "resource",
+      "tab": 1,
+      "passed": true,
+      "measure": {
+        "width": 390,
+        "scroll": 390,
+        "text": 265
+      }
+    },
+    {
+      "type": "layout",
+      "width": 390,
+      "role": "resource",
+      "tab": 2,
+      "passed": true,
+      "measure": {
+        "width": 390,
+        "scroll": 390,
+        "text": 165
+      }
+    },
+    {
+      "type": "layout",
+      "width": 390,
+      "role": "resource",
+      "tab": 3,
+      "passed": true,
+      "measure": {
+        "width": 390,
+        "scroll": 390,
+        "text": 186
+      }
+    },
+    {
+      "type": "layout",
+      "width": 390,
+      "role": "resource",
+      "tab": 4,
+      "passed": true,
+      "measure": {
+        "width": 390,
+        "scroll": 390,
+        "text": 36
+      }
+    },
+    {
+      "type": "interaction",
+      "name": "employee has explicit market entry",
+      "passed": true
+    },
+    {
+      "type": "interaction",
+      "name": "unauthorized resource absent in employee view",
+      "passed": true
+    },
+    {
+      "type": "interaction",
+      "name": "hidden resource absent from search and count",
+      "passed": true
+    },
+    {
+      "type": "interaction",
+      "name": "unauthorized detail uses protected result",
+      "passed": true
+    },
+    {
+      "type": "interaction",
+      "name": "view-only detail has no copy action",
+      "passed": true
+    },
+    {
+      "type": "interaction",
+      "name": "forged copy of view-only resource rejected",
+      "passed": true
+    },
+    {
+      "type": "interaction",
+      "name": "agent copy selected on own node",
+      "passed": true
+    },
+    {
+      "type": "interaction",
+      "name": "skill copy selected on own node",
+      "passed": true
+    },
+    {
+      "type": "interaction",
+      "name": "ready tool copy selected using receiver setup",
+      "passed": true
+    },
+    {
+      "type": "interaction",
+      "name": "tool definition copied while missing own identity blocks use",
+      "passed": true
+    },
+    {
+      "type": "interaction",
+      "name": "missing identity has actionable explanation",
+      "passed": true
+    },
+    {
+      "type": "interaction",
+      "name": "same adoption intent returns one existing copy",
+      "passed": true
+    },
+    {
+      "type": "interaction",
+      "name": "copy result contains no author credentials or private context",
+      "passed": true
+    },
+    {
+      "type": "interaction",
+      "name": "my copies scoped to receiving employee",
+      "passed": true
+    },
+    {
+      "type": "interaction",
+      "name": "collaborator clone does not overwrite main assignment selection",
+      "passed": true
+    },
+    {
+      "type": "interaction",
+      "name": "read-only fixture can browse without copy buttons",
+      "passed": true
+    },
+    {
+      "type": "interaction",
+      "name": "copy permission rechecked after revocation",
+      "passed": true
+    },
+    {
+      "type": "interaction",
+      "name": "copy right distinct from existing local use right",
+      "passed": true
+    },
+    {
+      "type": "interaction",
+      "name": "different authorized fixture receives different visible set",
+      "passed": true
+    }
+  ],
+  "screenshots": [
+    "/Users/mac/Documents/New project 2/validation/market-1440.png",
+    "/Users/mac/Documents/New project 2/validation/market-1024.png",
+    "/Users/mac/Documents/New project 2/validation/market-390.png"
+  ],
+  "limitations": "Local prototype permission fixtures only, not real server authorization, persistence, adoption or runtime execution."
+}

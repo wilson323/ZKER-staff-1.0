@@ -1,0 +1,639 @@
+{
+  "schemaVersion": 1,
+  "id": "implementation-docs-20260911",
+  "goal": "完整生成AI编程开发文档，纳入低代码、插件化、开源二次开发与完整商用准入要求，交付机器合同/字段/验收资料并验证",
+  "scope": {
+    "allowed": [
+      "docs/设计包/46—53开发文档",
+      "contracts/",
+      "validation/implementation-*",
+      "validation/build_implementation_contracts.py",
+      "validation/check_implementation_contracts.py",
+      "validation/development-task-implementation-docs-20260911.json",
+      "validation/development-workflow.json",
+      "README.md",
+      "CONTEXT.md",
+      "docs/设计包/45-AI编程文档就绪审查与补齐清单.md",
+      "docs/设计包/54-开源二开与完整商用准入.md",
+      "validation/build_implementation_data.py",
+      "validation/build_implementation_fixtures.py",
+      "validation/build_implementation_appendices.py",
+      "validation/technical-design-check.json"
+    ],
+    "excluded": [
+      "未授权的Git写入、生产、凭据、外部发送及相邻项目",
+      "原需求/原型修改、产品源码、候选安装、数据库执行、全局Skill和记忆变更"
+    ]
+  },
+  "acceptance_criteria": [
+    "八类文档均有实际完整内容，引用权威需求不重复治理",
+    "全173项需求和22页保留实施映射，M0-M1细化接口/字段/状态/恢复",
+    "交付可机器校验的OpenAPI、事件Schema、数据字典、候选SQL和正负样本",
+    "通用权限与执行用权/人员可读/输出发布隔离，跨轮次和重复副作用有失败路径",
+    "真实静态检查、原始证据和make verify通过，不宣称运行或上线",
+    "低代码/插件化/开源二开优先落实到配置、扩展点、存储复用与版本发布",
+    "商用准入逐项标注固定来源、已知限制、替代闭环和未放行状态"
+  ],
+  "current_node": "N2",
+  "final_node": "N2",
+  "completed_nodes": [
+    "N1",
+    "N2"
+  ],
+  "failed_nodes": [],
+  "artifacts": [
+    {
+      "path": "CONTEXT.md",
+      "sha256": "a923922b5174e3ed9319e2c3a867fd22929568e974e9d4d28e6b78fe068dc394"
+    },
+    {
+      "path": "README.md",
+      "sha256": "4193d189f0593892e5543b380d2a4b35065637c547153057564191584355aaab"
+    },
+    {
+      "path": "contracts/README.md",
+      "sha256": "65e5a06e50b9a4b6ca9a56783f4e45a91ad00413c08c10faff42aaef38d3b063"
+    },
+    {
+      "path": "contracts/command-catalog.json",
+      "sha256": "2fd7f8cd7b032c57e3b9d14839c40d71ed84fa4f781000a224f9ec9c275d0659"
+    },
+    {
+      "path": "contracts/command-reference.md",
+      "sha256": "32d0198528e7dac21c3d3be7ef7f40eb2f521c90c6b27f14a8b2fcc372d3b28b"
+    },
+    {
+      "path": "contracts/commercial-component-register.json",
+      "sha256": "b83067e64e4bc302d816bab6774defe4eec1c9e54f2942991b94ca2473dc39de"
+    },
+    {
+      "path": "contracts/data-dictionary.md",
+      "sha256": "f2c77f5d63d24b5f4ac24c68dec3a3f1f369f0ae0d853398fae876cf2bbe5dfe"
+    },
+    {
+      "path": "contracts/data-model.json",
+      "sha256": "5e1ed46eebff8fb74ed9345b1e570a6e92e9548d339aa11e1c1e97da7c92dbd6"
+    },
+    {
+      "path": "contracts/domain.schema.json",
+      "sha256": "28617c10a43f3366c61ee651530be104b6315193639336c29a7d53bb500c5736"
+    },
+    {
+      "path": "contracts/events.schema.json",
+      "sha256": "ddd4457e888a4a85be1951a8d80c27c34a2a8e415ce1c3bcbe2753c565aa492b"
+    },
+    {
+      "path": "contracts/fixtures/ai-evals.json",
+      "sha256": "1a58a20c0d770f92575b7db4578ef551659aec1185f96fac618d5888e61eb31b"
+    },
+    {
+      "path": "contracts/fixtures/permissions.json",
+      "sha256": "4018eda62390b765cc816f49f471681c25238f31de5a50428de0fd755f7c590b"
+    },
+    {
+      "path": "contracts/fixtures/plugin-manifest.json",
+      "sha256": "4614c535a7981326b68a48187950ff3cef05ecebd96546cb3fb1f7a676ac1d77"
+    },
+    {
+      "path": "contracts/fixtures/requests.json",
+      "sha256": "f88dd2b258010d69c466554940dd344db1e27cf04eeb69a5877d914b784351a2"
+    },
+    {
+      "path": "contracts/fixtures/seed.json",
+      "sha256": "9a7a18477df2b5620c99e2f8cf3b339fe1a317ce58350e8884f5fdea0d9929a2"
+    },
+    {
+      "path": "contracts/fixtures/states.json",
+      "sha256": "e47dd3067686034944e95832991fbade32f8c6463de6ba2601b3772cece6dbfd"
+    },
+    {
+      "path": "contracts/implementation-map.json",
+      "sha256": "13516963001b7034a5806b700bd3a0312fcc2eb6ff36b2204aec9f59045187a4"
+    },
+    {
+      "path": "contracts/internal.schema.json",
+      "sha256": "468ac9acc85cd242c340e255248b805b0c450e0bd821d5d1907e55c22728000b"
+    },
+    {
+      "path": "contracts/invariants.json",
+      "sha256": "b8fbe4b5848dae91d0a24cce58f6e0571c7ad619560c9f605964b4b82bb863ca"
+    },
+    {
+      "path": "contracts/migrations/mysql-candidate/V001__oa_extension_candidate.sql",
+      "sha256": "adf2f372b06ed830500f54c230bda5f650833f38f7da50cd0999ed645e0f91ee"
+    },
+    {
+      "path": "contracts/openapi.json",
+      "sha256": "081d6132b7b5f8e62da2221319abf1ef4c9bae00bfe4d44f58ed86fdbb40e531"
+    },
+    {
+      "path": "contracts/plugin-manifest.schema.json",
+      "sha256": "8f0cff42c83c5b3e5a96af6b1ae7ec3186de692e095113cec7808dc48209eee2"
+    },
+    {
+      "path": "contracts/state-machines.json",
+      "sha256": "f301df7c063316e2fe9108813946e735ca9833d93ae70baf2f71a47a63384838"
+    },
+    {
+      "path": "contracts/storage-reuse-plan.json",
+      "sha256": "37b418a160581c77d78b5d43eba24b08aaa85d2c0fb48a0ea97a98749e7ba21a"
+    },
+    {
+      "path": "contracts/ui-pages.json",
+      "sha256": "36b63a64ae738f6a92574395683272a44f099caa6d106ae25d63c076a2e99327"
+    },
+    {
+      "path": "docs/设计包/45-AI编程文档就绪审查与补齐清单.md",
+      "sha256": "511cec2d6d21beeaa15766dc529f6d3888a06313736e8bdc2fd807b41ab14cef"
+    },
+    {
+      "path": "docs/设计包/46-开发基线与低代码插件化决策.md",
+      "sha256": "c18917cf44de76ddc85cf62124e09870dd8f9cf1f75aa6fa767e0133f99c2424"
+    },
+    {
+      "path": "docs/设计包/47-全产品实施切片与首期开发规格.md",
+      "sha256": "e4696ee6411feed7ac7b959786fd42faf629154425455d0b86eb50f305a92702"
+    },
+    {
+      "path": "docs/设计包/48-接口事件与插件合同.md",
+      "sha256": "0f7205b3125be8119fb48a32b9e87e0d4c3543df51474f9b949a28e116e1ae88"
+    },
+    {
+      "path": "docs/设计包/49-字段级数据模型与迁移规范.md",
+      "sha256": "5b8de5367a0d6e5039338a5a863dd68f84a8ba97b58add36631dfc8951c37df3"
+    },
+    {
+      "path": "docs/设计包/50-业务不变量权限与验收夹具.md",
+      "sha256": "012af596df02d7a3c331f95391915db6258868786bedfbcdbec39b0dcd9962c3"
+    },
+    {
+      "path": "docs/设计包/51-开发启动测试与故障恢复手册.md",
+      "sha256": "e0247a3dfc5def060ee62d5a003550248f981890dc4eaa86fb691e0239ad7987"
+    },
+    {
+      "path": "docs/设计包/52-UI实现与页面状态规格.md",
+      "sha256": "145d65490ba5399ef25cb818e99b156b5b21b2ef26d313d5e1edf1de42b7d92d"
+    },
+    {
+      "path": "docs/设计包/53-AI运行工具与效果评测规范.md",
+      "sha256": "45d366352f8841796a35de1a7e2ce26a90f4b5ce847be89f8813b3351a2561f1"
+    },
+    {
+      "path": "docs/设计包/54-开源二开与完整商用准入.md",
+      "sha256": "53795d93881f0bf65c13e09e19775df4e133f97b8f61cc82d5b918fa8829ffd2"
+    },
+    {
+      "path": "validation/build_implementation_appendices.py",
+      "sha256": "bd84296616fd8bc46c780c1dacadbbd3c7804553a7da1ad0d853bda97de8ca1f"
+    },
+    {
+      "path": "validation/build_implementation_contracts.py",
+      "sha256": "4b9613994ec8da1f189f81225b19dd7fa5ae3a31ad501e6b80926c39cd06eb5d"
+    },
+    {
+      "path": "validation/build_implementation_data.py",
+      "sha256": "cb7617e6dd73fe2f1fd3343dec75592ef108b51c1af33c2339b8fe59749564f5"
+    },
+    {
+      "path": "validation/build_implementation_fixtures.py",
+      "sha256": "7f53832b1fbf2ea76c394cb05d27f6f79f49d97100ea842dea8816bfc4cd7bf1"
+    },
+    {
+      "path": "validation/check_implementation_contracts.py",
+      "sha256": "4d4bad32b7483e4a293a27bb32c764f4f80455c8f9865dde058ab631c0033d27"
+    }
+  ],
+  "evidence": [
+    "validation/implementation-contract-check.json",
+    "validation/implementation-environment.json",
+    "validation/technical-design-check.json"
+  ],
+  "risks": [
+    "底座未采用、候选DDL未执行、真实AI和产品验收NOT_RUN、最终商用构建清单未生成"
+  ],
+  "approvals": [],
+  "status": "VERIFIED",
+  "intent": {
+    "source": "本会话用户：基于以上完整的生成文档；尽可能低代码、插件化；尽可能基于开源项目二次开发要求必须可完整商用",
+    "problem": "45号列出的八类开发资料需要实际落盘",
+    "users": [
+      "产品与研发人员",
+      "后续AI编程Agent"
+    ],
+    "outcome": "可导航、可校验、按切片准入的开发交付包"
+  },
+  "spec": {
+    "refs": [
+      "docs/设计包/45-AI编程文档就绪审查与补齐清单.md",
+      "docs/设计包/27-逻辑数据模型与接口契约.md",
+      "docs/设计包/40-接口事件与集成技术设计.md"
+    ],
+    "behavior": "延续八类清单；合同与底座映射区分；保留173需求全产品分期",
+    "contracts": [
+      "30号需求权威不变",
+      "一个身份/OA引擎/SDK循环",
+      "首个切片机器合同与后续领域细化边界明确"
+    ],
+    "negativeCases": [
+      "仅字段格式通过不等于权限实施",
+      "RESULT_UNKNOWN不可自动重试写入",
+      "旧轮次/撤权/自批/跨实例泄漏必须失败"
+    ]
+  },
+  "plan": {
+    "files": [
+      "docs/设计包/46—53开发文档",
+      "contracts/",
+      "validation/implementation-*",
+      "validation/build_implementation_contracts.py",
+      "validation/check_implementation_contracts.py",
+      "validation/development-task-implementation-docs-20260911.json",
+      "validation/development-workflow.json",
+      "README.md",
+      "CONTEXT.md",
+      "docs/设计包/45-AI编程文档就绪审查与补齐清单.md",
+      "docs/设计包/54-开源二开与完整商用准入.md",
+      "validation/build_implementation_data.py",
+      "validation/build_implementation_fixtures.py",
+      "validation/build_implementation_appendices.py",
+      "validation/technical-design-check.json"
+    ],
+    "checks": [
+      "python3 validation/check_implementation_contracts.py",
+      "python3 validation/validate_technical_design.py",
+      "make verify"
+    ],
+    "highestRisk": "以静态设计冒充底座采用与真实验收",
+    "rollback": "本轮ZIP仅恢复本次导航局部变更；新文件保留为草案，恢复前检查后续修改"
+  },
+  "requirementIds": [],
+  "caseIds": [],
+  "review": {
+    "mode": "SELF_REVIEW_WITH_INDEPENDENT_OFFLINE_CHECKER",
+    "findings": [
+      {
+        "issue": "EW条目没有caseIds，生成器错误假定全有",
+        "status": "FIXED",
+        "evidence": [
+          "validation/build_implementation_fixtures.py"
+        ],
+        "resolution": "保留EW独立验收，originalCaseIds为空；不伪造AC编号"
+      },
+      {
+        "issue": "Webhook错误套用浏览器cookie/CSRF",
+        "status": "FIXED",
+        "evidence": [
+          "contracts/openapi.json"
+        ],
+        "resolution": "独立签名来源头/nonce/时间窗，不接受浏览器会话替代"
+      },
+      {
+        "issue": "异步资源结果只返回引用，缺少明确读取合同",
+        "status": "FIXED",
+        "evidence": [
+          "contracts/openapi.json"
+        ],
+        "resolution": "增加带受众发布的VersionResourceView及统一版本读取"
+      },
+      {
+        "issue": "创建首个基线时不应要求已有基线；资源导入不应要求已有目标资源",
+        "status": "FIXED",
+        "evidence": [
+          "contracts/openapi.json",
+          "docs/设计包/48-接口事件与插件合同.md"
+        ]
+      },
+      {
+        "issue": "C04配置字段与C27建议字段需要明确映射和两套版本比较",
+        "status": "FIXED",
+        "evidence": [
+          "contracts/openapi.json",
+          "docs/设计包/48-接口事件与插件合同.md"
+        ]
+      },
+      {
+        "issue": "低代码/开源二开不能被34张候选表误导成全部自建",
+        "status": "FIXED_IN_DESIGN",
+        "evidence": [
+          "contracts/storage-reuse-plan.json",
+          "docs/设计包/46-开发基线与低代码插件化决策.md"
+        ]
+      },
+      {
+        "issue": "商用原始许可及替代尚未形成最终构建包证据",
+        "status": "OPEN_IMPLEMENTATION_GATE",
+        "evidence": [
+          "docs/设计包/54-开源二开与完整商用准入.md",
+          "contracts/commercial-component-register.json"
+        ]
+      }
+    ],
+    "evidence": [
+      "validation/implementation-contract-check.json",
+      "validation/implementation-environment.json",
+      "validation/technical-design-check.json"
+    ],
+    "checklist": [
+      {
+        "id": "D01-1",
+        "aspect": "内容与来源",
+        "status": "DOCUMENT_AND_CONTRACT_VERIFIED",
+        "evidence": "validation/implementation-contract-check.json",
+        "runtimeBoundary": "PRODUCT_DATABASE_AND_REAL_AI_NOT_RUN"
+      },
+      {
+        "id": "D01-2",
+        "aspect": "正常与失败闭环",
+        "status": "DOCUMENT_AND_CONTRACT_VERIFIED",
+        "evidence": "validation/implementation-contract-check.json",
+        "runtimeBoundary": "PRODUCT_DATABASE_AND_REAL_AI_NOT_RUN"
+      },
+      {
+        "id": "D01-3",
+        "aspect": "机器合同或可执行验收",
+        "status": "DOCUMENT_AND_CONTRACT_VERIFIED",
+        "evidence": "validation/implementation-contract-check.json",
+        "runtimeBoundary": "PRODUCT_DATABASE_AND_REAL_AI_NOT_RUN"
+      },
+      {
+        "id": "D01-4",
+        "aspect": "未验证边界与接续",
+        "status": "DOCUMENT_AND_CONTRACT_VERIFIED",
+        "evidence": "validation/implementation-contract-check.json",
+        "runtimeBoundary": "PRODUCT_DATABASE_AND_REAL_AI_NOT_RUN"
+      },
+      {
+        "id": "D02-1",
+        "aspect": "内容与来源",
+        "status": "DOCUMENT_AND_CONTRACT_VERIFIED",
+        "evidence": "validation/implementation-contract-check.json",
+        "runtimeBoundary": "PRODUCT_DATABASE_AND_REAL_AI_NOT_RUN"
+      },
+      {
+        "id": "D02-2",
+        "aspect": "正常与失败闭环",
+        "status": "DOCUMENT_AND_CONTRACT_VERIFIED",
+        "evidence": "validation/implementation-contract-check.json",
+        "runtimeBoundary": "PRODUCT_DATABASE_AND_REAL_AI_NOT_RUN"
+      },
+      {
+        "id": "D02-3",
+        "aspect": "机器合同或可执行验收",
+        "status": "DOCUMENT_AND_CONTRACT_VERIFIED",
+        "evidence": "validation/implementation-contract-check.json",
+        "runtimeBoundary": "PRODUCT_DATABASE_AND_REAL_AI_NOT_RUN"
+      },
+      {
+        "id": "D02-4",
+        "aspect": "未验证边界与接续",
+        "status": "DOCUMENT_AND_CONTRACT_VERIFIED",
+        "evidence": "validation/implementation-contract-check.json",
+        "runtimeBoundary": "PRODUCT_DATABASE_AND_REAL_AI_NOT_RUN"
+      },
+      {
+        "id": "D03-1",
+        "aspect": "内容与来源",
+        "status": "DOCUMENT_AND_CONTRACT_VERIFIED",
+        "evidence": "validation/implementation-contract-check.json",
+        "runtimeBoundary": "PRODUCT_DATABASE_AND_REAL_AI_NOT_RUN"
+      },
+      {
+        "id": "D03-2",
+        "aspect": "正常与失败闭环",
+        "status": "DOCUMENT_AND_CONTRACT_VERIFIED",
+        "evidence": "validation/implementation-contract-check.json",
+        "runtimeBoundary": "PRODUCT_DATABASE_AND_REAL_AI_NOT_RUN"
+      },
+      {
+        "id": "D03-3",
+        "aspect": "机器合同或可执行验收",
+        "status": "DOCUMENT_AND_CONTRACT_VERIFIED",
+        "evidence": "validation/implementation-contract-check.json",
+        "runtimeBoundary": "PRODUCT_DATABASE_AND_REAL_AI_NOT_RUN"
+      },
+      {
+        "id": "D03-4",
+        "aspect": "未验证边界与接续",
+        "status": "DOCUMENT_AND_CONTRACT_VERIFIED",
+        "evidence": "validation/implementation-contract-check.json",
+        "runtimeBoundary": "PRODUCT_DATABASE_AND_REAL_AI_NOT_RUN"
+      },
+      {
+        "id": "D04-1",
+        "aspect": "内容与来源",
+        "status": "DOCUMENT_AND_CONTRACT_VERIFIED",
+        "evidence": "validation/implementation-contract-check.json",
+        "runtimeBoundary": "PRODUCT_DATABASE_AND_REAL_AI_NOT_RUN"
+      },
+      {
+        "id": "D04-2",
+        "aspect": "正常与失败闭环",
+        "status": "DOCUMENT_AND_CONTRACT_VERIFIED",
+        "evidence": "validation/implementation-contract-check.json",
+        "runtimeBoundary": "PRODUCT_DATABASE_AND_REAL_AI_NOT_RUN"
+      },
+      {
+        "id": "D04-3",
+        "aspect": "机器合同或可执行验收",
+        "status": "DOCUMENT_AND_CONTRACT_VERIFIED",
+        "evidence": "validation/implementation-contract-check.json",
+        "runtimeBoundary": "PRODUCT_DATABASE_AND_REAL_AI_NOT_RUN"
+      },
+      {
+        "id": "D04-4",
+        "aspect": "未验证边界与接续",
+        "status": "DOCUMENT_AND_CONTRACT_VERIFIED",
+        "evidence": "validation/implementation-contract-check.json",
+        "runtimeBoundary": "PRODUCT_DATABASE_AND_REAL_AI_NOT_RUN"
+      },
+      {
+        "id": "D05-1",
+        "aspect": "内容与来源",
+        "status": "DOCUMENT_AND_CONTRACT_VERIFIED",
+        "evidence": "validation/implementation-contract-check.json",
+        "runtimeBoundary": "PRODUCT_DATABASE_AND_REAL_AI_NOT_RUN"
+      },
+      {
+        "id": "D05-2",
+        "aspect": "正常与失败闭环",
+        "status": "DOCUMENT_AND_CONTRACT_VERIFIED",
+        "evidence": "validation/implementation-contract-check.json",
+        "runtimeBoundary": "PRODUCT_DATABASE_AND_REAL_AI_NOT_RUN"
+      },
+      {
+        "id": "D05-3",
+        "aspect": "机器合同或可执行验收",
+        "status": "DOCUMENT_AND_CONTRACT_VERIFIED",
+        "evidence": "validation/implementation-contract-check.json",
+        "runtimeBoundary": "PRODUCT_DATABASE_AND_REAL_AI_NOT_RUN"
+      },
+      {
+        "id": "D05-4",
+        "aspect": "未验证边界与接续",
+        "status": "DOCUMENT_AND_CONTRACT_VERIFIED",
+        "evidence": "validation/implementation-contract-check.json",
+        "runtimeBoundary": "PRODUCT_DATABASE_AND_REAL_AI_NOT_RUN"
+      },
+      {
+        "id": "D06-1",
+        "aspect": "内容与来源",
+        "status": "DOCUMENT_AND_CONTRACT_VERIFIED",
+        "evidence": "validation/implementation-contract-check.json",
+        "runtimeBoundary": "PRODUCT_DATABASE_AND_REAL_AI_NOT_RUN"
+      },
+      {
+        "id": "D06-2",
+        "aspect": "正常与失败闭环",
+        "status": "DOCUMENT_AND_CONTRACT_VERIFIED",
+        "evidence": "validation/implementation-contract-check.json",
+        "runtimeBoundary": "PRODUCT_DATABASE_AND_REAL_AI_NOT_RUN"
+      },
+      {
+        "id": "D06-3",
+        "aspect": "机器合同或可执行验收",
+        "status": "DOCUMENT_AND_CONTRACT_VERIFIED",
+        "evidence": "validation/implementation-contract-check.json",
+        "runtimeBoundary": "PRODUCT_DATABASE_AND_REAL_AI_NOT_RUN"
+      },
+      {
+        "id": "D06-4",
+        "aspect": "未验证边界与接续",
+        "status": "DOCUMENT_AND_CONTRACT_VERIFIED",
+        "evidence": "validation/implementation-contract-check.json",
+        "runtimeBoundary": "PRODUCT_DATABASE_AND_REAL_AI_NOT_RUN"
+      },
+      {
+        "id": "D07-1",
+        "aspect": "内容与来源",
+        "status": "DOCUMENT_AND_CONTRACT_VERIFIED",
+        "evidence": "validation/implementation-contract-check.json",
+        "runtimeBoundary": "PRODUCT_DATABASE_AND_REAL_AI_NOT_RUN"
+      },
+      {
+        "id": "D07-2",
+        "aspect": "正常与失败闭环",
+        "status": "DOCUMENT_AND_CONTRACT_VERIFIED",
+        "evidence": "validation/implementation-contract-check.json",
+        "runtimeBoundary": "PRODUCT_DATABASE_AND_REAL_AI_NOT_RUN"
+      },
+      {
+        "id": "D07-3",
+        "aspect": "机器合同或可执行验收",
+        "status": "DOCUMENT_AND_CONTRACT_VERIFIED",
+        "evidence": "validation/implementation-contract-check.json",
+        "runtimeBoundary": "PRODUCT_DATABASE_AND_REAL_AI_NOT_RUN"
+      },
+      {
+        "id": "D07-4",
+        "aspect": "未验证边界与接续",
+        "status": "DOCUMENT_AND_CONTRACT_VERIFIED",
+        "evidence": "validation/implementation-contract-check.json",
+        "runtimeBoundary": "PRODUCT_DATABASE_AND_REAL_AI_NOT_RUN"
+      },
+      {
+        "id": "D08-1",
+        "aspect": "内容与来源",
+        "status": "DOCUMENT_AND_CONTRACT_VERIFIED",
+        "evidence": "validation/implementation-contract-check.json",
+        "runtimeBoundary": "PRODUCT_DATABASE_AND_REAL_AI_NOT_RUN"
+      },
+      {
+        "id": "D08-2",
+        "aspect": "正常与失败闭环",
+        "status": "DOCUMENT_AND_CONTRACT_VERIFIED",
+        "evidence": "validation/implementation-contract-check.json",
+        "runtimeBoundary": "PRODUCT_DATABASE_AND_REAL_AI_NOT_RUN"
+      },
+      {
+        "id": "D08-3",
+        "aspect": "机器合同或可执行验收",
+        "status": "DOCUMENT_AND_CONTRACT_VERIFIED",
+        "evidence": "validation/implementation-contract-check.json",
+        "runtimeBoundary": "PRODUCT_DATABASE_AND_REAL_AI_NOT_RUN"
+      },
+      {
+        "id": "D08-4",
+        "aspect": "未验证边界与接续",
+        "status": "DOCUMENT_AND_CONTRACT_VERIFIED",
+        "evidence": "validation/implementation-contract-check.json",
+        "runtimeBoundary": "PRODUCT_DATABASE_AND_REAL_AI_NOT_RUN"
+      },
+      {
+        "id": "COMM-1",
+        "aspect": "闭源二开/部署/客户交付口径",
+        "status": "DOCUMENT_VERIFIED_IMPLEMENTATION_PENDING",
+        "evidence": "docs/设计包/54-开源二开与完整商用准入.md"
+      },
+      {
+        "id": "COMM-2",
+        "aspect": "根许可与子目录/传递依赖分判",
+        "status": "DOCUMENT_VERIFIED_IMPLEMENTATION_PENDING",
+        "evidence": "docs/设计包/54-开源二开与完整商用准入.md"
+      },
+      {
+        "id": "COMM-3",
+        "aspect": "替换实现保留原能力并验收",
+        "status": "DOCUMENT_VERIFIED_IMPLEMENTATION_PENDING",
+        "evidence": "docs/设计包/54-开源二开与完整商用准入.md"
+      },
+      {
+        "id": "COMM-4",
+        "aspect": "最终构建包及商用准入未伪造通过",
+        "status": "DOCUMENT_VERIFIED_IMPLEMENTATION_PENDING",
+        "evidence": "docs/设计包/54-开源二开与完整商用准入.md"
+      }
+    ],
+    "conclusion": "本次文档/合同生成范围内未发现未处理的关键静态失败；运行、数据库、实际许可替代和最终商用放行作为明确的实施准入保留。"
+  },
+  "nodes": [
+    {
+      "id": "N1",
+      "objective": "编写八类完整开发文档与配套合同",
+      "dependsOn": [],
+      "preconditions": [
+        "已读取真实资料与45号缺口"
+      ],
+      "action": "生成文档、M1机器合同、全需求映射和验收夹具",
+      "tool_or_skill": "production-grade-task-methodology / oa-development-system / ai-native-sdlc / Python",
+      "expected_output": "46—53与contracts完整开发包",
+      "validation": "独立脚本解析合同、负例、映射和基线哈希",
+      "success_condition": "八类内容完整且合同一致，未决底座明确隔离",
+      "failure_path": "按新诊断局部修复最多两次",
+      "rollback_or_compensation": "用本轮备份局部恢复，不覆盖他人后续写入",
+      "status": "VERIFIED"
+    },
+    {
+      "id": "N2",
+      "objective": "独立验证并交付",
+      "dependsOn": [
+        "N1"
+      ],
+      "preconditions": [
+        "实现已产生可复核产物"
+      ],
+      "action": "检查原始产物和适用场景",
+      "tool_or_skill": "make verify / REVIEW.md",
+      "expected_output": "当前输入版本的检查结果",
+      "validation": "验收与证据逐项对应",
+      "success_condition": "无关键失败；未验证部分明确披露",
+      "failure_path": "有限修复或交付阻塞",
+      "rollback_or_compensation": "按本任务记录的恢复方案处理",
+      "status": "VERIFIED"
+    }
+  ],
+  "projectRoot": "/Users/mac/Documents/OA数字员工协作平台",
+  "createdAt": "2026-09-11T18:29:47.887416+00:00",
+  "baseline": {
+    "README.md": "36dfe90e5fce112fd80c0487ea538d5504d356498f69b1609019f1097897d687",
+    "CONTEXT.md": "89c574cede8624b37227f13b0082f5ea8873e9c12af771b2b4f796ab46242df7",
+    "docs/设计包/45-AI编程文档就绪审查与补齐清单.md": "c57fd54e71ced4b7f5cc6a3b594290b2265e7590abb121f3a0d8e290938f603b",
+    "docs/设计包/30-产品设计追踪数据.json": "5dbbe41a1e6853cfca898094a5e98ed929c9e4e8fe0c2d49da4cf213363b2fa8",
+    "docs/设计包/31-完整产品交互原型.html": "59a4d8948c86292bb3562218d534ae37154fb8d6317bcfd97883dfc98e7e5cbe"
+  },
+  "completionScope": "NINE_DEVELOPMENT_DOCUMENTS_AND_STATIC_CONTRACT_FIXTURES_ONLY",
+  "productReady": false,
+  "commercialReleaseCleared": false,
+  "implementationSpecStatus": "DESIGN_CONTRACTS_GENERATED_BASE_ADOPTION_PENDING",
+  "updatedAt": "2026-09-11T19:11:37.570805+00:00",
+  "verifiedAt": "2026-09-11T19:12:07.004030+00:00"
+}

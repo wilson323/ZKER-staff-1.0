@@ -1,0 +1,3594 @@
+{
+  "scope": "TECHNICAL_DESIGN_DELIVERY_ONLY",
+  "checkedAt": "2026-09-12T00:26:01.425346+00:00",
+  "status": "PASS",
+  "checksPassed": 878,
+  "checkCount": 878,
+  "failures": [],
+  "counts": {
+    "markdownDocuments": 8,
+    "interactiveDiagrams": 1,
+    "requirements": 173,
+    "domains": 21,
+    "pages": 22,
+    "commandGroups": 31,
+    "productAcceptanceCases": 72,
+    "productAcceptanceCasesRun": 0
+  },
+  "artifacts": [
+    {
+      "path": "docs/设计包/36-开源底座源码研究与技术选型.md",
+      "sha256": "be068d6b39577c2ffaf5e79f59c23db1ccfb526dee8b7de8fc5b3406e604d6bc",
+      "bytes": 48934
+    },
+    {
+      "path": "docs/设计包/37-技术架构总设计与决策.md",
+      "sha256": "a31248b8ccd43489bbf39ef35fef88c1e3ee3d475550ee1490b7fd5c53f3dd6e",
+      "bytes": 14038
+    },
+    {
+      "path": "docs/设计包/38-模块边界与前端工程设计.md",
+      "sha256": "c47927a2c1ba70e712a9d75e06f22b21807ac13c1df32cb51a43da1c49377544",
+      "bytes": 11027
+    },
+    {
+      "path": "docs/设计包/39-数据存储与事务一致性设计.md",
+      "sha256": "6fb80fc33ac6849027d115e98010387e26bfdbf23516b5348e14dfe43da79550",
+      "bytes": 11408
+    },
+    {
+      "path": "docs/设计包/40-接口事件与集成技术设计.md",
+      "sha256": "d11ac970ce1459c340deb4fb0a84787b24d630b310ff0feb9b1717d143869486",
+      "bytes": 13148
+    },
+    {
+      "path": "docs/设计包/41-AI运行知识分析与安全设计.md",
+      "sha256": "5299f150b56c75e279361f41c8a33736db9afc52e16831d8d54449ed299ed72c",
+      "bytes": 13005
+    },
+    {
+      "path": "docs/设计包/42-部署运维与非功能设计.md",
+      "sha256": "4506b95b093e5484d86976bbbb4eb7b52187927a706fcfd1822224758d6d5076",
+      "bytes": 8529
+    },
+    {
+      "path": "docs/设计包/43-技术实施路线与验证矩阵.md",
+      "sha256": "0e02380f968702f842a81744a68316fc2d742aed2143c42a7af477c850f170a3",
+      "bytes": 8440
+    },
+    {
+      "path": "docs/设计包/44-技术架构交互图.html",
+      "sha256": "2d306f81e493018a85b1fb5525686a422595dc4f4181f177535040ab83bc1dc7",
+      "bytes": 712424
+    },
+    {
+      "path": "docs/设计包/44-技术架构图.architecture.json",
+      "sha256": "51a667b959b2ccae7b9893017fb909e7e8d022df7963d1c77c7c1505eb4a64d2",
+      "bytes": 4703
+    },
+    {
+      "path": "validation/technical-design-map.json",
+      "sha256": "019fe39d59c709054071e50c75600e9984a462c7de138cfd80cf20bbbf15578f",
+      "bytes": 198251
+    }
+  ],
+  "checks": [
+    {
+      "name": "36-开源底座源码研究与技术选型.md nonempty UTF8",
+      "pass": true
+    },
+    {
+      "name": "36-开源底座源码研究与技术选型.md balanced code fences",
+      "pass": true
+    },
+    {
+      "name": "36-开源底座源码研究与技术选型.md no unfinished template",
+      "pass": true
+    },
+    {
+      "name": "36-开源底座源码研究与技术选型.md reference yd-root",
+      "pass": true
+    },
+    {
+      "name": "36-开源底座源码研究与技术选型.md reference yd-bom",
+      "pass": true
+    },
+    {
+      "name": "36-开源底座源码研究与技术选型.md reference yd-ai-pom",
+      "pass": true
+    },
+    {
+      "name": "36-开源底座源码研究与技术选型.md reference flowable8-release",
+      "pass": true
+    },
+    {
+      "name": "36-开源底座源码研究与技术选型.md reference yd-mysql",
+      "pass": true
+    },
+    {
+      "name": "36-开源底座源码研究与技术选型.md reference yd-pg",
+      "pass": true
+    },
+    {
+      "name": "36-开源底座源码研究与技术选型.md reference yd-bpm-doc",
+      "pass": true
+    },
+    {
+      "name": "36-开源底座源码研究与技术选型.md reference yd-ai-doc",
+      "pass": true
+    },
+    {
+      "name": "36-开源底座源码研究与技术选型.md reference ui-lock",
+      "pass": true
+    },
+    {
+      "name": "36-开源底座源码研究与技术选型.md reference gantt914",
+      "pass": true
+    },
+    {
+      "name": "36-开源底座源码研究与技术选型.md reference tinyflow126",
+      "pass": true
+    },
+    {
+      "name": "36-开源底座源码研究与技术选型.md reference yd-file",
+      "pass": true
+    },
+    {
+      "name": "36-开源底座源码研究与技术选型.md reference yd-chat",
+      "pass": true
+    },
+    {
+      "name": "36-开源底座源码研究与技术选型.md reference ra-sql",
+      "pass": true
+    },
+    {
+      "name": "36-开源底座源码研究与技术选型.md reference ra-docx-license",
+      "pass": true
+    },
+    {
+      "name": "36-开源底座源码研究与技术选型.md reference ra-pdf-license",
+      "pass": true
+    },
+    {
+      "name": "36-开源底座源码研究与技术选型.md reference ra-xlsx-license",
+      "pass": true
+    },
+    {
+      "name": "36-开源底座源码研究与技术选型.md reference flowable7-release",
+      "pass": true
+    },
+    {
+      "name": "36-开源底座源码研究与技术选型.md reference plus-root",
+      "pass": true
+    },
+    {
+      "name": "36-开源底座源码研究与技术选型.md reference plus-snail",
+      "pass": true
+    },
+    {
+      "name": "36-开源底座源码研究与技术选型.md reference yd-commit",
+      "pass": true
+    },
+    {
+      "name": "36-开源底座源码研究与技术选型.md reference ui-commit",
+      "pass": true
+    },
+    {
+      "name": "36-开源底座源码研究与技术选型.md reference ra-commit",
+      "pass": true
+    },
+    {
+      "name": "36-开源底座源码研究与技术选型.md reference admin-commit",
+      "pass": true
+    },
+    {
+      "name": "36-开源底座源码研究与技术选型.md reference web-commit",
+      "pass": true
+    },
+    {
+      "name": "36-开源底座源码研究与技术选型.md reference plus-commit",
+      "pass": true
+    },
+    {
+      "name": "36-开源底座源码研究与技术选型.md reference plusui-commit",
+      "pass": true
+    },
+    {
+      "name": "36-开源底座源码研究与技术选型.md reference yd-root",
+      "pass": true
+    },
+    {
+      "name": "36-开源底座源码研究与技术选型.md reference yd-bpm-pom",
+      "pass": true
+    },
+    {
+      "name": "36-开源底座源码研究与技术选型.md reference yd-ai-pom",
+      "pass": true
+    },
+    {
+      "name": "36-开源底座源码研究与技术选型.md reference ui-package",
+      "pass": true
+    },
+    {
+      "name": "36-开源底座源码研究与技术选型.md reference ra-root",
+      "pass": true
+    },
+    {
+      "name": "36-开源底座源码研究与技术选型.md reference ra-chat-pom",
+      "pass": true
+    },
+    {
+      "name": "36-开源底座源码研究与技术选型.md reference ra-aiflow-pom",
+      "pass": true
+    },
+    {
+      "name": "36-开源底座源码研究与技术选型.md reference admin-catalog",
+      "pass": true
+    },
+    {
+      "name": "36-开源底座源码研究与技术选型.md reference web-package",
+      "pass": true
+    },
+    {
+      "name": "36-开源底座源码研究与技术选型.md reference plus-root",
+      "pass": true
+    },
+    {
+      "name": "36-开源底座源码研究与技术选型.md reference plus-workflow-pom",
+      "pass": true
+    },
+    {
+      "name": "36-开源底座源码研究与技术选型.md reference plusui-package",
+      "pass": true
+    },
+    {
+      "name": "36-开源底座源码研究与技术选型.md reference yd08-root",
+      "pass": true
+    },
+    {
+      "name": "36-开源底座源码研究与技术选型.md reference yd08-bom",
+      "pass": true
+    },
+    {
+      "name": "36-开源底座源码研究与技术选型.md reference yd08-ai",
+      "pass": true
+    },
+    {
+      "name": "36-开源底座源码研究与技术选型.md reference yd07-root",
+      "pass": true
+    },
+    {
+      "name": "36-开源底座源码研究与技术选型.md reference yd07-bom",
+      "pass": true
+    },
+    {
+      "name": "36-开源底座源码研究与技术选型.md reference yd07-ai",
+      "pass": true
+    },
+    {
+      "name": "36-开源底座源码研究与技术选型.md reference springai-pom",
+      "pass": true
+    },
+    {
+      "name": "36-开源底座源码研究与技术选型.md reference flowable7-release",
+      "pass": true
+    },
+    {
+      "name": "36-开源底座源码研究与技术选型.md reference yd-ai-doc",
+      "pass": true
+    },
+    {
+      "name": "36-开源底座源码研究与技术选型.md reference yd-task-controller",
+      "pass": true
+    },
+    {
+      "name": "36-开源底座源码研究与技术选型.md reference yd-task-service",
+      "pass": true
+    },
+    {
+      "name": "36-开源底座源码研究与技术选型.md reference yd-instance",
+      "pass": true
+    },
+    {
+      "name": "36-开源底座源码研究与技术选型.md reference ui-bpm",
+      "pass": true
+    },
+    {
+      "name": "36-开源底座源码研究与技术选型.md reference ui-designer",
+      "pass": true
+    },
+    {
+      "name": "36-开源底座源码研究与技术选型.md reference yd-role",
+      "pass": true
+    },
+    {
+      "name": "36-开源底座源码研究与技术选型.md reference yd-role-service",
+      "pass": true
+    },
+    {
+      "name": "36-开源底座源码研究与技术选型.md reference yd-conversation",
+      "pass": true
+    },
+    {
+      "name": "36-开源底座源码研究与技术选型.md reference yd-chat",
+      "pass": true
+    },
+    {
+      "name": "36-开源底座源码研究与技术选型.md reference yd-chat",
+      "pass": true
+    },
+    {
+      "name": "36-开源底座源码研究与技术选型.md reference yd-file",
+      "pass": true
+    },
+    {
+      "name": "36-开源底座源码研究与技术选型.md reference yd-chat",
+      "pass": true
+    },
+    {
+      "name": "36-开源底座源码研究与技术选型.md reference yd-event",
+      "pass": true
+    },
+    {
+      "name": "36-开源底座源码研究与技术选型.md reference yd-task-service",
+      "pass": true
+    },
+    {
+      "name": "36-开源底座源码研究与技术选型.md reference ui-task-api",
+      "pass": true
+    },
+    {
+      "name": "36-开源底座源码研究与技术选型.md reference yd-task-controller",
+      "pass": true
+    },
+    {
+      "name": "36-开源底座源码研究与技术选型.md reference ui-chat-api",
+      "pass": true
+    },
+    {
+      "name": "36-开源底座源码研究与技术选型.md reference ui-task-api",
+      "pass": true
+    },
+    {
+      "name": "36-开源底座源码研究与技术选型.md reference yd-task-controller",
+      "pass": true
+    },
+    {
+      "name": "36-开源底座源码研究与技术选型.md reference ui-package",
+      "pass": true
+    },
+    {
+      "name": "36-开源底座源码研究与技术选型.md reference ui-lock",
+      "pass": true
+    },
+    {
+      "name": "36-开源底座源码研究与技术选型.md reference yd-quick",
+      "pass": true
+    },
+    {
+      "name": "36-开源底座源码研究与技术选型.md reference yd-sql-doc",
+      "pass": true
+    },
+    {
+      "name": "36-开源底座源码研究与技术选型.md reference yd-factory",
+      "pass": true
+    },
+    {
+      "name": "36-开源底座源码研究与技术选型.md reference yd-bpm-doc",
+      "pass": true
+    },
+    {
+      "name": "36-开源底座源码研究与技术选型.md reference yd-ai-doc",
+      "pass": true
+    },
+    {
+      "name": "36-开源底座源码研究与技术选型.md reference yd-factory",
+      "pass": true
+    },
+    {
+      "name": "36-开源底座源码研究与技术选型.md reference yd-ai-pom",
+      "pass": true
+    },
+    {
+      "name": "36-开源底座源码研究与技术选型.md reference yd-factory",
+      "pass": true
+    },
+    {
+      "name": "36-开源底座源码研究与技术选型.md reference springai-pom",
+      "pass": true
+    },
+    {
+      "name": "36-开源底座源码研究与技术选型.md reference ra-task-controller",
+      "pass": true
+    },
+    {
+      "name": "36-开源底座源码研究与技术选型.md reference ra-task-service",
+      "pass": true
+    },
+    {
+      "name": "36-开源底座源码研究与技术选型.md reference ra-agent-controller",
+      "pass": true
+    },
+    {
+      "name": "36-开源底座源码研究与技术选型.md reference ra-agent-service",
+      "pass": true
+    },
+    {
+      "name": "36-开源底座源码研究与技术选型.md reference ra-mcp",
+      "pass": true
+    },
+    {
+      "name": "36-开源底座源码研究与技术选型.md reference ra-graph",
+      "pass": true
+    },
+    {
+      "name": "36-开源底座源码研究与技术选型.md reference ra-agent-service",
+      "pass": true
+    },
+    {
+      "name": "36-开源底座源码研究与技术选型.md reference ra-task-controller",
+      "pass": true
+    },
+    {
+      "name": "36-开源底座源码研究与技术选型.md reference admin-package",
+      "pass": true
+    },
+    {
+      "name": "36-开源底座源码研究与技术选型.md reference admin-catalog",
+      "pass": true
+    },
+    {
+      "name": "36-开源底座源码研究与技术选型.md reference web-package",
+      "pass": true
+    },
+    {
+      "name": "36-开源底座源码研究与技术选型.md reference admin-task-api",
+      "pass": true
+    },
+    {
+      "name": "36-开源底座源码研究与技术选型.md reference ra-task-controller",
+      "pass": true
+    },
+    {
+      "name": "36-开源底座源码研究与技术选型.md reference ra-docx-license",
+      "pass": true
+    },
+    {
+      "name": "36-开源底座源码研究与技术选型.md reference ra-pdf-license",
+      "pass": true
+    },
+    {
+      "name": "36-开源底座源码研究与技术选型.md reference ra-xlsx-license",
+      "pass": true
+    },
+    {
+      "name": "36-开源底座源码研究与技术选型.md reference ra-release21",
+      "pass": true
+    },
+    {
+      "name": "36-开源底座源码研究与技术选型.md reference ra-release31",
+      "pass": true
+    },
+    {
+      "name": "36-开源底座源码研究与技术选型.md reference ra-sql",
+      "pass": true
+    },
+    {
+      "name": "36-开源底座源码研究与技术选型.md reference ra-mcp-sql",
+      "pass": true
+    },
+    {
+      "name": "36-开源底座源码研究与技术选型.md reference plus-root",
+      "pass": true
+    },
+    {
+      "name": "36-开源底座源码研究与技术选型.md reference plus-workflow-pom",
+      "pass": true
+    },
+    {
+      "name": "36-开源底座源码研究与技术选型.md reference warm182",
+      "pass": true
+    },
+    {
+      "name": "36-开源底座源码研究与技术选型.md reference warm189",
+      "pass": true
+    },
+    {
+      "name": "36-开源底座源码研究与技术选型.md reference plus-ai-pom",
+      "pass": true
+    },
+    {
+      "name": "36-开源底座源码研究与技术选型.md reference plus-snail-pom",
+      "pass": true
+    },
+    {
+      "name": "36-开源底座源码研究与技术选型.md reference plus-snail",
+      "pass": true
+    },
+    {
+      "name": "36-开源底座源码研究与技术选型.md reference yd-license",
+      "pass": true
+    },
+    {
+      "name": "36-开源底座源码研究与技术选型.md reference ui-license",
+      "pass": true
+    },
+    {
+      "name": "36-开源底座源码研究与技术选型.md reference ra-license",
+      "pass": true
+    },
+    {
+      "name": "36-开源底座源码研究与技术选型.md reference admin-license",
+      "pass": true
+    },
+    {
+      "name": "36-开源底座源码研究与技术选型.md reference web-license",
+      "pass": true
+    },
+    {
+      "name": "36-开源底座源码研究与技术选型.md reference plus-license",
+      "pass": true
+    },
+    {
+      "name": "36-开源底座源码研究与技术选型.md reference plusui-license",
+      "pass": true
+    },
+    {
+      "name": "36-开源底座源码研究与技术选型.md reference flowable-license",
+      "pass": true
+    },
+    {
+      "name": "36-开源底座源码研究与技术选型.md reference springai-pom",
+      "pass": true
+    },
+    {
+      "name": "36-开源底座源码研究与技术选型.md reference tinyflow126",
+      "pass": true
+    },
+    {
+      "name": "36-开源底座源码研究与技术选型.md reference ui-tinyflow",
+      "pass": true
+    },
+    {
+      "name": "36-开源底座源码研究与技术选型.md reference tinyflow-ui-license",
+      "pass": true
+    },
+    {
+      "name": "36-开源底座源码研究与技术选型.md reference bpmn-license",
+      "pass": true
+    },
+    {
+      "name": "36-开源底座源码研究与技术选型.md reference gantt-migration",
+      "pass": true
+    },
+    {
+      "name": "36-开源底座源码研究与技术选型.md local link 25-从零开发最小工作量开源选型.md",
+      "pass": true
+    },
+    {
+      "name": "36-开源底座源码研究与技术选型.md local link 26-完整产品设计文档.md",
+      "pass": true
+    },
+    {
+      "name": "36-开源底座源码研究与技术选型.md local link 27-逻辑数据模型与接口契约.md",
+      "pass": true
+    },
+    {
+      "name": "36-开源底座源码研究与技术选型.md local link 34-任务执行工作台与权限分层设计.md",
+      "pass": true
+    },
+    {
+      "name": "36-开源底座源码研究与技术选型.md local link 35-全产品AI体验复核与改进.md",
+      "pass": true
+    },
+    {
+      "name": "36-开源底座源码研究与技术选型.md local link 34-任务执行工作台与权限分层设计.md",
+      "pass": true
+    },
+    {
+      "name": "36-开源底座源码研究与技术选型.md local link 28-开发分期与验收用例.md",
+      "pass": true
+    },
+    {
+      "name": "37-技术架构总设计与决策.md nonempty UTF8",
+      "pass": true
+    },
+    {
+      "name": "37-技术架构总设计与决策.md balanced code fences",
+      "pass": true
+    },
+    {
+      "name": "37-技术架构总设计与决策.md no unfinished template",
+      "pass": true
+    },
+    {
+      "name": "37-技术架构总设计与决策.md local link 36-开源底座源码研究与技术选型.md",
+      "pass": true
+    },
+    {
+      "name": "37-技术架构总设计与决策.md local link 38-模块边界与前端工程设计.md",
+      "pass": true
+    },
+    {
+      "name": "37-技术架构总设计与决策.md local link 39-数据存储与事务一致性设计.md",
+      "pass": true
+    },
+    {
+      "name": "37-技术架构总设计与决策.md local link 40-接口事件与集成技术设计.md",
+      "pass": true
+    },
+    {
+      "name": "37-技术架构总设计与决策.md local link 41-AI运行知识分析与安全设计.md",
+      "pass": true
+    },
+    {
+      "name": "37-技术架构总设计与决策.md local link 42-部署运维与非功能设计.md",
+      "pass": true
+    },
+    {
+      "name": "37-技术架构总设计与决策.md local link 43-技术实施路线与验证矩阵.md",
+      "pass": true
+    },
+    {
+      "name": "37-技术架构总设计与决策.md local link 44-技术架构交互图.html",
+      "pass": true
+    },
+    {
+      "name": "37-技术架构总设计与决策.md local link 26-完整产品设计文档.md",
+      "pass": true
+    },
+    {
+      "name": "37-技术架构总设计与决策.md local link 27-逻辑数据模型与接口契约.md",
+      "pass": true
+    },
+    {
+      "name": "37-技术架构总设计与决策.md local link 28-开发分期与验收用例.md",
+      "pass": true
+    },
+    {
+      "name": "37-技术架构总设计与决策.md local link 30-产品设计追踪数据.json",
+      "pass": true
+    },
+    {
+      "name": "37-技术架构总设计与决策.md local link 57-Agent运行框架最新源码研究.md",
+      "pass": true
+    },
+    {
+      "name": "37-技术架构总设计与决策.md local link 58-Agent技术架构与性能实施设计.md",
+      "pass": true
+    },
+    {
+      "name": "37-技术架构总设计与决策.md local link 59-智能体文章证据复核与全栈优化.md",
+      "pass": true
+    },
+    {
+      "name": "37-技术架构总设计与决策.md local link 60-最小技术方案与验证决策.md",
+      "pass": true
+    },
+    {
+      "name": "38-模块边界与前端工程设计.md nonempty UTF8",
+      "pass": true
+    },
+    {
+      "name": "38-模块边界与前端工程设计.md balanced code fences",
+      "pass": true
+    },
+    {
+      "name": "38-模块边界与前端工程设计.md no unfinished template",
+      "pass": true
+    },
+    {
+      "name": "38-模块边界与前端工程设计.md local link 37-技术架构总设计与决策.md",
+      "pass": true
+    },
+    {
+      "name": "38-模块边界与前端工程设计.md local link 31-完整产品交互原型.html",
+      "pass": true
+    },
+    {
+      "name": "39-数据存储与事务一致性设计.md nonempty UTF8",
+      "pass": true
+    },
+    {
+      "name": "39-数据存储与事务一致性设计.md balanced code fences",
+      "pass": true
+    },
+    {
+      "name": "39-数据存储与事务一致性设计.md no unfinished template",
+      "pass": true
+    },
+    {
+      "name": "39-数据存储与事务一致性设计.md local link 27-逻辑数据模型与接口契约.md",
+      "pass": true
+    },
+    {
+      "name": "40-接口事件与集成技术设计.md nonempty UTF8",
+      "pass": true
+    },
+    {
+      "name": "40-接口事件与集成技术设计.md balanced code fences",
+      "pass": true
+    },
+    {
+      "name": "40-接口事件与集成技术设计.md no unfinished template",
+      "pass": true
+    },
+    {
+      "name": "40-接口事件与集成技术设计.md local link 27-逻辑数据模型与接口契约.md",
+      "pass": true
+    },
+    {
+      "name": "40-接口事件与集成技术设计.md parse JSON example",
+      "pass": true
+    },
+    {
+      "name": "40-接口事件与集成技术设计.md parse JSON example",
+      "pass": true
+    },
+    {
+      "name": "40-接口事件与集成技术设计.md parse JSON example",
+      "pass": true
+    },
+    {
+      "name": "40-接口事件与集成技术设计.md parse JSON example",
+      "pass": true
+    },
+    {
+      "name": "41-AI运行知识分析与安全设计.md nonempty UTF8",
+      "pass": true
+    },
+    {
+      "name": "41-AI运行知识分析与安全设计.md balanced code fences",
+      "pass": true
+    },
+    {
+      "name": "41-AI运行知识分析与安全设计.md no unfinished template",
+      "pass": true
+    },
+    {
+      "name": "41-AI运行知识分析与安全设计.md local link 34-任务执行工作台与权限分层设计.md",
+      "pass": true
+    },
+    {
+      "name": "41-AI运行知识分析与安全设计.md local link 35-全产品AI体验复核与改进.md",
+      "pass": true
+    },
+    {
+      "name": "41-AI运行知识分析与安全设计.md local link 57-Agent运行框架最新源码研究.md",
+      "pass": true
+    },
+    {
+      "name": "41-AI运行知识分析与安全设计.md local link 58-Agent技术架构与性能实施设计.md",
+      "pass": true
+    },
+    {
+      "name": "41-AI运行知识分析与安全设计.md local link 55-知识库与记忆开源方案深度研究.md",
+      "pass": true
+    },
+    {
+      "name": "41-AI运行知识分析与安全设计.md local link 56-知识记忆技术栈与实施决策.md",
+      "pass": true
+    },
+    {
+      "name": "41-AI运行知识分析与安全设计.md local link 60-最小技术方案与验证决策.md",
+      "pass": true
+    },
+    {
+      "name": "42-部署运维与非功能设计.md nonempty UTF8",
+      "pass": true
+    },
+    {
+      "name": "42-部署运维与非功能设计.md balanced code fences",
+      "pass": true
+    },
+    {
+      "name": "42-部署运维与非功能设计.md no unfinished template",
+      "pass": true
+    },
+    {
+      "name": "43-技术实施路线与验证矩阵.md nonempty UTF8",
+      "pass": true
+    },
+    {
+      "name": "43-技术实施路线与验证矩阵.md balanced code fences",
+      "pass": true
+    },
+    {
+      "name": "43-技术实施路线与验证矩阵.md no unfinished template",
+      "pass": true
+    },
+    {
+      "name": "43-技术实施路线与验证矩阵.md local link ../../validation/technical-design-map.json",
+      "pass": true
+    },
+    {
+      "name": "43-技术实施路线与验证矩阵.md local link ../../validation/technical-design-map.json",
+      "pass": true
+    },
+    {
+      "name": "43-技术实施路线与验证矩阵.md local link ../../validation/technical-design-check.json",
+      "pass": true
+    },
+    {
+      "name": "43-技术实施路线与验证矩阵.md local link ../../validation/technical-architecture-delivery.json",
+      "pass": true
+    },
+    {
+      "name": "43-技术实施路线与验证矩阵.md local link ../../validation/technical-architecture-browser.json",
+      "pass": true
+    },
+    {
+      "name": "43-技术实施路线与验证矩阵.md local link ../../validation/technical-architecture-review.json",
+      "pass": true
+    },
+    {
+      "name": "43-技术实施路线与验证矩阵.md local link ../../validation/technical-source-check.json",
+      "pass": true
+    },
+    {
+      "name": "43-技术实施路线与验证矩阵.md local link ../../validation/technical-architecture-interaction.json",
+      "pass": true
+    },
+    {
+      "name": "43-技术实施路线与验证矩阵.md local link ../../validation/technical-architecture-export.svg",
+      "pass": true
+    },
+    {
+      "name": "43-技术实施路线与验证矩阵.md local link ../../validation/technical-architecture-export.png",
+      "pass": true
+    },
+    {
+      "name": "source projection SHA",
+      "pass": true
+    },
+    {
+      "name": "173 requirement entries",
+      "pass": true
+    },
+    {
+      "name": "all original IDs once",
+      "pass": true
+    },
+    {
+      "name": "21 domains identical",
+      "pass": true
+    },
+    {
+      "name": "22 pages identical",
+      "pass": true
+    },
+    {
+      "name": "31 commands complete",
+      "pass": true
+    },
+    {
+      "name": "WD-01 associations preserved",
+      "pass": true
+    },
+    {
+      "name": "WD-01 references resolve",
+      "pass": true
+    },
+    {
+      "name": "WD-01 no invented completion",
+      "pass": true
+    },
+    {
+      "name": "WD-02 associations preserved",
+      "pass": true
+    },
+    {
+      "name": "WD-02 references resolve",
+      "pass": true
+    },
+    {
+      "name": "WD-02 no invented completion",
+      "pass": true
+    },
+    {
+      "name": "WD-03 associations preserved",
+      "pass": true
+    },
+    {
+      "name": "WD-03 references resolve",
+      "pass": true
+    },
+    {
+      "name": "WD-03 no invented completion",
+      "pass": true
+    },
+    {
+      "name": "WD-04 associations preserved",
+      "pass": true
+    },
+    {
+      "name": "WD-04 references resolve",
+      "pass": true
+    },
+    {
+      "name": "WD-04 no invented completion",
+      "pass": true
+    },
+    {
+      "name": "WD-05 associations preserved",
+      "pass": true
+    },
+    {
+      "name": "WD-05 references resolve",
+      "pass": true
+    },
+    {
+      "name": "WD-05 no invented completion",
+      "pass": true
+    },
+    {
+      "name": "WD-06 associations preserved",
+      "pass": true
+    },
+    {
+      "name": "WD-06 references resolve",
+      "pass": true
+    },
+    {
+      "name": "WD-06 no invented completion",
+      "pass": true
+    },
+    {
+      "name": "HR-01 associations preserved",
+      "pass": true
+    },
+    {
+      "name": "HR-01 references resolve",
+      "pass": true
+    },
+    {
+      "name": "HR-01 no invented completion",
+      "pass": true
+    },
+    {
+      "name": "HR-02 associations preserved",
+      "pass": true
+    },
+    {
+      "name": "HR-02 references resolve",
+      "pass": true
+    },
+    {
+      "name": "HR-02 no invented completion",
+      "pass": true
+    },
+    {
+      "name": "HR-03 associations preserved",
+      "pass": true
+    },
+    {
+      "name": "HR-03 references resolve",
+      "pass": true
+    },
+    {
+      "name": "HR-03 no invented completion",
+      "pass": true
+    },
+    {
+      "name": "HR-04 associations preserved",
+      "pass": true
+    },
+    {
+      "name": "HR-04 references resolve",
+      "pass": true
+    },
+    {
+      "name": "HR-04 no invented completion",
+      "pass": true
+    },
+    {
+      "name": "HR-05 associations preserved",
+      "pass": true
+    },
+    {
+      "name": "HR-05 references resolve",
+      "pass": true
+    },
+    {
+      "name": "HR-05 no invented completion",
+      "pass": true
+    },
+    {
+      "name": "HR-06 associations preserved",
+      "pass": true
+    },
+    {
+      "name": "HR-06 references resolve",
+      "pass": true
+    },
+    {
+      "name": "HR-06 no invented completion",
+      "pass": true
+    },
+    {
+      "name": "NC-01 associations preserved",
+      "pass": true
+    },
+    {
+      "name": "NC-01 references resolve",
+      "pass": true
+    },
+    {
+      "name": "NC-01 no invented completion",
+      "pass": true
+    },
+    {
+      "name": "NC-02 associations preserved",
+      "pass": true
+    },
+    {
+      "name": "NC-02 references resolve",
+      "pass": true
+    },
+    {
+      "name": "NC-02 no invented completion",
+      "pass": true
+    },
+    {
+      "name": "NC-03 associations preserved",
+      "pass": true
+    },
+    {
+      "name": "NC-03 references resolve",
+      "pass": true
+    },
+    {
+      "name": "NC-03 no invented completion",
+      "pass": true
+    },
+    {
+      "name": "NC-04 associations preserved",
+      "pass": true
+    },
+    {
+      "name": "NC-04 references resolve",
+      "pass": true
+    },
+    {
+      "name": "NC-04 no invented completion",
+      "pass": true
+    },
+    {
+      "name": "NC-05 associations preserved",
+      "pass": true
+    },
+    {
+      "name": "NC-05 references resolve",
+      "pass": true
+    },
+    {
+      "name": "NC-05 no invented completion",
+      "pass": true
+    },
+    {
+      "name": "NC-06 associations preserved",
+      "pass": true
+    },
+    {
+      "name": "NC-06 references resolve",
+      "pass": true
+    },
+    {
+      "name": "NC-06 no invented completion",
+      "pass": true
+    },
+    {
+      "name": "NC-07 associations preserved",
+      "pass": true
+    },
+    {
+      "name": "NC-07 references resolve",
+      "pass": true
+    },
+    {
+      "name": "NC-07 no invented completion",
+      "pass": true
+    },
+    {
+      "name": "NC-08 associations preserved",
+      "pass": true
+    },
+    {
+      "name": "NC-08 references resolve",
+      "pass": true
+    },
+    {
+      "name": "NC-08 no invented completion",
+      "pass": true
+    },
+    {
+      "name": "AG-01 associations preserved",
+      "pass": true
+    },
+    {
+      "name": "AG-01 references resolve",
+      "pass": true
+    },
+    {
+      "name": "AG-01 no invented completion",
+      "pass": true
+    },
+    {
+      "name": "AG-02 associations preserved",
+      "pass": true
+    },
+    {
+      "name": "AG-02 references resolve",
+      "pass": true
+    },
+    {
+      "name": "AG-02 no invented completion",
+      "pass": true
+    },
+    {
+      "name": "AG-03 associations preserved",
+      "pass": true
+    },
+    {
+      "name": "AG-03 references resolve",
+      "pass": true
+    },
+    {
+      "name": "AG-03 no invented completion",
+      "pass": true
+    },
+    {
+      "name": "AG-04 associations preserved",
+      "pass": true
+    },
+    {
+      "name": "AG-04 references resolve",
+      "pass": true
+    },
+    {
+      "name": "AG-04 no invented completion",
+      "pass": true
+    },
+    {
+      "name": "AG-05 associations preserved",
+      "pass": true
+    },
+    {
+      "name": "AG-05 references resolve",
+      "pass": true
+    },
+    {
+      "name": "AG-05 no invented completion",
+      "pass": true
+    },
+    {
+      "name": "AG-06 associations preserved",
+      "pass": true
+    },
+    {
+      "name": "AG-06 references resolve",
+      "pass": true
+    },
+    {
+      "name": "AG-06 no invented completion",
+      "pass": true
+    },
+    {
+      "name": "AG-07 associations preserved",
+      "pass": true
+    },
+    {
+      "name": "AG-07 references resolve",
+      "pass": true
+    },
+    {
+      "name": "AG-07 no invented completion",
+      "pass": true
+    },
+    {
+      "name": "SK-01 associations preserved",
+      "pass": true
+    },
+    {
+      "name": "SK-01 references resolve",
+      "pass": true
+    },
+    {
+      "name": "SK-01 no invented completion",
+      "pass": true
+    },
+    {
+      "name": "SK-02 associations preserved",
+      "pass": true
+    },
+    {
+      "name": "SK-02 references resolve",
+      "pass": true
+    },
+    {
+      "name": "SK-02 no invented completion",
+      "pass": true
+    },
+    {
+      "name": "SK-03 associations preserved",
+      "pass": true
+    },
+    {
+      "name": "SK-03 references resolve",
+      "pass": true
+    },
+    {
+      "name": "SK-03 no invented completion",
+      "pass": true
+    },
+    {
+      "name": "SK-04 associations preserved",
+      "pass": true
+    },
+    {
+      "name": "SK-04 references resolve",
+      "pass": true
+    },
+    {
+      "name": "SK-04 no invented completion",
+      "pass": true
+    },
+    {
+      "name": "SK-05 associations preserved",
+      "pass": true
+    },
+    {
+      "name": "SK-05 references resolve",
+      "pass": true
+    },
+    {
+      "name": "SK-05 no invented completion",
+      "pass": true
+    },
+    {
+      "name": "SK-06 associations preserved",
+      "pass": true
+    },
+    {
+      "name": "SK-06 references resolve",
+      "pass": true
+    },
+    {
+      "name": "SK-06 no invented completion",
+      "pass": true
+    },
+    {
+      "name": "SK-07 associations preserved",
+      "pass": true
+    },
+    {
+      "name": "SK-07 references resolve",
+      "pass": true
+    },
+    {
+      "name": "SK-07 no invented completion",
+      "pass": true
+    },
+    {
+      "name": "CN-01 associations preserved",
+      "pass": true
+    },
+    {
+      "name": "CN-01 references resolve",
+      "pass": true
+    },
+    {
+      "name": "CN-01 no invented completion",
+      "pass": true
+    },
+    {
+      "name": "CN-02 associations preserved",
+      "pass": true
+    },
+    {
+      "name": "CN-02 references resolve",
+      "pass": true
+    },
+    {
+      "name": "CN-02 no invented completion",
+      "pass": true
+    },
+    {
+      "name": "CN-03 associations preserved",
+      "pass": true
+    },
+    {
+      "name": "CN-03 references resolve",
+      "pass": true
+    },
+    {
+      "name": "CN-03 no invented completion",
+      "pass": true
+    },
+    {
+      "name": "CN-04 associations preserved",
+      "pass": true
+    },
+    {
+      "name": "CN-04 references resolve",
+      "pass": true
+    },
+    {
+      "name": "CN-04 no invented completion",
+      "pass": true
+    },
+    {
+      "name": "CN-05 associations preserved",
+      "pass": true
+    },
+    {
+      "name": "CN-05 references resolve",
+      "pass": true
+    },
+    {
+      "name": "CN-05 no invented completion",
+      "pass": true
+    },
+    {
+      "name": "CN-06 associations preserved",
+      "pass": true
+    },
+    {
+      "name": "CN-06 references resolve",
+      "pass": true
+    },
+    {
+      "name": "CN-06 no invented completion",
+      "pass": true
+    },
+    {
+      "name": "CN-07 associations preserved",
+      "pass": true
+    },
+    {
+      "name": "CN-07 references resolve",
+      "pass": true
+    },
+    {
+      "name": "CN-07 no invented completion",
+      "pass": true
+    },
+    {
+      "name": "CN-08 associations preserved",
+      "pass": true
+    },
+    {
+      "name": "CN-08 references resolve",
+      "pass": true
+    },
+    {
+      "name": "CN-08 no invented completion",
+      "pass": true
+    },
+    {
+      "name": "CN-09 associations preserved",
+      "pass": true
+    },
+    {
+      "name": "CN-09 references resolve",
+      "pass": true
+    },
+    {
+      "name": "CN-09 no invented completion",
+      "pass": true
+    },
+    {
+      "name": "KB-01 associations preserved",
+      "pass": true
+    },
+    {
+      "name": "KB-01 references resolve",
+      "pass": true
+    },
+    {
+      "name": "KB-01 no invented completion",
+      "pass": true
+    },
+    {
+      "name": "KB-02 associations preserved",
+      "pass": true
+    },
+    {
+      "name": "KB-02 references resolve",
+      "pass": true
+    },
+    {
+      "name": "KB-02 no invented completion",
+      "pass": true
+    },
+    {
+      "name": "KB-03 associations preserved",
+      "pass": true
+    },
+    {
+      "name": "KB-03 references resolve",
+      "pass": true
+    },
+    {
+      "name": "KB-03 no invented completion",
+      "pass": true
+    },
+    {
+      "name": "KB-04 associations preserved",
+      "pass": true
+    },
+    {
+      "name": "KB-04 references resolve",
+      "pass": true
+    },
+    {
+      "name": "KB-04 no invented completion",
+      "pass": true
+    },
+    {
+      "name": "KB-05 associations preserved",
+      "pass": true
+    },
+    {
+      "name": "KB-05 references resolve",
+      "pass": true
+    },
+    {
+      "name": "KB-05 no invented completion",
+      "pass": true
+    },
+    {
+      "name": "KB-06 associations preserved",
+      "pass": true
+    },
+    {
+      "name": "KB-06 references resolve",
+      "pass": true
+    },
+    {
+      "name": "KB-06 no invented completion",
+      "pass": true
+    },
+    {
+      "name": "KB-07 associations preserved",
+      "pass": true
+    },
+    {
+      "name": "KB-07 references resolve",
+      "pass": true
+    },
+    {
+      "name": "KB-07 no invented completion",
+      "pass": true
+    },
+    {
+      "name": "MM-01 associations preserved",
+      "pass": true
+    },
+    {
+      "name": "MM-01 references resolve",
+      "pass": true
+    },
+    {
+      "name": "MM-01 no invented completion",
+      "pass": true
+    },
+    {
+      "name": "MM-02 associations preserved",
+      "pass": true
+    },
+    {
+      "name": "MM-02 references resolve",
+      "pass": true
+    },
+    {
+      "name": "MM-02 no invented completion",
+      "pass": true
+    },
+    {
+      "name": "MM-03 associations preserved",
+      "pass": true
+    },
+    {
+      "name": "MM-03 references resolve",
+      "pass": true
+    },
+    {
+      "name": "MM-03 no invented completion",
+      "pass": true
+    },
+    {
+      "name": "MM-04 associations preserved",
+      "pass": true
+    },
+    {
+      "name": "MM-04 references resolve",
+      "pass": true
+    },
+    {
+      "name": "MM-04 no invented completion",
+      "pass": true
+    },
+    {
+      "name": "MM-05 associations preserved",
+      "pass": true
+    },
+    {
+      "name": "MM-05 references resolve",
+      "pass": true
+    },
+    {
+      "name": "MM-05 no invented completion",
+      "pass": true
+    },
+    {
+      "name": "MM-06 associations preserved",
+      "pass": true
+    },
+    {
+      "name": "MM-06 references resolve",
+      "pass": true
+    },
+    {
+      "name": "MM-06 no invented completion",
+      "pass": true
+    },
+    {
+      "name": "MM-07 associations preserved",
+      "pass": true
+    },
+    {
+      "name": "MM-07 references resolve",
+      "pass": true
+    },
+    {
+      "name": "MM-07 no invented completion",
+      "pass": true
+    },
+    {
+      "name": "WS-01 associations preserved",
+      "pass": true
+    },
+    {
+      "name": "WS-01 references resolve",
+      "pass": true
+    },
+    {
+      "name": "WS-01 no invented completion",
+      "pass": true
+    },
+    {
+      "name": "WS-02 associations preserved",
+      "pass": true
+    },
+    {
+      "name": "WS-02 references resolve",
+      "pass": true
+    },
+    {
+      "name": "WS-02 no invented completion",
+      "pass": true
+    },
+    {
+      "name": "WS-03 associations preserved",
+      "pass": true
+    },
+    {
+      "name": "WS-03 references resolve",
+      "pass": true
+    },
+    {
+      "name": "WS-03 no invented completion",
+      "pass": true
+    },
+    {
+      "name": "WS-04 associations preserved",
+      "pass": true
+    },
+    {
+      "name": "WS-04 references resolve",
+      "pass": true
+    },
+    {
+      "name": "WS-04 no invented completion",
+      "pass": true
+    },
+    {
+      "name": "WS-05 associations preserved",
+      "pass": true
+    },
+    {
+      "name": "WS-05 references resolve",
+      "pass": true
+    },
+    {
+      "name": "WS-05 no invented completion",
+      "pass": true
+    },
+    {
+      "name": "WS-06 associations preserved",
+      "pass": true
+    },
+    {
+      "name": "WS-06 references resolve",
+      "pass": true
+    },
+    {
+      "name": "WS-06 no invented completion",
+      "pass": true
+    },
+    {
+      "name": "CV-01 associations preserved",
+      "pass": true
+    },
+    {
+      "name": "CV-01 references resolve",
+      "pass": true
+    },
+    {
+      "name": "CV-01 no invented completion",
+      "pass": true
+    },
+    {
+      "name": "CV-02 associations preserved",
+      "pass": true
+    },
+    {
+      "name": "CV-02 references resolve",
+      "pass": true
+    },
+    {
+      "name": "CV-02 no invented completion",
+      "pass": true
+    },
+    {
+      "name": "CV-03 associations preserved",
+      "pass": true
+    },
+    {
+      "name": "CV-03 references resolve",
+      "pass": true
+    },
+    {
+      "name": "CV-03 no invented completion",
+      "pass": true
+    },
+    {
+      "name": "CV-04 associations preserved",
+      "pass": true
+    },
+    {
+      "name": "CV-04 references resolve",
+      "pass": true
+    },
+    {
+      "name": "CV-04 no invented completion",
+      "pass": true
+    },
+    {
+      "name": "CV-05 associations preserved",
+      "pass": true
+    },
+    {
+      "name": "CV-05 references resolve",
+      "pass": true
+    },
+    {
+      "name": "CV-05 no invented completion",
+      "pass": true
+    },
+    {
+      "name": "CV-06 associations preserved",
+      "pass": true
+    },
+    {
+      "name": "CV-06 references resolve",
+      "pass": true
+    },
+    {
+      "name": "CV-06 no invented completion",
+      "pass": true
+    },
+    {
+      "name": "CV-07 associations preserved",
+      "pass": true
+    },
+    {
+      "name": "CV-07 references resolve",
+      "pass": true
+    },
+    {
+      "name": "CV-07 no invented completion",
+      "pass": true
+    },
+    {
+      "name": "TM-01 associations preserved",
+      "pass": true
+    },
+    {
+      "name": "TM-01 references resolve",
+      "pass": true
+    },
+    {
+      "name": "TM-01 no invented completion",
+      "pass": true
+    },
+    {
+      "name": "TM-02 associations preserved",
+      "pass": true
+    },
+    {
+      "name": "TM-02 references resolve",
+      "pass": true
+    },
+    {
+      "name": "TM-02 no invented completion",
+      "pass": true
+    },
+    {
+      "name": "TM-03 associations preserved",
+      "pass": true
+    },
+    {
+      "name": "TM-03 references resolve",
+      "pass": true
+    },
+    {
+      "name": "TM-03 no invented completion",
+      "pass": true
+    },
+    {
+      "name": "TM-04 associations preserved",
+      "pass": true
+    },
+    {
+      "name": "TM-04 references resolve",
+      "pass": true
+    },
+    {
+      "name": "TM-04 no invented completion",
+      "pass": true
+    },
+    {
+      "name": "TM-05 associations preserved",
+      "pass": true
+    },
+    {
+      "name": "TM-05 references resolve",
+      "pass": true
+    },
+    {
+      "name": "TM-05 no invented completion",
+      "pass": true
+    },
+    {
+      "name": "TM-06 associations preserved",
+      "pass": true
+    },
+    {
+      "name": "TM-06 references resolve",
+      "pass": true
+    },
+    {
+      "name": "TM-06 no invented completion",
+      "pass": true
+    },
+    {
+      "name": "FL-01 associations preserved",
+      "pass": true
+    },
+    {
+      "name": "FL-01 references resolve",
+      "pass": true
+    },
+    {
+      "name": "FL-01 no invented completion",
+      "pass": true
+    },
+    {
+      "name": "FL-02 associations preserved",
+      "pass": true
+    },
+    {
+      "name": "FL-02 references resolve",
+      "pass": true
+    },
+    {
+      "name": "FL-02 no invented completion",
+      "pass": true
+    },
+    {
+      "name": "FL-03 associations preserved",
+      "pass": true
+    },
+    {
+      "name": "FL-03 references resolve",
+      "pass": true
+    },
+    {
+      "name": "FL-03 no invented completion",
+      "pass": true
+    },
+    {
+      "name": "FL-04 associations preserved",
+      "pass": true
+    },
+    {
+      "name": "FL-04 references resolve",
+      "pass": true
+    },
+    {
+      "name": "FL-04 no invented completion",
+      "pass": true
+    },
+    {
+      "name": "FL-05 associations preserved",
+      "pass": true
+    },
+    {
+      "name": "FL-05 references resolve",
+      "pass": true
+    },
+    {
+      "name": "FL-05 no invented completion",
+      "pass": true
+    },
+    {
+      "name": "FL-06 associations preserved",
+      "pass": true
+    },
+    {
+      "name": "FL-06 references resolve",
+      "pass": true
+    },
+    {
+      "name": "FL-06 no invented completion",
+      "pass": true
+    },
+    {
+      "name": "AT-01 associations preserved",
+      "pass": true
+    },
+    {
+      "name": "AT-01 references resolve",
+      "pass": true
+    },
+    {
+      "name": "AT-01 no invented completion",
+      "pass": true
+    },
+    {
+      "name": "AT-02 associations preserved",
+      "pass": true
+    },
+    {
+      "name": "AT-02 references resolve",
+      "pass": true
+    },
+    {
+      "name": "AT-02 no invented completion",
+      "pass": true
+    },
+    {
+      "name": "AT-03 associations preserved",
+      "pass": true
+    },
+    {
+      "name": "AT-03 references resolve",
+      "pass": true
+    },
+    {
+      "name": "AT-03 no invented completion",
+      "pass": true
+    },
+    {
+      "name": "AT-04 associations preserved",
+      "pass": true
+    },
+    {
+      "name": "AT-04 references resolve",
+      "pass": true
+    },
+    {
+      "name": "AT-04 no invented completion",
+      "pass": true
+    },
+    {
+      "name": "AT-05 associations preserved",
+      "pass": true
+    },
+    {
+      "name": "AT-05 references resolve",
+      "pass": true
+    },
+    {
+      "name": "AT-05 no invented completion",
+      "pass": true
+    },
+    {
+      "name": "AT-06 associations preserved",
+      "pass": true
+    },
+    {
+      "name": "AT-06 references resolve",
+      "pass": true
+    },
+    {
+      "name": "AT-06 no invented completion",
+      "pass": true
+    },
+    {
+      "name": "IM-01 associations preserved",
+      "pass": true
+    },
+    {
+      "name": "IM-01 references resolve",
+      "pass": true
+    },
+    {
+      "name": "IM-01 no invented completion",
+      "pass": true
+    },
+    {
+      "name": "IM-02 associations preserved",
+      "pass": true
+    },
+    {
+      "name": "IM-02 references resolve",
+      "pass": true
+    },
+    {
+      "name": "IM-02 no invented completion",
+      "pass": true
+    },
+    {
+      "name": "IM-03 associations preserved",
+      "pass": true
+    },
+    {
+      "name": "IM-03 references resolve",
+      "pass": true
+    },
+    {
+      "name": "IM-03 no invented completion",
+      "pass": true
+    },
+    {
+      "name": "IM-04 associations preserved",
+      "pass": true
+    },
+    {
+      "name": "IM-04 references resolve",
+      "pass": true
+    },
+    {
+      "name": "IM-04 no invented completion",
+      "pass": true
+    },
+    {
+      "name": "IM-05 associations preserved",
+      "pass": true
+    },
+    {
+      "name": "IM-05 references resolve",
+      "pass": true
+    },
+    {
+      "name": "IM-05 no invented completion",
+      "pass": true
+    },
+    {
+      "name": "IM-06 associations preserved",
+      "pass": true
+    },
+    {
+      "name": "IM-06 references resolve",
+      "pass": true
+    },
+    {
+      "name": "IM-06 no invented completion",
+      "pass": true
+    },
+    {
+      "name": "RS-01 associations preserved",
+      "pass": true
+    },
+    {
+      "name": "RS-01 references resolve",
+      "pass": true
+    },
+    {
+      "name": "RS-01 no invented completion",
+      "pass": true
+    },
+    {
+      "name": "RS-02 associations preserved",
+      "pass": true
+    },
+    {
+      "name": "RS-02 references resolve",
+      "pass": true
+    },
+    {
+      "name": "RS-02 no invented completion",
+      "pass": true
+    },
+    {
+      "name": "RS-03 associations preserved",
+      "pass": true
+    },
+    {
+      "name": "RS-03 references resolve",
+      "pass": true
+    },
+    {
+      "name": "RS-03 no invented completion",
+      "pass": true
+    },
+    {
+      "name": "RS-04 associations preserved",
+      "pass": true
+    },
+    {
+      "name": "RS-04 references resolve",
+      "pass": true
+    },
+    {
+      "name": "RS-04 no invented completion",
+      "pass": true
+    },
+    {
+      "name": "RS-05 associations preserved",
+      "pass": true
+    },
+    {
+      "name": "RS-05 references resolve",
+      "pass": true
+    },
+    {
+      "name": "RS-05 no invented completion",
+      "pass": true
+    },
+    {
+      "name": "RS-06 associations preserved",
+      "pass": true
+    },
+    {
+      "name": "RS-06 references resolve",
+      "pass": true
+    },
+    {
+      "name": "RS-06 no invented completion",
+      "pass": true
+    },
+    {
+      "name": "RS-07 associations preserved",
+      "pass": true
+    },
+    {
+      "name": "RS-07 references resolve",
+      "pass": true
+    },
+    {
+      "name": "RS-07 no invented completion",
+      "pass": true
+    },
+    {
+      "name": "SD-01 associations preserved",
+      "pass": true
+    },
+    {
+      "name": "SD-01 references resolve",
+      "pass": true
+    },
+    {
+      "name": "SD-01 no invented completion",
+      "pass": true
+    },
+    {
+      "name": "SD-02 associations preserved",
+      "pass": true
+    },
+    {
+      "name": "SD-02 references resolve",
+      "pass": true
+    },
+    {
+      "name": "SD-02 no invented completion",
+      "pass": true
+    },
+    {
+      "name": "SD-03 associations preserved",
+      "pass": true
+    },
+    {
+      "name": "SD-03 references resolve",
+      "pass": true
+    },
+    {
+      "name": "SD-03 no invented completion",
+      "pass": true
+    },
+    {
+      "name": "SD-04 associations preserved",
+      "pass": true
+    },
+    {
+      "name": "SD-04 references resolve",
+      "pass": true
+    },
+    {
+      "name": "SD-04 no invented completion",
+      "pass": true
+    },
+    {
+      "name": "SD-05 associations preserved",
+      "pass": true
+    },
+    {
+      "name": "SD-05 references resolve",
+      "pass": true
+    },
+    {
+      "name": "SD-05 no invented completion",
+      "pass": true
+    },
+    {
+      "name": "SD-06 associations preserved",
+      "pass": true
+    },
+    {
+      "name": "SD-06 references resolve",
+      "pass": true
+    },
+    {
+      "name": "SD-06 no invented completion",
+      "pass": true
+    },
+    {
+      "name": "AD-01 associations preserved",
+      "pass": true
+    },
+    {
+      "name": "AD-01 references resolve",
+      "pass": true
+    },
+    {
+      "name": "AD-01 no invented completion",
+      "pass": true
+    },
+    {
+      "name": "AD-02 associations preserved",
+      "pass": true
+    },
+    {
+      "name": "AD-02 references resolve",
+      "pass": true
+    },
+    {
+      "name": "AD-02 no invented completion",
+      "pass": true
+    },
+    {
+      "name": "AD-03 associations preserved",
+      "pass": true
+    },
+    {
+      "name": "AD-03 references resolve",
+      "pass": true
+    },
+    {
+      "name": "AD-03 no invented completion",
+      "pass": true
+    },
+    {
+      "name": "AD-04 associations preserved",
+      "pass": true
+    },
+    {
+      "name": "AD-04 references resolve",
+      "pass": true
+    },
+    {
+      "name": "AD-04 no invented completion",
+      "pass": true
+    },
+    {
+      "name": "AD-05 associations preserved",
+      "pass": true
+    },
+    {
+      "name": "AD-05 references resolve",
+      "pass": true
+    },
+    {
+      "name": "AD-05 no invented completion",
+      "pass": true
+    },
+    {
+      "name": "AD-06 associations preserved",
+      "pass": true
+    },
+    {
+      "name": "AD-06 references resolve",
+      "pass": true
+    },
+    {
+      "name": "AD-06 no invented completion",
+      "pass": true
+    },
+    {
+      "name": "AD-07 associations preserved",
+      "pass": true
+    },
+    {
+      "name": "AD-07 references resolve",
+      "pass": true
+    },
+    {
+      "name": "AD-07 no invented completion",
+      "pass": true
+    },
+    {
+      "name": "AD-08 associations preserved",
+      "pass": true
+    },
+    {
+      "name": "AD-08 references resolve",
+      "pass": true
+    },
+    {
+      "name": "AD-08 no invented completion",
+      "pass": true
+    },
+    {
+      "name": "OP-01 associations preserved",
+      "pass": true
+    },
+    {
+      "name": "OP-01 references resolve",
+      "pass": true
+    },
+    {
+      "name": "OP-01 no invented completion",
+      "pass": true
+    },
+    {
+      "name": "OP-02 associations preserved",
+      "pass": true
+    },
+    {
+      "name": "OP-02 references resolve",
+      "pass": true
+    },
+    {
+      "name": "OP-02 no invented completion",
+      "pass": true
+    },
+    {
+      "name": "OP-03 associations preserved",
+      "pass": true
+    },
+    {
+      "name": "OP-03 references resolve",
+      "pass": true
+    },
+    {
+      "name": "OP-03 no invented completion",
+      "pass": true
+    },
+    {
+      "name": "OP-04 associations preserved",
+      "pass": true
+    },
+    {
+      "name": "OP-04 references resolve",
+      "pass": true
+    },
+    {
+      "name": "OP-04 no invented completion",
+      "pass": true
+    },
+    {
+      "name": "OP-05 associations preserved",
+      "pass": true
+    },
+    {
+      "name": "OP-05 references resolve",
+      "pass": true
+    },
+    {
+      "name": "OP-05 no invented completion",
+      "pass": true
+    },
+    {
+      "name": "OP-06 associations preserved",
+      "pass": true
+    },
+    {
+      "name": "OP-06 references resolve",
+      "pass": true
+    },
+    {
+      "name": "OP-06 no invented completion",
+      "pass": true
+    },
+    {
+      "name": "OP-07 associations preserved",
+      "pass": true
+    },
+    {
+      "name": "OP-07 references resolve",
+      "pass": true
+    },
+    {
+      "name": "OP-07 no invented completion",
+      "pass": true
+    },
+    {
+      "name": "OP-08 associations preserved",
+      "pass": true
+    },
+    {
+      "name": "OP-08 references resolve",
+      "pass": true
+    },
+    {
+      "name": "OP-08 no invented completion",
+      "pass": true
+    },
+    {
+      "name": "HC-01 associations preserved",
+      "pass": true
+    },
+    {
+      "name": "HC-01 references resolve",
+      "pass": true
+    },
+    {
+      "name": "HC-01 no invented completion",
+      "pass": true
+    },
+    {
+      "name": "HC-02 associations preserved",
+      "pass": true
+    },
+    {
+      "name": "HC-02 references resolve",
+      "pass": true
+    },
+    {
+      "name": "HC-02 no invented completion",
+      "pass": true
+    },
+    {
+      "name": "HC-03 associations preserved",
+      "pass": true
+    },
+    {
+      "name": "HC-03 references resolve",
+      "pass": true
+    },
+    {
+      "name": "HC-03 no invented completion",
+      "pass": true
+    },
+    {
+      "name": "HC-04 associations preserved",
+      "pass": true
+    },
+    {
+      "name": "HC-04 references resolve",
+      "pass": true
+    },
+    {
+      "name": "HC-04 no invented completion",
+      "pass": true
+    },
+    {
+      "name": "HC-05 associations preserved",
+      "pass": true
+    },
+    {
+      "name": "HC-05 references resolve",
+      "pass": true
+    },
+    {
+      "name": "HC-05 no invented completion",
+      "pass": true
+    },
+    {
+      "name": "HC-06 associations preserved",
+      "pass": true
+    },
+    {
+      "name": "HC-06 references resolve",
+      "pass": true
+    },
+    {
+      "name": "HC-06 no invented completion",
+      "pass": true
+    },
+    {
+      "name": "HC-07 associations preserved",
+      "pass": true
+    },
+    {
+      "name": "HC-07 references resolve",
+      "pass": true
+    },
+    {
+      "name": "HC-07 no invented completion",
+      "pass": true
+    },
+    {
+      "name": "HC-08 associations preserved",
+      "pass": true
+    },
+    {
+      "name": "HC-08 references resolve",
+      "pass": true
+    },
+    {
+      "name": "HC-08 no invented completion",
+      "pass": true
+    },
+    {
+      "name": "CX-01 associations preserved",
+      "pass": true
+    },
+    {
+      "name": "CX-01 references resolve",
+      "pass": true
+    },
+    {
+      "name": "CX-01 no invented completion",
+      "pass": true
+    },
+    {
+      "name": "CX-02 associations preserved",
+      "pass": true
+    },
+    {
+      "name": "CX-02 references resolve",
+      "pass": true
+    },
+    {
+      "name": "CX-02 no invented completion",
+      "pass": true
+    },
+    {
+      "name": "CX-03 associations preserved",
+      "pass": true
+    },
+    {
+      "name": "CX-03 references resolve",
+      "pass": true
+    },
+    {
+      "name": "CX-03 no invented completion",
+      "pass": true
+    },
+    {
+      "name": "CX-04 associations preserved",
+      "pass": true
+    },
+    {
+      "name": "CX-04 references resolve",
+      "pass": true
+    },
+    {
+      "name": "CX-04 no invented completion",
+      "pass": true
+    },
+    {
+      "name": "CX-05 associations preserved",
+      "pass": true
+    },
+    {
+      "name": "CX-05 references resolve",
+      "pass": true
+    },
+    {
+      "name": "CX-05 no invented completion",
+      "pass": true
+    },
+    {
+      "name": "CX-06 associations preserved",
+      "pass": true
+    },
+    {
+      "name": "CX-06 references resolve",
+      "pass": true
+    },
+    {
+      "name": "CX-06 no invented completion",
+      "pass": true
+    },
+    {
+      "name": "CX-07 associations preserved",
+      "pass": true
+    },
+    {
+      "name": "CX-07 references resolve",
+      "pass": true
+    },
+    {
+      "name": "CX-07 no invented completion",
+      "pass": true
+    },
+    {
+      "name": "CX-08 associations preserved",
+      "pass": true
+    },
+    {
+      "name": "CX-08 references resolve",
+      "pass": true
+    },
+    {
+      "name": "CX-08 no invented completion",
+      "pass": true
+    },
+    {
+      "name": "CX-09 associations preserved",
+      "pass": true
+    },
+    {
+      "name": "CX-09 references resolve",
+      "pass": true
+    },
+    {
+      "name": "CX-09 no invented completion",
+      "pass": true
+    },
+    {
+      "name": "CX-10 associations preserved",
+      "pass": true
+    },
+    {
+      "name": "CX-10 references resolve",
+      "pass": true
+    },
+    {
+      "name": "CX-10 no invented completion",
+      "pass": true
+    },
+    {
+      "name": "CX-11 associations preserved",
+      "pass": true
+    },
+    {
+      "name": "CX-11 references resolve",
+      "pass": true
+    },
+    {
+      "name": "CX-11 no invented completion",
+      "pass": true
+    },
+    {
+      "name": "CX-12 associations preserved",
+      "pass": true
+    },
+    {
+      "name": "CX-12 references resolve",
+      "pass": true
+    },
+    {
+      "name": "CX-12 no invented completion",
+      "pass": true
+    },
+    {
+      "name": "SY-01 associations preserved",
+      "pass": true
+    },
+    {
+      "name": "SY-01 references resolve",
+      "pass": true
+    },
+    {
+      "name": "SY-01 no invented completion",
+      "pass": true
+    },
+    {
+      "name": "SY-02 associations preserved",
+      "pass": true
+    },
+    {
+      "name": "SY-02 references resolve",
+      "pass": true
+    },
+    {
+      "name": "SY-02 no invented completion",
+      "pass": true
+    },
+    {
+      "name": "SY-03 associations preserved",
+      "pass": true
+    },
+    {
+      "name": "SY-03 references resolve",
+      "pass": true
+    },
+    {
+      "name": "SY-03 no invented completion",
+      "pass": true
+    },
+    {
+      "name": "SY-04 associations preserved",
+      "pass": true
+    },
+    {
+      "name": "SY-04 references resolve",
+      "pass": true
+    },
+    {
+      "name": "SY-04 no invented completion",
+      "pass": true
+    },
+    {
+      "name": "SY-05 associations preserved",
+      "pass": true
+    },
+    {
+      "name": "SY-05 references resolve",
+      "pass": true
+    },
+    {
+      "name": "SY-05 no invented completion",
+      "pass": true
+    },
+    {
+      "name": "SY-06 associations preserved",
+      "pass": true
+    },
+    {
+      "name": "SY-06 references resolve",
+      "pass": true
+    },
+    {
+      "name": "SY-06 no invented completion",
+      "pass": true
+    },
+    {
+      "name": "SY-07 associations preserved",
+      "pass": true
+    },
+    {
+      "name": "SY-07 references resolve",
+      "pass": true
+    },
+    {
+      "name": "SY-07 no invented completion",
+      "pass": true
+    },
+    {
+      "name": "SY-08 associations preserved",
+      "pass": true
+    },
+    {
+      "name": "SY-08 references resolve",
+      "pass": true
+    },
+    {
+      "name": "SY-08 no invented completion",
+      "pass": true
+    },
+    {
+      "name": "SY-09 associations preserved",
+      "pass": true
+    },
+    {
+      "name": "SY-09 references resolve",
+      "pass": true
+    },
+    {
+      "name": "SY-09 no invented completion",
+      "pass": true
+    },
+    {
+      "name": "SY-10 associations preserved",
+      "pass": true
+    },
+    {
+      "name": "SY-10 references resolve",
+      "pass": true
+    },
+    {
+      "name": "SY-10 no invented completion",
+      "pass": true
+    },
+    {
+      "name": "AI-01 associations preserved",
+      "pass": true
+    },
+    {
+      "name": "AI-01 references resolve",
+      "pass": true
+    },
+    {
+      "name": "AI-01 no invented completion",
+      "pass": true
+    },
+    {
+      "name": "AI-02 associations preserved",
+      "pass": true
+    },
+    {
+      "name": "AI-02 references resolve",
+      "pass": true
+    },
+    {
+      "name": "AI-02 no invented completion",
+      "pass": true
+    },
+    {
+      "name": "AI-03 associations preserved",
+      "pass": true
+    },
+    {
+      "name": "AI-03 references resolve",
+      "pass": true
+    },
+    {
+      "name": "AI-03 no invented completion",
+      "pass": true
+    },
+    {
+      "name": "AI-04 associations preserved",
+      "pass": true
+    },
+    {
+      "name": "AI-04 references resolve",
+      "pass": true
+    },
+    {
+      "name": "AI-04 no invented completion",
+      "pass": true
+    },
+    {
+      "name": "AI-05 associations preserved",
+      "pass": true
+    },
+    {
+      "name": "AI-05 references resolve",
+      "pass": true
+    },
+    {
+      "name": "AI-05 no invented completion",
+      "pass": true
+    },
+    {
+      "name": "AI-06 associations preserved",
+      "pass": true
+    },
+    {
+      "name": "AI-06 references resolve",
+      "pass": true
+    },
+    {
+      "name": "AI-06 no invented completion",
+      "pass": true
+    },
+    {
+      "name": "AI-07 associations preserved",
+      "pass": true
+    },
+    {
+      "name": "AI-07 references resolve",
+      "pass": true
+    },
+    {
+      "name": "AI-07 no invented completion",
+      "pass": true
+    },
+    {
+      "name": "AI-08 associations preserved",
+      "pass": true
+    },
+    {
+      "name": "AI-08 references resolve",
+      "pass": true
+    },
+    {
+      "name": "AI-08 no invented completion",
+      "pass": true
+    },
+    {
+      "name": "AI-09 associations preserved",
+      "pass": true
+    },
+    {
+      "name": "AI-09 references resolve",
+      "pass": true
+    },
+    {
+      "name": "AI-09 no invented completion",
+      "pass": true
+    },
+    {
+      "name": "AI-10 associations preserved",
+      "pass": true
+    },
+    {
+      "name": "AI-10 references resolve",
+      "pass": true
+    },
+    {
+      "name": "AI-10 no invented completion",
+      "pass": true
+    },
+    {
+      "name": "AI-11 associations preserved",
+      "pass": true
+    },
+    {
+      "name": "AI-11 references resolve",
+      "pass": true
+    },
+    {
+      "name": "AI-11 no invented completion",
+      "pass": true
+    },
+    {
+      "name": "AI-12 associations preserved",
+      "pass": true
+    },
+    {
+      "name": "AI-12 references resolve",
+      "pass": true
+    },
+    {
+      "name": "AI-12 no invented completion",
+      "pass": true
+    },
+    {
+      "name": "EW-01 associations preserved",
+      "pass": true
+    },
+    {
+      "name": "EW-01 references resolve",
+      "pass": true
+    },
+    {
+      "name": "EW-01 no invented completion",
+      "pass": true
+    },
+    {
+      "name": "EW-02 associations preserved",
+      "pass": true
+    },
+    {
+      "name": "EW-02 references resolve",
+      "pass": true
+    },
+    {
+      "name": "EW-02 no invented completion",
+      "pass": true
+    },
+    {
+      "name": "EW-03 associations preserved",
+      "pass": true
+    },
+    {
+      "name": "EW-03 references resolve",
+      "pass": true
+    },
+    {
+      "name": "EW-03 no invented completion",
+      "pass": true
+    },
+    {
+      "name": "EW-04 associations preserved",
+      "pass": true
+    },
+    {
+      "name": "EW-04 references resolve",
+      "pass": true
+    },
+    {
+      "name": "EW-04 no invented completion",
+      "pass": true
+    },
+    {
+      "name": "EW-05 associations preserved",
+      "pass": true
+    },
+    {
+      "name": "EW-05 references resolve",
+      "pass": true
+    },
+    {
+      "name": "EW-05 no invented completion",
+      "pass": true
+    },
+    {
+      "name": "EW-06 associations preserved",
+      "pass": true
+    },
+    {
+      "name": "EW-06 references resolve",
+      "pass": true
+    },
+    {
+      "name": "EW-06 no invented completion",
+      "pass": true
+    },
+    {
+      "name": "EW-07 associations preserved",
+      "pass": true
+    },
+    {
+      "name": "EW-07 references resolve",
+      "pass": true
+    },
+    {
+      "name": "EW-07 no invented completion",
+      "pass": true
+    },
+    {
+      "name": "EW-08 associations preserved",
+      "pass": true
+    },
+    {
+      "name": "EW-08 references resolve",
+      "pass": true
+    },
+    {
+      "name": "EW-08 no invented completion",
+      "pass": true
+    },
+    {
+      "name": "P01 full command association",
+      "pass": true
+    },
+    {
+      "name": "P01 primary table row",
+      "pass": true
+    },
+    {
+      "name": "P02 full command association",
+      "pass": true
+    },
+    {
+      "name": "P02 primary table row",
+      "pass": true
+    },
+    {
+      "name": "P03 full command association",
+      "pass": true
+    },
+    {
+      "name": "P03 primary table row",
+      "pass": true
+    },
+    {
+      "name": "P04 full command association",
+      "pass": true
+    },
+    {
+      "name": "P04 primary table row",
+      "pass": true
+    },
+    {
+      "name": "P05 full command association",
+      "pass": true
+    },
+    {
+      "name": "P05 primary table row",
+      "pass": true
+    },
+    {
+      "name": "P06 full command association",
+      "pass": true
+    },
+    {
+      "name": "P06 primary table row",
+      "pass": true
+    },
+    {
+      "name": "P07 full command association",
+      "pass": true
+    },
+    {
+      "name": "P07 primary table row",
+      "pass": true
+    },
+    {
+      "name": "P08 full command association",
+      "pass": true
+    },
+    {
+      "name": "P08 primary table row",
+      "pass": true
+    },
+    {
+      "name": "P09 full command association",
+      "pass": true
+    },
+    {
+      "name": "P09 primary table row",
+      "pass": true
+    },
+    {
+      "name": "P10 full command association",
+      "pass": true
+    },
+    {
+      "name": "P10 primary table row",
+      "pass": true
+    },
+    {
+      "name": "P11 full command association",
+      "pass": true
+    },
+    {
+      "name": "P11 primary table row",
+      "pass": true
+    },
+    {
+      "name": "P12 full command association",
+      "pass": true
+    },
+    {
+      "name": "P12 primary table row",
+      "pass": true
+    },
+    {
+      "name": "P13 full command association",
+      "pass": true
+    },
+    {
+      "name": "P13 primary table row",
+      "pass": true
+    },
+    {
+      "name": "P14 full command association",
+      "pass": true
+    },
+    {
+      "name": "P14 primary table row",
+      "pass": true
+    },
+    {
+      "name": "P15 full command association",
+      "pass": true
+    },
+    {
+      "name": "P15 primary table row",
+      "pass": true
+    },
+    {
+      "name": "P16 full command association",
+      "pass": true
+    },
+    {
+      "name": "P16 primary table row",
+      "pass": true
+    },
+    {
+      "name": "P17 full command association",
+      "pass": true
+    },
+    {
+      "name": "P17 primary table row",
+      "pass": true
+    },
+    {
+      "name": "P18 full command association",
+      "pass": true
+    },
+    {
+      "name": "P18 primary table row",
+      "pass": true
+    },
+    {
+      "name": "P19 full command association",
+      "pass": true
+    },
+    {
+      "name": "P19 primary table row",
+      "pass": true
+    },
+    {
+      "name": "P20 full command association",
+      "pass": true
+    },
+    {
+      "name": "P20 primary table row",
+      "pass": true
+    },
+    {
+      "name": "P21 full command association",
+      "pass": true
+    },
+    {
+      "name": "P21 primary table row",
+      "pass": true
+    },
+    {
+      "name": "P22 full command association",
+      "pass": true
+    },
+    {
+      "name": "P22 primary table row",
+      "pass": true
+    },
+    {
+      "name": "C01 API table matches",
+      "pass": true
+    },
+    {
+      "name": "C01 proposed only",
+      "pass": true
+    },
+    {
+      "name": "C02 API table matches",
+      "pass": true
+    },
+    {
+      "name": "C02 proposed only",
+      "pass": true
+    },
+    {
+      "name": "C03 API table matches",
+      "pass": true
+    },
+    {
+      "name": "C03 proposed only",
+      "pass": true
+    },
+    {
+      "name": "C04 API table matches",
+      "pass": true
+    },
+    {
+      "name": "C04 proposed only",
+      "pass": true
+    },
+    {
+      "name": "C05 API table matches",
+      "pass": true
+    },
+    {
+      "name": "C05 proposed only",
+      "pass": true
+    },
+    {
+      "name": "C06 API table matches",
+      "pass": true
+    },
+    {
+      "name": "C06 proposed only",
+      "pass": true
+    },
+    {
+      "name": "C07 API table matches",
+      "pass": true
+    },
+    {
+      "name": "C07 proposed only",
+      "pass": true
+    },
+    {
+      "name": "C08 API table matches",
+      "pass": true
+    },
+    {
+      "name": "C08 proposed only",
+      "pass": true
+    },
+    {
+      "name": "C09 API table matches",
+      "pass": true
+    },
+    {
+      "name": "C09 proposed only",
+      "pass": true
+    },
+    {
+      "name": "C10 API table matches",
+      "pass": true
+    },
+    {
+      "name": "C10 proposed only",
+      "pass": true
+    },
+    {
+      "name": "C11 API table matches",
+      "pass": true
+    },
+    {
+      "name": "C11 proposed only",
+      "pass": true
+    },
+    {
+      "name": "C12 API table matches",
+      "pass": true
+    },
+    {
+      "name": "C12 proposed only",
+      "pass": true
+    },
+    {
+      "name": "C13 API table matches",
+      "pass": true
+    },
+    {
+      "name": "C13 proposed only",
+      "pass": true
+    },
+    {
+      "name": "C14 API table matches",
+      "pass": true
+    },
+    {
+      "name": "C14 proposed only",
+      "pass": true
+    },
+    {
+      "name": "C15 API table matches",
+      "pass": true
+    },
+    {
+      "name": "C15 proposed only",
+      "pass": true
+    },
+    {
+      "name": "C16 API table matches",
+      "pass": true
+    },
+    {
+      "name": "C16 proposed only",
+      "pass": true
+    },
+    {
+      "name": "C17 API table matches",
+      "pass": true
+    },
+    {
+      "name": "C17 proposed only",
+      "pass": true
+    },
+    {
+      "name": "C18 API table matches",
+      "pass": true
+    },
+    {
+      "name": "C18 proposed only",
+      "pass": true
+    },
+    {
+      "name": "C19 API table matches",
+      "pass": true
+    },
+    {
+      "name": "C19 proposed only",
+      "pass": true
+    },
+    {
+      "name": "C20 API table matches",
+      "pass": true
+    },
+    {
+      "name": "C20 proposed only",
+      "pass": true
+    },
+    {
+      "name": "C21 API table matches",
+      "pass": true
+    },
+    {
+      "name": "C21 proposed only",
+      "pass": true
+    },
+    {
+      "name": "C22 API table matches",
+      "pass": true
+    },
+    {
+      "name": "C22 proposed only",
+      "pass": true
+    },
+    {
+      "name": "C23 API table matches",
+      "pass": true
+    },
+    {
+      "name": "C23 proposed only",
+      "pass": true
+    },
+    {
+      "name": "C24 API table matches",
+      "pass": true
+    },
+    {
+      "name": "C24 proposed only",
+      "pass": true
+    },
+    {
+      "name": "C25 API table matches",
+      "pass": true
+    },
+    {
+      "name": "C25 proposed only",
+      "pass": true
+    },
+    {
+      "name": "C26 API table matches",
+      "pass": true
+    },
+    {
+      "name": "C26 proposed only",
+      "pass": true
+    },
+    {
+      "name": "C27 API table matches",
+      "pass": true
+    },
+    {
+      "name": "C27 proposed only",
+      "pass": true
+    },
+    {
+      "name": "C28 API table matches",
+      "pass": true
+    },
+    {
+      "name": "C28 proposed only",
+      "pass": true
+    },
+    {
+      "name": "C29 API table matches",
+      "pass": true
+    },
+    {
+      "name": "C29 proposed only",
+      "pass": true
+    },
+    {
+      "name": "C30 API table matches",
+      "pass": true
+    },
+    {
+      "name": "C30 proposed only",
+      "pass": true
+    },
+    {
+      "name": "C31 API table matches",
+      "pass": true
+    },
+    {
+      "name": "C31 proposed only",
+      "pass": true
+    },
+    {
+      "name": "72 product cases remain unrun",
+      "pass": true
+    },
+    {
+      "name": "product implementation boundary",
+      "pass": true
+    },
+    {
+      "name": "preserved source docs/设计包/01-产品需求与业务规则.md",
+      "pass": true
+    },
+    {
+      "name": "preserved source docs/设计包/02-数据模型与ER设计.md",
+      "pass": true
+    },
+    {
+      "name": "preserved source docs/设计包/03-业务流程与状态机.md",
+      "pass": true
+    },
+    {
+      "name": "preserved source docs/设计包/04-接口与契约变更设计.md",
+      "pass": true
+    },
+    {
+      "name": "preserved source docs/设计包/05-UI与交互设计.md",
+      "pass": true
+    },
+    {
+      "name": "preserved source docs/设计包/06-用户故事与153项追踪矩阵.md",
+      "pass": true
+    },
+    {
+      "name": "preserved source docs/设计包/07-开发分解与验收方案.md",
+      "pass": true
+    },
+    {
+      "name": "preserved source docs/设计包/09-协作扩展候选.schema.json",
+      "pass": true
+    },
+    {
+      "name": "preserved source docs/设计包/10-需求追踪数据.json",
+      "pass": true
+    },
+    {
+      "name": "preserved source docs/设计包/11-存量合同字段字典.md",
+      "pass": true
+    },
+    {
+      "name": "preserved source docs/设计包/12-员工市场复制与使用设计.md",
+      "pass": true
+    },
+    {
+      "name": "preserved source docs/设计包/13-市场采用候选.schema.json",
+      "pass": true
+    },
+    {
+      "name": "preserved source docs/设计包/14-QoderWake界面参考与原型设计.md",
+      "pass": true
+    },
+    {
+      "name": "preserved source docs/设计包/15-全角色界面与操作覆盖矩阵.md",
+      "pass": true
+    },
+    {
+      "name": "preserved source docs/设计包/16-角色视角与权限演示数据.json",
+      "pass": true
+    },
+    {
+      "name": "preserved source docs/设计包/17-角色需求与验收追踪.json",
+      "pass": true
+    },
+    {
+      "name": "preserved source docs/设计包/18-OA多流程多实例产品设计.md",
+      "pass": true
+    },
+    {
+      "name": "preserved source docs/设计包/19-OA多实例演示数据.json",
+      "pass": true
+    },
+    {
+      "name": "preserved source docs/设计包/20-OA统一待办候选.schema.json",
+      "pass": true
+    },
+    {
+      "name": "preserved source docs/设计包/21-OA需求细化与验收追踪.json",
+      "pass": true
+    },
+    {
+      "name": "preserved source docs/设计包/22-开源工作流与成熟前端复用选型.md",
+      "pass": true
+    },
+    {
+      "name": "preserved source docs/设计包/23-OA主旨与BS字段一致性核查.md",
+      "pass": true
+    },
+    {
+      "name": "preserved source docs/设计包/24-业务模板字段候选.json",
+      "pass": true
+    },
+    {
+      "name": "preserved source docs/设计包/25-从零开发最小工作量开源选型.md",
+      "pass": true
+    },
+    {
+      "name": "preserved source docs/设计包/ZKER-staff-v2-evidence.json",
+      "pass": true
+    },
+    {
+      "name": "preserved source docs/设计包/ZKER-staff-完整优化清单-v2-人员数字员工与上下文对齐.md",
+      "pass": true
+    },
+    {
+      "name": "preserved source docs/设计包/附录-QoderWake竞品分析-初版快照.md",
+      "pass": true
+    },
+    {
+      "name": "preserved source history/用户需求原文.md",
+      "pass": true
+    },
+    {
+      "name": "pre-change product design preserved docs/设计包/26-完整产品设计文档.md",
+      "pass": true
+    },
+    {
+      "name": "pre-change product design preserved docs/设计包/27-逻辑数据模型与接口契约.md",
+      "pass": true
+    },
+    {
+      "name": "pre-change product design preserved docs/设计包/30-产品设计追踪数据.json",
+      "pass": true
+    },
+    {
+      "name": "1.3 HTML unchanged",
+      "pass": true
+    },
+    {
+      "name": "diagram artifact identity",
+      "pass": true
+    },
+    {
+      "name": "diagram deterministic pass",
+      "pass": true
+    },
+    {
+      "name": "browser bound to artifact",
+      "pass": true
+    },
+    {
+      "name": "automated browser independently passes",
+      "pass": true
+    },
+    {
+      "name": "four exact desktop sizes",
+      "pass": true
+    },
+    {
+      "name": "four theme captures",
+      "pass": true
+    },
+    {
+      "name": "actual image review separately bound",
+      "pass": true
+    },
+    {
+      "name": "reviewed image hash docs/设计包/44-技术架构交互图.visual-check.1440x900.light.png",
+      "pass": true
+    },
+    {
+      "name": "reviewed image hash docs/设计包/44-技术架构交互图.visual-check.2048x1320.dark.png",
+      "pass": true
+    },
+    {
+      "name": "reviewed image hash validation/technical-architecture-focus.png",
+      "pass": true
+    },
+    {
+      "name": "reviewed image hash validation/technical-architecture-export.png",
+      "pass": true
+    },
+    {
+      "name": "diagram interaction checks current",
+      "pass": true
+    },
+    {
+      "name": "export current validation/technical-architecture-export.svg",
+      "pass": true
+    },
+    {
+      "name": "export current validation/technical-architecture-export.png",
+      "pass": true
+    },
+    {
+      "name": "essential architecture relations",
+      "pass": true
+    },
+    {
+      "name": "independent primary reread",
+      "pass": true
+    },
+    {
+      "name": "technical task graph complete",
+      "pass": true
+    },
+    {
+      "name": "T1 bounded node contract",
+      "pass": true
+    },
+    {
+      "name": "T2 bounded node contract",
+      "pass": true
+    },
+    {
+      "name": "T3 bounded node contract",
+      "pass": true
+    },
+    {
+      "name": "technical graph dependency order",
+      "pass": true
+    },
+    {
+      "name": "technical design review checklist",
+      "pass": true
+    }
+  ],
+  "limitations": [
+    "No candidate build, database initialization, real model, runtime permission or production validation.",
+    "Mermaid code blocks are structurally checked; no claim that every Mermaid source was rendered.",
+    "Referenced public source declarations are evidence for the pinned snapshot, not dependency resolution or distribution approval."
+  ]
+}

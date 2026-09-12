@@ -1,0 +1,91 @@
+#  30.3K Star！又一开源神器：用文件系统范式重构 AI Agent 上下文管理
+
+原创  繁星  繁星  繁星AI随笔
+
+_2026年08月20日 12:33_ __ _ _ _ _ _ 山东  _
+
+在小说阅读器读本章
+
+去阅读
+
+如果你正在开发 AI Agent，大概率会遇到这些问题：  当 Agent
+需要长期运行，上下文就会越来越多，简单截断或压缩？关键信息说丢就丢；全部塞进去？Token 费用蹭蹭往上涨。
+想要调试检索问题，却发现整个检索链路就是一个黑盒子。  会话一关，记忆就清零，再次启动就跟新人一样。
+而今天介绍的开源项目：OpenViking，就是为了彻底解决这些问题而生的。
+![](https://mmbiz.qpic.cn/sz_mmbiz_png/ypDhP6hibnibKd4hdkB4Qnxt6wCyIZbiazy43NKxZqs7zwQM6T4C3TdzibTmglib21DDoEW1couwN4yeZtF3ONGYibsxl3ib15K2Kiaox6MaKJYfNzs/640?wx_fmt=png&from=appmsg)
+01  项目介绍  OpenViking 是一款专为 AI Agent 设计的上下文数据库。  核心思路在 README.md 写的也很清楚：  把
+Agent 所需的记忆、资源、技能统一存放在一个 viking:// 虚拟文件下。  Agent 可以用 ls、find、read 的方式浏览自己的上下文。
+作者：火山引擎。
+![](https://mmbiz.qpic.cn/mmbiz_png/ypDhP6hibnibLfPKQYjxB6nxDKkdf6hlk5QTq8UUkiaIWoPfuRMfuMjLIlESfic6r7h4qBHbThnJDOm6yywZlBfM0LYv7ftvVOKcBhUq1WOzRibg/640?wx_fmt=png&from=appmsg)
+02  项目亮点  1.分层加载：  OpenViking 在写入阶段就自动将上下文处理为三个层级：  L0（摘要）：一句话总结，用来快速判断相关性。
+L1（概览）：核心信息和使用场景，供规划阶段决策。  L2（详情）：完整原始数据，只在需要时读取。
+
+  *   *   *   *   *   *   *   *   * 
+
+    
+    
+    viking://resources/my_project/├── .abstract               # L0：约 100 tokens——快速判断相关性├── .overview               # L1：约 2k tokens——结构和要点└── docs/    ├── .abstract    ├── .overview    └── api/        ├── auth.md         # L2：完整内容，按需加载        └── endpoints.md
+
+2.递归目录检索：  检索时，Agent 先看目录的 L0/L1，确认相关才深入。  进入目录后，结合语义搜索与 glob、grep
+操作，递归精准定位目标内容。  3.可视化检索轨迹：  OpenViking 会记录每一次检索过程的完整路径日志，如：  Agent
+从哪个目录出发、递归进入了哪些子路径、最终加载了哪个层级的内容。  4.会话自动管理：  每次会话结束后，OpenViking
+会自动分析对话内容，提取有价值的信息形成长期记忆。  03  快速入门  1.前置：  Python 3.10+。  2.安装：
+
+  *   *   *   * 
+
+    
+    
+    pip install openviking --upgradeopenviking-server init      # 交互式向导：提供商、模型、ov.confopenviking-server doctor    # 校验配置openviking-server           # 启动
+
+服务器跑起来之后：
+
+  *   *   *   *   *   *   * 
+
+    
+    
+    ov statusov add-resource https://github.com/volcengine/OpenViking # --waitov ls viking://resources/ov tree viking://resources/volcengine -L 2# 没加 --wait 的话，语义处理需要等一段时间ov find "what is openviking"ov grep "openviking" --uri viking://resources/volcengine/OpenViking/docs/zh
+
+04  结语  如果你正在开发 AI Agent，被上下文管理的难题困扰，不妨试试。
+
+  *   * 
+
+    
+    
+    # 开源地址：https://github.com/volcengine/OpenViking
+
+我是繁星，关注我，获取更多好玩有趣的开源仓库！  谢谢你阅读我的文章~  我们下期再见！
+
+预览时标签不可点
+
+微信扫一扫  
+关注该公众号
+
+知道了
+
+微信扫一扫  
+使用小程序
+
+****
+
+取消  允许
+
+****
+
+取消  允许
+
+****
+
+取消  允许
+
+×  分析
+
+__
+
+![作者头像](http://mmbiz.qpic.cn/mmbiz_png/ypDhP6hibnibI8bKENuT4NOFvkDyhicBicdibGdEqAGtHMsX6HH2IqwRDsqCyFoIv17xlmCSgrs1EC8IIQXxNHfoID7CB25IkGuhNO5IrVHM46R8/0?wx_fmt=png)
+
+微信扫一扫可打开此内容，  
+使用完整服务
+
+：  ，  ，  ，  ，  ，  ，  ，  ，  ，  ，  ，  ，  。  视频  小程序  赞  ，轻点两下取消赞  在看  ，轻点两下取消在看
+分享  留言  收藏  听过
+

@@ -1,0 +1,348 @@
+[
+  {
+    "repo": "mem0ai/mem0",
+    "commit": "c7ee362aff94a369af70f13f2b4f853f6793ff4c",
+    "path": "LICENSE",
+    "url": "https://raw.githubusercontent.com/mem0ai/mem0/c7ee362aff94a369af70f13f2b4f853f6793ff4c/LICENSE",
+    "bytes": 11349,
+    "sha256": "0bbcbe931c353293a2fafce08326181dfeea0e568c566afd4ce8337a70f5e219"
+  },
+  {
+    "repo": "mem0ai/mem0",
+    "commit": "c7ee362aff94a369af70f13f2b4f853f6793ff4c",
+    "path": "pyproject.toml",
+    "url": "https://raw.githubusercontent.com/mem0ai/mem0/c7ee362aff94a369af70f13f2b4f853f6793ff4c/pyproject.toml",
+    "bytes": 3313,
+    "sha256": "0b63d72960057d1c86d6c9e59417688fe75485384e1a08f0257a2e0b38b61fa3"
+  },
+  {
+    "repo": "mem0ai/mem0",
+    "commit": "c7ee362aff94a369af70f13f2b4f853f6793ff4c",
+    "path": "mem0/memory/main.py",
+    "url": "https://raw.githubusercontent.com/mem0ai/mem0/c7ee362aff94a369af70f13f2b4f853f6793ff4c/mem0/memory/main.py",
+    "bytes": 168002,
+    "sha256": "5b1b75e2f00aca7bd368a6e9cd5905145d60fd05a0e36d6b1ef3e2f1b4f28ca1"
+  },
+  {
+    "repo": "mem0ai/mem0",
+    "commit": "c7ee362aff94a369af70f13f2b4f853f6793ff4c",
+    "path": "mem0/memory/storage.py",
+    "url": "https://raw.githubusercontent.com/mem0ai/mem0/c7ee362aff94a369af70f13f2b4f853f6793ff4c/mem0/memory/storage.py",
+    "bytes": 12886,
+    "sha256": "5f5ecdadd2b260fd14f36a0f338336eb760275465dd1056a99a47e1ef07702bd"
+  },
+  {
+    "repo": "mem0ai/mem0",
+    "commit": "c7ee362aff94a369af70f13f2b4f853f6793ff4c",
+    "path": "server/auth.py",
+    "url": "https://raw.githubusercontent.com/mem0ai/mem0/c7ee362aff94a369af70f13f2b4f853f6793ff4c/server/auth.py",
+    "bytes": 7966,
+    "sha256": "9674f67f520945b9bea2fc6e6c0d49cd46c4b32ec8e5609ec9325b43c6e5cea0"
+  },
+  {
+    "repo": "mem0ai/mem0",
+    "commit": "c7ee362aff94a369af70f13f2b4f853f6793ff4c",
+    "path": "server/README.md",
+    "url": "https://raw.githubusercontent.com/mem0ai/mem0/c7ee362aff94a369af70f13f2b4f853f6793ff4c/server/README.md",
+    "bytes": 8486,
+    "sha256": "ac1f98f647c67e042cae05aac4187be791b0012a3d95866a55d3d6470ae13a44"
+  },
+  {
+    "repo": "mem0ai/mem0",
+    "commit": "c7ee362aff94a369af70f13f2b4f853f6793ff4c",
+    "path": "tests/test_server_auth.py",
+    "url": "https://raw.githubusercontent.com/mem0ai/mem0/c7ee362aff94a369af70f13f2b4f853f6793ff4c/tests/test_server_auth.py",
+    "bytes": 19281,
+    "sha256": "46a49b0c08a4b342c733f312d0d150dbd1e38f3e4ce97694f50b4a4d4c5d794c"
+  },
+  {
+    "repo": "mem0ai/mem0",
+    "commit": "c7ee362aff94a369af70f13f2b4f853f6793ff4c",
+    "path": "mem0/vector_stores/pgvector.py",
+    "url": "https://raw.githubusercontent.com/mem0ai/mem0/c7ee362aff94a369af70f13f2b4f853f6793ff4c/mem0/vector_stores/pgvector.py",
+    "bytes": 21595,
+    "sha256": "4cbc53362155bc05156f2c0641871afdab9b047445d668b2730ea9c2fa8a280f"
+  },
+  {
+    "repo": "volcengine/OpenViking",
+    "commit": "0f77ab5625a5e2ead4f286d4e58ea77e05fcfdee",
+    "path": "LICENSE",
+    "url": "https://raw.githubusercontent.com/volcengine/OpenViking/0f77ab5625a5e2ead4f286d4e58ea77e05fcfdee/LICENSE",
+    "bytes": 34568,
+    "sha256": "1bd87fa6d9a5c79daf0c2af042b6725c9773bf095cc3d1bdf3656e66d1c3e5b1"
+  },
+  {
+    "repo": "volcengine/OpenViking",
+    "commit": "0f77ab5625a5e2ead4f286d4e58ea77e05fcfdee",
+    "path": "README.md",
+    "url": "https://raw.githubusercontent.com/volcengine/OpenViking/0f77ab5625a5e2ead4f286d4e58ea77e05fcfdee/README.md",
+    "bytes": 20628,
+    "sha256": "123b7076dbebe3222ec7e06e9949fdedbbd517ca424bc2d865cdbbb5ceaee0c8"
+  },
+  {
+    "repo": "volcengine/OpenViking",
+    "commit": "0f77ab5625a5e2ead4f286d4e58ea77e05fcfdee",
+    "path": "pyproject.toml",
+    "url": "https://raw.githubusercontent.com/volcengine/OpenViking/0f77ab5625a5e2ead4f286d4e58ea77e05fcfdee/pyproject.toml",
+    "bytes": 7515,
+    "sha256": "0d48dc0858b4f066a962fb1863775e0e409fee86085270b8b32f1e5fd506ed27"
+  },
+  {
+    "repo": "volcengine/OpenViking",
+    "commit": "0f77ab5625a5e2ead4f286d4e58ea77e05fcfdee",
+    "path": "docs/en/concepts/11-multi-tenant.md",
+    "url": "https://raw.githubusercontent.com/volcengine/OpenViking/0f77ab5625a5e2ead4f286d4e58ea77e05fcfdee/docs/en/concepts/11-multi-tenant.md",
+    "bytes": 12983,
+    "sha256": "777bc051ca856440edba33ab62f35e22d4af306d84e6a43092dfa40081ca3872"
+  },
+  {
+    "repo": "volcengine/OpenViking",
+    "path": "docs/en/concepts/08-memory.md",
+    "error": "curl: (56) The requested URL returned error: 404\n"
+  },
+  {
+    "repo": "volcengine/OpenViking",
+    "commit": "0f77ab5625a5e2ead4f286d4e58ea77e05fcfdee",
+    "path": "SECURITY.md",
+    "url": "https://raw.githubusercontent.com/volcengine/OpenViking/0f77ab5625a5e2ead4f286d4e58ea77e05fcfdee/SECURITY.md",
+    "bytes": 1691,
+    "sha256": "4a0f6b042cd05ad52eb34c21891ff52dec9a5e947c2b3714a0fbd64e98f58d28"
+  },
+  {
+    "repo": "getzep/graphiti",
+    "commit": "c035afb7990b6077331a81e98b04efcfd9bf8184",
+    "path": "LICENSE",
+    "url": "https://raw.githubusercontent.com/getzep/graphiti/c035afb7990b6077331a81e98b04efcfd9bf8184/LICENSE",
+    "bytes": 11325,
+    "sha256": "2825300b20d7b951209835a4a331f29e24725a39d65168e4b831df53aa372650"
+  },
+  {
+    "repo": "getzep/graphiti",
+    "commit": "c035afb7990b6077331a81e98b04efcfd9bf8184",
+    "path": "README.md",
+    "url": "https://raw.githubusercontent.com/getzep/graphiti/c035afb7990b6077331a81e98b04efcfd9bf8184/README.md",
+    "bytes": 28280,
+    "sha256": "ce1628c02b3c6fd5b59e3e48dc61c958f07824033b4d0b989bb8d433932b6b3f"
+  },
+  {
+    "repo": "getzep/graphiti",
+    "commit": "c035afb7990b6077331a81e98b04efcfd9bf8184",
+    "path": "pyproject.toml",
+    "url": "https://raw.githubusercontent.com/getzep/graphiti/c035afb7990b6077331a81e98b04efcfd9bf8184/pyproject.toml",
+    "bytes": 2829,
+    "sha256": "69850169b5e14ac356ce750602099ea42d306db48d0b4efd9f5629227ea7527f"
+  },
+  {
+    "repo": "getzep/graphiti",
+    "commit": "c035afb7990b6077331a81e98b04efcfd9bf8184",
+    "path": "graphiti_core/graphiti.py",
+    "url": "https://raw.githubusercontent.com/getzep/graphiti/c035afb7990b6077331a81e98b04efcfd9bf8184/graphiti_core/graphiti.py",
+    "bytes": 74701,
+    "sha256": "2d0ffbb8b6de59787269326a9255d875f74da63ed66fd4f4fad3f159538d0fdd"
+  },
+  {
+    "repo": "getzep/graphiti",
+    "commit": "c035afb7990b6077331a81e98b04efcfd9bf8184",
+    "path": "graphiti_core/utils/maintenance/graph_data_operations.py",
+    "url": "https://raw.githubusercontent.com/getzep/graphiti/c035afb7990b6077331a81e98b04efcfd9bf8184/graphiti_core/utils/maintenance/graph_data_operations.py",
+    "bytes": 5819,
+    "sha256": "f8e0e3c8ca504f1c05136e6ebc646f981bca23bcda0fa3f91ef5a5cd2b58e68b"
+  },
+  {
+    "repo": "getzep/graphiti",
+    "commit": "c035afb7990b6077331a81e98b04efcfd9bf8184",
+    "path": "tests/test_handle_multiple_group_ids.py",
+    "url": "https://raw.githubusercontent.com/getzep/graphiti/c035afb7990b6077331a81e98b04efcfd9bf8184/tests/test_handle_multiple_group_ids.py",
+    "bytes": 4765,
+    "sha256": "c7ed2b96d84fc702fbe6e09c99877b0f5c89fb3e4c57411aa446cdb2de431c1d"
+  },
+  {
+    "repo": "getzep/graphiti",
+    "commit": "c035afb7990b6077331a81e98b04efcfd9bf8184",
+    "path": "graphiti_core/edges.py",
+    "url": "https://raw.githubusercontent.com/getzep/graphiti/c035afb7990b6077331a81e98b04efcfd9bf8184/graphiti_core/edges.py",
+    "bytes": 33631,
+    "sha256": "0151d72ebfb057033c6d52a163e22f252f67b915722e14315b685c7831b3b1c6"
+  },
+  {
+    "repo": "getzep/graphiti",
+    "commit": "c035afb7990b6077331a81e98b04efcfd9bf8184",
+    "path": "graphiti_core/nodes.py",
+    "url": "https://raw.githubusercontent.com/getzep/graphiti/c035afb7990b6077331a81e98b04efcfd9bf8184/graphiti_core/nodes.py",
+    "bytes": 38014,
+    "sha256": "529eb74b7c93e7551f6287b1a7bf6818d31fd045623b3260967dad573e4d801c"
+  },
+  {
+    "repo": "langchain4j/langchain4j",
+    "commit": "0028928eab6d3b0c11d9be13c6a06e9f0abd9512",
+    "path": "LICENSE",
+    "url": "https://raw.githubusercontent.com/langchain4j/langchain4j/0028928eab6d3b0c11d9be13c6a06e9f0abd9512/LICENSE",
+    "bytes": 11357,
+    "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4"
+  },
+  {
+    "repo": "langchain4j/langchain4j",
+    "commit": "0028928eab6d3b0c11d9be13c6a06e9f0abd9512",
+    "path": "langchain4j-core/src/main/java/dev/langchain4j/store/memory/chat/ChatMemoryStore.java",
+    "url": "https://raw.githubusercontent.com/langchain4j/langchain4j/0028928eab6d3b0c11d9be13c6a06e9f0abd9512/langchain4j-core/src/main/java/dev/langchain4j/store/memory/chat/ChatMemoryStore.java",
+    "bytes": 4941,
+    "sha256": "56d7b2343a46d6acc04246462ee5c5bac9801733392e6015326ebab82a9f17fc"
+  },
+  {
+    "repo": "langchain4j/langchain4j",
+    "commit": "0028928eab6d3b0c11d9be13c6a06e9f0abd9512",
+    "path": "langchain4j/src/main/java/dev/langchain4j/memory/chat/MessageWindowChatMemory.java",
+    "url": "https://raw.githubusercontent.com/langchain4j/langchain4j/0028928eab6d3b0c11d9be13c6a06e9f0abd9512/langchain4j/src/main/java/dev/langchain4j/memory/chat/MessageWindowChatMemory.java",
+    "bytes": 11041,
+    "sha256": "33b0dfead0402f3875b236629284ec8025b9529f28863ab0978124fd5d7039c9"
+  },
+  {
+    "repo": "langchain4j/langchain4j",
+    "commit": "0028928eab6d3b0c11d9be13c6a06e9f0abd9512",
+    "path": "docs/docs/tutorials/chat-memory.md",
+    "url": "https://raw.githubusercontent.com/langchain4j/langchain4j/0028928eab6d3b0c11d9be13c6a06e9f0abd9512/docs/docs/tutorials/chat-memory.md",
+    "bytes": 8310,
+    "sha256": "55e719276dbe1aa55dbf952eb315790d063c6a8bf7d661d21008aa0aba22a5bb"
+  },
+  {
+    "repo": "langchain4j/langchain4j",
+    "commit": "0028928eab6d3b0c11d9be13c6a06e9f0abd9512",
+    "path": "docs/docs/tutorials/ai-services.md",
+    "url": "https://raw.githubusercontent.com/langchain4j/langchain4j/0028928eab6d3b0c11d9be13c6a06e9f0abd9512/docs/docs/tutorials/ai-services.md",
+    "bytes": 42841,
+    "sha256": "273555a7a0d58fb23368304e52214c079ef8ccbb1eda92414a91b7ff78f94144"
+  },
+  {
+    "repo": "volcengine/OpenViking",
+    "commit": "0f77ab5625a5e2ead4f286d4e58ea77e05fcfdee",
+    "path": "docs/en/concepts/06-extraction.md",
+    "url": "https://raw.githubusercontent.com/volcengine/OpenViking/0f77ab5625a5e2ead4f286d4e58ea77e05fcfdee/docs/en/concepts/06-extraction.md",
+    "bytes": 7496,
+    "sha256": "21241ca583ece362c9e070d24a359778d0869c20a95fec427b0a0461acecea1a"
+  },
+  {
+    "repo": "volcengine/OpenViking",
+    "commit": "0f77ab5625a5e2ead4f286d4e58ea77e05fcfdee",
+    "path": "docs/en/concepts/08-session.md",
+    "url": "https://raw.githubusercontent.com/volcengine/OpenViking/0f77ab5625a5e2ead4f286d4e58ea77e05fcfdee/docs/en/concepts/08-session.md",
+    "bytes": 8471,
+    "sha256": "122b4b0db5f0e682b222f77549e00372d32829c349396c8a6e0ff37a4812b7a0"
+  },
+  {
+    "repo": "volcengine/OpenViking",
+    "commit": "0f77ab5625a5e2ead4f286d4e58ea77e05fcfdee",
+    "path": "docs/en/concepts/15-acl.md",
+    "url": "https://raw.githubusercontent.com/volcengine/OpenViking/0f77ab5625a5e2ead4f286d4e58ea77e05fcfdee/docs/en/concepts/15-acl.md",
+    "bytes": 9522,
+    "sha256": "4a6f4007992d235a5eaf9b1ceb088307d4a739e856bf6fcd08ad6c1e4b8ed11c"
+  },
+  {
+    "repo": "volcengine/OpenViking",
+    "commit": "0f77ab5625a5e2ead4f286d4e58ea77e05fcfdee",
+    "path": "tests/api_test/scenarios/sessions/test_session_delete_cleanup.py",
+    "url": "https://raw.githubusercontent.com/volcengine/OpenViking/0f77ab5625a5e2ead4f286d4e58ea77e05fcfdee/tests/api_test/scenarios/sessions/test_session_delete_cleanup.py",
+    "bytes": 3708,
+    "sha256": "9c6be368f1657aa9a6c133404fd0e76769205373aa9d614260ae7f025fd8fae7"
+  },
+  {
+    "repo": "volcengine/OpenViking",
+    "commit": "0f77ab5625a5e2ead4f286d4e58ea77e05fcfdee",
+    "path": "openviking/session/memory_policy.py",
+    "url": "https://raw.githubusercontent.com/volcengine/OpenViking/0f77ab5625a5e2ead4f286d4e58ea77e05fcfdee/openviking/session/memory_policy.py",
+    "bytes": 4890,
+    "sha256": "9495a5c9006a0818a08365af71340d3b7a2c665687c8e3fccc7e77ec0cdfa9eb"
+  },
+  {
+    "repo": "mem0ai/mem0",
+    "commit": "c7ee362aff94a369af70f13f2b4f853f6793ff4c",
+    "path": "mem0/memory/telemetry.py",
+    "url": "https://raw.githubusercontent.com/mem0ai/mem0/c7ee362aff94a369af70f13f2b4f853f6793ff4c/mem0/memory/telemetry.py",
+    "bytes": 9024,
+    "sha256": "89f36bd0b87059fa0710adcccfbd9639ab4d5c4a762d875a1caceaf688aca687"
+  },
+  {
+    "repo": "mem0ai/mem0",
+    "commit": "c7ee362aff94a369af70f13f2b4f853f6793ff4c",
+    "path": "server/main.py",
+    "url": "https://raw.githubusercontent.com/mem0ai/mem0/c7ee362aff94a369af70f13f2b4f853f6793ff4c/server/main.py",
+    "bytes": 22215,
+    "sha256": "320af32a959fcb6bed8b4420757714e8824fb1e98e9869a2475e1a03eddf3158"
+  },
+  {
+    "repo": "mem0ai/mem0",
+    "commit": "c7ee362aff94a369af70f13f2b4f853f6793ff4c",
+    "path": "tests/test_memory.py",
+    "url": "https://raw.githubusercontent.com/mem0ai/mem0/c7ee362aff94a369af70f13f2b4f853f6793ff4c/tests/test_memory.py",
+    "bytes": 69275,
+    "sha256": "dde62e6277c23a7f0f0f9c1eab93bd6f36c7ee788ac2c520f11b6e2bc756eb44"
+  },
+  {
+    "repo": "langchain4j/langchain4j",
+    "commit": "80b747681106494d57d767cb66ef2c4999d20cb1",
+    "path": "LICENSE",
+    "url": "https://raw.githubusercontent.com/langchain4j/langchain4j/80b747681106494d57d767cb66ef2c4999d20cb1/LICENSE",
+    "bytes": 11357,
+    "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4"
+  },
+  {
+    "repo": "langchain4j/langchain4j",
+    "commit": "80b747681106494d57d767cb66ef2c4999d20cb1",
+    "path": "langchain4j-core/src/main/java/dev/langchain4j/store/memory/chat/ChatMemoryStore.java",
+    "url": "https://raw.githubusercontent.com/langchain4j/langchain4j/80b747681106494d57d767cb66ef2c4999d20cb1/langchain4j-core/src/main/java/dev/langchain4j/store/memory/chat/ChatMemoryStore.java",
+    "bytes": 1811,
+    "sha256": "6696088ac2f46aba26699854b35eb12338089a8a2d561625dcef2d588050789f"
+  },
+  {
+    "repo": "langchain4j/langchain4j",
+    "commit": "80b747681106494d57d767cb66ef2c4999d20cb1",
+    "path": "langchain4j/src/main/java/dev/langchain4j/memory/chat/MessageWindowChatMemory.java",
+    "url": "https://raw.githubusercontent.com/langchain4j/langchain4j/80b747681106494d57d767cb66ef2c4999d20cb1/langchain4j/src/main/java/dev/langchain4j/memory/chat/MessageWindowChatMemory.java",
+    "bytes": 8904,
+    "sha256": "c032e1b5bff14e4558c86630504e62a47dffafc007a7f807e11bcfd6df198df5"
+  },
+  {
+    "repo": "qdrant/qdrant",
+    "commit": "6ab21cac18ebb6f4ae29102c7f8f5cc11affd5de",
+    "path": "LICENSE",
+    "url": "https://raw.githubusercontent.com/qdrant/qdrant/6ab21cac18ebb6f4ae29102c7f8f5cc11affd5de/LICENSE",
+    "bytes": 11351,
+    "sha256": "210b508429e913d9de5301f90508bc2cbf5b2281de5b45e607c04d58f0f3bd8f"
+  },
+  {
+    "repo": "pgvector/pgvector",
+    "commit": "efa08fda9ec485d80292d0487a77939c087dedcc",
+    "path": "LICENSE",
+    "url": "https://raw.githubusercontent.com/pgvector/pgvector/efa08fda9ec485d80292d0487a77939c087dedcc/LICENSE",
+    "bytes": 1104,
+    "sha256": "6bba9ebeb73e27477463b05e5ef1bf303bccbddb3db9bbc95905d351604d6a87"
+  },
+  {
+    "repo": "neo4j/neo4j",
+    "commit": "f213380f812b820a1b312e2ea52cb3d8f1931ccc",
+    "path": "LICENSE.txt",
+    "url": "https://raw.githubusercontent.com/neo4j/neo4j/f213380f812b820a1b312e2ea52cb3d8f1931ccc/LICENSE.txt",
+    "bytes": 35151,
+    "sha256": "8e1bb72dd89711d9612ea2749c906e4b17760245f4ffdfcc237219f4df48e440"
+  },
+  {
+    "repo": "FalkorDB/FalkorDB",
+    "path": "LICENSE.txt",
+    "error": "curl: (56) The requested URL returned error: 404\n"
+  },
+  {
+    "repo": "FalkorDB/FalkorDB",
+    "commit": "ed5b31553987c44ed516829631a9379b4589bc74",
+    "path": "LICENSE",
+    "url": "https://raw.githubusercontent.com/FalkorDB/FalkorDB/ed5b31553987c44ed516829631a9379b4589bc74/LICENSE",
+    "bytes": 34447,
+    "sha256": "0e8f0497016466a84975d296ae768e4adb16a7267b4a6ed373157be96d127dfc"
+  },
+  {
+    "repo": "mem0ai/mem0",
+    "commit": "c7ee362aff94a369af70f13f2b4f853f6793ff4c",
+    "path": "server/server_state.py",
+    "url": "https://raw.githubusercontent.com/mem0ai/mem0/c7ee362aff94a369af70f13f2b4f853f6793ff4c/server/server_state.py",
+    "bytes": 3160,
+    "sha256": "259d3413faf6fd04fc2b4613279cd54b6c2da032be42b8559b09b2e5bec33852"
+  }
+]

@@ -1,0 +1,53 @@
+{
+  "capturedAt": "2026-09-11T10:36:07.698Z",
+  "product": "QoderWake CN",
+  "observations": [
+    {
+      "url": "http://127.0.0.1:19830/work-management",
+      "file": "/Users/mac/Documents/New project 2/validation/qoderwake-reference/task-board-header.png",
+      "scope": "Cropped live viewport at x=240 to exclude account/sidebar project data",
+      "viewport": [
+        1440,
+        1000
+      ]
+    },
+    {
+      "url": "http://127.0.0.1:19830/management",
+      "file": "/Users/mac/Documents/New project 2/validation/qoderwake-reference/agent-management-header.png",
+      "scope": "Cropped live viewport at x=240 to exclude account/sidebar project data",
+      "viewport": [
+        1440,
+        1000
+      ]
+    },
+    {
+      "url": "http://127.0.0.1:19830/resources/skills",
+      "file": "/Users/mac/Documents/New project 2/validation/qoderwake-reference/skill-market.png",
+      "scope": "Cropped live viewport at x=240 to exclude account/sidebar project data",
+      "viewport": [
+        1440,
+        1000
+      ]
+    },
+    {
+      "url": "http://127.0.0.1:19830/resources/connector",
+      "file": "/Users/mac/Documents/New project 2/validation/qoderwake-reference/connector-market.png",
+      "scope": "Connector resource tab; no authorization actions",
+      "viewport": [
+        1440,
+        1000
+      ]
+    },
+    {
+      "url": "http://127.0.0.1:19830/resources/skills",
+      "file": "/Users/mac/Documents/New project 2/validation/qoderwake-reference/skill-market-mobile.png",
+      "scope": "Mobile skills resource page",
+      "viewport": [
+        390,
+        844
+      ]
+    }
+  ],
+  "uiOnly": true,
+  "noSourceBusinessDataUsedInPrototype": true
+}

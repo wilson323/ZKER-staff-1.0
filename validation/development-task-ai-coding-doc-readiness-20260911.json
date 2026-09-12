@@ -1,0 +1,389 @@
+{
+  "schemaVersion": 1,
+  "id": "ai-coding-doc-readiness-20260911",
+  "goal": "结合最新开发体系复查AI编程所需文档，明确缺口、优先级、既有文档归属及开发准入，修正接续入口的旧结论",
+  "scope": {
+    "allowed": [
+      "README.md",
+      "CONTEXT.md",
+      "docs/设计包/45-AI编程文档就绪审查与补齐清单.md",
+      "validation/development-task-ai-coding-doc-readiness-20260911.json",
+      "validation/ai-coding-doc-readiness-check.json",
+      "validation/check_ai_coding_doc_readiness.py",
+      "validation/ai-coding-doc-readiness-before-20260911.zip"
+    ],
+    "excluded": [
+      "产品源码/原需求与1.3原型修改",
+      "候选安装、数据库操作、真实模型和外部发送",
+      "Git写入、生产、长期记忆和全局Skill变更"
+    ]
+  },
+  "acceptance_criteria": [
+    "结论由当前文档与实际文件清单支撑，区分评审就绪和编码就绪",
+    "八类文档缺口明确现有归属、最小内容、阶段和判定出口",
+    "包含AI编码与产品AI的不同验证要求，避免重复治理和一次性细化全部需求",
+    "修正README/CONTEXT技术入口与选型排序漂移，保持原需求和产品未实现状态",
+    "引用和针对性检查通过，运行本地make verify并说明范围"
+  ],
+  "current_node": "N2",
+  "final_node": "N2",
+  "completed_nodes": [
+    "N1",
+    "N2"
+  ],
+  "failed_nodes": [],
+  "artifacts": [
+    {
+      "path": "README.md",
+      "sha256": "36dfe90e5fce112fd80c0487ea538d5504d356498f69b1609019f1097897d687"
+    },
+    {
+      "path": "CONTEXT.md",
+      "sha256": "89c574cede8624b37227f13b0082f5ea8873e9c12af771b2b4f796ab46242df7"
+    },
+    {
+      "path": "docs/设计包/45-AI编程文档就绪审查与补齐清单.md",
+      "sha256": "c57fd54e71ced4b7f5cc6a3b594290b2265e7590abb121f3a0d8e290938f603b"
+    },
+    {
+      "path": "validation/check_ai_coding_doc_readiness.py",
+      "sha256": "0f75c167d90c5ccbc7906b5dafb96f4403738abe7fefd47e4b2d3ae1506ad0df"
+    }
+  ],
+  "evidence": [
+    "validation/ai-coding-doc-readiness-check.json"
+  ],
+  "risks": [
+    "八类补齐清单尚未转成机器合同、夹具与实际启动/验证步骤；不能宣称实施就绪。"
+  ],
+  "approvals": [],
+  "status": "VERIFIED",
+  "intent": {
+    "source": "本会话用户：你确定现有的开发文档够了吗；结合最新的开发体系深度思考反思AI编程本项目还需要哪些文档",
+    "problem": "技术设计交付检查不能证明AI可按确定契约直接编码；接续入口仍落后于36—44号",
+    "users": [
+      "产品负责人",
+      "后续AI编码Agent及开发人员"
+    ],
+    "outcome": "可据此补齐首个切片合同的文档就绪判断与顺序，不冒充缺失合同已经生成"
+  },
+  "spec": {
+    "refs": [
+      "docs/开发体系.md",
+      ".agents/skills/oa-development-system/SKILL.md",
+      "docs/Anthropic开发体系研究-2026-09-11.md",
+      "docs/设计包/27-逻辑数据模型与接口契约.md",
+      "docs/设计包/43-技术实施路线与验证矩阵.md"
+    ],
+    "behavior": "复用原权威文件；只新增一份文档审查与补齐清单，修正两份导航，准确保留未决和NOT_RUN",
+    "contracts": [
+      "173项原追踪不变；产品状态不得升级",
+      "currentTask复用现有开发工作流，历史设计记录不抢占"
+    ],
+    "negativeCases": [
+      "计数/同一总文档引用不等于实现追踪",
+      "根目录存在Skill/CI配置不等于真实产品检查",
+      "缺失文件不得补虚构命令、负责人或运行证据"
+    ]
+  },
+  "plan": {
+    "files": [
+      "README.md",
+      "CONTEXT.md",
+      "docs/设计包/45-AI编程文档就绪审查与补齐清单.md"
+    ],
+    "checks": [
+      "python3 validation/check_ai_coding_doc_readiness.py",
+      "make verify"
+    ],
+    "highestRisk": "把审查完成与所列缺失合同已完成混淆；修改来源基线导致失真",
+    "rollback": "从本轮ZIP局部恢复README/CONTEXT；保留新增审查的事实边界，不修改原型/原需求"
+  },
+  "requirementIds": [],
+  "caseIds": [],
+  "review": {
+    "mode": "SELF_REVIEW_AND_INDEPENDENT_SCRIPT",
+    "findings": [
+      {
+        "issue": "NAVIGATION_STALE",
+        "status": "FIXED",
+        "evidence": [
+          "README.md",
+          "CONTEXT.md",
+          "validation/ai-coding-doc-readiness-before-20260911.zip"
+        ]
+      },
+      {
+        "issue": "IMPLEMENTATION_SPEC_NOT_READY",
+        "status": "OPEN_FOR_FUTURE_IMPLEMENTATION",
+        "evidence": [
+          "docs/设计包/45-AI编程文档就绪审查与补齐清单.md",
+          "validation/ai-coding-doc-readiness-check.json"
+        ]
+      }
+    ],
+    "evidence": [
+      "validation/ai-coding-doc-readiness-check.json"
+    ],
+    "checklist": [
+      {
+        "id": "D01-1",
+        "aspect": "当前资料与缺口证据",
+        "status": "GAP_ASSESSED_NOT_IMPLEMENTED",
+        "reference": "docs/设计包/45-AI编程文档就绪审查与补齐清单.md"
+      },
+      {
+        "id": "D01-2",
+        "aspect": "最小产物和既有归属",
+        "status": "GAP_ASSESSED_NOT_IMPLEMENTED",
+        "reference": "docs/设计包/45-AI编程文档就绪审查与补齐清单.md"
+      },
+      {
+        "id": "D01-3",
+        "aspect": "开发判定出口",
+        "status": "GAP_ASSESSED_NOT_IMPLEMENTED",
+        "reference": "docs/设计包/45-AI编程文档就绪审查与补齐清单.md"
+      },
+      {
+        "id": "D01-4",
+        "aspect": "阶段和未完成边界",
+        "status": "GAP_ASSESSED_NOT_IMPLEMENTED",
+        "reference": "docs/设计包/45-AI编程文档就绪审查与补齐清单.md"
+      },
+      {
+        "id": "D02-1",
+        "aspect": "当前资料与缺口证据",
+        "status": "GAP_ASSESSED_NOT_IMPLEMENTED",
+        "reference": "docs/设计包/45-AI编程文档就绪审查与补齐清单.md"
+      },
+      {
+        "id": "D02-2",
+        "aspect": "最小产物和既有归属",
+        "status": "GAP_ASSESSED_NOT_IMPLEMENTED",
+        "reference": "docs/设计包/45-AI编程文档就绪审查与补齐清单.md"
+      },
+      {
+        "id": "D02-3",
+        "aspect": "开发判定出口",
+        "status": "GAP_ASSESSED_NOT_IMPLEMENTED",
+        "reference": "docs/设计包/45-AI编程文档就绪审查与补齐清单.md"
+      },
+      {
+        "id": "D02-4",
+        "aspect": "阶段和未完成边界",
+        "status": "GAP_ASSESSED_NOT_IMPLEMENTED",
+        "reference": "docs/设计包/45-AI编程文档就绪审查与补齐清单.md"
+      },
+      {
+        "id": "D03-1",
+        "aspect": "当前资料与缺口证据",
+        "status": "GAP_ASSESSED_NOT_IMPLEMENTED",
+        "reference": "docs/设计包/45-AI编程文档就绪审查与补齐清单.md"
+      },
+      {
+        "id": "D03-2",
+        "aspect": "最小产物和既有归属",
+        "status": "GAP_ASSESSED_NOT_IMPLEMENTED",
+        "reference": "docs/设计包/45-AI编程文档就绪审查与补齐清单.md"
+      },
+      {
+        "id": "D03-3",
+        "aspect": "开发判定出口",
+        "status": "GAP_ASSESSED_NOT_IMPLEMENTED",
+        "reference": "docs/设计包/45-AI编程文档就绪审查与补齐清单.md"
+      },
+      {
+        "id": "D03-4",
+        "aspect": "阶段和未完成边界",
+        "status": "GAP_ASSESSED_NOT_IMPLEMENTED",
+        "reference": "docs/设计包/45-AI编程文档就绪审查与补齐清单.md"
+      },
+      {
+        "id": "D04-1",
+        "aspect": "当前资料与缺口证据",
+        "status": "GAP_ASSESSED_NOT_IMPLEMENTED",
+        "reference": "docs/设计包/45-AI编程文档就绪审查与补齐清单.md"
+      },
+      {
+        "id": "D04-2",
+        "aspect": "最小产物和既有归属",
+        "status": "GAP_ASSESSED_NOT_IMPLEMENTED",
+        "reference": "docs/设计包/45-AI编程文档就绪审查与补齐清单.md"
+      },
+      {
+        "id": "D04-3",
+        "aspect": "开发判定出口",
+        "status": "GAP_ASSESSED_NOT_IMPLEMENTED",
+        "reference": "docs/设计包/45-AI编程文档就绪审查与补齐清单.md"
+      },
+      {
+        "id": "D04-4",
+        "aspect": "阶段和未完成边界",
+        "status": "GAP_ASSESSED_NOT_IMPLEMENTED",
+        "reference": "docs/设计包/45-AI编程文档就绪审查与补齐清单.md"
+      },
+      {
+        "id": "D05-1",
+        "aspect": "当前资料与缺口证据",
+        "status": "GAP_ASSESSED_NOT_IMPLEMENTED",
+        "reference": "docs/设计包/45-AI编程文档就绪审查与补齐清单.md"
+      },
+      {
+        "id": "D05-2",
+        "aspect": "最小产物和既有归属",
+        "status": "GAP_ASSESSED_NOT_IMPLEMENTED",
+        "reference": "docs/设计包/45-AI编程文档就绪审查与补齐清单.md"
+      },
+      {
+        "id": "D05-3",
+        "aspect": "开发判定出口",
+        "status": "GAP_ASSESSED_NOT_IMPLEMENTED",
+        "reference": "docs/设计包/45-AI编程文档就绪审查与补齐清单.md"
+      },
+      {
+        "id": "D05-4",
+        "aspect": "阶段和未完成边界",
+        "status": "GAP_ASSESSED_NOT_IMPLEMENTED",
+        "reference": "docs/设计包/45-AI编程文档就绪审查与补齐清单.md"
+      },
+      {
+        "id": "D06-1",
+        "aspect": "当前资料与缺口证据",
+        "status": "GAP_ASSESSED_NOT_IMPLEMENTED",
+        "reference": "docs/设计包/45-AI编程文档就绪审查与补齐清单.md"
+      },
+      {
+        "id": "D06-2",
+        "aspect": "最小产物和既有归属",
+        "status": "GAP_ASSESSED_NOT_IMPLEMENTED",
+        "reference": "docs/设计包/45-AI编程文档就绪审查与补齐清单.md"
+      },
+      {
+        "id": "D06-3",
+        "aspect": "开发判定出口",
+        "status": "GAP_ASSESSED_NOT_IMPLEMENTED",
+        "reference": "docs/设计包/45-AI编程文档就绪审查与补齐清单.md"
+      },
+      {
+        "id": "D06-4",
+        "aspect": "阶段和未完成边界",
+        "status": "GAP_ASSESSED_NOT_IMPLEMENTED",
+        "reference": "docs/设计包/45-AI编程文档就绪审查与补齐清单.md"
+      },
+      {
+        "id": "D07-1",
+        "aspect": "当前资料与缺口证据",
+        "status": "GAP_ASSESSED_NOT_IMPLEMENTED",
+        "reference": "docs/设计包/45-AI编程文档就绪审查与补齐清单.md"
+      },
+      {
+        "id": "D07-2",
+        "aspect": "最小产物和既有归属",
+        "status": "GAP_ASSESSED_NOT_IMPLEMENTED",
+        "reference": "docs/设计包/45-AI编程文档就绪审查与补齐清单.md"
+      },
+      {
+        "id": "D07-3",
+        "aspect": "开发判定出口",
+        "status": "GAP_ASSESSED_NOT_IMPLEMENTED",
+        "reference": "docs/设计包/45-AI编程文档就绪审查与补齐清单.md"
+      },
+      {
+        "id": "D07-4",
+        "aspect": "阶段和未完成边界",
+        "status": "GAP_ASSESSED_NOT_IMPLEMENTED",
+        "reference": "docs/设计包/45-AI编程文档就绪审查与补齐清单.md"
+      },
+      {
+        "id": "D08-1",
+        "aspect": "当前资料与缺口证据",
+        "status": "GAP_ASSESSED_NOT_IMPLEMENTED",
+        "reference": "docs/设计包/45-AI编程文档就绪审查与补齐清单.md"
+      },
+      {
+        "id": "D08-2",
+        "aspect": "最小产物和既有归属",
+        "status": "GAP_ASSESSED_NOT_IMPLEMENTED",
+        "reference": "docs/设计包/45-AI编程文档就绪审查与补齐清单.md"
+      },
+      {
+        "id": "D08-3",
+        "aspect": "开发判定出口",
+        "status": "GAP_ASSESSED_NOT_IMPLEMENTED",
+        "reference": "docs/设计包/45-AI编程文档就绪审查与补齐清单.md"
+      },
+      {
+        "id": "D08-4",
+        "aspect": "阶段和未完成边界",
+        "status": "GAP_ASSESSED_NOT_IMPLEMENTED",
+        "reference": "docs/设计包/45-AI编程文档就绪审查与补齐清单.md"
+      }
+    ]
+  },
+  "nodes": [
+    {
+      "id": "N1",
+      "objective": "审查当前资料与最新开发体系，落盘缺口和修复导航",
+      "dependsOn": [],
+      "preconditions": [
+        "当前任务的前一任务已VERIFIED",
+        "已读取当前用户目标与开发体系/实际设计"
+      ],
+      "action": "以当前文件定位缺口，撰写45号并局部修正README/CONTEXT",
+      "tool_or_skill": "oa-development-system / ai-native-sdlc / production-grade-task-methodology / rg / Python",
+      "expected_output": "45号审查与两份一致的入口",
+      "validation": "证据引用、八类缺口、分阶段准入与反例逐条核对",
+      "success_condition": "审查回答本次目标，缺失合同保持待补而非伪造完成",
+      "failure_path": "新诊断后局部修复；不展开安装或产品实现",
+      "rollback_or_compensation": "使用本轮ZIP恢复本次导航修改",
+      "status": "VERIFIED"
+    },
+    {
+      "id": "N2",
+      "objective": "独立验证并交付",
+      "dependsOn": [
+        "N1"
+      ],
+      "preconditions": [
+        "N1产物完整且可读"
+      ],
+      "action": "检查原始产物和适用场景",
+      "tool_or_skill": "make verify / REVIEW.md",
+      "expected_output": "当前输入版本的检查结果",
+      "validation": "验收与证据逐项对应",
+      "success_condition": "无关键失败；未验证部分明确披露",
+      "failure_path": "有限修复或交付阻塞",
+      "rollback_or_compensation": "按本任务记录的恢复方案处理",
+      "status": "VERIFIED"
+    }
+  ],
+  "projectRoot": "/Users/mac/Documents/OA数字员工协作平台",
+  "createdAt": "2026-09-11T18:18:00.865025+00:00",
+  "baseline": {
+    "README.md": "2c7cc8d5f104c5e142763157c27871340e695fc272d146c343ec4f764f825e06",
+    "CONTEXT.md": "1c8818682ba1fad935832717bbca44b7f08db8efdf6dfb1fd8cd772fae86927e"
+  },
+  "skillsRead": [
+    {
+      "path": ".agents/skills/oa-development-system/SKILL.md",
+      "sha256": "2eb4d4f50e55c4e47866dc3f795504a4a7f4e58116be71237f378278697f0fd1",
+      "baselineComparison": "与本轮只读探测打印的哈希相同；无更早可信字节基线，不声称跨次无漂移"
+    },
+    {
+      "path": "/Users/mac/.agents/skills/ai-native-sdlc/SKILL.md",
+      "sha256": "743508a73ab71722c71c91808d67ee8a0d7faa325badbfce97afdc046931a5a9",
+      "baselineComparison": "与本轮只读探测打印的哈希相同；无更早可信字节基线，不声称跨次无漂移"
+    },
+    {
+      "path": "/Users/mac/.cc-switch/skills/task-quality-assurance-v2/production-grade-task-methodology/SKILL.md",
+      "sha256": "20034b8dbda12fbd133be3c575ec42ebbd35969e771c587c055b82f2dc114ca2",
+      "baselineComparison": "与本轮只读探测打印的哈希相同；无更早可信字节基线，不声称跨次无漂移"
+    }
+  ],
+  "skillsReadTiming": "哈希在读取后采集；首次读取的精确原子时间未捕获。",
+  "updatedAt": "2026-09-11T18:23:32.347098+00:00",
+  "verifiedAt": "2026-09-11T18:24:01.329862+00:00",
+  "completionScope": "DOCUMENT_READINESS_AUDIT_AND_NAVIGATION_CORRECTION_ONLY",
+  "implementationSpecStatus": "NOT_READY",
+  "productReady": false
+}

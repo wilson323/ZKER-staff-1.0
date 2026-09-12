@@ -1,0 +1,13 @@
+--- before/labels.py
++++ after/labels.py
+@@ -1,2 +1,9 @@
+ def parse_labels(items):
+-    return [value.strip() for value in items]
++    labels = []
++    seen = set()
++    for value in items:
++        label = value.strip()
++        if label and label not in seen:
++            labels.append(label)
++            seen.add(label)
++    return labels

@@ -1,0 +1,622 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:zker:design:market-adoption:v2.2",
+  "title": "Employee marketplace read-model candidates",
+  "$comment": "Design only. UI action keys must map to existing per-resource authorization. Schema validation is not permission or runtime evidence.",
+  "x-design-status": "PROPOSED_NOT_IMPLEMENTED",
+  "oneOf": [
+    {
+      "$ref": "#/$defs/MarketResourceCard"
+    },
+    {
+      "$ref": "#/$defs/MarketAdoptionResult"
+    }
+  ],
+  "$defs": {
+    "MarketResourceCard": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "resourceKind": {
+          "enum": [
+            "AGENT",
+            "SKILL",
+            "TOOL"
+          ]
+        },
+        "sourcePublicationId": {
+          "type": "string",
+          "pattern": "^[A-Za-z0-9][A-Za-z0-9._:-]{0,127}$"
+        },
+        "sourceResourceId": {
+          "type": "string",
+          "pattern": "^[A-Za-z0-9][A-Za-z0-9._:-]{0,127}$"
+        },
+        "sourceVersion": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 1000
+        },
+        "sourceDigest": {
+          "type": "string",
+          "pattern": "^sha256:[0-9a-f]{64}$"
+        },
+        "name": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 1000
+        },
+        "description": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 1000
+        },
+        "publisherDisplayName": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 1000
+        },
+        "allowedActions": {
+          "type": "array",
+          "uniqueItems": true,
+          "items": {
+            "enum": [
+              "VIEW",
+              "COPY_USE",
+              "COPY_EDIT",
+              "REFERENCE",
+              "USE_IN_NODE"
+            ]
+          }
+        },
+        "readiness": {
+          "enum": [
+            "READY",
+            "NEEDS_AUTHORIZATION",
+            "NEEDS_CONFIGURATION",
+            "NEEDS_PUBLICATION",
+            "INCOMPATIBLE",
+            "WITHDRAWN"
+          ]
+        },
+        "visibleDependencySummaries": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 1000
+          }
+        },
+        "availabilityReasons": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 1000
+          }
+        }
+      },
+      "required": [
+        "resourceKind",
+        "sourcePublicationId",
+        "sourceResourceId",
+        "sourceVersion",
+        "sourceDigest",
+        "name",
+        "description",
+        "publisherDisplayName",
+        "allowedActions",
+        "readiness",
+        "visibleDependencySummaries",
+        "availabilityReasons"
+      ]
+    },
+    "MarketAdoptionResult": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "operationId": {
+          "type": "string",
+          "pattern": "^[A-Za-z0-9][A-Za-z0-9._:-]{0,127}$"
+        },
+        "resourceKind": {
+          "enum": [
+            "AGENT",
+            "SKILL",
+            "TOOL"
+          ]
+        },
+        "sourcePublicationId": {
+          "type": "string",
+          "pattern": "^[A-Za-z0-9][A-Za-z0-9._:-]{0,127}$"
+        },
+        "sourceResourceId": {
+          "type": "string",
+          "pattern": "^[A-Za-z0-9][A-Za-z0-9._:-]{0,127}$"
+        },
+        "sourceVersion": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 1000
+        },
+        "sourceDigest": {
+          "type": "string",
+          "pattern": "^sha256:[0-9a-f]{64}$"
+        },
+        "requestedMode": {
+          "enum": [
+            "COPY_USE",
+            "COPY_EDIT",
+            "REFERENCE"
+          ]
+        },
+        "targetOwnerMembershipId": {
+          "type": "string",
+          "pattern": "^[A-Za-z0-9][A-Za-z0-9._:-]{0,127}$"
+        },
+        "targetScope": {
+          "const": "PERSONAL"
+        },
+        "operationState": {
+          "enum": [
+            "pending",
+            "completed",
+            "failed",
+            "result_unknown"
+          ]
+        },
+        "localResourceRef": {
+          "type": "string",
+          "pattern": "^[A-Za-z0-9][A-Za-z0-9._:-]{0,127}$"
+        },
+        "lineageRef": {
+          "type": "string",
+          "pattern": "^[A-Za-z0-9][A-Za-z0-9._:-]{0,127}$"
+        },
+        "referenceBindingRef": {
+          "type": "string",
+          "pattern": "^[A-Za-z0-9][A-Za-z0-9._:-]{0,127}$"
+        },
+        "readiness": {
+          "enum": [
+            "READY",
+            "NEEDS_AUTHORIZATION",
+            "NEEDS_CONFIGURATION",
+            "NEEDS_PUBLICATION",
+            "INCOMPATIBLE",
+            "WITHDRAWN"
+          ]
+        },
+        "blockingReasons": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 1000
+          }
+        },
+        "nodeEligible": {
+          "type": "boolean"
+        },
+        "allowedActions": {
+          "type": "array",
+          "uniqueItems": true,
+          "items": {
+            "enum": [
+              "VIEW_LOCAL",
+              "CONFIGURE",
+              "USE_IN_NODE",
+              "EDIT_LOCAL",
+              "VIEW_SOURCE_DIFF"
+            ]
+          }
+        },
+        "createdAt": {
+          "type": "string",
+          "format": "date-time"
+        }
+      },
+      "required": [
+        "operationId",
+        "resourceKind",
+        "sourcePublicationId",
+        "sourceResourceId",
+        "sourceVersion",
+        "sourceDigest",
+        "requestedMode",
+        "targetOwnerMembershipId",
+        "targetScope",
+        "operationState",
+        "readiness",
+        "blockingReasons",
+        "nodeEligible",
+        "allowedActions",
+        "createdAt"
+      ],
+      "allOf": [
+        {
+          "if": {
+            "properties": {
+              "operationState": {
+                "const": "completed"
+              },
+              "requestedMode": {
+                "enum": [
+                  "COPY_USE",
+                  "COPY_EDIT"
+                ]
+              }
+            },
+            "required": [
+              "operationState",
+              "requestedMode"
+            ]
+          },
+          "then": {
+            "required": [
+              "localResourceRef",
+              "lineageRef"
+            ]
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "operationState": {
+                "const": "completed"
+              },
+              "requestedMode": {
+                "const": "REFERENCE"
+              }
+            },
+            "required": [
+              "operationState",
+              "requestedMode"
+            ]
+          },
+          "then": {
+            "required": [
+              "referenceBindingRef"
+            ]
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "readiness": {
+                "const": "READY"
+              }
+            },
+            "required": [
+              "readiness"
+            ]
+          },
+          "then": {
+            "properties": {
+              "blockingReasons": {
+                "maxItems": 0
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "nodeEligible": {
+                "const": true
+              }
+            },
+            "required": [
+              "nodeEligible"
+            ]
+          },
+          "then": {
+            "properties": {
+              "readiness": {
+                "const": "READY"
+              },
+              "operationState": {
+                "const": "completed"
+              }
+            }
+          }
+        }
+      ]
+    }
+  },
+  "examples": [
+    {
+      "resourceKind": "SKILL",
+      "sourcePublicationId": "pub-budget",
+      "sourceResourceId": "skill-budget",
+      "sourceVersion": "3",
+      "sourceDigest": "sha256:bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+      "name": "预算核验技能",
+      "description": "校验币种、合计和价格依据",
+      "publisherDisplayName": "企业能力维护组",
+      "allowedActions": [
+        "VIEW",
+        "COPY_USE"
+      ],
+      "readiness": "READY",
+      "visibleDependencySummaries": [],
+      "availabilityReasons": []
+    },
+    {
+      "operationId": "adopt-1",
+      "resourceKind": "SKILL",
+      "sourcePublicationId": "pub-budget",
+      "sourceResourceId": "skill-budget",
+      "sourceVersion": "3",
+      "sourceDigest": "sha256:bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+      "requestedMode": "COPY_USE",
+      "targetOwnerMembershipId": "member-demo",
+      "targetScope": "PERSONAL",
+      "operationState": "completed",
+      "localResourceRef": "my-skill-budget",
+      "lineageRef": "lineage-1",
+      "readiness": "READY",
+      "blockingReasons": [],
+      "nodeEligible": true,
+      "allowedActions": [
+        "VIEW_LOCAL",
+        "USE_IN_NODE",
+        "VIEW_SOURCE_DIFF"
+      ],
+      "createdAt": "2026-09-11T20:00:00Z"
+    },
+    {
+      "operationId": "adopt-tool",
+      "resourceKind": "TOOL",
+      "sourcePublicationId": "pub-mail",
+      "sourceResourceId": "tool-mail",
+      "sourceVersion": "3",
+      "sourceDigest": "sha256:bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+      "requestedMode": "COPY_USE",
+      "targetOwnerMembershipId": "member-demo",
+      "targetScope": "PERSONAL",
+      "operationState": "completed",
+      "localResourceRef": "my-mail-tool",
+      "lineageRef": "lineage-mail",
+      "readiness": "NEEDS_CONFIGURATION",
+      "blockingReasons": [
+        "需要本人合法连接身份"
+      ],
+      "nodeEligible": false,
+      "allowedActions": [
+        "VIEW_LOCAL",
+        "CONFIGURE"
+      ],
+      "createdAt": "2026-09-11T20:00:00Z"
+    },
+    {
+      "operationId": "reference-1",
+      "resourceKind": "SKILL",
+      "sourcePublicationId": "pub-budget",
+      "sourceResourceId": "skill-budget",
+      "sourceVersion": "3",
+      "sourceDigest": "sha256:bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+      "requestedMode": "REFERENCE",
+      "targetOwnerMembershipId": "member-demo",
+      "targetScope": "PERSONAL",
+      "operationState": "completed",
+      "readiness": "READY",
+      "blockingReasons": [],
+      "nodeEligible": true,
+      "allowedActions": [
+        "VIEW_LOCAL",
+        "USE_IN_NODE",
+        "VIEW_SOURCE_DIFF"
+      ],
+      "createdAt": "2026-09-11T20:00:00Z",
+      "referenceBindingRef": "ref-1"
+    }
+  ],
+  "x-invalid-examples": [
+    {
+      "label": "completed copy requires local resource",
+      "value": {
+        "operationId": "adopt-1",
+        "resourceKind": "SKILL",
+        "sourcePublicationId": "pub-budget",
+        "sourceResourceId": "skill-budget",
+        "sourceVersion": "3",
+        "sourceDigest": "sha256:bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+        "requestedMode": "COPY_USE",
+        "targetOwnerMembershipId": "member-demo",
+        "targetScope": "PERSONAL",
+        "operationState": "completed",
+        "lineageRef": "lineage-1",
+        "readiness": "READY",
+        "blockingReasons": [],
+        "nodeEligible": true,
+        "allowedActions": [
+          "VIEW_LOCAL",
+          "USE_IN_NODE",
+          "VIEW_SOURCE_DIFF"
+        ],
+        "createdAt": "2026-09-11T20:00:00Z"
+      }
+    },
+    {
+      "label": "completed copy requires lineage",
+      "value": {
+        "operationId": "adopt-1",
+        "resourceKind": "SKILL",
+        "sourcePublicationId": "pub-budget",
+        "sourceResourceId": "skill-budget",
+        "sourceVersion": "3",
+        "sourceDigest": "sha256:bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+        "requestedMode": "COPY_USE",
+        "targetOwnerMembershipId": "member-demo",
+        "targetScope": "PERSONAL",
+        "operationState": "completed",
+        "localResourceRef": "my-skill-budget",
+        "readiness": "READY",
+        "blockingReasons": [],
+        "nodeEligible": true,
+        "allowedActions": [
+          "VIEW_LOCAL",
+          "USE_IN_NODE",
+          "VIEW_SOURCE_DIFF"
+        ],
+        "createdAt": "2026-09-11T20:00:00Z"
+      }
+    },
+    {
+      "label": "reference requires reference binding",
+      "value": {
+        "operationId": "reference-1",
+        "resourceKind": "SKILL",
+        "sourcePublicationId": "pub-budget",
+        "sourceResourceId": "skill-budget",
+        "sourceVersion": "3",
+        "sourceDigest": "sha256:bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+        "requestedMode": "REFERENCE",
+        "targetOwnerMembershipId": "member-demo",
+        "targetScope": "PERSONAL",
+        "operationState": "completed",
+        "readiness": "READY",
+        "blockingReasons": [],
+        "nodeEligible": true,
+        "allowedActions": [
+          "VIEW_LOCAL",
+          "USE_IN_NODE",
+          "VIEW_SOURCE_DIFF"
+        ],
+        "createdAt": "2026-09-11T20:00:00Z"
+      }
+    },
+    {
+      "label": "no copied author credentials",
+      "value": {
+        "operationId": "adopt-1",
+        "resourceKind": "SKILL",
+        "sourcePublicationId": "pub-budget",
+        "sourceResourceId": "skill-budget",
+        "sourceVersion": "3",
+        "sourceDigest": "sha256:bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+        "requestedMode": "COPY_USE",
+        "targetOwnerMembershipId": "member-demo",
+        "targetScope": "PERSONAL",
+        "operationState": "completed",
+        "localResourceRef": "my-skill-budget",
+        "lineageRef": "lineage-1",
+        "readiness": "READY",
+        "blockingReasons": [],
+        "nodeEligible": true,
+        "allowedActions": [
+          "VIEW_LOCAL",
+          "USE_IN_NODE",
+          "VIEW_SOURCE_DIFF"
+        ],
+        "createdAt": "2026-09-11T20:00:00Z",
+        "authorCredential": "demo-not-a-secret"
+      }
+    },
+    {
+      "label": "no private source memory",
+      "value": {
+        "resourceKind": "SKILL",
+        "sourcePublicationId": "pub-budget",
+        "sourceResourceId": "skill-budget",
+        "sourceVersion": "3",
+        "sourceDigest": "sha256:bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+        "name": "预算核验技能",
+        "description": "校验币种、合计和价格依据",
+        "publisherDisplayName": "企业能力维护组",
+        "allowedActions": [
+          "VIEW",
+          "COPY_USE"
+        ],
+        "readiness": "READY",
+        "visibleDependencySummaries": [],
+        "availabilityReasons": [],
+        "privateMemory": [
+          "not-shareable"
+        ]
+      }
+    },
+    {
+      "label": "missing configuration cannot be node eligible",
+      "value": {
+        "operationId": "adopt-tool",
+        "resourceKind": "TOOL",
+        "sourcePublicationId": "pub-mail",
+        "sourceResourceId": "tool-mail",
+        "sourceVersion": "3",
+        "sourceDigest": "sha256:bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+        "requestedMode": "COPY_USE",
+        "targetOwnerMembershipId": "member-demo",
+        "targetScope": "PERSONAL",
+        "operationState": "completed",
+        "localResourceRef": "my-mail-tool",
+        "lineageRef": "lineage-mail",
+        "readiness": "NEEDS_CONFIGURATION",
+        "blockingReasons": [
+          "需要本人合法连接身份"
+        ],
+        "nodeEligible": true,
+        "allowedActions": [
+          "VIEW_LOCAL",
+          "CONFIGURE"
+        ],
+        "createdAt": "2026-09-11T20:00:00Z"
+      }
+    },
+    {
+      "label": "READY has no blockers",
+      "value": {
+        "operationId": "adopt-1",
+        "resourceKind": "SKILL",
+        "sourcePublicationId": "pub-budget",
+        "sourceResourceId": "skill-budget",
+        "sourceVersion": "3",
+        "sourceDigest": "sha256:bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+        "requestedMode": "COPY_USE",
+        "targetOwnerMembershipId": "member-demo",
+        "targetScope": "PERSONAL",
+        "operationState": "completed",
+        "localResourceRef": "my-skill-budget",
+        "lineageRef": "lineage-1",
+        "readiness": "READY",
+        "blockingReasons": [
+          "missing"
+        ],
+        "nodeEligible": true,
+        "allowedActions": [
+          "VIEW_LOCAL",
+          "USE_IN_NODE",
+          "VIEW_SOURCE_DIFF"
+        ],
+        "createdAt": "2026-09-11T20:00:00Z"
+      }
+    },
+    {
+      "label": "pending cannot be node eligible",
+      "value": {
+        "operationId": "adopt-1",
+        "resourceKind": "SKILL",
+        "sourcePublicationId": "pub-budget",
+        "sourceResourceId": "skill-budget",
+        "sourceVersion": "3",
+        "sourceDigest": "sha256:bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+        "requestedMode": "COPY_USE",
+        "targetOwnerMembershipId": "member-demo",
+        "targetScope": "PERSONAL",
+        "operationState": "pending",
+        "localResourceRef": "my-skill-budget",
+        "lineageRef": "lineage-1",
+        "readiness": "READY",
+        "blockingReasons": [],
+        "nodeEligible": true,
+        "allowedActions": [
+          "VIEW_LOCAL",
+          "USE_IN_NODE",
+          "VIEW_SOURCE_DIFF"
+        ],
+        "createdAt": "2026-09-11T20:00:00Z"
+      }
+    }
+  ]
+}

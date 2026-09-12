@@ -1,0 +1,59 @@
+{
+  "revision": "v2.3",
+  "passed": true,
+  "checks": [
+    {
+      "name": "Unchanged business documents, 153 requirements, schemas and contracts preserve hashes",
+      "passed": true,
+      "detail": 13
+    },
+    {
+      "name": "Three real browser suites passed",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "204 layout combinations and 57 interactions",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "21 current prototype screenshots exist",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "Browser result matches current prototype hash",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "No page errors and no outgoing prototype requests",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "All local Markdown links and line anchors resolve",
+      "passed": true,
+      "detail": {
+        "count": 389,
+        "failures": []
+      }
+    },
+    {
+      "name": "Five live reference captures exist",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "Guide and UI handoff agree on counts",
+      "passed": true,
+      "detail": null
+    }
+  ],
+  "localLinks": 389,
+  "errors": [],
+  "limitations": [
+    "Document and local UI verification only; existing business implementation and real dependencies not tested this turn."
+  ]
+}

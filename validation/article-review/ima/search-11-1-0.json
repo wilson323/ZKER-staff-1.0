@@ -1,0 +1,381 @@
+{
+  "retrievedAt": "2026-09-11T23:55:13.057280+00:00",
+  "operation": "get_knowledge_list",
+  "request": {
+    "knowledge_base_id": "-v0uVQmR3R54LtoVzNkzAz2ug-pWSkJgJMP2wmztuFo=",
+    "cursor": "",
+    "limit": 50
+  },
+  "exitCode": 0,
+  "response": {
+    "code": 0,
+    "msg": "success",
+    "data": {
+      "knowledge_list": [
+        {
+          "media_id": "folder_7474707636960559",
+          "title": "harness",
+          "parent_folder_id": "7435298417965424",
+          "tags": [],
+          "media_type": 99
+        },
+        {
+          "media_id": "folder_7470259481090774",
+          "title": "loop",
+          "parent_folder_id": "7435298417965424",
+          "tags": [],
+          "media_type": 99
+        },
+        {
+          "media_id": "folder_7461235285059832",
+          "title": "wiki",
+          "parent_folder_id": "7435298417965424",
+          "tags": [],
+          "media_type": 99
+        },
+        {
+          "media_id": "folder_7458313193155446",
+          "title": "论文",
+          "parent_folder_id": "7435298417965424",
+          "tags": [],
+          "media_type": 99
+        },
+        {
+          "media_id": "folder_7456881152911052",
+          "title": "ACP",
+          "parent_folder_id": "7435298417965424",
+          "tags": [],
+          "media_type": 99
+        },
+        {
+          "media_id": "folder_7455386105834200",
+          "title": "安全",
+          "parent_folder_id": "7435298417965424",
+          "tags": [],
+          "media_type": 99
+        },
+        {
+          "media_id": "folder_7455385132748469",
+          "title": "产品思维",
+          "parent_folder_id": "7435298417965424",
+          "tags": [],
+          "media_type": 99
+        },
+        {
+          "media_id": "folder_7455010686266104",
+          "title": "Prompt",
+          "parent_folder_id": "7435298417965424",
+          "tags": [],
+          "media_type": 99
+        },
+        {
+          "media_id": "folder_7454701440228359",
+          "title": "SDD",
+          "parent_folder_id": "7435298417965424",
+          "tags": [],
+          "media_type": 99
+        },
+        {
+          "media_id": "folder_7454648378091280",
+          "title": "sandbox",
+          "parent_folder_id": "7435298417965424",
+          "tags": [],
+          "media_type": 99
+        },
+        {
+          "media_id": "folder_7452169632487964",
+          "title": "hooks",
+          "parent_folder_id": "7435298417965424",
+          "tags": [],
+          "media_type": 99
+        },
+        {
+          "media_id": "folder_7451944071229899",
+          "title": "RAG",
+          "parent_folder_id": "7435298417965424",
+          "tags": [],
+          "media_type": 99
+        },
+        {
+          "media_id": "folder_7451940514461137",
+          "title": "agent",
+          "parent_folder_id": "7435298417965424",
+          "tags": [],
+          "media_type": 99
+        },
+        {
+          "media_id": "folder_7451940300527283",
+          "title": "理念",
+          "parent_folder_id": "7435298417965424",
+          "tags": [],
+          "media_type": 99
+        },
+        {
+          "media_id": "folder_7451939801406307",
+          "title": "手册",
+          "parent_folder_id": "7435298417965424",
+          "tags": [],
+          "media_type": 99
+        },
+        {
+          "media_id": "folder_7451939549772202",
+          "title": "llm",
+          "parent_folder_id": "7435298417965424",
+          "tags": [],
+          "media_type": 99
+        },
+        {
+          "media_id": "folder_7451939407165693",
+          "title": "应用",
+          "parent_folder_id": "7435298417965424",
+          "tags": [],
+          "media_type": 99
+        },
+        {
+          "media_id": "folder_7451939264557465",
+          "title": "优化",
+          "parent_folder_id": "7435298417965424",
+          "tags": [],
+          "media_type": 99
+        },
+        {
+          "media_id": "folder_7450676774839305",
+          "title": "mcp",
+          "parent_folder_id": "7435298417965424",
+          "tags": [],
+          "media_type": 99
+        },
+        {
+          "media_id": "folder_7442867815454437",
+          "title": "skills",
+          "parent_folder_id": "7435298417965424",
+          "tags": [],
+          "media_type": 99
+        },
+        {
+          "media_id": "weburl_8518e6c23c3fdd4a0bd762e3d5bfa0cb_5ecaff4568bf4c3eeed4e40872a49b037435298417965424",
+          "title": "视频号",
+          "parent_folder_id": "7435298417965424",
+          "tags": [],
+          "media_type": 2
+        },
+        {
+          "media_id": "weburl_8518e6c23c3fdd4a0bd762e3d5bfa0cb_71fae84e6ba3e7c28bc68a1bf596f7c97435298417965424",
+          "title": "Prompt: HUMAN 3.0 Self-Discovery & Metatype Test",
+          "parent_folder_id": "7435298417965424",
+          "tags": [],
+          "media_type": 2
+        },
+        {
+          "media_id": "weburl_8518e6c23c3fdd4a0bd762e3d5bfa0cb_31640e9bcc6bcf944b9a60778ee402b47435298417965424",
+          "title": "视频号",
+          "parent_folder_id": "7435298417965424",
+          "tags": [],
+          "media_type": 2
+        },
+        {
+          "media_id": "wechatarticle_8518e6c23c3fdd4a0bd762e3d5bfa0cb_da64e921d2b46c3b5edec625861e6e867435298417965424",
+          "title": "Claude CodePlugins：从「会用」到「会造」的完整指南",
+          "parent_folder_id": "7435298417965424",
+          "tags": [],
+          "media_type": 6
+        },
+        {
+          "media_id": "weburl_8518e6c23c3fdd4a0bd762e3d5bfa0cb_29fb59a40383dcf63a6119cc34b2941b7435298417965424",
+          "title": "Open Design 深度分析：当 Coding Agent 成为你的设计师-知乎专栏",
+          "parent_folder_id": "7435298417965424",
+          "tags": [],
+          "media_type": 2
+        },
+        {
+          "media_id": "weburl_8518e6c23c3fdd4a0bd762e3d5bfa0cb_ed6d82e191defc4323b3eb25db35e8fb7435298417965424",
+          "title": "视频号",
+          "parent_folder_id": "7435298417965424",
+          "tags": [],
+          "media_type": 2
+        },
+        {
+          "media_id": "weburl_8518e6c23c3fdd4a0bd762e3d5bfa0cb_2d295069f9a4ea7c1b3cdf4f4ac0273b7435298417965424",
+          "title": "视频号",
+          "parent_folder_id": "7435298417965424",
+          "tags": [],
+          "media_type": 2
+        },
+        {
+          "media_id": "weburl_8518e6c23c3fdd4a0bd762e3d5bfa0cb_e5348c5ff3f91788221ce06df7191ad67435298417965424",
+          "title": "GitHub - tinyhumansai/openhuman: Your Personal AI super intelligence. Private, Simple and extremely powerful.-GitHub",
+          "parent_folder_id": "7435298417965424",
+          "tags": [],
+          "media_type": 2
+        },
+        {
+          "media_id": "weburl_8518e6c23c3fdd4a0bd762e3d5bfa0cb_63c72b643f28db48685d513a95720c8b7435298417965424",
+          "title": "每天一个热门框架全面解析-OpenHuman：一个主打私有、简单、强大的个人AI超级助理-知乎专栏",
+          "parent_folder_id": "7435298417965424",
+          "tags": [],
+          "media_type": 2
+        },
+        {
+          "media_id": "weburl_8518e6c23c3fdd4a0bd762e3d5bfa0cb_9a45340485c87d03033325b9b9f9c42e7435298417965424",
+          "title": "OpenHuman 深度解析：23k Star 的开源桌面 AI 超级助手完全指南 - 七牛云行业应用",
+          "parent_folder_id": "7435298417965424",
+          "tags": [],
+          "media_type": 2
+        },
+        {
+          "media_id": "note_8518e6c23c3fdd4a0bd762e3d5bfa0cb_74643115427839807435298417965424",
+          "title": "AI时代下该如何提升提问的能力",
+          "parent_folder_id": "7435298417965424",
+          "tags": [],
+          "media_type": 11
+        },
+        {
+          "media_id": "weburl_8518e6c23c3fdd4a0bd762e3d5bfa0cb_9b58f05f797c519a77001e1754eb29717435298417965424",
+          "title": "从玩具到生产力：用真实项目讲透 AI Agent 的 Harness Engineering-知乎专栏",
+          "parent_folder_id": "7435298417965424",
+          "tags": [],
+          "media_type": 2
+        },
+        {
+          "media_id": "weburl_8518e6c23c3fdd4a0bd762e3d5bfa0cb_0af60e18bc747bb121ef24281c628f0b7435298417965424",
+          "title": "（万字长文）说说大模型中的推理加速技术-知乎专栏",
+          "parent_folder_id": "7435298417965424",
+          "tags": [],
+          "media_type": 2
+        },
+        {
+          "media_id": "wechatarticle_8518e6c23c3fdd4a0bd762e3d5bfa0cb_231b4735de17953170f38598a0787c857435298417965424",
+          "title": "OpenAI翁家翌：梯度之外，下一个AI训练范式有着落了？",
+          "parent_folder_id": "7435298417965424",
+          "tags": [],
+          "media_type": 6
+        },
+        {
+          "media_id": "wechatarticle_8518e6c23c3fdd4a0bd762e3d5bfa0cb_88f93b6f1d7d5d4721541ad630899ac37435298417965424",
+          "title": "0%完成率！Claude、GPT、Gemini 全灭，SWE-Bench作者新作把AI圈干沉默了",
+          "parent_folder_id": "7435298417965424",
+          "tags": [],
+          "media_type": 6
+        },
+        {
+          "media_id": "weburl_8518e6c23c3fdd4a0bd762e3d5bfa0cb_5e81b3ea450135d68273e25f2f70cf9c7435298417965424",
+          "title": "从 Graphify 到 Hyper-Extract：当 Karpathy 的\"知识编译\"遇到超图-知乎专栏",
+          "parent_folder_id": "7435298417965424",
+          "tags": [],
+          "media_type": 2
+        },
+        {
+          "media_id": "weburl_8518e6c23c3fdd4a0bd762e3d5bfa0cb_15305e36dbb4351cf24d4eb922452ce37435298417965424",
+          "title": "3.77 微秒实例化的多 Agent 框架，6.4k star，接了 100+ 个 LLM | PraisonAI，6.4k ⭐。多 Agent 编排框…-知乎想法",
+          "parent_folder_id": "7435298417965424",
+          "tags": [],
+          "media_type": 2
+        },
+        {
+          "media_id": "weburl_8518e6c23c3fdd4a0bd762e3d5bfa0cb_9b740e173e91fdce7493628e4d7f42127435298417965424",
+          "title": "Tasi Harness 本地AI Agent正式发布！浏览器自动化与技能双线发力-知乎专栏",
+          "parent_folder_id": "7435298417965424",
+          "tags": [],
+          "media_type": 2
+        },
+        {
+          "media_id": "weburl_8518e6c23c3fdd4a0bd762e3d5bfa0cb_2ebe0b72c02b9f23cc27f7290b90cfd87435298417965424",
+          "title": "Scaling Managed Agents: Decoupling the brain from the hands",
+          "parent_folder_id": "7435298417965424",
+          "tags": [],
+          "media_type": 2
+        },
+        {
+          "media_id": "weburl_8518e6c23c3fdd4a0bd762e3d5bfa0cb_cadb41451dbd798311f337b5408a887e7435298417965424",
+          "title": "Qoder 工程实践：Harness Engineering 指南-知乎专栏",
+          "parent_folder_id": "7435298417965424",
+          "tags": [],
+          "media_type": 2
+        },
+        {
+          "media_id": "weburl_8518e6c23c3fdd4a0bd762e3d5bfa0cb_22177432e6bd1ddf69f8e926ef0e76097435298417965424",
+          "title": "Hermes Agent 源码解析：A Closed Learning Loop 是如何让 Agent 越用越聪明的？-知乎专栏",
+          "parent_folder_id": "7435298417965424",
+          "tags": [],
+          "media_type": 2
+        },
+        {
+          "media_id": "weburl_8518e6c23c3fdd4a0bd762e3d5bfa0cb_699c9b952e2a1fe944725240fc2a4f677435298417965424",
+          "title": "让 AI 稳定交付全栈项目：我的 Claude Code + OpenSpec + Superpowers 三件套实战-知乎专栏",
+          "parent_folder_id": "7435298417965424",
+          "tags": [],
+          "media_type": 2
+        },
+        {
+          "media_id": "pdf_8518e6c23c3fdd4a0bd762e3d5bfa0cb_5db2a8ef92248522c3afcf99545096997435298417965424",
+          "title": "这就是ChatGPT.pdf",
+          "parent_folder_id": "7435298417965424",
+          "tags": [],
+          "media_type": 1
+        },
+        {
+          "media_id": "pdf_8518e6c23c3fdd4a0bd762e3d5bfa0cb_3d69f8e7353e9e9818373460d78bda677435298417965424",
+          "title": "openclaw 使用记录.pdf",
+          "parent_folder_id": "7435298417965424",
+          "tags": [],
+          "media_type": 1
+        },
+        {
+          "media_id": "weburl_8518e6c23c3fdd4a0bd762e3d5bfa0cb_d725dc470d4645df4c60a2b48e84055f7435298417965424",
+          "title": "Claude Code 新增 /loop 命令：把定时任务搬进会话里-知乎专栏",
+          "parent_folder_id": "7435298417965424",
+          "tags": [],
+          "media_type": 2
+        },
+        {
+          "media_id": "pdf_8518e6c23c3fdd4a0bd762e3d5bfa0cb_40a0eaaa72f295c8fccd865040bc437f7435298417965424",
+          "title": "The-Complete-Guide-to-Building-Skill-for-Claude.pdf",
+          "parent_folder_id": "7435298417965424",
+          "tags": [],
+          "media_type": 1
+        },
+        {
+          "media_id": "pdf_8518e6c23c3fdd4a0bd762e3d5bfa0cb_75bc9921d7f07285ca8f7e37c98d541a7435298417965424",
+          "title": "The-Complete-Guide-to-Building-Skill-for-Claude.no_watermark.zh-CN.pdf",
+          "parent_folder_id": "7435298417965424",
+          "tags": [],
+          "media_type": 1
+        },
+        {
+          "media_id": "weburl_8518e6c23c3fdd4a0bd762e3d5bfa0cb_f2e8e657eff0ddb1a5210248cdfea8957435298417965424",
+          "title": "Claude Code 设计思想-知乎专栏",
+          "parent_folder_id": "7435298417965424",
+          "tags": [],
+          "media_type": 2
+        },
+        {
+          "media_id": "weburl_8518e6c23c3fdd4a0bd762e3d5bfa0cb_42d9ca41ba3bb80f1e3bae21d4bd4cff7435298417965424",
+          "title": "eval + builtins：比 tools 更好的 Agent 架构范式-知乎专栏",
+          "parent_folder_id": "7435298417965424",
+          "tags": [],
+          "media_type": 2
+        },
+        {
+          "media_id": "wechatarticle_8518e6c23c3fdd4a0bd762e3d5bfa0cb_524236d5dc0c398a490c43caf268728c7435298417965424",
+          "title": "我花了两天,把那个会自学的 Hermes Agent 跑通了",
+          "parent_folder_id": "7435298417965424",
+          "tags": [],
+          "media_type": 6
+        }
+      ],
+      "is_end": false,
+      "next_cursor": "CDI=",
+      "current_path": [
+        {
+          "folder_id": "7435298417965424",
+          "name": "驾驭AI - Harness",
+          "file_number": "0",
+          "folder_number": "0",
+          "parent_folder_id": "",
+          "is_top": false
+        }
+      ],
+      "searched_tags": []
+    }
+  }
+}

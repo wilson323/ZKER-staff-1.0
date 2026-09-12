@@ -1,0 +1,42 @@
+{
+  "scope": "STAFFDECK_LOCAL_STATIC_RESEARCH_ONLY",
+  "checks": [
+    {
+      "path": "/Users/mac/Documents/StaffDeck-main/frontend-enterprise/src/pages/chat/components/ScheduledDraftCard.tsx",
+      "sha256": "4ec7784c9c9088d98ebb9e18a1750d15d3c6707b33ba678eaa31cf95bdd85d7d",
+      "pass": true,
+      "lineExists": true
+    },
+    {
+      "path": "/Users/mac/Documents/StaffDeck-main/frontend-enterprise/src/pages/chat/components/KnowledgeCitationList.tsx",
+      "sha256": "2f6036343765d8c473230ae7536130175c87e63603b0edec9465b50575b9d39f",
+      "pass": true,
+      "lineExists": true
+    },
+    {
+      "path": "/Users/mac/Documents/StaffDeck-main/frontend-enterprise/src/pages/KnowledgePage.tsx",
+      "sha256": "853cbf0db7a02d8eac6c24d79197e7c21310571c3d6d525d1938b868e7f9711c",
+      "pass": true,
+      "lineExists": true
+    },
+    {
+      "path": "/Users/mac/Documents/StaffDeck-main/backend/app/evolution/schema.py",
+      "sha256": "0272bbeb5d20ddb538dd539d1840bdb33b159057327280fde40a0a566ba100f7",
+      "pass": true,
+      "lineExists": true
+    },
+    {
+      "path": "/Users/mac/Documents/StaffDeck-main/backend/app/evolution/service.py",
+      "sha256": "e73d2d9b8527db58fc371be4ff485c5b83cb64b315a5a20b1f2d8c112b94f9c6",
+      "pass": true,
+      "lineExists": true
+    }
+  ],
+  "status": "PASS",
+  "parentWebRecheck": [
+    "https://docs.qoder.cn/qoderwake/manage-wakers",
+    "https://learn.microsoft.com/en-us/fabric/data-science/concept-data-agent",
+    "https://pair.withgoogle.com/guidebook-v2/chapter/feedback-controls/"
+  ],
+  "date": "2026-09-11"
+}

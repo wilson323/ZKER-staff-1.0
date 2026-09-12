@@ -1,0 +1,11 @@
+{
+  "checkedAt": "2026-09-11T17:41:47.605250+00:00",
+  "scope": "PORTABLE_SKILL_INTEGRATION_NOTE",
+  "canonicalEntry": "/Users/mac/.agents/skills/ai-native-sdlc/SKILL.md",
+  "entrySha256": "743508a73ab71722c71c91808d67ee8a0d7faa325badbfce97afdc046931a5a9",
+  "ownForwardResults": "validation/development-portable-forward-results.json",
+  "ownTrialArchive": "validation/development-portable-forward-artifacts.zip",
+  "sharedInputGate": "validation/development_workflow.py shared_skill_snapshot + 7 negative/freshness tests; make eval 47 passed",
+  "doNotOverwrite": "Preserve existing task pointer and final source paths; compatibility helpers and other session work retained.",
+  "pending": "Unify sources.md/source JSON IDs; complete source report, final make verify, verify source freshness."
+}

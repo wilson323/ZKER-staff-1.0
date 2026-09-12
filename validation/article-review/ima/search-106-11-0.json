@@ -1,0 +1,305 @@
+{
+  "retrievedAt": "2026-09-11T23:55:17.637905+00:00",
+  "operation": "search_knowledge",
+  "request": {
+    "knowledge_base_id": "AVxwRl_hl86lACm6UgT5F8QeuGywpAf22Iw7xFXuzXI=",
+    "cursor": "",
+    "query": "工具"
+  },
+  "exitCode": 0,
+  "response": {
+    "code": 0,
+    "msg": "success",
+    "data": {
+      "info_list": [
+        {
+          "media_id": "wechatarticle_4c4f8606da1f82a31c4760c087ab8a13_d472e53c96e02fb6e4d8a66025ad0d397311597441671523",
+          "title": "Bing MCP：中文必应高效搜索工具！",
+          "parent_folder_id": "7311597441671523",
+          "highlight_content": "",
+          "media_type": 6
+        },
+        {
+          "media_id": "wechatarticle_4c4f8606da1f82a31c4760c087ab8a13_431c89b4d662e046b9d8249334602c977311597441671523",
+          "title": "Palantir的强大生态工具 MCP 介绍",
+          "parent_folder_id": "7311597441671523",
+          "highlight_content": "",
+          "media_type": 6
+        },
+        {
+          "media_id": "wechatarticle_4c4f8606da1f82a31c4760c087ab8a13_4f0d7f6545921c700b74c3a9dd8365617311597441671523",
+          "title": "设计、工具与人工智能边界",
+          "parent_folder_id": "7311597441671523",
+          "highlight_content": "",
+          "media_type": 6
+        },
+        {
+          "media_id": "wechatarticle_4c4f8606da1f82a31c4760c087ab8a13_c1934881d87720f4ecb4d14b09471afe7311597441671523",
+          "title": "AI+MCP+测试工具来了！",
+          "parent_folder_id": "7311597441671523",
+          "highlight_content": "",
+          "media_type": 6
+        },
+        {
+          "media_id": "wechatarticle_4c4f8606da1f82a31c4760c087ab8a13_0dbb02db7474049dc05152e63671f0d97311597441671523",
+          "title": "OpenMemory MCP：跨AI工具的记忆服务",
+          "parent_folder_id": "7311597441671523",
+          "highlight_content": "",
+          "media_type": 6
+        },
+        {
+          "media_id": "wechatarticle_4c4f8606da1f82a31c4760c087ab8a13_555b9625541fee651d1995a1419137207311597441671523",
+          "title": "Stateless MCP：工具连接改为自包含请求",
+          "parent_folder_id": "7311597441671523",
+          "highlight_content": "",
+          "media_type": 6
+        },
+        {
+          "media_id": "wechatarticle_4c4f8606da1f82a31c4760c087ab8a13_c1c201a2d637dfaa01a82406bb3e5cb57311597441671523",
+          "title": "MCP进阶：一键批量搞定MCP工具部署",
+          "parent_folder_id": "7311597441671523",
+          "highlight_content": "",
+          "media_type": 6
+        },
+        {
+          "media_id": "wechatarticle_4c4f8606da1f82a31c4760c087ab8a13_b68fef1400c7e2e7433fe1ab8fe2ca6a7311597441671523",
+          "title": "MCP Server 开发必备：MCP Inspector 调试工具",
+          "parent_folder_id": "7311597441671523",
+          "highlight_content": "",
+          "media_type": 6
+        },
+        {
+          "media_id": "wechatarticle_4c4f8606da1f82a31c4760c087ab8a13_c7594e0cc7c18d2da136c98a309cf3727311597441671523",
+          "title": "如何看待MCP？大模型工具调用的解耦！",
+          "parent_folder_id": "7311597441671523",
+          "highlight_content": "",
+          "media_type": 6
+        },
+        {
+          "media_id": "wechatarticle_4c4f8606da1f82a31c4760c087ab8a13_65c7f5b95e00e514653334524b8918fc7311597441671523",
+          "title": "鹅厂这个低调工具，专帮大模型“扫雷”",
+          "parent_folder_id": "7311597441671523",
+          "highlight_content": "",
+          "media_type": 6
+        },
+        {
+          "media_id": "wechatarticle_4c4f8606da1f82a31c4760c087ab8a13_d55456e62509565c207b443cc2a3f61d7311597441671523",
+          "title": "开发MCP服务，何时使用工具？何时使用资源？",
+          "parent_folder_id": "7311597441671523",
+          "highlight_content": "",
+          "media_type": 6
+        },
+        {
+          "media_id": "wechatarticle_4c4f8606da1f82a31c4760c087ab8a13_a72f88dd6ea6186ada4c2ca2428f52397311597441671523",
+          "title": "RAG-MCP：突破大模型工具调用瓶颈，告别Prompt膨胀",
+          "parent_folder_id": "7311597441671523",
+          "highlight_content": "",
+          "media_type": 6
+        },
+        {
+          "media_id": "wechatarticle_4c4f8606da1f82a31c4760c087ab8a13_4900662439096f8daf7531a519aa56d37311597441671523",
+          "title": "RAG-MCP：突破大模型工具调用瓶颈，告别Prompt膨胀",
+          "parent_folder_id": "7311597441671523",
+          "highlight_content": "",
+          "media_type": 6
+        },
+        {
+          "media_id": "wechatarticle_4c4f8606da1f82a31c4760c087ab8a13_bd12da6c4ad130409715dbd66760af737311597441671523",
+          "title": "给MCP加上RAG，工具准确率提升200%，起飞~",
+          "parent_folder_id": "7311597441671523",
+          "highlight_content": "",
+          "media_type": 6
+        },
+        {
+          "media_id": "wechatarticle_4c4f8606da1f82a31c4760c087ab8a13_4d8669b9dfb8f428fc60fbcfc4acf9e07311597441671523",
+          "title": "GitHub 开源项目：MCP Registry——AI工具生态的「应用商店」",
+          "parent_folder_id": "7311597441671523",
+          "highlight_content": "",
+          "media_type": 6
+        },
+        {
+          "media_id": "wechatarticle_4c4f8606da1f82a31c4760c087ab8a13_08521725f3d22d609e1c1fad789a15f17311597441671523",
+          "title": "开发 .NET 本地工具作为 GitHub Copilot MCP 服务器",
+          "parent_folder_id": "7311597441671523",
+          "highlight_content": "",
+          "media_type": 6
+        },
+        {
+          "media_id": "wechatarticle_4c4f8606da1f82a31c4760c087ab8a13_391049bea6c79a505d74efddf20c84197311597441671523",
+          "title": "所有AI工具共享持久私有记忆，OpenMemory MCP杀疯了~",
+          "parent_folder_id": "folder_7336170807645602",
+          "highlight_content": "",
+          "media_type": 6
+        },
+        {
+          "media_id": "wechatarticle_4c4f8606da1f82a31c4760c087ab8a13_31456973dc133a44a301bb044d7e4a547311597441671523",
+          "title": "A16z：深入探讨 MCP 与 AI 工具的未来",
+          "parent_folder_id": "7311597441671523",
+          "highlight_content": "",
+          "media_type": 6
+        },
+        {
+          "media_id": "wechatarticle_4c4f8606da1f82a31c4760c087ab8a13_e4ea44282df4fee6bde6a9d256b2e9cb7311597441671523",
+          "title": "MCP Gateway，轻松聚合AI工具，打造你的超级智能体！",
+          "parent_folder_id": "7311597441671523",
+          "highlight_content": "",
+          "media_type": 6
+        },
+        {
+          "media_id": "wechatarticle_4c4f8606da1f82a31c4760c087ab8a13_9b519c2246ee5b7dfaadb0bab2350f3c7311597441671523",
+          "title": "MCP Security Inspector：AI驱动的MCP协议安全检测工具",
+          "parent_folder_id": "7311597441671523",
+          "highlight_content": "",
+          "media_type": 6
+        },
+        {
+          "media_id": "wechatarticle_4c4f8606da1f82a31c4760c087ab8a13_d5768372594a8abb7c9808970dbffa277311597441671523",
+          "title": "Google AI工具箱：生产级数据库MCP来了？",
+          "parent_folder_id": "7311597441671523",
+          "highlight_content": "",
+          "media_type": 6
+        },
+        {
+          "media_id": "wechatarticle_4c4f8606da1f82a31c4760c087ab8a13_062d3430190577870d569abf50ebbcf77311597441671523",
+          "title": "MCP 还是 CLI？AI 工具链的两条路",
+          "parent_folder_id": "7311597441671523",
+          "highlight_content": "",
+          "media_type": 6
+        },
+        {
+          "media_id": "wechatarticle_4c4f8606da1f82a31c4760c087ab8a13_c3d8cd4c6c8f953faee3463017883b917311597441671523",
+          "title": "拨开MCP的迷雾，聊聊LLM工具调用的本质（一）：Function Calling",
+          "parent_folder_id": "7311597441671523",
+          "highlight_content": "",
+          "media_type": 6
+        },
+        {
+          "media_id": "wechatarticle_4c4f8606da1f82a31c4760c087ab8a13_ce20f3913ca6c22e5fe28778722b084d7311597441671523",
+          "title": "CAMEL-AI x MCP：一篇文章读懂如何让 AI 智能体玩转所有工具",
+          "parent_folder_id": "7311597441671523",
+          "highlight_content": "",
+          "media_type": 6
+        },
+        {
+          "media_id": "pdf_4c4f8606da1f82a31c4760c087ab8a13_8682d820483f1d3f9db91c02e6c81c867311597441671523",
+          "title": "腾讯 AI Agent 生态战略：模型-工具-场景闭环构建超级入口壁垒.pdf",
+          "parent_folder_id": "7311597441671523",
+          "highlight_content": "",
+          "media_type": 1
+        },
+        {
+          "media_id": "wechatarticle_4c4f8606da1f82a31c4760c087ab8a13_f865931cf5a7e70f2622dbbac035233c7311597441671523",
+          "title": "面向多工具任务调度的两种路径：MCP vs Agent + Function call",
+          "parent_folder_id": "7311597441671523",
+          "highlight_content": "",
+          "media_type": 6
+        },
+        {
+          "media_id": "wechatarticle_4c4f8606da1f82a31c4760c087ab8a13_bb94ddd08ecb4389aa335a91ee9e927f7311597441671523",
+          "title": "A2A + MCP = AI Agent 完全体？AI Agent 既能 “单挑” 工具，又能 “群殴” 任务。",
+          "parent_folder_id": "7311597441671523",
+          "highlight_content": "",
+          "media_type": 6
+        },
+        {
+          "media_id": "wechatarticle_4c4f8606da1f82a31c4760c087ab8a13_c20a9ae082b3cf57cd19c2382ac1b5897311597441671523",
+          "title": "A2A与MCP协议对比：智能体协作与工具连接的互补范式",
+          "parent_folder_id": "7311597441671523",
+          "highlight_content": "",
+          "media_type": 6
+        },
+        {
+          "media_id": "wechatarticle_4c4f8606da1f82a31c4760c087ab8a13_3ccf432a7c7ac3e73482b470ca9788b77311597441671523",
+          "title": "MasterGo MCP Server：将设计工具与 AI 模型打通的技术新突破！",
+          "parent_folder_id": "7311597441671523",
+          "highlight_content": "",
+          "media_type": 6
+        },
+        {
+          "media_id": "wechatarticle_4c4f8606da1f82a31c4760c087ab8a13_d5f3b65c5941cef177066d78b58d662f7311597441671523",
+          "title": "模型上下文协议（MCP）：让AI工具与真实数据世界无缝对接",
+          "parent_folder_id": "7311597441671523",
+          "highlight_content": "",
+          "media_type": 6
+        },
+        {
+          "media_id": "wechatarticle_4c4f8606da1f82a31c4760c087ab8a13_1a0cf1684daeb0fa1d352ec886d18a287311597441671523",
+          "title": "拨开MCP的迷雾，聊聊LLM工具调用的本质（二）：Prompt和API限定法",
+          "parent_folder_id": "7311597441671523",
+          "highlight_content": "",
+          "media_type": 6
+        },
+        {
+          "media_id": "wechatarticle_4c4f8606da1f82a31c4760c087ab8a13_3a09cea8963d4a3295c27666c4e19ad17311597441671523",
+          "title": "MCP实战｜从0到1构建异步 DeepResearch 工具，支持进度推送与超时控制",
+          "parent_folder_id": "7311597441671523",
+          "highlight_content": "",
+          "media_type": 6
+        },
+        {
+          "media_id": "wechatarticle_4c4f8606da1f82a31c4760c087ab8a13_186b7e5b3a1c1b31eec38536496ee2897311597441671523",
+          "title": "一款专为微信聊天记录管理而设计的开源工具：Chatlog",
+          "parent_folder_id": "7311597441671523",
+          "highlight_content": "",
+          "media_type": 6
+        },
+        {
+          "media_id": "wechatarticle_4c4f8606da1f82a31c4760c087ab8a13_185aad986f66fa15eedc6224eed191bf7311597441671523",
+          "title": "一款专为 MCP 服务器设计的安全扫描开源工具：MCP-Scan",
+          "parent_folder_id": "7311597441671523",
+          "highlight_content": "",
+          "media_type": 6
+        },
+        {
+          "media_id": "wechatarticle_4c4f8606da1f82a31c4760c087ab8a13_4e1b1c4ad9fb31b984522445c2faa7947311597441671523",
+          "title": "停止在低代码层面内卷！解剖MCP工具链/A2A协同的底层生存法则！",
+          "parent_folder_id": "7311597441671523",
+          "highlight_content": "",
+          "media_type": 6
+        },
+        {
+          "media_id": "wechatarticle_4c4f8606da1f82a31c4760c087ab8a13_35305c17c77090cef1425e6b228786b87311597441671523",
+          "title": "解锁 MCP 工具管理新姿势：Docker MCP 如何让开发者的生活更简单、更安全？",
+          "parent_folder_id": "7311597441671523",
+          "highlight_content": "",
+          "media_type": 6
+        },
+        {
+          "media_id": "wechatarticle_4c4f8606da1f82a31c4760c087ab8a13_61d27a8b3bf284c9c0a6047bd1a921c57311597441671523",
+          "title": "警惕！MCP 曝出“工具投毒”致命漏洞，你的敏感数据和操作权限或被悄然窃取",
+          "parent_folder_id": "7311597441671523",
+          "highlight_content": "",
+          "media_type": 6
+        },
+        {
+          "media_id": "wechatarticle_4c4f8606da1f82a31c4760c087ab8a13_3e994271b60630ac981bd47d7f5537597311597441671523",
+          "title": "智能体落地“三驾马车”问世：MCP调优工具+A2A协作+AG-UI协议解读",
+          "parent_folder_id": "folder_7336171986238540",
+          "highlight_content": "",
+          "media_type": 6
+        },
+        {
+          "media_id": "wechatarticle_4c4f8606da1f82a31c4760c087ab8a13_87514c7d4aa216c9b81061f43fc332687311597441671523",
+          "title": "让 Agent 告别低效工具调用：用代码执行重构 MCP 工作流，节省 90% 的上下文开销",
+          "parent_folder_id": "7311597441671523",
+          "highlight_content": "",
+          "media_type": 6
+        },
+        {
+          "media_id": "wechatarticle_4c4f8606da1f82a31c4760c087ab8a13_12af7eb2eac47e1d05bfaf7c03ac04517311597441671523",
+          "title": "Quant-Skills 专栏开篇 | 我们给 AI 做了一套量化工具集，它现在能自己搜论文、挖因子、写策略了",
+          "parent_folder_id": "7311597441671523",
+          "highlight_content": "",
+          "media_type": 6
+        },
+        {
+          "media_id": "wechatarticle_4c4f8606da1f82a31c4760c087ab8a13_82c82a74c21ccf0a8bd394a7480371387311597441671523",
+          "title": "MCP不止工具调用！MCP联合创建者：绝大多数人用法都太初级！曝MCP五大原语、高阶玩法：丰富人机交互体验；MCP的未来在Web",
+          "parent_folder_id": "7311597441671523",
+          "highlight_content": "",
+          "media_type": 6
+        }
+      ]
+    }
+  }
+}

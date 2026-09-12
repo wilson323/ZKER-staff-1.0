@@ -1,0 +1,115 @@
+{
+  "retrievedAt": "2026-09-11T23:55:13.948127+00:00",
+  "operation": "get_knowledge_list",
+  "request": {
+    "knowledge_base_id": "rTA7c5cPSJzEEruONUS2Ku0Afd01qlq2a64D56ZbH8o=",
+    "cursor": "CDI=",
+    "limit": 50
+  },
+  "exitCode": 0,
+  "response": {
+    "code": 0,
+    "msg": "success",
+    "data": {
+      "knowledge_list": [
+        {
+          "media_id": "wechatarticle_ec33932d8853cbba6c243aca003fa1c2_0aef68bbd5f2e9d83571d8e6f4f3a0a67493979318811421",
+          "title": "DeepSeek Harness，是今年最有野心的一次Agent开源",
+          "parent_folder_id": "7493979318811421",
+          "tags": [],
+          "media_type": 6
+        },
+        {
+          "media_id": "wechatarticle_ec33932d8853cbba6c243aca003fa1c2_07505bc4c1b37f1f15b4a46ce74719af7493979318811421",
+          "title": "什么是 DeepSeek Harness？一键上手 + 图形界面 + 插件商店",
+          "parent_folder_id": "7493979318811421",
+          "tags": [],
+          "media_type": 6
+        },
+        {
+          "media_id": "wechatarticle_ec33932d8853cbba6c243aca003fa1c2_948926511cd72ac8240c3f6076a1e0347493979318811421",
+          "title": "“DeepSeek Harness”已上线",
+          "parent_folder_id": "7493979318811421",
+          "tags": [],
+          "media_type": 6
+        },
+        {
+          "media_id": "wechatarticle_ec33932d8853cbba6c243aca003fa1c2_34ff8a6186c5b964bc4a594fbdd4e3367493979318811421",
+          "title": "DeepSeek官方Agent来了，它不想做Codex",
+          "parent_folder_id": "7493979318811421",
+          "tags": [],
+          "media_type": 6
+        },
+        {
+          "media_id": "wechatarticle_ec33932d8853cbba6c243aca003fa1c2_bccb72e2dbff517ee0ef4d160193d3587493979318811421",
+          "title": "Deepseek harness尝鲜：利弊都很明显",
+          "parent_folder_id": "7493979318811421",
+          "tags": [],
+          "media_type": 6
+        },
+        {
+          "media_id": "wechatarticle_ec33932d8853cbba6c243aca003fa1c2_484003f97ba207f3b842303e6b6e43bf7493979318811421",
+          "title": "首发体验 | DeepSeek Harness 来了，它不想做下一个Codex",
+          "parent_folder_id": "7493979318811421",
+          "tags": [],
+          "media_type": 6
+        },
+        {
+          "media_id": "pdf_ec33932d8853cbba6c243aca003fa1c2_a49313ee4dbf70ce24f5a5ac4a048fc47493979318811421",
+          "title": "A Programming Paradigm for Spatiotemporal Composability.pdf",
+          "parent_folder_id": "7493979318811421",
+          "tags": [],
+          "media_type": 1
+        },
+        {
+          "media_id": "wechatarticle_ec33932d8853cbba6c243aca003fa1c2_afaf971cddb5a1606f6b86a3145eca087493979318811421",
+          "title": "DeepSeek Harness 深度解剖：一切皆插件，Agent 的\"安卓时刻\"来了",
+          "parent_folder_id": "7493979318811421",
+          "tags": [],
+          "media_type": 6
+        },
+        {
+          "media_id": "wechatarticle_ec33932d8853cbba6c243aca003fa1c2_d19dcc4f328e4384a9da6fd65e73ad6d7493979318811421",
+          "title": "DeepSeek Harness 开发者预览版：一切皆插件",
+          "parent_folder_id": "7493979318811421",
+          "tags": [],
+          "media_type": 6
+        },
+        {
+          "media_id": "wechatarticle_ec33932d8853cbba6c243aca003fa1c2_ad1e01e645a69ea597912e5f32dceb307493979318811421",
+          "title": "DeepSeek Harness刚发布，UP主做的插件冲上榜一！",
+          "parent_folder_id": "7493979318811421",
+          "tags": [],
+          "media_type": 6
+        },
+        {
+          "media_id": "wechatarticle_ec33932d8853cbba6c243aca003fa1c2_81b7ec1ef2c11827034e77e9fab7bdfd7493979318811421",
+          "title": "刚刚，DeepSeek Harness震撼开源：一切皆插件",
+          "parent_folder_id": "7493979318811421",
+          "tags": [],
+          "media_type": 6
+        },
+        {
+          "media_id": "wechatarticle_ec33932d8853cbba6c243aca003fa1c2_bde3970c786448b3ea3dec6fac7047b57493979318811421",
+          "title": "DeepSeek正式开源Harness：它终于有了自己的Vibe Coding入口",
+          "parent_folder_id": "7493979318811421",
+          "tags": [],
+          "media_type": 6
+        }
+      ],
+      "is_end": true,
+      "next_cursor": "CD4=",
+      "current_path": [
+        {
+          "folder_id": "7493979318811421",
+          "name": "DeepSeek Harness",
+          "file_number": "0",
+          "folder_number": "0",
+          "parent_folder_id": "",
+          "is_top": false
+        }
+      ],
+      "searched_tags": []
+    }
+  }
+}
