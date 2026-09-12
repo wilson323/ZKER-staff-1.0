@@ -32,3 +32,7 @@ coverage/
 .pnpm-store/
 apps/api/dist/
 apps/web/dist/
+
+# 运行时本地数据（数字员工登记等）
+/data/
+apps/api/data/

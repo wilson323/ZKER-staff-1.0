@@ -2,7 +2,11 @@
  * API 客户端单元测试（纯函数契约）。
  */
 import { describe, expect, it, vi, afterEach } from "vitest";
-import { fetchDigitalEmployees, fetchHealth } from "./api-client";
+import {
+  createDigitalEmployee,
+  fetchDigitalEmployees,
+  fetchHealth,
+} from "./api-client";
 
 describe("api-client", () => {
   afterEach(() => {
@@ -38,5 +42,26 @@ describe("api-client", () => {
     const list = await fetchDigitalEmployees();
     expect(list.total).toBe(0);
     expect(list.items).toEqual([]);
+  });
+
+  it("posts create digital employee payload", async () => {
+    const fetchMock = vi.fn().mockResolvedValue({
+      ok: true,
+      json: async () => ({
+        id: "uuid-1",
+        name: "aide",
+        createdAt: "2026-09-12T02:00:00.000Z",
+      }),
+    });
+    vi.stubGlobal("fetch", fetchMock);
+    const created = await createDigitalEmployee("aide");
+    expect(created.id).toBe("uuid-1");
+    expect(fetchMock).toHaveBeenCalledWith(
+      "/api/v1/digital-employees",
+      expect.objectContaining({
+        method: "POST",
+        body: JSON.stringify({ name: "aide" }),
+      }),
+    );
   });
 });

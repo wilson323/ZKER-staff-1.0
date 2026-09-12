@@ -1,9 +1,10 @@
 <script setup lang="ts">
 /**
- * M0 工作台壳：展示真实 API 探测结果，不编造员工。
+ * M0+ 工作台：真实健康/员工列表/创建/AI 探测，禁止 mock 员工。
  */
 import { onMounted, ref } from "vue";
 import {
+  createDigitalEmployee,
   fetchAiProbe,
   fetchDigitalEmployees,
   fetchHealth,
@@ -16,6 +17,9 @@ const health = ref<HealthStatus | null>(null);
 const employees = ref<DigitalEmployeeListResponse | null>(null);
 const aiProbe = ref<AiProbeResult | null>(null);
 const error = ref<string | null>(null);
+const createName = ref("");
+const creating = ref(false);
+const createError = ref<string | null>(null);
 
 /**
  * 并行加载三项真实探测。
@@ -36,6 +40,28 @@ async function loadStatus(): Promise<void> {
   }
 }
 
+/**
+ * 提交真实创建请求并刷新列表。
+ */
+async function onCreateEmployee(): Promise<void> {
+  createError.value = null;
+  const name = createName.value.trim();
+  if (!name) {
+    createError.value = "请输入数字员工名称";
+    return;
+  }
+  creating.value = true;
+  try {
+    await createDigitalEmployee(name);
+    createName.value = "";
+    employees.value = await fetchDigitalEmployees();
+  } catch (err: unknown) {
+    createError.value = err instanceof Error ? err.message : String(err);
+  } finally {
+    creating.value = false;
+  }
+}
+
 onMounted(() => {
   void loadStatus();
 });
@@ -45,8 +71,10 @@ onMounted(() => {
   <main class="shell">
     <header class="hero">
       <p class="brand">ZKER Staff</p>
-      <h1>OA 数字员工协作平台 · M0</h1>
-      <p class="lead">工程门禁壳：只展示真实 API 回读，禁止 mock 员工。</p>
+      <h1>OA 数字员工协作平台</h1>
+      <p class="lead">
+        M0+ 登记切片：真实 API 回读与持久化创建，禁止 mock 员工。
+      </p>
     </header>
 
     <section v-if="error" class="panel error">
@@ -61,12 +89,37 @@ onMounted(() => {
         <pre v-if="health">{{ health }}</pre>
         <p v-else>加载中…</p>
       </article>
-      <article class="panel">
+
+      <article class="panel employees">
         <h2>数字员工登记</h2>
         <p v-if="employees">total = {{ employees.total }}</p>
-        <pre v-if="employees">{{ employees }}</pre>
+        <ul v-if="employees && employees.items.length" class="employee-list">
+          <li v-for="item in employees.items" :key="item.id">
+            <strong>{{ item.name }}</strong>
+            <span>{{ item.id }}</span>
+            <time>{{ item.createdAt }}</time>
+          </li>
+        </ul>
+        <p v-else-if="employees">暂无登记</p>
         <p v-else>加载中…</p>
+
+        <form class="create-form" @submit.prevent="onCreateEmployee">
+          <label for="de-name">新建数字员工</label>
+          <input
+            id="de-name"
+            v-model="createName"
+            type="text"
+            maxlength="80"
+            placeholder="例如 research-aide"
+            :disabled="creating"
+          />
+          <button type="submit" :disabled="creating">
+            {{ creating ? "创建中…" : "创建并持久化" }}
+          </button>
+          <p v-if="createError" class="form-error">{{ createError }}</p>
+        </form>
       </article>
+
       <article class="panel">
         <h2>AI 探测</h2>
         <pre v-if="aiProbe">{{ aiProbe }}</pre>
@@ -163,13 +216,66 @@ body {
   border-color: color-mix(in srgb, var(--danger) 50%, transparent);
 }
 
-button {
+.employee-list {
+  list-style: none;
+  margin: 0 0 1rem;
+  padding: 0;
+  display: grid;
+  gap: 0.55rem;
+}
+
+.employee-list li {
+  display: grid;
+  gap: 0.15rem;
+  padding: 0.55rem 0.65rem;
+  background: rgba(0, 0, 0, 0.18);
+  border-radius: 8px;
+}
+
+.employee-list span,
+.employee-list time {
+  color: var(--muted);
+  font-size: 0.75rem;
+  word-break: break-all;
+}
+
+.create-form {
+  display: grid;
+  gap: 0.45rem;
   margin-top: 0.75rem;
+}
+
+.create-form label {
+  font-size: 0.85rem;
+  color: var(--muted);
+}
+
+.create-form input {
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: 8px;
+  background: rgba(0, 0, 0, 0.25);
+  color: var(--ink);
+  padding: 0.5rem 0.65rem;
+}
+
+.form-error {
+  margin: 0;
+  color: var(--danger);
+  font-size: 0.8rem;
+}
+
+button {
+  margin-top: 0.25rem;
   background: var(--accent);
   color: #062018;
   border: 0;
   border-radius: 8px;
   padding: 0.45rem 0.9rem;
   cursor: pointer;
+}
+
+button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
 }
 </style>

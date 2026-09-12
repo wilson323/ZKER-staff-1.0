@@ -1,8 +1,8 @@
 # OA 数字员工协作平台落地计划（ZKER-staff-1.0）
 
-> **当前优先级**：**Agent 全权已授权** — M0 工程门禁真实编码进行中。  
+> **当前优先级**：**Agent 全权已授权** — M0 门禁已通；M0+ 数字员工登记持久化本地已落地（等 CI verify 变绿后再 push）。  
 > **有效分支**：`cursor/oa-digital-employee-platform-530e`。  
-> **与 main 关系**：`main` = 已入库设计事实；本 feature = 对齐文档 + M0 实现。  
+> **与 main 关系**：`main` = 已入库设计事实；本 feature = 对齐文档 + M0/M0+ 实现。  
 > **裁决入口**：[agent-decisions-m0.md](./agent-decisions-m0.md)、[product-requirements-alignment.md](./product-requirements-alignment.md)。  
 > **历史**：曾 `CODING_PAUSED` → 文档轨重开 → 2026-09-12 全权授权后恢复编码。
 
@@ -28,8 +28,8 @@
 
 | 路径 | 技术 | 说明 |
 |---|---|---|
-| `apps/api` | NestJS | `/api/v1/health`、digital-employees、ai/probe |
-| `apps/web` | Vite Vue3 | 最小壳，调用真实 API |
+| `apps/api` | NestJS | `/api/v1/health`、digital-employees GET/POST（JSON 文件持久化）、ai/probe |
+| `apps/web` | Vite Vue3 | 真实列表 + 创建表单，调用真实 API |
 | 根 | pnpm + Makefile | `install` / `build` / `test` / `ci` |
 
 许可证见根 `NOTICE.md`。产品 OA 底座验证通过后，允许目录级替换本工程层。
@@ -40,6 +40,7 @@
 |---|---|
 | Owner 授权 | **已解除**（全权） |
 | M0 口径 | **已统一** |
+| GitHub `make verify` | **阻塞 push**：`shared skill needs an existing absolute root`；由 CI 修复任务处理中 |
 | 产品 OA 底座终选 | **不阻塞 M0**；阻塞的是「宣称终态商用完成」 |
 | 完整 72 AC | **不在 M0 范围** |
 
@@ -47,6 +48,8 @@
 
 - [x] Owner 裁决：重开 feature 文档轨  
 - [x] Owner 全权授权；Agent 写入底座/M0 裁决  
-- [ ] `make ci` 绿；health / employees / ai probe 真实验证  
-- [ ] Draft PR #3 更新为含 M0 代码  
-- [ ] M0 通过后按 47 号启动 M1-01 切片规划  
+- [x] `make ci` 绿；health / employees / ai probe 真实验证（本地）  
+- [x] M0+：数字员工 POST 创建 + JSON 持久化 + 前端列表/创建（本地已验；待 CI 绿后 push）  
+- [ ] GitHub Actions `verify` 变绿  
+- [ ] Draft PR #3 同步 M0+ 代码  
+- [ ] 下一切片：最小工作流连接闭环（或按 47 号规划 M1-01，不抢跑完整运行时）  
