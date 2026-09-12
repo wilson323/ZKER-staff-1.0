@@ -1,0 +1,168 @@
+{
+  "schemaVersion": 1,
+  "id": "task-m1-03-source-snapshot-20260912",
+  "goal": "M1-03 来源确认与执行快照最小可验证切片",
+  "scope": {
+    "allowed": [
+      "apps/api/src/workbench/snapshot.*",
+      "apps/api/src/workbench/workbench.module.ts",
+      "apps/web/src/SourceSnapshotPanel.vue",
+      "apps/web/src/snapshot-api-client.ts",
+      "apps/web/src/api-client.spec.ts",
+      "apps/web/src/App.vue",
+      "scripts/curl_source_snapshot_smoke.sh",
+      "docs/agent-decisions-m0.md",
+      "validation/development-task-task-m1-03-source-snapshot-20260912.json",
+      "validation/development-workflow.json",
+      "validation/evidence/**"
+    ],
+    "excluded": [
+      "回退 CI Skill/Makefile 修复",
+      "回退 Sonar New Code Reliability 专修 2ed41ca",
+      "回退 M1-01/M1-02 VERIFIED 纠正与业务",
+      "完整运行时/SDK 执行循环/审核交付",
+      "SQLite/mock 数据",
+      "未授权生产与凭据",
+      "改动 apps/api/src/workflow/**（避让既有绑定与 Sonar）"
+    ]
+  },
+  "acceptance_criteria": [
+    "实例可登记必需/可选来源；BACKEND_ONLY 不出现在人员预览正文",
+    "C16 确认形成不可变 Baseline；同人另一实例来源不自动进入本实例",
+    "C05 预览只返回人员投影与缺项补充入口；previewAuthorizedExecution 恒 false",
+    "C06 启动前重验：必需来源被修改/撤销则阻断；成功则生成 Manifest+ExecutionSnapshot",
+    "权限服务不可用头触发真实 503；JSON 落盘重启可回读",
+    "前端 SourceSnapshotPanel 真实读写且 label[for]↔id；pnpm test/build 与 make verify 通过"
+  ],
+  "current_node": "N2",
+  "final_node": "N2",
+  "completed_nodes": [
+    "N1",
+    "N2"
+  ],
+  "failed_nodes": [],
+  "artifacts": [
+    "apps/api/src/workbench/snapshot.registry.ts",
+    "apps/api/src/workbench/snapshot.controller.ts",
+    "apps/web/src/SourceSnapshotPanel.vue",
+    "apps/web/src/snapshot-api-client.ts",
+    "scripts/curl_source_snapshot_smoke.sh"
+  ],
+  "evidence": [
+    "validation/evidence/source-snapshot-20260912.txt",
+    "validation/development-system-check.json"
+  ],
+  "risks": [
+    "产品 OA 底座未接入，会话暂用请求头派生",
+    "非完整 C05/C06/C16 合同字段；仅最小可验证切片"
+  ],
+  "approvals": [
+    "Owner 全权授权；Agent 自行裁决；节点状态仅用 VERIFIED 等合法集合（禁止 DONE）"
+  ],
+  "status": "VERIFIED",
+  "intent": {
+    "source": "用户全权授权承接 M1-02 完成态：实现 M1-03 来源确认/执行快照最小切片",
+    "problem": "已有领取配置，尚无事实基线确认、人员预览与启动前重验快照",
+    "users": [
+      "承担人 demo_executor"
+    ],
+    "outcome": "可 curl/UI 验收的来源确认与执行快照闭环，禁 mock"
+  },
+  "spec": {
+    "refs": [
+      "docs/设计包/47-全产品实施切片与首期开发规格.md#M1-03",
+      "docs/设计包/48-接口事件与插件合同.md",
+      "docs/full-authority-execution.md"
+    ],
+    "behavior": "登记来源→C16 确认 Baseline→C05 人员预览（不含私有上下文）→C06 重验生成 Manifest/Snapshot；来源撤销阻断；预览不充当执行授权",
+    "contracts": [
+      "POST /api/v1/workbench/claimable-tasks/:id/sources",
+      "GET /api/v1/workbench/claimable-tasks/:id/sources",
+      "POST /api/v1/workbench/claimable-tasks/:id/sources/:sourceId/revoke",
+      "POST /api/v1/workbench/claimable-tasks/:id/baseline/confirm",
+      "GET /api/v1/workbench/claimable-tasks/:id/baseline",
+      "POST /api/v1/workbench/claimable-tasks/:id/context-preview",
+      "POST /api/v1/workbench/claimable-tasks/:id/execution-snapshot",
+      "GET /api/v1/workbench/claimable-tasks/:id/execution-snapshot"
+    ],
+    "negativeCases": [
+      "预览后撤销必需来源，生成快照返回 409",
+      "BACKEND_ONLY 源不进入人员预览 items",
+      "跨实例来源互不串入",
+      "X-Authz-Unavailable:1 → 503",
+      "无会话头 → 401"
+    ]
+  },
+  "plan": {
+    "files": [
+      "apps/api/src/workbench/snapshot.types.ts",
+      "apps/api/src/workbench/snapshot.store.ts",
+      "apps/api/src/workbench/snapshot.rules.ts",
+      "apps/api/src/workbench/snapshot.registry.ts",
+      "apps/api/src/workbench/snapshot.registry.spec.ts",
+      "apps/api/src/workbench/snapshot.controller.ts",
+      "apps/web/src/snapshot-api-client.ts",
+      "apps/web/src/SourceSnapshotPanel.vue",
+      "scripts/curl_source_snapshot_smoke.sh"
+    ],
+    "checks": [
+      "pnpm -r run build",
+      "pnpm -r run test",
+      "bash scripts/curl_source_snapshot_smoke.sh",
+      "make verify"
+    ],
+    "highestRisk": "误把预览成功当作执行授权，或把后台私有来源泄露给人员预览",
+    "rollback": "删除 snapshot.* 与面板引用，恢复 workbench.module 与 App.vue；保留 M1-02"
+  },
+  "requirementIds": [
+    "CX-03",
+    "AI-05"
+  ],
+  "caseIds": [],
+  "review": {
+    "mode": "LOCAL_VERIFY",
+    "findings": [
+      "nodes use VERIFIED only; no DONE"
+    ],
+    "evidence": [
+      "make verify PASS; smoke SMOKE_OK"
+    ]
+  },
+  "nodes": [
+    {
+      "id": "N1",
+      "objective": "实现来源确认与执行快照最小闭环",
+      "dependsOn": [],
+      "preconditions": [
+        "M1-02 tip 9a6a5be 可复用 claim/session"
+      ],
+      "action": "新增 snapshot 模块、面板、smoke；接入 ClaimRegistry",
+      "tool_or_skill": "oa-development-system",
+      "expected_output": "API+UI+curl 证据",
+      "validation": "单元测试与 smoke 覆盖正负例",
+      "success_condition": "build/test/smoke 通过且禁 mock",
+      "failure_path": "据新诊断有限修复",
+      "rollback_or_compensation": "回滚本切片文件",
+      "status": "VERIFIED"
+    },
+    {
+      "id": "N2",
+      "objective": "独立验证并交付",
+      "dependsOn": [
+        "N1"
+      ],
+      "preconditions": [
+        "实现已产生可复核产物"
+      ],
+      "action": "检查原始产物和适用场景",
+      "tool_or_skill": "make verify / REVIEW.md",
+      "expected_output": "当前输入版本的检查结果",
+      "validation": "验收与证据逐项对应",
+      "success_condition": "无关键失败；未验证部分明确披露",
+      "failure_path": "有限修复或交付阻塞",
+      "rollback_or_compensation": "按本任务记录的恢复方案处理",
+      "status": "VERIFIED"
+    }
+  ],
+  "projectRoot": "/workspace"
+}

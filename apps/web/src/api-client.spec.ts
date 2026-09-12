@@ -14,6 +14,10 @@ import {
   fetchWorkbenchTodos,
 } from "./workbench-api-client";
 import { claimHumanTask, fetchClaimableTasks } from "./claim-api-client";
+import {
+  createContextPreview,
+  registerTaskSource,
+} from "./snapshot-api-client";
 
 describe("api-client", () => {
   afterEach(() => {
@@ -218,5 +222,51 @@ describe("api-client", () => {
         }),
       }),
     );
+  });
+
+  it("registers source and previews without execution auth", async () => {
+    const fetchMock = vi
+      .fn()
+      .mockResolvedValueOnce({
+        ok: true,
+        json: async () => ({
+          id: "src-1",
+          humanTaskId: "task-1",
+          workId: "wi-1",
+          tenantId: "tenant-alpha",
+          label: "合同正文",
+          version: 1,
+          visibility: "PERSON",
+          required: true,
+          state: "ACTIVE",
+          supplementHint: "补充",
+          createdAt: "2026-09-12T03:30:00.000Z",
+          updatedAt: "2026-09-12T03:30:00.000Z",
+        }),
+      })
+      .mockResolvedValueOnce({
+        ok: true,
+        json: async () => ({
+          id: "prev-1",
+          baselineId: null,
+          visibleSources: [],
+          missingRequired: [],
+          backendOnlyActiveCount: 0,
+          previewAuthorizedExecution: false,
+          createdAt: "2026-09-12T03:30:01.000Z",
+        }),
+      });
+    vi.stubGlobal("fetch", fetchMock);
+    const session = {
+      tenantId: "tenant-alpha",
+      personId: "demo_executor",
+    };
+    const source = await registerTaskSource(session, "task-1", {
+      label: "合同正文",
+      required: true,
+    });
+    expect(source.id).toBe("src-1");
+    const preview = await createContextPreview(session, "task-1");
+    expect(preview.previewAuthorizedExecution).toBe(false);
   });
 });
