@@ -113,3 +113,13 @@
 ### 验证
 
 见 `validation/development-task-task-m1-01-dual-instance-workbench-20260912.json`；冒烟 `scripts/curl_dual_instance_workbench_smoke.sh`。
+
+## 8. M1-04 有界执行（2026-09-12）
+
+| 项 | 值 |
+|---|---|
+| 任务 | `task-m1-04-bounded-execution-20260912` → VERIFIED |
+| 承接 | M1-03 tip `f01f9d6` |
+| 裁决 | C06 仅受理 QUEUED；真实状态靠 advance；RESULT_UNKNOWN 仅 C14；无 pause/resume UI |
+
+核心路径：`POST .../attempts`（202）→ `advance` / `cancel` / `external-write-timeout` / `reconcile`；前端 `BoundedExecutionPanel.vue`。

@@ -18,6 +18,7 @@ import {
   createContextPreview,
   registerTaskSource,
 } from "./snapshot-api-client";
+import { startAttempt } from "./attempt-api-client";
 
 describe("api-client", () => {
   afterEach(() => {
@@ -268,5 +269,47 @@ describe("api-client", () => {
     expect(source.id).toBe("src-1");
     const preview = await createContextPreview(session, "task-1");
     expect(preview.previewAuthorizedExecution).toBe(false);
+  });
+
+  it("starts attempt via session write client", async () => {
+    const fetchMock = vi.fn().mockResolvedValue({
+      ok: true,
+      status: 202,
+      json: async () => ({
+        id: "att-1",
+        humanTaskId: "task-1",
+        workId: "wi-1",
+        mode: "ASSISTED",
+        fence: 1,
+        attemptNumber: 1,
+        state: "QUEUED",
+        stage: "已受理，等待调度",
+        idempotencyKey: "idem-1",
+        parentAttemptId: null,
+        newAttemptNotice: null,
+        publishedOutputs: [],
+        personEvidence: [],
+        modelInvoked: false,
+        pauseResumeSupported: false,
+        unknownReason: null,
+        reconcileNote: null,
+        createdAt: "2026-09-12T03:40:00.000Z",
+        updatedAt: "2026-09-12T03:40:00.000Z",
+      }),
+    });
+    vi.stubGlobal("fetch", fetchMock);
+    const session = {
+      tenantId: "tenant-alpha",
+      personId: "demo_executor",
+    };
+    const attempt = await startAttempt(session, "task-1", {
+      idempotencyKey: "idem-1",
+    });
+    expect(attempt.state).toBe("QUEUED");
+    expect(attempt.pauseResumeSupported).toBe(false);
+    expect(fetchMock).toHaveBeenCalledWith(
+      "/api/v1/workbench/claimable-tasks/task-1/attempts",
+      expect.objectContaining({ method: "POST" }),
+    );
   });
 });
