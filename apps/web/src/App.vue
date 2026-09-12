@@ -6,6 +6,7 @@ import { computed, onMounted, ref } from "vue";
 import ClaimConfigPanel from "./ClaimConfigPanel.vue";
 import DualInstanceWorkbench from "./DualInstanceWorkbench.vue";
 import BoundedExecutionPanel from "./BoundedExecutionPanel.vue";
+import ArtifactAudiencePanel from "./ArtifactAudiencePanel.vue";
 import SourceSnapshotPanel from "./SourceSnapshotPanel.vue";
 import WorkflowBindingPanel from "./WorkflowBindingPanel.vue";
 import {
@@ -83,7 +84,7 @@ onMounted(() => {
       <p class="brand">ZKER Staff</p>
       <h1>OA 数字员工协作平台</h1>
       <p class="lead">
-        M1 双实例 + 领取配置 + 来源快照 + 有界执行 + 工作流绑定：真实读写与持久化，禁止 mock。
+        M1 双实例 + 领取配置 + 来源快照 + 有界执行 + 产物受众 + 工作流绑定：真实读写与持久化，禁止 mock。
       </p>
     </header>
 
@@ -141,6 +142,7 @@ onMounted(() => {
     <ClaimConfigPanel class="workflow-slot" :employees="employeeItems" />
     <SourceSnapshotPanel class="workflow-slot" />
     <BoundedExecutionPanel class="workflow-slot" />
+    <ArtifactAudiencePanel class="workflow-slot" />
     <WorkflowBindingPanel class="workflow-slot" :employees="employeeItems" />
   </main>
 </template>

@@ -19,6 +19,7 @@ import {
   registerTaskSource,
 } from "./snapshot-api-client";
 import { startAttempt } from "./attempt-api-client";
+import { prepareArtifactUpload } from "./publish-api-client";
 
 describe("api-client", () => {
   afterEach(() => {
@@ -309,6 +310,37 @@ describe("api-client", () => {
     expect(attempt.pauseResumeSupported).toBe(false);
     expect(fetchMock).toHaveBeenCalledWith(
       "/api/v1/workbench/claimable-tasks/task-1/attempts",
+      expect.objectContaining({ method: "POST" }),
+    );
+  });
+
+  it("prepares artifact upload via session write client", async () => {
+    const fetchMock = vi.fn().mockResolvedValue({
+      ok: true,
+      json: async () => ({
+        id: "up-1",
+        humanTaskId: "task-1",
+        fileName: "out.md",
+        mediaType: "text/markdown",
+        sizeBytes: 12,
+        state: "PREPARED",
+        bytesDigest: null,
+        createdAt: "2026-09-12T03:45:00.000Z",
+      }),
+    });
+    vi.stubGlobal("fetch", fetchMock);
+    const session = {
+      tenantId: "tenant-alpha",
+      personId: "demo_executor",
+    };
+    const ticket = await prepareArtifactUpload(session, "task-1", {
+      fileName: "out.md",
+      mediaType: "text/markdown",
+      sizeBytes: 12,
+    });
+    expect(ticket.state).toBe("PREPARED");
+    expect(fetchMock).toHaveBeenCalledWith(
+      "/api/v1/workbench/claimable-tasks/task-1/artifacts/prepare",
       expect.objectContaining({ method: "POST" }),
     );
   });

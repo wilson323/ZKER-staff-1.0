@@ -1,0 +1,169 @@
+{
+  "schemaVersion": 1,
+  "id": "task-m1-05-artifact-audience-publish-20260912",
+  "goal": "M1-05 产物与受众发布最小可验证切片",
+  "scope": {
+    "allowed": [
+      "apps/api/src/workbench/publish.*",
+      "apps/api/src/workbench/workbench.module.ts",
+      "apps/api/src/main.ts",
+      "apps/api/package.json",
+      "pnpm-lock.yaml",
+      "apps/web/src/ArtifactAudiencePanel.vue",
+      "apps/web/src/publish-api-client.ts",
+      "apps/web/src/api-client.spec.ts",
+      "apps/web/src/App.vue",
+      "scripts/curl_artifact_audience_smoke.sh",
+      "docs/agent-decisions-m0.md",
+      "validation/development-task-task-m1-05-artifact-audience-publish-20260912.json",
+      "validation/development-workflow.json",
+      "validation/evidence/**"
+    ],
+    "excluded": [
+      "回退 CI Skill/Makefile 修复",
+      "回退 Sonar New Code Reliability / 重复率专修",
+      "回退 M1-01..M1-04 VERIFIED 纠正与业务",
+      "完整 C10 独立审核 / C11 唯一交付 / 公开 CDN",
+      "SQLite/mock 数据",
+      "未授权生产与凭据",
+      "改动 apps/api/src/workflow/**（避让既有绑定与 Sonar）"
+    ]
+  },
+  "acceptance_criteria": [
+    "上传 prepare→隔离区字节→服务端重算 digest/大小/MIME/扫描→complete 形成 ArtifactVersion；不信任浏览器成功声称",
+    "同文件名多版本可区分；响应无公开 storage URL；旧版下载重验 digest",
+    "执行结果先为候选，按受众形成 OutputRelease；未获准内容不进入人员视图正文",
+    "不可预览时保留真实解析失败，不生成假正文；提供获准下载",
+    "前端 ArtifactAudiencePanel 真实读写且 label[for]↔id；pnpm test/build 与 make verify 通过"
+  ],
+  "current_node": "N2",
+  "final_node": "N2",
+  "completed_nodes": [
+    "N1",
+    "N2"
+  ],
+  "failed_nodes": [],
+  "artifacts": [
+    "apps/api/src/workbench/publish.registry.ts",
+    "apps/api/src/workbench/publish.controller.ts",
+    "apps/web/src/ArtifactAudiencePanel.vue",
+    "apps/web/src/publish-api-client.ts",
+    "scripts/curl_artifact_audience_smoke.sh"
+  ],
+  "evidence": [
+    "validation/evidence/artifact-audience-publish-20260912.txt",
+    "validation/development-system-check.json"
+  ],
+  "risks": [
+    "产品 OA 底座未接入，会话暂用请求头派生",
+    "非完整 C10/C11/C20 合同字段；本地确定性扫描非专业杀毒引擎"
+  ],
+  "approvals": [
+    "Owner 全权授权；Agent 自行裁决；节点状态仅用 VERIFIED 等合法集合（禁止 DONE）"
+  ],
+  "status": "VERIFIED",
+  "intent": {
+    "source": "用户全权授权承接 M1-04 完成态：实现 M1-05 产物与受众发布最小切片",
+    "problem": "已有 SUCCEEDED Attempt，尚无 ArtifactVersion 上传闭环与受众门控 OutputRelease",
+    "users": [
+      "承担人 demo_executor",
+      "审阅人 demo_reviewer"
+    ],
+    "outcome": "可 curl/UI 验收的产物上传与受众发布闭环，禁 mock"
+  },
+  "spec": {
+    "refs": [
+      "docs/设计包/47-全产品实施切片与首期开发规格.md#M1-05",
+      "docs/设计包/48-接口事件与插件合同.md",
+      "contracts/command-reference.md#C20",
+      "docs/full-authority-execution.md"
+    ],
+    "behavior": "CLAIMED 任务→C20 prepare→PUT 隔离字节→complete 服务端 digest→ArtifactVersion；候选→OutputRelease(audience)；未获准 403 无正文；同名多版本；无公开 URL；解析失败保留真实错误",
+    "contracts": [
+      "POST /api/v1/workbench/claimable-tasks/:id/artifacts/prepare",
+      "PUT /api/v1/workbench/uploads/:uploadId/bytes",
+      "POST /api/v1/workbench/uploads/:uploadId/complete",
+      "GET /api/v1/workbench/artifacts/:id/content",
+      "POST /api/v1/workbench/claimable-tasks/:id/output-releases",
+      "GET /api/v1/workbench/output-releases/:id/view"
+    ],
+    "negativeCases": [
+      "客户端声称 digest 与服务端不符 → 409",
+      "异字节重传同票据 → 409",
+      "未 RELEASED 或受众不符 → 视图 allowed=false 无正文",
+      "危险 MIME → 拒绝 prepare",
+      "不可预览格式 → PARSE_FAILED 无假正文"
+    ]
+  },
+  "plan": {
+    "files": [
+      "apps/api/src/workbench/publish.*",
+      "apps/web/src/ArtifactAudiencePanel.vue",
+      "apps/web/src/publish-api-client.ts",
+      "scripts/curl_artifact_audience_smoke.sh"
+    ],
+    "checks": [
+      "pnpm -r run build",
+      "pnpm -r run test",
+      "bash scripts/curl_artifact_audience_smoke.sh",
+      "make verify"
+    ],
+    "highestRisk": "受众门控泄漏未获准正文或公开 URL 旁路",
+    "rollback": "删除 publish.* 注册与面板挂载；保留 M1-04 Attempt 不变"
+  },
+  "requirementIds": [
+    "EW-02",
+    "EW-06"
+  ],
+  "caseIds": [],
+  "review": {
+    "mode": "SELF_CHECK",
+    "findings": [
+      "label[for]↔id 已覆盖上传与发布表单",
+      "publicStorageUrl 恒 null；未获准视图 previewText 恒 null"
+    ],
+    "evidence": [
+      "validation/evidence/artifact-audience-publish-20260912.txt"
+    ]
+  },
+  "nodes": [
+    {
+      "id": "N1",
+      "objective": "实现产物上传与受众发布最小闭环",
+      "dependsOn": [],
+      "preconditions": [
+        "tip 含 M1-04 attempt.* VERIFIED",
+        "可复用 common/json-array-store 与会话 HTTP"
+      ],
+      "action": "编码 publish.* + 面板 + smoke",
+      "tool_or_skill": "oa-development-system",
+      "expected_output": "可 curl 的 ArtifactVersion 与 OutputRelease",
+      "validation": "单元测试 + smoke 负例",
+      "success_condition": "验收标准全部有原始证据",
+      "failure_path": "有诊断后最多两次修复",
+      "rollback_or_compensation": "卸载模块注册，不回退 CI/Sonar",
+      "status": "VERIFIED"
+    },
+    {
+      "id": "N2",
+      "objective": "独立验证并交付",
+      "dependsOn": [
+        "N1"
+      ],
+      "preconditions": [
+        "实现已产生可复核产物"
+      ],
+      "action": "检查原始产物和适用场景",
+      "tool_or_skill": "make verify / REVIEW.md",
+      "expected_output": "当前输入版本的检查结果",
+      "validation": "验收与证据逐项对应",
+      "success_condition": "无关键失败；未验证部分明确披露",
+      "failure_path": "有限修复或交付阻塞",
+      "rollback_or_compensation": "按本任务记录的恢复方案处理",
+      "status": "VERIFIED"
+    }
+  ],
+  "projectRoot": "/workspace",
+  "createdAt": "2026-09-12T03:43:20.194385+00:00",
+  "updatedAt": "2026-09-12T03:50:55.000000+00:00"
+}

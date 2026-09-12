@@ -123,3 +123,13 @@
 | 裁决 | C06 仅受理 QUEUED；真实状态靠 advance；RESULT_UNKNOWN 仅 C14；无 pause/resume UI |
 
 核心路径：`POST .../attempts`（202）→ `advance` / `cancel` / `external-write-timeout` / `reconcile`；前端 `BoundedExecutionPanel.vue`。
+
+## 9. M1-05 产物与受众发布（2026-09-12）
+
+| 项 | 值 |
+|---|---|
+| 任务 | `task-m1-05-artifact-audience-publish-20260912` → VERIFIED |
+| 承接 | M1-04 tip `4db8c2f` |
+| 裁决 | prepare→隔离字节→服务端 digest；候选先于获准；无公开 storage URL |
+
+核心路径：`POST .../artifacts/prepare` → `PUT .../uploads/:id/bytes` → `POST .../complete` → `POST .../output-releases` → `GET .../view`；前端 `ArtifactAudiencePanel.vue`。
