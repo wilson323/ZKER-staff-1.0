@@ -13,6 +13,7 @@ import {
   createWorkbenchInstance,
   fetchWorkbenchTodos,
 } from "./workbench-api-client";
+import { claimHumanTask, fetchClaimableTasks } from "./claim-api-client";
 
 describe("api-client", () => {
   afterEach(() => {
@@ -165,6 +166,52 @@ describe("api-client", () => {
     expect(fetchMock).toHaveBeenCalledWith(
       "/api/v1/workbench/todos",
       expect.objectContaining({
+        headers: expect.objectContaining({
+          "X-Tenant-Id": "tenant-alpha",
+          "X-Person-Id": "demo_executor",
+        }),
+      }),
+    );
+  });
+
+  it("claims human task with session headers", async () => {
+    const fetchMock = vi
+      .fn()
+      .mockResolvedValueOnce({
+        ok: true,
+        json: async () => ({ items: [], total: 0 }),
+      })
+      .mockResolvedValueOnce({
+        ok: true,
+        json: async () => ({
+          id: "task-1",
+          workId: "wi-1",
+          instanceId: "wi-1",
+          tenantId: "tenant-alpha",
+          title: "领取：A1",
+          state: "CLAIMED",
+          assigneePersonId: "demo_executor",
+          responsibilityEpoch: 0,
+          revision: 1,
+          requiredOutputs: ["交付摘要"],
+          budgetTokens: 8000,
+          createdAt: "2026-09-12T03:00:00.000Z",
+          updatedAt: "2026-09-12T03:00:01.000Z",
+        }),
+      });
+    vi.stubGlobal("fetch", fetchMock);
+    const session = {
+      tenantId: "tenant-alpha",
+      personId: "demo_executor",
+    };
+    const list = await fetchClaimableTasks(session);
+    expect(list.total).toBe(0);
+    const claimed = await claimHumanTask(session, "task-1");
+    expect(claimed.state).toBe("CLAIMED");
+    expect(fetchMock).toHaveBeenLastCalledWith(
+      "/api/v1/workbench/claimable-tasks/task-1/claim",
+      expect.objectContaining({
+        method: "POST",
         headers: expect.objectContaining({
           "X-Tenant-Id": "tenant-alpha",
           "X-Person-Id": "demo_executor",

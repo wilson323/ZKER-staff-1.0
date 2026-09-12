@@ -1,0 +1,147 @@
+{
+  "schemaVersion": 1,
+  "id": "task-m1-02-claim-config-20260912",
+  "goal": "M1-02 领取与本人配置最小可验证切片",
+  "scope": {
+    "allowed": [
+      "apps/api/src/workbench/**",
+      "apps/web/src/**",
+      "scripts/curl_claim_config_smoke.sh",
+      "docs/agent-decisions-m0.md",
+      "validation/development-task-task-m1-02-claim-config-20260912.json",
+      "validation/development-workflow.json",
+      "validation/evidence/**"
+    ],
+    "excluded": [
+      "回退 CI Skill/Makefile 修复",
+      "回退 Sonar New Code Reliability 专修 2ed41ca",
+      "回退 M1-01 verify 节点 VERIFIED 纠正 7b025bc",
+      "完整运行时/审核/执行循环",
+      "SQLite/mock 数据",
+      "未授权生产与凭据",
+      "改动 apps/api/src/workflow/**（避让既有绑定与 Sonar）"
+    ]
+  },
+  "acceptance_criteria": [
+    "实例旁挂 OPEN 可领取人任务；同人幂等回领取；他人并发领取 409",
+    "本人配置保存核对 expectedRevision+responsibilityEpoch；started 恒为 false",
+    "偏好不可覆盖 requiredOutputs/budgetTokens；ASSISTED/AUTONOMOUS 校验真实员工",
+    "转派抬升 epoch 并撤销旧 ACTIVE 配置",
+    "JSON 落盘；重启同 ZKER_DATA_DIR 可回读；跨租户不可见",
+    "前端 ClaimConfigPanel 真实读写且 label[for]↔id；pnpm test/build 与 make verify 通过"
+  ],
+  "current_node": "N2",
+  "final_node": "N2",
+  "completed_nodes": ["N1", "N2"],
+  "failed_nodes": [],
+  "artifacts": [
+    "apps/api/src/workbench/claim.registry.ts",
+    "apps/api/src/workbench/claim.controller.ts",
+    "apps/web/src/ClaimConfigPanel.vue",
+    "apps/web/src/claim-api-client.ts",
+    "scripts/curl_claim_config_smoke.sh"
+  ],
+  "evidence": [
+    "validation/evidence/claim-config-20260912.txt",
+    "validation/development-system-check.json"
+  ],
+  "risks": [
+    "产品 OA 底座未接入，会话暂用请求头派生",
+    "非完整 C03/C04/HR-02/NC-01 合同字段；仅最小可验证切片"
+  ],
+  "approvals": [
+    "Owner 全权授权；Agent 自行裁决；节点状态仅用 VERIFIED 等合法集合（禁止 DONE）"
+  ],
+  "status": "VERIFIED",
+  "intent": {
+    "source": "用户全权授权承接 M1-01 完成态：实现 M1-02 领取/配置最小切片",
+    "problem": "已有双实例工作台，尚无原子领取、本人配置 CAS 与转派抬升 epoch",
+    "users": ["承担人 demo_executor", "协作人 collab_bob"],
+    "outcome": "可 curl/UI 验收的领取配置闭环，禁 mock"
+  },
+  "spec": {
+    "refs": [
+      "docs/设计包/47-全产品实施切片与首期开发规格.md#M1-02",
+      "docs/设计包/48-接口事件与插件合同.md",
+      "docs/full-authority-execution.md"
+    ],
+    "behavior": "实例创建旁挂 OPEN 任务；C03 原子领取；C04 保存配置不启动；转派抬升 epoch 撤销旧配置",
+    "contracts": [
+      "GET /api/v1/workbench/claimable-tasks",
+      "POST /api/v1/workbench/claimable-tasks/:id/claim",
+      "POST /api/v1/workbench/claimable-tasks/:id/transfer",
+      "PUT /api/v1/workbench/claimable-tasks/:id/config",
+      "GET /api/v1/workbench/claimable-tasks/:id/config"
+    ],
+    "negativeCases": [
+      "他人并发领取返回 409",
+      "revision/epoch 不匹配返回 409",
+      "偏好覆盖预算返回 400",
+      "跨租户列表 total=0"
+    ]
+  },
+  "plan": {
+    "files": [
+      "apps/api/src/workbench/claim.*",
+      "apps/web/src/ClaimConfigPanel.vue",
+      "apps/web/src/claim-api-client.ts",
+      "apps/web/src/App.vue",
+      "scripts/curl_claim_config_smoke.sh"
+    ],
+    "checks": [
+      "pnpm -r run build",
+      "pnpm -r run test",
+      "make verify",
+      "bash scripts/curl_claim_config_smoke.sh"
+    ],
+    "highestRisk": "节点状态误写 DONE 导致 verify 失败；或回退 CI/Sonar 修复",
+    "rollback": "删除 claim.* 与 ClaimConfigPanel；保留 workbench M1-01"
+  },
+  "requirementIds": ["HR-02", "NC-01"],
+  "caseIds": [],
+  "review": {
+    "mode": "SELF_CHECK",
+    "findings": [
+      "会话用请求头派生，非正式 OA 登录",
+      "节点状态使用 VERIFIED（禁止 DONE）；表单 label[for]↔id 齐全"
+    ],
+    "evidence": [
+      "make verify PASS",
+      "scripts/curl_claim_config_smoke.sh"
+    ]
+  },
+  "nodes": [
+    {
+      "id": "N1",
+      "objective": "实现领取/配置/转派 JSON 持久化 API 与前端面板",
+      "dependsOn": [],
+      "preconditions": [
+        "分支 tip 含 M1-01 与 verify 节点 VERIFIED 纠正 7b025bc"
+      ],
+      "action": "新增 claim 模块与 ClaimConfigPanel；实例旁挂 OPEN 任务",
+      "tool_or_skill": "oa-development-system",
+      "expected_output": "可 curl 验收的领取配置闭环",
+      "validation": "单元测试 + curl 并发领取/配置/转派/重启回读",
+      "success_condition": "409 并发、配置不启动、转派撤旧配置均有证据",
+      "failure_path": "据日志修 CAS 或落盘",
+      "rollback_or_compensation": "删除 claim 模块与面板",
+      "status": "VERIFIED"
+    },
+    {
+      "id": "N2",
+      "objective": "独立验证并交付",
+      "dependsOn": ["N1"],
+      "preconditions": ["实现已产生可复核产物"],
+      "action": "make verify + smoke；push 更新 PR #3",
+      "tool_or_skill": "make verify / REVIEW.md",
+      "expected_output": "当前输入版本的检查结果",
+      "validation": "验收与证据逐项对应；节点状态仅 VERIFIED",
+      "success_condition": "无关键失败；未验证部分明确披露",
+      "failure_path": "有限修复或交付阻塞",
+      "rollback_or_compensation": "按本任务记录的恢复方案处理",
+      "status": "VERIFIED"
+    }
+  ],
+  "projectRoot": "/workspace",
+  "createdAt": "2026-09-12T03:15:17.242242+00:00"
+}

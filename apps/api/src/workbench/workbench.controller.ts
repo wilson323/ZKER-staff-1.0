@@ -16,6 +16,7 @@ import {
   Put,
   UnauthorizedException,
 } from "@nestjs/common";
+import { ClaimRegistry } from "./claim.registry";
 import { WorkbenchRegistry } from "./workbench.registry";
 import { resolveSessionFromHeaders } from "./workbench.session";
 import {
@@ -31,7 +32,10 @@ import {
 
 @Controller("workbench")
 export class WorkbenchController {
-  constructor(private readonly registry: WorkbenchRegistry) {}
+  constructor(
+    private readonly registry: WorkbenchRegistry,
+    private readonly claims: ClaimRegistry,
+  ) {}
 
   /**
    * GET /api/v1/workbench/session
@@ -88,9 +92,12 @@ export class WorkbenchController {
     @Body() body: CreateInstanceRequest,
   ): ProcessInstanceRecord {
     const session = this.requireSession(headers);
-    return this.runDomain(() =>
-      this.registry.createOrReplayInstance(session, body),
-    );
+    return this.runDomain(() => {
+      const instance = this.registry.createOrReplayInstance(session, body);
+      // M1-02：实例旁挂 OPEN 可领取人任务（幂等回放不重复建）
+      this.claims.ensureOpenTaskForInstance(session, instance);
+      return instance;
+    });
   }
 
   /**
