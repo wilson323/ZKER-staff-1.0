@@ -5,7 +5,8 @@
 | 日期 | 2026-09-12 |
 | Owner 选择 | **重开 feature 文档轨**（相对 `main` 的并行/未来文档轨） |
 | 有效分支 | `cursor/oa-digital-employee-platform-530e` |
-| 参考 SHA | `ab898f6`（重开基线）；后续提交以本分支 tip 为准 |
+| 历史参考 SHA | `ab898f6`（旧 feature tip / PR #1 基线） |
+| 当前基线 | 基于 `main` @ `454caf6` 叠加文档轨提交（因与旧 main 无共同历史，旧 PR #1 无法 reopen） |
 | 仓库 | `https://github.com/wilson323/ZKER-staff-1.0.git` |
 | 默认主分支 | `main` @ `454caf6`（设计包已入库，**禁止误删**） |
 
