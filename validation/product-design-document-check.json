@@ -1,6 +1,6 @@
 {
   "schemaVersion": "1.0",
-  "checkedAt": "2026-09-12T00:28:16.327369+00:00",
+  "checkedAt": "2026-09-12T04:11:01.586267+00:00",
   "status": "PASS",
   "scope": "NEW_PRODUCT_DESIGN_DOCUMENTS_AND_LOCAL_PROTOTYPE_REFERENCES_ONLY",
   "productTestsRun": false,
@@ -2173,7 +2173,7 @@
       "name": "all new-document and trace local links/anchors valid",
       "pass": true,
       "detail": {
-        "checked": 1436,
+        "checked": 1418,
         "broken": []
       }
     },
@@ -3287,11 +3287,6 @@
     },
     {
       "from": "docs/设计包/32-业务流程图原型图与断点闭环审查.md",
-      "target": "/Users/mac/.cc-switch/skills/task-quality-assurance-v2/production-grade-task-methodology/SKILL.md",
-      "pass": true
-    },
-    {
-      "from": "docs/设计包/32-业务流程图原型图与断点闭环审查.md",
       "target": "../../validation/product-design-task-state.json",
       "pass": true
     },
@@ -3401,46 +3396,6 @@
       "pass": true
     },
     {
-      "from": "docs/设计包/33-QoderWake与StaffDeck融合及AI体验研究.md",
-      "target": "/Users/mac/Documents/StaffDeck-main/frontend-enterprise/package.json:3",
-      "pass": true
-    },
-    {
-      "from": "docs/设计包/33-QoderWake与StaffDeck融合及AI体验研究.md",
-      "target": "/Users/mac/Documents/StaffDeck-main/backend/pyproject.toml:3",
-      "pass": true
-    },
-    {
-      "from": "docs/设计包/33-QoderWake与StaffDeck融合及AI体验研究.md",
-      "target": "/Users/mac/Documents/StaffDeck-main/README.zh.md:221",
-      "pass": true
-    },
-    {
-      "from": "docs/设计包/33-QoderWake与StaffDeck融合及AI体验研究.md",
-      "target": "/Users/mac/Documents/StaffDeck-main/frontend-enterprise/src/pages/chat/components/ScheduledDraftCard.tsx:91",
-      "pass": true
-    },
-    {
-      "from": "docs/设计包/33-QoderWake与StaffDeck融合及AI体验研究.md",
-      "target": "/Users/mac/Documents/StaffDeck-main/frontend-enterprise/src/pages/KnowledgePage.tsx:1875",
-      "pass": true
-    },
-    {
-      "from": "docs/设计包/33-QoderWake与StaffDeck融合及AI体验研究.md",
-      "target": "/Users/mac/Documents/StaffDeck-main/frontend-enterprise/src/pages/chat/components/KnowledgeCitationList.tsx:23",
-      "pass": true
-    },
-    {
-      "from": "docs/设计包/33-QoderWake与StaffDeck融合及AI体验研究.md",
-      "target": "/Users/mac/Documents/StaffDeck-main/backend/app/evolution/schema.py:27",
-      "pass": true
-    },
-    {
-      "from": "docs/设计包/33-QoderWake与StaffDeck融合及AI体验研究.md",
-      "target": "/Users/mac/Documents/StaffDeck-main/backend/app/evolution/service.py:98",
-      "pass": true
-    },
-    {
       "from": "docs/设计包/34-任务执行工作台与权限分层设计.md",
       "target": "../../history/本轮产品设计需求补充-2026-09-11.md#u22",
       "pass": true
@@ -3497,87 +3452,37 @@
     },
     {
       "from": "docs/设计包/35-全产品AI体验复核与改进.md",
-      "target": "/Users/mac/Documents/OA数字员工协作平台/docs/设计包/33-QoderWake与StaffDeck融合及AI体验研究.md",
+      "target": "./33-QoderWake与StaffDeck融合及AI体验研究.md",
       "pass": true
     },
     {
       "from": "docs/设计包/35-全产品AI体验复核与改进.md",
-      "target": "/Users/mac/Documents/OA数字员工协作平台/docs/设计包/26-完整产品设计文档.md:501",
+      "target": "./26-完整产品设计文档.md:501",
       "pass": true
     },
     {
       "from": "docs/设计包/35-全产品AI体验复核与改进.md",
-      "target": "/Users/mac/Documents/OA数字员工协作平台/docs/设计包/34-任务执行工作台与权限分层设计.md",
+      "target": "./34-任务执行工作台与权限分层设计.md",
       "pass": true
     },
     {
       "from": "docs/设计包/35-全产品AI体验复核与改进.md",
-      "target": "/Users/mac/Documents/StaffDeck-main/frontend-enterprise/src/pages/chat/components/ScheduledDraftCard.tsx:91",
+      "target": "./34-任务执行工作台与权限分层设计.md",
       "pass": true
     },
     {
       "from": "docs/设计包/35-全产品AI体验复核与改进.md",
-      "target": "/Users/mac/Documents/StaffDeck-main/backend/app/evolution/service.py:98",
+      "target": "./34-任务执行工作台与权限分层设计.md",
       "pass": true
     },
     {
-      "from": "docs/设计包/35-全产品AI体验复核与改进.md",
-      "target": "/Users/mac/Documents/OA数字员工协作平台/docs/设计包/34-任务执行工作台与权限分层设计.md",
+      "from": "README.md",
+      "target": "docs/agent-decisions-m0.md",
       "pass": true
     },
     {
-      "from": "docs/设计包/35-全产品AI体验复核与改进.md",
-      "target": "/Users/mac/Documents/StaffDeck-main/frontend-enterprise/src/pages/chat/components/ScheduledDraftCard.tsx:95",
-      "pass": true
-    },
-    {
-      "from": "docs/设计包/35-全产品AI体验复核与改进.md",
-      "target": "/Users/mac/Documents/StaffDeck-main/frontend-enterprise/src/pages/KnowledgePage.tsx:1896",
-      "pass": true
-    },
-    {
-      "from": "docs/设计包/35-全产品AI体验复核与改进.md",
-      "target": "/Users/mac/Documents/StaffDeck-main/frontend-enterprise/src/pages/chat/components/KnowledgeCitationList.tsx:23",
-      "pass": true
-    },
-    {
-      "from": "docs/设计包/35-全产品AI体验复核与改进.md",
-      "target": "/Users/mac/Documents/StaffDeck-main/backend/app/evolution/schema.py:27",
-      "pass": true
-    },
-    {
-      "from": "docs/设计包/35-全产品AI体验复核与改进.md",
-      "target": "/Users/mac/Documents/StaffDeck-main/backend/app/evolution/service.py:134",
-      "pass": true
-    },
-    {
-      "from": "docs/设计包/35-全产品AI体验复核与改进.md",
-      "target": "/Users/mac/Documents/OA数字员工协作平台/docs/设计包/34-任务执行工作台与权限分层设计.md",
-      "pass": true
-    },
-    {
-      "from": "docs/设计包/35-全产品AI体验复核与改进.md",
-      "target": "/Users/mac/Documents/StaffDeck-main/frontend-enterprise/src/pages/chat/components/ScheduledDraftCard.tsx:91",
-      "pass": true
-    },
-    {
-      "from": "docs/设计包/35-全产品AI体验复核与改进.md",
-      "target": "/Users/mac/Documents/StaffDeck-main/frontend-enterprise/src/pages/chat/components/KnowledgeCitationList.tsx:23",
-      "pass": true
-    },
-    {
-      "from": "docs/设计包/35-全产品AI体验复核与改进.md",
-      "target": "/Users/mac/Documents/StaffDeck-main/frontend-enterprise/src/pages/KnowledgePage.tsx:1873",
-      "pass": true
-    },
-    {
-      "from": "docs/设计包/35-全产品AI体验复核与改进.md",
-      "target": "/Users/mac/Documents/StaffDeck-main/backend/app/evolution/schema.py:27",
-      "pass": true
-    },
-    {
-      "from": "docs/设计包/35-全产品AI体验复核与改进.md",
-      "target": "/Users/mac/Documents/StaffDeck-main/backend/app/evolution/service.py:98",
+      "from": "README.md",
+      "target": "docs/product-requirements-alignment.md",
       "pass": true
     },
     {
@@ -3593,6 +3498,11 @@
     {
       "from": "README.md",
       "target": "docs/设计包/46-开发基线与低代码插件化决策.md",
+      "pass": true
+    },
+    {
+      "from": "README.md",
+      "target": "NOTICE.md",
       "pass": true
     },
     {
@@ -9647,7 +9557,7 @@
     "docs/设计包/32-业务流程图原型图与断点闭环审查.md": "716f48eaad1e17613223a2c148351d484d0bc238e61a5ea15cd91444cdabc3e5",
     "docs/设计包/33-QoderWake与StaffDeck融合及AI体验研究.md": "912757c5163345ca1ac9becba4c6408d9ab971a14683938e6648075f31227f17",
     "docs/设计包/34-任务执行工作台与权限分层设计.md": "e55216ef84474708326ca3697e095b8009639fca3d011813852c399e3f1134c4",
-    "docs/设计包/35-全产品AI体验复核与改进.md": "3208f1dd91b7b0e32883d62e0c5ba34f0dac9e0458bb9ed71a281b7dc338fe68",
+    "docs/设计包/35-全产品AI体验复核与改进.md": "de797cf9ee563d2d75f10d90d9e7585b9c20c47a1411b789cc715b223c66f5ca",
     "docs/设计包/30-产品设计追踪数据.json": "5dbbe41a1e6853cfca898094a5e98ed929c9e4e8fe0c2d49da4cf213363b2fa8",
     "docs/设计包/31-完整产品交互原型.html": "59a4d8948c86292bb3562218d534ae37154fb8d6317bcfd97883dfc98e7e5cbe"
   },

@@ -1,0 +1,177 @@
+{
+  "schemaVersion": 1,
+  "id": "task-m1-06-review-delivery-20260912",
+  "goal": "M1-06 独立审核与交付（C10/C11）最小可验证切片",
+  "scope": {
+    "allowed": [
+      "apps/api/src/workbench/review.*",
+      "apps/api/src/workbench/claim.registry.ts",
+      "apps/api/src/workbench/publish.registry.ts",
+      "apps/api/src/workbench/workbench.module.ts",
+      "apps/web/src/ReviewDeliveryPanel.vue",
+      "apps/web/src/review-api-client.ts",
+      "apps/web/src/api-client.spec.ts",
+      "apps/web/src/App.vue",
+      "scripts/curl_review_delivery_smoke.sh",
+      "docs/agent-decisions-m0.md",
+      "validation/development-task-task-m1-06-review-delivery-20260912.json",
+      "validation/development-workflow.json",
+      "validation/evidence/**",
+      "docs/full-authority-execution.md"
+    ],
+    "excluded": [
+      "回退 CI Skill/Makefile 修复",
+      "回退 Sonar New Code Reliability / 重复率专修",
+      "回退 M1-01..M1-05 VERIFIED 纠正与业务",
+      "完整 OA 审批引擎 / 跨库 Outbox / 真实底座审批",
+      "SQLite/mock 数据",
+      "未授权生产与凭据",
+      "改动 apps/api/src/workflow/**（避让既有绑定与 Sonar）"
+    ]
+  },
+  "acceptance_criteria": [
+    "C10 requestReview：承担人送审，绑定候选 digest/基线/epoch；禁止自批",
+    "C10 decideReview：独立审核人批准/拒绝/退回；候选变更使回执 OBSOLETE；退回抬升责任 epoch",
+    "C11 checkCompletion：有期限预检凭据；submitDelivery 再次校验并通过 tenant+work+epoch 唯一约束",
+    "无 OA 确认时交付保持 PENDING_COMMIT，不显示已交付；确认后 COMMITTED 可回读",
+    "前端 ReviewDeliveryPanel 真实读写且 label[for]↔id；pnpm test/build 与 make verify 通过"
+  ],
+  "current_node": "N2",
+  "final_node": "N2",
+  "completed_nodes": [
+    "N1",
+    "N2"
+  ],
+  "failed_nodes": [],
+  "artifacts": [
+    "apps/api/src/workbench/review.registry.ts",
+    "apps/api/src/workbench/review.delivery-registry.ts",
+    "apps/api/src/workbench/review.controller.ts",
+    "apps/web/src/ReviewDeliveryPanel.vue",
+    "apps/web/src/review-api-client.ts",
+    "scripts/curl_review_delivery_smoke.sh"
+  ],
+  "evidence": [
+    "validation/evidence/review-delivery-20260912.txt",
+    "validation/development-system-check.json"
+  ],
+  "risks": [
+    "产品 OA 底座未接入，会话暂用请求头派生；OA 确认仅为本地同步态",
+    "非完整 C10/C11 合同字段 / 会签 / 跨库 Outbox"
+  ],
+  "approvals": [
+    "Owner 全权授权；Agent 自行裁决；节点状态仅用 VERIFIED 等合法集合（禁止 DONE）"
+  ],
+  "status": "VERIFIED",
+  "intent": {
+    "source": "用户全权授权承接 M1-05 完成态：实现 M1-06 独立审核与交付（C10/C11）最小切片",
+    "problem": "已有 OutputRelease 受众发布，尚无独立审核回执与唯一交付守卫",
+    "users": [
+      "承担人 demo_executor",
+      "审核人 demo_reviewer"
+    ],
+    "outcome": "可 curl/UI 验收的 C10/C11 闭环，禁 mock"
+  },
+  "spec": {
+    "refs": [
+      "docs/设计包/47-全产品实施切片与首期开发规格.md#M1-06",
+      "docs/设计包/47-全产品实施切片与首期开发规格.md#M1-07",
+      "docs/设计包/27-逻辑数据模型与接口契约.md",
+      "contracts/command-reference.md#C10",
+      "contracts/command-reference.md#C11",
+      "docs/full-authority-execution.md"
+    ],
+    "behavior": "requestReview→decideReview→checkCompletion→submitDelivery→confirmOa；自批/过期预检/重复交付拒绝；候选变更 OBSOLETE",
+    "contracts": [
+      "POST /workbench/claimable-tasks/:taskId/reviews",
+      "POST /workbench/reviews/:reviewId/decide",
+      "POST /workbench/claimable-tasks/:taskId/completion-checks",
+      "POST /workbench/claimable-tasks/:taskId/deliveries",
+      "POST /workbench/deliveries/:deliveryId/confirm-oa"
+    ],
+    "negativeCases": [
+      "自批 403",
+      "候选 digest 变更后决定 → OBSOLETE/冲突",
+      "过期 completionCheck 提交 409",
+      "同 tenant+work+epoch 二次交付 409",
+      "PENDING_COMMIT 不得标为已交付"
+    ]
+  },
+  "plan": {
+    "files": [
+      "apps/api/src/workbench/review.types.ts",
+      "apps/api/src/workbench/review.store.ts",
+      "apps/api/src/workbench/review.rules.ts",
+      "apps/api/src/workbench/review.support.ts",
+      "apps/api/src/workbench/review.registry.ts",
+      "apps/api/src/workbench/review.controller.ts",
+      "apps/api/src/workbench/review.registry.spec.ts",
+      "apps/web/src/review-api-client.ts",
+      "apps/web/src/ReviewDeliveryPanel.vue",
+      "scripts/curl_review_delivery_smoke.sh"
+    ],
+    "checks": [
+      "pnpm -r run build",
+      "pnpm -r run test",
+      "make verify",
+      "bash scripts/curl_review_delivery_smoke.sh"
+    ],
+    "highestRisk": "误把 PENDING_COMMIT 显示为已交付，或允许自批/挪用旧批准",
+    "rollback": "删除 review.* 与面板注册；不回退 M1-05 与 CI/Sonar"
+  },
+  "requirementIds": [
+    "RS-01",
+    "RS-05"
+  ],
+  "caseIds": [],
+  "review": {
+    "mode": "SELF_CHECK",
+    "findings": [
+      "自批 403；候选变更 OBSOLETE；PENDING_COMMIT delivered=false；OA 确认后 delivered=true",
+      "label[for]↔id 已覆盖送审/批准/来源说明表单；复用 common store 与会话 HTTP"
+    ],
+    "evidence": [
+      "validation/evidence/review-delivery-20260912.txt"
+    ]
+  },
+  "nodes": [
+    {
+      "id": "N1",
+      "objective": "实现 C10/C11 最小审核交付闭环并落盘",
+      "dependsOn": [],
+      "preconditions": [
+        "M1-05 tip f754f60 可用",
+        "复用 common/json-array-store 与会话 HTTP"
+      ],
+      "action": "编码 review 模块、面板、smoke；挂入 workbench.module",
+      "tool_or_skill": "oa-development-system",
+      "expected_output": "API+UI+smoke 可运行",
+      "validation": "单元测试与 smoke 覆盖正负例",
+      "success_condition": "实现可本地验收",
+      "failure_path": "有诊断后最多两次修复",
+      "rollback_or_compensation": "回退本切片文件",
+      "status": "VERIFIED"
+    },
+    {
+      "id": "N2",
+      "objective": "独立验证并交付",
+      "dependsOn": [
+        "N1"
+      ],
+      "preconditions": [
+        "实现已产生可复核产物"
+      ],
+      "action": "检查原始产物和适用场景",
+      "tool_or_skill": "make verify / REVIEW.md",
+      "expected_output": "当前输入版本的检查结果",
+      "validation": "验收与证据逐项对应",
+      "success_condition": "无关键失败；未验证部分明确披露",
+      "failure_path": "有限修复或交付阻塞",
+      "rollback_or_compensation": "按本任务记录的恢复方案处理",
+      "status": "VERIFIED"
+    }
+  ],
+  "projectRoot": "/workspace",
+  "createdAt": "2026-09-12T03:55:21.798514+00:00",
+  "verifiedAt": "2026-09-12T04:04:52.711267+00:00"
+}

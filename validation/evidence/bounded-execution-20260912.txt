@@ -1,0 +1,32 @@
+=== M1-04 bounded execution evidence 2026-09-12T03:40:26Z ===
+apps/web test:    Start at  03:40:27
+apps/web test:    Duration  540ms (transform 81ms, setup 0ms, collect 101ms, tests 12ms, environment 256ms, prepare 56ms)
+apps/web test: Done
+apps/api test: PASS src/workbench/claim.registry.spec.ts
+apps/api test: PASS src/workbench/attempt.registry.spec.ts
+apps/api test: PASS src/ai/openai-protocol.adapter.spec.ts
+apps/api test: PASS src/workbench/workbench.registry.spec.ts
+apps/api test: PASS src/workflow/workflow.registry.spec.ts
+apps/api test: PASS src/workbench/snapshot.registry.spec.ts
+apps/api test: PASS src/workbench/workbench.session.spec.ts
+apps/api test: PASS src/digital-employees/digital-employee.registry.spec.ts
+apps/api test: PASS src/health/health.service.spec.ts
+apps/api test: PASS src/common/json-array-store.spec.ts
+apps/api test: PASS src/digital-employees/digital-employee.store.spec.ts
+apps/api test: Test Suites: 11 passed, 11 total
+apps/api test: Tests:       39 passed, 39 total
+apps/api test: Snapshots:   0 total
+apps/api test: Time:        1.622 s, estimated 3 s
+apps/api test: Ran all test suites.
+apps/api test: Done
+---
+DATA_DIR=/tmp/zker-attempt-r9QK
+INST={"id":"05497230-4b58-4d2d-b743-852b7c28d906","templateId":"af63cba5-ed2d-4395-bcd4-909203f9e28f","tenantId":"tenant-alpha","initiatorPersonId":"demo_executor","title":"A1","idempotencyKey":"idem-att-a1","intentKey":"intent-att-a1","state":"OPEN","draft":"","threadId":"thread-05497230-4b58-4d2d-b743-852b7c28d906","configId":"config-05497230-4b58-4d2d-b743-852b7c28d906","urlPath":"/workbench/instances/05497230-4b58-4d2d-b743-852b7c28d906","createdAt":"2026-09-12T03:40:29.847Z","updatedAt":"2026-09-12T03:40:29.847Z"}
+CFG={"id":"49346522-1469-4a86-bbcd-dd287620307d","humanTaskId":"71fda635-d638-4a0a-bca2-42b5735ba756","workId":"05497230-4b58-4d2d-b743-852b7c28d906","configuredBy":"demo_executor","mode":"ASSISTED","digitalEmployeeId":"9323efae-82c4-4e5f-a3d4-5e32ca8521b1","responsibilityEpoch":0,"revision":2,"requiredOutputs":["交付摘要"],"budgetTokens":8000,"preferenceNote":"","started":false,"state":"ACTIVE","createdAt":"2026-09-12T03:40:29.907Z","updatedAt":"2026-09-12T03:40:29.907Z"}
+no_snapshot_status=400 body={"message":"ACTIVE person config required before startAttempt","error":"Bad Request","statusCode":400}
+start_status=202 body={"id":"6851aa32-f068-41fe-9d83-84cc71c7c698","humanTaskId":"71fda635-d638-4a0a-bca2-42b5735ba756","workId":"05497230-4b58-4d2d-b743-852b7c28d906","tenantId":"tenant-alpha","personId":"demo_executor","snapshotId":"b273094e-8bde-4ff7-badf-7a0f664547fc","snapshotDigest":"sha256:10f7a6ecea7f431d06ca1916df390c6c7dabf62af2655698b43d4d857b6ac283","personConfigId":"49346522-1469-4a86-bbcd-dd287620307d","mode":"ASSISTED","responsibilityEpoch":0,"fence":1,"attemptNumber":1,"state":"QUEUED","stage":"已受理，等待调度","idempotencyKey":"run-1","parentAttemptId":null,"newAttemptNotice":null,"publishedOutputs":[],"personEvidence":[],"modelInvoked":false,"pauseResumeSupported":false,"unknownReason":null,"reconcileNote":null,"createdAt":"2026-09-12T03:40:30.014Z","updatedAt":"2026-09-12T03:40:30.014Z"}
+fence_status=409
+no_ack_status=400 body={"message":"previous attempt cancelled; set acknowledgeNewAttempt=true to create a new Attempt (not a resume)","error":"Bad Request","statusCode":400}
+unknown_advance_status=409
+reload={"items":[{"id":"6851aa32-f068-41fe-9d83-84cc71c7c698","humanTaskId":"71fda635-d638-4a0a-bca2-42b5735ba756","workId":"05497230-4b58-4d2d-b743-852b7c28d906","tenantId":"tenant-alpha","personId":"demo_executor","snapshotId":"b273094e-8bde-4ff7-badf-7a0f664547fc","snapshotDigest":"sha256:10f7a6ecea7f431d06ca1916df390c6c7dabf62af2655698b43d4d857b6ac283","personConfigId":"49346522-1469-4a86-bbcd-dd287620307d","mode":"ASSISTED","responsibilityEpoch":0,"fence":1,"attemptNumber":1,"state":"CANCELLED","stage":"已取消; reason=改需求","idempotencyKey":"run-1","parentAttemptId":null,"newAttemptNotice":null,"publishedOutputs":[],"personEvidence":[],"modelInvoked":false,"pauseResumeSupported":false,"unknownReason":null,"reconcileNote":null,"createdAt":"2026-09-12T03:40:30.014Z","updatedAt":"2026-09-12T03:40:30.061Z"},{"id":"14a38a17-8253-4a63-a9d4-9922242fb22f","humanTaskId":"71fda635-d638-4a0a-bca2-42b5735ba756","workId":"05497230-4b58-4d2d-b743-852b7c28d906","tenantId":"tenant-alpha","personId":"demo_executor","snapshotId":"b273094e-8bde-4ff7-badf-7a0f664547fc","snapshotDigest":"sha256:10f7a6ecea7f431d06ca1916df390c6c7dabf62af2655698b43d4d857b6ac283","personConfigId":"49346522-1469-4a86-bbcd-dd287620307d","mode":"ASSISTED","responsibilityEpoch":0,"fence":2,"attemptNumber":2,"state":"SUCCEEDED","stage":"执行成功，成果已落盘","idempotencyKey":"run-3","parentAttemptId":"6851aa32-f068-41fe-9d83-84cc71c7c698","newAttemptNotice":"这是新的 Attempt #2（父 Attempt 6851aa32-f068-41fe-9d83-84cc71c7c698 已取消），不是原执行的续跑；取消前可能仍有未确认的外部副作用，须按 C14 查证后再依赖结果。","publishedOutputs":[{"id":"a87980fa-5543-48d9-a12c-c3c6fc0e1383","label":"查证确认成果","digest":"sha256:b92384ac0ecd8f19fb78b9200a6b73c62d4501b8c1047a29424b27200bcc27fc"}],"personEvidence":[],"modelInvoked":true,"pauseResumeSupported":false,"unknownReason":"external write timeout; effect unverified","reconcileNote":"对端确认已写入","createdAt":"2026-09-12T03:40:30.087Z","updatedAt":"2026-09-12T03:40:30.155Z"}],"total":2}
+SMOKE_OK

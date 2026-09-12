@@ -1,0 +1,16 @@
+{
+  "name": "zker-staff-1.0",
+  "private": true,
+  "packageManager": "pnpm@9.15.0",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "install:all": "pnpm install",
+    "build": "pnpm -r run build",
+    "test": "pnpm -r run test",
+    "dev:api": "pnpm --filter @zker/api start:dev",
+    "dev:web": "pnpm --filter @zker/web dev",
+    "ci": "pnpm install && pnpm -r run build && pnpm -r run test"
+  }
+}

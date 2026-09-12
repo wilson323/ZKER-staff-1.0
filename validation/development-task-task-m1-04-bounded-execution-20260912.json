@@ -1,0 +1,169 @@
+{
+  "schemaVersion": 1,
+  "id": "task-m1-04-bounded-execution-20260912",
+  "goal": "M1-04 有界执行与人工替代最小可验证切片",
+  "scope": {
+    "allowed": [
+      "apps/api/src/workbench/attempt.*",
+      "apps/api/src/workbench/workbench.module.ts",
+      "apps/web/src/BoundedExecutionPanel.vue",
+      "apps/web/src/attempt-api-client.ts",
+      "apps/web/src/api-client.spec.ts",
+      "apps/web/src/App.vue",
+      "scripts/curl_bounded_execution_smoke.sh",
+      "docs/agent-decisions-m0.md",
+      "validation/development-task-task-m1-04-bounded-execution-20260912.json",
+      "validation/development-workflow.json",
+      "validation/evidence/**"
+    ],
+    "excluded": [
+      "回退 CI Skill/Makefile 修复",
+      "回退 Sonar New Code Reliability / 重复率专修",
+      "回退 M1-01/M1-02/M1-03 VERIFIED 纠正与业务",
+      "完整 SDK 执行循环/暂停恢复/审核交付",
+      "SQLite/mock 数据",
+      "未授权生产与凭据",
+      "改动 apps/api/src/workflow/**（避让既有绑定与 Sonar）"
+    ]
+  },
+  "acceptance_criteria": [
+    "C06 启动返回 202/QUEUED；真实状态由 GET/advance 推进，非受理即成功",
+    "ASSISTED 路径可推进至 SUCCEEDED；MANUAL 不调用模型且落人员证据",
+    "同任务同 epoch 活跃 fence 唯一；幂等键重复返回同一 Attempt",
+    "取消后新建须 acknowledgeNewAttempt，文案说明新 Attempt 非续跑",
+    "外部写超时进 RESULT_UNKNOWN，仅 C14 reconcile 可落定；无 pause/resume",
+    "前端 BoundedExecutionPanel 真实读写且 label[for]↔id；pnpm test/build 与 make verify 通过"
+  ],
+  "current_node": "N2",
+  "final_node": "N2",
+  "completed_nodes": [
+    "N1",
+    "N2"
+  ],
+  "failed_nodes": [],
+  "artifacts": [
+    "apps/api/src/workbench/attempt.registry.ts",
+    "apps/api/src/workbench/attempt.controller.ts",
+    "apps/web/src/BoundedExecutionPanel.vue",
+    "apps/web/src/attempt-api-client.ts",
+    "scripts/curl_bounded_execution_smoke.sh"
+  ],
+  "evidence": [
+    "validation/evidence/bounded-execution-20260912.txt",
+    "validation/development-system-check.json"
+  ],
+  "risks": [
+    "产品 OA 底座未接入，会话暂用请求头派生",
+    "非完整 C06/C07/C14 合同字段；本地确定性推进器非外部 SDK worker"
+  ],
+  "approvals": [
+    "Owner 全权授权；Agent 自行裁决；节点状态仅用 VERIFIED 等合法集合（禁止 DONE）"
+  ],
+  "status": "VERIFIED",
+  "intent": {
+    "source": "用户全权授权承接 M1-03 完成态：实现 M1-04 有界执行最小切片",
+    "problem": "已有 READY 快照，尚无 Attempt fence/幂等/阶段推进与人工替代路径",
+    "users": [
+      "承担人 demo_executor"
+    ],
+    "outcome": "可 curl/UI 验收的有界执行闭环，禁 mock"
+  },
+  "spec": {
+    "refs": [
+      "docs/设计包/47-全产品实施切片与首期开发规格.md#M1-04",
+      "contracts/state-machines.json",
+      "docs/full-authority-execution.md"
+    ],
+    "behavior": "READY 快照+ACTIVE 配置→C06 startAttempt 202/QUEUED→advance 真实状态→MANUAL 无模型+人员证据；取消后新 Attempt 须确认；RESULT_UNKNOWN 仅 reconcile；不暴露 pause/resume",
+    "contracts": [
+      "POST /api/v1/workbench/claimable-tasks/:id/attempts → 202",
+      "GET /api/v1/workbench/claimable-tasks/:id/attempts",
+      "GET /api/v1/workbench/attempts/:attemptId",
+      "POST /api/v1/workbench/attempts/:attemptId/advance",
+      "POST /api/v1/workbench/attempts/:attemptId/cancel",
+      "POST /api/v1/workbench/attempts/:attemptId/external-write-timeout",
+      "POST /api/v1/workbench/attempts/:attemptId/reconcile"
+    ],
+    "negativeCases": [
+      "无 READY 快照/配置启动 → 400/409",
+      "活跃 Attempt 未取消再启 → 409",
+      "取消后未 acknowledge 再启 → 400",
+      "RESULT_UNKNOWN 直接 advance → 409；须 reconcile",
+      "无会话头 → 401"
+    ]
+  },
+  "plan": {
+    "files": [
+      "apps/api/src/workbench/attempt.types.ts",
+      "apps/api/src/workbench/attempt.store.ts",
+      "apps/api/src/workbench/attempt.rules.ts",
+      "apps/api/src/workbench/attempt.registry.ts",
+      "apps/api/src/workbench/attempt.registry.spec.ts",
+      "apps/api/src/workbench/attempt.controller.ts",
+      "apps/web/src/attempt-api-client.ts",
+      "apps/web/src/BoundedExecutionPanel.vue",
+      "scripts/curl_bounded_execution_smoke.sh"
+    ],
+    "checks": [
+      "pnpm -r run build",
+      "pnpm -r run test",
+      "bash scripts/curl_bounded_execution_smoke.sh",
+      "make verify"
+    ],
+    "highestRisk": "把 202/QUEUED 当成执行成功，或 RESULT_UNKNOWN 自动再发副作用",
+    "rollback": "删除 attempt.* 与面板引用，恢复 workbench.module 与 App.vue；保留 M1-03"
+  },
+  "requirementIds": [
+    "AI-07",
+    "AI-11"
+  ],
+  "caseIds": [],
+  "review": {
+    "mode": "SELF_CHECK",
+    "findings": [
+      "节点状态仅 VERIFIED；复用 common store 与会话 HTTP；未回退 CI/Sonar"
+    ],
+    "evidence": [
+      "validation/evidence/bounded-execution-20260912.txt"
+    ]
+  },
+  "nodes": [
+    {
+      "id": "N1",
+      "objective": "实现有界执行 Attempt fence/幂等/阶段与人工替代",
+      "dependsOn": [],
+      "preconditions": [
+        "M1-03 tip f01f9d6 可用",
+        "复用 common/json-array-store 与会话 HTTP"
+      ],
+      "action": "落地 attempt 模块、面板、smoke、任务记录",
+      "tool_or_skill": "oa-development-system",
+      "expected_output": "API+UI+smoke 可本地复现",
+      "validation": "单元测试与 curl smoke",
+      "success_condition": "正负例通过且无 mock",
+      "failure_path": "有限修复后重跑",
+      "rollback_or_compensation": "删除本切片文件",
+      "status": "VERIFIED"
+    },
+    {
+      "id": "N2",
+      "objective": "独立验证并交付",
+      "dependsOn": [
+        "N1"
+      ],
+      "preconditions": [
+        "实现已产生可复核产物"
+      ],
+      "action": "检查原始产物和适用场景",
+      "tool_or_skill": "make verify / REVIEW.md",
+      "expected_output": "当前输入版本的检查结果",
+      "validation": "验收与证据逐项对应",
+      "success_condition": "无关键失败；未验证部分明确披露",
+      "failure_path": "有限修复或交付阻塞",
+      "rollback_or_compensation": "按本任务记录的恢复方案处理",
+      "status": "VERIFIED"
+    }
+  ],
+  "projectRoot": "/workspace",
+  "createdAt": "2026-09-12T03:35:12.284297+00:00"
+}

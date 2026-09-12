@@ -1,0 +1,24 @@
+DATA_DIR=/tmp/zker-claim-arYI
+GET claimable empty:
+{"items":[],"total":0}
+employee=e81aad5e-94bf-4916-8a0c-9c923400d0b4
+A1={"id":"827f3966-18e6-489d-93b0-7db05989cf14","templateId":"d3151b86-4a49-47a7-aa5f-7e670b9c358e","tenantId":"tenant-alpha","initiatorPersonId":"demo_executor","title":"A1","idempotencyKey":"idem-claim-a1","intentKey":"intent-claim-a1","state":"OPEN","draft":"","threadId":"thread-827f3966-18e6-489d-93b0-7db05989cf14","configId":"config-827f3966-18e6-489d-93b0-7db05989cf14","urlPath":"/workbench/instances/827f3966-18e6-489d-93b0-7db05989cf14","createdAt":"2026-09-12T03:19:51.096Z","updatedAt":"2026-09-12T03:19:51.096Z"}
+tasks={"items":[{"id":"0f095b47-a591-4ab2-b23f-c9c3b36c720c","workId":"827f3966-18e6-489d-93b0-7db05989cf14","instanceId":"827f3966-18e6-489d-93b0-7db05989cf14","tenantId":"tenant-alpha","title":"领取：A1","state":"OPEN","assigneePersonId":null,"responsibilityEpoch":0,"revision":0,"requiredOutputs":["交付摘要"],"budgetTokens":8000,"createdAt":"2026-09-12T03:19:51.097Z","updatedAt":"2026-09-12T03:19:51.097Z"}],"total":1}
+claim_a={"id":"0f095b47-a591-4ab2-b23f-c9c3b36c720c","workId":"827f3966-18e6-489d-93b0-7db05989cf14","instanceId":"827f3966-18e6-489d-93b0-7db05989cf14","tenantId":"tenant-alpha","title":"领取：A1","state":"CLAIMED","assigneePersonId":"demo_executor","responsibilityEpoch":0,"revision":1,"requiredOutputs":["交付摘要"],"budgetTokens":8000,"createdAt":"2026-09-12T03:19:51.097Z","updatedAt":"2026-09-12T03:19:51.121Z"}
+concurrent_claim_status=409 body={"message":"already claimed by demo_executor: 0f095b47-a591-4ab2-b23f-c9c3b36c720c","error":"Conflict","statusCode":409}
+config={"id":"68def37d-d547-47e2-aa86-c1d36f51eee3","humanTaskId":"0f095b47-a591-4ab2-b23f-c9c3b36c720c","workId":"827f3966-18e6-489d-93b0-7db05989cf14","configuredBy":"demo_executor","mode":"ASSISTED","digitalEmployeeId":"e81aad5e-94bf-4916-8a0c-9c923400d0b4","responsibilityEpoch":0,"revision":2,"requiredOutputs":["交付摘要"],"budgetTokens":8000,"preferenceNote":"正式","started":false,"state":"ACTIVE","createdAt":"2026-09-12T03:19:51.177Z","updatedAt":"2026-09-12T03:19:51.177Z"}
+override_budget_status=400
+transfer={"id":"0f095b47-a591-4ab2-b23f-c9c3b36c720c","workId":"827f3966-18e6-489d-93b0-7db05989cf14","instanceId":"827f3966-18e6-489d-93b0-7db05989cf14","tenantId":"tenant-alpha","title":"领取：A1","state":"CLAIMED","assigneePersonId":"collab_bob","responsibilityEpoch":1,"revision":3,"requiredOutputs":["交付摘要"],"budgetTokens":8000,"createdAt":"2026-09-12T03:19:51.097Z","updatedAt":"2026-09-12T03:19:51.218Z"}
+revoked_config_status=404
+after_restart={"items":[{"id":"0f095b47-a591-4ab2-b23f-c9c3b36c720c","workId":"827f3966-18e6-489d-93b0-7db05989cf14","instanceId":"827f3966-18e6-489d-93b0-7db05989cf14","tenantId":"tenant-alpha","title":"领取：A1","state":"CLAIMED","assigneePersonId":"collab_bob","responsibilityEpoch":1,"revision":3,"requiredOutputs":["交付摘要"],"budgetTokens":8000,"createdAt":"2026-09-12T03:19:51.097Z","updatedAt":"2026-09-12T03:19:51.218Z"}],"total":1}
+files:
+total 32
+drwx------  2 ubuntu ubuntu 4096 Sep 12 03:19 .
+drwxrwxrwt 12 root   root   4096 Sep 12 03:19 ..
+-rw-r--r--  1 ubuntu ubuntu  513 Sep 12 03:19 claimable-human-tasks.json
+-rw-r--r--  1 ubuntu ubuntu  132 Sep 12 03:19 digital-employees.json
+-rw-r--r--  1 ubuntu ubuntu  596 Sep 12 03:19 person-configs.json
+-rw-r--r--  1 ubuntu ubuntu  617 Sep 12 03:19 process-instances.json
+-rw-r--r--  1 ubuntu ubuntu  190 Sep 12 03:19 process-templates.json
+-rw-r--r--  1 ubuntu ubuntu  265 Sep 12 03:19 workbench-todos.json
+claim_smoke_ok
