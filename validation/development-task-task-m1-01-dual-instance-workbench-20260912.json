@@ -127,7 +127,7 @@
       "success_condition": "幂等/双实例/他租户不可见/重启回读均有证据",
       "failure_path": "据日志修过滤或落盘",
       "rollback_or_compensation": "删除 workbench 模块",
-      "status": "DONE"
+      "status": "VERIFIED"
     },
     {
       "id": "N2",
@@ -141,7 +141,7 @@
       "success_condition": "无关键失败；未验证部分明确披露",
       "failure_path": "有限修复或交付阻塞",
       "rollback_or_compensation": "按本任务记录的恢复方案处理",
-      "status": "DONE"
+      "status": "VERIFIED"
     }
   ],
   "projectRoot": "/workspace",
