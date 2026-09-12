@@ -246,6 +246,42 @@ export class PublishRegistry implements OnModuleInit {
   }
 
   /**
+   * 读取单条 OutputRelease（供 C10/C11 守卫复用）。
+   *
+   * Args:
+   *   session: 会话。
+   *   releaseId: 发布 id。
+   *
+   * Returns:
+   *   记录或 null。
+   */
+  getRelease(
+    session: WorkbenchSession,
+    releaseId: string,
+  ): OutputReleaseRecord | null {
+    const item = this.releases.get(releaseId);
+    if (!item || item.tenantId !== session.tenantId) {
+      return null;
+    }
+    return item;
+  }
+
+  /**
+   * 测试钩子：篡改发布 digest，模拟候选变更。
+   *
+   * Args:
+   *   releaseId: 发布 id。
+   *   digest: 新 digest。
+   */
+  corruptReleaseDigestForTest(releaseId: string, digest: string): void {
+    const item = this.releases.get(releaseId);
+    if (!item) {
+      return;
+    }
+    this.releases.set(releaseId, { ...item, artifactDigest: digest });
+  }
+
+  /**
    * 获准下载：重验 digest；返回字节与元数据。
    */
   downloadVersion(

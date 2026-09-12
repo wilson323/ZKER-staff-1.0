@@ -190,6 +190,27 @@ export class SnapshotRegistry implements OnModuleInit {
     return pickLatestBaseline(this.baselines, this.requireTask(session, taskId));
   }
 
+  /**
+   * 按 id 读取基线（租户隔离）。
+   *
+   * Args:
+   *   session: 会话。
+   *   baselineId: 基线 id。
+   *
+   * Returns:
+   *   基线或 undefined。
+   */
+  getBaselineById(
+    session: WorkbenchSession,
+    baselineId: string,
+  ): FactBaselineRecord | undefined {
+    const item = this.baselines.get(baselineId);
+    if (!item || item.tenantId !== session.tenantId) {
+      return undefined;
+    }
+    return item;
+  }
+
   /** C05：人员预览；永不授权执行。 */
   previewContext(
     session: WorkbenchSession,

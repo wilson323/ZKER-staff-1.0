@@ -20,6 +20,7 @@ import {
 } from "./snapshot-api-client";
 import { startAttempt } from "./attempt-api-client";
 import { prepareArtifactUpload } from "./publish-api-client";
+import { requestReview } from "./review-api-client";
 
 describe("api-client", () => {
   afterEach(() => {
@@ -341,6 +342,44 @@ describe("api-client", () => {
     expect(ticket.state).toBe("PREPARED");
     expect(fetchMock).toHaveBeenCalledWith(
       "/api/v1/workbench/claimable-tasks/task-1/artifacts/prepare",
+      expect.objectContaining({ method: "POST" }),
+    );
+  });
+
+  it("requests independent review via session write client", async () => {
+    const fetchMock = vi.fn().mockResolvedValue({
+      ok: true,
+      json: async () => ({
+        id: "rev-1",
+        humanTaskId: "task-1",
+        workId: "wi-1",
+        reviewerMemberId: "demo_reviewer",
+        responsibilityEpoch: 0,
+        workRevision: 1,
+        candidateReleaseId: "rel-1",
+        candidateDigest: `sha256:${"a".repeat(64)}`,
+        baselineId: "base-1",
+        baselineDigest: `sha256:${"b".repeat(64)}`,
+        state: "PENDING",
+        revision: 1,
+        createdAt: "2026-09-12T03:55:00.000Z",
+      }),
+    });
+    vi.stubGlobal("fetch", fetchMock);
+    const session = {
+      tenantId: "tenant-alpha",
+      personId: "demo_executor",
+    };
+    const review = await requestReview(session, "task-1", {
+      candidateReleaseId: "rel-1",
+      baselineId: "base-1",
+      reviewerMemberId: "demo_reviewer",
+      expectedRevision: 1,
+      responsibilityEpoch: 0,
+    });
+    expect(review.state).toBe("PENDING");
+    expect(fetchMock).toHaveBeenCalledWith(
+      "/api/v1/workbench/claimable-tasks/task-1/reviews",
       expect.objectContaining({ method: "POST" }),
     );
   });

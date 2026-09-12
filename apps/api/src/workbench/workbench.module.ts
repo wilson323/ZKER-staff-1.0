@@ -1,5 +1,5 @@
 /**
- * 双实例工作台 + M1-02..05 领取、快照、有界执行、产物发布 Nest 模块。
+ * 双实例工作台 + M1-02..06 领取、快照、有界执行、产物发布、审核交付 Nest 模块。
  */
 import { Module } from "@nestjs/common";
 import { DigitalEmployeesModule } from "../digital-employees/digital-employees.module";
@@ -9,6 +9,9 @@ import { ClaimController } from "./claim.controller";
 import { ClaimRegistry } from "./claim.registry";
 import { PublishController } from "./publish.controller";
 import { PublishRegistry } from "./publish.registry";
+import { DeliveryRegistry } from "./review.delivery-registry";
+import { ReviewController } from "./review.controller";
+import { ReviewRegistry } from "./review.registry";
 import { SnapshotController } from "./snapshot.controller";
 import { SnapshotRegistry } from "./snapshot.registry";
 import { WorkbenchController } from "./workbench.controller";
@@ -22,6 +25,7 @@ import { WorkbenchRegistry } from "./workbench.registry";
     SnapshotController,
     AttemptController,
     PublishController,
+    ReviewController,
   ],
   providers: [
     WorkbenchRegistry,
@@ -29,6 +33,8 @@ import { WorkbenchRegistry } from "./workbench.registry";
     SnapshotRegistry,
     AttemptRegistry,
     PublishRegistry,
+    ReviewRegistry,
+    DeliveryRegistry,
   ],
   exports: [
     WorkbenchRegistry,
@@ -36,6 +42,8 @@ import { WorkbenchRegistry } from "./workbench.registry";
     SnapshotRegistry,
     AttemptRegistry,
     PublishRegistry,
+    ReviewRegistry,
+    DeliveryRegistry,
   ],
 })
 export class WorkbenchModule {}

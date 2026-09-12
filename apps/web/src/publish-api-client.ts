@@ -160,6 +160,20 @@ export function createOutputRelease(
 }
 
 /**
+ * 列出任务 OutputRelease。
+ */
+export function fetchOutputReleases(
+  session: WorkbenchSession,
+  taskId: string,
+): Promise<ListResponse<OutputReleaseRecord>> {
+  return fetchWithSession(
+    `/workbench/claimable-tasks/${taskId}/output-releases`,
+    session,
+    "list output releases",
+  );
+}
+
+/**
  * 受众门控视图。
  */
 export function fetchOutputReleaseView(

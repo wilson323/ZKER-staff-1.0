@@ -198,6 +198,39 @@ export class ClaimRegistry implements OnModuleInit {
   }
 
   /**
+   * 审核退回抬升责任 epoch：保留承担人，撤销旧配置。
+   *
+   * 由 ReviewRegistry 在独立审核 RETURN 后调用；不要求会话为承担人。
+   *
+   * Args:
+   *   taskId: 人任务 id。
+   *   tenantId: 租户（防跨租户）。
+   *
+   * Returns:
+   *   抬升后的任务记录。
+   */
+  applyReviewReturnEpoch(
+    taskId: string,
+    tenantId: string,
+  ): ClaimableHumanTaskRecord {
+    const task = this.tasks.get(taskId);
+    if (!task || task.tenantId !== tenantId) {
+      throw new Error(`claimable task not found: ${taskId}`);
+    }
+    this.revokeActiveConfigs(task.id, task.responsibilityEpoch);
+    const now = new Date().toISOString();
+    const updated: ClaimableHumanTaskRecord = {
+      ...task,
+      responsibilityEpoch: task.responsibilityEpoch + 1,
+      revision: task.revision + 1,
+      updatedAt: now,
+    };
+    this.tasks.set(updated.id, updated);
+    this.persistTasks();
+    return updated;
+  }
+
+  /**
    * 保存本人配置（不启动）；CAS 核对 epoch + revision。
    */
   savePersonConfig(

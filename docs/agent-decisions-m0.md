@@ -133,3 +133,13 @@
 | 裁决 | prepare→隔离字节→服务端 digest；候选先于获准；无公开 storage URL |
 
 核心路径：`POST .../artifacts/prepare` → `PUT .../uploads/:id/bytes` → `POST .../complete` → `POST .../output-releases` → `GET .../view`；前端 `ArtifactAudiencePanel.vue`。
+
+## 10. M1-06 独立审核与交付（2026-09-12）
+
+| 项 | 值 |
+|---|---|
+| 任务 | `task-m1-06-review-delivery-20260912` → VERIFIED |
+| 承接 | M1-05 tip `f754f60` |
+| 裁决 | C10 禁止自批；候选变更 OBSOLETE；C11 预检有期限；无 OA 确认不显示已交付 |
+
+核心路径：`POST .../reviews` → `POST .../reviews/:id/decide` → `POST .../completion-checks` → `POST .../deliveries` → `POST .../confirm-oa`；前端 `ReviewDeliveryPanel.vue`。

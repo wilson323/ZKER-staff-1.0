@@ -1,0 +1,4 @@
+DATA_DIR=/tmp/zker-review-HlUC
+self_approval_status=403
+duplicate_delivery_status=409
+SMOKE_OK
