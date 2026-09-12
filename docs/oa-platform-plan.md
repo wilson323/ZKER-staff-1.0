@@ -40,7 +40,7 @@
 |---|---|
 | Owner 授权 | **已解除**（全权） |
 | M0 口径 | **已统一** |
-| GitHub `make verify` | **阻塞 push**：`shared skill needs an existing absolute root`；由 CI 修复任务处理中 |
+| GitHub `make verify` | **已绿**（CI 修复 `4b5f465` + M0+ `dbfe63d`） |
 | 产品 OA 底座终选 | **不阻塞 M0**；阻塞的是「宣称终态商用完成」 |
 | 完整 72 AC | **不在 M0 范围** |
 
