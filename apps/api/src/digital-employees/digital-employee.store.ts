@@ -4,8 +4,14 @@
  * 使用本地文件作为 M0+ 最小持久化，禁止 SQLite/mock；
  * 路径由 ZKER_DATA_DIR 控制，默认 <cwd>/data。
  */
-import { mkdirSync, readFileSync, renameSync, writeFileSync, existsSync } from "fs";
-import { join } from "path";
+import {
+  mkdirSync,
+  readFileSync,
+  renameSync,
+  writeFileSync,
+  existsSync,
+} from "node:fs";
+import { join } from "node:path";
 import { DigitalEmployeeRecord } from "./digital-employee.types";
 
 const STORE_FILENAME = "digital-employees.json";
@@ -56,7 +62,9 @@ export function loadEmployees(storePath: string): DigitalEmployeeRecord[] {
   const raw = readFileSync(storePath, "utf8");
   const parsed = JSON.parse(raw) as unknown;
   if (!Array.isArray(parsed)) {
-    throw new Error(`invalid digital-employees store: expected array at ${storePath}`);
+    throw new TypeError(
+      `invalid digital-employees store: expected array at ${storePath}`,
+    );
   }
   return parsed.map((item) => assertRecord(item));
 }

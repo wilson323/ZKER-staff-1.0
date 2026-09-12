@@ -152,32 +152,46 @@ onMounted(() => {
     </form>
 
     <form class="create-form" @submit.prevent="onCreateTask">
-      <label for="person-id">2. 承担人 / 人任务</label>
+      <label for="person-id">2. 承担人</label>
       <input id="person-id" v-model="personId" type="text" maxlength="64" />
-      <select v-model="selectedWorkId">
+      <label for="task-work-id">所属工作项</label>
+      <select id="task-work-id" v-model="selectedWorkId">
         <option disabled value="">选择工作项</option>
         <option v-for="w in workItems?.items ?? []" :key="w.id" :value="w.id">
           {{ w.title }}
         </option>
       </select>
-      <input v-model="taskTitle" type="text" maxlength="120" placeholder="人任务标题" />
+      <label for="task-title">人任务标题</label>
+      <input
+        id="task-title"
+        v-model="taskTitle"
+        type="text"
+        maxlength="120"
+        placeholder="人任务标题"
+      />
       <button type="submit" :disabled="busy">创建人任务</button>
     </form>
 
     <form class="create-form" @submit.prevent="onCreateBinding">
-      <label>3. 保存绑定</label>
-      <select v-model="selectedTaskId">
+      <label for="bind-task-id">3. 保存绑定 — 人任务</label>
+      <select id="bind-task-id" v-model="selectedTaskId">
         <option disabled value="">选择人任务</option>
         <option v-for="t in humanTasks?.items ?? []" :key="t.id" :value="t.id">
           {{ t.title }}
         </option>
       </select>
-      <select v-model="mode">
+      <label for="bind-mode">绑定模式</label>
+      <select id="bind-mode" v-model="mode">
         <option value="MANUAL">MANUAL</option>
         <option value="ASSISTED">ASSISTED</option>
         <option value="AUTONOMOUS">AUTONOMOUS</option>
       </select>
-      <select v-if="mode !== 'MANUAL'" v-model="selectedEmployeeId">
+      <label v-if="mode !== 'MANUAL'" for="bind-employee-id">数字员工</label>
+      <select
+        v-if="mode !== 'MANUAL'"
+        id="bind-employee-id"
+        v-model="selectedEmployeeId"
+      >
         <option disabled value="">选择数字员工</option>
         <option v-for="e in employees" :key="e.id" :value="e.id">
           {{ e.name }}

@@ -16,6 +16,7 @@ cleanup() {
 trap cleanup EXIT
 
 cd "$ROOT"
+JSON_CT='Content-Type: application/json'
 node apps/api/dist/main.js >/tmp/zker-wf-api.log 2>&1 &
 echo $! >/tmp/zker-wf-api.pid
 sleep 1
@@ -26,23 +27,23 @@ curl -sS "http://127.0.0.1:${PORT}/api/v1/task-bindings"
 echo
 
 EMP=$(curl -sS -X POST "http://127.0.0.1:${PORT}/api/v1/digital-employees" \
-  -H 'Content-Type: application/json' -d '{"name":"research-aide"}')
+  -H "$JSON_CT" -d '{"name":"research-aide"}')
 echo "employee=$EMP"
 EMP_ID=$(python3 -c 'import json,sys; print(json.loads(sys.argv[1])["id"])' "$EMP")
 
 WORK=$(curl -sS -X POST "http://127.0.0.1:${PORT}/api/v1/work-items" \
-  -H 'Content-Type: application/json' -d '{"title":"整理客户需求"}')
+  -H "$JSON_CT" -d '{"title":"整理客户需求"}')
 echo "work=$WORK"
 WORK_ID=$(python3 -c 'import json,sys; print(json.loads(sys.argv[1])["id"])' "$WORK")
 
 TASK=$(curl -sS -X POST "http://127.0.0.1:${PORT}/api/v1/human-tasks" \
-  -H 'Content-Type: application/json' \
+  -H "$JSON_CT" \
   -d "{\"workId\":\"$WORK_ID\",\"assigneePersonId\":\"person-alice\",\"title\":\"需求整理节点\"}")
 echo "task=$TASK"
 TASK_ID=$(python3 -c 'import json,sys; print(json.loads(sys.argv[1])["id"])' "$TASK")
 
 BIND=$(curl -sS -X POST "http://127.0.0.1:${PORT}/api/v1/task-bindings" \
-  -H 'Content-Type: application/json' \
+  -H "$JSON_CT" \
   -d "{\"workId\":\"$WORK_ID\",\"humanTaskId\":\"$TASK_ID\",\"configuredBy\":\"person-alice\",\"mode\":\"ASSISTED\",\"digitalEmployeeId\":\"$EMP_ID\"}")
 echo "binding=$BIND"
 
@@ -52,10 +53,10 @@ echo
 
 CODE=$(curl -sS -o /tmp/zker-wf-neg.json -w "%{http_code}" -X POST \
   "http://127.0.0.1:${PORT}/api/v1/task-bindings" \
-  -H 'Content-Type: application/json' \
+  -H "$JSON_CT" \
   -d "{\"workId\":\"$WORK_ID\",\"humanTaskId\":\"$TASK_ID\",\"configuredBy\":\"person-alice\",\"mode\":\"ASSISTED\",\"digitalEmployeeId\":\"no-such\"}")
 echo "neg_status=$CODE body=$(cat /tmp/zker-wf-neg.json)"
-test "$CODE" = "400"
+[[ "$CODE" == "400" ]]
 
 kill "$(cat /tmp/zker-wf-api.pid)"
 rm -f /tmp/zker-wf-api.pid

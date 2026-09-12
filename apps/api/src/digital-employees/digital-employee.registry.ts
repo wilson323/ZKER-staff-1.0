@@ -5,7 +5,7 @@
  * TRACE-digital-employees-20260912-重启可回读真实登记
  */
 import { Injectable, OnModuleInit } from "@nestjs/common";
-import { randomUUID } from "crypto";
+import { randomUUID } from "node:crypto";
 import {
   loadEmployees,
   resolveStorePath,

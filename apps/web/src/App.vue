@@ -225,7 +225,7 @@ body {
 .panel pre {
   margin: 0;
   white-space: pre-wrap;
-  word-break: break-word;
+  overflow-wrap: anywhere;
   font-size: 0.8rem;
   color: var(--muted);
 }

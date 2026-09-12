@@ -4,8 +4,14 @@
  * 禁止 SQLite 与 mock；路径复用 ZKER_DATA_DIR。
  * TRACE-workflow-20260912-人任务员工绑定落盘
  */
-import { mkdirSync, readFileSync, renameSync, writeFileSync, existsSync } from "fs";
-import { join } from "path";
+import {
+  mkdirSync,
+  readFileSync,
+  renameSync,
+  writeFileSync,
+  existsSync,
+} from "node:fs";
+import { join } from "node:path";
 import { resolveDataDir } from "../digital-employees/digital-employee.store";
 import {
   BindingMode,
@@ -58,7 +64,9 @@ function loadArray(storePath: string, label: string): unknown[] {
   }
   const parsed = JSON.parse(readFileSync(storePath, "utf8")) as unknown;
   if (!Array.isArray(parsed)) {
-    throw new Error(`invalid ${label} store: expected array at ${storePath}`);
+    throw new TypeError(
+      `invalid ${label} store: expected array at ${storePath}`,
+    );
   }
   return parsed;
 }
