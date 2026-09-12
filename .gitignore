@@ -1,14 +1,13 @@
-# macOS
+# macOS 系统垃圾
 .DS_Store
 ._*
 .Spotlight-V100
 .Trashes
 
-# 压缩快照(原始设计包/源码 tarball,只用于参考不进版本控制)
-*.zip
-*.tar.gz
-*.tgz
-archive/
+# Python 字节码缓存(可重新生成)
+__pycache__/
+*.pyc
+.pytest_cache/
 
 # 编辑器/IDE
 .vscode/
@@ -17,20 +16,7 @@ archive/
 *.swo
 *~
 
-# 临时文件
-*.tmp
-*.bak
-*.log
-
-# 依赖目录(未来若加入)
-node_modules/
-__pycache__/
-*.pyc
-.pytest_cache/
-dist/
-build/
-
-# 环境变量与密钥(以防未来误入)
+# 防御性:环境变量与密钥(防误入)
 .env
 .env.local
 .env.*.local

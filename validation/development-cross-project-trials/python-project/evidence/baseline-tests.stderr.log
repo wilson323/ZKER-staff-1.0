@@ -1,0 +1,41 @@
+test_blank (test_labels.LabelsTests.test_blank) ... FAIL
+test_empty (test_labels.LabelsTests.test_empty) ... ok
+test_trim (test_labels.LabelsTests.test_trim) ... ok
+test_unique_order (test_labels.LabelsTests.test_unique_order) ... FAIL
+
+======================================================================
+FAIL: test_blank (test_labels.LabelsTests.test_blank)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/private/var/folders/8l/6tnv8ssd2vs0h8463rnv66b00000gn/T/ai-sdlc-forward-sud9bya_/python-project/tests/test_labels.py", line 8, in test_blank
+    self.assertEqual(parse_labels(["", "  "]), [])
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: Lists differ: ['', ''] != []
+
+First list contains 2 additional elements.
+First extra element 0:
+''
+
+- ['', '']
++ []
+
+======================================================================
+FAIL: test_unique_order (test_labels.LabelsTests.test_unique_order)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/private/var/folders/8l/6tnv8ssd2vs0h8463rnv66b00000gn/T/ai-sdlc-forward-sud9bya_/python-project/tests/test_labels.py", line 10, in test_unique_order
+    self.assertEqual(parse_labels([" b ", "a", "b", "a"]), ["b", "a"])
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: Lists differ: ['b', 'a', 'b', 'a'] != ['b', 'a']
+
+First list contains 2 additional elements.
+First extra element 2:
+'b'
+
+- ['b', 'a', 'b', 'a']
++ ['b', 'a']
+
+----------------------------------------------------------------------
+Ran 4 tests in 0.001s
+
+FAILED (failures=2)

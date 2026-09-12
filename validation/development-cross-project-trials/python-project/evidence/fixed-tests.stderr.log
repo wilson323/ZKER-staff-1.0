@@ -1,0 +1,9 @@
+test_blank (test_labels.LabelsTests.test_blank) ... ok
+test_empty (test_labels.LabelsTests.test_empty) ... ok
+test_trim (test_labels.LabelsTests.test_trim) ... ok
+test_unique_order (test_labels.LabelsTests.test_unique_order) ... ok
+
+----------------------------------------------------------------------
+Ran 4 tests in 0.000s
+
+OK
