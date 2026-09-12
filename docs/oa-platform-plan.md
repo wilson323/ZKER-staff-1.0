@@ -1,6 +1,6 @@
 # OA 数字员工协作平台落地计划（ZKER-staff-1.0）
 
-> **当前优先级**：**Agent 全权已授权** — M0 门禁已通；M0+ 数字员工登记持久化本地已落地（等 CI verify 变绿后再 push）。  
+> **当前优先级**：**Agent 全权已授权** — M0 门禁已通；M0+ 数字员工登记持久化已 push（`dbfe63d`）。  
 > **有效分支**：`cursor/oa-digital-employee-platform-530e`。  
 > **与 main 关系**：`main` = 已入库设计事实；本 feature = 对齐文档 + M0/M0+ 实现。  
 > **裁决入口**：[agent-decisions-m0.md](./agent-decisions-m0.md)、[product-requirements-alignment.md](./product-requirements-alignment.md)。  
@@ -49,7 +49,7 @@
 - [x] Owner 裁决：重开 feature 文档轨  
 - [x] Owner 全权授权；Agent 写入底座/M0 裁决  
 - [x] `make ci` 绿；health / employees / ai probe 真实验证（本地）  
-- [x] M0+：数字员工 POST 创建 + JSON 持久化 + 前端列表/创建（本地已验；待 CI 绿后 push）  
-- [ ] GitHub Actions `verify` 变绿  
-- [ ] Draft PR #3 同步 M0+ 代码  
+- [x] M0+：数字员工 POST 创建 + JSON 持久化 + 前端列表/创建（已 push `dbfe63d`）  
+- [x] GitHub Actions `verify` 变绿（含 CI 修复 `4b5f465` 与本切片 push）  
+- [x] Draft PR #3 同步 M0+ 代码  
 - [ ] 下一切片：最小工作流连接闭环（或按 47 号规划 M1-01，不抢跑完整运行时）  
