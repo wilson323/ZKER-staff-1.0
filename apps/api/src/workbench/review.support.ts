@@ -22,7 +22,9 @@ import {
  *   sha256:hex
  */
 export function artifactSetDigest(digests: string[]): string {
-  const joined = [...digests].sort().join("|");
+  const joined = [...digests]
+    .sort((left, right) => left.localeCompare(right))
+    .join("|");
   return `sha256:${createHash("sha256").update(joined, "utf8").digest("hex")}`;
 }
 
@@ -94,8 +96,8 @@ export function sameIdSet(left: string[], right: string[]): boolean {
   if (left.length !== right.length) {
     return false;
   }
-  const a = [...left].sort();
-  const b = [...right].sort();
+  const a = [...left].sort((x, y) => x.localeCompare(y));
+  const b = [...right].sort((x, y) => x.localeCompare(y));
   return a.every((value, index) => value === b[index]);
 }
 
