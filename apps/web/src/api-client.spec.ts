@@ -4,8 +4,10 @@
 import { describe, expect, it, vi, afterEach } from "vitest";
 import {
   createDigitalEmployee,
+  createTaskBinding,
   fetchDigitalEmployees,
   fetchHealth,
+  fetchTaskBindings,
 } from "./api-client";
 
 describe("api-client", () => {
@@ -63,5 +65,41 @@ describe("api-client", () => {
         body: JSON.stringify({ name: "aide" }),
       }),
     );
+  });
+
+  it("posts task binding payload and parses list", async () => {
+    const fetchMock = vi
+      .fn()
+      .mockResolvedValueOnce({
+        ok: true,
+        json: async () => ({
+          id: "bind-1",
+          workId: "w1",
+          humanTaskId: "t1",
+          configuredBy: "person-alice",
+          mode: "ASSISTED",
+          digitalEmployeeId: "de-1",
+          state: "ACTIVE",
+          responsibilityEpoch: 1,
+          configVersion: 1,
+          createdAt: "2026-09-12T03:00:00.000Z",
+          updatedAt: "2026-09-12T03:00:00.000Z",
+        }),
+      })
+      .mockResolvedValueOnce({
+        ok: true,
+        json: async () => ({ items: [{ id: "bind-1" }], total: 1 }),
+      });
+    vi.stubGlobal("fetch", fetchMock);
+    const created = await createTaskBinding({
+      workId: "w1",
+      humanTaskId: "t1",
+      configuredBy: "person-alice",
+      mode: "ASSISTED",
+      digitalEmployeeId: "de-1",
+    });
+    expect(created.id).toBe("bind-1");
+    const listed = await fetchTaskBindings();
+    expect(listed.total).toBe(1);
   });
 });

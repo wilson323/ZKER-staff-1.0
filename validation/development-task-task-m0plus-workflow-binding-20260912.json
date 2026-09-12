@@ -1,0 +1,142 @@
+{
+  "schemaVersion": 1,
+  "id": "task-m0plus-workflow-binding-20260912",
+  "goal": "最小工作流连接闭环：人/任务/员工绑定真实读写",
+  "scope": {
+    "allowed": [
+      "apps/api/src/workflow/**",
+      "apps/api/src/app.module.ts",
+      "apps/web/src/**",
+      "docs/oa-platform-plan.md",
+      "docs/agent-decisions-m0.md",
+      "scripts/curl_workflow_binding_smoke.sh",
+      "validation/development-task-task-m0plus-workflow-binding-20260912.json",
+      "validation/development-workflow.json"
+    ],
+    "excluded": [
+      "回退 CI Skill/Makefile 修复",
+      "完整 M1 运行时/审核/执行循环",
+      "SQLite/mock 数据",
+      "未授权生产与凭据"
+    ]
+  },
+  "acceptance_criteria": [
+    "POST/GET work-items、human-tasks、task-bindings 真实读写且 JSON 落盘",
+    "绑定 ASSISTED/AUTONOMOUS 时校验数字员工存在；MANUAL 可不绑员工",
+    "空仓 total=0；重启同 ZKER_DATA_DIR 可回读",
+    "前端或 curl 可验收创建与列表；pnpm test/build 与 make verify 通过",
+    "不回退 4b5f465 CI 修复"
+  ],
+  "current_node": "N2",
+  "final_node": "N2",
+  "completed_nodes": ["N1", "N2"],
+  "failed_nodes": [],
+  "artifacts": [
+    "apps/api/src/workflow/workflow.registry.ts",
+    "apps/api/src/workflow/workflow.controller.ts",
+    "apps/web/src/WorkflowBindingPanel.vue",
+    "scripts/curl_workflow_binding_smoke.sh",
+    "docs/agent-decisions-m0.md"
+  ],
+  "evidence": [
+    "validation/evidence/workflow-binding-20260912.txt",
+    "validation/development-system-check.json"
+  ],
+  "risks": [
+    "过早引入完整 C04 合同字段会膨胀切片；本回合用最小可回读绑定字段对齐 contracts 语义",
+    "未接真实 OA 引擎身份/待办；personId 为显式字符串标识"
+  ],
+  "approvals": [
+    "Owner 全权授权；Agent 自行裁决"
+  ],
+  "status": "VERIFIED",
+  "intent": {
+    "source": "用户全权授权接续 M0+：最小工作流连接闭环",
+    "problem": "已有数字员工登记，尚无人/任务/员工绑定读写闭环",
+    "users": ["平台配置人", "任务承担人"],
+    "outcome": "可验证的绑定 API + 必要前端/curl 证据，禁 mock"
+  },
+  "spec": {
+    "refs": [
+      "docs/设计包/28-开发分期与验收用例.md",
+      "docs/设计包/47-全产品实施切片与首期开发规格.md",
+      "contracts/data-dictionary.md#oa_binding",
+      "docs/agent-decisions-m0.md"
+    ],
+    "behavior": "创建工作项与人任务后，可保存任务绑定（人+任务+可选数字员工），列表与重启回读一致",
+    "contracts": [
+      "GET/POST /api/v1/work-items",
+      "GET/POST /api/v1/human-tasks",
+      "GET/POST /api/v1/task-bindings"
+    ],
+    "negativeCases": [
+      "缺 title/assignee/mode 返回 400",
+      "ASSISTED 缺 digitalEmployeeId 或员工不存在返回 400",
+      "humanTask 与 work 不匹配返回 400"
+    ]
+  },
+  "plan": {
+    "files": [
+      "apps/api/src/workflow/*",
+      "apps/web/src/api-client.ts",
+      "apps/web/src/WorkflowBindingPanel.vue",
+      "apps/web/src/App.vue"
+    ],
+    "checks": [
+      "pnpm -r run build",
+      "pnpm -r run test",
+      "make verify",
+      "curl 闭环"
+    ],
+    "highestRisk": "绑定校验遗漏导致假闭环",
+    "rollback": "删除 workflow 模块与前端面板；保留 digital-employees"
+  },
+  "requirementIds": ["CN-01"],
+  "caseIds": [],
+  "review": {
+    "mode": "SELF_CHECK",
+    "findings": [
+      "本切片实现最小绑定元数据，非完整 C04/AC-24 全量验收"
+    ],
+    "evidence": [
+      "make verify PASS",
+      "scripts/curl_workflow_binding_smoke.sh"
+    ]
+  },
+  "nodes": [
+    {
+      "id": "N1",
+      "objective": "实现人/任务/员工绑定 JSON 持久化 API 与必要前端",
+      "dependsOn": [],
+      "preconditions": [
+        "分支 tip 含 M0+ 数字员工持久化",
+        "ZKER_DATA_DIR JSON 存储模式已验证"
+      ],
+      "action": "新增 workflow 模块与前端绑定面板",
+      "tool_or_skill": "oa-development-system",
+      "expected_output": "可 curl 验收的绑定读写闭环",
+      "validation": "单元测试 + curl 持久化回读",
+      "success_condition": "空仓/创建/校验/重启回读均有证据",
+      "failure_path": "据日志修校验或落盘",
+      "rollback_or_compensation": "回退本切片提交",
+      "status": "VERIFIED"
+    },
+    {
+      "id": "N2",
+      "objective": "独立验证并交付",
+      "dependsOn": ["N1"],
+      "preconditions": ["实现已产生可复核产物"],
+      "action": "检查原始产物和适用场景",
+      "tool_or_skill": "make verify / REVIEW.md",
+      "expected_output": "当前输入版本的检查结果",
+      "validation": "验收与证据逐项对应",
+      "success_condition": "无关键失败；未验证部分明确披露",
+      "failure_path": "有限修复或交付阻塞",
+      "rollback_or_compensation": "按本任务记录的恢复方案处理",
+      "status": "VERIFIED"
+    }
+  ],
+  "projectRoot": "/workspace",
+  "createdAt": "2026-09-12T02:55:00Z",
+  "updatedAt": "2026-09-12T03:02:00Z"
+}

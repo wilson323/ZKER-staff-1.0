@@ -1,0 +1,15 @@
+timestamp_utc: 2026-09-12T03:01:25Z
+commands:
+  - pnpm -r run build  # OK
+  - pnpm -r run test   # api 17 passed; web 4 passed
+  - make verify        # PASS (after task record fix)
+  - bash scripts/curl_workflow_binding_smoke.sh
+results:
+  GET /task-bindings empty total=0
+  POST digital-employees / work-items / human-tasks / task-bindings 201
+  GET /task-bindings total=1 ASSISTED with employee id
+  POST missing employee -> 400
+  restart same ZKER_DATA_DIR -> total=1
+limits:
+  - not full C04 contract
+  - personId is explicit string, not OA identity

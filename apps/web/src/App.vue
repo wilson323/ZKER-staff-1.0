@@ -1,8 +1,9 @@
 <script setup lang="ts">
 /**
- * M0+ 工作台：真实健康/员工列表/创建/AI 探测，禁止 mock 员工。
+ * M0+/工作流切片工作台：健康、员工、绑定、AI 探测，禁止 mock。
  */
-import { onMounted, ref } from "vue";
+import { computed, onMounted, ref } from "vue";
+import WorkflowBindingPanel from "./WorkflowBindingPanel.vue";
 import {
   createDigitalEmployee,
   fetchAiProbe,
@@ -10,6 +11,7 @@ import {
   fetchHealth,
   type AiProbeResult,
   type DigitalEmployeeListResponse,
+  type DigitalEmployeeRecord,
   type HealthStatus,
 } from "./api-client";
 
@@ -20,6 +22,10 @@ const error = ref<string | null>(null);
 const createName = ref("");
 const creating = ref(false);
 const createError = ref<string | null>(null);
+
+const employeeItems = computed<DigitalEmployeeRecord[]>(
+  () => employees.value?.items ?? [],
+);
 
 /**
  * 并行加载三项真实探测。
@@ -73,7 +79,7 @@ onMounted(() => {
       <p class="brand">ZKER Staff</p>
       <h1>OA 数字员工协作平台</h1>
       <p class="lead">
-        M0+ 登记切片：真实 API 回读与持久化创建，禁止 mock 员工。
+        工作流绑定切片：人/任务/员工真实读写与持久化，禁止 mock。
       </p>
     </header>
 
@@ -126,6 +132,8 @@ onMounted(() => {
         <p v-else>加载中…</p>
       </article>
     </section>
+
+    <WorkflowBindingPanel class="workflow-slot" :employees="employeeItems" />
   </main>
 </template>
 
@@ -192,6 +200,16 @@ body {
   }
 }
 
+.workflow-slot {
+  margin-top: 1rem;
+}
+
+.workflow .hint {
+  margin: 0 0 0.75rem;
+  color: var(--muted);
+  font-size: 0.85rem;
+}
+
 .panel {
   background: var(--panel);
   border: 1px solid rgba(255, 255, 255, 0.08);
@@ -251,6 +269,14 @@ body {
 }
 
 .create-form input {
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: 8px;
+  background: rgba(0, 0, 0, 0.25);
+  color: var(--ink);
+  padding: 0.5rem 0.65rem;
+}
+
+.create-form select {
   border: 1px solid rgba(255, 255, 255, 0.14);
   border-radius: 8px;
   background: rgba(0, 0, 0, 0.25);

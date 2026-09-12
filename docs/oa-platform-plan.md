@@ -1,8 +1,8 @@
 # OA 数字员工协作平台落地计划（ZKER-staff-1.0）
 
-> **当前优先级**：**Agent 全权已授权** — M0 门禁已通；M0+ 数字员工登记持久化已 push（`dbfe63d`）。  
+> **当前优先级**：**Agent 全权已授权** — M0/M0+ 已通；进行中：最小工作流连接闭环（人/任务/员工绑定）。  
 > **有效分支**：`cursor/oa-digital-employee-platform-530e`。  
-> **与 main 关系**：`main` = 已入库设计事实；本 feature = 对齐文档 + M0/M0+ 实现。  
+> **与 main 关系**：`main` = 已入库设计事实；本 feature = 对齐文档 + M0/M0+/工作流绑定实现。  
 > **裁决入口**：[agent-decisions-m0.md](./agent-decisions-m0.md)、[product-requirements-alignment.md](./product-requirements-alignment.md)。  
 > **历史**：曾 `CODING_PAUSED` → 文档轨重开 → 2026-09-12 全权授权后恢复编码。
 
@@ -28,8 +28,8 @@
 
 | 路径 | 技术 | 说明 |
 |---|---|---|
-| `apps/api` | NestJS | `/api/v1/health`、digital-employees GET/POST（JSON 文件持久化）、ai/probe |
-| `apps/web` | Vite Vue3 | 真实列表 + 创建表单，调用真实 API |
+| `apps/api` | NestJS | health、digital-employees、work-items/human-tasks/task-bindings、ai/probe；JSON 文件持久化 |
+| `apps/web` | Vite Vue3 | 员工列表/创建 + 工作流绑定面板，真实 API |
 | 根 | pnpm + Makefile | `install` / `build` / `test` / `ci` |
 
 许可证见根 `NOTICE.md`。产品 OA 底座验证通过后，允许目录级替换本工程层。
@@ -52,4 +52,6 @@
 - [x] M0+：数字员工 POST 创建 + JSON 持久化 + 前端列表/创建（已 push `dbfe63d`）  
 - [x] GitHub Actions `verify` 变绿（含 CI 修复 `4b5f465` 与本切片 push）  
 - [x] Draft PR #3 同步 M0+ 代码  
-- [ ] 下一切片：最小工作流连接闭环（或按 47 号规划 M1-01，不抢跑完整运行时）  
+- [x] 本切片：最小工作流连接闭环（人/任务/员工绑定读写）  
+- [ ] 再下一步：按 47 号推进 M1-01（双实例工作台/登录）规划，不抢跑完整运行时  
+- [ ] 产品 OA 底座 POC（RuoYi-AI→芋道）与工程层并行  

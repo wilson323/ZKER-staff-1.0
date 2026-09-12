@@ -59,8 +59,28 @@
 | 待 Owner 批 M0 边界 | **Agent 已统一口径**（上表） |
 | CODING_PAUSED / 本回合不扩业务代码 | **废止**；允许按 M0 真实编码 |
 
-## 4. 关联文档
+## 5. M0+ 后续：最小工作流连接闭环（本切片）
 
-- [product-requirements-alignment.md](./product-requirements-alignment.md)
-- [oa-platform-plan.md](./oa-platform-plan.md)
-- [doc-track-decision.md](./doc-track-decision.md)
+| 项 | 值 |
+|---|---|
+| 日期 | 2026-09-12 |
+| 目标 | 人 / 人任务 / 数字员工绑定真实读写 |
+| 需求锚点 | CN-01（绑定可回读；非完整 AC 全量） |
+| 非目标 | 完整 C04 合同、执行循环、OA 引擎身份 |
+
+### API
+
+| 方法 | 路径 | 行为 |
+|---|---|---|
+| GET/POST | `/api/v1/work-items` | 工作项列表/创建，JSON 落盘 |
+| GET/POST | `/api/v1/human-tasks` | 人任务列表/创建（须挂已有 workId） |
+| GET/POST | `/api/v1/task-bindings` | 绑定列表/创建；ASSISTED/AUTONOMOUS 校验员工存在 |
+| GET | `/api/v1/task-bindings/:id` | 单条回读 |
+
+### 前端
+
+`WorkflowBindingPanel.vue`：工作项 → 人任务 → 绑定表单，调用真实 API。
+
+### 验证
+
+见任务记录 `validation/development-task-task-m0plus-workflow-binding-20260912.json`；冒烟脚本 `scripts/curl_workflow_binding_smoke.sh`。
