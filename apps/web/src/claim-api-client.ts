@@ -2,7 +2,8 @@
  * M1-02 领取 / 本人配置 API 客户端（会话头派生，禁 mock）。
  */
 import {
-  workbenchHeaders,
+  fetchWithSession,
+  writeWithSession,
   type ListResponse,
   type WorkbenchSession,
 } from "./workbench-api-client";
@@ -47,54 +48,18 @@ export interface PersonConfigRecord {
 }
 
 /**
- * 带会话的 GET。
- */
-async function getJson<T>(
-  path: string,
-  session: WorkbenchSession,
-  label: string,
-  baseUrl = "/api/v1",
-): Promise<T> {
-  const response = await fetch(`${baseUrl}${path}`, {
-    headers: workbenchHeaders(session),
-  });
-  if (!response.ok) {
-    throw new Error(`${label} request failed: ${response.status}`);
-  }
-  return (await response.json()) as T;
-}
-
-/**
- * 带会话的写请求。
- */
-async function writeJson<T>(
-  path: string,
-  method: "POST" | "PUT",
-  session: WorkbenchSession,
-  body: unknown,
-  label: string,
-  baseUrl = "/api/v1",
-): Promise<T> {
-  const response = await fetch(`${baseUrl}${path}`, {
-    method,
-    headers: workbenchHeaders(session),
-    body: JSON.stringify(body),
-  });
-  if (!response.ok) {
-    const detail = await response.text();
-    throw new Error(`${label} failed: ${response.status} ${detail}`);
-  }
-  return (await response.json()) as T;
-}
-
-/**
  * 拉取本租户可领取任务。
  */
 export async function fetchClaimableTasks(
   session: WorkbenchSession,
   baseUrl = "/api/v1",
 ): Promise<ListResponse<ClaimableHumanTaskRecord>> {
-  return getJson("/workbench/claimable-tasks", session, "claimable tasks", baseUrl);
+  return fetchWithSession(
+    "/workbench/claimable-tasks",
+    session,
+    "claimable tasks",
+    baseUrl,
+  );
 }
 
 /**
@@ -105,7 +70,7 @@ export async function claimHumanTask(
   taskId: string,
   baseUrl = "/api/v1",
 ): Promise<ClaimableHumanTaskRecord> {
-  return writeJson(
+  return writeWithSession(
     `/workbench/claimable-tasks/${taskId}/claim`,
     "POST",
     session,
@@ -128,7 +93,7 @@ export async function transferHumanTask(
   },
   baseUrl = "/api/v1",
 ): Promise<ClaimableHumanTaskRecord> {
-  return writeJson(
+  return writeWithSession(
     `/workbench/claimable-tasks/${taskId}/transfer`,
     "POST",
     session,
@@ -153,7 +118,7 @@ export async function savePersonConfig(
   },
   baseUrl = "/api/v1",
 ): Promise<PersonConfigRecord> {
-  return writeJson(
+  return writeWithSession(
     `/workbench/claimable-tasks/${taskId}/config`,
     "PUT",
     session,
@@ -171,7 +136,7 @@ export async function fetchActivePersonConfig(
   taskId: string,
   baseUrl = "/api/v1",
 ): Promise<PersonConfigRecord> {
-  return getJson(
+  return fetchWithSession(
     `/workbench/claimable-tasks/${taskId}/config`,
     session,
     "person config",

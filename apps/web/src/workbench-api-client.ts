@@ -69,9 +69,18 @@ export function workbenchHeaders(session: WorkbenchSession): HeadersInit {
 }
 
 /**
- * 带会话头的 GET JSON。
+ * 带会话头的 GET JSON（供 workbench / claim 客户端复用）。
+ *
+ * Args:
+ *   path: API 相对路径。
+ *   session: 工作台会话。
+ *   label: 错误标签。
+ *   baseUrl: API 前缀。
+ *
+ * Returns:
+ *   Promise<T>
  */
-async function fetchWithSession<T>(
+export async function fetchWithSession<T>(
   path: string,
   session: WorkbenchSession,
   label: string,
@@ -87,9 +96,20 @@ async function fetchWithSession<T>(
 }
 
 /**
- * 带会话头的 JSON 写请求。
+ * 带会话头的 JSON 写请求（供 workbench / claim 客户端复用）。
+ *
+ * Args:
+ *   path: API 相对路径。
+ *   method: POST 或 PUT。
+ *   session: 工作台会话。
+ *   body: 请求体。
+ *   label: 错误标签。
+ *   baseUrl: API 前缀。
+ *
+ * Returns:
+ *   Promise<T>
  */
-async function writeWithSession<T>(
+export async function writeWithSession<T>(
   path: string,
   method: "POST" | "PUT",
   session: WorkbenchSession,

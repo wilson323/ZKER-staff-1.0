@@ -4,14 +4,14 @@
  * 禁止 SQLite 与 mock；路径复用 ZKER_DATA_DIR。
  * TRACE-workflow-20260912-人任务员工绑定落盘
  */
-import {
-  mkdirSync,
-  readFileSync,
-  renameSync,
-  writeFileSync,
-  existsSync,
-} from "node:fs";
 import { join } from "node:path";
+import {
+  asObject,
+  loadJsonArray,
+  requireNonEmptyString,
+  requirePositiveInt,
+  saveJsonArray,
+} from "../common/json-array-store";
 import { resolveDataDir } from "../digital-employees/digital-employee.store";
 import {
   BindingMode,
@@ -49,47 +49,10 @@ export function resolveWorkflowStorePaths(dataDir?: string): {
 }
 
 /**
- * 读取 JSON 数组；缺失文件返回空数组。
- *
- * Args:
- *   storePath: 文件路径。
- *   label: 错误标签。
- *
- * Returns:
- *   unknown[]: 原始数组。
- */
-function loadArray(storePath: string, label: string): unknown[] {
-  if (!existsSync(storePath)) {
-    return [];
-  }
-  const parsed = JSON.parse(readFileSync(storePath, "utf8")) as unknown;
-  if (!Array.isArray(parsed)) {
-    throw new TypeError(
-      `invalid ${label} store: expected array at ${storePath}`,
-    );
-  }
-  return parsed;
-}
-
-/**
- * 原子写入 JSON 数组。
- *
- * Args:
- *   storePath: 目标路径。
- *   records: 待写入对象列表。
- */
-function saveArray(storePath: string, records: unknown[]): void {
-  mkdirSync(join(storePath, ".."), { recursive: true });
-  const tempPath = `${storePath}.${process.pid}.tmp`;
-  writeFileSync(tempPath, `${JSON.stringify(records, null, 2)}\n`, "utf8");
-  renameSync(tempPath, storePath);
-}
-
-/**
  * 加载工作项列表。
  */
 export function loadWorkItems(storePath: string): WorkItemRecord[] {
-  return loadArray(storePath, "work-items").map((item) =>
+  return loadJsonArray(storePath, "work-items").map((item) =>
     assertWorkItem(item),
   );
 }
@@ -101,14 +64,14 @@ export function saveWorkItems(
   storePath: string,
   items: WorkItemRecord[],
 ): void {
-  saveArray(storePath, items);
+  saveJsonArray(storePath, items);
 }
 
 /**
  * 加载人任务列表。
  */
 export function loadHumanTasks(storePath: string): HumanTaskRecord[] {
-  return loadArray(storePath, "human-tasks").map((item) =>
+  return loadJsonArray(storePath, "human-tasks").map((item) =>
     assertHumanTask(item),
   );
 }
@@ -120,14 +83,14 @@ export function saveHumanTasks(
   storePath: string,
   items: HumanTaskRecord[],
 ): void {
-  saveArray(storePath, items);
+  saveJsonArray(storePath, items);
 }
 
 /**
  * 加载任务绑定列表。
  */
 export function loadTaskBindings(storePath: string): TaskBindingRecord[] {
-  return loadArray(storePath, "task-bindings").map((item) =>
+  return loadJsonArray(storePath, "task-bindings").map((item) =>
     assertTaskBinding(item),
   );
 }
@@ -139,7 +102,7 @@ export function saveTaskBindings(
   storePath: string,
   items: TaskBindingRecord[],
 ): void {
-  saveArray(storePath, items);
+  saveJsonArray(storePath, items);
 }
 
 /**
@@ -203,42 +166,4 @@ function assertTaskBinding(value: unknown): TaskBindingRecord {
     createdAt: requireNonEmptyString(record, "createdAt"),
     updatedAt: requireNonEmptyString(record, "updatedAt"),
   };
-}
-
-/**
- * 将未知值转为普通对象。
- */
-function asObject(value: unknown, label: string): Record<string, unknown> {
-  if (value === null || typeof value !== "object") {
-    throw new Error(`invalid ${label} record: not an object`);
-  }
-  return value as Record<string, unknown>;
-}
-
-/**
- * 读取非空字符串字段。
- */
-function requireNonEmptyString(
-  record: Record<string, unknown>,
-  key: string,
-): string {
-  const value = record[key];
-  if (typeof value !== "string" || value.trim() === "") {
-    throw new Error(`invalid record: ${key}`);
-  }
-  return value;
-}
-
-/**
- * 读取正整数字段。
- */
-function requirePositiveInt(
-  record: Record<string, unknown>,
-  key: string,
-): number {
-  const value = record[key];
-  if (typeof value !== "number" || !Number.isInteger(value) || value < 1) {
-    throw new Error(`invalid record: ${key}`);
-  }
-  return value;
 }

@@ -4,14 +4,15 @@
  * 禁止 SQLite / mock；路径复用 ZKER_DATA_DIR。
  * TRACE-claim-20260912-领取配置落盘
  */
-import {
-  existsSync,
-  mkdirSync,
-  readFileSync,
-  renameSync,
-  writeFileSync,
-} from "node:fs";
 import { join } from "node:path";
+import {
+  asObject,
+  loadJsonArray,
+  requireNonEmptyString,
+  requireNonNegativeInt,
+  requireStringAllowEmpty,
+  saveJsonArray,
+} from "../common/json-array-store";
 import { resolveDataDir } from "../digital-employees/digital-employee.store";
 import {
   ClaimableHumanTaskRecord,
@@ -45,38 +46,12 @@ export function resolveClaimStorePaths(dataDir?: string): {
 }
 
 /**
- * 读取 JSON 数组；缺失返回空数组。
- */
-function loadArray(storePath: string, label: string): unknown[] {
-  if (!existsSync(storePath)) {
-    return [];
-  }
-  const parsed = JSON.parse(readFileSync(storePath, "utf8")) as unknown;
-  if (!Array.isArray(parsed)) {
-    throw new TypeError(
-      `invalid ${label} store: expected array at ${storePath}`,
-    );
-  }
-  return parsed;
-}
-
-/**
- * 原子写入 JSON 数组。
- */
-function saveArray(storePath: string, records: unknown[]): void {
-  mkdirSync(join(storePath, ".."), { recursive: true });
-  const tempPath = `${storePath}.${process.pid}.tmp`;
-  writeFileSync(tempPath, `${JSON.stringify(records, null, 2)}\n`, "utf8");
-  renameSync(tempPath, storePath);
-}
-
-/**
  * 加载可领取人任务。
  */
 export function loadClaimableTasks(
   storePath: string,
 ): ClaimableHumanTaskRecord[] {
-  return loadArray(storePath, "claimable-human-tasks").map((item) =>
+  return loadJsonArray(storePath, "claimable-human-tasks").map((item) =>
     assertTask(item),
   );
 }
@@ -88,14 +63,14 @@ export function saveClaimableTasks(
   storePath: string,
   items: ClaimableHumanTaskRecord[],
 ): void {
-  saveArray(storePath, items);
+  saveJsonArray(storePath, items);
 }
 
 /**
  * 加载本人配置。
  */
 export function loadPersonConfigs(storePath: string): PersonConfigRecord[] {
-  return loadArray(storePath, "person-configs").map((item) =>
+  return loadJsonArray(storePath, "person-configs").map((item) =>
     assertConfig(item),
   );
 }
@@ -107,7 +82,7 @@ export function savePersonConfigs(
   storePath: string,
   items: PersonConfigRecord[],
 ): void {
-  saveArray(storePath, items);
+  saveJsonArray(storePath, items);
 }
 
 /**
@@ -191,56 +166,4 @@ function assertConfig(value: unknown): PersonConfigRecord {
     createdAt: requireNonEmptyString(record, "createdAt"),
     updatedAt: requireNonEmptyString(record, "updatedAt"),
   };
-}
-
-/**
- * 转为普通对象。
- */
-function asObject(value: unknown, label: string): Record<string, unknown> {
-  if (value === null || typeof value !== "object") {
-    throw new Error(`invalid ${label} record: not an object`);
-  }
-  return value as Record<string, unknown>;
-}
-
-/**
- * 读取非空字符串。
- */
-function requireNonEmptyString(
-  record: Record<string, unknown>,
-  key: string,
-): string {
-  const value = record[key];
-  if (typeof value !== "string" || value.trim() === "") {
-    throw new Error(`invalid record: ${key}`);
-  }
-  return value;
-}
-
-/**
- * 读取允许空串的字符串。
- */
-function requireStringAllowEmpty(
-  record: Record<string, unknown>,
-  key: string,
-): string {
-  const value = record[key];
-  if (typeof value !== "string") {
-    throw new Error(`invalid record: ${key}`);
-  }
-  return value;
-}
-
-/**
- * 读取非负整数。
- */
-function requireNonNegativeInt(
-  record: Record<string, unknown>,
-  key: string,
-): number {
-  const value = record[key];
-  if (typeof value !== "number" || !Number.isInteger(value) || value < 0) {
-    throw new Error(`invalid record: ${key}`);
-  }
-  return value;
 }
