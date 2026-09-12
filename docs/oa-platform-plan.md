@@ -1,50 +1,52 @@
 # OA 数字员工协作平台落地计划（ZKER-staff-1.0）
 
-> **当前优先级**：文档轨已重开 — 以本 feature 文档推进需求对齐与平台落地说明。  
+> **当前优先级**：**Agent 全权已授权** — M0 工程门禁真实编码进行中。  
 > **有效分支**：`cursor/oa-digital-employee-platform-530e`。  
-> **与 main 关系**：`main` = 已入库设计事实；本 feature = 需求对齐与平台落地文档轨。  
-> **事实源**：本机 `/Users/mac/Documents/OA数字员工协作平台`；对照 `main` @ `454caf6` 设计包（**禁止误删**）。  
-> **文档状态**：见 [product-requirements-alignment.md](./product-requirements-alignment.md)、[doc-track-decision.md](./doc-track-decision.md)。  
-> **历史**：曾标注 `CODING_PAUSED`；2026-09-12 起改为文档轨重开口径。  
-> **标注**：「待本机材料对齐后迁入」≠ 已定稿。
+> **与 main 关系**：`main` = 已入库设计事实；本 feature = 对齐文档 + M0 实现。  
+> **裁决入口**：[agent-decisions-m0.md](./agent-decisions-m0.md)、[product-requirements-alignment.md](./product-requirements-alignment.md)。  
+> **历史**：曾 `CODING_PAUSED` → 文档轨重开 → 2026-09-12 全权授权后恢复编码。
 
 ## 1. 仓库确认
 
 | 项 | 值 |
 |---|---|
 | Remote | `https://github.com/wilson323/ZKER-staff-1.0.git` |
-| 默认主分支 | `main`（设计包已入库） |
+| 默认主分支 | `main`（设计包已入库，禁止误删） |
 | 工作分支 | `cursor/oa-digital-employee-platform-530e` |
 | 工作目录 | `/workspace` |
-| 禁止 | 写入 `ZKER-staff` 或其他仓库；误删 main 设计包 |
+| Draft PR | [#3](https://github.com/wilson323/ZKER-staff-1.0/pull/3) |
 
 ## 2. 阶段顺序（强制）
 
-1. **文档轨重开 / 需求对齐**（进行中）— 产品边界 / 角色场景 / M0 验收 / 底座授权  
-2. **本机材料迁入** — 设计主链摘要 + contracts **待本机材料对齐后迁入**（对照 main 已有包）  
-3. **工程门禁** — 在对齐后的 M0 范围上 build/test  
-4. **按本机 47 号最小步骤** 扩能力 — 禁止抢跑领域实现  
+1. ~~文档轨重开 / 需求对齐~~ — **完成（口径已统一）**  
+2. ~~等待 Owner 底座/M0 授权~~ — **废止；Agent 全权已裁决**  
+3. **工程门禁 M0** — NestJS + Vue3 + `make ci`（进行中）  
+4. **按 47 号最小步骤** 扩 M1 能力 — 禁止抢跑完整运行时  
+5. **产品 OA 底座验证** — 按 60 号：RuoYi-AI → 芋道 → Plus（与 M0 工程层可并行规划，不阻塞门禁）  
 
-## 3. 已有工程占位（非需求完成）
+## 3. M0 工程层（已采用，非产品 OA 终选）
 
-空仓上曾用官方脚手架生成 NestJS + Vite Vue3 占位，**仅证明可商用开源工具链可构建**；  
-在需求未对齐前：
+| 路径 | 技术 | 说明 |
+|---|---|---|
+| `apps/api` | NestJS | `/api/v1/health`、digital-employees、ai/probe |
+| `apps/web` | Vite Vue3 | 最小壳，调用真实 API |
+| 根 | pnpm + Makefile | `install` / `build` / `test` / `ci` |
 
-- 不扩展领域模块
-- 不宣称产品能力已交付
-- 可整体替换以服从本机底座终选
+许可证见根 `NOTICE.md`。产品 OA 底座验证通过后，允许目录级替换本工程层。
 
-许可证策略见根目录 `NOTICE.md`（MIT/Apache 优先，禁 AGPL/SSPL 主路径）。
+## 4. 阻塞（现行）
 
-## 4. 阻塞
+| 项 | 状态 |
+|---|---|
+| Owner 授权 | **已解除**（全权） |
+| M0 口径 | **已统一** |
+| 产品 OA 底座终选 | **不阻塞 M0**；阻塞的是「宣称终态商用完成」 |
+| 完整 72 AC | **不在 M0 范围** |
 
-1. 本机对齐未完成 → 产品定义与 contracts 未迁入  
-2. 底座曾 `PENDING_SELECTION` → 需 Owner 签署或「仅 M0 实验」授权  
-3. 业务编码深化仍受 P0 约束；**文档轨本身已重开，可继续写对齐文档**
+## 5. 下一步检查清单
 
-## 5. 下一步
-
-- [x] Owner 裁决：重开 feature 文档轨（2026-09-12）  
-- [ ] 本机对齐任务回传「产品一句话 + 主场景 + contracts 摘要」  
-- [ ] Owner 确认需求对齐文档 §5 M0 边界  
-- [ ] 迁入设计/contracts 后再恢复业务编码  
+- [x] Owner 裁决：重开 feature 文档轨  
+- [x] Owner 全权授权；Agent 写入底座/M0 裁决  
+- [ ] `make ci` 绿；health / employees / ai probe 真实验证  
+- [ ] Draft PR #3 更新为含 M0 代码  
+- [ ] M0 通过后按 47 号启动 M1-01 切片规划  

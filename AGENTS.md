@@ -16,4 +16,11 @@
 
 简单任务只做必要步骤；复杂任务复用 `validation/development-workflow.json` 的 currentTask，使用同一记录中的 intent/spec/plan 与节点。当前用户新消息是目标依据，已完成任务不是下一任务的批准。完成前运行 `make verify`，产品改动另跑 `make verify-product` 并完成对应真实业务验收。不得将空检查、旧报告、模型自述或原型数据升级为产品通过。
 
-Skill/模型/hook变更要运行适用回归并记录未执行的行为评测。当前无选定产品底座和生产接入；Codex按本文件执行检查，不能将Claude hook或未运行的CI描述为所有宿主的强制权限门禁。
+Skill/模型/hook变更要运行适用回归并记录未执行的行为评测。产品 OA 底座未终选；M0 工程门禁层（NestJS+Vue3）已由 Agent 全权裁决采用，见 `docs/agent-decisions-m0.md`。Codex按本文件执行检查，不能将Claude hook或未运行的CI描述为所有宿主的强制权限门禁。
+
+## M0 工程约束（feature 轨）
+
+1. 唯一仓库：`wilson323/ZKER-staff-1.0`；禁止写入其他仓  
+2. 禁止 mock 业务数据与假 AI 成功；AI 必须经 OpenAI 协议适配器  
+3. 工程门禁：`make install|build|test|ci`  
+4. 产品 OA 底座验证（RuoYi-AI→芋道）与本工程层可并行规划，不得把工程层冒充终选
