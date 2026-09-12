@@ -11,6 +11,7 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
+      # make verify 依赖 ~/.agents/skills/ai-native-sdlc；从仓内便携包安装并校验摘要
+      - run: make install-shared-skills
       - run: make verify
-# 本地项目尚无 Git / remote。本文件尚未在 GitHub 执行；没有部署或自动合并步骤。
-# 实际启用时核对并固定 Actions 完整提交 SHA，配置仓库 required check。
+# 无部署或自动合并。共享 Skill 来自 validation/development-ai-native-sdlc-v2.0.0.zip。

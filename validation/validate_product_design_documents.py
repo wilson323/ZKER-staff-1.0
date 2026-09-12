@@ -99,12 +99,31 @@ for rel, expected in trace['sourceHashes'].items():
 
 local_links = []
 def validate_link(origin, target):
+    """Validate a project-local Markdown link; skip external absolute citations.
+
+    Absolute paths outside this repository (author-machine StaffDeck/Skill
+    research citations) are not treated as local links and do not fail CI.
+
+    Args:
+        origin: Markdown/JSON file containing the link.
+        target: Raw Markdown link target (may include anchors or :line).
+    """
     target = unquote(target.strip('<>'))
     if target.startswith(('http:', 'https:', 'mailto:', 'app:', 'codex:')):
         return
     path, _, anchor = target.partition('#')
     path = re.sub(r':\d+$', '', path.split('?')[0])
-    p = (origin.parent / path).resolve() if path else origin
+    if path:
+        candidate = Path(path).expanduser()
+        if candidate.is_absolute():
+            # Author-machine absolute citations outside this repo are external evidence.
+            if not candidate.resolve().is_relative_to(ROOT.resolve()):
+                return
+            p = candidate.resolve()
+        else:
+            p = (origin.parent / path).resolve()
+    else:
+        p = origin
     ok = p.exists()
     if ok and anchor:
         txt = p.read_text()
