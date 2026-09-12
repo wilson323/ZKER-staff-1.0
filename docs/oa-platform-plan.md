@@ -1,8 +1,8 @@
 # OA 数字员工协作平台落地计划（ZKER-staff-1.0）
 
-> **当前优先级**：**Agent 全权已授权** — M0/M0+ 已通；进行中：最小工作流连接闭环（人/任务/员工绑定）。  
+> **当前优先级**：**Agent 全权已授权** — M0/M0+/工作流绑定已通；进行中：**M1-01 双实例工作台**。  
 > **有效分支**：`cursor/oa-digital-employee-platform-530e`。  
-> **与 main 关系**：`main` = 已入库设计事实；本 feature = 对齐文档 + M0/M0+/工作流绑定实现。  
+> **与 main 关系**：`main` = 已入库设计事实；本 feature = 对齐文档 + M0→M1-01 实现。  
 > **裁决入口**：[agent-decisions-m0.md](./agent-decisions-m0.md)、[product-requirements-alignment.md](./product-requirements-alignment.md)。  
 > **历史**：曾 `CODING_PAUSED` → 文档轨重开 → 2026-09-12 全权授权后恢复编码。
 
@@ -28,8 +28,8 @@
 
 | 路径 | 技术 | 说明 |
 |---|---|---|
-| `apps/api` | NestJS | health、digital-employees、work-items/human-tasks/task-bindings、ai/probe；JSON 文件持久化 |
-| `apps/web` | Vite Vue3 | 员工列表/创建 + 工作流绑定面板，真实 API |
+| `apps/api` | NestJS | health、digital-employees、workflow 绑定、workbench 双实例、ai/probe；JSON 文件持久化 |
+| `apps/web` | Vite Vue3 | 员工 + 绑定面板 + M1-01 双实例工作台，真实 API |
 | 根 | pnpm + Makefile | `install` / `build` / `test` / `ci` |
 
 许可证见根 `NOTICE.md`。产品 OA 底座验证通过后，允许目录级替换本工程层。

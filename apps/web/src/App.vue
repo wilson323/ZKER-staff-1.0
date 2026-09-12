@@ -1,8 +1,9 @@
 <script setup lang="ts">
 /**
- * M0+/工作流切片工作台：健康、员工、绑定、AI 探测，禁止 mock。
+ * M0+/工作流/M1-01 工作台：健康、员工、绑定、双实例、AI 探测，禁止 mock。
  */
 import { computed, onMounted, ref } from "vue";
+import DualInstanceWorkbench from "./DualInstanceWorkbench.vue";
 import WorkflowBindingPanel from "./WorkflowBindingPanel.vue";
 import {
   createDigitalEmployee,
@@ -79,7 +80,7 @@ onMounted(() => {
       <p class="brand">ZKER Staff</p>
       <h1>OA 数字员工协作平台</h1>
       <p class="lead">
-        工作流绑定切片：人/任务/员工真实读写与持久化，禁止 mock。
+        M1-01 双实例工作台 + 工作流绑定：真实读写与持久化，禁止 mock。
       </p>
     </header>
 
@@ -133,6 +134,7 @@ onMounted(() => {
       </article>
     </section>
 
+    <DualInstanceWorkbench class="workflow-slot" />
     <WorkflowBindingPanel class="workflow-slot" :employees="employeeItems" />
   </main>
 </template>

@@ -1,0 +1,24 @@
+DATA_DIR=/tmp/zker-wb-J1G6
+GET empty instances (authorized):
+{"items":[],"total":0}
+GET without session headers (expect 401):
+status=401 body={"message":"session requires X-Tenant-Id and X-Person-Id headers","error":"Unauthorized","statusCode":401}
+template={"id":"7bbd2ba7-0c00-4828-9fa0-d91e8febc7be","code":"biz-intake","title":"商务立项模板","published":true,"createdAt":"2026-09-12T03:11:48.124Z"}
+A1={"id":"48bea89e-b2c7-464f-ac77-8edef2cb9fec","templateId":"7bbd2ba7-0c00-4828-9fa0-d91e8febc7be","tenantId":"tenant-alpha","initiatorPersonId":"demo_executor","title":"A1","idempotencyKey":"idem-a1","intentKey":"intent-a1","state":"OPEN","draft":"","threadId":"thread-48bea89e-b2c7-464f-ac77-8edef2cb9fec","configId":"config-48bea89e-b2c7-464f-ac77-8edef2cb9fec","urlPath":"/workbench/instances/48bea89e-b2c7-464f-ac77-8edef2cb9fec","createdAt":"2026-09-12T03:11:48.144Z","updatedAt":"2026-09-12T03:11:48.144Z"}
+A1_replay_id=48bea89e-b2c7-464f-ac77-8edef2cb9fec
+A2={"id":"0f7b71c6-11e2-454c-b012-e967bff0ca72","templateId":"7bbd2ba7-0c00-4828-9fa0-d91e8febc7be","tenantId":"tenant-alpha","initiatorPersonId":"demo_executor","title":"A2","idempotencyKey":"idem-a2","intentKey":"intent-a2","state":"OPEN","draft":"","threadId":"thread-0f7b71c6-11e2-454c-b012-e967bff0ca72","configId":"config-0f7b71c6-11e2-454c-b012-e967bff0ca72","urlPath":"/workbench/instances/0f7b71c6-11e2-454c-b012-e967bff0ca72","createdAt":"2026-09-12T03:11:48.182Z","updatedAt":"2026-09-12T03:11:48.182Z"}
+GET todos:
+{"items":[{"id":"842c20ce-c0d6-4729-9fb1-a9bbbb3e4981","instanceId":"48bea89e-b2c7-464f-ac77-8edef2cb9fec","tenantId":"tenant-alpha","assigneePersonId":"demo_executor","title":"待办：A1","createdAt":"2026-09-12T03:11:48.144Z"},{"id":"81844301-eb85-433a-aa77-2b14f70e7ba5","instanceId":"0f7b71c6-11e2-454c-b012-e967bff0ca72","tenantId":"tenant-alpha","assigneePersonId":"demo_executor","title":"待办：A2","createdAt":"2026-09-12T03:11:48.182Z"}],"total":2}
+other tenant instances (expect total=0):
+{"items":[],"total":0}
+cross_tenant_get_status=404
+draft_isolation_ok
+after restart instances:
+{"items":[{"id":"48bea89e-b2c7-464f-ac77-8edef2cb9fec","templateId":"7bbd2ba7-0c00-4828-9fa0-d91e8febc7be","tenantId":"tenant-alpha","initiatorPersonId":"demo_executor","title":"A1","idempotencyKey":"idem-a1","intentKey":"intent-a1","state":"OPEN","draft":"only-A1","threadId":"thread-48bea89e-b2c7-464f-ac77-8edef2cb9fec","configId":"config-48bea89e-b2c7-464f-ac77-8edef2cb9fec","urlPath":"/workbench/instances/48bea89e-b2c7-464f-ac77-8edef2cb9fec","createdAt":"2026-09-12T03:11:48.144Z","updatedAt":"2026-09-12T03:11:48.231Z"},{"id":"0f7b71c6-11e2-454c-b012-e967bff0ca72","templateId":"7bbd2ba7-0c00-4828-9fa0-d91e8febc7be","tenantId":"tenant-alpha","initiatorPersonId":"demo_executor","title":"A2","idempotencyKey":"idem-a2","intentKey":"intent-a2","state":"OPEN","draft":"","threadId":"thread-0f7b71c6-11e2-454c-b012-e967bff0ca72","configId":"config-0f7b71c6-11e2-454c-b012-e967bff0ca72","urlPath":"/workbench/instances/0f7b71c6-11e2-454c-b012-e967bff0ca72","createdAt":"2026-09-12T03:11:48.182Z","updatedAt":"2026-09-12T03:11:48.182Z"}],"total":2}
+files:
+total 20
+drwx------  2 ubuntu ubuntu 4096 Sep 12 03:11 .
+drwxrwxrwt 13 root   root   4096 Sep 12 03:11 ..
+-rw-r--r--  1 ubuntu ubuntu 1214 Sep 12 03:11 process-instances.json
+-rw-r--r--  1 ubuntu ubuntu  190 Sep 12 03:11 process-templates.json
+-rw-r--r--  1 ubuntu ubuntu  527 Sep 12 03:11 workbench-todos.json

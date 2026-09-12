@@ -9,6 +9,10 @@ import {
   fetchHealth,
   fetchTaskBindings,
 } from "./api-client";
+import {
+  createWorkbenchInstance,
+  fetchWorkbenchTodos,
+} from "./workbench-api-client";
 
 describe("api-client", () => {
   afterEach(() => {
@@ -101,5 +105,71 @@ describe("api-client", () => {
     expect(created.id).toBe("bind-1");
     const listed = await fetchTaskBindings();
     expect(listed.total).toBe(1);
+  });
+
+  it("sends workbench session headers when creating instance", async () => {
+    const fetchMock = vi.fn().mockResolvedValue({
+      ok: true,
+      json: async () => ({
+        id: "inst-1",
+        templateId: "tpl-1",
+        tenantId: "tenant-alpha",
+        initiatorPersonId: "demo_executor",
+        title: "A1",
+        idempotencyKey: "idem-a1",
+        intentKey: "intent-a1",
+        state: "OPEN",
+        draft: "",
+        threadId: "thread-inst-1",
+        configId: "config-inst-1",
+        urlPath: "/workbench/instances/inst-1",
+        createdAt: "2026-09-12T03:10:00.000Z",
+        updatedAt: "2026-09-12T03:10:00.000Z",
+      }),
+    });
+    vi.stubGlobal("fetch", fetchMock);
+    const session = {
+      tenantId: "tenant-alpha",
+      personId: "demo_executor",
+    };
+    const created = await createWorkbenchInstance(session, {
+      templateId: "tpl-1",
+      title: "A1",
+      idempotencyKey: "idem-a1",
+      intentKey: "intent-a1",
+    });
+    expect(created.id).toBe("inst-1");
+    expect(fetchMock).toHaveBeenCalledWith(
+      "/api/v1/workbench/instances",
+      expect.objectContaining({
+        method: "POST",
+        headers: expect.objectContaining({
+          "X-Tenant-Id": "tenant-alpha",
+          "X-Person-Id": "demo_executor",
+        }),
+      }),
+    );
+  });
+
+  it("fetches workbench todos with session headers", async () => {
+    const fetchMock = vi.fn().mockResolvedValue({
+      ok: true,
+      json: async () => ({ items: [], total: 0 }),
+    });
+    vi.stubGlobal("fetch", fetchMock);
+    const list = await fetchWorkbenchTodos({
+      tenantId: "tenant-alpha",
+      personId: "demo_executor",
+    });
+    expect(list.total).toBe(0);
+    expect(fetchMock).toHaveBeenCalledWith(
+      "/api/v1/workbench/todos",
+      expect.objectContaining({
+        headers: expect.objectContaining({
+          "X-Tenant-Id": "tenant-alpha",
+          "X-Person-Id": "demo_executor",
+        }),
+      }),
+    );
   });
 });

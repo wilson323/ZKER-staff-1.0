@@ -84,3 +84,32 @@
 ### 验证
 
 见任务记录 `validation/development-task-task-m0plus-workflow-binding-20260912.json`；冒烟脚本 `scripts/curl_workflow_binding_smoke.sh`。
+
+## 6. M1-01 双实例工作台（本切片）
+
+| 项 | 值 |
+|---|---|
+| 日期 | 2026-09-12 |
+| 目标 | 同模板 A1/A2、幂等回放、租户隔离待办/草稿 |
+| 需求锚点 | 47 号 M1-01；WD-01/WD-02 最小切片 |
+| 非目标 | 完整 AC-01/02/03/07、OA 登录、完整运行时 |
+| 会话 | 请求头 `X-Tenant-Id` / `X-Person-Id` 派生；禁止正文传主体 |
+
+### API
+
+| 方法 | 路径 | 行为 |
+|---|---|---|
+| GET | `/api/v1/workbench/session` | 回显会话 |
+| GET/POST | `/api/v1/workbench/templates` | 已发布模板列表 / 按 code 确保 |
+| GET/POST | `/api/v1/workbench/instances` | 租户内实例；同幂等键回放 |
+| GET | `/api/v1/workbench/instances/:id` | 本租户详情；跨租户 404 |
+| PUT | `/api/v1/workbench/instances/:id/draft` | 实例私有草稿 |
+| GET | `/api/v1/workbench/todos` | 本人待办聚合 |
+
+### 前端
+
+`DualInstanceWorkbench.vue`：发起 A1/A2、待办列表、打开实例与草稿；表单 `label[for]`/`id` 关联。
+
+### 验证
+
+见 `validation/development-task-task-m1-01-dual-instance-workbench-20260912.json`；冒烟 `scripts/curl_dual_instance_workbench_smoke.sh`。

@@ -1,0 +1,149 @@
+{
+  "schemaVersion": 1,
+  "id": "task-m1-01-dual-instance-workbench-20260912",
+  "goal": "M1-01 双实例工作台最小可验证切片",
+  "scope": {
+    "allowed": [
+      "apps/api/src/workbench/**",
+      "apps/api/src/app.module.ts",
+      "apps/web/src/**",
+      "scripts/curl_dual_instance_workbench_smoke.sh",
+      "docs/agent-decisions-m0.md",
+      "docs/oa-platform-plan.md",
+      "validation/development-task-task-m1-01-dual-instance-workbench-20260912.json",
+      "validation/development-workflow.json",
+      "validation/evidence/**"
+    ],
+    "excluded": [
+      "回退 CI Skill/Makefile 修复",
+      "回退 Sonar New Code Reliability 专修 2ed41ca",
+      "完整 M1 运行时/审核/执行循环",
+      "SQLite/mock 数据",
+      "未授权生产与凭据",
+      "改动 apps/api/src/workflow/**（避让 Sonar 专修）"
+    ]
+  },
+  "acceptance_criteria": [
+    "同模板可发起 A1/A2 两实例；同幂等键返回同一实例；新意图键生成另一实例",
+    "待办/实例列表按会话租户与人员过滤；他租户不可见标题与数量",
+    "打开两实例时 draft/url/thread/config 标识互不串写",
+    "JSON 落盘；重启同 ZKER_DATA_DIR 可回读；禁 mock",
+    "前端双实例工作台真实读写；pnpm test/build 与 make verify 通过",
+    "表单保持 label[for]/id 关联"
+  ],
+  "current_node": "N2",
+  "final_node": "N2",
+  "completed_nodes": ["N1", "N2"],
+  "failed_nodes": [],
+  "artifacts": [
+    "apps/api/src/workbench/workbench.registry.ts",
+    "apps/api/src/workbench/workbench.controller.ts",
+    "apps/web/src/DualInstanceWorkbench.vue",
+    "apps/web/src/workbench-api-client.ts",
+    "scripts/curl_dual_instance_workbench_smoke.sh"
+  ],
+  "evidence": [
+    "validation/evidence/dual-instance-workbench-20260912.txt",
+    "validation/development-system-check.json"
+  ],
+  "risks": [
+    "产品 OA 底座未接入，会话暂用请求头模拟派生，非正式登录",
+    "非完整 AC-01/02/03/07；仅最小可验证切片"
+  ],
+  "approvals": [
+    "Owner 全权授权；Agent 自行裁决；已 rebase 2ed41ca Sonar 修复"
+  ],
+  "status": "VERIFIED",
+  "intent": {
+    "source": "用户全权授权承接：推进 M1-01 双实例工作台",
+    "problem": "已有绑定闭环，尚无同模板双实例隔离与幂等发起/待办投影",
+    "users": ["发起人 demo_executor", "他租户对照人"],
+    "outcome": "可 curl/UI 验收的双实例工作台读写，禁 mock"
+  },
+  "spec": {
+    "refs": [
+      "docs/设计包/47-全产品实施切片与首期开发规格.md#M1-01",
+      "docs/设计包/28-开发分期与验收用例.md",
+      "docs/full-authority-execution.md"
+    ],
+    "behavior": "会话派生租户/人员；同模板幂等发起 A1/A2；待办按本人聚合；实例详情与草稿隔离",
+    "contracts": [
+      "GET /api/v1/workbench/session",
+      "GET/POST /api/v1/workbench/templates",
+      "GET/POST /api/v1/workbench/instances",
+      "GET /api/v1/workbench/instances/:id",
+      "PUT /api/v1/workbench/instances/:id/draft",
+      "GET /api/v1/workbench/todos"
+    ],
+    "negativeCases": [
+      "缺会话头返回 401",
+      "他租户读实例返回 404",
+      "缺 templateId/title/idempotencyKey/intentKey 返回 400"
+    ]
+  },
+  "plan": {
+    "files": [
+      "apps/api/src/workbench/*",
+      "apps/web/src/DualInstanceWorkbench.vue",
+      "apps/web/src/workbench-api-client.ts",
+      "apps/web/src/App.vue",
+      "scripts/curl_dual_instance_workbench_smoke.sh"
+    ],
+    "checks": [
+      "pnpm -r run build",
+      "pnpm -r run test",
+      "make verify",
+      "bash scripts/curl_dual_instance_workbench_smoke.sh"
+    ],
+    "highestRisk": "租户过滤遗漏导致串租；或与 Sonar 专修推送冲突",
+    "rollback": "删除 workbench 模块与 DualInstanceWorkbench；保留 workflow 绑定"
+  },
+  "requirementIds": ["WD-01", "WD-02"],
+  "caseIds": [],
+  "review": {
+    "mode": "SELF_CHECK",
+    "findings": [
+      "会话用请求头派生，非正式 OA 登录",
+      "对齐 2ed41ca：node:fs/path 与 TypeError；前端 label[for]/id"
+    ],
+    "evidence": [
+      "make verify PASS",
+      "scripts/curl_dual_instance_workbench_smoke.sh"
+    ]
+  },
+  "nodes": [
+    {
+      "id": "N1",
+      "objective": "实现双实例工作台 JSON 持久化 API 与前端面板",
+      "dependsOn": [],
+      "preconditions": [
+        "分支 tip 含工作流绑定闭环",
+        "不修改 workflow 模块以免与 Sonar 专修抢推"
+      ],
+      "action": "新增 workbench 模块与 DualInstanceWorkbench",
+      "tool_or_skill": "oa-development-system",
+      "expected_output": "可 curl 验收的双实例读写闭环",
+      "validation": "单元测试 + curl 持久化/租户隔离",
+      "success_condition": "幂等/双实例/他租户不可见/重启回读均有证据",
+      "failure_path": "据日志修过滤或落盘",
+      "rollback_or_compensation": "删除 workbench 模块",
+      "status": "DONE"
+    },
+    {
+      "id": "N2",
+      "objective": "独立验证并交付",
+      "dependsOn": ["N1"],
+      "preconditions": ["实现已产生可复核产物"],
+      "action": "make verify + smoke；rebase 2ed41ca 后再 push",
+      "tool_or_skill": "make verify / REVIEW.md",
+      "expected_output": "当前输入版本的检查结果",
+      "validation": "验收与证据逐项对应",
+      "success_condition": "无关键失败；未验证部分明确披露",
+      "failure_path": "有限修复或交付阻塞",
+      "rollback_or_compensation": "按本任务记录的恢复方案处理",
+      "status": "DONE"
+    }
+  ],
+  "projectRoot": "/workspace",
+  "createdAt": "2026-09-12T03:05:10.914483+00:00"
+}
